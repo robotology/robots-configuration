@@ -1,0 +1,5 @@
+# Build products
+/build*/
+
+# Linux temp files
+*~
