@@ -19,6 +19,8 @@ option(INSTALL_ALL_ROBOTS "Enable installation of all robots" OFF)
 set(ROBOT_NAME "$ENV{YARP_ROBOT_NAME}" CACHE PATH "Name of your robot")
 set(ROBOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${ROBOT_NAME}")
 
+icubcontrib_set_default_prefix()
+
 if(INSTALL_ALL_ROBOTS)
     add_subdirectory(iCubAberystwyth01)
     add_subdirectory(iCubAbuDhabi01)
