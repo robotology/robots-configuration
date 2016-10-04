@@ -5,10 +5,10 @@
     <device name="right_lower_arm_skin" type="embObjSkin">
         <params file="general.xml" />
  
-        <params file="hardware/electronics/right_lower_arm-ems4-eln.xml" />
+        <params file="hardware/electronics/right_arm-j4_7-eln.xml" />
         <group name="patches">
             <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8</param> 
         </group>
-        <params file="hardware/skin/right_arm-ems4-skinSpec.xml" /> 
+        <params file="hardware/skin/right_arm-mc4p27-skinSpec.xml" /> 
     </device>  
 </devices>

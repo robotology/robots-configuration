@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+    <robot name="iCubGenova04" build="1" portprefix="icub">
+    <params file="hardware/electronics/pc104.xml" />
+
+<devices file="./hardware/motorControl/left_arm-j4_7-mc.xml" />
+    <devices file="./hardware/motorControl/left_arm-j8_11-mc.xml" /> 
+    <devices file="./hardware/motorControl/left_arm-j12_15-mc.xml" /> 
+    <devices file="./wrappers/motorControl/left_forearm-mc_wrapper.xml" />
+    <devices file="./wrappers/motorControl/left_shoulder-mc_wrapper.xml" />
+    <devices file="hardware/motorControl/left_arm-j0_3-mc.xml" />
+
+    <!-- ANALOG SENSOR FT  -->
+    <devices file="wrappers/FT/left_arm-FT_wrapper.xml" /> 
+    <devices file="hardware/FT/left_upper_arm-ems1-strain.xml" /> 
+	
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY-->
+    <devices file="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
+    <devices file="wrappers/VFT/right_arm-VFT_wrapper.xml" />
+
+    <!-- ANALOG SENSOR MAIS-->
+    <devices file="wrappers/MAIS/left_hand-mais_wrapper.xml" />  
+    <devices file="hardware/MAIS/left_hand-mais.xml" /> 
+     <!--  CALIBRATORS -->
+
+
+
+    <devices file="calibrators/left_shoulder-calib.xml" />
+<devices file="calibrators/left_forearm-calib.xml" />
+    </robot> 
