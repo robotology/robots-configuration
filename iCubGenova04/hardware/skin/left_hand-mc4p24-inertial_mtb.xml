@@ -7,7 +7,7 @@
     
         <params file="general.xml" />     
 
-        <params file="hardware/electronics/left_lower_arm-ems2-eln.xml" />
+        <params file="hardware/electronics/left_arm-j4_7-eln.xml" />
         
         <group name="SERVICE">
         
@@ -41,8 +41,8 @@
                     </param>
 
                     <param name="location"> ETH:0                   ETH:0                     
-                                            CAN2:8                  CAN2:9                  CAN2:10                 CAN2:11              
-                                            CAN2:12                 CAN2:13                 CAN2:14                 CAN2:14
+                                            CAN1:8                  CAN1:9                  CAN1:10                 CAN1:11              
+                                            CAN1:12                 CAN1:13                 CAN1:14                 CAN1:14
                     </param>            
                 </group>
                                             
