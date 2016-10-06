@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Initialization file for EMS 2 - Left Lower Arm, 12 dof plus skin--><devices build="1" robot="iCubNancy01">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<devices build="1" robot="iCubNancy01">
   <device name="left_lower_arm_mc" type="embObjMotionControl">
       <params file="general.xml"/>
       <params file="hardware/electronics/left_lower_arm-ems2-eln.xml"/>
