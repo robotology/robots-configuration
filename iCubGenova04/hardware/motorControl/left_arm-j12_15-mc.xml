@@ -14,11 +14,11 @@
         <!-- joint number in sub-part           0               1               2               3          -->
         <!-- joint name                    index-distal   middle-proximal   middle-distal   little-fingers -->     
         <group name="LIMITS">
-            <param name="jntPosMax">              180          90              180             270          </param>
-            <param name="jntPosMin">                0           0                0               0           </param> 
-            <param name="rotorPosMin">         -64000       -1280            -2048           -2048           </param> 
-            <param name="rotorPosMax">           2048       30720            51200           53760            </param>
-            <param name="jntVelMax">                1000        1000            1000           1000         </param>
+            <param name="jntPosMax">              180          90              180             270        </param>
+            <param name="jntPosMin">                0           0                0               0        </param> 
+            <param name="rotorPosMin">         -64000       -1280            -2048           -69120       </param> 
+            <param name="rotorPosMax">           2048       30720            51200             2048       </param>
+            <param name="jntVelMax">                1000        1000            1000           1000       </param>
             <param name="motorOverloadCurrents">    2000        2000            2000           2000       </param>
             <param name="motorNominalCurrents">      600         600             600            600        </param>
             <param name="motorPeakCurrents">        1000        1000            1000           1000        </param>
@@ -34,7 +34,7 @@
         <group name="POSITION_CONTROL">
             <param name="controlLaw">       joint_pid_v1                                        </param>    
             <param name="controlUnits">     metric_units                                        </param> 
-            <param name="kp">                  -500.00    500.00      500.00     -200.00      </param>
+            <param name="kp">                  -500.00    500.00      500.00      -200.00      </param>
             <param name="kd">                   0.0         0.0         0.0         0.0         </param>     
             <param name="ki">                   0.0         0.0         0.0         0.0         </param>       
             <param name="maxOutput">            1500        3360        3360        3360        </param>  

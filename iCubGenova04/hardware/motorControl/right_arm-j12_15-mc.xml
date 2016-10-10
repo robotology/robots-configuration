@@ -16,8 +16,8 @@
         <group name="LIMITS">
             <param name="jntPosMax">              180          90              180             270          </param>
             <param name="jntPosMin">                0           0                0               0           </param> 
-            <param name="rotorPosMin">           -2560       -1280            -51200        -53760            </param> 
-            <param name="rotorPosMax">           64000       30720              2048          2048           </param>
+            <param name="rotorPosMin">           -2560       -1280            -51200        -2048            </param> 
+            <param name="rotorPosMax">           64000       30720              2048         69120           </param>
             <param name="jntVelMax">                1000        1000            1000           1000         </param>
             <param name="motorOverloadCurrents">    2000        2000            2000           2000       </param>
             <param name="motorNominalCurrents">      600         600             600            600        </param>
