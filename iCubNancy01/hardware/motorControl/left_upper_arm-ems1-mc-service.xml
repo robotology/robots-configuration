@@ -30,7 +30,11 @@
             
                 <param name="type"> eomc_ctrlboard_SHOULDER     </param> 
                  
-                <!-- 1.625 = 1/alfa = 65/40 -->                  
+                <!-- 1.625 = 1/alfa = 65/40 --> 
+                <!-- alfa = 40/65 = 8*5/(13*5) = 8/13 = 0.61538461538461538461538461538462.... not a power of 2. in fw so far we have used numbers w/ Q17_14,
+                     thus the float to obtain in the fw the very same number as EO_COMMON_FLOAT_TO_Q17_14(alfa) is .... 0.6153564453125
+                     error will be 0.00002817007211538461538461538462 < 3x10^-5
+                 -->                     
                 <param name ="matrixJ2M"> 
                     1.00    0.00    0.00    0.00
                    -1.625   1.625   0.00    0.00
@@ -41,7 +45,7 @@
                 <param name ="matrixE2J">  
                     1.00    0.00    0.00    0.00
                     0.00    1.00    0.00    0.00
-                    0.00    0.00    1.00    0.00
+                    1.00   -1.00    0.6153564453125 0.00
                     0.00    0.00    0.00    1.00   
                 </param>
                 
