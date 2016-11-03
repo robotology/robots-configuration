@@ -1,4 +1,4 @@
-<devices>
+<devices robot="iCubRome02" build="1">   
   <device name="inertial" type="inertial">
       <param name="name">  /icub/inertial  </param>
       <param name="subdevice">  xsensmtx  </param>
