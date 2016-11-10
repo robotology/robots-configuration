@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+    <robot name="iCubGenova04" build="1" portprefix="icub">
+    <params file="hardware/electronics/pc104.xml" />
+
+   
+    <!--  SKINS  --> 
+
+    <devices file="wrappers/skin/left_arm-skin_wrapper.xml" />
+    <devices file="hardware/skin/left_arm-mc4p24-skin.xml" />
+    <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />  
+ <!--   <devices file="wrappers/skin/torso-skin_wrapper.xml" /> 
+    <devices file="hardware/skin/torso-cfw2_can9-skin.xml" /> -->
+    <devices file="hardware/skin/right_arm-mc4p27-skin.xml" /> 
+    <devices file="wrappers/skin/left_leg-skin_wrapper.xml" />
+    <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
+    <devices file="hardware/skin/left_leg-ems10-skin.xml" />
+    <devices file="hardware/skin/right_leg-ems11-skin.xml" />
+
+
+    </robot> 
