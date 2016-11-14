@@ -10,8 +10,10 @@
     <devices file="wrappers/skin/left_arm-skin_wrapper.xml" />
     <devices file="hardware/skin/left_arm-mc4p24-skin.xml" />
     <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />  
- <!--   <devices file="wrappers/skin/torso-skin_wrapper.xml" /> 
-    <devices file="hardware/skin/torso-cfw2_can9-skin.xml" /> -->
+ <!--  --> 
+    <devices file="wrappers/skin/torso-skin_wrapper.xml" /> 
+    <devices file="hardware/skin/torso-mc4p22-skin.xml" /> 
+ <!-- -->
     <devices file="hardware/skin/right_arm-mc4p27-skin.xml" /> 
     <devices file="wrappers/skin/left_leg-skin_wrapper.xml" />
     <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />

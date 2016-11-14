@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<devices robot="iCubGenova04" build="1">
+    <device name="torso_skin" type="embObjSkin">
+        <params file="general.xml" />
+ 
+        <params file="hardware/electronics/head-eb22-eln.xml" />
+        <group name="patches">
+            <param name="skinCanAddrsPatch1"> 7 8 9 10 </param> 
+        </group>
+        <params file="hardware/skin/torso-mc4p22-skinSpec.xml" />
+    </device>
+</devices>
