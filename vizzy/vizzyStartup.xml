@@ -10,19 +10,20 @@
 		<tag>robotInterface</tag>
 	</module>
 	<module>
-		<name>cfwFailUtility</name>
-		<node>vizzy-desktop</node>
-		<tag>cfw_fail_utility</tag>
-	</module>
-	<module>
                 <name>cartesianControllerServer</name>
                 <parameters>--from server_left_arm.ini</parameters>
+		<dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+		</dependencies>
                 <node>vizzy-desktop</node>
 		<tag>cart_serv_left</tag>
         </module>
 	<module>
                 <name>cartesianControllerServer</name>
                 <parameters>--from server_right_arm.ini</parameters>
+		<dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+		</dependencies>
                 <node>vizzy-desktop</node>
 		<tag>cart_serv_right</tag>
         </module>
@@ -31,9 +32,8 @@
                 <parameters>--from solver_left_arm.ini</parameters>
                 <node>vizzy-desktop</node>
                 <dependencies>
-                    <port timeout="40">/vizzy/torso/state:o</port>
-                    <port timeout="40">/vizzy/left_shoulder_arm/stateExt:o</port>
-                </dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+		</dependencies>
 		<tag>cart_solv_left</tag>
         </module>
         <module>
@@ -41,17 +41,16 @@
                 <parameters>--from solver_right_arm.ini</parameters>
                 <node>vizzy-desktop</node>
                 <dependencies>
-                    <port timeout="40">/vizzy/torso/state:o</port>
-                    <port timeout="40">/vizzy/right_shoulder_arm/stateExt:o</port>
-                </dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+		</dependencies>
 		<tag>cart_solv_right</tag>
         </module>
         <module>
                 <name>vizzy_iKinGazeCtrl</name>
                 <node>vizzy-desktop</node>
                 <dependencies>
-                    <port timeout="40">/vizzy/head/state:o</port>
-                </dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+		</dependencies>
 		<tag>cart_gaze_ctrl</tag>
         </module>
 </application>
