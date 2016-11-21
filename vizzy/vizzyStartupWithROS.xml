@@ -8,77 +8,78 @@
     <module>
         <name>yarprobotinterface</name>
         <node>vizzy-desktop</node>
-        <tag>robotInterface</tag>
-
     </module>
     <module>
          <name>yarpidl_rosmsg</name>
           <parameters>--name /typ@/yarpidl</parameters>
           <node>vizzy-desktop</node>
-         <tag>yarpidl_rosmsg</tag>
     </module>
+    <module>
+         <name>image_ros2yarp</name>
+          <parameters>--context vizzyCamerasBridge --from left_camera.ini</parameters>
+          <node>vizzy-desktop</node>
+    </module>
+    <module>
+         <name>image_ros2yarp</name>
+          <parameters>--context vizzyCamerasBridge --from right_camera.ini</parameters>
+          <node>vizzy-desktop</node>
+    </module>
+
     <module>
 		<name>vizzyUpperBodyJoints</name>
 		<dependencies>
-                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+                    <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
 		</dependencies>
 		<parameters></parameters>
 		<node>vizzy-desktop</node>
-	<tag>upper_body_joint_state_ros_bridge</tag>
 	</module>
 	<module>
 		<name>cartesianControllerServer</name>
 		<parameters>--from server_left_arm.ini</parameters>
 		<node>vizzy-desktop</node>
 		<dependencies>
-                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+                    <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
 		</dependencies>
-		<tag>cart_serv_left</tag>
 	</module>
 	<module>
 		<name>cartesianControllerServer</name>
 		<parameters>--from server_right_arm.ini</parameters>
 		<node>vizzy-desktop</node>
 		<dependencies>
-                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
-		</dependencies>		<tag>cart_serv_right</tag>
+                    <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+		</dependencies>
 	</module>
 	<module>
 		<name>cartesianSolver</name>
 		<parameters>--from solver_left_arm.ini</parameters>
 		<node>vizzy-desktop</node>
 		<dependencies>
-                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+                    <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
 		</dependencies>
-		<tag>cart_solv_left</tag>
 	</module>
 	<module>
 		<name>cartesianSolver</name>
 		<parameters>--from solver_right_arm.ini</parameters>
 		<node>vizzy-desktop</node>
 		<dependencies>
-                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+                    <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
 		</dependencies>
-		<tag>cart_solv_right</tag>
 	</module>
 	<module>
 		<name>vizzy_iKinGazeCtrl</name>
 		<node>vizzy-desktop</node>
 		<dependencies>
-                    <port timeout="60.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+                    <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
 		</dependencies>
-		<tag>cart_gaze_ctrl</tag>
 	</module>
 
     <module>
         <name>fixationPointStatusBridge</name>
         <node>vizzy-desktop</node>
-        <tag>fixationPointStatusBridge</tag>
     </module>
     <module>
         <name>fixationPointActionBridge</name>
         <node>vizzy-desktop</node>
-        <tag>fixationPointActionBridge</tag>
     </module>
 
 </application>
