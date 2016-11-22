@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-<devices robot="iCubGenova04" build="1">
+<devices robot="iCubLausanne02" build="1">
 
     <device name="right_arm-j8_11-mc" type="embObjMotionControl">
     
@@ -16,8 +16,8 @@
         <group name="LIMITS">
             <param name="jntPosMax">                90          90             180              90           </param>
             <param name="jntPosMin">                10          0              0                0            </param>
-            <param name="rotorPosMin">              0        -1280          -2250             -1280            </param> 
-            <param name="rotorPosMax">              0         24320          66000              28160           </param>
+            <param name="rotorPosMin">              0        0          -2250             -5280            </param> 
+            <param name="rotorPosMax">              0         0         66000              28160           </param>
             <param name="jntVelMax">                1000        1000           1000             1000         </param>
             <param name="motorOverloadCurrents">    2000        2000            2000           2000       </param>
             <param name="motorNominalCurrents">      600         600             600            600        </param>
