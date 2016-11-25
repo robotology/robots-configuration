@@ -46,10 +46,10 @@
     <devices file="hardware/FT/right_lower_leg-ems9-strain.xml" /> 
 	
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY-->
-  <!--  <devices file="wrappers/VFT/left_arm-VFT_wrapper.xml" /> -->
+   <devices file="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
     <devices file="wrappers/VFT/right_leg-VFT_wrapper.xml" /> 
     <devices file="wrappers/VFT/left_leg-VFT_wrapper.xml" />     
- <!--   <devices file="wrappers/VFT/right_arm-VFT_wrapper.xml" /> -->
+    <devices file="wrappers/VFT/right_arm-VFT_wrapper.xml" /> 
     <devices file="wrappers/VFT/torso-VFT_wrapper.xml" />
 
     <!-- ANALOG SENSOR MAIS-->
