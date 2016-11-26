@@ -54,7 +54,7 @@
         <param name="stictionUp">3.19         2.64              </param>       
         <param name="stictionDwn">-2.08      -2.83              </param>   
         <param name="kff">          1            1              </param>         
-        <param name="kbemf">    0.003       0.0041              </param>  
+        <param name="kbemf">    0.003       0.004              </param>  
         <param name="filterType">   0            0              </param>        
         <param name="ktau">       220          170              </param>          
     </group>
@@ -62,12 +62,12 @@
     <group name="CURRENT_CONTROL">
         <param name="controlLaw">       2foc_feedback          </param> 
         <param name="controlUnits">     metric_units           </param> 
-        <param name="kp">               8           8          8         8      </param>       
-        <param name="kd">               0           0          0         0      </param>       
-        <param name="ki">               2           2          2         2      </param>
-        <param name="scale">            10          10         10        10     </param>
-        <param name="maxOutput">        32000       32000      32000     32000  </param>                 
-        <param name="maxInt">           32000       32000      32000     32000  </param>        
+        <param name="kp">               8           8          </param>       
+        <param name="kd">               0           0          </param>       
+        <param name="ki">               2           2          </param>
+        <param name="scale">            10          10         </param>
+        <param name="maxOutput">        32000       32000      </param>                 
+        <param name="maxInt">           32000       32000      </param>        
     </group>
     
   </device>
