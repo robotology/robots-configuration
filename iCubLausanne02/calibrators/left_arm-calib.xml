@@ -18,11 +18,11 @@
 
 <group name="CALIBRATION">
 <param name="calibrationType">                    3          3          3          3        5     3      3     7     7     6     6     6     6      6      6     6     </param>
-<param name="calibration1">                   38229      51882	     32768     24576	-1500     0      0     0     0     0     0     0     0      0      0     0     </param>
-<param name="calibration2">                      10         10 	        10	  10        0     0      0     0     0  9102  9102  9102  9102   9102   9102  3640     </param>
-<param name="calibration3">                   26735      64703	     27807     50288        0  9932  30032     0     0    -1     1    -1     1     -1     1     -1     </param>
-<param name="calibration4">                       0          0          0          0        0     0      0  1850   1100   255  510   255   510    255    505   765     </param>
-<param name="calibration5">                       0          0          0          0        0     0      0  2080   4500    5    25     0     0      0      2   170     </param>
+<param name="calibration1">                   38229      51882      32768     24576     -1500     0      0     0     0     0     0     0     0      0      0     0     </param>
+<param name="calibration2">                      10         10         10         10        0     0      0     0     0  9102  9102  9102  9102   9102   9102  3640     </param>
+<param name="calibration3">                   26735      64703      27807      50288        0  7432  30400     0     0    -1     1    -1     1     -1     1     -1     </param>
+<param name="calibration4">                       0          0          0          0        0     0      0  1760   1100   255  510   255   510    255    505   765     </param>
+<param name="calibration5">                       0          0          0          0        0     0      0  2100   4500    5    25     0     0      0      2   170     </param>
 <param name="calibrationZero">                 -180       -315        180       -180       90  -180    180     0     0     0     0     0     0      0      0     0     </param>
 <param name="calibrationDelta">                   0          0          0          0        0     0      0     0     0     0     0     0     0      0      0     0     </param>
                                                                                              
