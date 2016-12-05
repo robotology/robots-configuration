@@ -16,8 +16,8 @@
         <group name="LIMITS">
             <param name="jntPosMax">              180          90              180             270          </param>
             <param name="jntPosMin">                0           0                0               0           </param> 
-            <param name="rotorPosMin">           -5120       -5120            -55040        -5120            </param> 
-            <param name="rotorPosMax">           55040       32000             5120         69120           </param>
+            <param name="rotorPosMin">           -65000       -5120            -5120        -5120            </param> 
+            <param name="rotorPosMax">             5120       32000            65000         65000           </param>
             <param name="jntVelMax">                1000        1000            1000           1000         </param>
             <param name="motorOverloadCurrents">    2000        2000            2000           2000       </param>
             <param name="motorNominalCurrents">      600         600             600            600        </param>
@@ -34,9 +34,9 @@
         <group name="POSITION_CONTROL">
             <param name="controlLaw">       joint_pid_v1                                        </param>    
             <param name="controlUnits">     metric_units                                        </param> 
-            <param name="kp">                  500.00    500.00      -500.00      200.00      </param>
+            <param name="kp">                   500.0       500.0      -500.0       200.0       </param>
             <param name="kd">                   0.0         0.0         0.0         0.0         </param>     
-            <param name="ki">                   0.0         0.0         0.0         0.0         </param>       
+            <param name="ki">                   50.0        50.0       -50.0        20.0        </param>       
             <param name="maxOutput">            3360        3360        3360        3360        </param>  
             <param name="maxInt">               3360        3360        3360        3360        </param> 
             <param name="shift">                0           0           0           0           </param>       
