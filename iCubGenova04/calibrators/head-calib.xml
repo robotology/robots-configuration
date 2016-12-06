@@ -20,14 +20,14 @@
         <!-- joint name                         neck-pitch  neck-roll   neck-yaw    eyes-tilt   eyes-vers   eyes-verg   -->  <!-- j4 is right-eye, j5 is left-eye -->
         <group name="CALIBRATION">
         <param name="calibrationType">      3           3           3           3           5           5           </param>
-<param name="calibration1">   	0	0	0	0	8000	8000							</param>
-<param name="calibration2">    	0	0	0	0	3640.88	3640.88							</param>
-<param name="calibration3">      	14362.08	19967.08	63342.92	58462.92	8191.98	8191.98							</param>
+        <param name="calibration1">   	    0	        0           0	        0	    3000        3000	    </param>
+        <param name="calibration2">         0           0           0	        0           0   	0	    </param>
+        <param name="calibration3">     14362.08    19967.08    63342.92        58462.92    0    	0           </param>
 
-        <param name="calibration4">         0           0           0           0            0          0         </param>
-        <param name="calibration5">         0           0           0           0            0          0         </param>        
+        <param name="calibration4">         0           0           0           0            0          0           </param>
+        <param name="calibration5">         0           0           0           0            0          0           </param>        
         
-        <param name="calibrationZero">      180.0       -180.0      180.0       180.0       45.0        45.0         </param>
+        <param name="calibrationZero">      180.0       -180.0      180.0       180.0       45.0        45.0        </param>
         <param name="calibrationDelta">     0.0         0.0         0.0         0.0         0.0         0.0         </param>
        
         <param name="startupPosition">      0.0         0.0         0.0         0.0         0.0         0.0         </param>        
