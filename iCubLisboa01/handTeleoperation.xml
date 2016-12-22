@@ -1,0 +1,25 @@
+<application>
+<name>Glove-based hand control</name>
+
+        <dependencies>
+                <port>/icubSim/right_arm/state:o</port>
+                <port>/gloveToYarp/jointsPos:o</port>
+                <port>/handControl/data:i</port>
+        </dependencies>
+
+        <module>
+                <name>gloveToYarp</name>
+                <node>localhost</node>
+        </module>
+        <module>
+                <name>handControl</name>
+                <node>localhost</node>
+        </module>
+       
+        <connection>
+                <from>/gloveToYarp/jointsPos:o</from>
+                <to>/handControl/data:i</to>
+                <protocol>udp</protocol>
+        </connection> 
+
+</application>
