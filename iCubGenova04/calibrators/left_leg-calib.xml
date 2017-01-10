@@ -34,8 +34,7 @@
 <param name="startupPosThreshold">                2              2          2            2           2         2           </param>
 </group>
 
-		<!-- removed j 1 because it goes in hw fault(overcurrent)<param name="CALIB_ORDER"> (0 1 2 3 4 5) </param>-->
-                <param name="CALIB_ORDER"> (0 2 3 4 5) </param>
+	        <param name="CALIB_ORDER"> (0 1 2 3 4 5) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">left_leg_mc_wrapper</param>
