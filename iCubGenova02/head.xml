@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+  
+
+    <robot name="iCubGenova02" build="1" portprefix="icub">
+    <params file="hardware/electronics/pc104.xml" />
+
+  
+    
+    <!-- HEAD -->	
+    <devices file="./hardware/motorControl/head-j0_1-mc.xml" />  
+    <devices file="./hardware/motorControl/head-j2_5-mc.xml" /> 
+    <devices file="./wrappers/motorControl/head_mc_wrapper.xml" /> 
+<!--
+    <devices file="./hardware/motorControl/face-j0_1-mc.xml" /> 
+    <devices file="./hardware/motorControl/face-j2_5-mc.xml" /> 
+    <devices file="./wrappers/motorControl/face_mc_wrapper.xml" /> 
+-->
+ 
+    <!-- INERTIAL SENSOR 
+    <devices file="hardware/inertial.xml" /> --> 
+
+   
+	
+    <!--  CALIBRATORS   -->
+
+    <devices file="calibrators/head-calib.xml" /> 
+<!--    <devices file="calibrators/face-calib.xml" /> -->
+    </robot> 
