@@ -19,7 +19,7 @@
         <param name="TorqueMax">    2     	2             2             2     		0             0              0             0            0             0            0             0       	</param>
         <param name="JointEncoderType"> "OPTICAL_QUAD"  "AEA"         "AEA"          "HALL_ADC"    "HALL_ADC"    "MAIS"       "MAIS"        "MAIS"      "MAIS"        "MAIS"       "MAIS"        "MAIS"     </param>
         <param name="RotorEncoderType"> "NONE"          "NONE"        "NONE"         "NONE"        "NONE"        "NONE"       "NONE"        "NONE"      "NONE"        "NONE"       "NONE"        "NONE"     </param>
-        <param name="JointEncoderRes"> -254440             4096         -4096         1433.88          3503.88      -812.16       -1035.36      -1019.88     -853.56       -848.16     -1020.6       -770.4 </param>
+        <param name="JointEncoderRes"> -254440             4096         -4096         65535         65535          65535          65535          65535          65535         65535         65535  65535  </param>
         <param name="RotorEncoderRes">       1             1            1               1             1             1             1             1            1             1           1             1      </param>
         <param name="RotorIndexOffset">      0             0            0               0             0             0             0             0            0             0           0             0      </param>
         <param name="Gearbox">               1             1             1             1     		1             1              1             1            1             1            1             1     	</param>
