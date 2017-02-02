@@ -11,7 +11,7 @@
         <params file="hardware/mechanicals/head-j2_5-mec.xml" />
         
         <!-- joint logical number               0           1           2           3           -->
-        <!-- joint name                         neck-yaw    eyes-tilt   eyes-vers   eyes-verg   -->         <!-- j2 is right-eye, j3 is left-eye -->
+        <!-- joint name                         neck_yaw    eyes_tilt   eyes_vers   eyes_verg   -->         <!-- j2 is right-eye, j3 is left-eye -->
         <group name="LIMITS">       
             <param name="jntPosMin">                  -45         -30         -45         0           </param> 
             <param name="jntPosMax">                  +45         +30         +45         +45         </param>

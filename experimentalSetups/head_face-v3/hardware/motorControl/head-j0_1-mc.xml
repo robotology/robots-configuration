@@ -11,7 +11,7 @@
         <params file="hardware/mechanicals/head-j0_1-mec.xml" />
         
         <!-- joint logical number               0           1           -->
-        <!-- joint name                         neck-pitch  neck-roll   -->           
+        <!-- joint name                         neck_pitch  neck_roll   -->           
         <group name="LIMITS">
 
             <param name="jntPosMin">               -30         -20         </param> 

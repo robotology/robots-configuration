@@ -9,10 +9,10 @@
         <param name="Joints"> 2 </param> <!-- the number of joints of the robot part -->
 
         <!-- joint number in sub-part           0              1           -->
-        <!-- joint name                         neck-pitch     neck-roll   -->         
+        <!-- joint name                         neck_pitch     neck_roll   -->         
 
         <param name="AxisMap">                  0               1               </param>    
-        <param name="AxisName">              "neck-pitch"       "neck-roll"     </param>
+        <param name="AxisName">              "neck_pitch"       "neck_roll"     </param>
         <param name="AxisType">                "revolute"    "revolute"         </param>
         <param name="HasHallSensor">            0               0               </param>
         <param name="HasTempSensor">            0               0               </param>
