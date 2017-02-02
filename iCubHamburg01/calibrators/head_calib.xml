@@ -17,7 +17,7 @@
         </group>
 
         <!-- joint logical number               0           1           2           3           4           5           -->
-        <!-- joint name                         neck_pitch  neck_roll   neck_yaw    eyes_tilt   eyes_vers   eyes_verg   -->  <!-- j4 is right-eye, j5 is left-eye -->
+        <!-- joint name                         neck_pitch  neck_roll   neck_yaw    eyes_tilt   eyes_version   eyes_vergence   -->  <!-- j4 is right-eye, j5 is left-eye -->
         <group name="CALIBRATION">
         <param name="calibrationType">      3           3           3           3           5           5           </param>
 <param name="calibration1">   	0	0	0	0	8000	8000							</param>

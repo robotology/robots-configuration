@@ -13,7 +13,7 @@
         <params file="hardware/motorControl/head-j2_5-mc-service.xml" />
         
         <!-- joint logical number               0           1           2           3           -->
-        <!-- joint name                         neck_yaw    eyes_tilt   eyes_vers   eyes_verg   -->         <!-- j2 is right-eye, j3 is left-eye -->
+        <!-- joint name                         neck_yaw    eyes_tilt   eyes_version   eyes_vergence   -->         <!-- j2 is right-eye, j3 is left-eye -->
         <group name="LIMITS">       
             <param name="jntPosMin">                  -45         -30         -40         0           </param> 
             <param name="jntPosMax">                  +45         +30         +40         +40         </param>
