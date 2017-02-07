@@ -8,7 +8,7 @@
     <devices file="./hardware/motorControl/right_arm-j4_7-mc.xml" />
     <devices file="./hardware/motorControl/right_arm-j8_11-mc.xml" /> 
     <devices file="./hardware/motorControl/right_arm-j12_15-mc.xml" /> 
-    <devices file="./wrappers/motorControl/right_shoulder-mc_wrapper.xml" />
+    <devices file="./wrappers/motorControl/right_arm-mc_wrapper.xml" />
     
 
    
@@ -18,7 +18,9 @@
      <!--  CALIBRATORS -->
 
 
-
+ <!--  SKINS  --> 
+    <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />  
+    <devices file="hardware/skin/right_arm-mc4p27-skin.xml" /> 
     
-<devices file="calibrators/right_shoulder-calib.xml" />
+<devices file="calibrators/right_arm-calib.xml" />
     </robot> 

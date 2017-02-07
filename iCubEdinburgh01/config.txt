@@ -1,1 +1,1 @@
-/usr/local/src/robot/icub-firmware-build/2FOC.hex
+/usr/local/src/robot/icub-firmware-build/skin.hex
