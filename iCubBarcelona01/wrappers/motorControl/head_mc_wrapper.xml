@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+<devices robot="iCubBarcelona01" build="1">
   <device name="head_mc_wrapper" type="controlboardwrapper2">
       <paramlist name="networks">
       <elem name="head_joints">  0 5 0 5 </elem>
@@ -14,6 +15,7 @@
       <action phase="startup" level="5" type="attach">
       <paramlist name="networks">
          <elem name="head_joints">  head_mc </elem>
+         <elem name="Calibrator">  head_calibrator </elem>
       </paramlist>
       </action>
 
