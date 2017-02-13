@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+
+<devices>      
+	<device name="left_arm_mc" type="fakeMotionControl">  
+
+	<group name="GENERAL">    
+		<param name="name">      left_arm_mc_port        </param>     
+		<param name="Period">            10         </param>
+	</group>             
+		
+
+	</device>    
+</devices>     
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -8,7 +8,7 @@
     <param name="max_angle">  180 </param>
     <param name="min_angle">  -180   </param>
     <param name="resolution">  1   </param>
-    <param_name="motor_control"> 0 </param>
+    <param_name="motor_control"> 1 </param>
     <param_name="scan_type"> normal </param>
     <param name="clip_max">  3.5 </param>
     <param name="clip_min">  0.1 </param>

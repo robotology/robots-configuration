@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+
+<devices>      
+	<device name="trServer" type="transformServer">  
+    <param name="period">       10        </param>     
+        
+	<group name="ROS">    
+		<param name="enable_ros_publisher">       false        </param>     
+		<param name="enable_ros_subscriber">      false         </param>
+	</group>             
+		
+
+	</device>    
+</devices>     
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
