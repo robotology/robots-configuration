@@ -8,7 +8,7 @@
     
  -->
  
-<devices robot="iCubEdinburgh02" build="1">
+<devices robot="iCubEdinburgh01" build="1">
 
     <device name="head_mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
