@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-    <robot name="iCubGenova04" build="1" portprefix="icub">
+    <robot name="iCubSingapore01" portprefix="icub">
     <params file="hardware/electronics/pc104.xml" />
 
     <!--    test report (we use mc of torso + head to make the robot straight)
@@ -13,9 +13,6 @@
     <devices file="hardware/motorControl/right_arm-j0_3-mc.xml" />
     
     <!--  CALIBRATORS -->
-
-
-
     <devices file="calibrators/right_shoulder-calib.xml" />
 
     </robot> 

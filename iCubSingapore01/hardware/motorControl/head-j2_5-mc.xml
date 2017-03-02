@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
  
-<devices robot="iCubLausanne02" build="1">
+<devices robot="iCubSingapore01" build="1">
     
     <device name="head-j2_5-mc" type="embObjMotionControl">
     
@@ -21,9 +21,9 @@
             <param name="hardwareJntPosMax">          +45         +30         +45         +45         </param>
             <param name="rotorPosMin">             0           0           0           0           </param> 
             <param name="rotorPosMax">             0           0           0           0           </param>
-            <param name="motorOverloadCurrents"> 2000         2000         2500         2500        </param>
+            <param name="motorOverloadCurrents"> 2800         2000         2800         2500        </param>
             <param name="motorNominalCurrents"> 700           700         700            700           </param>
-            <param name="motorPeakCurrents">    1500         1500          1500           1500           </param>
+            <param name="motorPeakCurrents">    1500         1500          1800           1500           </param>
             <param name="jntVelMax">             1000        1000        1000        1000        </param>
             <param name="motorPwmLimit">        3360        3360        3360        3360        </param>
         
@@ -37,9 +37,9 @@
         <group name="POSITION_CONTROL">
             <param name="controlLaw">       joint_pid_v1                                        </param>    
             <param name="controlUnits">     metric_units                                        </param> 
-            <param name="kp">                   1100.00     -1000       3500        3500        </param>       
+            <param name="kp">                   1100.00     -200       3500        3500        </param>       
             <param name="kd">                   0.0         0.0         0.0         0.0         </param>     
-            <param name="ki">                   0.0         -100         600.0       600.0       </param>          
+            <param name="ki">                   0.0         -300         600.0       600.0       </param>          
             <param name="maxOutput">            3360        3360        3360        3360        </param>  
             <param name="maxInt">               3360        3360        3360        3360        </param> 
             <param name="shift">                0           0           0           0           </param>       

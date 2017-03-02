@@ -6,7 +6,7 @@
       each line of the encoder -->
 
  
-<params robot="iCubLausanne02" build="1">
+<params robot="iCubSingapore01" build="1">
     <group name="GENERAL">
         <param name="MotioncontrolVersion">  2 </param>
         <param name="Joints"> 4 </param> <!-- the number of joints of the robot part -->
@@ -19,6 +19,7 @@
         <param name="HasHallSensor">            0              0               0               0                   </param>
         <param name="HasTempSensor">            0              0               0               0                   </param>
         <param name="HasRotorEncoder">          1              1               1               1                   </param>
+	<param name="HasSpeedEncoder">          0              0               0               0                   </param>
         <param name="HasRotorEncoderIndex">     0              0               0               0                   </param>
         <param name="Encoder">                  182.044        182.044         182.044         182.044             </param>   
         <param name="HasSpeedEncoder">          0              0               0               0                   </param>

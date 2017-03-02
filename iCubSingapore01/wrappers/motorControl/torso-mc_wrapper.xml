@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-<devices robot="iCubLausanne02" build="1">
+<devices robot="iCubSingapore01" build="1">
   <device name="torso_mc_wrapper" type="controlboardwrapper2">
       <paramlist name="networks">
 	<!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
 	  <elem name="FirstSetOfJoints">  0  2  0  2 </elem>
       </paramlist>
 
-<param name="period"> 10 </param>
-<param name="name">   /icub/torso   </param>
+      <param name="period"> 10 </param>
+      <param name="name">   /icub/torso   </param>
       <param name="ports">  torso               </param>
       <param name="joints"> 3                   </param>
 

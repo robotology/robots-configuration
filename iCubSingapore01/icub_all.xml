@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-    <robot name="iCubLausanne02" build="1" portprefix="icub">
+    <robot name="iCubSingapore01" portprefix="icub">
     <params file="hardware/electronics/pc104.xml" />
 
     <!-- CARTESIANS  --> 
@@ -12,6 +12,11 @@
     <devices file="./hardware/motorControl/head-j0_1-mc.xml" />  
     <devices file="./hardware/motorControl/head-j2_5-mc.xml" /> 
     <devices file="./wrappers/motorControl/head_mc_wrapper.xml" /> 
+
+    <!-- FACE -->	
+    <devices file="./hardware/motorControl/face-j0_1-mc.xml" />  
+    <devices file="./hardware/motorControl/face-j2_5-mc.xml" /> 
+    <devices file="./wrappers/motorControl/face_mc_wrapper.xml" /> 
 
     <!-- TORSO --> 
     <devices file="hardware/motorControl/torso-ems5-mc.xml" />
@@ -80,7 +85,7 @@
     <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
     <devices file="hardware/skin/left_leg-ems10-skin.xml" />
     <devices file="hardware/skin/right_leg-ems11-skin.xml" /> 
- <devices file="wrappers/skin/torso-skin_wrapper.xml" />
+    <devices file="wrappers/skin/torso-skin_wrapper.xml" />
     <devices file="hardware/skin/torso-mc4p22-skin.xml" /> 
 	
     <!--  CALIBRATORS   -->
@@ -90,4 +95,5 @@
     <devices file="calibrators/right_leg-calib.xml" />
     <devices file="calibrators/torso-calib.xml" />
     <devices file="calibrators/head-calib.xml" /> 
+    <devices file="calibrators/face-calib.xml" /> 
     </robot> 

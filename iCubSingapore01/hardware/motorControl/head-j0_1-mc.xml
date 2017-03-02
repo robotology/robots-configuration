@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
  
-<devices robot="iCubLausanne02" build="1">
+<devices robot="iCubSingapore01" build="1">
 
     <device name="head-j0_1-mc" type="embObjMotionControl">
     
@@ -35,9 +35,9 @@
         <group name="POSITION_CONTROL">
             <param name="controlLaw">       joint_pid_v1                </param>    
             <param name="controlUnits">     metric_units                </param> 
-            <param name="kp">                   -300        +300        </param>       
-            <param name="kd">                   -10.0       +10.0       </param>     
-            <param name="ki">                   -100.0      +100        </param>          
+            <param name="kp">                  -300        +300        </param>       
+            <param name="kd">                  -10         +10       </param>     
+            <param name="ki">                  -100        +100        </param>          
             <param name="maxOutput">            3360        3360        </param>  
             <param name="maxInt">               3360        3360        </param> 
             <param name="shift">                0           0           </param>       
