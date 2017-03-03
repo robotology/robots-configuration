@@ -32,7 +32,7 @@
                 <group name="SENSORS">
                     <param name="id">                   id_r_lower_leg_strain   </param>
                     <param name="type">                 eoas_strain             </param>
-                    <param name="location">             CAN2:1                  </param>
+                    <param name="location">             CAN2:13                  </param>
                 </group>                
             
             </group>

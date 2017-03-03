@@ -19,20 +19,20 @@
         <param name="calibrationType">   5     3      3     7     7     6     6     6     6      6      6     6</param>
         <param name="calibration1">   1500     0      0     0     0     0     0     0     0      0      0     0</param>
         <param name="calibration2">      0     0      0     0     0  9102  9102  9102  9102   9102   9102  3640</param>
-        <param name="calibration3">      0 35007  55902     0     0    -1     1    -1     1     -1     1     -1</param>
-        <param name="calibration4">      0     0      0  1910   550   255   510   255   508    237    485   765 </param>
-        <param name="calibration5">      0     0      0  2145  1600    0      0    5      0      0     12   190 </param>
-        <param name="calibrationZero">  90   180   -180     0     0     0     0     0     0      0      0     0  </param>
+        <param name="calibration3">      0  35318   60568   0     0    -1     1    -1     1     -1     1     -1</param>
+        <param name="calibration4">      0     0      0  1910   550   255   510   255   510    237    490   760 </param>
+        <param name="calibration5">      0     0      0  2145  1600    0      0    5      0      0     10   170 </param>
+        <param name="calibrationZero">  90  -180    180     0     0     0     0     0     0      0      0     0  </param>
         <param name="calibrationDelta">  0     0      0     0     0     0     0     0     0      0      0     0  </param>
      
         <param name="startupPosition">   0     0      0     35    30     0     0     0     0      0      0     0  </param>
         <param name="startupVelocity">   30   30     30     60    30    30    30    30    30     30     30    30  </param>
-        <param name="startupMaxPwm">   1500    0      0   0     0    0     0     0     0      0      0     0  </param>
+        <param name="startupMaxPwm">     1500  1000   1000   0     0    0     0     0     0      0      0     0  </param>
        <param name="startupPosThreshold">90   90     90      90   90   90    90    90    90     90     90    90 </param>
       </group>
 
   <!--      <param name="CALIB_ORDER"> (0 1 2 3) (4 5) (6 7 9 11)  (8 10)</param> -->
--	<param name="CALIB_ORDER"> (0 1 2 3) (4 5) (6 7 9 11)  (8 10) </param> 
+-	<param name="CALIB_ORDER"> (8) </param> 
 
         <action phase="startup" level="10" type="calibrate">
             <param name="target">right_arm_mc_wrapper</param>
