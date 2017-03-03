@@ -3,42 +3,71 @@
  
 <params robot="iCubGenova04" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  2 </param>
+        <param name="MotioncontrolVersion">  3 </param>
         <param name="Joints"> 4 </param> <!-- the number of joints of the robot part -->
 
         <!-- joint number in sub-part           0                 1              2              3           -->
         <param name="AxisName">                 "r_wrist_prosup" "r_wrist_pitch" "r_wrist_yaw"  "r_hand_finger"  </param> 
         <param name="AxisType">                 "revolute"       "revolute"      "revolute"     "revolute"      </param>
         <param name="AxisMap">                  0                1               2              3               </param>   <!-- joint as effectively mapped onto the hw of the board -->
-        <param name="HasHallSensor">            0                0               0              1               </param>
-        <param name="HasTempSensor">            0                0               0              0               </param>
-        <param name="HasRotorEncoder">          1                1               1              0               </param>
-        <param name="HasRotorEncoderIndex">     0                0               0              0               </param>
-        <param name="Encoder">                  182.044          182.044         182.044        182.044       </param>
-        <param name="TorqueId">                 0x0C             0x0C            0x0C           0x0C            </param>
-        <param name="TorqueChan">               0                0               0              0               </param>
-        <param name="TorqueMax">                2                2               2              2            </param>
-        <param name="RotorEncoderType">         "OPTICAL_QUAD"   "OPTICAL_QUAD"  "OPTICAL_QUAD" "NONE"          </param>
-        <param name="RotorEncoderRes">         -2048             1600            1600           1               </param>
-        <param name="JointEncoderType">         "NONE"          "AEA"           "AEA"          "HALL_ADC"      </param>
-        <param name="JointEncoderRes">          1                4096           -4096           65535          </param> <!-- 6535: this value will change by fw during calibration (type 6) -->
-        <param name="RotorIndexOffset">         0                 0               0              0               </param>
-        <param name="Gearbox">                  100               159             159            256             </param>
-        <param name="MotorPoles">               1                 1               1              1              </param>   <!-- to be checked -->
+        <param name="Encoder">                  182.044          182.044         182.044        182.044         </param>
+        <param name="Gearbox_M2J">              100               159             159            256            </param>
+        <param name="Gearbox_E2J">   	          1               1                 1              1            </param>
+        <param name="useMotorSpeedFbk">           1               1                 1              1            </param>
         <param name="Verbose">                  0                                                               </param>
     </group>
-
-    <group name ="JOINTS_COUPLING">
-        <param name="kinematic_mj">   
-            0.00    0.00    0.00    0.00
-            0.00    0.00    0.00    0.00
-            0.00    0.00    0.00    0.00
-            0.00    0.00    0.00    0.00   
-        </param>
-    </group>
     
-    <group name="VELOCITY">
-        <param name="Timeout">                  100         100         100         100         </param>
+    <group name="LIMITS">
+        <param name="hardwareJntPosMax">         90          30             35             60          </param>
+        <param name="hardwareJntPosMin">        -90         -80            -15             10          </param> 
+        <param name="rotorPosMax">              0           0               0              0           </param>
+        <param name="rotorPosMin">              0           0               0              0           </param> 
     </group>
 
+    <group name="COUPLINGS"> 
+                
+        <param name ="matrixJ2M"> 
+            1.000   0.000   0.000   0.000
+            0.000   1.000   0.000   0.000
+            0.000  -1.000  +1.000   0.000
+            0.000   0.000   0.000   1.000   
+        </param>
+           
+        <param name ="matrixM2J"> 
+            1.000   0.000   0.000   0.000
+            0.000   1.000  +1.000   0.000
+            0.000   0.000  +1.000   0.000
+            0.000   0.000   0.000   1.000   
+        </param>
+
+        <param name ="matrixE2J">  
+            1.000   0.000   0.000   0.000   0.000   0.000
+            0.000   1.000   0.000   0.000   0.000   0.000
+            0.000   0.000   1.000   0.000   0.000   0.000
+            0.000   0.000   0.000   1.000   0.000   0.000   
+        </param>
+                
+    </group>      
+
+    <group name="JOINTSET_CFG"> 
+        <param name= "numberofsets"> 3</param>
+         <group name="JOINTSET_0">
+                    <param name="listofjoints">  0             </param>
+                    <param name="constraint">    none          </param>
+                    <param name="param1">        0             </param>
+                    <param name="param2">        0             </param>
+            </group> 
+            <group name="JOINTSET_1">
+                    <param name="listofjoints">   1 2           </param>
+                    <param name="constraint">     none          </param>
+                    <param name="param1">         0             </param>
+                    <param name="param2">         0             </param>
+            </group> 
+            <group name="JOINTSET_2">
+                    <param name="listofjoints">   3             </param>
+                    <param name="constraint">     none          </param>
+                    <param name="param1">         0             </param>
+                    <param name="param2">         0             </param>
+            </group> 
+    </group>              
 </params>

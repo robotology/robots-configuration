@@ -13,7 +13,7 @@
             <param name="IpPort">                   12345           </param>
             <param name="Type">                     MC4PLUS         </param>
             <param name="maxSizeRXpacket">          768             </param>
-            <param name="maxSizeROP">               256             </param>
+            <param name="maxSizeROP">               384             </param>
             <param name="maxNumberRegularROPs">     32              </param>    
             <param name="protocolCapability">       MAXIMUM         </param>   
         </group>

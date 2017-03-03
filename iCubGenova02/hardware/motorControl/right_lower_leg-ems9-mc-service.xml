@@ -25,26 +25,7 @@
                     <param name="build">            0           </param>
                 </group>
             </group>
-            
-            <group name="CONTROLLER"> 
-            
-                <param name="type"> eomc_ctrlboard_ANKLE        </param> 
-                                   
-                <param name ="matrixJ2M"> 
-                    1.00    0.00    0.00    0.00
-                    0.00    1.00    0.00    0.00
-                    0.00    0.00    1.00    0.00
-                    0.00    0.00    0.00    1.00   
-                </param>
-               
-                <param name ="matrixE2J">  
-                    1.00    0.00    0.00    0.00
-                    0.00    1.00    0.00    0.00
-                    0.00    0.00    1.00    0.00
-                    0.00    0.00    0.00    1.00   
-                </param>
-                
-            </group>                
+
 
             <group name="JOINTMAPPING">
 
@@ -53,25 +34,26 @@
                     <param name="port">             CAN1:1:0            CAN1:2:0            </param>
                 </group>
                 
+
+ 
+ 
                 <group name="ENCODER1">  
                     <param name="type">             eomc_enc_aea        aea                 </param>  
                     <param name="port">             CONN:P6             CONN:P7             </param>
                     <param name="position">         eomc_pos_atjoint    atjoint             </param> 
+                    <param name="resolution">       4096                -4096               </param>
+                    <param name="numofnoisebits">      3                 3                  </param> 
                 </group>        
                 
                 <group name="ENCODER2">
-                    <param name="type">             eomc_enc_none       none                </param>
-                    <param name="port">             CONN:none           CONN:none           </param>
-                    <param name="position">         eomc_pos_none       none                </param>
+                    <param name="type">             roie                roie                </param>
+                    <param name="port">             CAN1:1:0            CAN1:2:0            </param>
+                    <param name="position">         atmotor             atmotor             </param>
+                    <param name="resolution">       -14400              -14400              </param>
+                    <param name="numofnoisebits">      0                0                   </param>  
                 </group> 
- 
             </group>    
             
-            <group name="JOINTSETS">
-
-                <param name="list">                 0                   1                   </param> 
-
-            </group>
             
         </group>
            
