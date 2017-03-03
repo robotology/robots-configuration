@@ -13,8 +13,6 @@
                 <param name="type">             mc4plus             </param> 
             </group>          
 
-            
-            
 
             <group name="JOINTMAPPING">
 
@@ -26,20 +24,22 @@
                 <group name="ENCODER1">  
                     <param name="type">             qenc                aea                 aea                 absanalog               </param>  
                     <param name="port">             CONN:P2             CONN:P10            CONN:P11            CONN:P5                 </param>
-                    <param name="position">         atmotor             atjoint             atjoint             atjoint                 </param>
-                    <param name="resolution">       -2048                -4096               4096                65535                  </param> 
-                    <param name="numofnoisebits">      0                3                   3                  0                        </param> 
+                    <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param> 
+                    <param name="Resolution">       0                   -4096               4096                65535                   </param>      
                 </group>        
-                
-                <group name="ENCODER2">
-                    <param name="type">             none                qenc                qenc                none                    </param>
-                    <param name="port">             CONN:none           CONN:P3             CONN:P4             CONN:none               </param>
-                    <param name="position">         none                atmotor             atmotor                none                    </param>
-                    <param name="resolution">       1                   1600                1600                    1                       </param>
-                    <param name="numofnoisebits">      0                0                   0                  0                        </param> 
-                </group>  
-            </group>    
             
+                <group name="ENCODER2">
+                    <param name="type">             qenc                qenc                qenc                none                    </param>
+                    <param name="port">             CONN:P2             CONN:P3             CONN:P4             CONN:none               </param>
+                    <param name="position">         atmotor             atmotor             atmotor             none                    </param>
+                    <param name="Resolution">       2048                1600                1600                1                       </param>
+                </group> 
+            
+            </group>    
+
+           
+
+           
         </group>
            
     </group>
