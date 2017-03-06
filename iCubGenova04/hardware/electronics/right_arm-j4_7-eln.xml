@@ -19,7 +19,7 @@
 
         <group name="ETH_BOARD_SETTINGS">
             <param name="Name">                     "rightArm-j4_7" </param> 
-            <param name="regularsTXrate">           5               </param> 
+            <param name="regularsTXrate">           3               </param> 
             <param name="protocolToUse">            STANDARD        </param> 
         </group>
 
