@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<params robot="myrobot" build="1">
+
+    <group name="SERVICE">
+        
+        <param name="type"> This param describe the type of motion control service. Possible values are:
+                                * eomn_serv_MC_foc : ems with 2foc
+                                * eomn_serv_MC_mc4: ems with mc4 can boards.
+                                * eomn_serv_MC_mc4plus : mc4plus
+                                * eomn_serv_MC_mc4plusmais : mc4plus board connected to mais board (used for hands)       </param> 
+    
+        <group name="PROPERTIES">
+        
+            <group name="ETHBOARD">
+                <param name="type">  specifies type of ethernet board: it ca be  ems4  or mc4plus or mc2plus    </param> 
+            </group>          
+
+            <group name="CANBOARDS"> <!-- This group is present only if there is at least one can borad (both motor control board or sensor board) -->
+                <param name="type">       tyepe of can board:   foc, mc4 and mais        </param> 
+                <group name="PROTOCOL"> <!-- can protol version of : if its values are 0.0 then no check on can protocol compatibility is performed -->
+                    <param name="major">   allowed values are in range[0, 255]           </param>    
+                    <param name="minor">   allowed values are in range[0, 255]           </param>     
+                </group>                    
+                <group name="FIRMWARE">  <!-- firmware version: if its values are 0.0.0 then no check on can protocol compatibility is performed -->
+                    <param name="major">   allowed values are in range[0, 255]           </param>    
+                    <param name="minor">   allowed values are in range[0, 255]           </param> 
+                    <param name="build">   allowed values are in range[0, 255]           </param>
+                </group>
+            </group>
+            
+
+            <group name="JOINTMAPPING"> <!-- This tag describes the wiring of the board. It explain how each motor and encoder are connected to the motor -->
+                <group name="ACTUATOR">                
+                    <param name="type"> Its values are: 
+                                            * foc: if the motor is connected to the foc
+                                            * mc4: if the motor is connected to the mc4 (can board)  
+                                            * pwm: if the motor is directly connected to the ethernet board, like in case on mc4plus and mc2plus </param>
+                    <param name="port"> The value of this param depend on type (previous parameter):
+                                            *if type=foc than port is a can port, where the syntax is : CANX:ADDR:INDEX, 
+                                                                                                            * CANX is the can port of ethernet board (CAN1 or CAN2)
+                                                                                                            * ADDR: the address of can board [1, 14]
+                                                                                                            * index: indicates if the motor is the first or second for the can board [0, 1]
+                                                                                                            
+                                            * if type=mc4  than port is a can port, where the syntax is : CANX:ADDR:INDEX, 
+                                                                                                            * CANX is the can port of ethernet board (CAN1 or CAN2)
+                                                                                                            * ADDR: the address of can board [1, 14]
+                                                                                                            * index: indicates if the motor is the first or second for the can board [0, 1]
+                                            * if type=pwm than port is CONN:Px, wherre Px in the conector on ethernet board. 
+                                                                                                                            </param>
+                </group>
+                
+                <!-- the ENCODER1 and ENCODER2 are equivalent, so their parameter are the same meaning -->
+                <group name="ENCODER1">  
+                    <param name="type">       type of encoder. It can be: aea, roie, absanalog, mais, qenc, hallmotor, spichainof2, spichainof3, none (if no encoder is present) </param>  
+                    <param name="port">       This param has the same meaning of ACTUATOR.port.
+                                              The value of this param depend where the encoder is connected, if to ethenert board or can board
+                                                *if it is connected to a can board than port is a can port, where the syntax is : CANX:ADDR:INDEX, 
+                                                                                                                * CANX is the can port of ethernet board (CAN1 or CAN2)
+                                                                                                                * ADDR: the address of can board [1, 14]
+                                                                                                                * index: indicates if the motor is the first or second for the can board [0, 1]
+                                                                                                                
+                                                * if it is connected to ethernet board than port is CONN:Px, wherre Px in the conector on ethernet board.  (SPI port or PWM port)
+                                                
+                                                * if the enoder type is a mais, the possible values of port param is: MAIS:thumbproximal  MAIS:thumbdistal MAIS:indexproximal   MAIS:indexdistal    MAIS:mediumproximal MAIS:mediumdistal   MAIS:littlefingers
+                                                                                                                                </param>
+                    <param name="position">   it can value  atjoint, at motor or none.       </param> 
+                    <param name="resolution">       this is the resolution of the encoder     </param>
+                    <param name="numofnoisebits">   this is the number of noise bits. This number is used to perform encoder spike check          </param>
+
+                </group>        
+                
+                
+                
+                <group name="ENCODER2">
+                    <param name="type">             none                none                none            none        </param>
+                    <param name="port">             CONN:none           CONN:none           CONN:none       CONN:none   </param>
+                    <param name="position">         none                none                none            none        </param>
+                    <param name="resolution">       0                    0                  0               0           </param>
+                    <param name="numofnoisebits">   0                    0                  0               0           </param>
+
+                </group> 
+ 
+            </group>    
+            
+        </group>
+           
+    </group>
+    
+  
+</params>
+

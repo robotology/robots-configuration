@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+ <!-- Initialization file for EMS 1 - Left Upper Arm, 4 dof -->
+
+<devices robot="myrobot" build="1">
+  <device name="left_arm-j0_3-mc" type="embObjMotionControl">
+      <params file="general.xml"/>
+      <params file="hardware/electronics/part-eln.xml" />
+      <params file="hardware/mechanicals/template-of-mec-file.xml" />
+      
+      
+    <params file="hardware/motorControl/template-of-mc-service-file.xml" />            
+
+    <group name="LIMITS">
+
+        <param name="jntPosMax">     Max position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMax. </param>  
+        <param name="jntPosMin">     Min position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMin. </param>
+        <param name="hwJntPosMax">   Max hardware position of joint [expressed in degrees]. Due to mechanical constraints                     </param>  
+        <param name="hwJntPosMin">   Min hardware position of joint [expressed in degrees].  Due to mechanical constraints                    </param>
+        <param name="rotorPosMin">   Min position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param> 
+        <param name="rotorPosMax">   Max position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param>
+        <param name="jntVelMax">     Max velocity of joint [expressed in degrees/second].</param>
+        <param name="motorNominalCurrents">  Param used to compute I2T. It is the current which can be kept for an indefinete amount of time without cousing any problem to the motor. [expressed in milli Apere] </param>
+        <param name="motorPeakCurrents">     Param used to compute I2T. It is the current which couses damage to the motor if mantained for a specified amount of time. [expressed in milli Apere]   </param>
+        <param name="motorOverloadCurrents"> Threshold beyond which firmware generates an istantaneous current overload. [expressed in milli Apere] </param>
+        <param name="motorPwmLimit"> Limit of max pwm can be applied to the motor. This threshold is used after decoupling. </param>.
+    </group>
+
+
+    <group name="TIMEOUTS">
+        <param name="velocity"> timeout on recpetion of velocity setopint by firmware. [expressed in millisec]</param>
+    </group>
+
+
+     <group name="CONTROLS">
+       <param name="positionControl"> User name tag of position control. The tag name should be present below. EXAMPLE: MY_PID_POS         </param> 
+       <param name="velocityControl"> User name tag of velocity control. The tag name should be present below. If joint can't perform velocity control, use "none". EXAMPLE: MY_PID_VEL   </param> 
+       <param name="torqueControl">   User name tag of torque control. The tag name should be present below. If joint can't perform torque control, use "none". EXAMPLE: MY_PID_TRQ       </param>
+        <param name="currentPid">     User name tag of current control. The tag name should be present below. If joint can't perform current control, use "none". EXAMPLE: MY_PID_CUR     </param> 
+    </group>
+
+
+
+    <group name="MY_PID_POS">
+        <param name="controlLaw"> Specifies the type of algorithm firmware should be performed. Values of this param is:
+                                     * Pid_inPos_outPwm: simple pid with posistion setpoint in input and pwm values in output. </param> 
+                                     * PidPos_withInnerVelPid: position pid with inner velocity pid closed on motor. In this case this group should contain pos pid and vel pid values. See example MY_POS_VEL_CTRL below
+        <param name="controlUnits">  metric_units  or machine_units(raw values) </param> 
+        
+        <param name="pos_kp">           711.11    1066.66     711.11    1066.66</param>       
+        <param name="pos_kd">             0.00       0.00       0.00       0.00</param>       
+        <param name="pos_ki">          7111.09   10666.64    7111.09   10666.64</param>         
+        <param name="pos_maxOutput">      8000       8000       8000       8000</param>    
+        <param name="pos_maxInt">          200        200        200       1000</param>       
+        <param name="pos_shift">             0          0          0          0</param>       
+        <param name="pos_ko">                0          0          0          0</param>       
+        <param name="pos_stictionUp">        0          0          0          0</param>       
+        <param name="pos_stictionDwn">       0          0          0          0</param>       
+        <param name="pos_kff">               0          0          0          0</param>    
+    </group>
+    
+    
+    <group name="MY_POS_VEL_CTRL">
+        <param name="controlLaw">       PidPos_withInnerVelPid           </param> 
+        <param name="controlUnits">     machine_units                    </param> 
+        <param name="pos_kp">               5           5          5         5      </param>       
+        <param name="pos_kd">               0           0          0         0      </param>       
+        <param name="pos_ki">               0           0          0         0      </param>       
+        <param name="pos_limPwm">        15000       15000      15000     15000  </param>
+        <param name="pos_maxOutput">        32000       32000      32000     32000  </param>                 
+        <param name="pos_maxInt">           0           0          0         0      </param>       
+        <param name="pos_shift">            0           0          0         0      </param>       
+        <param name="pos_ko">               0           0          0         0      </param>       
+        <param name="pos_stictionUp">       0           0          0         0      </param>       
+        <param name="pos_stictionDwn">      0           0          0         0      </param>     
+        <param name="pos_kff">              1           1          1         1      </param>   
+        <param name="vel_kp">               1280        1280       1280      1280   </param>       
+        <param name="vel_kd">               6144        6144       6144      6144   </param>       
+        <param name="vel_ki">               1           1          1         1      </param>       
+        <param name="vel_limOutput">        0           0          0         0      </param>
+        <param name="vel_maxOutput">        0           0          0         0      </param>                 
+        <param name="vel_maxInt">           0           0          0         0      </param>       
+        <param name="vel_shift">            14          14         14        14     </param>       
+        <param name="vel_ko">               0           0          0         0      </param>       
+        <param name="vel_stictionUp">       0           0          0         0      </param>       
+        <param name="vel_stictionDwn">      0           0          0         0      </param>     
+        <param name="vel_kff">              0           0          0         0      </param>   
+    </group>
+
+    <group name="MY_PID_TRQ">
+        <param name="controlLaw">    Pid_inTrq_outPwm </param> 
+        <param name="controlLaw"> Specifies the type of algorithm firmware should be performed. Values of this param is:
+                                     * Pid_inTrq_outPwm: simple pid with torue setpoint in input and pwm values in output. </param> 
+                                     * PidTrq_withInnerVelPid: torque pid with inner velocity pid closed on motor. In this case this group should contain torue pid and vel pid values. See example MY_TRQ_VEL_CTRL below
+        <param name="controlUnits">  metric_units  or machine_units(raw values) </param> 
+
+        <param name="trq_kp">            200        200        250        300      </param>       
+        <param name="trq_kd">              0          0          0          0      </param>       
+        <param name="trq_ki">              0          0          0          0      </param>    
+        <param name="trq_maxOutput">    8000       8000       8000       8000      </param>       
+        <param name="trq_maxInt">        500        500        500        500      </param>       
+        <param name="trq_shift">           0          0          0          0      </param>       
+        <param name="trq_ko">              0          0          0          0      </param>       
+        <param name="trq_stictionUp">      0.5        0.5        1          1.7    </param>       
+        <param name="trq_stictionDwn">    -0.7       -0.7       -0.8       -1.2    </param>    
+        <param name="trq_kff">             1          1          1          1      </param>  
+        <param name="trq_kbemf">        0.0030     0.0006     0.0007     0.0007       </param>    
+        <param name="trq_filterType">      0          0          0          0      </param>    
+        <param name="trq_ktau">          180        464        463        449      </param>             
+    </group>
+    
+    
+    <group name="MY_TRQ_VEL_CTRL">
+        <param name="controlLaw">    Pid_inTrq_outPwm </param> 
+        <param name="controlLaw">    PidTrq_withInnerVelPid </param> 
+        <param name="controlUnits">  metric_units  or machine_units(raw values) </param> 
+        <param name="trq_kp">            200        200        250        300      </param>       
+        <param name="trq_kd">              0          0          0          0      </param>       
+        <param name="trq_ki">              0          0          0          0      </param>    
+        <param name="trq_maxOutput">    8000       8000       8000       8000      </param>       
+        <param name="trq_maxInt">        500        500        500        500      </param>       
+        <param name="trq_shift">           0          0          0          0      </param>       
+        <param name="trq_ko">              0          0          0          0      </param>       
+        <param name="trq_stictionUp">      0.5        0.5        1          1.7    </param>       
+        <param name="trq_stictionDwn">    -0.7       -0.7       -0.8       -1.2    </param>    
+        <param name="trq_kff">             1          1          1          1      </param>  
+        <param name="trq_kbemf">        0.0030     0.0006     0.0007     0.0007       </param>    
+        <param name="trq_filterType">      0          0          0          0      </param>    
+        <param name="trq_ktau">          180        464        463        449      </param>  
+        <param name="vel_kp">               1280        1280       1280      1280   </param>       
+        <param name="vel_kd">               6144        6144       6144      6144   </param>       
+        <param name="vel_ki">               1           1          1         1      </param>       
+        <param name="vel_limOutput">        0           0          0         0      </param>
+        <param name="vel_maxOutput">        0           0          0         0      </param>                 
+        <param name="vel_maxInt">           0           0          0         0      </param>       
+        <param name="vel_shift">            14          14         14        14     </param>       
+        <param name="vel_ko">               0           0          0         0      </param>       
+        <param name="vel_stictionUp">       0           0          0         0      </param>       
+        <param name="vel_stictionDwn">      0           0          0         0      </param>     
+        <param name="vel_kff">              0           0          0         0      </param>           
+    </group>
+
+    
+    <group name="IMPEDANCE">
+        <param name="stiffness"> stiffness values. Measurament units is  [Nm/degree] if torque control pid has metric_units else raw value if torque control pid has machine_units    </param>
+        <param name="damping">   damping values. Measurament units is  [Nm/degree] if torque control pid has metric_units else raw value if torque control pid has machine_units    </param>
+    </group>
+
+   <group name="MY_PID_CUR">
+        <param name="controlLaw">       At present, not a real current pid is implemented, but a simple feedback control. 
+                                        So the only value of this parameter is: limitscurrent          </param> 
+        <param name="controlUnits">     machine_units           </param> 
+        <param name="cur_kp">              8           8          8         8     </param> <!-- %pwm/milliAmpere -->      
+        <param name="cur_kd">              0           0          0         0     </param>       
+        <param name="cur_ki">              2           2          2         2     </param>
+        <param name="cur_shift">           10          10         10        10    </param>
+        <param name="cur_maxOutput">       32000       32000      32000     32000 </param>                 
+        <param name="cur_maxInt">          32000       32000      32000     32000 </param> 
+        <param name="cur_ko">               0            0          0           0  </param>       
+        <param name="cur_stictionUp">       0            0          0           0  </param>       
+        <param name="cur_stictionDwn">      0            0          0           0  </param>   
+        <param name="cur_kff">              0            0          0           0  </param>            
+    </group>
+    
+  </device>
+</devices>
+
+
