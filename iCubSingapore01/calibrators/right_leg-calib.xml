@@ -19,11 +19,11 @@
 <param name="calibrationType">        3         3       3       3       3       3       </param>
 <param name="calibration1">    	      32768	32768	32768	32768	32768	32768	</param> 
 <param name="calibration2">	      10	10	10	10	10.0	10.0	</param> 
-<param name="calibration3">	      14831	58863	15215	12463	8671	49311	</param> 
+<param name="calibration3">	      14831	58863	15215	12463	8671	49071	</param> 
 <param name="calibration4">           0         0       0       0       0       0       </param>
 <param name="calibration5">           0         0       0       0       0       0       </param>
 <param name="calibrationZero">       -180      -180    -180     180     180    -180     </param>
-<param name="calibrationDelta">       0         0       0       0       0       10       </param>
+<param name="calibrationDelta">       0         0       0       0       0       0       </param>
 
 <param name="startupPosition">        0         10      0       0       0       0       </param>
 <param name="startupVelocity">        10        10      10      10      10      10      </param>
