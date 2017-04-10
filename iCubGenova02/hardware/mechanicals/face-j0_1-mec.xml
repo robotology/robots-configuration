@@ -18,7 +18,9 @@
         <param name="HasTempSensor">         0               0          </param>
         <param name="HasRotorEncoder">       0               1          </param>
         <param name="HasRotorEncoderIndex">  0               0          </param>
-        <param name="Encoder">               182.044         182.044    </param>    
+        <param name="Encoder">               182.044         182.044    </param> 
+        <param name="fullscalePWM">        3360            3360       </param>
+        <param name="ampsToSensor">          1000.0         1000.0        </param>        
         <param name="TorqueId">              0               0          </param>    <!--torque pram: still to be verified -->
         <param name="TorqueChan">            0               0          </param>
         <param name="TorqueMax">             0               0          </param>
