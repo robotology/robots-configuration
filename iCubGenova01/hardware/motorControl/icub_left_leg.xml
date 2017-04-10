@@ -35,7 +35,9 @@
 <param name="Zeros">        185           176.5         172.8         -179.4        -175.8        183.8           </param>       
 <param name="TorqueId">     0x0C          0x0C          0x0C          0x0C          0x0C          0x0C          </param>       
 <param name="TorqueChan">   0             1             2             3             4             5             </param>       
-<param name="TorqueMax">    24            24            24            24            24            24            </param>       
+<param name="TorqueMax">    24            24            24            24            24            24            </param>      
+<param name="fullscalePWM">   800       800           800           800           800           800           </param>
+<param name="ampsToSensor">   1000.0    1000.0        1000.0        1000.0        1000.0        1000.0           </param>   
 <param name="Verbose">      0             </param>       
 </group>       
  

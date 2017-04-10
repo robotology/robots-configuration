@@ -37,7 +37,9 @@
     <param name="TorqueChan">   0             1             2             0             </param>       
     <param name="TorqueMax">    12            12            12            0             </param>       
     <param name="Verbose">      0                                                       </param>       
-</group>       
+    <param name="fullscalePWM">   800       800           800           800           </param>
+   <param name="ampsToSensor">    1000.0    1000.0        1000.0        1000.0           </param>
+</group>         
  
 <group name="VELOCITY">      
     <param name="Shifts">       8             8             8             8             </param>       
