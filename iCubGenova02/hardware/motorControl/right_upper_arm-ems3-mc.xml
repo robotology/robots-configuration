@@ -85,7 +85,6 @@
         <param name="cur_stictionUp">       0            0          0            0  </param>
         <param name="cur_stictionDwn">      0            0          0            0  </param>
         <param name="cur_kff">              0            0          0            0  </param>
-
     </group>
 
   </device>
