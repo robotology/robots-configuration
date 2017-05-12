@@ -9,11 +9,12 @@
         <param name="AxisName">         String wich describes name of joint. see http://wiki.icub.org/wiki/ICub_joints for name convention. </param> 
         <param name="AxisType">         It can be "revolute" or "prismatic"                                                                 </param>
         <param name="Encoder">          this value let you to transform debgree in firmware measurament units.                              </param>
+        <param name="fullscalePWM">     Value of fullscale pwm. This values is equal for all joints, becuse it depend on type of board, ems, mc4plus, etc. </param>
         <param name="Gearbox_M2J">      This is the total reduction factor between joint and encoder.                                       </param>
-        <param name="Gearbox_E2J">      This is the reduction factor between the joint and the encoder at joint. (Usually it is 1)         </param>
+        <param name="Gearbox_E2J">      This is the reduction factor between the joint and the encoder at joint. (Usually it is 1)          </param>
         <param name="useMotorSpeedFbk"> Indicate if the motor controller uses feedback from motors to compute speed. Alllowed values are [0, 1] </param>
         <param name="MotorType">        Motor type. This is only a note, for support guys.                                                     </param>
-        <param name="Verbose"> Specifies if enable verbose prints in yarprobotinterface. Alllowed values are [0, 1] </param>
+        <param name="Verbose">          Specifies if enable verbose prints in yarprobotinterface. Alllowed values are [0, 1] </param>
     </group>
 
     <group name="2FOC"> <!-- this group must be present only if the service of controlled is eomn_serv_MC_foc -->
@@ -30,7 +31,7 @@
     <group name="COUPLINGS"> 
 
         <!-- 1.625 = 1/alfa = 65/40 -->                  
-        <param name ="matrixJ2M">  <!-- joint to motor decouplig matrix -- >
+        <param name ="matrixJ2M">  <!-- joint to motor decouplig matrix -->
             1.00    0.00    0.00    0.00
            -1.625   1.625   0.00    0.00
             0.00    0.00    1.625   0.00
@@ -54,11 +55,11 @@
                 
     </group>   
 
-    <group name="JOINTSET_CFG"> <!-- this group contains configuration of jointset. One joint set contains the coupling joints. at most there may be as many sets as many joints -->
+    <group name="JOINTSET_CFG"> <!-- this group contains configuration of jointset. One jointset contains the coupling joints. At most there can be as many jointsets as many joints -->
         <param name= "numberofsets"> 2 </param> <!-- total number of sets -->
         <group name="JOINTSET_0">
             <param name="listofjoints"> List of joints beloning to this set        </param>
-            <param name="constraint">   Some hawdare configurations need particula constraint. Values of this param are: cerhand, trifig and none                           </param>
+            <param name="constraint">   Some hawdare configurations need particular constraint. Values of this param are: cerhand, trifig and none                           </param>
             <param name="param1">       Special value related to a specific constraint. It should be e double. If contraint is none, this paran isn't taken into account.   </param>
             <param name="param2">       Special value related to a specific constraint. (Currently not used).                                                               </param>
         </group> 

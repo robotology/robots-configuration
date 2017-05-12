@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<devices robot="iCubGenova02" build="1">
+    <device name="left_lower_arm_skin" type="embObjSkin">
+        <params file="general.xml" />
+ 
+        <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+        <group name="patches"> this group can contain two parameters: skinCanAddrsPatch1 and skinCanAddrsPatch2 the list of skin boards 
+            <param name="skinCanAddrsPatch1"> contains a list of adresses of mtb board connected to ethernet board (EMS, MC4PLUS) on can port 1. If there are any mtb board the parameter can be removed </param> 
+            <param name="skinCanAddrsPatch2">  contains a list of adresses of mtb board connected to ethernet board (EMS, MC4PLUS) on can port 2. If there are any mtb board the parameter can be removed </param> 
+        </group>
+        <params file="hardware/skin/body_part-ebX-skinSpec.xml" />
+    </device>
+</devices>
+  

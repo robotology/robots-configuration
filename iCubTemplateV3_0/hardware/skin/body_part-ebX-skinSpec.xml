@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<params robot="iCubGenova02" build="1">
+
+<!-- NOTE: SINCE ALMOST ALL BOARDS AND TRIANGLES HAVE THE SAME CONFIGURATIONS, 
+           WE DEFINED A DEFAULT CONFIGURATION THAT IS USED FOR ALL BOARD/TRIANGLES EXCEPT FOR THAT NEED A SPECIAL ONE.
+           IF ANY TRIANGLE OR BOARD NEED SPECIAL CONFIGURATION THEN SECTION OF SPERCIAL CONFIGURATION CAN BE OMMITTED -->
+           
+        <group name="defaultCfgBoard">
+            <param name="period">        time period of sending of skin data. [milliseconds] Usually is 50  </param> 
+            <param name="skinType">      type of skin :
+                                            - 0 ==> new skin
+                                            - 1 ==> palm and fingertips skin
+                                            - 2 ==> old skin without temperature compensation
+                                            
+            <param name="noLoad">         it is the value of the output at zero pressure. Usually values 0xf0  </param>
+            <param name="diagnostic">    Enable or disable high level diagnostic. [true/false]  </param> 
+        </group>
+        
+        
+       <group name="defaultCfgTriangle">
+            <param name="enabled">         Enable or disable triangle [true/false]  </param> 
+            <param name="shift">           number of bit for removing noise. Usually it is 2  </param>
+            <param name="cdcOffset">       0x2200  </param>
+        </group>
+
+        
+        <group name="specialCfgBoards"> <!-- In this section there are special configuration of boards-->
+           <param name="numOfSets">         number of special configurations  </param> 
+           <!-- in the following should be numOfSets of <param name="triangleSetCfgX">, where X[1, numOfSets] -->
+           
+                                     <!-- Patch_num  Board_addr_start  Board_addr_end   Period   SkinType   NoLoad      -->
+           <param name="boardSetCfg1">      2            12                14             30            1   0xff     </param> <!-- This row means that
+                                            boards with addr from 12 to 14 of on can 2 have following configuration:
+                                            - heve period of sending equal to 30 millisec
+                                            - are of type 1
+                                            - use NoLoad=0xff    -->
+                                                                                                     
+           <param name="boardSetCfg2">            ....................................................................................      </param>
+                                                                                                  
+           <param name="boardSetCfg....">         ....................................................................................     </param>
+                                                                                                  
+           <param name="boardSetCfg<numOfSets>">  ....................................................................................     </param>
+           
+        </group>
+        
+        
+        <group name="specialCfgTriangles"> <!-- In this section there are special configuration of triangles-->
+           <param name="numOfSets">         number of special configurations  </param> 
+           <!-- in the following should be numOfSets of <param name="triangleSetCfgX">, where X[1, numOfSets] -->
+           
+                                        <!-- Patch_num  Board_addr  Id_triangle_start   Id_triangle_end   enabled   shift     cdcOffset -->
+           <param name="triangleSetCfg1">      2            14                0             6            1         0        0x2000      </param> <!-- This row means that
+                                            triangles with Id from 0 to 6 of mtb with address 14 on can2 have following configuration:
+                                            - are enabled
+                                            - shift of 0 bit (no shift is performed)
+                                            - use cdcOffset=0x2000    -->
+                                                                                                     
+           <param name="triangleSetCfg2">              ....................................................................................      </param>
+                                                                                                     
+           <param name="triangleSetCfg....">            ....................................................................................     </param>
+                                                                                                     
+           <param name="triangleSetCfg<numOfSets>">     ....................................................................................     </param>
+           
+        </group>
+
+        
+</params>

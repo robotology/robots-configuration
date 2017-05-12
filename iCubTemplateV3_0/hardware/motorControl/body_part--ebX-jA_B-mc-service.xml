@@ -31,7 +31,7 @@
             </group>
             
 
-            <group name="JOINTMAPPING"> <!-- This tag describes the wiring of the board. It explain how each motor and encoder are connected to the motor -->
+            <group name="JOINTMAPPING"> <!-- This tag describes the wiring of the board. It explain how each motor and encoder are connected to the board -->
                 <group name="ACTUATOR">                
                     <param name="type"> Its values are: 
                                             * foc: if the motor is connected to the foc
