@@ -8,7 +8,7 @@
     <!-- HEAD -->
     <devices file="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
     <devices file="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
-    <devices file="./wrappers/motorControl/head_mc_wrapper.xml" /> 
+    <devices file="./wrappers/motorControl/head-mc_wrapper.xml" /> 
  
     <!-- TORSO --> 
     <devices file="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
