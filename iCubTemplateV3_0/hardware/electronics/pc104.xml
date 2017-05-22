@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<!--    This file contains details of the Linux host which manages the communication with the ETH boards. By historical reasons this 
+        host is called PC104. Read file communication-howto.txt for details of communication between the host and the ETH boards.
+  -->
+<params robot="myrobot" build="1">
+
+    <group name="PC104">
+    
+        <!-- The IP address of the host as seen by the ETH boards. 
+             So far, it must be 10.0.1.104 and cannot be changed ... because the Linux host has static IP at .104, and all
+             ETH boards are pre-programmed to connect to this IP address only. Moreover, IP mask is 255.255.255.0.
+          -->
+        <param name="PC104IpAddress">           10.0.1.104      </param>  
+        
+        <!-- The IP listening port of the host to which the ETH boards transmit. 
+             So far, it must be 12345 and cannot be changed ... because ETH boards are pre-programmed to connect only to this IP port. 
+          -->        
+        <param name="PC104IpPort">              12345           </param>    
+
+        <!-- The period in milliseconds of the thread EthSender which sends all UDP packets to ETH boards. Its range is [1, 20]. 
+             If out of these bounds the default of 1 ms is used. The recommended value is 1 ms.
+             Value of 1 ms maximises responsiveness of set<> commands and reduces round-trip delay of a blocking request to an ETH board.          
+          -->              
+        <param name="PC104TXrate">              1               </param> 
+        
+        <!-- The period in milliseconds of the thread EthReceiver which extracts and decode all UDP packest received from the ETH boards. Its range is [1, 20]. 
+             If out of these bounds the default of 5 ms is used. The recommended value is 5 ms. 
+             With the minimum value of 1 ms we surely minimise round-trip delay but we risk to increase the CPU load. As most wrappers update their values at 
+             10 ms, the value of 5 ms is a good trade-off.       
+          -->   
+        <param name="PC104RXrate">              5               </param>
+        
+    </group>
+
+</params>
+
