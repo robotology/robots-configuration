@@ -1,51 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-<devices robot="iCubGenova02" build="1">
+<!--    This file contains details of how the mais service is configured. 
+  -->
+<devices robot="myrobot" build="1">
 
-    <device name="left_upper_arm_strain" type="embObjStrain">
+    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjStrain. -->
+    <device name="body_part-ebX" type="embObjStrain">
     
+        <!-- Include the file which specifies global configuration -->
         <params file="general.xml"/>
 
-        <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+        <!-- Include the file which specifies which ETH board hosts the service -->
+        <params file="hardware/electronics/filenameOfETHboard-eln.xml" /> 
     
+        <!-- This group defines the service -->
         <group name="SERVICE">
             
+            <!-- The type of service expressed as stringised values of eOmn_serv_type_t. For strain it must be eomn_serv_AS_strain -->
             <param name="type"> eomn_serv_AS_strain </param>
         
+            <!-- This group defines the properties of the service -->
             <group name="PROPERTIES">
   
+                <!-- This group defines the properties of the CAN boards -->
                 <group name="CANBOARDS">
-                    <param name="type">                 eobrd_strain            </param>
+                
+                    <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
+                         so far it can be only strain
+                      -->
+                    <param name="type">                 eobrd_strain         </param>
 
-                    <group name="PROTOCOL"> <!-- can protol version of : if its values are 0.0 then no check on can protocol compatibility is performed -->
-                    <param name="major">   allowed values are in range[0, 255]           </param>    
-                    <param name="minor">   allowed values are in range[0, 255]           </param>     
-                </group>                    
-                <group name="FIRMWARE">  <!-- firmware version: if its values are 0.0.0 then no check on can protocol compatibility is performed -->
-                    <param name="major">   allowed values are in range[0, 255]           </param>    
-                    <param name="minor">   allowed values are in range[0, 255]           </param> 
-                    <param name="build">   allowed values are in range[0, 255]           </param>
+                    <!-- This param tells the protocol version required to run the service. Values are in range [0, 255] 
+                         if (0, 0) no check is done, otherwise there must be a CAN board with detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor -->
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group> 
+                    
+                    <!-- This param tells the firmware version required to run the service. Values are in range [0, 255] 
+                         if (0, 0, 0) no check is done, otherwise there must be a CAN board with detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor -->
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
+                    
                 </group>
                 
+                <!-- This group defines the available sensors. They are those defined by production. In strain there is only one sensor -->
                 <group name="SENSORS">
-                    <param name="id">                   id_l_upper_arm_strain   </param>
-                    <param name="type">                 eoas_strain             </param>
-                    <param name="location">             CANX:ADDR:INDEX, 
-                                                        * CANX is the can port of ethernet board (CAN1 or CAN2)
-                                                        * ADDR: the address of can board [1, 14] Default is 13.
-                                                        * index: indicates if the motor is the first or second for the can board [0, 1]                 </param>
-                </group>                
+                
+                    <!-- This param is the id of the sensor. its name should be defined in production -->
+                    <param name="id">                   id_l_arm_strain      </param>
+                    <!-- This param is the type of the sensor. it must be eoas_strain  -->
+                    <param name="type">                 eoas_strain          </param>
+                    <!-- This param is the address of the sensor. Its uses the format CANx:addr  -->
+                    <param name="location">             CAN2:7             </param>
+                    
+                </group>              
             
             </group>
-
-            <group name="SETTINGS">        
-                <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_l_upper_arm_strain   </param>                
-            </group>
             
-            <group name="STRAIN_SETTINGS">        
-                <param name="useCalibration">           true                    </param>          
+            
+            <!-- This group defines the settings which can be applied to the available sensor. -->
+            <group name="SETTINGS"> 
+            
+                <!-- The acquisition rate of all the sensor in ms. values are in range [1, 255]. Use 10 -->
+                <param name="acquisitionRate">          10                  </param>
+                <!-- The list of the enabled sensors ... there is always one and is the value of PROPERTIES.PROPERTIES.SENSORS.id -->
+                <param name="enabledSensors">           id_l_arm_strain      </param>
+                
+            </group>            
+            
+            <!-- This group defines the settings which apply to the strain only. -->
+            <group name="STRAIN_SETTINGS"> 
+            
+                <!-- tells if the strain uses calivation or not. Values are true / false. -->            
+                <param name="useCalibration">           true                    </param>     
+                
             </group>            
             
         </group>

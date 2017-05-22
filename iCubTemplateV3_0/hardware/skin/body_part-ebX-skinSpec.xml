@@ -1,67 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-<params robot="iCubGenova02" build="1">
-
-<!-- NOTE: SINCE ALMOST ALL BOARDS AND TRIANGLES HAVE THE SAME CONFIGURATIONS, 
-           WE DEFINED A DEFAULT CONFIGURATION THAT IS USED FOR ALL BOARD/TRIANGLES EXCEPT FOR THAT NEED A SPECIAL ONE.
-           IF ANY TRIANGLE OR BOARD NEED SPECIAL CONFIGURATION THEN SECTION OF SPERCIAL CONFIGURATION CAN BE OMMITTED -->
-           
+<!--    This file contains details of how the skin service is configured. 
+  -->
+  
+<params robot="myrobot" build="1">
+         
+        <!--    This group contains the default board configuration common to all MTBs. All boards receive these settings.
+          -->
         <group name="defaultCfgBoard">
-            <param name="period">        time period of sending of skin data. [milliseconds] Usually is 50  </param> 
-            <param name="skinType">      type of skin :
+            <param name="period">       time period of sending of skin data. [milliseconds] Usually is 50  </param> 
+            <param name="skinType">     [0 / 1 / 2] type of skin :
                                             - 0 ==> new skin
-                                            - 1 ==> palm and fingertips skin
-                                            - 2 ==> old skin without temperature compensation
+                                            - 1 ==> palm and fingertips skin. This value is OBSOLETE.
+                                            - 2 ==> old skin without temperature compensation. This value is OBSOLETE.
                                             
-            <param name="noLoad">         it is the value of the output at zero pressure. Usually values 0xf0  </param>
-            <param name="diagnostic">    Enable or disable high level diagnostic. [true/false]  </param> 
+            <param name="noLoad">       it is the value of the output at zero pressure. Usually its value is 0xf0  </param>
+            <param name="diagnostic">   [true/false]. It enables or disables high level diagnostic  </param> 
         </group>
         
-        
+        <!--    This group contains the default triangle configuration common to all MTBs. All boards receive these settings.
+          -->        
        <group name="defaultCfgTriangle">
-            <param name="enabled">         Enable or disable triangle [true/false]  </param> 
-            <param name="shift">           number of bit for removing noise. Usually it is 2  </param>
-            <param name="cdcOffset">       0x2200  </param>
+            <param name="enabled">      [true/false]. It enables or disables the triangle. This value should be true.   </param> 
+            <param name="shift">        number of bit for removing noise. Usually it is 2.  </param>
+            <param name="cdcOffset">    0x2200  </param>
         </group>
 
-        
-        <group name="specialCfgBoards"> <!-- In this section there are special configuration of boards-->
-           <param name="numOfSets">         number of special configurations  </param> 
-           <!-- in the following should be numOfSets of <param name="triangleSetCfgX">, where X[1, numOfSets] -->
+        <!--    This group contains the special board configurations for the specified MTBs. These settings are sent after the default ones.
+          -->           
+        <group name="specialCfgBoards"> 
            
-                                     <!-- Patch_num  Board_addr_start  Board_addr_end   Period   SkinType   NoLoad      -->
-           <param name="boardSetCfg1">      2            12                14             30            1   0xff     </param> <!-- This row means that
-                                            boards with addr from 12 to 14 of on can 2 have following configuration:
-                                            - heve period of sending equal to 30 millisec
-                                            - are of type 1
-                                            - use NoLoad=0xff    -->
-                                                                                                     
-           <param name="boardSetCfg2">            ....................................................................................      </param>
-                                                                                                  
-           <param name="boardSetCfg....">         ....................................................................................     </param>
-                                                                                                  
-           <param name="boardSetCfg<numOfSets>">  ....................................................................................     </param>
+            <!-- It contains the number of special configurations which follow. As an example, if numOfSets is 2, there will be boardSetCfg1 and boardSetCfg2. 
+                 But there can be as many special configuration as one wants. The upper limit is one per each MTB board.
+              -->
+            <param name="numOfSets">         2  </param> 
+
+            <!-- boardSetCfgX contains the X-th configuration set. It is formed by 6 values.
+                - patch_number:             it is 1 or 2. The value is referred to skinCanAddrsPatch1 or skinCanAddrsPatch2. 
+                - start_address:            it is the first can address of the MTB board will receive the settings.
+                - end_address:              it is the last can address of the MTB board will receive the settings.
+                - tx_period:                tx period of the boards. same as defaultCfgBoard::period.
+                - skin_type                 the skin type. same as defaultCfgBoard::skinType.
+                - no_load:                  same as defaultCfgBoard::noLoad
+                In following, all MTB board from CAN2:12 to CAN2:14 must have txperiod = 30 ms, be of skintype = 1, have nload = 0xff
+                and MTB board CAN1:10 must have txperiod = 30 ms, be of skintype = 1, have nload = 0xf2
+              -->
+           <!--                             patch       start       end         period          type        no_load     -->                  
+           <param name="boardSetCfg1">      2           12          14          30              1           0xff        </param> 
+                        
+           <param name="boardSetCfg2">      1           10          10          30              1           0xf2        </param>
            
         </group>
         
+        <!--    This group contains the special triangle configurations for the specified MTBs. These settings are sent after the default ones.
+          -->            
+        <group name="specialCfgTriangles">
         
-        <group name="specialCfgTriangles"> <!-- In this section there are special configuration of triangles-->
-           <param name="numOfSets">         number of special configurations  </param> 
-           <!-- in the following should be numOfSets of <param name="triangleSetCfgX">, where X[1, numOfSets] -->
+            <!-- It contains the number of special configurations which follow. As an example, if numOfSets is 2, there will be triangleSetCfg1 and triangleSetCfg2. 
+                 But there can be as many special configuration as one wants. The upper limit is one per each of the 12 triangles in each MTB board.
+              -->       
+           <param name="numOfSets">         1  </param> 
            
-                                        <!-- Patch_num  Board_addr  Id_triangle_start   Id_triangle_end   enabled   shift     cdcOffset -->
-           <param name="triangleSetCfg1">      2            14                0             6            1         0        0x2000      </param> <!-- This row means that
-                                            triangles with Id from 0 to 6 of mtb with address 14 on can2 have following configuration:
-                                            - are enabled
-                                            - shift of 0 bit (no shift is performed)
-                                            - use cdcOffset=0x2000    -->
+            <!-- triangleSetCfgX contains the X-th configuration set. It is formed by 7 values.
+                - patch_number:             it is 1 or 2. The value is referred to skinCanAddrsPatch1 or skinCanAddrsPatch2. 
+                - board_address:            it is the address of the MTB board.
+                - start_triangle:           it is the ID of the first triangle which will receive the settings. Its values are [0, 15]
+                - end_triangle:             it is the ID of the last triangle which will receive the settings. Its values are [start_triangle, 15]
+                - enabled                   [1 / 0]. tells if the triangles are enabled or disabled
+                - shift:                    the shift value to apply to the triangles. see defaultCfgTriangle::shift.
+                - cdcOffset:                the cdc offset to apply to the triangles. see defaultCfgTriangle::cdcOffset.
+                In following, all triangles from 0 to 7 of MTB board in CAN2:14 must be enabled with  shift = 2 and cdc offset = 0x2000
+              -->
+            <!--                             patch       address        start       end          enabled        shift    cdcoffset      -->                             
+           <param name="triangleSetCfg1">   2            14             0           6            1              2        0x2000      </param> 
                                                                                                      
-           <param name="triangleSetCfg2">              ....................................................................................      </param>
-                                                                                                     
-           <param name="triangleSetCfg....">            ....................................................................................     </param>
-                                                                                                     
-           <param name="triangleSetCfg<numOfSets>">     ....................................................................................     </param>
            
         </group>
 
