@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
- <!-- Initialization file for EMS 1 - Left Upper Arm, 4 dof -->
 
 <devices robot="myrobot" build="1">
-  <device name="left_arm-j0_3-mc" type="embObjMotionControl">
-      <params file="general.xml"/>
-      <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
-      <params file="hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
+    
+    <device name="body_part-ebX-jA_B-mc" type="embObjMotionControl">
+    <params file="general.xml"/>
+    <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+    <params file="hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
       
       
     <params file="hardware/motorControl/body_part-ebX-jA_B-mc_service.xml" /> 
@@ -30,10 +30,10 @@
         <param name="velocity"> timeout on recpetion of velocity setopint by firmware. [expressed in millisec]</param>
     </group>
 
-     <group name="CONTROLS">
-       <param name="positionControl"> User name tag of position control. The tag name should be present below. EXAMPLE: MY_PID_POS         </param> 
-       <param name="velocityControl"> User name tag of velocity control. The tag name should be present below. If joint can't perform velocity control, use "none". EXAMPLE: MY_PID_VEL   </param> 
-       <param name="torqueControl">   User name tag of torque control. The tag name should be present below. If joint can't perform torque control, use "none". EXAMPLE: MY_PID_TRQ       </param>
+    <group name="CONTROLS">
+        <param name="positionControl"> User name tag of position control. The tag name should be present below. EXAMPLE: MY_PID_POS         </param> 
+        <param name="velocityControl"> User name tag of velocity control. The tag name should be present below. If joint can't perform velocity control, use "none". EXAMPLE: MY_PID_VEL   </param> 
+        <param name="torqueControl">   User name tag of torque control. The tag name should be present below. If joint can't perform torque control, use "none". EXAMPLE: MY_PID_TRQ       </param>
         <param name="currentPid">     User name tag of current control. The tag name should be present below. If joint can't perform current control, use "none". EXAMPLE: MY_PID_CUR     </param> 
     </group>
 
@@ -144,7 +144,7 @@
         <param name="damping">   damping values. If torque control pid has metric_units, measurament units is [Nm/degree]  else raw value  </param>
     </group>
 
-   <group name="MY_PID_CUR">
+    <group name="MY_PID_CUR">
         <param name="controlLaw">       At present, not a real current pid is implemented, but a simple feedback control. 
                                         So the only value of this parameter is: limitscurrent          </param> 
         <param name="controlUnits">     machine_units           </param> 
@@ -160,7 +160,8 @@
         <param name="cur_kff">              0            0          0           0  </param>            
     </group>
     
-  </device>
+    </device>
+  
 </devices>
 
 
