@@ -1,26 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-<params robot="iCubGenova02" build="1">
+<!--    This file contains details of an ETH board. 
+        It is included by other files which specify a service which needs this particular ETH board 
+  -->
+  
+<params robot="myrobot" build="1">
 
+    <!-- It includes details of the Linux host. -->
     <params file="hardware/electronics/pc104.xml" />
     
+    <!-- It contains the details of the ETH board. -->
     <group name="ETH_BOARD">
    
+        <!-- This group contains properties of the ETH board which are hard-coded in the FW and cannot be configured in runtime. -->
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.X             </param> <!-- Usually it is the number of board on schematics, but it can be changed -->
-            <param name="IpPort">                   12345                </param> <!-- number op IP port used for communication between firmware and yarprobotinterface -->
-            <param name="Type">                     EMS4                 </param>
-            <param name="maxSizeRXpacket">          768                  </param>
-            <param name="maxSizeROP">               384                  </param>
-            <param name="maxNumberRegularROPs">     32                   </param>    
+        
+            <!-- The IP address of board. Use the X specified in the HW schematics. It cannot be: 0, 104, 255. -->
+            <param name="IpAddress">                10.0.1.X             </param>  
+            
+            <!-- The IP port used by the board to communicate with yarprobotinterface. It must be = PC104::PC104IpPort. [NOTE: not parsed]. -->
+            <param name="IpPort">                   12345                </param>  
+            
+            <!-- The type of eth board. It can be [ems4, mc4plus, mc2plus] or any other/future eObrd_ethtype_t in compact or long form. [NOTE: also supported EMS4, MC4PLUS, MC2PLUS]. -->            
+            <param name="Type">                     ems4                 </param> 
+
+            <!-- The maximum size of UDP packet which the ETH board can receive. The object EthResource uses this value to allocate its internal TX UDP packet, one for each board. -->            
+            <param name="maxSizeRXpacket">          768                  </param>   
+            
+            <!-- The maximum size of ROP (Remote OPeration) that can be decoded or transmitted by the board. The object EthResource uses this value to form / parse the tx / rx ROP. -->
+            <param name="maxSizeROP">               384                  </param>   
+            
+            <!-- The maximum number of ROPs which the ETH board can manage for regular transmission. Any attempt to add a a further ROP is signalled as a failure. [NOTE: not parsed].  -->   
+            <param name="maxNumberRegularROPs">     32                   </param>   
+            
+            <!-- If MAXIMUM the ETH board has memory enough to manage up to 12 joints/motors. If STANDARD, it manages only 4 joints/motors. [NOTE: not parsed]. [TODO: remove it] -->
             <param name="protocolCapability">       MAXIMUM              </param>   
+            
         </group>
 
+        <!-- This group contains values which the user is free to change  which yarprobotinterfacecan change in runtime  of the ETH board which cannot be configured in runtime -->
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "body_part-ebX-jA_B"  </param> <!-- this string is used to print info/debug/warning/error by the logger -->
-            <param name="regularsTXrate">           5                    </param> <!-- this is the period of sending info by firmware --> 
-            <param name="protocolToUse">            STANDARD             </param>  
+        
+            <!-- String of max 31 characters used to identify the board in terminal prints (together with its IP address) -->
+            <param name="Name">                     "body_part-ebX-jA_B" </param>
+            
+            <!-- The period in milliseconds with which the ETH boards transmits the regular ROPs. Its range is [1, 20] and if out of bound it is clipped to limits. 
+                 The recommended value is 5 (3 for boards which support skin). IMPORTANT: reply ROPs and diagnostics ROPs are transmitted ASAP with 1 ms granularity.
+                                  
+                 This number is related to many other system parameters: (1) the ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate of other boards; (2) the PC104::PC104RXrate decoding 
+                 rate inside PC104; (3) rate of the wrappers which typically is 10 ms. 
+                 A value of PC104::PC104RXrate = 1 for every board is possible, but it adds extra useless effort in the CPU of PC104 to decode many UDP packets. 
+                 The effort is useless because the information carried by regular ROPs is read by wrappers typically at 10 ms rate.
+                 hence, any value lower than the rate of wrappers is enough. The only exception is for presence of skin, where it is required a lower value so that the ETH 
+                 board can consume the CAN packets sent by the CAN boards without losing info (if it happens, diagnostics messages are sent which complain about loss of skin data).  
+              -->            
+            <param name="regularsTXrate">           5                    </param> 
+            
+            <!-- Use STANDARD for boards with up to 4 joints/motors, and MAXIMUM only for those with up to 12 joints/motors (MAXIMUM only for mc4can-based motion control). 
+                 This parameter is used by the class HostTransceiver to save some RAM for the buffering of joint/motor status. 
+                 [NOTE: value MAXIMUM is used only for mc4can-based motion control]
+                 [TODO: we can simplify and remove both ETH_BOARD_SETTINGS::protocolToUse and ETH_BOARD_PROPERTIES::protocolCapability. But HostTransceiver will always
+                        load 12 joints or: it will implement dynamic load, where the mc endpoint is loaded by embObjMotionControl with correct number of joints]
+              -->            
+            <param name="protocolToUse">            STANDARD             </param> 
+            
         </group>
 
     </group>  
