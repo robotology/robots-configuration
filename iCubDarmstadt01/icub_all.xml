@@ -77,7 +77,7 @@
     <devices file="hardware/skin/left_leg-eb10-skin.xml" />
     <devices file="hardware/skin/right_leg-eb11-skin.xml" />
     <devices file="wrappers/skin/torso-skin_wrapper.xml" />
-    <devices file="hardware/skin/torso-eb22-skin.xml" />
+    <devices file="hardware/skin/torso-cfw2_can9-skin.xml" />
     
     <!--  CALIBRATORS -->
     <devices file="calibrators/left_arm-calib.xml" />

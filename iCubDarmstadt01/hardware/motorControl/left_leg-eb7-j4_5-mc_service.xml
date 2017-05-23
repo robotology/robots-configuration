@@ -48,7 +48,7 @@
                     <param name="position">         atmotor             atmotor       </param>
                     <param name="resolution">       -16000              -16000        </param>
                     <param name="numofnoisebits">      0                0             </param>  
- 
+                </group>        
             </group>    
             
         </group>
