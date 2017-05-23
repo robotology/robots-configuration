@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-<devices robot="iCubDarmstadt01" build="1">
+<devices robot="iCubGenova02" build="1">
 	<device name="right_leg_skin_wrapper" type="skinWrapper">
 		<param name="period">       20  				</param>
 		<param name="total_taxels"> 2496				</param>
@@ -15,8 +15,8 @@
 		
 		<action phase="startup" level="5" type="attach">
 		    <paramlist name="networks">
-		<!-- The param value must match the device name in the corresponding emsX file -->
-		        <elem name="FirstSetOfSkins">  right_leg_skin </elem>
+
+		        <elem name="FirstSetOfSkins">  right_leg-eb11-skin </elem>
 		    </paramlist>
 		</action>
 
