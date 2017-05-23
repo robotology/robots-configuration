@@ -42,17 +42,17 @@
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
                 <!-- motorcontrol and virtual torque sensors -->
-                <elem name="left_lower_leg">left_lower_leg_mc</elem>
-                <elem name="right_lower_leg">right_lower_leg_mc</elem>
-                <elem name="left_upper_leg">left_upper_leg_mc</elem>
-                <elem name="right_upper_leg">right_upper_leg_mc</elem>
-                <elem name="torso">torso_mc</elem>
-                <elem name="right_lower_arm">right_lower_arm_mc</elem>
-                <elem name="left_lower_arm">left_lower_arm_mc</elem>
-                <elem name="right_upper_arm">right_upper_arm_mc</elem>
-                <elem name="left_upper_arm">left_upper_arm_mc</elem>
-                <elem name="head-j0">head-j0_1-mc</elem>
-                <elem name="head-j2">head-j2_5-mc</elem>
+                <elem name="left_lower_leg">left_leg-eb7-j4_5-mc</elem>
+                <elem name="right_lower_leg">right_leg-eb9-j4_5-mc</elem>
+                <elem name="left_upper_leg">left_leg-eb6-j0_3-mc</elem>
+                <elem name="right_upper_leg">right_leg-eb8-j0_3-mc</elem>
+                <elem name="torso">torso-eb5-j0_2-mc</elem>
+                <elem name="right_lower_arm">right_arm-eb4-j4_15-mc</elem>
+                <elem name="left_lower_arm">left_arm-eb2-j4_15-mc</elem>
+                <elem name="right_upper_arm">right_arm-eb3-j0_3-mc</elem>
+                <elem name="left_upper_arm">left_arm-eb1-j0_3-mc</elem>
+                <elem name="head-j0">head-eb20-j0_1-mc</elem>
+                <elem name="head-j2">head-eb21-j2_5-mc</elem>
                 <!-- imu -->
                 <elem name="imu">inertial</elem>
                 <!-- ft -->
