@@ -4,8 +4,7 @@
  <!-- Initialization file for EMS 5 - Torso, 3 dof -->
 
 <devices robot="iCubSheffield01" build="1">
-  <device name="torso_mc" type="embObjMotionControl">
-<device name="torso-eb5-j0_2-mc" type="embObjMotionControl">
+  <device name="torso-eb5-j0_2-mc" type="embObjMotionControl">
       <params file="general.xml" />
       <params file="hardware/electronics/torso-eb5-j0_2-eln.xml" />
       <params file="hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
