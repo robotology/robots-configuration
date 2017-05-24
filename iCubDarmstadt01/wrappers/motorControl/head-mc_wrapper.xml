@@ -16,9 +16,7 @@
  
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
-                <!-- The param value must match the device name in the corresponding body_part-ebX-jA_B-mc.xml file -->
-                <elem name="FirstSetOfJoints">  head-eb20-j0_1-mc </elem> 
-                <elem name="SecondSetOfJoints"> head-eb21-j2_5-mc </elem> 
+                <elem name="FirstSetOfJoints">  head-cfw2_can0-mc </elem> 
                 <elem name="Calibrator">        head-calibrator   </elem>
             </paramlist>
         </action>

@@ -13,6 +13,8 @@
         <param name="Gearbox_E2J">      1             1             1             1             1             1             1             1             1             1             1             1     </param>
         <param name="useMotorSpeedFbk"> 1             1             1             1             1             1             1             1             1             1             1             1     </param>
         <param name="MotorType">         "DC_FH"         "DC_FH"        "DC_FH"      "DC_FH"       "DC_FH"        "DC_FH"       "DC_FH"       "DC_FH"     "DC_FH"        "DC_FH"       "DC_FH"      "DC_FH" </param>
+        <param name="fullscalePWM">     1333          1333        1333         1333          1333            1333         1333      1333     1333    1333     1333    1333</param>
+        <param name="ampsToSensor">   1000.0        1000.0      1000.0       1000.0     1000.0          1000.0       1000.0    1000.0   1000.0  1000.0   1000.0  1000.0</param>   
         <param name="Verbose">      0    </param>
     </group>
 

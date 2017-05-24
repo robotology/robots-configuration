@@ -14,7 +14,7 @@
 		<action phase="startup" level="5" type="attach">
 		    <paramlist name="networks">
 
-		        <elem name="FirstSetOfSkins">  torso-eb22-skin </elem>
+		        <elem name="FirstSetOfSkins">  torso-cfw2_can9-skin </elem>
 		    </paramlist>
 		</action>
 

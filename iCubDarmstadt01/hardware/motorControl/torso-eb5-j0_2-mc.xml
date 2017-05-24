@@ -71,11 +71,15 @@
         <param name="cur_kp">               8           8          8     </param>       
         <param name="cur_kd">               0           0          0     </param>       
         <param name="cur_ki">               2           2          2     </param>
-        <param name="cur_scale">            10          10         10    </param>
+        <param name="cur_shift">            10          10         10    </param>
         <param name="cur_maxOutput">        32000       32000      32000 </param>                 
         <param name="cur_maxInt">           32000       32000      32000 </param>        
+        <param name="cur_ko">               0            0          0    </param>
+        <param name="cur_stictionUp">       0            0          0    </param>
+        <param name="cur_stictionDwn">      0            0          0    </param>
+        <param name="cur_kff">              0            0          0     </param>
     </group>
-    
+
     <group name="IMPEDANCE">
         <param name="stiffness">       0      0      0     </param>    
         <param name="damping">         0      0      0     </param>    
