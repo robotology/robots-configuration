@@ -3,11 +3,11 @@
 
 <devices robot="iCubSheffield01" build="1">
 
-    <device name="left_hand_mais" type="embObjMais">
+    <device name="right_arm-eb4-j4_15-mais" type="embObjMais">
     
         <params file="general.xml" />
 
-        <params file="hardware/electronics/left_lower_arm-ems2-eln.xml" />
+        <params file="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
         
         <group name="SERVICE">
         
@@ -30,7 +30,7 @@
                 </group>
             
                 <group name="SENSORS">
-                    <param name="id">                   id_l_hand_mais      </param>
+                    <param name="id">                   id_r_hand_mais      </param>
                     <param name="type">                 eoas_mais           </param>
                     <param name="location">             CAN1:14             </param>
                 </group>
@@ -39,7 +39,7 @@
             
             <group name="SETTINGS"> 
                 <param name="acquisitionRate">          10                  </param>
-                <param name="enabledSensors">           id_l_hand_mais      </param>
+                <param name="enabledSensors">           id_r_hand_mais      </param>
             </group>
             
         </group>
@@ -47,4 +47,5 @@
     </device> 
     
 </devices>
+
 
