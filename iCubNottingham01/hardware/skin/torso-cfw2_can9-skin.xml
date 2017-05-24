@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 <devices robot="iCubNottingham01" build="1"> 
-  <device name="torso-skin" type="canBusSkin">
+  <device name="torso-cfw2_can9-skin" type="canBusSkin">
       <params file="general.xml" />
 
 	  <params robot="iCubNottingham01" build="1">
