@@ -2,12 +2,12 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 <devices robot="iCubNottingham01" build="1">
-	<device name="torso_calibrator" type="parametricCalibratorEth">
+	<device name="torso-calibrator" type="parametricCalibratorEth">
                 <params file="general.xml" />
                 
 		<group name="GENERAL">
 		    <param name="joints"> 3 </param> <!-- the number of joints of the robot part -->
-		    <param name="deviceName"> Torso_Calibrator </param>
+		    <param name="deviceName"> Torso-calibrator </param>
 		</group>
 
 <group name="HOME">
@@ -40,11 +40,11 @@
 		<param name="CALIB_ORDER"> (0 1 2) </param>
 
 		<action phase="startup" level="10" type="calibrate">
-		    <param name="target">torso_mc_wrapper</param>
+		    <param name="target">torso-mc_wrapper</param>
 		</action>
 
 		<action phase="interrupt1" level="1" type="park">
-		    <param name="target">torso_mc_wrapper</param>
+		    <param name="target">torso-mc_wrapper</param>
 		</action>
 
 		<action phase="interrupt3" level="1" type="abort" />
