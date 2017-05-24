@@ -40,12 +40,6 @@
                     <param name="enable">    eomc_mc4broadcast_position    status  print   pidvalues     </param>
                 </group>
 
-                <group name="JOINT2BOARD">                 
-                    <param name="location">         CAN1:3:0            CAN1:3:1            CAN1:4:0            CAN1:4:1
-                                                    CAN1:5:0            CAN1:5:1            CAN1:6:0            CAN1:6:1
-                                                    CAN1:7:0            CAN1:7:1            CAN1:8:0            CAN1:8:1                </param>
-                </group>
-
             </group>     
 
             <group name="MAIS"> 

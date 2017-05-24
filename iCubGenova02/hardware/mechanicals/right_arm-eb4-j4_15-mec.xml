@@ -11,10 +11,7 @@
        
         <param name="Encoder">         182.044        182.044      182.044       182.044       182.044       182.044       182.044       182.044      182.044       182.044      182.044       182.044      </param>
         <param name="fullscalePWM">   1333         1333          1333           1333         1333          1333          1333          1333          1333          1333          1333         1333     </param>
-        <param name="ampsToSensor">   1000.0       1000.0        1000.0         1000.0       1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0       1000.0   </param>
-       
-        <param name="JointEncoderRes"> -254440             4096         -4096         65535         65535          65535          65535          65535          65535         65535         65535          65535      </param>
-        
+        <param name="ampsToSensor">   1000.0       1000.0        1000.0         1000.0       1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0       1000.0   </param>        
         <param name="Gearbox_M2J">      1             1             1             1             1             1             1             1             1             1             1             1     </param>
         <param name="Gearbox_E2J">      1             1             1             1             1             1             1             1             1             1             1             1     </param>
         <param name="useMotorSpeedFbk"> 1             1             1             1             1             1             1             1             1             1             1             1     </param>

@@ -28,9 +28,7 @@
             </group>
 
             <group name="MC4">
-                <!-- so far, at date of 27 jul 16: data in SHIFTS and BROADCAST is NOT configured by the remote ETH board because: .... --> 
                 <group name="SHIFTS">
-                    <!-- 1. eOmn_serv_config_data_mc_mc4_t contains this field, but in FW the object EOtheMC4boards uses its own default values (8, 5, 5, 1, 1) -->                 
                     <param name="velocity">                 8           </param>
                     <param name="estimJointVelocity">       5           </param>
                     <param name="estimJointAcceleration">   5           </param>
@@ -39,14 +37,7 @@
                 </group>
 
                 <group name="BROADCASTPOLICY">
-                    <!-- 2. eOmn_serv_config_data_mc_mc4_t contains this field, but the object EOtheMC4boards uses its own default values (position status print pidvalues) -->              
-                    <param name="enable">    eomc_mc4broadcast_position    status  print   pidvalues     </param>
-                </group>
-
-                <group name="JOINT2BOARD">                 
-                    <param name="location">         CAN1:3:0            CAN1:3:1            CAN1:4:0            CAN1:4:1
-                                                    CAN1:5:0            CAN1:5:1            CAN1:6:0            CAN1:6:1
-                                                    CAN1:7:0            CAN1:7:1            CAN1:8:0            CAN1:8:1                </param>
+                     <param name="enable">    eomc_mc4broadcast_position    status  print   pidvalues     </param>
                 </group>
 
             </group>     
