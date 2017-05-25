@@ -14,7 +14,7 @@
         <param name="Gearbox_M2J">   	-100.0         100.0        -100.0         -100.0      </param>
         <param name="Gearbox_E2J">   	1             1             1              1           </param>
         <param name="useMotorSpeedFbk"> 1             1             1              1           </param>
-        <param name="MotorType">       "BLL_MOOG"     "BLL_MOOG"   "BLL_MOOG"    "BLL_KOLLM"   </param>
+        <param name="MotorType">       "BLL_MOOG"     "BLL_MOOG"   "BLL_MOOG"    "BLL_MOOG"   </param>
         <param name="Verbose">0</param>
     </group>
     
