@@ -24,6 +24,10 @@
       <param name="stiffness">  0.1     0.1   0.1    0.1    </param>
       <param name="damping">    0.05   0.05  0.05   0.05    </param>
     </group>
+    
+    <group name="TIMEOUTS">
+        <param name="velocity">          100           100           100           100 </param>
+    </group>
 
     <group name="CONTROLS">
         <param name="positionControl">  JOINT_PID_V1           JOINT_PID_V1          JOINT_PID_V1          JOINT_PID_V1          </param> 
