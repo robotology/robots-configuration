@@ -27,14 +27,14 @@
 
 
     <group name="CONTROLS">
-       <param name="positionControl">           JOINT_PID_V1           JOINT_PID_V1           </param> 
+       <param name="positionControl">           POS_PID_DEFAULT           POS_PID_DEFAULT           </param> 
        <param name="velocityControl">           none                   none                   </param> 
-       <param name="torqueControl">             MPID_WITH_FRICTION_V1  MPID_WITH_FRICTION_V1  </param> 
-       <param name="currentPid">                2FOC_FEEDBACK          2FOC_FEEDBACK          </param>
+       <param name="torqueControl">             TRQ_PID_DEFAULT  TRQ_PID_DEFAULT  </param> 
+       <param name="currentPid">                2FOC_CUR_CONTROL          2FOC_CUR_CONTROL          </param>
     </group>
 
 
-    <group name="JOINT_PID_V1">
+    <group name="POS_PID_DEFAULT">
         <param name="controlLaw">    Pid_inPos_outPwm </param> 
         <param name="controlUnits">  metric_units              </param> 
         <param name="pos_kp">          2200.00     2200.00      </param>       
@@ -54,7 +54,7 @@
       <param name="damping">    0.0 0.0 </param>
     </group>
 
-    <group name="MPID_WITH_FRICTION_V1">
+    <group name="TRQ_PID_DEFAULT">
         <param name="controlLaw">    Pid_inTrq_outPwm           </param> 
         <param name="controlUnits">  metric_units               </param> 
         <param name="trq_kp">         200          200              </param>       
@@ -72,7 +72,7 @@
         <param name="trq_ktau">         209          160            </param>          
     </group>
 
-    <group name="2FOC_FEEDBACK">
+    <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">       limitscurrent           </param> 
         <param name="controlUnits">     metric_units            </param> 
         <param name="cur_kp">               8           8           </param>       

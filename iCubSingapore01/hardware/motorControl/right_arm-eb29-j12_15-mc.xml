@@ -34,13 +34,13 @@
 
 
         <group name="CONTROLS">
-           <param name="positionControl">           JOINT_PID_V1   JOINT_PID_V1    JOINT_PID_V1    JOINT_PID_V1    </param> 
+           <param name="positionControl">           POS_PID_DEFAULT   POS_PID_DEFAULT    POS_PID_DEFAULT    POS_PID_DEFAULT    </param> 
            <param name="velocityControl">           none           none            none            none            </param> 
            <param name="torqueControl">             none           none            none            none            </param> 
            <param name="currentPid">                none           none            none            none            </param>
         </group>
 
-	    <group name="JOINT_PID_V1">
+	    <group name="POS_PID_DEFAULT">
 	        <param name="controlLaw">    Pid_inPos_outPwm                          </param> 
             <param name="controlUnits">     metric_units                                        </param> 
             <param name="pos_kp">                500.0       500.0      -500.0       200.0       </param>
