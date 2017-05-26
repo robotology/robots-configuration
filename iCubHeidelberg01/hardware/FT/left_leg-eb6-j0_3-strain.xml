@@ -3,11 +3,11 @@
 
 <devices robot="iCubHeidelberg01" build="1">
 
-    <device name="left_upper_leg_strain" type="embObjStrain">
+    <device name="left_leg-eb6-j0_3-strain" type="embObjStrain">
     
         <params file="general.xml"/>
 
-        <params file="hardware/electronics/left_upper_leg-ems6-eln.xml" />
+        <params file="hardware/electronics/left_leg-eb6-j0_3-eln.xml" />
     
         <group name="SERVICE">
             
