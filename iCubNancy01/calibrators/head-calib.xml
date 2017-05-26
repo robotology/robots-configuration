@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <devices build="1" robot="iCubNancy01">
-	<device name="head_calibrator" type="parametricCalibratorEth">
+	<device name="head-calibrator" type="parametricCalibratorEth">
                 <params file="general.xml"/>
 
 		<group name="GENERAL">
@@ -35,11 +35,11 @@
         <param name="CALIB_ORDER"> (0 1 2) (3) (4) (5) </param>
 
 		<action level="10" phase="startup" type="calibrate">
-		    <param name="target">head_mc_wrapper</param>
+		    <param name="target">head-mc_wrapper</param>
 		</action>
 
 		<action level="1" phase="interrupt1" type="park">
-		    <param name="target">head_mc_wrapper</param>
+		    <param name="target">head-mc_wrapper</param>
 		</action>
 
 		<action level="1" phase="interrupt3" type="abort"/>
