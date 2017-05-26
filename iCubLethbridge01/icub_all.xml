@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<robot name="icub">
+
+    <!-- cartesian --> 
+    
+    <!-- motor controllers wrappers -->
+    <devices file="wrappers/motorControl/head_mc_wrapper.xml" />
+    <devices file="hardware/motorControl/icub_head.xml" />
+    
+    <!-- VIRTUAL ANALOG SERVERs -->
+      
+
+    <!-- REAL ANALOG SENSORS -->
+   
+    <!-- SKIN -->
+
+
+    <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
+
+    <!-- FOOT MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR -->
+    <!--
+
+
+    <!-- CALIBRATORS -->
+    <devices file="calibrators/head_calib.xml" /> 
+</robot> 
+
