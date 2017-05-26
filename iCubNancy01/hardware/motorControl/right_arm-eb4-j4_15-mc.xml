@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<devices build="1" robot="iCubNancy01">
   <device name="right_arm-eb4-j4_15-mc" type="embObjMotionControl">
       <params file="general.xml" />
       <params file="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
