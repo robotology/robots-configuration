@@ -50,7 +50,8 @@
             
             <group name="SETTINGS"> 
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">       l_hand l_forearm_1 l_forearm_2 l_hand_gyro </param>                
+                <param name="enabledSensors">       l_upper_arm_4           l_upper_arm_1           l_upper_arm_3           l_upper_arm_2
+                                            l_forearm_1             l_forearm_2             l_hand                  l_hand_gyro </param>                
             </group>
             
         </group>        

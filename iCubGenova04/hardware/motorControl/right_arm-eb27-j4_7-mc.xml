@@ -59,12 +59,12 @@
         <group name="TRQ_PID_DEFAULT">
             <param name="controlLaw">    Pid_inTrq_outPwm </param> 
             <param name="controlUnits">  metric_units                   </param>
-            <param name="trq_kp">           1000           0           0           0    </param>    
+            <param name="trq_kp">             80           0           0           0    </param>    
             <param name="trq_kd">              0           0           0           0    </param>     
             <param name="trq_ki">              0           0           0           0    </param>     
-            <param name="trq_maxOutput">    3360           0           0           0    </param>     
-            <param name="trq_maxInt">        500           0           0           0    </param>     
-            <param name="trq_shift">           0           0           0           0    </param>     
+            <param name="trq_maxOutput">    1333           0           0           0    </param>     
+            <param name="trq_maxInt">       1333           0           0           0    </param>     
+            <param name="trq_shift">          10           0           0           0    </param>     
             <param name="trq_ko">              0           0           0           0    </param>     
             <param name="trq_stictionUp">      0           0           0           0    </param>     
             <param name="trq_stictionDwn">     0           0           0           0    </param>     
