@@ -20,6 +20,7 @@
         <param name="Gearbox_M2J">              161.68          161.68          </param>
         <param name="Gearbox_E2J">                1             1               </param>
         <param name="useMotorSpeedFbk">           1             1               </param>
+        <param name="MotorType">                 "DC"          "DC"             </param>
         <param name="Verbose">   0    </param>
     </group>
     
