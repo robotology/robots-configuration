@@ -24,11 +24,11 @@
                 </group>
                 
                 <group name="ENCODER1">  
-                    <param name="type">             aea                 aea                 qenc                qenc                    </param>  
-                    <param name="port">             CONN:P11            CONN:P10            CONN:P5             CONN:P4                 </param>
-                    <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param> 
-                    <param name="resolution">       4096                4096                102400              102400                  </param>
-                    <param name="numofnoisebits">      3                3                   0                  0                        </param>  
+                    <param name="type">             aea                 aea                 none                none                   </param>  
+                    <param name="port">             CONN:P11            CONN:P10            CONN:none           CONN:none              </param>
+                    <param name="position">         atjoint             atjoint             none                none                   </param> 
+                    <param name="resolution">       4096                4096                0                   0                      </param>
+                    <param name="numofnoisebits">      3                3                   0                   0                      </param>  
                 </group>        
                 
                 <group name="ENCODER2">
