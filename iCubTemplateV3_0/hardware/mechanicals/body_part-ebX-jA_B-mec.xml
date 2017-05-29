@@ -18,6 +18,15 @@
         <param name="Verbose">          Specifies if enable verbose prints in yarprobotinterface. Alllowed values are [0, 1] </param>
     </group>
 
+    
+    <group name="LIMITS">       
+        <param name="hardwareJntPosMin">         Max hardware position of joint [expressed in degrees]. Due to mechanical constraints                     </param>  
+        <param name="hardwareJntPosMax">         Min hardware position of joint [expressed in degrees].  Due to mechanical constraints                    </param>
+        <param name="rotorPosMin">               Min position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param> 
+        <param name="rotorPosMax">               Max position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param>
+    </group>
+
+
     <group name="2FOC"> <!-- this group must be present only if the service of controlled is eomn_serv_MC_foc -->
         <param name="HasHallSensor">         Indicates if hall sensors are connected to 2FOC board            </param>
         <param name="HasTempSensor">         Indicates if temperature ensor  are connected to 2FOC board      </param>

@@ -14,10 +14,6 @@
     <group name="LIMITS">
         <param name="jntPosMax">     Max position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMax. </param>  
         <param name="jntPosMin">     Min position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMin. </param>
-        <param name="hwJntPosMax">   Max hardware position of joint [expressed in degrees]. Due to mechanical constraints                     </param>  
-        <param name="hwJntPosMin">   Min hardware position of joint [expressed in degrees].  Due to mechanical constraints                    </param>
-        <param name="rotorPosMin">   Min position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param> 
-        <param name="rotorPosMax">   Max position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param>
         <param name="jntVelMax">     Max velocity of joint [expressed in degrees/second].</param>
         <param name="motorNominalCurrents">  Param used to compute I2T. It is the current which can be kept for an indefinete amount of time without cousing any problem to the motor. [expressed in milli Apere] </param>
         <param name="motorPeakCurrents">     Param used to compute I2T. It is the current which couses damage to the motor if mantained for a specified amount of time. [expressed in milli Apere]   </param>
