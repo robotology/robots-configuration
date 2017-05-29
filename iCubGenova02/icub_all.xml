@@ -59,9 +59,10 @@
     <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
     <devices file="hardware/skin/left_leg-eb10-skin.xml" />
     <devices file="hardware/skin/right_leg-eb11-skin.xml" />
+    <!-- Skin torso is never tested"
     <devices file="wrappers/skin/torso-skin_wrapper.xml" />
     <devices file="hardware/skin/torso-eb22-skin.xml" />
-    
+    -->
     <!-- ANALOG SENSOR FT -->
     <devices file="wrappers/FT/left_arm-FT_wrapper.xml" /> 
     <devices file="wrappers/FT/right_arm-FT_wrapper.xml" />
