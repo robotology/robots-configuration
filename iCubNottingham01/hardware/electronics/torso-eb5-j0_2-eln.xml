@@ -8,19 +8,27 @@
     <group name="ETH_BOARD">
    
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.5         </param>
-            <param name="IpPort">                   12345            </param>
-            <param name="Type">                     EMS4             </param>
-            <param name="maxSizeRXpacket">          768              </param>
-            <param name="maxSizeROP">               384              </param>
-            <param name="maxNumberRegularROPs">     32               </param>    
-            <param name="protocolCapability">       MAXIMUM          </param>   
+            <param name="IpAddress">                10.0.1.5                </param>
+            <param name="IpPort">                   12345                   </param>
+            <param name="Type">                     EMS4                    </param>
+            <param name="maxSizeRXpacket">          768                     </param>
+            <param name="maxSizeROP">               384                     </param>
+            <param name="maxNumberRegularROPs">     32                      </param>    
+            <param name="protocolCapability">       MAXIMUM                 </param>   
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "torso-eb5-j0_2" </param> 
-            <param name="regularsTXrate">           5                </param> 
-            <param name="protocolToUse">            STANDARD         </param> 
+            <param name="Name">                     "torso-eb5-j0_2"        </param> 
+            <param name="regularsTXrate">           5                       </param> 
+            <param name="protocolToUse">            STANDARD                </param> 
+        </group>        
+        
+        <group name="ETH_BOARD_ACTIONS">
+            <group name="MONITOR_ITS_PRESENCE">
+                <param name="enabled">                  true                </param> 
+                <param name="timeout">                  0.020               </param> 
+                <param name="periodOfMissingReport">    60.0                </param> 
+            </group>
         </group>
 
     </group>  

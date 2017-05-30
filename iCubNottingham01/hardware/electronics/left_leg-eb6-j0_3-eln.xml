@@ -18,9 +18,17 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "left_leg-eb6-j0_3"    </param> 
+            <param name="Name">                     "left_leg-eb6-j0_3"     </param> 
             <param name="regularsTXrate">           5                       </param> 
             <param name="protocolToUse">            STANDARD                </param> 
+        </group>        
+        
+        <group name="ETH_BOARD_ACTIONS">
+            <group name="MONITOR_ITS_PRESENCE">
+                <param name="enabled">                  true                </param> 
+                <param name="timeout">                  0.020               </param> 
+                <param name="periodOfMissingReport">    60.0                </param> 
+            </group>
         </group>
 
     </group>  
