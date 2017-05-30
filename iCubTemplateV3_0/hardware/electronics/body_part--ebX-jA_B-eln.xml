@@ -39,7 +39,7 @@
             
         </group>
 
-        <!-- This group contains values which the user is free to change  which yarprobotinterfacecan change in runtime  of the ETH board which cannot be configured in runtime -->
+        <!-- This group contains values which the user is free to change and which yarprobotinterface loads at startup  -->
         <group name="ETH_BOARD_SETTINGS">
         
             <!-- String of max 31 characters used to identify the board in terminal prints (together with its IP address) -->
@@ -67,6 +67,35 @@
             
         </group>
 
+        
+        <!-- This group contains actions which yarprobotinterface can execute on the ETH board  -->
+        <group name="ETH_BOARD_ACTIONS">
+        
+            <!-- This group specifies how yarprobotinterface monitors presence of the ETH board  
+                 The thread EthReceiver, every time it is called, checks all board which have MONITOR_ITS_PRESENCE::enabled = true.
+                 If they haven't transmitted for MONITOR_ITS_PRESENCE::timeout seconds, than the board is declared missing. 
+                 The situation is immediately printed by yarprobotinterface. If the board does not transmits anymore, a periodical report
+                 is printed every MONITOR_ITS_PRESENCE::periodOfMissingReport seconds. Otherwise, it is printed the time when the board transmits
+                 again. 
+              -->
+            <group name="MONITOR_ITS_PRESENCE">
+        
+                <!-- It enables or not the monitoring of this ETH board. Values are [true / false].  
+                  -->
+                <param name="enabled">                     true </param>
+                
+                <!-- The timeout in seconds (floating point value) of the timeout bofore the board is declared missing. Use a value > ETH_BOARD_SETTINGS::regularsTXrate ms.
+                  -->            
+                <param name="timeout">           0.020                    </param> 
+                
+                <!-- The period in seconds (floating point value) of the missing board report.
+                  -->            
+                <param name="periodOfMissingReport">            60.0             </param> 
+            
+            </group>
+            
+        </group>
+        
     </group>  
     
 </params>
