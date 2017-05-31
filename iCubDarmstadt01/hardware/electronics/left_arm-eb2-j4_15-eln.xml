@@ -10,17 +10,14 @@
         <group name="ETH_BOARD_PROPERTIES">
             <param name="IpAddress">                10.0.1.2                </param>
             <param name="IpPort">                   12345                   </param>
-            <param name="Type">                     EMS4                    </param>
+            <param name="Type">                     ems4                    </param>
             <param name="maxSizeRXpacket">          768                     </param>
             <param name="maxSizeROP">               384                     </param>
-            <param name="maxNumberRegularROPs">     32                      </param>    
-            <param name="protocolCapability">       MAXIMUM                 </param>   
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
             <param name="Name">                     "left_arm-eb2-j4_15"    </param> 
             <param name="regularsTXrate">           3                       </param> 
-            <param name="protocolToUse">            MAXIMUM                 </param> 
         </group>        
         
         <group name="ETH_BOARD_ACTIONS">

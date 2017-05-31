@@ -10,17 +10,14 @@
         <group name="ETH_BOARD_PROPERTIES">
             <param name="IpAddress">                10.0.1.25               </param>
             <param name="IpPort">                   12345                   </param>
-            <param name="Type">                     MC4PLUS                 </param>
+            <param name="Type">                     mc4plus                 </param>
             <param name="maxSizeRXpacket">          768                     </param>
             <param name="maxSizeROP">               384                     </param>
-            <param name="maxNumberRegularROPs">     32                      </param>    
-            <param name="protocolCapability">       MAXIMUM                 </param>   
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
             <param name="Name">                     "leftArm-j8_11"         </param> 
             <param name="regularsTXrate">           5                       </param> 
-            <param name="protocolToUse">            STANDARD                </param> 
         </group>        
         
         <group name="ETH_BOARD_ACTIONS">

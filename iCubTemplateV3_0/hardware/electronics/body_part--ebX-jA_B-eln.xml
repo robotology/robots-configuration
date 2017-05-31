@@ -31,12 +31,6 @@
             <!-- The maximum size of ROP (Remote OPeration) that can be decoded or transmitted by the board. The object EthResource uses this value to form / parse the tx / rx ROP. -->
             <param name="maxSizeROP">               384                  </param>   
             
-            <!-- The maximum number of ROPs which the ETH board can manage for regular transmission. Any attempt to add a a further ROP is signalled as a failure. [NOTE: not parsed].  -->   
-            <param name="maxNumberRegularROPs">     32                   </param>   
-            
-            <!-- If MAXIMUM the ETH board has memory enough to manage up to 12 joints/motors. If STANDARD, it manages only 4 joints/motors. [NOTE: not parsed]. [TODO: remove it] -->
-            <param name="protocolCapability">       MAXIMUM              </param>   
-            
         </group>
 
         <!-- This group contains values which the user is free to change and which yarprobotinterface loads at startup  -->
@@ -56,15 +50,7 @@
                  board can consume the CAN packets sent by the CAN boards without losing info (if it happens, diagnostics messages are sent which complain about loss of skin data).  
               -->            
             <param name="regularsTXrate">           5                    </param> 
-            
-            <!-- Use STANDARD for boards with up to 4 joints/motors, and MAXIMUM only for those with up to 12 joints/motors (MAXIMUM only for mc4can-based motion control). 
-                 This parameter is used by the class HostTransceiver to save some RAM for the buffering of joint/motor status. 
-                 [NOTE: value MAXIMUM is used only for mc4can-based motion control]
-                 [TODO: we can simplify and remove both ETH_BOARD_SETTINGS::protocolToUse and ETH_BOARD_PROPERTIES::protocolCapability. But HostTransceiver will always
-                        load 12 joints or: it will implement dynamic load, where the mc endpoint is loaded by embObjMotionControl with correct number of joints]
-              -->            
-            <param name="protocolToUse">            STANDARD             </param> 
-            
+                        
         </group>
 
         
@@ -82,15 +68,15 @@
         
                 <!-- It enables or not the monitoring of this ETH board. Values are [true / false].  
                   -->
-                <param name="enabled">                     true </param>
+                <param name="enabled">                          true                    </param>
                 
                 <!-- The timeout in seconds (floating point value) of the timeout bofore the board is declared missing. Use a value > ETH_BOARD_SETTINGS::regularsTXrate ms.
                   -->            
-                <param name="timeout">           0.020                    </param> 
+                <param name="timeout">                          0.020                    </param> 
                 
                 <!-- The period in seconds (floating point value) of the missing board report.
                   -->            
-                <param name="periodOfMissingReport">            60.0             </param> 
+                <param name="periodOfMissingReport">            60.0                    </param> 
             
             </group>
             
