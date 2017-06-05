@@ -24,8 +24,6 @@
             <paramlist name="networks">
                 <!-- The param value must match the device name in the corresponding left_lower_arm-jx_y-mc.xml file -->
                 <elem name="FirstSetOfJoints">  left_arm-j0_3-mc </elem>
-
-                <elem name="Calibrator">  left_shoulder_calibrator </elem>
             </paramlist>
         </action>
 

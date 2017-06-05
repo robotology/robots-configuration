@@ -27,7 +27,6 @@
                 <elem name="FirstSetOfJoints">  left_arm-j4_7-mc </elem>
                 <elem name="SecondSetOfJoints"> left_arm-j8_11-mc </elem> 
                 <elem name="ThirdSetOfJoints">  left_arm-j12_15-mc </elem> 
-                <elem name="Calibrator">  left_arm_calibrator </elem>
             </paramlist>
         </action>
 

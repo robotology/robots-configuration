@@ -26,6 +26,7 @@
                 <!-- The param value must match the device name in the corresponding head-jx_y-mc.xml file -->
                 <elem name="FirstSetOfJoints">  head-j0_1-mc </elem> 
                 <elem name="SecondSetOfJoints"> head-j2_5-mc </elem> 
+                <elem name="Calibrator">        head_calibrator </elem>
             </paramlist>
         </action>
 
