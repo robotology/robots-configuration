@@ -18,6 +18,7 @@
 	  <paramlist name="networks">
 	  <!-- The param value must match the device name in the corresponding emsX file -->
 	      <elem name="FirstSetOfJoints">  head_mc </elem>
+          <elem name="Calibrator">        head_calibrator </elem>
 	  </paramlist>
       </action>
 
