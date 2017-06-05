@@ -89,7 +89,5 @@
     <devices file="calibrators/left_leg_calib.xml" /> 
     <devices file="calibrators/left_arm_calib.xml" /> 
     <devices file="calibrators/right_arm_calib.xml" />
-    <devices file="calibrators/left_hand_calib.xml" /> 
-    <devices file="calibrators/right_hand_calib.xml" />
 </robot> 
 

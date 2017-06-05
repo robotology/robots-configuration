@@ -76,8 +76,6 @@
     <devices file="calibrators/left_leg_calib.xml" /> 
     <devices file="calibrators/left_arm_calib.xml" /> 
     <devices file="calibrators/right_arm_calib.xml" />
-    <devices file="calibrators/left_hand_calib.xml" /> 
-    <devices file="calibrators/right_hand_calib.xml" />
     
     <!-- Motor parameters and Joint coupling information-->
     <!-- WARNING! you cannot use 'devices' here: robotInterface will not work
