@@ -17,7 +17,14 @@
 
         <group name="ETH_BOARD_SETTINGS">
             <param name="Name">                     "right_arm-eb27-j4_7"   </param> 
-            <param name="regularsTXrate">           3                       </param> 
+            <group name="RUNNINGMODE">
+                <param name="period">                   1000                </param>
+                <param name="maxTimeOfRXactivity">      400                 </param>
+                <param name="maxTimeOfDOactivity">      300                 </param>   
+                <param name="maxTimeOfTXactivity">      300                 </param>                
+                <param name="TXrateOfRegularROPs">      3                   </param> 
+            </group>              
+        </group>         
         </group>        
         
         <group name="ETH_BOARD_ACTIONS">

@@ -38,18 +38,41 @@
         
             <!-- String of max 31 characters used to identify the board in terminal prints (together with its IP address) -->
             <param name="Name">                     "body_part-ebX-jA_B" </param>
-            
-            <!-- The period in milliseconds with which the ETH boards transmits the regular ROPs. Its range is [1, 20] and if out of bound it is clipped to limits. 
-                 The recommended value is 5 (3 for boards which support skin). IMPORTANT: reply ROPs and diagnostics ROPs are transmitted ASAP with 1 ms granularity.
+
+            <!-- This group contains values for configuration of the times of the board when in RUNNING mode  -->
+            <group name="RUNNINGMODE">
+
+                <!-- The period in microseconds of the control loop. IT MUST BE 1000 -->
+                <param name="period">                   1000                </param>
+
+                <!-- The time of the period in microseconds dedicated to the RX activity. Default is 400, range is [5, 990]. 
+                     Very important: t must be period = maxTimeOfRXactivity + maxTimeOfDOactivity + maxTimeOfDOactivity 
+                  -->
+                <param name="maxTimeOfRXactivity">      400                 </param>
+
+                <!-- The time of the period in microseconds dedicated to the DO activity. Default is 400, range is [5, 990]. 
+                     Very important: t must be period = maxTimeOfRXactivity + maxTimeOfDOactivity + maxTimeOfDOactivity 
+                  -->
+                <param name="maxTimeOfDOactivity">      300                 </param>  
+
+                <!-- The time of the period in microseconds dedicated to the TX activity. Default is 400, range is [5, 990]. 
+                     Very important: t must be period = maxTimeOfRXactivity + maxTimeOfDOactivity + maxTimeOfDOactivity 
+                  -->
+                <param name="maxTimeOfTXactivity">      300                 </param>    
+
+                <!-- The period in multiples of RUNNINGMODE::period with which the ETH boards transmits the regular ROPs. Its range is [1, 20] and if out of bound it is clipped to limits. 
+                     The recommended value is 5 (3 for boards which support skin). IMPORTANT: reply ROPs and diagnostics ROPs are transmitted ASAP with 1 ms granularity.
                                   
-                 This number is related to many other system parameters: (1) the ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate of other boards; (2) the PC104::PC104RXrate decoding 
-                 rate inside PC104; (3) rate of the wrappers which typically is 10 ms. 
-                 A value of PC104::PC104RXrate = 1 for every board is possible, but it adds extra useless effort in the CPU of PC104 to decode many UDP packets. 
-                 The effort is useless because the information carried by regular ROPs is read by wrappers typically at 10 ms rate.
-                 hence, any value lower than the rate of wrappers is enough. The only exception is for presence of skin, where it is required a lower value so that the ETH 
-                 board can consume the CAN packets sent by the CAN boards without losing info (if it happens, diagnostics messages are sent which complain about loss of skin data).  
-              -->            
-            <param name="regularsTXrate">           5                    </param> 
+                     This number is related to many other system parameters: (1) the ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate of other boards; (2) the PC104::PC104RXrate decoding 
+                     rate inside PC104; (3) rate of the wrappers which typically is 10 ms. 
+                     A value of PC104::PC104RXrate = 1 for every board is possible, but it adds extra useless effort in the CPU of PC104 to decode many UDP packets. 
+                     The effort is useless because the information carried by regular ROPs is read by wrappers typically at 10 ms rate.
+                     hence, any value lower than the rate of wrappers is enough. The only exception is for presence of skin, where it is required a lower value so that the ETH 
+                     board can consume the CAN packets sent by the CAN boards without losing info (if it happens, diagnostics messages are sent which complain about loss of skin data).  
+                  -->              
+                <param name="TXrateOfRegularROPs">      5                   </param> 
+
+            </group>              
                         
         </group>
 
