@@ -53,7 +53,10 @@
             
             <group name="SETTINGS"> 
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">       r_upper_leg_1_10B1  r_upper_leg_2_10B2 r_upper_leg_3_10B3 r_upper_leg_4_10B4 </param>                
+                <param name="enabledSensors">       r_upper_leg_1_10B1
+                                            r_upper_leg_2_10B2      r_upper_leg_3_10B3      r_upper_leg_4_10B4      r_upper_leg_5_10B5
+                                            r_upper_leg_6_10B6      r_upper_leg_7_10B7      r_lower_leg_1_10B8      r_lower_leg_2_10B9
+                                            r_lower_leg_3_10B10     r_lower_leg_4_10B11     r_foot_1_10B12          r_foot_2_10B13 </param>                
             </group>
             
         </group>        
