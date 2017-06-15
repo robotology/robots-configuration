@@ -28,7 +28,7 @@
                     <param name="port">             CONN:P11            CONN:P10            CONN:none           CONN:none               </param>
                     <param name="position">         atjoint             atjoint             none                none                    </param> 
                     <param name="resolution">       4096                4096                0                   0                       </param>
-                    <param name="numofnoisebits">      3                3                   0                   0                       </param>  
+                    <param name="numofnoisebits">      3                5                   0                   0                       </param>  
                 </group>        
                 
                 <group name="ENCODER2">
