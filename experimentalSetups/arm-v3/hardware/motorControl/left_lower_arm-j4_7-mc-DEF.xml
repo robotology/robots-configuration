@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<devices robot="iCubExpArmV3" build="1">
+
+    <device name="left_lower_arm-j4_7-mc" type="embObjMotionControl">
+    
+        <params file="general.xml" />
+        <params file="hardware/electronics/left_lower_arm-j4_7-eln.xml" />
+        <params file="hardware/mechanicals/left_lower_arm-j4_7-mec.xml" />
+        <params file="hardware/motorControl/left_arm-j4_7-mc-service.xml"/><!-- left_arm-j4_7-mc-board.xml-->
+
+
+        <!-- joint number in sub-part           0               1               2               3              -->
+        <!-- joint name                         "l_wrist_prosup" "l_wrist_pitch" "l_wrist_yaw"  "l_hand_finger" -->     
+        <group name="LIMITS">
+            <param name="jntPosMax">                60          0              35              60          </param>
+            <param name="jntPosMin">                -60         -90            -15             10          </param> 
+            <param name="jntVelMax">                1000        1000            1000           1000        </param>
+            <param name="motorOverloadCurrents">    10000        2000            2000           2000       </param>
+            <param name="motorNominalCurrents">     5000         600             600            600        </param>
+            <param name="motorPeakCurrents">        5000        1000            1000           1000        </param>
+            <param name="motorPwmLimit">            3360        3360            3360           3360        </param>
+           </group>
+    
+
+        <group name="IMPEDANCE">
+            <param name="stiffness">            0.0         0.0     0.0         0.0             </param>
+            <param name="damping">              0.0         0.0     0.0         0.0             </param>
+        </group>
+
+        <group name="TIMEOUTS">
+            <param name="Velocity">                  100         100         100         100         </param>
+            <param name="Torque">                  100         100         100         100         </param>
+        </group>
+
+        <group "CONTROL">
+           <param name="POSITION_CONTROL">           POSITION_CONTROL_DI_TIPO1_INGRESSO_POS_USCITA_VEL_E_2FOC_FA_VEL        </param  > 
+           <param name="VELOCITY_CONTROL">           VECLOITY_2    VECLOITY_2  VECLOITY_2   VECLOITY_XXXX     </param> 
+           <param name="TORQUE_CONTROL">             none   none   none    torque_1  </param> 
+        </group>
+
+        <!-- ATTENTION: PID VALUES are not safe!!! -->
+        <group name="POSITION_CONTROL_DI_TIPO1_INGRESSO_POS_USCITA_VEL_E_2FOC_FA_VEL1">
+            <param name="controlLaw">       ...control_law2                                        </param>    
+            <param name="controlUnits">     metric_units                                        </param> 
+            <param name="pos_kp">                -500.00     -200.00     -200.00      500.00        </param>       
+            <param name="pos_kd">                   0.0         0.0         0.0         0.0         </param>     
+            <param name="pos_ki">                   0.0         0.0         0.0         0.0         </param>       
+            <param name="pos_maxOutput">            3360       1500        1500        3360         </param>  
+            <param name="pos_maxInt">               0           0           0           0           </param> 
+            <param name="pos_shift">                0           0           0           0           </param>       
+            <param name="pos_ko">                   0           0           0           0           </param>  
+            <param name="pos_stictionUp">           0           0           0           0           </param> 
+            <param name="pos_stictionDwn">          0           0           0           0           </param> 
+            <param name="pos_kff">                  0           0           0           0           </param> 
+            <param name="vel_kp">                -500.00     -200.00     -200.00      500.00        </param>       
+            <param name="vel_kd">                   0.0         0.0         0.0         0.0         </param>     
+            <param name="vel_ki">                   0.0         0.0         0.0         0.0         </param>       
+            <param name="vel_maxOutput">            3360       1500        1500        3360         </param>  
+            <param name="vel_maxInt">               0           0           0           0           </param> 
+            <param name="vel_shift">                0           0           0           0           </param>       
+            <param name="vel_ko">                   0           0           0           0           </param>  
+            <param name="vel_stictionUp">           0           0           0           0           </param> 
+            <param name="vel_stictionDwn">          0           0           0           0           </param> 
+            <param name="vel_kff">                  0           0           0           0           </param> 
+        </group>
+        
+            <group name="POSITION_CONTROL_DI_TIPO1_INGRESSO_POS_USCITA_VEL_E_2FOC_FA_VEL2">
+            <param name="controlLaw">       ...control_law2                                        </param>    
+            <param name="controlUnits">     metric_units                                        </param> 
+            <param name="pos_kp">                -500.00     -200.00     -200.00      500.00        </param>       
+            <param name="pos_kd">                   0.0         0.0         0.0         0.0         </param>     
+            <param name="pos_ki">                   0.0         0.0         0.0         0.0         </param>       
+            <param name="pos_maxOutput">            3360       1500        1500        3360         </param>  
+            <param name="pos_maxInt">               0           0           0           0           </param> 
+            <param name="pos_shift">                0           0           0           0           </param>       
+            <param name="pos_ko">                   0           0           0           0           </param>  
+            <param name="pos_stictionUp">           0           0           0           0           </param> 
+            <param name="pos_stictionDwn">          0           0           0           0           </param> 
+            <param name="pos_kff">                  0           0           0           0           </param> 
+            <param name="vel_kp">                -500.00     -200.00     -200.00      500.00        </param>       
+            <param name="vel_kd">                   0.0         0.0         0.0         0.0         </param>     
+            <param name="vel_ki">                   0.0         0.0         0.0         0.0         </param>       
+            <param name="vel_maxOutput">            3360       1500        1500        3360         </param>  
+            <param name="vel_maxInt">               0           0           0           0           </param> 
+            <param name="vel_shift">                0           0           0           0           </param>       
+            <param name="vel_ko">                   0           0           0           0           </param>  
+            <param name="vel_stictionUp">           0           0           0           0           </param> 
+            <param name="vel_stictionDwn">          0           0           0           0           </param> 
+            <param name="vel_kff">                  0           0           0           0           </param> 
+        </group>
+    
+    
+    
+        <group name="POSITION_CONTROL_DI_TIPO1_INGRESSO_POS_USCITA_PWM">
+            <param name="controlLaw">       pidsimple                                        </param>    
+            <param name="controlUnits">     metric_units                                        </param> 
+            <param name="pos_kp">                -500.00     -200.00     -200.00      500.00        </param>       
+            <param name="pos_kd">                   0.0         0.0         0.0         0.0         </param>     
+            <param name="pos_ki">                   0.0         0.0         0.0         0.0         </param>       
+            <param name="pos_maxOutput">            3360       1500        1500        3360         </param>  
+            <param name="pos_maxInt">               0           0           0           0           </param> 
+            <param name="pos_shift">                0           0           0           0           </param>       
+            <param name="pos_ko">                   0           0           0           0           </param>  
+            <param name="pos_stictionUp">           0           0           0           0           </param> 
+            <param name="pos_stictionDwn">          0           0           0           0           </param> 
+            <param name="pos_kff">                  0           0           0           0           </param> 
+        </group>
+ 
+         <group name="POSITION_CONTROL_CON_LOOP_INTERNO_DI_CORRENTE">
+            <param name="controlLaw">       joint_pid_v1                                        </param>    
+            <param name="controlUnits">     metric_units                                        </param> 
+            <param name="kp">                -500.00     -200.00     -200.00      500.00        </param>       
+            <param name="kd">                   0.0         0.0         0.0         0.0         </param>     
+            <param name="ki">                   0.0         0.0         0.0         0.0         </param>       
+            <param name="maxOutput">            3360       1500        1500        3360         </param>  
+            <param name="maxInt">               0           0           0           0           </param> 
+            <param name="shift">                0           0           0           0           </param>       
+            <param name="ko">                   0           0           0           0           </param>  
+            <param name="stictionUp">           0           0           0           0           </param> 
+            <param name="stictionDwn">          0           0           0           0           </param> 
+            <param name="kff">                  0           0           0           0           </param> 
+        </group>
+        
+        <group name="TORQUE_CONTROL_1">
+            <param name="controlLaw">       motor_pid_with_friction_v1                   </param>
+            <param name="outputType">           pwm         pwm         pwm       pwm    </param>
+            <param name="controlUnits">         metric_units                             </param> 
+            <param name="kp">                   0           0           0           0    </param>    
+            <param name="kd">                   0           0           0           0    </param>        
+            <param name="ki">                   0           0           0           0    </param>        
+            <param name="maxOutput">            0           0           0           0    </param>       
+            <param name="maxInt">               0           0           0           0    </param>       
+            <param name="shift">                0           0           0           0    </param>        
+            <param name="ko">                   0           0           0           0    </param>        
+            <param name="stictionUp">           0           0           0           0    </param>        
+            <param name="stictionDwn">          0           0           0           0    </param>        
+            <param name="kff">                  0           0           0           0    </param>    
+            <param name="kbemf">                0           0           0           0    </param>     
+            <param name="filterType">           0           0           0           0    </param>            
+            <param name="ktau">                 0           0           0           0    </param>   
+        </group>
+      
+       <group name="TORQUE_CONTROL_2">
+            <param name="controlLaw">       motor_pid_with_friction_v1                   </param>
+            <param name="outputType">           vel         vel         vel        vel    </param>
+            <param name="controlUnits">         metric_units                             </param> 
+            <param name="kp">                   0           0           0           0    </param>    
+            <param name="kd">                   0           0           0           0    </param>        
+            <param name="ki">                   0           0           0           0    </param>        
+            <param name="maxOutput">            0           0           0           0    </param>       
+            <param name="maxInt">               0           0           0           0    </param>       
+            <param name="shift">                0           0           0           0    </param>        
+            <param name="ko">                   0           0           0           0    </param>        
+            <param name="stictionUp">           0           0           0           0    </param>        
+            <param name="stictionDwn">          0           0           0           0    </param>        
+            <param name="kff">                  0           0           0           0    </param>    
+            <param name="kbemf">                0           0           0           0    </param>     
+            <param name="filterType">           0           0           0           0    </param>            
+            <param name="ktau">                 0           0           0           0    </param>   
+        </group>
+        
+    </device> 
+    
+</devices>

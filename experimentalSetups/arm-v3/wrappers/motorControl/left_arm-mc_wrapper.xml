@@ -5,7 +5,7 @@
 
     <device name="left_arm_mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
-            <!-- when we'll use entire arm we should use following sets 
+           <!-- when we'll use entire arm we should use following sets 
             <elem name="FirstSetOfJoints">  4  7   0  3 </elem>
             <elem name="SecondSetOfJoints"> 8  11  0  3 </elem> 
             <elem name="ThirdSetOfJoints">  12 15  0  3 </elem> 
@@ -13,7 +13,8 @@
             <!-- sets of joints for lower arm used on bench test -->
             <elem name="FirstSetOfJoints">  0  3   0  3 </elem>
             <elem name="SecondSetOfJoints"> 4  7   0  3 </elem> 
-            <elem name="ThirdSetOfJoints">  8  11  0  3 </elem> 
+            <elem name="ThirdSetOfJoints">  8 11   0 3 </elem> 
+            
         </paramlist>
 
         <param name="period"> 10                        </param>
@@ -24,10 +25,10 @@
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <!-- The param value must match the device name in the corresponding left_lower_arm-jx_y-mc.xml file -->
-                <elem name="FirstSetOfJoints">  left_lower_arm-j4_7-mc </elem>
-                <elem name="SecondSetOfJoints"> left_lower_arm-j8_11-mc </elem> 
-                <elem name="ThirdSetOfJoints">  left_lower_arm-j12_15-mc </elem> 
-                <elem name="Calibrator">  left_arm_calibrator </elem>
+                <elem name="FirstSetOfJoints">  left_arm-j4_7-mc </elem>
+                <elem name="SecondSetOfJoints"> left_arm-j8_11-mc </elem> 
+                <elem name="ThirdSetOfJoints">  left_arm-j12_15-mc </elem> 
+                <elem name="Calibrator">        left_arm_calibrator </elem>
             </paramlist>
         </action>
 

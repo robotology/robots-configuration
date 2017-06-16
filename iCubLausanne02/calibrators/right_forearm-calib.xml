@@ -2,12 +2,12 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 <devices robot="iCubExpArmV3" build="1">
-    <device name="right_arm_calibrator" type="parametricCalibratorEth">
+    <device name="right_arm-calibrator" type="parametricCalibratorEth">
         <params file="general.xml" />
         
         <group name="GENERAL">
             <param name="joints"> 12 </param> <!-- the number of joints of the robot part -->
-            <param name="deviceName"> right_arm_calibrator </param> <!-- this name is used for high-level debug -->
+            <param name="deviceName"> right_arm-calibrator </param> <!-- this name is used for high-level debug -->
         </group>
         <!-- joint logical number       0     1      2     3     4     5    6     7     8      9     10    11 -->
         <group name="HOME">
@@ -35,11 +35,11 @@
 -	<param name="CALIB_ORDER"> (4 5) (6) </param>
 
         <action phase="startup" level="10" type="calibrate">
-            <param name="target">right_arm_mc_wrapper</param>
+            <param name="target">right_arm-mc_wrapper</param>
         </action>
 
         <action phase="interrupt1" level="1" type="park">
-            <param name="target">right_arm_mc_wrapper</param>
+            <param name="target">right_arm-mc_wrapper</param>
         </action>
 
         <action phase="interrupt3" level="1" type="abort" />
