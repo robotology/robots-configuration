@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+ <!-- Initialization file for EMS 1 - right Upper Arm, 4 dof -->
+
+<devices robot="iCubGenovaV3" build="1">
+  <device name="right_arm-eb4-j2_3-mc" type="embObjMotionControl">
+      <params file="general.xml"/>
+      <params file="hardware/electronics/right_arm-eb4-j2_3-eln.xml" />
+      <params file="hardware/mechanicals/right_arm-eb4-j2_3-mec.xml" />
+
+      <params file="hardware/motorControl/right_arm-eb4-j2_3-mc_service.xml" />            
+
+    <group name="LIMITS">
+        <!--                                    0                1  -->
+        <param name="jntPosMax">                80                  110          </param>  
+        <param name="jntPosMin">                -45                 -5          </param>
+        <param name="jntVelMax">                1000                1000          </param>
+        <param name="motorNominalCurrents">     4000                5000         </param>
+        <param name="motorPeakCurrents">        5000                9000         </param>
+        <param name="motorOverloadCurrents">    15000               15000         </param>
+        <param name="motorPwmLimit">            4000                20000        </param>
+    </group>
+
+
+    <group name="TIMEOUTS">
+        <param name="velocity">             	100                 100       </param>
+    </group>
+
+
+     <group name="CONTROLS">
+       <param name="positionControl">   POS_PID_DEFAULT             POS_PID_DEFAULT     </param> 
+       <param name="velocityControl">   none                        none                </param> 
+       <param name="torqueControl">     TRQ_PID_DEFAULT             TRQ_PID_DEFAULT     </param>
+        <param name="currentPid">       2FOC_CUR_CONTROL            2FOC_CUR_CONTROL    </param> 
+    </group>
+
+
+
+    <group name="IMPEDANCE">
+      <param name="stiffness">	0.1     0.1         </param>
+      <param name="damping">	0.05   0.05         </param>
+    </group>
+
+	<group name="POS_PID_DEFAULT">
+	    <param name="controlLaw">    Pid_inPos_outPwm </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="pos_kp">          1066.66    -1066.66       </param>       
+        <param name="pos_kd">             0.00       0.00       </param>       
+        <param name="pos_ki">         10666.64   -10666.64       </param>         
+        <param name="pos_maxOutput">      4000       4000       </param>    
+        <param name="pos_maxInt">          200        200          </param>       
+        <param name="pos_shift">             0          0       </param>       
+        <param name="pos_ko">                0          0       </param>       
+        <param name="pos_stictionUp">        0          0       </param>       
+        <param name="pos_stictionDwn">       0          0       </param>       
+        <param name="pos_kff">               0          0           </param>    
+    </group>
+
+    <group name="TRQ_PID_DEFAULT">
+        <param name="controlLaw">    Pid_inTrq_outPwm </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="trq_kp">            200        200             </param>       
+        <param name="trq_kd">              0          0             </param>       
+        <param name="trq_ki">              0          0         </param>    
+        <param name="trq_maxOutput">    8000       8000         </param>       
+        <param name="trq_maxInt">        500        500         </param>       
+        <param name="trq_shift">           0          0         </param>       
+        <param name="trq_ko">              0          0         </param>       
+        <param name="trq_stictionUp">      0.5        0.5       </param>       
+        <param name="trq_stictionDwn">    -0.7       -0.7           </param>    
+        <param name="trq_kff">             1          1             </param>  
+        <param name="trq_kbemf">        0.0030     0.0006       </param>    
+        <param name="trq_filterType">      0          0         </param>    
+        <param name="trq_ktau">          180        464         </param>             
+    </group>
+	
+   <group name="2FOC_CUR_CONTROL">
+        <param name="controlLaw">       limitscurrent           </param> 
+        <param name="controlUnits">     metric_units            </param> 
+        <param name="cur_kp">              8           8            </param>       
+        <param name="cur_kd">              0           0            </param>       
+        <param name="cur_ki">              2           2            </param>
+        <param name="cur_shift">           10          10           </param>
+        <param name="cur_maxOutput">       32000       32000        </param>                 
+        <param name="cur_maxInt">          32000       32000        </param> 
+        <param name="cur_ko">               0            0          </param>       
+        <param name="cur_stictionUp">       0            0          </param>       
+        <param name="cur_stictionDwn">      0            0          </param>   
+        <param name="cur_kff">              0            0          </param>            
+    </group>
+    
+  </device>
+</devices>
+
+
