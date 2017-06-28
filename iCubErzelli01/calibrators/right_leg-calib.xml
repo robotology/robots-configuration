@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 <devices robot="iCubErzelli01" build="1">
-	<device name="right_leg_calibrator" type="parametricCalibratorEth">
+	<device name="right_leg-calibrator" type="parametricCalibratorEth">
                 <params file="general.xml" />
                 
 		<group name="GENERAL">
@@ -11,34 +11,37 @@
 		</group>
 
 <group name="HOME">
-<param name="positionHome">           0         10      0       0       0       0       </param>
-<param name="velocityHome">           10        100     10      10      10      10      </param>
+	<param name="positionHome">                       0.00           10.00       0.00         0.00        0.00      0.00       </param>
+	<param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00     10.00       </param>
 </group>
 
-<group name="CALIBRATION">
-<param name="calibrationType">        3         3       3       3       3       3       </param>
-<param name="calibration1">    	      32768	32768	32768	32768	32768	32768	</param> 
-<param name="calibration2">	      10	10	10	10	10.0	10.0	</param> 
-<param name="calibration3">	      59007	53663	24895	11503	9375	4095	</param> 
-<param name="calibration4">           0         0       0       0       0       0       </param>
-<param name="calibration5">           0         0       0       0       0       0       </param>
-<param name="calibrationZero">       -180      -180    -180     180     180    -180     </param>
-<param name="calibrationDelta">       0         0       0       0       0       10       </param>
 
-<param name="startupPosition">        0         10      0       0       0       0       </param>
-<param name="startupVelocity">        10        10      10      10      10      10      </param>
-<param name="startupMaxPwm">          1200      1200    1200    1200    1200    1200    </param>
-<param name="startupPosThreshold">    2         2       2       2       2       2       </param>
+
+<group name="CALIBRATION">
+	<param name="calibrationType">                    3            3        3          3         3       3        </param>
+	<param name="calibration1">	                  32768	       32768	32768	   32768     32768   32768    </param> 
+	<param name="calibration2">	                  10	       10	10	   10	     10	     10	      </param> 
+	<param name="calibration3">	                  58735	       32479	24895	   11663     9279    4127     </param> 
+
+	<param name="calibration4">                       0            0        0          0         0       0        </param>
+	<param name="calibration5">                       0            0        0          0         0       0        </param>
+	<param name="calibrationZero">                   -180         -180     -180        180       180    -180      </param>
+	<param name="calibrationDelta">                   0            0        0          0         0       0        </param>
+
+	<param name="startupPosition">                    0            10       0          0         0       0        </param>
+	<param name="startupVelocity">                    10           10       10         10        10      10       </param>
+	<param name="startupMaxPwm">                      1200         1200     1200       1200      1200    1200     </param>
+	<param name="startupPosThreshold">                2            2        2          2         2       2        </param>
 </group>
 
 		<param name="CALIB_ORDER">(0 1 2 3 4 5) </param>
 
 		<action phase="startup" level="10" type="calibrate">
-		    <param name="target">right_leg_mc_wrapper</param>
+		    <param name="target">right_leg-mc_wrapper</param>
 		</action>
 
 		<action phase="interrupt1" level="1" type="park">
-		    <param name="target">right_leg_mc_wrapper</param>
+		    <param name="target">right_leg-mc_wrapper</param>
 		</action>
 
 		<action phase="interrupt3" level="1" type="abort" />

@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 <devices robot="iCubErzelli01" build="1">
-    <device name="right_arm_cartesian" type="cartesiancontrollerserver">
+    <device name="right_arm-cartesian" type="cartesiancontrollerserver">
         <group name="GENERAL">
             <param name="ControllerName">icub/cartesianController/right_arm</param>
             <param name="ControllerPeriod">10</param>
@@ -45,8 +45,8 @@
 
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
-                <elem name="torso">torso_mc_wrapper</elem>
-                <elem name="right_arm">right_arm_mc_wrapper</elem>
+                <elem name="torso">torso-mc_wrapper</elem>
+                <elem name="right_arm">right_arm-mc_wrapper</elem>
           </paramlist>
         </action>
 
