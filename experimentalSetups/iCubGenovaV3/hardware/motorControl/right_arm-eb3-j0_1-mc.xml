@@ -3,12 +3,12 @@
  <!-- Initialization file for EMS 1 - right Upper Arm, 4 dof -->
 
 <devices robot="iCubGenovaV3" build="1">
-  <device name="right_arm-eb1-j0_1-mc" type="embObjMotionControl">
+  <device name="right_arm-eb3-j0_1-mc" type="embObjMotionControl">
       <params file="general.xml"/>
       <params file="hardware/electronics/right_arm-eb3-j0_1-eln.xml" />
       <params file="hardware/mechanicals/right_arm-eb3-j0_1-mec.xml" />
 
-      <params file="hardware/motorControl/right_arm-eb1-j0_1-mc_service.xml" />            
+      <params file="hardware/motorControl/right_arm-eb3-j0_1-mc_service.xml" />            
 
     <group name="LIMITS">
         <!--                                    0                1  -->
