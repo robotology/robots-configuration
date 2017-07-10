@@ -18,7 +18,7 @@
         <param name="fullscalePWM">          3360            3360       </param>
         <param name="ampsToSensor">          1000.0          1000.0     </param>
         <param name="Gearbox_M2J">               1            -272      </param>
-       <!-- <param name="Gearbox_E2J">                1           0.42      </param> -->
+   <!-- <param name="Gearbox_E2J">                1           0.42      </param> -->
         <param name="Gearbox_E2J">                1          2      </param>
         <param name="useMotorSpeedFbk">           1             1       </param>
         <param name="MotorType">                 "DC"          "DC"     </param>
