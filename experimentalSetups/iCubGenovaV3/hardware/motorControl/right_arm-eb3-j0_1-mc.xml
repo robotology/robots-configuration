@@ -15,10 +15,10 @@
         <param name="jntPosMax">                2                   140          </param>  
         <param name="jntPosMin">                -90                 -5          </param>
         <param name="jntVelMax">                1000                1000          </param>
-        <param name="motorNominalCurrents">     8000                4000         </param>
-        <param name="motorPeakCurrents">        10000               5000         </param>
+        <param name="motorNominalCurrents">     5000                5000         </param>
+        <param name="motorPeakCurrents">        8000                8000         </param>
         <param name="motorOverloadCurrents">    15000               15000         </param>
-        <param name="motorPwmLimit">            16000                6000        </param>
+        <param name="motorPwmLimit">            8000                8000        </param>
     </group>
 
 
@@ -44,11 +44,11 @@
 	<group name="POS_PID_DEFAULT">
 	    <param name="controlLaw">    Pid_inPos_outPwm </param> 
         <param name="controlUnits">  metric_units               </param> 
-        <param name="pos_kp">           -7111.11    -1066.66      </param>       
+        <param name="pos_kp">           -1000.0    -1000.0      </param>       
         <param name="pos_kd">             0.00       0.00       </param>       
-        <param name="pos_ki">            -7.09   -10666.64      </param>         
-        <param name="pos_maxOutput">     16000       8000       </param>    
-        <param name="pos_maxInt">          200       200         </param>       
+        <param name="pos_ki">            -1000.0  -1000.0      </param>         
+        <param name="pos_maxOutput">     8000       8000       </param>    
+        <param name="pos_maxInt">        2000       2000         </param>       
         <param name="pos_shift">             0          0       </param>       
         <param name="pos_ko">                0          0       </param>       
         <param name="pos_stictionUp">        0          0       </param>       

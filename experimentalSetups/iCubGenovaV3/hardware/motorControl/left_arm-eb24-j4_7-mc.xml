@@ -12,7 +12,7 @@
         <params file="hardware/motorControl/left_arm-eb24-j4_7-mc_service.xml" />
 
         <!-- joint number in sub-part           0               1               2               3              -->
-        <!-- joint name                         "l_wrist_prosup" "l_wrist_pitch" "l_wrist_yaw"  "l_hand_finger" -->
+        <!-- joint name                         "l_wrist_pronos" "l_wrist_pitch" "l_wrist_yaw"  "l_hand_finger" -->
         <group name="LIMITS">
             <param name="jntPosMax">                 60          25             35             60          </param>
             <param name="jntPosMin">                -60         -70            -15             10          </param>
