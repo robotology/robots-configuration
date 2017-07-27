@@ -11,19 +11,19 @@
       <params file="hardware/motorControl/left_arm-eb1-j0_1-mc_service.xml" />            
 
     <group name="LIMITS">
-        <!--                                    0                1  -->
-        <param name="jntPosMax">                2                   140          </param>  
+        <!--                                    0                   1           -->
+        <param name="jntPosMax">                2                   140         </param>  
         <param name="jntPosMin">                -90                 -5          </param>
-        <param name="jntVelMax">                1000                1000          </param>
-        <param name="motorNominalCurrents">     4000                4000         </param>
-        <param name="motorPeakCurrents">        5000                5000         </param>
-        <param name="motorOverloadCurrents">    15000               15000         </param>
+        <param name="jntVelMax">                1000                1000        </param>
+        <param name="motorNominalCurrents">     4670                4670        </param>
+        <param name="motorPeakCurrents">        18000               18000       </param>
+        <param name="motorOverloadCurrents">    21000               21000       </param>
         <param name="motorPwmLimit">            4000                4000        </param>
     </group>
 
 
     <group name="TIMEOUTS">
-        <param name="velocity">             	100                 100       </param>
+        <param name="velocity">                 100                 100       </param>
     </group>
 
 

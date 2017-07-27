@@ -3,37 +3,37 @@
 
 <params robot="iCubGenovaV3" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  3 </param>
+        <param name="MotioncontrolVersion"> 3 </param>
         <param name="Joints"> 2 </param> 
-        <param name="AxisMap">               0                  1                   </param>
-        <param name="AxisName">             "r_shoulder_yaw"    "r_elbow"           </param>
-        <param name="AxisType">             "revolute"          "revolute"          </param>
-        <param name="Encoder">              182.044             182.044             </param>
-        <param name="fullscalePWM">         32000               32000               </param>
-        <param name="ampsToSensor">         1000.0              1000.0              </param>
-        <param name="Gearbox_M2J">          -100.00             -100.00             </param>
-        <param name="Gearbox_E2J">   	    1                   1                   </param>
-        <param name="useMotorSpeedFbk">     1                   1                   </param>
-        <param name="MotorType">            "CIAO"              "CIAO"               </param>
-        <param name="Verbose">		0	</param>
+        <param name="AxisMap">                  0                   1                   </param>
+        <param name="AxisName">                 "r_shoulder_yaw"    "r_elbow"           </param>
+        <param name="AxisType">                 "revolute"          "revolute"          </param>
+        <param name="Encoder">                  182.044             182.044             </param>
+        <param name="fullscalePWM">             32000               32000               </param>
+        <param name="ampsToSensor">             1000.0              1000.0              </param>
+        <param name="Gearbox_M2J">              -100.00             -100.00             </param>
+        <param name="Gearbox_E2J">              1                   1                   </param>
+        <param name="useMotorSpeedFbk">         1                   1                   </param>
+        <param name="MotorType">                "MOOG-BL-C2900575"  "MOOG-BL-C2900575"  </param>
+        <param name="Verbose"> 0 </param>
     </group>
     
     <group name="LIMITS">
-        <!--                                    0               1              -->
-        <param name="hardwareJntPosMax">        82              115                 </param>  
-        <param name="hardwareJntPosMin">        -52            -5                 </param>
-        <param name="rotorPosMin">              0               0                   </param> 
-        <param name="rotorPosMax">              0               0                   </param>
+        <!--                                    0                   1                   -->
+        <param name="hardwareJntPosMax">        82                  115                 </param>  
+        <param name="hardwareJntPosMin">        -52                 -5                  </param>
+        <param name="rotorPosMin">              0                   0                   </param> 
+        <param name="rotorPosMax">              0                   0                   </param>
     </group>
 
     <group name="2FOC">
-        <param name="HasHallSensor">            0               0                   </param>
-        <param name="HasTempSensor">            0               0                   </param> <!-- pero' ha il sensore di temp, quindi ... metti 1 -->
-        <param name="HasRotorEncoder">          1               1                   </param>
-        <param name="HasRotorEncoderIndex">     1               1                   </param>
-        <param name="HasSpeedEncoder">          0               0                   </param>
-        <param name="RotorIndexOffset">         90              90                  </param>
-        <param name="MotorPoles">               8               8                   </param>
+        <param name="HasHallSensor">            0                   0                   </param>
+        <param name="HasTempSensor">            0                   0                   </param> <!-- pero' ha il sensore di temp, quindi ... metti 1 -->
+        <param name="HasRotorEncoder">          1                   1                   </param>
+        <param name="HasRotorEncoderIndex">     1                   1                   </param>
+        <param name="HasSpeedEncoder">          0                   0                   </param>
+        <param name="RotorIndexOffset">         90                  90                  </param>
+        <param name="MotorPoles">               8                   8                   </param>
     </group>
 
 
