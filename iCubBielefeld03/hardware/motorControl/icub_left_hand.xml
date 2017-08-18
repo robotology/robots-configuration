@@ -34,6 +34,8 @@
 <param name="AxisMap">      0             1             2             3             4             5             6             7             </param>
 <param name="Encoder">      7.78          -1.97         -2.44         -2.50         -2.22         -2.39         -2.39         -2.14         </param>
 <param name="Zeros">        164.57        -120.51       -196.36       -102.00       -220.50       -102.56       -205.12       -350.47       </param>
+<param name="fullscalePWM"> 1333          1333          1333          1333          1333          1333          1333          1333          </param>
+<param name="ampsToSensor"> 1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        </param>
 <param name="TorqueId">     0             0             0             0             0             0             0             0             </param>
 <param name="TorqueChan">   0             0             0             0             0             0             0             0             </param>
 <param name="TorqueMax">    0             0             0             0             0             0             0             0             </param>
