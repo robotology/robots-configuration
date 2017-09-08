@@ -86,4 +86,7 @@
     <devices file="calibrators/torso-calib.xml" />
     <devices file="calibrators/head-calib.xml" /> 
 
+    <!--  ESTIMATORS   -->
+    <devices file="estimators/wholebodydynamics.xml" />
+
 </robot> 
