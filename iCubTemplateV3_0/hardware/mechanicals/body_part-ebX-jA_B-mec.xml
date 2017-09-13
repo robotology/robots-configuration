@@ -40,21 +40,26 @@
 
     <group name="COUPLINGS"> 
 
-        <!-- 1.625 = 1/alfa = 65/40 -->                  
         <param name ="matrixJ2M">  <!-- joint to motor decouplig matrix -->
-            1.00    0.00    0.00    0.00
-           -1.625   1.625   0.00    0.00
-            0.00    0.00    1.625   0.00
-            0.00    0.00    0.00    1.00   
-        </param>
-               
-        <!-- 0.615 = alfa = 40/65 --> 
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00   
+        </param> 
+        <!-- matrixJ2M isn't, generally speaking, the inverse of matrixM2J. It is used in position/velocity stiff control, 
+        performed at joint level and decoupled after the control loops.
+        see https://github.com/robotology/robots-configuration/issues/39 for more info        -->
+
+        
         <param name ="matrixM2J"> <!-- motor to joint couplig matrix -->
-            1.000   0.000   0.000   0.000
-            1.000   0.615   0.000   0.000
-            0.000  -0.615   0.615   0.000
-            0.000   0.000   0.000   1.000   
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00  
         </param>
+        <!-- matrixM2J is the Jacobian matrix that transforms the velocities expressed in the motor space into the velocities expressed in the joint space,
+        i.e. matrixM2J = dqj/dqm. It depends exclusively on the mechanical implementation of the joint set, and can't be modified -->
+       
        
         <param name ="matrixE2J">  <!-- encoder to joint matrix -->
             1.000   0.000   0.000   0.000   0.000   0.000
