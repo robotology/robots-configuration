@@ -39,8 +39,8 @@
                     <param name="type">             amo                 amo                 </param>  
                     <param name="port">             CONN:P6             CONN:P8             </param>
                     <param name="position">         atjoint             atjoint             </param> 
-                    <param name="resolution">       1048576            -1048576              </param>  <!-- segno da vedersi -->
-                    <param name="numofnoisebits">   0                   0                   </param>  
+                    <param name="resolution">       1048576            -1048576             </param>  <!-- segno da vedersi -->
+                    <param name="numofnoisebits">   3                   3                   </param>  
                 </group>        
                 
                 <group name="ENCODER2">
