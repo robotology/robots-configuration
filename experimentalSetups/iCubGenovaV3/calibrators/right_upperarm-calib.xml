@@ -16,13 +16,13 @@
 </group>                                                                        
                                                                                 
 <group name="CALIBRATION">                                                      
-<param name="calibrationType">          3           3           3          3            </param>
-<param name="calibration1">             0   	    0           0          0            </param>
+<param name="calibrationType">          12          12          12         12           </param>
+<param name="calibration1">             6074   	    11385       2211       47713        </param>
 <param name="calibration2">	            0           0           0          0	        </param>
-<param name="calibration3">             38967.9     43576.9     34807.9    16665.1        </param>
+<param name="calibration3">             0           0           0          0            </param>
 <param name="calibration4">             0           0           0          0             </param>
 <param name="calibration5">             0           0           0          0             </param>
-<param name="calibrationZero">          180         -180        -180       -180            </param>
+<param name="calibrationZero">          0           0           0          0            </param>
 <param name="calibrationDelta">         0           0           0          0            </param>
                                                                                 
 <param name="startupPosition">          -35        30           0.06       50.00        </param>
