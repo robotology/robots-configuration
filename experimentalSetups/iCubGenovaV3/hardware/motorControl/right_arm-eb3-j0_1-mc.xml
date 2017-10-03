@@ -44,11 +44,11 @@
 	<group name="POS_PID_DEFAULT">
 	    <param name="controlLaw">    Pid_inPos_outPwm </param> 
         <param name="controlUnits">  metric_units               </param> 
-        <param name="pos_kp">           -1000.0    -1000.0      </param>       
+        <param name="pos_kp">            -1060.0  -1000.0      </param>       
         <param name="pos_kd">             0.00       0.00       </param>       
         <param name="pos_ki">            -1000.0  -1000.0      </param>         
-        <param name="pos_maxOutput">     8000       8000       </param>    
-        <param name="pos_maxInt">        2000       2000         </param>       
+        <param name="pos_maxOutput">      8000       8000       </param>    
+        <param name="pos_maxInt">         2000       2000         </param>       
         <param name="pos_shift">             0          0       </param>       
         <param name="pos_ko">                0          0       </param>       
         <param name="pos_stictionUp">        0          0       </param>       
@@ -59,7 +59,7 @@
     <group name="TRQ_PID_DEFAULT">
         <param name="controlLaw">    Pid_inTrq_outPwm </param> 
         <param name="controlUnits">  metric_units               </param> 
-        <param name="trq_kp">            -200        -200             </param>       
+        <param name="trq_kp">          -200        -200             </param>       
         <param name="trq_kd">              0          0             </param>       
         <param name="trq_ki">              0          0         </param>    
         <param name="trq_maxOutput">    8000       8000         </param>       
