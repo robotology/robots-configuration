@@ -36,7 +36,8 @@
 	<param name="Verbose"> 0 </param>
 	<param name="Rotor">	0	0	0	0	0	0	0	0	0	0</param>
 	<param name="GearBox">	0	0	0	0	0	0	0	0	0	0</param>
-
+        <param name="fullscalePWM">     1333     1333    1333    1333    1333    1333    1333       1333       0       0</param>
+	<param name="ampsToSensor">     1000    1000    1000    1000    1000    1000    1000       1000       0       0</param>
 </group>
 <group name="VELOCITY">
 	<param name="Shifts">	8	8	8	8	8	8	0	0	0	0</param>
