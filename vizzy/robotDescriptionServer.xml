@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+
+<devices>
+    <device name="robotDescription" type="robotDescriptionServer">  
+        <param name="local">  /robotDescription	</param>
+         
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="all"/>
+        </action>
+    </device>
+</devices>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
