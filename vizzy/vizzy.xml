@@ -17,7 +17,6 @@
 <devices file="calibrators/shoulders_calib.xml" />
 <devices file="calibrators/left_arm_calib.xml" />
 <devices file="calibrators/right_arm_calib.xml" />
-<devices file="./robotDescriptionServer.xml" />
 
 <!-- MTX INERTIAL SENSOR -->
 <!--<devices file="hardware/inertial.xml" /> -->
