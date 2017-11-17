@@ -20,7 +20,6 @@
     <!-- FOOT MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR -->
     <!--
 
-
     <!-- CALIBRATORS -->
     <devices file="calibrators/head_calib.xml" /> 
 </robot> 

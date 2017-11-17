@@ -28,20 +28,21 @@
  
  
 <group name="GENERAL">       
-<param name="Joints">       2             </param>       
-<param name="AxisMap">      0             1             </param>       
-<param name="AxisName">       "neck_pitch" "neck_roll"     </param>
-<param name="AxisType">       "revolute"  "revolute"     </param>
-<param name="Encoder">                            11.375     -11.375      </param>
-<param name="Zeros">                              180.00     -180.00        </param>
-
+<param name="Joints">       2             		     </param>       
+<param name="AxisMap">      0             1          </param>       
+<param name="AxisName">     "neck_pitch" "neck_roll" </param>
+<param name="AxisType">     "revolute"   "revolute"  </param>
+<param name="Encoder">      11.375       -11.375     </param>
+<param name="Zeros">        180.00       -180.00     </param>
+<param name="fullscalePWM"> 1333         1333 	     </param>
+<param name="ampsToSensor"> 1000.0       1000.0      </param>
      
-<param name="TorqueId">     0             0                        </param>       
-<param name="TorqueChan">   0             0                          </param>       
-<param name="TorqueMax">    0             0                        </param>       
-<param name="Verbose">      0             0                         </param>       
-<param name="Rotor">        1             1                          </param>       
-<param name="GearBox">      1             1                      </param>       
+<param name="TorqueId">     0             0          </param>       
+<param name="TorqueChan">   0             0          </param>       
+<param name="TorqueMax">    0             0          </param>       
+<param name="Verbose">      0             0          </param>       
+<param name="Rotor">        1             1          </param>       
+<param name="GearBox">      1             1          </param>       
 </group>       
  
 <group name="VELOCITY">      
