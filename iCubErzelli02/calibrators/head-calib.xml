@@ -22,7 +22,8 @@
         <param name="calibrationType">      3           3           3           3           5           5           </param>
         <param name="calibration1">   	    0	        0           0	        0	    3000        3000	    </param>
         <param name="calibration2">         0           0           0	        0           8192   	8192        </param>
-	<param name="calibration3">	6623.1	62222.9	26207.1	35744.9	0.0	0.0	</param> 
+<param name="calibration3">	6623.1	62222.9	26207.1	29711.1	0.0	0.0	</param> 
+
         <param name="calibration4">         0           0           0           0           0           0           </param>
         <param name="calibration5">         0           0           0           0           0           0           </param>        
         
