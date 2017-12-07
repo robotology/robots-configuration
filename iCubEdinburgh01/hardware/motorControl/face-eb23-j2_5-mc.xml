@@ -38,7 +38,7 @@
            <param name="velocityControl">   none              none              none            none                        </param> 
            <param name="torqueControl">     none              none              none            none                        </param> 
            <param name="currentPid">        none              none              none            none                        </param> 
-
+        </group>
      
         <group name="POS_PID_DEFAULT">
             <param name="controlLaw">       Pid_inPos_outPwm                                   </param>    
