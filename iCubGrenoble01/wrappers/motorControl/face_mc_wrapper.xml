@@ -16,6 +16,7 @@
       <action phase="startup" level="5" type="attach">
       <paramlist name="networks">
          <elem name="face_joints">  face_mc </elem>
+         <elem name="Calibrator"> TalkingFace_Calibrator </elem>
       </paramlist>
       </action>
 
