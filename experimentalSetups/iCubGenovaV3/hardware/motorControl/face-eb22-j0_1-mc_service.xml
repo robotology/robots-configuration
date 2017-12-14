@@ -26,7 +26,7 @@
                     <param name="port">             CONN:P11            CONN:P10            </param>
                     <param name="position">         atjoint             atjoint             </param> 
                     <param name="resolution">       4096                -4096               </param>
-                    <param name="numofnoisebits">      3                3                   </param>  
+                    <param name="tolerance">        0.703                0.703              </param>  
                 </group>        
                 
                 <group name="ENCODER2">
@@ -34,7 +34,7 @@
                     <param name="port">               none              CONN:P2             </param>
                     <param name="position">           none              atmotor             </param>
                     <param name="resolution">         0                 40                  </param>
-                    <param name="numofnoisebits">     0                  0                  </param>  
+                    <param name="tolerance">          0                  0                  </param>  
                 </group>  
 
             </group>    

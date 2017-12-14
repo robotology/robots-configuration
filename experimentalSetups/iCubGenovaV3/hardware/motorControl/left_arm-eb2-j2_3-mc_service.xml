@@ -17,7 +17,7 @@
                 <param name="type">                 foc         </param> 
                 <group name="PROTOCOL">
                     <param name="major">            1           </param>    
-                    <param name="minor">            5           </param>     
+                    <param name="minor">            6           </param>     
                 </group>                    
                 <group name="FIRMWARE">
                     <param name="major">            0           </param>    
@@ -40,15 +40,15 @@
                     <param name="port">             CONN:P6             CONN:P8             </param>
                     <param name="position">         atjoint             atjoint             </param> 
                     <param name="resolution">       1048576             1048576             </param>  <!-- segno da vedersi 262144              131072 -->
-                    <param name="numofnoisebits">   3                   3                   </param>  
+                    <param name="tolerance">        0.703               0.703               </param>  
                 </group>        
                 
                 <group name="ENCODER2">
                     <param name="type">             roie                roie                </param> <!-- lcore oppure roie ????? -->
                     <param name="port">             CAN1:3:0            CAN1:4:0            </param>
                     <param name="position">         atmotor             atmotor             </param>
-                    <param name="resolution">       14400               14400              </param> <!-- segno da vedersi -->
-                    <param name="numofnoisebits">   0                   0                   </param>  
+                    <param name="resolution">       14400               14400               </param> <!-- segno da vedersi -->
+                    <param name="tolerance">        3.6                 3.6                 </param>  
                 </group> 
  
             </group>    
