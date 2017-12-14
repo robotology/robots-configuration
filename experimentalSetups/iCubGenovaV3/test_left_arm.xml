@@ -8,7 +8,8 @@
 
 
     <!-- LEFT ARM -->
-    <devices file="hardware/motorControl/left_arm-eb1-j0_3-mc.xml" />
+    <devices file="hardware/motorControl/left_arm-eb1-j0_1-mc.xml" />
+    <devices file="hardware/motorControl/left_arm-eb2-j2_3-mc.xml" />
     <devices file="hardware/motorControl/left_arm-eb24-j4_7-mc.xml" />
     <devices file="hardware/motorControl/left_arm-eb25-j8_11-mc.xml" />
     <devices file="hardware/motorControl/left_arm-eb26-j12_15-mc.xml" />
