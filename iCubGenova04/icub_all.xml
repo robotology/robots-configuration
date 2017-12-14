@@ -53,10 +53,10 @@
     <devices file="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
     <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />  
     <devices file="hardware/skin/right_arm-eb27-j4_7-skin.xml" /> 
-    <devices file="wrappers/skin/left_leg-skin_wrapper.xml" />
-    <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
-    <devices file="hardware/skin/left_leg-eb10-skin.xml" />
+    <!-- <devices file="hardware/skin/left_leg-eb10-skin.xml" />
+    <devices file="wrappers/skin/left_leg-skin_wrapper.xml" /> -->
     <devices file="hardware/skin/right_leg-eb11-skin.xml" />
+    <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
     <devices file="wrappers/skin/torso-skin_wrapper.xml" />
     <devices file="hardware/skin/torso-eb22-skin.xml" />
     
