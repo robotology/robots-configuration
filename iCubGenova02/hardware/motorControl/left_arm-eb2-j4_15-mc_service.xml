@@ -18,7 +18,7 @@
                 <param name="type">                 mc4         mais    </param> 
                 <group name="PROTOCOL">
                     <param name="major">            1           1       </param>    
-                    <param name="minor">            0           0       </param>     
+                    <param name="minor">            6           0       </param>     
                 </group>                    
                 <group name="FIRMWARE">
                     <param name="major">            0           0       </param>    
