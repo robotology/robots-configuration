@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<params robot="myrobot" build="1">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  Version of motor control device.  Currently is 3.</param>
+        <param name="Joints">           Number of joints manged from this device. Usually is the number of joints controlled by Ethernet board.       </param> 
+        <param name="AxisMap">          Map joint number from  user to firmware.                                                             </param>
+        <param name="AxisName">         String wich describes name of joint. see http://wiki.icub.org/wiki/ICub_joints for name convention. </param> 
+        <param name="AxisType">         It can be "revolute" or "prismatic"                                                                 </param>
+        <param name="Encoder">          this value let you to transform debgree in firmware measurament units.                              </param>
+        <param name="fullscalePWM">     Value of fullscale pwm. This values is equal for all joints, becuse it depend on type of board, ems, mc4plus, etc. </param>
+        <param name="ampsToSensor">     Scale value for the ampsToSensor conversion factor   </param>
+        <param name="Gearbox_M2J">      This is the total reduction factor between joint and encoder.                                       </param>
+        <param name="Gearbox_E2J">      This is the reduction factor between the joint and the encoder at joint. (Usually it is 1)          </param>
+        <param name="useMotorSpeedFbk"> Indicate if the motor controller uses feedback from motors to compute speed. Alllowed values are [0, 1] </param>
+        <param name="MotorType">        Motor type. This is only a note, for support guys.                                                     </param>
+        <param name="Verbose">          Specifies if enable verbose prints in yarprobotinterface. Alllowed values are [0, 1] </param>
+    </group>
+
+    
+    <group name="LIMITS">       
+        <param name="hardwareJntPosMin">         Max hardware position of joint [expressed in degrees]. Due to mechanical constraints                     </param>  
+        <param name="hardwareJntPosMax">         Min hardware position of joint [expressed in degrees].  Due to mechanical constraints                    </param>
+        <param name="rotorPosMin">               Min position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param> 
+        <param name="rotorPosMax">               Max position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param>
+    </group>
+
+
+    <group name="2FOC"> <!-- this group must be present only if the service of controlled is eomn_serv_MC_foc -->
+        <param name="Verbose">               If 1, it enables debug prints of 2FOC boards. It is optional and its default value is 1.</param>
+        <param name="AutoCalibration">       If 1, it enables AutoCalibration procedure of optical encoder. It is optional and its default value is 0.</param>
+        <param name="HasHallSensor">         Indicates if hall sensors are connected to 2FOC board            </param>
+        <param name="HasTempSensor">         Indicates if temperature ensor  are connected to 2FOC board      </param>
+        <param name="HasRotorEncoder">       Indicates if rotor has encoder                                   </param>
+        <param name="HasRotorEncoderIndex">  Indicates if the rotor encoder has index                         </param>
+        <param name="HasSpeedEncoder">       It is as an alternative to rotorEncoder. It is not used for FOC controller.                        </param>
+        <param name="RotorIndexOffset">      Rotor index offset between first electric sector and encoder index [degree]   </param>
+        <param name="MotorPoles">            Number of poles of motor      </param>
+    </group>
+
+
+    <group name="COUPLINGS"> 
+
+        <param name ="matrixJ2M">  <!-- joint to motor decouplig matrix -->
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00   
+        </param> 
+        <!-- matrixJ2M isn't, generally speaking, the inverse of matrixM2J. It is used in position/velocity stiff control, 
+        performed at joint level and decoupled after the control loops.
+        see https://github.com/robotology/robots-configuration/issues/39 for more info        -->
+
+        
+        <param name ="matrixM2J"> <!-- motor to joint couplig matrix -->
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00
+            0.00    0.00    0.00    0.00  
+        </param>
+        <!-- matrixM2J is the Jacobian matrix that transforms the velocities expressed in the motor space into the velocities expressed in the joint space,
+        i.e. matrixM2J = dqj/dqm. It depends exclusively on the mechanical implementation of the joint set, and can't be modified -->
+       
+       
+        <param name ="matrixE2J">  <!-- encoder to joint matrix -->
+            1.000   0.000   0.000   0.000   0.000   0.000
+            0.000   1.000   0.000   0.000   0.000   0.000
+            0.000   0.000   1.000   0.000   0.000   0.000
+            0.000   0.000   0.000   1.000   0.000   0.000   
+        </param>
+                
+    </group>   
+
+    <group name="JOINTSET_CFG"> <!-- this group contains configuration of jointset. One jointset contains the coupling joints. At most there can be as many jointsets as many joints -->
+        <param name= "numberofsets"> 2 </param> <!-- total number of sets -->
+        <group name="JOINTSET_0">
+            <param name="listofjoints"> List of joints beloning to this set        </param>
+            <param name="constraint">   Some hawdare configurations need particular constraint. Values of this param are: cerhand, trifig and none                           </param>
+            <param name="param1">       Special value related to a specific constraint. It should be e double. If contraint is none, this paran isn't taken into account.   </param>
+            <param name="param2">       Special value related to a specific constraint. (Currently not used).                                                               </param>
+        </group> 
+        <group name="JOINTSET_1">
+            <param name="listofjoints">   3             </param>
+            <param name="constraint">     none          </param>
+            <param name="param1">         0             </param>
+            <param name="param2">         0             </param>
+        </group> 
+    </group>                                       
+    
+</params>
