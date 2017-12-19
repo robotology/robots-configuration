@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><params build="1" robot="iCubNancy01">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  3 </param>
+        <param name="MotioncontrolVersion">  4 </param>
         <param name="Joints"> 4 	</param> 
         <param name="AxisMap"> 		0             1             2             3	</param>
         <param name="AxisName"> "l_shoulder_pitch" "l_shoulder_roll" "l_shoulder_yaw"    "l_elbow"      </param>
