@@ -44,7 +44,7 @@
                     <param name="port">             CONN:P3             MAIS:thumbproximal  MAIS:thumbdistal    MAIS:indexproximal      </param>
                     <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param>
                     <param name="resolution">        65535              65535               65535               65535           </param> <!-- 65535:this value will change by fw during calibration (type 6 or 7) --> 
-                    <param name="numofnoisebits">      0                0                   0                  0                        </param>  
+                    <param name="tolerance">         0                   0                   0                  0                        </param>  
                 </group>        
                 
                 <group name="ENCODER2">
@@ -52,7 +52,7 @@
                     <param name="port">             CONN:none           CONN:P2             CONN:P4             CONN:P5                 </param>
                     <param name="position">         none                atmotor             atmotor             atmotor                 </param>
                     <param name="resolution">       1                   40                   40                 40                      </param>
-                    <param name="numofnoisebits">      0                0                   0                  0                        </param>  
+                    <param name="tolerance">        0                   0                   0                  0                        </param>  
                 </group>  
             </group>    
             
