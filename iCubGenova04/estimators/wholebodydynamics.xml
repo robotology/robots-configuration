@@ -26,6 +26,7 @@
             <param name="l_lower_leg">(l_lower_leg,5,3)</param>
             <param name="l_ankle_1">(l_ankle_1,5,4)</param>
             <param name="l_foot">(l_foot_dh_frame,5,5)</param>
+            <param name="r_foot">(r_foot_dh_frame,6,5)</param>
             <param name="r_lower_leg">(r_lower_leg,6,3)</param>
             <param name="r_ankle_1">(r_ankle_1,6,4)</param>
             <param name="r_ankle_2">(r_foot_dh_frame,6,5)</param>
