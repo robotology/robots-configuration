@@ -40,7 +40,8 @@
     
 
     <!-- INERTIAL SENSOR--> 
-    <devices file="hardware/inertials/head-inertial.xml" /> 
+    <devices file="hardware/inertials/head-inertial.xml" />
+    <devices file="hardware/inertials/waist-inertial.xml" />
     
     <!-- ANALOG SENSOR MAIS -->
     <devices file="wrappers/MAIS/left_arm-mais_wrapper.xml" /> 
