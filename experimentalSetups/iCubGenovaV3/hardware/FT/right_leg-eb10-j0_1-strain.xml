@@ -3,11 +3,11 @@
 
 <devices robot="iCubGenovaV3" build="1">
 
-    <device name="right_leg-eb8-j0_3-strain" type="embObjStrain">
+    <device name="right_leg-eb10-j0_1-strain" type="embObjStrain">
     
         <params file="general.xml"/>
 
-        <params file="hardware/electronics/right_leg-eb8-j0_3-eln.xml" />
+        <params file="hardware/electronics/right_leg-eb10-j0_1-eln.xml" />
     
         <group name="SERVICE">
             
