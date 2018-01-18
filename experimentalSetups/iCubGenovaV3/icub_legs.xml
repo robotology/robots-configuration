@@ -36,7 +36,6 @@
         <!--  CALIBRATORS -->
     <devices file="calibrators/left_leg-calib.xml" />
     <devices file="calibrators/right_leg-calib.xml" />
-    <devices file="calibrators/head-calib.xml" />
    
     
     </robot> 
