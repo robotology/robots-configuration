@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
+<!-- NOTE: This is only an example! 
+           The specified devices here below depend on robot mechanics and electronic version.-->
+
     <robot name="myrobot" build="1" portprefix="icub">
     
     <params file="hardware/electronics/pc104.xml" />
@@ -9,6 +12,11 @@
     <devices file="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
     <devices file="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
     <devices file="./wrappers/motorControl/head_mc_wrapper.xml" /> 
+        
+     <!-- FACE -->
+    <devices file="./hardware/motorControl/face-eb22-j0_1-mc.xml" />  
+    <devices file="./hardware/motorControl/face-eb23-j2_5-mc.xml" /> 
+    <devices file="./wrappers/motorControl/face-mc_wrapper.xml" /> 
     
     <!-- TORSO --> 
     <devices file="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
@@ -49,9 +57,11 @@
     <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />  
     <devices file="hardware/skin/right_arm-eb4-skin.xml" /> 
     <devices file="wrappers/skin/left_leg-skin_wrapper.xml" />
-    <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
     <devices file="hardware/skin/left_leg-eb10-skin.xml" />
+    <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
     <devices file="hardware/skin/right_leg-eb11-skin.xml" />
+    <devices file="wrappers/skin/torso-skin_wrapper.xml" />
+    <devices file="hardware/skin/torso-eb22-skin.xml" />
     
     <!-- ANALOG SENSOR FT -->
     <devices file="wrappers/FT/left_arm-FT_wrapper.xml" /> 
@@ -67,7 +77,7 @@
     <devices file="hardware/FT/right_leg-eb8-strain.xml" /> 
     <devices file="hardware/FT/right_leg-eb9-strain.xml" />
     
-    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY -->
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
     <devices file="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
     <devices file="wrappers/VFT/right_leg-VFT_wrapper.xml" /> 
     <devices file="wrappers/VFT/left_leg-VFT_wrapper.xml" />     
@@ -81,6 +91,7 @@
     <devices file="calibrators/right_leg-calib.xml" />
     <devices file="calibrators/torso-calib.xml" />
     <devices file="calibrators/head-calib.xml" />
+    <devices file="calibrators/face-calib.xml" />
     
     <!-- CARTESIANS --> 
     <devices file="cartesian/left_arm-cartesian.xml" />

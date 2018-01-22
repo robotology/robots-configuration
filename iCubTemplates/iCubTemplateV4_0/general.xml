@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<params robot="myrobot" build="1">
+  
+  <group name="GENERAL">
+      <param name="skipCalibration">    If true, the motion control devices are running, but the calibration procedure is not performed; this means that it is not possible to move joints.
+                                        Note: joints have the pwm limited to the values written in "startupMaxPwm" parameter in calibration file.  
+                                        Usually this parameter is false. </param>
+      <param name="useRawEncoderData">  It is used to read the raw value of joints encoders. Only maintainers should change this parameter. 
+                                        ATTENTION: make sure you have pressed the fault button and have set "skipCalibration" parameter to true. </param>
+      <param name="useLimitedPWM">      Deprecated  </param>
+      <param name="verbose">            Enable some more debug prints </param>
+  </group>
+</params>
