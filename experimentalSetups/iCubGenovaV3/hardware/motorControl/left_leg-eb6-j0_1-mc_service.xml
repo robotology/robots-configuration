@@ -36,19 +36,19 @@
                 </group>
                 
                 <group name="ENCODER1">  
-                    <param name="type">             eomc_enc_aea        aea                 aea             aea         </param>  
-                    <param name="port">             CONN:P6             CONN:P7             CONN:P8         CONN:P9     </param>
-                    <param name="position">         eomc_pos_atjoint    atjoint             atjoint         atjoint     </param>
-                    <param name="resolution">       4096                4096                4096            -4096       </param> 
-                    <param name="tolerance">      3                3                   3                  3                        </param>  
+                    <param name="type">             amo                 amo          </param>  
+                    <param name="port">             CONN:P6             CONN:P8      </param>
+                    <param name="position">         eomc_pos_atjoint    atjoint      </param>
+                    <param name="resolution">       1048576             1048576      </param> 
+                    <param name="tolerance">        0.703               0.703        </param>  
                 </group>        
                 
                 <group name="ENCODER2">
-                    <param name="type">             roie                roie                roie            roie       </param>
-                    <param name="port">             CAN1:3:0            CAN1:4:0            CAN1:1:0        CAN1:2:0   </param>
-                    <param name="position">         eomc_pos_atmotor    atmotor             atmotor         atmotor    </param>
-                    <param name="resolution">       -14400.0            -14400.0            -14400.0        -14400.0   </param>
-                    <param name="tolerance">      0                0                   0                  0                        </param>  
+                    <param name="type">             roie                roie        </param>
+                    <param name="port">             CAN1:1:0            CAN1:2:0    </param>
+                    <param name="position">         eomc_pos_atmotor    atmotor     </param>
+                    <param name="resolution">       -14400.0            -14400.0    </param>
+                    <param name="tolerance">        0                   0           </param>  
                 </group> 
  
             </group>   

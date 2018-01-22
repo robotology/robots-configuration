@@ -12,8 +12,8 @@
     <params file="hardware/motorControl/left_leg-eb7-j2_3-mc_service.xml" />
 
     <group name="LIMITS">
-        <param name="jntPosMax">                      85            85        </param>
-        <param name="jntPosMin">                     -30             0        </param>
+        <param name="jntPosMax">                    62.5             0        </param>
+        <param name="jntPosMin">                   -62.5          -100        </param>
         <param name="jntVelMax">                    1000          1000        </param>   
         <param name="motorNominalCurrents">         5000          5000        </param>
         <param name="motorPeakCurrents">            6000         10000        </param>

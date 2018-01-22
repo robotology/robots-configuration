@@ -6,24 +6,24 @@
         <param name="MotioncontrolVersion">  4 </param>
         <param name="Joints"> 2 </param> 
 
-        <param name="AxisMap">               0             1       </param>
-        <param name="AxisName">     "r_hip_pitch"   "r_hip_roll"" </param>
-        <param name="AxisType">       "revolute"    "revolute"      </param>        
-        <param name="Encoder">         182.044       182.044       </param>
-        <param name="fullscalePWM">   32000         32000        </param>
-        <param name="ampsToSensor">     1000.0        1000.0          </param>
-        <param name="Gearbox_M2J">      100.00        -100.00      </param>
-        <param name="Gearbox_E2J">   	1             1            </param>
-        <param name="useMotorSpeedFbk"> 1             1            </param>
-        <param name="MotorType">       "BLL_MOOG"     "BLL_MOOG"  </param>
+        <param name="AxisMap">               0             1                </param>
+        <param name="AxisName">       "r_hip_pitch"      "r_hip_roll"       </param>
+        <param name="AxisType">       "revolute"         "revolute"         </param>        
+        <param name="Encoder">         182.044            182.044           </param>
+        <param name="fullscalePWM">     32000              32000            </param>
+        <param name="ampsToSensor">     1000.0             1000.0           </param>
+        <param name="Gearbox_M2J">      100.00             -100.00          </param>
+        <param name="Gearbox_E2J">   	1                  1                </param>
+        <param name="useMotorSpeedFbk"> 1                  1                </param>
+        <param name="MotorType">       "MOOG_C2900580"     "MOOG_C2900576"  </param>
 
         <param name="Verbose">		0    	</param>
     </group>
     
     <group name="LIMITS">
         <!--                                    0             	1            -->
-        <param name="hardwareJntPosMax">        85              85        </param>
-        <param name="hardwareJntPosMin">       -30               0        </param>
+        <param name="hardwareJntPosMax">       130             20        </param>
+        <param name="hardwareJntPosMin">       -45           -116        </param>
         <param name="rotorPosMin">              0               0         </param> 
         <param name="rotorPosMax">              0               0         </param>
     </group>
@@ -64,7 +64,7 @@
     </group>    
 
     <group name="JOINTSET_CFG"> 
-        <param name= "numberofsets"> 4 </param>
+        <param name= "numberofsets"> 2 </param>
         <group name="JOINTSET_0">
             <param name="listofjoints">  0             </param>
             <param name="constraint">    none          </param>
