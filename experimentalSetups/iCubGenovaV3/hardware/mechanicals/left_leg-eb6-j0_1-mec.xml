@@ -29,9 +29,9 @@
         <param name="HasHallSensor">         1             1       </param>
         <param name="HasTempSensor">         0             0       </param>
         <param name="HasRotorEncoder">       1             1       </param>
-        <param name="HasRotorEncoderIndex">  0             0       </param>
+        <param name="HasRotorEncoderIndex">  1             1       </param>
         <param name="HasSpeedEncoder">       0             0       </param>
-        <param name="RotorIndexOffset">      0             0       </param>
+        <param name="RotorIndexOffset">      190           11      </param>
         <param name="MotorPoles">            8             8       </param>
    </group>
 
