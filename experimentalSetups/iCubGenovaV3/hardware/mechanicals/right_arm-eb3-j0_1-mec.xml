@@ -27,6 +27,8 @@
     </group>
 
     <group name="2FOC">
+        <param name="AutoCalibration">          0                   0                   </param>
+        <param name="Verbose">                  1                   1                   </param>	
         <param name="HasHallSensor">            0                   0                   </param>
         <param name="HasTempSensor">            0                   0                   </param> <!-- pero' ha il sensore di temp, quindi ... metti 1 -->
         <param name="HasRotorEncoder">          1                   1                   </param>
