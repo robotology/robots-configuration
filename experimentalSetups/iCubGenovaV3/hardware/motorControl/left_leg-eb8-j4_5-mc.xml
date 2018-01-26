@@ -38,9 +38,9 @@
 	<group name="POS_PID_DEFAULT">
 	    <param name="controlLaw">    Pid_inPos_outPwm </param> 
         <param name="controlUnits">  metric_units              </param> 
-        <param name="pos_kp">          2200.00     2200.00      </param>       
+        <param name="pos_kp">          2200.00    -2200.00      </param>       
         <param name="pos_kd">            0.00         0.00      </param>       
-        <param name="pos_ki">            0.09         0.09      </param>           
+        <param name="pos_ki">            0.09        -0.09      </param>           
         <param name="pos_maxOutput">     8000         8000      </param>       
         <param name="pos_maxInt">         750          750      </param>       
         <param name="pos_shift">            0            0      </param>       
