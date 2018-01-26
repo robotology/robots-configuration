@@ -6,9 +6,9 @@
     <params file="hardware/electronics/pc104.xml" />
     
     <group name="ETH_BOARD">
-   
+
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.1                </param>
+            <param name="IpAddress">                10.0.1.13               </param>
             <param name="IpPort">                   12345                   </param>
             <param name="Type">                     ems4                    </param>
             <param name="maxSizeRXpacket">          768                     </param>
@@ -16,13 +16,13 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "left_arm-eb1-j0_3"     </param> 
+            <param name="Name">                     "right_leg-eb13-skin"   </param> 
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>   
                 <param name="maxTimeOfTXactivity">      300                 </param>                
-                <param name="TXrateOfRegularROPs">      5                   </param> 
+                <param name="TXrateOfRegularROPs">      3                   </param> 
             </group>              
         </group>                 
         
@@ -35,6 +35,7 @@
         </group>
 
     </group>  
-    
+   
 </params>
+
 
