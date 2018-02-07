@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<devices robot="CER01" build="1">
+    <device name="left_hand_multienc" type="embObjMultiEnc"> 
+        <params file="general.xml" />
+        <params file="hardware/electronics/cer_left_hand-mcp7-eln.xml" />
+        <group name="JOINTS">
+            <param name="listofjoints"> 0 1 </param>
+            <param name="encoderConversionFactor"> -182.044 182.044 1.0 -182.044 182.044 1.0 </param>
+        </group>
+    </device> 
+    
+</devices>
+

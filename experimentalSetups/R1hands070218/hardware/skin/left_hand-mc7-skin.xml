@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<devices robot="CER01" build="1">
+    <device name="left_hand_skin" type="embObjSkin">
+        <params file="general.xml" />
+ 
+        <params file="hardware/electronics/cer_left_hand-mcp7-eln.xml" />
+        <group name="patches">
+            <param name="skinCanAddrsPatch1"> 13 </param> 
+        </group>
+        <params file="hardware/skin/left_hand-mc7-skinSpec.xml" />
+    </device>
+</devices>
+  

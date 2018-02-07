@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<devices robot="CER01" build="1">
+	<device name="left_hand_skin_wrapper" type="skinWrapper">
+		<param name="period">       20  				</param>
+		<param name="total_taxels"> 61					</param> 
+        <!-- 27 +21 +13+10 -->
+		<param name="device">       skinWrapper				</param>
+		
+		<paramlist name="ports">
+		  <elem name="left_hand_skin"> 	0 60 0 60	</elem>
+		</paramlist>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstSetOfSkins"> left_hand_skin </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach" />
+	</device>
+</devices>
