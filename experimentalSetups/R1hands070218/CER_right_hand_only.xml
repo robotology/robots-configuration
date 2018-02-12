@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<robot name="CER01" build="1" portprefix="cer">
+    <params file="hardware/electronics/pc104.xml" />
+
+    <!-- DEVICE -->
+    <devices file="hardware/motorControl/cer_right_hand-mcp9-mc.xml" />
+    <devices file="wrappers/motorControl/cer_right_hand-mc_wrapper.xml" />
+
+     <!-- SKIN-->
+    <devices file="hardware/skin/right_hand-mc9-skin.xml" />
+    <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />
+
+    <!--  CALIBRATORS -->
+    <devices file="calibrators/cer_right_hand-calib.xml" />
+</robot> 
+
+

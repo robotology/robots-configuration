@@ -15,9 +15,9 @@
     <group name="LIMITS">
         <!--                                    0             	1            2          3         -->
         <param name="jntPosMax">               85              85           70          0    </param>
-        <param name="jntPosMin">              -30               0          -70       -100    </param>
-        <param name="motorNominalCurrents">  5000          5000          5000         5000     </param>
-	    <param name="motorPeakCurrents">     6000         10000          6000        10000     </param>
+        <param name="jntPosMin">              -30             -12          -70       -100    </param>
+        <param name="motorNominalCurrents">  6000          5000          5000         5000     </param>
+	    <param name="motorPeakCurrents">     7000         10000          6000        10000     </param>
         <param name="motorOverloadCurrents"> 15000         15000         15000        15000     </param>
         <param name="jntVelMax">                1000         1000         1000       1000    </param>
         <param name="motorPwmLimit">           10000        10000        10000      10000    </param>
@@ -53,8 +53,8 @@
 	<group name="POS_PID_CUSTOM">
 	    <param name="controlLaw">    Pid_inPos_outPwm                          </param>
         <param name="controlUnits">  metric_units                              </param>
-        <param name="pos_kp">           1066.66    -2066.66     711.11   1066.66 </param>
-        <param name="pos_kd">            100.00        0.00       0.00       0.00 </param>
+        <param name="pos_kp">           2066.66    -2066.66     711.11   2066.66 </param>
+        <param name="pos_kd">            100.00     -100.00     100.00    100.00 </param>
         <param name="pos_ki">          11000.00   -14000.00       0.00   1066.64 </param>
 
         <param name="pos_maxOutput">       8000        8000       8000       8000 </param>

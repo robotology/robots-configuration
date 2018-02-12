@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+
+<devices robot="iCubGenova02" build="1">
+    <device name="face-no-eyelids-calibrator" type="parametricCalibratorEth">
+    
+        <params file="general.xml" />
+                
+        <group name="GENERAL">
+            <param name="joints"> 5 </param> 
+            <param name="deviceName"> Face_Calibrator </param> 
+        </group>
+
+        <group name="HOME">
+            <param name="positionHome">         15                     -6           0           -6          11          </param>
+            <param name="velocityHome">         10                      10          10          10          10          </param>
+        </group>
+        
+        <!-- joint logical number               0                       2           3           4           5           -->
+        <!-- joint name                         jaw                     lip-left    lip-high    lip-right   lip-bottom  -->        
+        <group name="CALIBRATION">
+            <param name="calibrationType">      12                      5           5           5           5           </param>
+            <param name="calibration1">         666                     500.0       500.0       500.0       900.0       </param> 
+            <param name="calibration2">         0                       -6371.54    5097.23     6371.54     0.0         </param> 
+            <param name="calibration3">         0                       0.0         0.0         0.0         0.0         </param>
+            <param name="calibration4">         0                       0           0           0           0           </param>
+            <param name="calibration5">         0                       0           0           0           0           </param>
+            
+            <param name="calibrationZero">      0                       -35.0       30.0        35.0        0.0         </param>
+            <param name="calibrationDelta">     0.0                     0.0         0.0         0.0         0.0         </param>
+
+            <param name="startupPosition">      15                      0.0         0.0         0.0         0.0         </param> 
+            <param name="startupVelocity">      10                      20.0        20.0        20.0        20.0        </param> 
+            <param name="startupMaxPwm">        1300                    1200        1200        1200        1200        </param> 
+            <param name="startupPosThreshold">  90                      2           2           2           2           </param> 
+        </group>
+        
+        <param name="CALIB_ORDER"> (0 1 2 3 4) </param>   <!-- we can calibrate all joints in parallel -->
+       
+        <action phase="startup" level="10" type="calibrate">
+            <param name="target">face-no-eyelids-mc_wrapper</param>
+        </action>
+
+        <action phase="interrupt1" level="1" type="park">
+            <param name="target">face-no-eyelids-mc_wrapper</param>
+        </action>
+
+        <action phase="interrupt3" level="1" type="abort" />
+
+    </device>
+</devices>

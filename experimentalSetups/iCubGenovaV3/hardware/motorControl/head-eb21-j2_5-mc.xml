@@ -58,6 +58,14 @@
             <param name="pos_stictionDwn">           0           0           0           0          </param> 
             <param name="pos_kff">                   0           0           0           0          </param> 
         </group>
+        <group name="OTHER_CONTROL_PARAMETERS">
+            <param name="deadZone">                  0.0495      0.0495      0.0495      0.0495
+
+<!-- the maximum precision in reaching the target position. This is an optional paramter, therefore if is not specified the firmware use the following ones:
+                                            - for joints with aea encoder it is  0.0495 degree
+                                            - for joints with amo encoder it is  0.0049 degree -->
+                                            </param>
+    </group>
     
     </device>
 </devices>

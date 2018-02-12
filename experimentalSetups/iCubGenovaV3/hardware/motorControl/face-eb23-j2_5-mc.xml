@@ -23,15 +23,15 @@
         </group>
 
         <group name="TIMEOUTS">
-            <param name="velocity">                 100           100           100           100   </param>
+            <param name="velocity">             100         100                 100                 100   </param>
         </group>
 
 
          <group name="CONTROLS">
-           <param name="positionControl">  POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT          </param> 
-           <param name="velocityControl">  none                   none                  none                  none                  </param> 
-           <param name="torqueControl">    none                   none                  none                  none                  </param>
-            <param name="currentPid">      none                   none                  none                  none                  </param> 
+           <param name="positionControl">  POS_PID_DEFAULT  POS_PID_DEFAULT     POS_PID_DEFAULT         POS_PID_DEFAULT     </param> 
+           <param name="velocityControl">  none             none                none                    none                  </param> 
+           <param name="torqueControl">    none             none                  none                  none                  </param>
+            <param name="currentPid">      none             none                  none                  none                  </param> 
         </group>
         
         

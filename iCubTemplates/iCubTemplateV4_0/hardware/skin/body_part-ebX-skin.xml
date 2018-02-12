@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+<!--    This file contains details of how the skin service is configured. 
+  -->
+  
+<devices robot="myrobot" build="1">
+
+    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjSkin. -->
+    <device name="body_part_skin" type="embObjSkin">
+    
+        <!-- Include the file which specifies global configuration -->
+        <params file="general.xml" />
+        
+        <!-- Include the file which specifies which ETH board hosts the service -->
+        <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+        
+            <!-- this group contains the address of the MTB boards divided in skin patches. 
+                 so far the patches can be 1 or 2, and their names must be exactly: skinCanAddrsPatch1 and skinCanAddrsPatch2  
+              -->
+            <group name="patches">
+                <!-- contains the addresses of MTB boards on CAN1. In the example there are CAN1:1, CAN1:2, and CAN1:3 -->
+                <param name="skinCanAddrsPatch1"> 1 2 3 </param> 
+                <!-- contains the addresses of MTB boards on CAN2. In the example there are CAN2:6, CAN2:7, and CAN2:8 -->
+                <param name="skinCanAddrsPatch2"> 6 7 8 </param> 
+            </group>
+            
+        <!-- specifies how the embObjSkin device must configure the MTB boards -->    
+        <params file="hardware/skin/body_part-ebX-skinSpec.xml" />
+        
+    </device>
+    
+</devices>
+
+  

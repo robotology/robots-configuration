@@ -1,0 +1,400 @@
+
+<!-- 
+    ---------------------------------------------------------------------------------------------------------------------------------------------------
+    Communication between PC104 and ETH boards
+    ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+    The physical ETH network is formed by one host, or PC104, and by one or more ETH boards.
+                
+    The PC104 and the ETH boards communicate at application layer by means of what is defined a ROP (acronym of: Remote OPeration). The ROPs
+    are not transmitted straigth away to a given IP address, but are buffered inside a ROPframe which is encapsulated inside a UDP packet
+    and transmitted to its destination with certain policies. It is possible to partly configure communication by acting on some parameters
+    of .xml files contained in this folder.
+
+    The properties / settings of the host are defined by the file "pc104.xml". The properties / settings of each ETH board are defined by a 
+    file called "body_part-ebX-[text]-eln.xml".
+                
+    To better understand how communication works, and thus how to tune some of the parameters inside the above files, it is important to 
+    understand the basics of communication from PC104 to ETH boards and backwards.
+        
+    The following sections deal with: basics of application layer protocol, examples of typical command flows, transport layer, 
+    software communication actors in ETH boards and PC104, ways to change the communication parameters to adapt to certain needs.
+        
+        
+    1. Basics of application layer protocol
+
+    The PC104 and an ETH board exchange information using ROPs (Remote OPerations). The ROP is formed by a header plus an optional payload.
+    The header is 8 bytes long and contains the fields {FLAGS, ROPCODE, PAYLOADSIZE, ID} which specify an operation defined by the
+    ROPCODE about a variable specified by an ID of 32 bits. Some ROPCODEs require also a payload which contains VALUE(ID), 
+    the value of the variable specified by the ID.
+    
+    Here are the supported ROPs with a basic description:
+    - ask<ID>           The sender asks the value of the variable specified by ID.
+    - say<ID, VALUE>    The receiver of an ask<> replies with a say<> to communicate the requested value.    
+    - set<ID, VALUE>    The sender commands the receiver of this ROP to modify the content of variable specified by ID with what is in VALUE.
+    - sig<ID, VALUE>    The sender spontaneously signals the value of the variable specified by ID.
+    
+    Here are some timing diagrams for the use of ROP communications, each of them applicable to a specific use case in the robot.
+    
+    -------------------------------------------------------------------------------------------------------------------
+                    PC104                           EMS@10.0.1.1
+                    |                               |
+    send request    |-> ask<ID>                   ->| decode ROP, retrieve value described by ID                     
+    wait until rx   |                               | 
+    get value       |<-            say<ID, VALUE> <-| send reply
+                    |                               |
+    -------------------------------------------------------------------------------------------------------------------
+    Timing diagram 1. Blocking get. Done with ask<> say<> ROPs
+
+ 
+ 
+    -------------------------------------------------------------------------------------------------------------------
+                    PC104                           EMS@10.0.1.1
+                    |                               |
+    set command     |-> set<ID, VALUE>            ->| decode ROP, impose VALUE to variable described by ID                     
+                    |                               |    
+    -------------------------------------------------------------------------------------------------------------------
+    Timing diagram 2. Non blocking set. Done  with a set<> ROP
+
+    
+
+    -------------------------------------------------------------------------------------------------------------------
+                    PC104                           EMS@10.0.1.1
+                    |                               |
+    set command     |-> set<ID, VALUE>            ->| decode ROP, impose VALUE to variable described by ID                       
+    send request    |-> ask<ID>                   ->| decode ROP, retrieve value described by ID                         
+    wait until rx   |                               | 
+    get value       |<-            say<ID, VALUE> <-| send reply
+    -------------------------------------------------------------------------------------------------------------------                    
+    Timing diagram 3. Blocking set with verification. Done with set<> ask<> say<> ROPs. 
+
+    
+    -------------------------------------------------------------------------------------------------------------------
+                  PC104                           EMS@10.0.1.1
+                    |                               |
+    process value   |<-            sig<ID, VALUE> <-| signal the value of variable described by ID
+                    |                               |
+    -------------------------------------------------------------------------------------------------------------------                
+    Timing diagram 4. Spontaneous signalling. Done with sig<> ROP. 
+
+
+    -------------------------------------------------------------------------------------------------------------------
+                  PC104                           EMS@10.0.1.1
+                    |                               |
+    update value    |<-            sig<ID, VALUE> <-| signal the value of variable described by ID
+                    |                               | wait for expiry of period
+    update value    |<-            sig<ID, VALUE> <-| signal the value of variable described by ID
+                    |                               | wait for expiry of period
+    update value    |<-            sig<ID, VALUE> <-| signal the value of variable described by ID
+                    .                               .
+    -------------------------------------------------------------------------------------------------------------------                
+    Timing diagram 5. Regular signalling. Done with periodical sig<> ROPs.     
+    
+    
+    Apart from the ID and ROPCODE, the header contains also the field PAYLOADSIZE (the size of the payload) and in FLAGS it is possible
+    to specify some extra options such as: 
+    - presence of a 32-bit unique SIGNATURE which can be used to identify a particular ROP
+    - presence of a 64-bit TIMESTAMP which can be used to communicate the exact time of generation of the ROP. 
+    - boolean value which tells if the ROP requires an ACK to be sent back for confirmation reception
+    - boolean value which tells that the current ROP is an ACK.
+    
+    These latter features (acked communication and use of signature and timestamps) are fully supported but are not currently used.
+    
+
+    Here is the generic format of a ROP
+
+    -------------------------------------------------------------------------------------------------------------------
+    ROP         = [header]+[payload]
+    [header]    = [FLAGS|ROPCODE|PAYLOADSIZE|ID]
+    [payload]   = [VALUE]+[SIGNATURE]+[TIMESTAMP]
+    -------------------------------------------------------------------------------------------------------------------
+    Figure. Structure of a ROP. The header is 8 bytes long and is always present. The payload has variable size and its 
+    presence depends on the value of its flags (they can add the SIGNATURE and/or the TIMESTAMP) and by the type of the 
+    ROPCODE (ask<> does not have VALUE).
+    
+    
+    
+    2. Transport of ROPs
+    
+    For practical use, one or more ROPs are incapsulated inside a ROPframe which is delivered to its destination inside a UDP packet.
+    Here is the format of the ROPframe.
+    
+    -------------------------------------------------------------------------------------------------------------------
+    [ROPframe]  = [header]+[payload]+[footer]    
+    [header]    = [startofframe | sizeofpayload | numberofROPs | frametimestamp | sequencenumber]
+    [payload]   = { ROP_i } i=1,..,numberofROPs
+    [footer]    = [endofframe]
+    -------------------------------------------------------------------------------------------------------------------
+    Figure. Format of a ROPframe. The header is 24 bytes, the footer is 8 bytes. The payload size can be as big as the 
+    maximum of UDP capacity - 28.
+    
+    
+    The frametimestamp is set at time of transmission of the UDP frame and can be used to determine the age of the UDP packet.
+    The sequencenumber instead is incremented by the transmitter at each transmission and is used by the receiver to detect a
+    loss in the transport of UDP packets.
+    
+ 
+ 
+    3. Reliability and delays in the transport of ROPs over UDP
+    
+    We use UDP transport because it is slimmer and faster than TCP/IP. However, what about guarantee of delivery? What about 
+    speed of delivery? To answer to those questions we need to describe in more details our network, which can be defined
+    100M Full Duplex Swithed Ethernet Network.
+
+    -------------------------------------------------------------------------------------------------------------------
+                 ETH board                      
+                 ------------------              SWITCH
+                |                  |            |-------------------------|           
+      eth port -|-1|------|   ---  |           1| -- [route scheduler] -- |3
+                |  |SWITCH|3-|CPU| |            |      |      |           |
+      eth port -|-2|------|   ---  |           2| -----   [three buffers] |
+                |                  |            |-------------------------|
+                 ------------------
+    
+    -------------------------------------------------------------------------------------------------------------------
+    Figure. The ETH board contains a 3-port switch and a CPU. The switch is configured in full duplex, 100mbps, and has
+    forwarding policies such as those. If the CPU transmits to port 1 and there is no communication from port 2 to 
+    port 1, then the IP packet is immediately routed and transmitted; if instead the path is busy, the packet is 
+    inserted in a buffer dedicated to that port and transmitted as soon the port is ready. If at the same time a packet 
+    arrives from port 1 and is directed to port 2 or to the CPU the communication happens in parallel.    
+
+    
+    -------------------------------------------------------------------------------------------------------------------    
+        [PC104] ----    
+                    |     
+                    |   ------------------
+                    |  |                  |           
+                     --|-1|------|   ---  |
+                       |  |SWITCH|3-|CPU| |     IP 10.0.1.1
+                     --|-2|------|   ---  |
+                    |  |                  |
+                    |   ------------------
+                    |     
+                    |   ------------------
+                    |  |                  |           
+                     --|-1|------|   ---  |
+                       |  |SWITCH|3-|CPU| |     IP 10.0.1.2
+                     --|-2|------|   ---  |
+                    |  |                  |
+                    |   ------------------                    
+                    |     
+                    |   ------------------
+                    |  |                  |           
+                     --|-1|------|   ---  |
+                       |  |SWITCH|3-|CPU| |     IP 10.0.1.3  
+                     --|-2|------|   ---  |
+                       |                  |
+                        ------------------                    
+    -------------------------------------------------------------------------------------------------------------------
+    Figure. The connection of PC104 and thre ETH boards. The typical traffic model is that each of the three boards 
+    transmits one UDP packet at most every 1 ms and sometimes the PC104 sends to a board one small UDP packet. 
+    To be more precise, each board regularly transmits every ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate ms a medium
+    sized packet (typically 5 ms) and sometimes at 1 ms granularity sends back a small UPD packet with a reply to the 
+    PC104. The ETH boards DO NOT transmit to each other.
+    
+    
+    The buffering mechanism of the switched network prevents packet loss as long as the production rate does not exceed
+    the capacity of the buffers internal to the switches. Needless to say, that does not happen.
+    
+    The transmit delay is different in case of downlink (PC104 to board) and uplink (board to PC104) directions.
+    
+    In short, those times for the i-th board are:
+    
+    - DL_time            = (N_bytes * 80) + i * T_switch [nanosec]
+    - UL_averagetime     = (N_bytes * 80) + i * ((1-P_busy) * T_switch + P_busy * (N_bytes * 80))
+    - UL_besttime        = UL_averagetime(P_busy=0) = (N_bytes * 80) + i * T_switch
+    - UL_worsttime       = UL_averagetime(P_busy=1) = (N_bytes * 80) + i * (N_bytes * 80)
+    
+    80 [ns] is the speed stransfer of oen byte at 100mbps
+    N_bytes is the number of bytes in the ETH frame.
+    T_switch = 1120 [ns] is the switching time of the ETH switch
+    P_busy is the probability that the destination port is used by the other port.
+    
+    For the case of 100 bytes sent in DL and 500 bytes sent in UL, with ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate = 5,
+    the values for the 20-th board are:
+        DL_time = 30.4 microsec,    
+        UL_averagetime = 68.6 microsec (we have P_busy = 0.008)
+        UL_besttime = 60 microsec
+        UL_worsttime = 840 microsec
+        
+    See Appendix for details.
+
+    
+    4. Mechanisms to be used for detection of packet loss
+
+    The case of packet loss in our network is always evidence of malfunctioning which is to be treated by fixing the hw or 
+    the behaviour in the PC104.
+    
+    The system is provided of reliable diagnostics which alerts not only of packet loss, but also of out of order delivery
+    and of loss of link or CRC errors in the ETH network.    
+
+    As an example: if a link of the ETH network goes down and then up because of a short circuit the related ETH boards signals 
+    using about sig<> ROPs that the link has gone down and then that the link has gone up again. Also, when the link goes up
+    again both the PC104 and the ETH boards reports about loss of packets and they can tell how many are lost by checking
+    the sequence numbers of the ROPframes. 
+    
+    In case of such detections, oen must stop the robot and report a problem. Nevertheless, some important communications which
+    cannot go wrong use the transmission mechanism of blocking set with verification and stop the robot if the set<> is not succesful. 
+    
+    
+    
+    5. Software communication actors in ETH boards
+    
+    The ETH board runs the object EOMtheEMSrunner which every 1ms executes three phases: RX, DO, TX.
+    
+    In the RX phase, the object EOtransceiver retrieves any UDP packet which has arrived on port ETH_BOARD::ETH_BOARD_PROPERTIES::IpPort,
+    it parses the contained ROPs, and executes the associated actions. For instance, it prepares the say<ID, VALUE> ROP in rensponse to
+    a received ask<ID> and it puts it inside the UDP packets ready for transmission. Or again, it accepts a new setpoint received with a
+    ROP set<ID, VALUE>. 
+    
+    The DO phase is responsible to run PIDs or to prepare data to be sent to the pC104, such as the regular transmission of status data
+    which are sent back with ROPs of kind sig<ID, VALUE>.
+    
+    Finally, in the TX phase the EOtransceiver is responsible to transmit one UDP packet which contains the ROPs to the address
+    PC104::PC104IpAddress and port PC104::PC104IpPort. 
+    
+    However, the EOtransceiver does not transmit a UPD packet at every iteration. The rule is the following.
+    The reply ROPs, if present, are always put inside the TX UPD packet for transmission. The ROPs generated by the ETH board, for instance
+    to signal a problem or to send up a report are always put inside the TX UPD packet for transmission as soon as they are available. 
+    The regular ROPs are added to teh TX UDP packt only every ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate iterations. 
+    The transmission of teh UDP packet is done only if there is a ROP inside.
+    
+    In short, the ETH board transmits a UDP packet with regulars ROPs every ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate, and seldom
+    it may transmit other small UDP packets with reply or occasional ROPs.
+
+    
+    6. Software communication actors in PC104
+    
+    Each of the ETH boards listed in folder hardware/electronics is modeled in yarprobotinterface by one instance of class EthResource which 
+    holds a HostTransceiver which is used to manage the forming and parsing of UDP packets. The object HostTransceiver holds the very same
+    EOtransceiver which runs on the ETH boards even with different settings.
+    
+    The EthSender thread is a yarp::os::rateThread of yarprobotinterface which runs on PC104 at high priority (48) in FIFO scheduling mode. 
+    Its period is PC104::PC104TXrate. Its regular execution forces the transmission of all the UDP packets ready to go each to its relevant ETH board.
+    
+    Each UDP packet is sent to IP = ETH_BOARD::ETH_BOARD_PROPERTIES::IpAddress,
+    port = ETH_BOARD::ETH_BOARD_PROPERTIES::IpPort. The size of the transmitted packet cannot exceed ETH_BOARD::ETH_BOARD_PROPERTIES::maxSizeRXpacket.
+
+    The EthReceiver thread is a yarp::os::rateThread which runs on PC104 at a high priority (49) in FIFO scheduling mode. Its execution 
+    forces the extraction and parsing of all the UDP packets received on the port PC104::PC104IpPort. 
+
+    Here are exapmpels of how these objects work for sending and receving UDP packets.
+    
+    Communication towards a given ETH board works in this way. A client thread forms a ROP of kind set<ID, DATA> or ask<ID> directed to a given board. 
+    The ROP is given to the relevant EthResource object which adds it to its private TX UDP packet. The same can be done by other client threads.
+    At a regular rate of PC104::PC104TXrate milliseconds, the thread EthSender executes. It scans all attached EthResource objects and if their 
+    private TX UDP packet contains at least one ROP, it transmits the packet. The UPD packets stays in the 100mbps ETH network for a small fraction 
+    of time and are then decoded by the relevant ETH board every 1 ms.         
+    Inside the ETH board, a the set<ID, VALUE> ROPs are immediately executed and the ask<ID> ROPs generates a reply with say<ID, VALUE> ROPs
+    which are sent back to PC104.
+    
+    Reception from a given ETH board works in this way. Every board sends UPD packets with granularity of 1 ms to port PC104::PC104IpPort. 
+    The UPD packets are delivered almost instantanealy to the PC104 and stay buffered inside the Linux OS until, every PC104::PC104RXrate,
+    the thread EthReceiver parses them. Whenever the EthReceiver decodes a ROP, there are three possible scenarios. 
+    1. The ROP is a say<ID, VALUE> in reply to a blocking request. Its reception unblocks the waiting thread.
+    2. The ROP is a sig<ID, VALUE> of particular IDs related to diagnostics. Its reception triggers a print of the received info.
+    3. The ROP is any other sig<ID, VALUE>. Its reception just cause that the VALUE is written in a shared RAM area which can be 
+       periodically read by wrappers. It is in here, for instance that the status of joints or the STRAIN/SKIN values are stored.      
+         
+    
+    7. How to change communication parameters
+    
+    One can change these parameters:
+    - PC104::PC104TXrate,
+    - PC104::PC104RXrate,
+    - ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate
+    
+    It is recommended to keep PC104::PC104TXrate = 1, so that the ROPs are sent to the ETH boards as quickly as possible.
+    
+    It is recommended to keep the value of PC104::PC104RXrate as low as possible to guaranteed a small round trip delay in blocking requests to the
+    ETH boards. However, a small value forces extra scheduling of this RT thread which may be not good for old PC104 CPUs.
+    In most cases a value = 5 is acceptable.
+            
+    It is recommended to keep ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate at a value >= 5, so that the EthReceiver does not decode too
+    many regular ROPs. However, the value must not be too high. The rule is: if MinPeriodOfWrappers is the minimum value of the periods of the wrappers
+    for that ETH board, then: (ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate + PC104::PC104RXrate) <= MinPeriodOfWrappers
+    The exception is for ETH boards with SKIN, where it is required a value of 3 to allow the UDP packet to consume all the CAN frames emitted by MTB 
+    boards.
+
+    Finally, here is a rule to define the Round Trip Delay, which is the time a thread must wait before a request to an ETH board is received and parsed 
+    and it depends mainly on PC104 parameters: 
+        RTD = PC104::PC104TXrate + PC104::PC104RXrate + 2 [ms]
+        where 2 is upper limit of sum of times inside ETH board (1 ms) and in the downlink channel (60 microsec) and uplink channel (237 microsec) 
+        as discussed in previous sections.         
+    
+
+
+    ---------------------------------------------------------------------------------------------------------------------------------------------------   
+    Appendix.
+
+    A1. Analysis of transmit times
+    
+    A1.1 Downlink transmission
+    
+    In case of downlink transmission from PC104 towards any IP address the speed of delivery is quite high because the
+    full duplex mechanism makes the route always free being the PC104 the only sender. We can consider the time of crossing 
+    a 100 mbps channel plus the delays of crossing the switches. At 100mbps 1 byte is transferred in 80 ns, hence a ETH frame
+    of N_bytes = 100 bytes (which is able to carry 4 ROPs) is transmitted in 8 microsec. The switch delay T_switch can be computed as the 
+    time to receive the first 14 bytes of the ETH frame: 1.12 microseconds. Hence, the time to deliver a small packet to the 20-th 
+    node is about 30 microseconds.
+    
+    - DL_time            = (N_bytes * 80) + i * T_switch [nanosec]
+    
+    
+    A1.2 Uplink transmission
+    
+    In case of uplink transmission from an ETH board to the PC104, one must consider the fact that all the boards transmit 
+    regularly thus one frame can find the route busy.
+    It is difficult to compute an estimate of the time it is needed because: boards may have different tx periods, they 
+    surely are not synchronised (well, that is a statistical advantage), they may have small UDP packets in between
+    periodic transmissions.
+
+    We can surely compute best and worst cases. After we can attempt to compute the average.
+    
+    Best case is when one finds the channel completely free. 
+    
+    - UL_besttime       = (N_bytes * 80) + i * T_switch [nanosec] 
+    
+    For N_bytes = 500 bytes, the i-th node needs 40 microsec + i*1.12 microsec.
+    Hence, for 20-th board, UL_besttime = 60 microsecs.    
+    
+    The very worst case is when the network is made busy in such a perverse way that whenever the packet enters a switch it 
+    always loses against its other competitor. In this case, the packet must be fully buffered, where T_buffering = N_bytes * 80, before it can be
+    retrieved by the route scheduler and transmitted. In this case we dont add the T_switch = 1.12 microseconds. 
+    
+    - UL_worsttime       = (N_bytes * 80) + i * T_buffering =  (i+1) * (N_bytes * 80) [nanosec] 
+    
+    The very worst case for 20-th node and a ETH packet of 500 bytes is UL_worsttime = 840 microsec.
+    
+    However, the average case is likely to be much better than this. In fact, the boards emit in a very regular way (typically every 5 ms) 
+    but their emission time is uniformly distributed. Reasons are: the period is counted by a precide HW timer, but the start of this timer
+    is different for each board as it depends on an activation done by a UPD packet being sent by the Linux IP stack separately to each board .
+    Moreover, each board has an internal clock which has started with small jitters because of different power-on times. Best hypothesys is
+    the every regular emission is shifted by a random constant jitter.     
+    
+    So, what is the probability that a packet finds busy the destination port? The probability that two windows of (N_bytes * 80) ns collide
+    in a time of ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate ms is 
+    
+    - P_busy = (N_bytes * 80) / (1000000*ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate) 
+    - P_free = 1 - P_busy.    
+    - UL_averagetime = (N_bytes * 80) + i * (P_free * T_switch + P_busy * T_buffering) = 
+                     = (N_bytes * 80) + i * ((1-P_busy) * T_switch + P_busy * (N_bytes * 80))
+                     
+    In case of P_busy = 0, UL_averagetime = (N_bytes * 80) + i * T_switch = UL_besttime !!!
+    In case of P_busy = 1, UL_averagetime = (N_bytes * 80) + i * (N_bytes * 80) = UL_worsttime !!!
+    
+    For our typicla case of transmission every 5 ms of ETH frames of 500 bytes, we have P_busy = 0.008, P_free = 0.992, and:
+    
+    UL_typical_averagetime = 40 + i * (0.992*1.12 + 0.008*40) = 40 + i * 1.43104 [us]
+
+    This value is 68.62 us for the 20-th board.
+          
+ 
+    If we transmit 500 bytes every 1 ms we have P_busy = 0.04 and P_free = 0.96 and we have medium_time_i = 40 + i * 2.6752
+    which for 20 nodes is 93.5 microsec.
+    
+    If we use 1500 (the maximum) every 1 ms we have: 120 + i * 5.8752 [us] which for the 20-th board is 237 microsec.
+    
+    
+  -->
+  
