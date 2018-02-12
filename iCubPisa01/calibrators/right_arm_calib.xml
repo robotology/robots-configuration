@@ -1,0 +1,69 @@
+ 
+<?xml version="1.0" encoding="UTF-8" ?>    
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+<devices robot="iCubPisa01" build="1">      
+    <device name="right_arm_calibrator" type="parametricCalibrator">   
+<params file="general.xml" />              
+        <group name="GENERAL">             
+            <param name="joints"> 4 </param>             
+            <param name="deviceName"> Right_Arm_Calibrator </param>    
+        </group>             
+ 
+<group name="CALIBRATION">   
+ 
+<param name="calibrationType">	3	3	3	3		</param>
+<param name="calibration1">   	1706.25	853.13	2795.32	2559.38	</param>
+<param name="calibration2">    	10.00	10.00	10.00	10.00		</param>
+<param name="calibration3">      	2462.50	2467.13	2931.50	3622.50	</param>
+
+<param name="startupPosition">               -30           30            0             45                        </param>       
+<param name="startupVelocity">               10            10            10            10                     </param>       
+<param name="startupMaxPwm">                     120           120           120           120                     </param>       
+<param name="startupPosThreshold">           2             2             2             2                        </param>       
+</group>       
+ 
+<group name="HOME">          
+<param name="positionHome"> -30           30            0             45                    </param>       
+<param name="velocityHome"> 10            10            10            10                      </param>       
+</group>       
+ 
+       <param name="CALIB_ORDER">(0 1 2 3)</param>         
+               
+        <action phase="startup" level="10" type="calibrate">           
+            <param name="target">right_arm_mc</param>    
+        </action>            
+ 
+        <action phase="interrupt1" level="1" type="park">              
+            <param name="target">right_arm_mc</param>    
+        </action>            
+ 
+        <action phase="interrupt3" level="1" type="abort" />           
+ 
+    </device>  
+</devices>     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

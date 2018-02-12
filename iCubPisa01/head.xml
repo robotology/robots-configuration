@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+<robot name="iCubPisa01" portprefix="icub">
+
+   
+    <devices file="wrappers/motorControl/head_mc_wrapper.xml" />
+    <devices file="hardware/motorControl/icub_head.xml" />
+
+    <!-- CALIBRATORS -->
+    <devices file="calibrators/head_calib.xml" /> 
+</robot> 
+
