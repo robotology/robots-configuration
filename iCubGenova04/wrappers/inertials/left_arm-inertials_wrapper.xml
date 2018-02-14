@@ -2,11 +2,11 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 <devices robot="iCubGenova04" build="1">
-    <device name="left_arm-inertials_wrapper" type="analogServer">
+    <device name="left_arm-eb24-inertials_wrapper" type="analogServer">
         <param name="period">       10                  </param>
         <param name="name">     /icub/left_hand/inertialMTB                </param>
 
-        
+
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <!-- The name of the element can be any string (we use SetOfInertials to better express its nature).

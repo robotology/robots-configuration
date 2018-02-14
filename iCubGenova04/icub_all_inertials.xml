@@ -70,8 +70,10 @@
     <devices file="hardware/inertials/left_leg-eb10-inertials.xml" />
     <devices file="wrappers/inertials/right_leg-inertials_wrapper.xml" />
     <devices file="hardware/inertials/right_leg-eb11-inertials.xml" />
-    <devices file="wrappers/inertials/torso-inertial_wrapper.xml" />
+
+    <devices file="wrappers/inertials/torso-inertials_wrapper.xml" />
     <devices file="hardware/inertials/torso-eb22-inertials.xml" />
+    <devices file="hardware/inertials/torso-eb5-inertials.xml" />
 
 
     <!-- ANALOG SENSOR FT -->
