@@ -3,7 +3,7 @@
 
 <devices robot="iCubGenova04" build="1">
 
-    <device name="torso_inertialMTB" type="embObjInertials">
+    <device name="torso-eb22-inertials" type="embObjInertials">
 
         <params file="general.xml" />
 

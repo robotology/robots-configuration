@@ -1,5 +1,8 @@
 # Build products
 /build*/
 
+# System hidden files
+.DS_Store
+
 # Linux temp files
 *~
