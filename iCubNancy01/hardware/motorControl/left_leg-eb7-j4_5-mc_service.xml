@@ -40,7 +40,7 @@
                     <param name="port">             CONN:P6             CONN:P7             </param>
                     <param name="position">         eomc_pos_atjoint    atjoint             </param> 
                 <param name="resolution">          -4096                4096                </param>
-                    <param name="numofnoisebits">      3                 3                  </param> 
+                    <param name="tolerance">        0.703                 0.703                  </param> 
                 </group>        
                 
                 <group name="ENCODER2">
@@ -48,7 +48,7 @@
                     <param name="port">             CAN1:1:0            CAN1:2:0      </param>
                     <param name="position">         atmotor             atmotor       </param>
                     <param name="resolution">       -14400              -14400        </param>
-                    <param name="numofnoisebits">      0                0             </param>  
+                    <param name="tolerance">          0                0             </param>  
                 </group>        
  
             </group>    
