@@ -3,11 +3,11 @@
 
 <devices robot="iCubGenova04" build="1">
 
-    <device name="torso-eb5-inertials" type="embObjInertials">
+    <device name="torso-eb24-inertials" type="embObjInertials">
 
         <params file="general.xml" />
 
-        <params file="hardware/electronics/torso-eb5-j0_2-eln.xml" />
+        <params file="hardware/electronics/left_arm-eb24-j4_7-eln.xml" />
 
         <group name="SERVICE">
 
@@ -30,7 +30,7 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       on_ems10_gyros
+                    <param name="id">       on_ems2_gyros
                     </param>
 
                     <param name="type">     eoas_gyros_st_l3g4200d
@@ -44,7 +44,7 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50              </param>
-                <param name="enabledSensors">       on_ems10_gyros  </param>
+                <param name="enabledSensors">       on_ems2_gyros  </param>
             </group>
 
         </group>

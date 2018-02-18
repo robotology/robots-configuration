@@ -17,15 +17,60 @@
         <action phase="shutdown" level="5" type="detach" />
     </device>
 
-    <device name="torso-eb5-inertials_wrapper" type="analogServer">
+    <device name="torso-eb1-inertials_wrapper" type="analogServer">
         <param name="period">       10                              </param>
-        <param name="name">         /icub/torso/inertialEMS5        </param>
+        <param name="name">         /icub/torso/inertialEMS1        </param>
 
 
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <!-- The param value must match the device name in the corresponding emsX file -->
-                <elem name="SetOfInertials">  torso-eb5-inertials </elem>
+                <elem name="SetOfInertials">  torso-eb1-inertials </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
+    <device name="torso-eb24-inertials_wrapper" type="analogServer">
+        <param name="period">       10                              </param>
+        <param name="name">         /icub/torso/inertialEMS2        </param>
+
+
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+                <!-- The param value must match the device name in the corresponding emsX file -->
+                <elem name="SetOfInertials">  torso-eb24-inertials </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
+    <device name="torso-eb3-inertials_wrapper" type="analogServer">
+        <param name="period">       10                              </param>
+        <param name="name">         /icub/torso/inertialEMS3        </param>
+
+
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+                <!-- The param value must match the device name in the corresponding emsX file -->
+                <elem name="SetOfInertials">  torso-eb3-inertials </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
+    <device name="torso-eb27-inertials_wrapper" type="analogServer">
+        <param name="period">       10                              </param>
+        <param name="name">         /icub/torso/inertialEMS4        </param>
+
+
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+                <!-- The param value must match the device name in the corresponding emsX file -->
+                <elem name="SetOfInertials">  torso-eb27-inertials </elem>
             </paramlist>
         </action>
 
