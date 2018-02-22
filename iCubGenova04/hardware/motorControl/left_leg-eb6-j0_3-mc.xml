@@ -71,7 +71,7 @@
     <group name="TRQ_PID_DEFAULT">
         <param name="controlLaw">    Pid_inTrq_outPwm                         </param>
         <param name="controlUnits">  metric_units                             </param>
-        <param name="trq_kp">            -50        100          0       -100     </param>      <!--   -200        200       0       -200    -->
+        <param name="trq_kp">            -150        150          0       -150     </param>      <!--   -200        200       0       -200    -->
         <param name="trq_kd">              0          0          0          0     </param>
         <param name="trq_ki">              0          0          0          0     </param>
         <param name="trq_maxOutput">    8000       8000       8000       8000     </param>
