@@ -15,22 +15,21 @@
 	<param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00     10.00       </param>
 </group>
 
-
-
 <group name="CALIBRATION">
-	<param name="calibrationType">                    3            3        3          3         3       3         </param>
-	<param name="calibration1">	                  32768	       32768	32768	   32768     32768   32768     </param> 
-	<param name="calibration2">	                  10	       10	10	   10	     10	     10	       </param> 
-	<param name="calibration3">	                  33919	       36559	47119	   31695     5215    15855	</param> 
-	<param name="calibration4">                       0            0        0          0         0       0        </param>
-	<param name="calibration5">                       0            0        0          0         0       0        </param>
-	<param name="calibrationZero">                    180          180      180       -180      -180     180      </param>
-	<param name="calibrationDelta">                   0            0        0          0         0       0        </param>
+<param name="calibrationType">           12        12         12        12      12      12        </param>
+<param name="calibration1">              1151      3791       14351     64463   37983   48623     </param> 
+<param name="calibration2">              0         0          0         0       0       0         </param> 
+<param name="calibration3">              0         0          0         0       0       0         </param> 
+                                                               
+<param name="calibration4">              0         0          0         0       0       0         </param>
+<param name="calibration5">              0         0          0         0       0       0         </param>
+<param name="calibrationZero">           0         0          0         0       0       0         </param>
+<param name="calibrationDelta">          0         0          0         0       0       0         </param>
 
-	<param name="startupPosition">                    0            10       0          0         0       0        </param>
-	<param name="startupVelocity">                    10           10       10         10        10      10       </param>
-	<param name="startupMaxPwm">                      1200         1700     1200       1200      1200    1200     </param>
-	<param name="startupPosThreshold">                2            2        2          2         2       2        </param>
+<param name="startupPosition">           0         0          0         0       0       0         </param>
+<param name="startupVelocity">           10        10         10        10      10      10        </param>
+<param name="startupMaxPwm">             1200      1200       1200      1200    1200    1200      </param>
+<param name="startupPosThreshold">       2         2          2         2       2       2         </param>
 </group>
 
 	        <param name="CALIB_ORDER"> (0 1 2 3 4 5) </param>
