@@ -5,7 +5,7 @@
     <group name="GENERAL">
         <param name="MotioncontrolVersion">  4 </param>
         <param name="Joints"> 3 </param> 
-        <param name="AxisMap">               2             0                 1              </param>   
+        <param name="AxisMap">               0             1                 2              </param>   
         <param name="AxisName">         "torso_yaw"    "torso_roll"    "torso_pitch"        </param>
         <param name="AxisType">         "revolute"     "revolute"      "revolute"           </param>
         <param name="Encoder">            182.044         182.044         182.044           </param>
@@ -26,29 +26,30 @@
     </group>
 
     <group name="2FOC">
+        <param name="AutoCalibration">       0             0             0           </param>
         <param name="HasHallSensor">         0             0             0           </param>
         <param name="HasTempSensor">         0             0             0           </param>
         <param name="HasRotorEncoder">       1             1             1           </param>
         <param name="HasRotorEncoderIndex">  1             1             1           </param>
         <param name="HasSpeedEncoder">       0             0             0           </param>
-        <param name="RotorIndexOffset">      0             48            33          </param>
+        <param name="RotorIndexOffset">      122           48            33          </param>
         <param name="MotorPoles">            8             8             8           </param>
    </group>
 
     <group name="COUPLINGS"> 
 
         <param name ="matrixJ2M"> 
-            0.500   -0.500    0.000    0.000
-            0.500    0.500    0.000    0.000
+            1.000    0.000    0.000    0.000
+            0.000    1.000    0.000    0.000
             0.000    0.000    1.000    0.000
             0.000    0.000    0.000    1.000   
         </param>
 
         <!-- alfa=22/80=0,275; 2*alfa= 0.55 -->
         <param name ="matrixM2J"> 
-            0.500    0.500    0.000    0.000
-           -0.500    0.500    0.000    0.000
-            0.275    0.275    0.550    0.000
+            1.000    0.000    0.000    0.000
+            0.000    1.000    0.000    0.000
+            0.000    0.000    1.000    0.000
             0.000    0.000    0.000    1.000   
         </param>
        
@@ -62,13 +63,26 @@
     </group>                
     
     <group name="JOINTSET_CFG"> 
-        <param name= "numberofsets"> 1 </param>
+        <param name= "numberofsets"> 3 </param>
         <group name="JOINTSET_0">
-            <param name="listofjoints">  0 1 2         </param>
+            <param name="listofjoints">  0             </param>
             <param name="constraint">    none          </param>
             <param name="param1">        0             </param>
             <param name="param2">        0             </param>
         </group> 
+        <group name="JOINTSET_1">
+            <param name="listofjoints">  1             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group>
+        <group name="JOINTSET_2">
+            <param name="listofjoints">  2             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group>
+
     </group>                     
  
 </params>
