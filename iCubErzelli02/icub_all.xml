@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-    <robot name="iCubErzelli02" portprefix="icub">
+    <robot name="iCubErzelli02" portprefix="icub" build="1">
     
     <params file="hardware/electronics/pc104.xml" />
+      
+    <!-- CARTESIANS --> 
+    <devices file="cartesian/left_arm-cartesian.xml" />
+    <devices file="cartesian/right_arm-cartesian.xml" /> 
     
     <!-- HEAD -->
     <devices file="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
@@ -36,8 +40,7 @@
     <!-- RIGHT LEG -->
     <devices file="hardware/motorControl/right_leg-eb8-j0_3-mc.xml" />
     <devices file="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
-    <devices file="wrappers/motorControl/right_leg-mc_wrapper.xml" />
-    
+    <devices file="wrappers/motorControl/right_leg-mc_wrapper.xml" />  
 
     <!-- INERTIAL SENSOR--> 
     <devices file="hardware/inertials/head-inertial.xml" /> 
@@ -88,9 +91,5 @@
     <devices file="calibrators/right_leg-calib.xml" />
     <devices file="calibrators/torso-calib.xml" />
     <devices file="calibrators/head-calib.xml" />
-   
-    <!-- CARTESIANS --> 
-    <devices file="cartesian/left_arm-cartesian.xml" />
-    <devices file="cartesian/right_arm-cartesian.xml" /> 
-    
-    </robot> 
+
+</robot> 
