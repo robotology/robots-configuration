@@ -7,7 +7,7 @@
 
         <params file="general.xml" />
 
-        <params file="hardware/electronics/left_arm-eb3-j0_3-eln.xml" />
+        <params file="hardware/electronics/right_arm-eb3-j0_3-eln.xml" />
 
         <group name="SERVICE">
 
