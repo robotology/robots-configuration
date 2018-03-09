@@ -5,6 +5,6 @@
  <device name="xsens_inertial" type="inertial">
       <param name="name">  /icub/xsens_inertial  </param>
       <param name="subdevice">  xsensmt  </param>
-      <param name="comport">  /dev/ttyXsens   </param>
+      <param name="serial">  /dev/ttyXsens   </param>
 </device>
 </devices>

@@ -3,11 +3,11 @@
 
 <devices robot="iCubGenova04" build="1">
 
-    <device name="torso-eb22-inertials" type="embObjInertials">
+    <device name="left_leg-eb7-inertials" type="embObjInertials">
 
         <params file="general.xml" />
 
-        <params file="hardware/electronics/face-eb22-j0_1-eln.xml" />
+        <params file="hardware/electronics/left_leg-eb7-j4_5-eln.xml" />
 
         <group name="SERVICE">
 
@@ -30,22 +30,21 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       chest_1_9B7             chest_2_9B8             chest_3_9B9             chest_4_9B10
+                    <param name="id">       on_ems7_gyros
                     </param>
 
-                    <param name="type">     eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                    <param name="type">     eoas_gyros_st_l3g4200d
                     </param>
 
-                    <param name="location"> CAN1:7                  CAN1:8                  CAN1:9                  CAN1:10
+                    <param name="location"> ETH:0
                     </param>
                 </group>
 
             </group>
 
             <group name="SETTINGS">
-                <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">      chest_1_9B7             chest_2_9B8             chest_3_9B9             chest_4_9B10
-                </param>
+                <param name="acquisitionRate">      50              </param>
+                <param name="enabledSensors">       on_ems7_gyros  </param>
             </group>
 
         </group>
