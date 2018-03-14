@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+<?xml version="1" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1//EN" "http://www.icub.org/DTD/robotInterfaceV1.dtd">
 
 <devices robot="iCubTwente01" build="1">
 	<device name="left_leg-calibrator" type="parametricCalibratorEth">
@@ -10,28 +10,29 @@
 		    <param name="deviceName"> Left_Leg_Calibrator </param>
 		</group>
 		
-<group name="HOME">
-<param name="positionHome">                       0.00           10.00       0.00         0.00        0.00      0.00        </param>
-<param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00     10.00       </param>
-</group>
+		<group name="HOME">
+		<param name="positionHome">                       0            10       0          0         0       0         </param>
+		<param name="velocityHome">                       10           10       10         10        10      10        </param>
+		</group>
 
 
 
-<group name="CALIBRATION">
-<param name="calibrationType">                    3              3          3            3           3         3           </param>
-<param name="calibration1">                       32767.9        32767.9    32767.9      32767.9     32767.9   32767.9     </param>
-<param name="calibration2">                       10.0           10.0       10.0         10.0        10.0      10.0        </param>
-<param name="calibration3">                       28943.1        40110.9    58286.9      53550.9     42574.9   39390.9     </param>
-<param name="calibration4">                       0.0            0.0        0.0          0.0         0.0       0.0         </param>
-<param name="calibration5">                       0.0            0.0        0.0          0.0         0.0       0.0         </param>
-<param name="calibrationZero">                    180.00         180.00     180.00       -180.00     -180.00   180.00      </param>
-<param name="calibrationDelta">                   -1.1           0.0       4.2          0.0        0.0      0.0         </param>
+		<group name="CALIBRATION">
+		<param name="calibrationType">           12        12         12        12      12      12        </param>
+		<param name="calibration1">              61503     7839       26287     20783   9755    6591      </param> 
+		<param name="calibration2">              0         0          0         0       0       0         </param> 
+		<param name="calibration3">              0         0          0         0       0       0         </param> 
+				                                                
+		<param name="calibration4">              0         0          0         0       0       0         </param>
+		<param name="calibration5">              0         0          0         0       0       0         </param>
+		<param name="calibrationZero">           0         0          0         0       0       0         </param>
+		<param name="calibrationDelta">          0         0          0         0       0       0         </param>
 
-<param name="startupPosition">                    0              0          0            0           0         0           </param>
-<param name="startupVelocity">                    10.0           10.0       10.0         10.0        10.0      10.0        </param>
-<param name="startupMaxPwm">                      1200           1200       1200         1200        1200      1200        </param>
-<param name="startupPosThreshold">                2              2          2            2           2         2           </param>
-</group>
+		<param name="startupPosition">           0         0          0         0       0       0         </param>
+		<param name="startupVelocity">           10        10         10        10      10      10        </param>
+		<param name="startupMaxPwm">             1200      1200       1200      1200    1200    1200      </param>
+		<param name="startupPosThreshold">       2         2          2         2       2       2         </param>
+		</group>
 
 		<param name="CALIB_ORDER"> (0 1 2 3 4 5) </param>
 
