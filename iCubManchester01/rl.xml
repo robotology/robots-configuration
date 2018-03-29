@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<robot name="iCubManchester01" portprefix="icub" build="1">
+
+ 
+    <!-- motor controllers wrappers -->
+    <devices file="wrappers/motorControl/right_leg_mc_wrapper.xml" /> 
+    <devices file="hardware/motorControl/icub_right_leg.xml" /> 
+    <devices file="calibrators/right_leg_calib.xml" /> 
+</robot> 
+
