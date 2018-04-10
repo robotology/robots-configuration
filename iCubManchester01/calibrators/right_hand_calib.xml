@@ -1,6 +1,6 @@
  
 <?xml version="1.0" encoding="UTF-8" ?>    
-<devices robot="iCubManchester01" build="1">      
+<devices>      
     <device name="right_hand_calibrator" type="parametricCalibrator">  
 <params file="general.xml" />              
         <group name="GENERAL">             
@@ -11,10 +11,10 @@
 <group name="CALIBRATION">   
  
 <param name="calibrationType">            3             4             4             4             4             4             4             4             </param>       
-<param name="calibration1">   	1397.00	235.00	18.00	215.00	25.00	250.00	58.00	684.00	</param>
+<param name="calibration1">   	1306.67	229.00	16.00	212.00	25.00	229.00	63.00	666.00	</param>
 <param name="calibration2">    	10.00	10.00	30.00	10.00	10.00	10.00	10.00	10.00	</param>
 <param name="calibration3">      	0.00	6000.00	8000.00	6000.00	-7400.00	6000.00	7400.00	21000.00	</param>
-      
+
 <param name="startupPosition">               30            3             0             0             0             0             0             0             </param>       
 <param name="startupVelocity">               100           100           100           100           100           100           100           100           </param>       
 <param name="startupMaxPwm">                     0             0             0             0             0             0             0             0             </param>       

@@ -35,9 +35,9 @@
 <param name="AxisType"> "revolute" "revolute" "revolute" "revolute" "revolute" "revolute" "revolute" "revolute" </param>
 <param name="fullscalePWM"> 800           800           800           800           1333          1333          1333          1333          </param>
 <param name="ampsToSensor"> 1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        </param> 
-<param name="Encoder">	11.375	11.375	11.375	11.375	706.67	978.46	978.46	3.3333333333	</param>
-<param name="Zeros">  	180	45	245.742180896	180	90	-20	-52	447	</param>
-  
+<param name="Encoder">	11.375	11.375	11.375	11.375	-706.67	978.46	978.46	3.16666666666667	</param>
+<param name="Zeros">  	180	45	245.742180896027	180	-74	-20	-52	519.473684210526	</param>
+
 <param name="TorqueId">     0x0C          0x0C          0x0C          0x0C          0x0C          0             0             0             </param>       
 <param name="TorqueChan">   0             1             2             3             4             0             0             0             </param>       
 <param name="TorqueMax">    8             8             8             8             2             2             2             2             </param>       
