@@ -10,6 +10,8 @@
         <param name="imuFrameName">imu_frame</param>
         <param name="publishOnROS">true</param>
 	<param name="forceTorqueEstimateConfidence">2</param>
+        <param name="useJointVelocity">true</param>
+        <param name="useJointAcceleration">false</param>
 
         <!-- map between iDynTree links (identified by a name)
              and skinDynLib links (identified by their frame name, a BodyPart enum
