@@ -37,10 +37,13 @@
     </module>
     <module>
 	<name>vizzy_iKinGazeCtrl</name>
-	<parameters>--from config_640X480_Sim.ini</parameters>
+	<parameters>--from config_640x480_Sim.ini</parameters>
 	<node>localhost</node>
     </module>
-
+    <module>
+	<name>gazeSimulationBridge</name>
+	<node>localhost</node>
+    </module>
     <module>
         <name>fixationPointStatusBridge</name>
         <node>localhost</node>
