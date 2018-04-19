@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+    <robot name="iCubGenova04" build="1" portprefix="icub">
+    
+    <params file="hardware/electronics/pc104.xml" />
+    
+   <!-- RIGHT LEG -->
+    <devices file="hardware/motorControl/right_leg-eb8-j0_3-mc.xml" />
+    <devices file="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
+    <devices file="wrappers/motorControl/right_leg-mc_wrapper.xml" />
+    
+ <!--inertials3-->
+    <devices file="hardware/inertials/right_leg-eb9-IMU.xml" /> 
+    
+    <devices file="wrappers/inertials/right_leg-imu_wrapper.xml" /> 
+    
+
+   
+    <!--  CALIBRATORS -->
+   <devices file="calibrators/right_leg-calib.xml" />
+    
+    </robot>
+
