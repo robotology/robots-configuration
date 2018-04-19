@@ -10,6 +10,8 @@
         <param name="imuFrameName">imu_frame</param>
         <param name="publishOnROS">true</param>
 	<param name="forceTorqueEstimateConfidence">2</param>
+        <param name="useJointVelocity">true</param>
+        <param name="useJointAcceleration">false</param>
 
         <!-- map between iDynTree links (identified by a name)
              and skinDynLib links (identified by their frame name, a BodyPart enum
@@ -38,30 +40,32 @@
             <param name="gravityCompensationAxesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch,neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         </group>
        
-       <group name="FT_SECONDARY_CALIBRATION">
-           <param name="l_leg_ft_sensor"> (1,-1.734723e-18,3.390547e-18,2.051069e-16,1.237116e-16,9.136666e-18
-             ,9.932961e-02,6.372591e-01,-1.431937e-02,8.471043e-01,-7.497969e-01,5.360434e+00
-             ,0,0,1,0,0,0
-             ,-1.224569e-18,1.734723e-18,-1.655824e-18,1.000000e+00,-1.340941e-16,-1.158126e-17
-             ,3.402369e-19,-1.409463e-18,0,5.530452e-17,1,9.265006e-17
-             ,0,0,0,0,0,1)</param>
+        <group name="FT_SECONDARY_CALIBRATION">
+            <param name="l_leg_ft_sensor">
+                 (6.079236e-01,2.967437e-02,-5.478893e-02,4.638877e-01,1.067088e+00,3.497801e-02 
+                  ,1.112398e-01,5.500845e-01,1.302811e-02,-1.245697e-01,-5.250743e-01,4.396532e+00 
+                  ,6.255357e-03,-1.505020e-03,9.738926e-01,3.961398e-01,3.902908e-01,4.579145e-01 
+                  ,-8.647321e-03,-2.836473e-02,-1.840247e-04,8.261000e-01,4.659817e-02,3.751658e-02 
+                  ,-1.901417e-18,1.661923e-18,-3.564856e-18,-1.844789e-16,1.000000e+00,3.705321e-18 
+                  ,0.0,0.0,0.0,0.0,0.0,1.0)</param> 
 
-          <!--<param name="r_leg_ft_sensor"> (1.165043e-01,-4.824760e-02,-2.838516e-03,-4.063452e-01,3.829723e+00,-4.049686e+00 
-           ,-1.646781e-02,1.028508e-01,1.218741e-03,-3.860480e+00,6.586313e-02,1.079024e-01 
-           ,-1.223875e-01,-1.720457e-01,9.950911e-01,-1.332774e+00,4.882303e-01,1.109860e+00 
-           ,-2.690149e-03,-1.097413e-02,1.942506e-03,9.459466e-01,2.006043e-02,4.074997e-02 
-           ,1.949960e-02,-1.769210e-02,-3.291195e-03,-1.505223e-01,8.921250e-01,-1.064398e-01 
-           ,9.882410e-03,5.137381e-03,-5.774219e-05,4.049618e-04,-4.992196e-02,9.255909e-01)</param>-->
-       </group>
+            <param name="r_leg_ft_sensor">
+                  (6.182729e-01,-7.517110e-02,-4.206069e-02,-6.894176e-01,1.196391e+00,-2.444093e-01 
+                   ,1.674170e-01,6.611260e-01,-1.565839e-03,-1.105249e-01,-6.616288e-01,7.498256e-01 
+                   ,8.854899e-03,1.337852e-02,9.970182e-01,-6.809221e-01,5.098147e-01,-4.057021e-01 
+                   ,3.127489e-03,-1.180096e-02,1.690016e-04,8.666081e-01,2.382600e-02,-6.542111e-02 
+                   ,-1.245428e-19,1.921199e-18,-2.013402e-18,-1.928427e-16,1,1.655828e-18 
+                   ,0.0,0.0,0.0,0.0,0.0,1.0)</param> 
+         </group>
 
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
 	    <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand,l_hand_dh_frame,root_link)</param>
             <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand,r_hand_dh_frame,root_link)</param>
-            <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_foot,l_sole,root_link)</param>
+            <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param>
             <param name="/wholeBodyDynamics/left_foot/cartesianEndEffectorWrench:o">(l_foot,l_sole,l_sole)</param>
-            <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_ankle_2,r_sole,root_link)</param>
-            <param name="/wholeBodyDynamics/right_foot/cartesianEndEffectorWrench:o">(r_ankle_2,r_sole,l_sole)</param>
+            <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param>
+            <param name="/wholeBodyDynamics/right_foot/cartesianEndEffectorWrench:o">(r_foot,r_sole,r_sole)</param>
         </group>
 
         <action phase="startup" level="15" type="attach">
