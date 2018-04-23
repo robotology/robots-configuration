@@ -17,7 +17,7 @@
                 <param name="type">                 foc         </param> 
                 <group name="PROTOCOL">
                     <param name="major">            1           </param>    
-                    <param name="minor">            5           </param>     
+                    <param name="minor">            6           </param>     
                 </group>                    
                 <group name="FIRMWARE">
                     <param name="major">            0           </param>    
