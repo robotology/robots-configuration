@@ -34,23 +34,25 @@
     </group>
 
     <group name="POS_PID_DEFAULT">
-  	    <param name="controlLaw">    Pid_inPos_outPwm </param>
-          <param name="controlUnits">  metric_units                     </param>
-          <param name="pos_kp">           -2105.00     -2310.00         </param>
-          <param name="pos_kd">               0.00         0.00         </param>
-          <param name="pos_ki">              -0.09        -0.09         </param>
-          <param name="pos_maxOutput">     8000         8000            </param>
-          <param name="pos_maxInt">         750          750            </param>
-          <param name="pos_shift">            0            0            </param>
-          <param name="pos_ko">               0            0            </param>
-          <param name="pos_stictionUp">       0            0            </param>
-          <param name="pos_stictionDwn">      0            0            </param>
-          <param name="pos_kff">              0            0            </param>
-      </group>
+        <param name="controlLaw">    Pid_inPos_outPwm                 </param>
+        <param name="fbkControlUnits">     metric_units               </param>
+        <param name="outputControlUnits">  machine_units              </param>
+        <param name="pos_kp">           -2105.00     -2310.00         </param>
+        <param name="pos_kd">               0.00         0.00         </param>
+        <param name="pos_ki">              -0.09        -0.09         </param>
+        <param name="pos_maxOutput">     8000         8000            </param>
+        <param name="pos_maxInt">         750          750            </param>
+        <param name="pos_shift">            0            0            </param>
+        <param name="pos_ko">               0            0            </param>
+        <param name="pos_stictionUp">       0            0            </param>
+        <param name="pos_stictionDwn">      0            0            </param>
+        <param name="pos_kff">              0            0            </param>
+    </group>
 
-	<group name="POS_PID_CUSTOM">
-	    <param name="controlLaw">    Pid_inPos_outPwm </param>
-        <param name="controlUnits">  metric_units                     </param>
+    <group name="POS_PID_CUSTOM">
+        <param name="controlLaw">    Pid_inPos_outPwm                 </param>
+        <param name="fbkControlUnits">     metric_units               </param>
+        <param name="outputControlUnits">  machine_units              </param>
         <param name="pos_kp">           -3105.00     -2310.00         </param>
         <param name="pos_kd">            -100.00      -100.00         </param>
         <param name="pos_ki">              -0.09        -0.09         </param>
