@@ -20,8 +20,8 @@
 
     
     <group name="LIMITS">       
-        <param name="hardwareJntPosMin">         Max hardware position of joint [expressed in degrees]. Due to mechanical constraints                     </param>  
-        <param name="hardwareJntPosMax">         Min hardware position of joint [expressed in degrees].  Due to mechanical constraints                    </param>
+        <param name="hardwareJntPosMin">         Max hardware position of joint [expressed in degrees]. Due to mechanical constraints. See https://wiki.icub.org/wiki/ICub_joints_limits for more details </param>  
+        <param name="hardwareJntPosMax">         Min hardware position of joint [expressed in degrees]. Due to mechanical constraints. See https://wiki.icub.org/wiki/ICub_joints_limits for more details </param>
         <param name="rotorPosMin">               Min position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param> 
         <param name="rotorPosMax">               Max position of rotor [expressed in degrees].  NOTE: if both limits of rotor have value 0, then no check of rotor limits is performed.   </param>
     </group>
