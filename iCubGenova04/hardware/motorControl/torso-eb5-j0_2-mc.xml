@@ -52,12 +52,12 @@
     <group name="TRQ_PID_DEFAULT">
      <param name="controlLaw">    Pid_inTrq_outPwm               </param>
      <param name="fbkControlUnits">  metric_units                </param>
-     <param name="outputControlUnits">  dutycycle_percent        </param> 
+     <param name="outputControlUnits">  dutycycle_percent        </param>
      <param name="trq_kp">          -1.41      -1.25      -1.25  </param>
      <param name="trq_kd">              0          0          0  </param>
      <param name="trq_ki">              0          0          0  </param>
-     <param name="trq_maxOutput">    8000       8000       8000  </param>
-     <param name="trq_maxInt">        500        500        500  </param>
+     <param name="trq_maxOutput">      25         25         25  </param>
+     <param name="trq_maxInt">       1.56       1.56       1.56  </param>
      <param name="trq_shift">           0          0          0  </param>
      <param name="trq_ko">              0          0          0  </param>
      <param name="trq_stictionUp">      0          0          0  </param>
@@ -68,15 +68,15 @@
      <param name="trq_ktau">        -0.63      -0.63      -0.63  </param>
  </group>
 
-	 <group name="TRQ_PID_CUSTOM">
+    <group name="TRQ_PID_CUSTOM">
         <param name="controlLaw">    Pid_inTrq_outPwm                </param>
         <param name="fbkControlUnits">  metric_units                 </param>
-     <param name="outputControlUnits">  dutycycle_percent            </param>
+        <param name="outputControlUnits">  dutycycle_percent         </param>
         <param name="trq_kp">          -0.31      -0.31      -0.31   </param>
         <param name="trq_kd">              0          0          0   </param>
         <param name="trq_ki">              0          0          0   </param>
-        <param name="trq_maxOutput">    8000       8000       8000   </param>
-        <param name="trq_maxInt">        500        500        500   </param>
+        <param name="trq_maxOutput">      25         25         25   </param>
+        <param name="trq_maxInt">       1.56       1.56       1.56   </param>
         <param name="trq_shift">           0          0          0   </param>
         <param name="trq_ko">              0          0          0   </param>
         <param name="trq_stictionUp">      0          0          0   </param>
@@ -90,12 +90,12 @@
     <group name="TRQ_PID_NO_FRICTION">
         <param name="controlLaw">    Pid_inTrq_outPwm                </param>
         <param name="fbkControlUnits">  metric_units                 </param>
-     <param name="outputControlUnits">  dutycycle_percent            </param>
+        <param name="outputControlUnits">  dutycycle_percent         </param>
         <param name="trq_kp">              0          0          0   </param>
         <param name="trq_kd">              0          0          0   </param>
         <param name="trq_ki">              0          0          0   </param>
-        <param name="trq_maxOutput">    8000       8000       8000   </param>
-        <param name="trq_maxInt">        500        500        500   </param>
+        <param name="trq_maxOutput">      25         25         25   </param>
+        <param name="trq_maxInt">       1.56       1.56       1.56   </param>
         <param name="trq_shift">           0          0          0   </param>
         <param name="trq_ko">              0          0          0   </param>
         <param name="trq_stictionUp">      0          0          0   </param>
