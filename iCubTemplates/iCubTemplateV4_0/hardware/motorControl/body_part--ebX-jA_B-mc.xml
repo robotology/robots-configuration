@@ -12,8 +12,8 @@
     <params file="hardware/motorControl/body_part-ebX-jA_B-mc_service.xml" /> 
 
     <group name="LIMITS">
-        <param name="jntPosMax">     Max position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMax. </param>  
-        <param name="jntPosMin">     Min position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMin. </param>
+        <param name="jntPosMax">     Max position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMax. See https://wiki.icub.org/wiki/ICub_joints_limits for more details</param>  
+        <param name="jntPosMin">     Min position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMin. See https://wiki.icub.org/wiki/ICub_joints_limits for more details</param>
         <param name="jntVelMax">     Max velocity of joint [expressed in degrees/second].</param>
         <param name="motorNominalCurrents">     It is the current which can be kept for an indefinite amount of time without damaging the motor. The 2FOC uses any value beyond
                                                 this threshold in the computation of i2T. It is expressed in [mA]. In datasheet it is found under the name "continuous stall current".     
