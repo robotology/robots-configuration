@@ -30,16 +30,16 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       acc1 gyr1             
+                    <param name="id">       acc1          gyr1          eul1          mag1           st1
                     </param>
 
-                    <param name="type">     eoas_imu_acc  eoas_imu_gyr           
+                    <param name="type">     eoas_imu_acc  eoas_imu_gyr  eoas_imu_eul  eoas_imu_mag   eoas_imu_status          
                     </param>
-                    <param name="boardType">    strain2  strain2           
+                    <param name="boardType"> strain2       strain2      strain2       strain2        strain2  
                     </param>
 
 
-                    <param name="location">  CAN2:13   CAN2:13            
+                    <param name="location">  CAN2:13       CAN2:13      CAN2:13       CAN2:13        CAN2:13
                     </param>            
                 </group>
                                             
@@ -47,7 +47,7 @@
             
             <group name="SETTINGS"> 
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">   acc1 gyr1     </param>                
+                <param name="enabledSensors">   acc1 gyr1  eul1 mag1 st1   </param>                
             </group>
             
         </group>        
