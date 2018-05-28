@@ -11,7 +11,7 @@
 <group name="CALIBRATION">   
  
 <param name="calibrationType">            3             4             4             4             4             4             4             4             </param>       
-<param name="calibration1">   	1306.67	229.00	16.00	212.00	25.00	229.00	63.00	666.00	</param>
+<param name="calibration1">   	1185.67	202.00	18.00	215.00	18.00	242.00	60.00	665.00	</param>
 <param name="calibration2">    	10.00	10.00	30.00	10.00	10.00	10.00	10.00	10.00	</param>
 <param name="calibration3">      	0.00	6000.00	8000.00	6000.00	-7400.00	6000.00	7400.00	21000.00	</param>
 

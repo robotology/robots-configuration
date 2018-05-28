@@ -11,9 +11,9 @@
 <group name="CALIBRATION">   
  
 <param name="calibrationType">            3             3             3             3             0             2             2             3             </param>       
-<param name="calibration1">   	2388.75	3241.875	-275.932692307692	1535.625	500	750	750	2030	</param>
+<param name="calibration1">   	2388.75	3241.875	-275.9326923077	1535.625	500	750	750	2015	</param>
 <param name="calibration2">    	10	10	10	10	20	-10	-10	100	</param>
-<param name="calibration3">      	2449.5	2196.875	318.5	1174.5	0	0	0	0	</param>
+<param name="calibration3">      	2955.5	637.875	3737.5	1248.5	0	0	0	0	</param>
 
 <param name="startupPosition">               -30           30            0             45            0             0             0             15            </param>       
 <param name="startupVelocity">               10            10            10            10            30            30            30            100           </param>       

@@ -13,7 +13,7 @@
 <param name="calibrationType">            3             3             3             3             3             3             </param>       
 <param name="calibration1">   	2047.5	2047.5	2047.5	2047.5	2047.5	2047.5	</param>
 <param name="calibration2">    	10	10	10	10	10	10	</param>
-<param name="calibration3">      	2458.5	1510.5	3480.5	1770.5	1066.5	3313.5	</param>
+<param name="calibration3">      	2461.5	1445.5	3540.5	1754.5	1032.5	3264.5	</param>
 
       
 <param name="startupPosition">               0             0             0             0             0             0             </param>       
