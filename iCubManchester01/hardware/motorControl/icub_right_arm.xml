@@ -36,7 +36,7 @@
 <param name="fullscalePWM"> 800           800           800           800           1333          1333          1333          1333          </param>
 <param name="ampsToSensor"> 1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        1000.0        </param> 
 <param name="Encoder">	11.375	11.375	11.375	11.375	-706.67	978.46	978.46	3.85	</param>
-<param name="Zeros">  	180	45	245.742180896	180	-74	-20	-52	419.7402597403	</param>
+<param name="Zeros">  	183	32	237.742180896	177	-86	-11	-44	419.7402597403	</param>
 
 <param name="TorqueId">     0x0C          0x0C          0x0C          0x0C          0x0C          0             0             0             </param>       
 <param name="TorqueChan">   0             1             2             3             4             0             0             0             </param>       
@@ -58,7 +58,7 @@
 <group name="LIMITS">        
 <param name="jntPosMin">          -95.5         0             -30           15            -90           -80           -20           0             </param>       
 <param name="jntPosMax">          10            161           75            106           90            15            25            60            </param>       
-<param name="motorOverloadCurrents">     7000          7000          7000          7000          500           800           800           800           </param>       
+<param name="motorOverloadCurrents">     7000          7000          7000          7000          800           800           800           800           </param>       
 <param name="motorPwmLimit">             1333          1333          1333          1333         1333          1333          1333          1333    </param>
 </group>       
  

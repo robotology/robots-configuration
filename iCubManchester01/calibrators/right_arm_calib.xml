@@ -13,7 +13,7 @@
 <param name="calibrationType">            3             3             3             3             0             2             2             3             </param>       
 <param name="calibration1">   	1706.25	853.13	2795.32	2559.38	500.00	750.00	750.00	1616.00	</param>
 <param name="calibration2">    	10.00	10.00	10.00	10.00	-20.00	10.00	10.00	100.00	</param>
-<param name="calibration3">      	3784.50	17.13	3029.00	3639.50	0.00	0.00	0.00	0.00	</param>
+<param name="calibration3">      	3809.50	7.13	2955.88	3727.50	0.00	0.00	0.00	0.00	</param>
 
 <param name="startupPosition">               -30           30            0             45            0             0             0             15            </param>       
 <param name="startupVelocity">               10            10            10            10            30            10            10            100           </param>       

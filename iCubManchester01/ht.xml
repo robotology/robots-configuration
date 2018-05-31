@@ -10,7 +10,5 @@
     
    
     <!-- CALIBRATORS -->
-    <devices file="calibrators/head_calib.xml" /> 
-    <devices file="calibrators/torso_calib.xml" />
 </robot> 
 
