@@ -8,8 +8,8 @@
         <param name="device">       skinWrapper             </param>
         
         <paramlist name="ports">
-         <elem name="left_hand">   0 383   0 383</elem>  <!-- 2 boards CANBUS1 ID 1,2 -->
-          <elem name="head">  384  767   0 383</elem> <!-- 2 boards CANBUS1 ID 3,4 -->
+         <elem name="left_hand">   768 1151   0 383</elem>  <!-- 2 boards CANBUS1 ID 1,2 -->
+          <elem name="head">  1152  1535   0 383</elem> <!-- 2 boards CANBUS1 ID 3,4 -->
           <elem name="right_hand">   0 383   0 383</elem> <!-- 2 boards CANBUS 2 ID 5,6 -->
 		  <elem name="torso">   384 767   0 383</elem> <!-- 2 boards CANBUS2 ID 7,8 -->
         </paramlist>
