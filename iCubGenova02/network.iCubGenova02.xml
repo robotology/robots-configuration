@@ -3,10 +3,16 @@
 <!--    description 
 
         this file contains the boards mounted on the robot grouped by body parts.
+
+        there is only one group called host which contains name and as many rows as the supported
+        devices. each one is tagged <hasdevice> and contains a type (ETH or CFW) and an address 
+        (in ip format or just a number for the case of CFW).
+
+        then there are many board groups: one per physical board on teh robot.
         every <board> has two compulsory properties: type, name. it may also have an 
         additional property: required. so far the only value of required is "version".
-        each <board> contains two compulsory fields: ondevice, ataddress. and it may
-        have an additional field: version (if there is the required="version" property).
+        each <board> contains three compulsory fields: ondevice, ataddress, connected. 
+        and it may have an additional field: version (if there is the required="version" property).
         here is description of each of the previous:
         -   type: must have a valid board name in short format: ems4, mc4plus, foc, strain, 
             strain2, mtb, mtb4, mais, mc4, etc.
@@ -19,12 +25,19 @@
         -   ataddress: contains the network address under device. if device is ETH there is
             ip="10.0.1.x" and if the board is a CAN board there is also canbus="c" canadr="a".
             if the device is CFW, then there is only canbus="c" canadr="a".
-         -  version: contains the required version. typically only major and mino values are specified.
+        -   connected: contains the connection information. if bus ETH there are: prev and next
+            which are the previous and the next ip addresses (they both must be present). the last
+            board must have next="none". if bus is CAN there are no extra fields.
+        -   version: contains the required version. typically only major and minor values are specified.
          
         the aim of this files is to be parsed by the python program robotFWmanager.py
   -->
 
 <robot>
+
+    <host name="icub-head" >
+        <hasdevice type= "ETH" address="10.0.1.104" />
+    </host>
 
     <part name="head">
 
