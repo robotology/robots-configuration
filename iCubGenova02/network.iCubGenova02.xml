@@ -21,7 +21,7 @@
             a given version of firmware. it is used to identify amongst the many versions of mc4 
             boards.
         -   ondevice: tells on which device the board is located. it can be ETH (for ETH robots)
-            or CFW2 for first generation CAN robots. 
+            or CFW for first generation CAN robots. 
         -   ataddress: contains the network address under device. if device is ETH there is
             ip="10.0.1.x" and if the board is a CAN board there is also canbus="c" canadr="a".
             if the device is CFW, then there is only canbus="c" canadr="a".
@@ -365,19 +365,19 @@
         <board type='ems4' name="left_leg-eb6-j0_3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.6" />
-            <connected bus="ETH" prev="10.0.1.5" next="10.0.1.7" />
+            <connected bus="ETH" prev="10.0.1.5" next="10.0.1.10" />
         </board>
 
         <board type='ems4' name="left_leg-eb7-j4_5">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.7" />
-            <connected bus="ETH" prev="10.0.1.6" next="10.0.1.10" />
+            <connected bus="ETH" prev="10.0.1.10" next="10.0.1.8" />
         </board>
 
         <board type='ems4' name="left_leg-eb10-skin">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" />
-            <connected bus="ETH" prev="10.0.1.7" next="10.0.1.8" />
+            <connected bus="ETH" prev="10.0.1.6" next="10.0.1.7" />
         </board>
 
         <board type='foc' name="foc.6.1">
@@ -514,19 +514,19 @@
         <board type='ems4' name="right_leg-eb8-j0_3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.8" />
-            <connected bus="ETH" prev="10.0.1.10" next="10.0.1.9" />
+            <connected bus="ETH" prev="10.0.1.7" next="10.0.1.11" />
         </board>
 
         <board type='ems4' name="right_leg-eb9-j4_5">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.9" />
-            <connected bus="ETH" prev="10.0.1.8" next="10.0.1.11" />
+            <connected bus="ETH" prev="10.0.1.11" next="none" />
         </board>
 
         <board type='ems4' name="right_leg-eb11-skin">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" />
-            <connected bus="ETH" prev="10.0.1.9" next="none" />
+            <connected bus="ETH" prev="10.0.1.7" next="10.0.1.9" />
         </board>
 
         <board type='foc' name="foc.8.1">
