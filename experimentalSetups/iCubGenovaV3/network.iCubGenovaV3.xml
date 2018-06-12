@@ -176,7 +176,7 @@
         <board type='mc4plus' name="right_arm-eb27-j4_7">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" />
-			<connected bus="ETH" prev="10.0.1.26" next="10.0.1.28" />
+			<connected bus="ETH" prev="10.0.1.4" next="10.0.1.28" />
         </board>
 
         <board type='mc4plus' name="right_arm-eb28-j8_11">
@@ -244,7 +244,13 @@
         <board type='ems4' name="left_leg-eb8-j4_5">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.8" />
-			<connected bus="ETH" prev="10.0.1.7" next="10.0.1.10" />
+			<connected bus="ETH" prev="10.0.1.7" next="10.0.1.9" />
+        </board>
+
+        <board type='ems4' name="left_leg-eb9-skin">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.9" />
+			<connected bus="ETH" prev="10.0.1.8" next="10.0.1.10" />
         </board>
 
         <board type='foc' name="foc.6.1">
@@ -291,7 +297,7 @@
         <board type='ems4' name="right_leg-eb10-j0_1">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" />
-			<connected bus="ETH" prev="10.0.1.8" next="10.0.1.11" />
+			<connected bus="ETH" prev="10.0.1.9" next="10.0.1.11" />
         </board>
 
         <board type='ems4' name="right_leg-eb11-j2_3">
@@ -303,7 +309,13 @@
         <board type='ems4' name="right_leg-eb12-j4_5">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.12" />
-			<connected bus="ETH" prev="10.0.1.11" next="none" />
+			<connected bus="ETH" prev="10.0.1.11" next="10.0.1.13" />
+        </board>
+
+        <board type='ems4' name="right_leg-eb13-skin">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.13" />
+			<connected bus="ETH" prev="10.0.1.12" next="none" />
         </board>
 
         <board type='foc' name="foc.10.1">

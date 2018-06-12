@@ -526,7 +526,7 @@
         <board type='ems4' name="right_leg-eb11-skin">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" />
-            <connected bus="ETH" prev="10.0.1.7" next="10.0.1.9" />
+            <connected bus="ETH" prev="10.0.1.8" next="10.0.1.9" />
         </board>
 
         <board type='foc' name="foc.8.1">
