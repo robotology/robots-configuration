@@ -41,7 +41,8 @@
 
     <!-- INERTIAL SENSOR-->
     <devices file="hardware/inertials/head-inertial.xml" />
-    <devices file="hardware/inertials/waist-inertial.xml" />
+<!--    <devices file="hardware/inertials/waist-inertial.xml" /> -->
+
 
     <!--inertials3-->
     <devices file="hardware/inertials/left_leg-eb7-IMU.xml" /> 
@@ -60,37 +61,34 @@
     <devices file="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
 
     <!--  SKINS -->
-    <!--<devices file="wrappers/skin/left_arm-skin_wrapper.xml" />
+    <devices file="wrappers/skin/left_arm-skin_wrapper.xml" />
     <devices file="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
     <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />
     <devices file="hardware/skin/right_arm-eb27-j4_7-skin.xml" />
-    <devices file="wrappers/skin/left_leg-skin_wrapper.xml" />
-    <devices file="hardware/skin/left_leg-eb10-skin.xml" />
+<!--    <devices file="wrappers/skin/left_leg-skin_wrapper.xml" />
+    <devices file="hardware/skin/left_leg-eb10-skin.xml" /> -->
     <devices file="hardware/skin/right_leg-eb11-skin.xml" />
     <devices file="wrappers/skin/torso-skin_wrapper.xml" />
     <devices file="hardware/skin/torso-eb22-skin.xml" />
--->
+
     <!-- ANALOG SENSOR FT -->
     <devices file="wrappers/FT/left_arm-FT_wrapper.xml" />
     <devices file="wrappers/FT/right_arm-FT_wrapper.xml" />
     <devices file="wrappers/FT/right_leg-FT_wrapper.xml" />
     <devices file="wrappers/FT/left_leg-FT_wrapper.xml" />
-    <devices file="wrappers/FT/right_foot-FT_wrapper.xml" />
     <devices file="wrappers/FT/left_foot-FT_wrapper.xml" />
+    <devices file="wrappers/FT/right_foot-FT_wrapper.xml" />
     <devices file="wrappers/FT/right_foot-FT_wrapper_multipleSens.xml" />
     <devices file="wrappers/FT/right_leg-FT_wrapper_multipleSens.xml" />
     <devices file="wrappers/FT/left_leg-FT_wrapper_multipleSens.xml" />
     <devices file="wrappers/FT/left_foot-FT_wrapper_multipleSens.xml" />
     <devices file="hardware/FT/left_arm-eb1-j0_3-strain.xml" />
     <devices file="hardware/FT/right_arm-eb3-j0_3-strain.xml" />
-<!--    <devices file="hardware/FT/left_leg-eb6-j0_3-strain.xml" />
-    <devices file="hardware/FT/left_leg-eb7-j4_5-strain.xml" />
-    <devices file="hardware/FT/right_leg-eb8-j0_3-strain.xml" />
-    <devices file="hardware/FT/right_leg-eb9-j4_5-strain.xml" /> -->
     <devices file="hardware/FT/right_leg-eb9-j4_5-strain2.xml" />
     <devices file="hardware/FT/left_leg-eb6-j0_3-strain2.xml" />
     <devices file="hardware/FT/left_leg-eb7-j4_5-strain2.xml" />
     <devices file="hardware/FT/right_leg-eb8-j0_3-strain2.xml" /> 
+   
 
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
     <devices file="wrappers/VFT/left_arm-VFT_wrapper.xml" />
