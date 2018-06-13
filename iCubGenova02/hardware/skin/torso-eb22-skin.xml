@@ -3,9 +3,33 @@
 
 <devices robot="iCubGenova02" build="1">
     <device name="torso-eb22-skin" type="embObjSkin">
-        <params file="general.xml" />
- 
+        <params file="general.xml" /> 
         <params file="hardware/electronics/face-eb22-j0_1-eln.xml" />
+        
+        <group name="SERVICE">
+        
+            <param name="type"> eomn_serv_SK_skin </param>
+
+            <group name="PROPERTIES">
+            
+                <group name="CANBOARDS">
+                    <param name="type">                 mtb                 </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group>                    
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+           
+            </group>  
+        
+        </group>  
+        
         <group name="patches">
             <param name="skinCanAddrsPatch1"> 7 8 9 10 </param> 
         </group>

@@ -3,9 +3,33 @@
 
 <devices robot="iCubGenova02" build="1">
     <device name="right_arm-eb4-j4_15-skin" type="embObjSkin">
-        <params file="general.xml" />
- 
+        <params file="general.xml" /> 
         <params file="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
+        
+        <group name="SERVICE">
+        
+            <param name="type"> eomn_serv_SK_skin </param>
+
+            <group name="PROPERTIES">
+            
+                <group name="CANBOARDS">
+                    <param name="type">                 mtb                 </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group>                    
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+           
+            </group>  
+        
+        </group>  
+        
         <group name="patches">
             <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8</param> 
         </group>
