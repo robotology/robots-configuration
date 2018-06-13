@@ -27,7 +27,7 @@
                 <group name="CANBOARDS">
                 
                     <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
-                         so far it can be only strain
+                         so far it can be strain or strain2
                       -->
                     <param name="type">                 eobrd_strain         </param>
 
