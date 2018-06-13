@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+
+<!--    This file contains details of how the IMU service is configured. Attention: it is supported only from strain board version 2  -->
+<devices robot="myrobot" build="1">
+
+    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjIMU. -->
+    <device name="body_part-ebX-imu" type="embObjIMU">
+    
+        <!-- Include the file which specifies global configuration -->
+        <params file="general.xml"/>
+
+        <!-- Include the file which specifies which ETH board hosts the service -->
+        <params file="hardware/electronics/filenameOfETHboard-eln.xml" /> 
+    
+        <!-- This group defines the service -->
+        <group name="SERVICE">
+            
+            <!-- The type of service expressed as stringised values of eOmn_serv_type_t. For IMU it must be eomn_serv_AS_inertial3 -->
+            <param name="type"> eomn_serv_AS_inertial3 </param>
+        
+            <!-- This group defines the properties of the service -->
+            <group name="PROPERTIES">
+  
+                <!-- This group defines the properties of the CAN boards -->
+                <group name="CANBOARDS">
+                
+                    <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
+                         so far it can be only strain2
+                      -->
+                    <param name="type">                 eobrd_strain2         </param>
+
+                    <!-- This param tells the protocol version required to run the service. Values are in range [0, 255] 
+                         if (0, 0) no check is done, otherwise there must be a CAN board with detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor -->
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group> 
+                    
+                    <!-- This param tells the firmware version required to run the service. Values are in range [0, 255] 
+                         if (0, 0, 0) no check is done, otherwise there must be a CAN board with detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor -->
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
+                    
+                </group>                
+                
+                <!-- This group defines the available sensors. The availbles sensors are:
+                    eoas_imu_acc (accellerometer [m/s^2])  eoas_imu_gyr (gyroscope [degree/second]) eoas_imu_eul (euleros angle[degree]) eoas_imu_mag (magnetometer[tesla])   eoas_imu_status(status of all sensors)  -->
+                <group name="SENSORS">
+                    <!-- This param is the id of the sensor. its name should be defined in production -->
+                    <param name="id">       acc1          gyr1          eul1          mag1           st1             </param>
+                    <!-- This param is the type of the sensor. -->
+                    <param name="type">     eoas_imu_acc  eoas_imu_gyr  eoas_imu_eul  eoas_imu_mag   eoas_imu_status </param>
+                    <!-- This param is the type of the board where the sensor is mounted. -->
+                    <param name="boardType"> strain2       strain2      strain2       strain2        strain2         </param>
+                     <!-- This param is the address of the sensor. Its uses the format CANx:addr  -->
+                    <param name="location">  CAN2:13       CAN2:13      CAN2:13       CAN2:13        CAN2:13         </param>
+                </group>
+                                            
+            </group>
+             <!-- The acquisition rate of all the sensor in ms. values are in range [1, 255]. Use 50 -->
+            <group name="SETTINGS"> 
+                <param name="acquisitionRate">      50      </param>
+                <!-- The list of the enabled sensors ... there is always one and is the value of PROPERTIES.PROPERTIES.SENSORS.id -->
+                <param name="enabledSensors">   acc1 gyr1  eul1 mag1 st1   </param>                
+            </group>
+            
+        </group>        
+        
+    </device>
+    
+</devices>
+
