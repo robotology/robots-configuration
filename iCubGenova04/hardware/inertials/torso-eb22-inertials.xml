@@ -30,7 +30,7 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       chest_1_9B7             chest_2_9B8             chest_3_9B9             chest_4_9B10
+                    <param name="id">       chest_mtb_acc_0b7       chest_mtb_acc_0b8       chest_mtb_acc_0b9       chest_mtb_acc_0b10
                     </param>
 
                     <param name="type">     eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
@@ -44,7 +44,7 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">      chest_1_9B7             chest_2_9B8             chest_3_9B9             chest_4_9B10
+                <param name="enabledSensors">       chest_mtb_acc_0b7       chest_mtb_acc_0b8       chest_mtb_acc_0b9       chest_mtb_acc_0b10
                 </param>
             </group>
 
