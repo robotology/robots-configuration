@@ -60,30 +60,19 @@
     <devices file="wrappers/skin/torso-skin_wrapper.xml" />
     <devices file="hardware/skin/torso-eb22-skin.xml" />
 
-    <!-- INERTIAL SENSORS ON MTB and EMS -->
-    <devices file="wrappers/inertials/left_arm-inertials_wrapper.xml" />
-    <devices file="hardware/inertials/left_arm-eb24-j4_7-inertials.xml" />
-
-    <devices file="wrappers/inertials/right_arm-inertials_wrapper.xml" />
-    <devices file="hardware/inertials/right_arm-eb27-j4_7-inertials.xml" />
-
-    <devices file="wrappers/inertials/left_leg-inertials_wrapper.xml" />
-    <devices file="hardware/inertials/left_leg-eb10-inertials.xml" />
+    <!-- DEVICES FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="hardware/inertials/left_leg-eb6-IMU.xml" />
+    <devices file="hardware/inertials/left_leg-eb7-IMU.xml" />
     <devices file="hardware/inertials/left_leg-eb6-inertials.xml" />
     <devices file="hardware/inertials/left_leg-eb7-inertials.xml" />
+    <devices file="hardware/inertials/left_leg-eb10-inertials.xml" />
 
-    <devices file="wrappers/inertials/right_leg-inertials_wrapper.xml" />
-    <devices file="hardware/inertials/right_leg-eb11-inertials.xml" />
-    <devices file="hardware/inertials/right_leg-eb8-inertials.xml" />
-    <devices file="hardware/inertials/right_leg-eb9-inertials.xml" />
+    <!-- REMAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="wrappers/inertials/left_leg-inertials_remapper.xml" />
 
-    <devices file="wrappers/inertials/torso-inertials_wrapper.xml" />
-    <devices file="hardware/inertials/torso-eb22-inertials.xml" />
-    <devices file="hardware/inertials/torso-eb1-inertials.xml" />
-    <devices file="hardware/inertials/torso-eb3-inertials.xml" />
+    <!-- WRAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="wrappers/inertials/left_leg-inertials_wrapper.xml" />
 
-    <devices file="wrappers/inertials/waist-inertials_wrapper.xml" />
-    <devices file="hardware/inertials/waist-eb5-inertials.xml" />
 
     <!-- ANALOG SENSOR FT -->
     <devices file="wrappers/FT/left_arm-FT_wrapper.xml" />
