@@ -54,7 +54,7 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">       r_upper_leg_ems_acc_eb11   r_upper_leg_ems_gyro_eb11
+                <param name="enabledSensors">       r_upper_leg_ems_gyro_eb11
                                                     r_upper_leg_mtb_acc_11b1   r_upper_leg_mtb_acc_11b2   r_upper_leg_mtb_acc_11b3   r_upper_leg_mtb_acc_11b4
                                                     r_upper_leg_mtb_acc_11b5   r_upper_leg_mtb_acc_11b6   r_upper_leg_mtb_acc_11b7
                                                     r_lower_leg_mtb_acc_11b8   r_lower_leg_mtb_acc_11b9   r_lower_leg_mtb_acc_11b10  r_lower_leg_mtb_acc_11b11

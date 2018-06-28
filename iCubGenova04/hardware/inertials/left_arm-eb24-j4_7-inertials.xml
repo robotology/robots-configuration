@@ -31,7 +31,7 @@
 
                 <group name="SENSORS">
                     <param name="id">       l_upper_arm_mtb_acc_1b10  l_upper_arm_mtb_acc_1b11  l_upper_arm_mtb_acc_1b12  l_upper_arm_mtb_acc_1b13
-                                            l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9
+                                            l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9     l_hand_gyro
                     </param>
 
                     <param name="type">     eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
@@ -48,7 +48,7 @@
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50      </param>
                 <param name="enabledSensors">       l_upper_arm_mtb_acc_1b10  l_upper_arm_mtb_acc_1b11  l_upper_arm_mtb_acc_1b12  l_upper_arm_mtb_acc_1b13
-                                                    l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9     r_hand_gyro
+                                                    l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9
                 </param>
             </group>
 

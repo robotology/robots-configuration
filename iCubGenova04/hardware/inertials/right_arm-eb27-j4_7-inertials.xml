@@ -48,7 +48,7 @@
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50      </param>
                 <param name="enabledSensors">       r_upper_arm_mtb_acc_2b10  r_upper_arm_mtb_acc_2b11  r_upper_arm_mtb_acc_2b12  r_upper_arm_mtb_acc_2b13
-                                                    r_forearm_mtb_acc_2b7     r_forearm_mtb_acc_2b8     r_forearm_mtb_acc_2b9     r_hand_gyro
+                                                    r_forearm_mtb_acc_2b7     r_forearm_mtb_acc_2b8     r_forearm_mtb_acc_2b9
                 </param>
             </group>
 
