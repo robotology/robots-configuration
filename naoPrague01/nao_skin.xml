@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+    <robot name="naoPrague01" build="1" portprefix="nao">
+    
+
+    <!--  SKINS --> 
+
+    <devices file="hardware/skin/nao-eb1-skin.xml" />
+    <devices file="wrappers/skin/nao-skin_wrapper.xml" />
+
+    
+
+
+
+    </robot> 
