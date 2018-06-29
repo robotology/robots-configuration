@@ -30,7 +30,7 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       on_ems9_gyros
+                    <param name="id">       r_lower_leg_ems_gyro_eb9
                     </param>
 
                     <param name="type">     eoas_gyros_st_l3g4200d
@@ -44,7 +44,8 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50              </param>
-                <param name="enabledSensors">       on_ems9_gyros  </param>
+                <param name="enabledSensors">       r_lower_leg_ems_gyro_eb9
+                </param>
             </group>
 
         </group>
