@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV2.0.dtd">
+
+    <device name="right_hand_inertialMTB" type="embObjAnalogSensor" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/pc104.xml" />
+        <xi:include href="../../hardware/electronics/right_lower_arm-ems4-eln.xml" />
+
+        <!-- 
+            enabledAccelerometers is a list of strings taken from enum eOas_inertial_position_t where the prefix eOas_inertial_pos_ is removed.
+            for instance we have none, l_hand, r_hand etc.
+        -->
+        <group name="GENERAL">
+            <param name="Type">                     "inertial"      </param>
+            <param name="Channels">                 6               </param>
+            <param name="enabledAccelerometers">    r_hand  r_forearm_1  r_forearm_2 </param>
+            <param name="enabledGyroscopes">        r_hand </param>
+            <param name="Period">                   50              </param>
+        </group>
+    </device>
+

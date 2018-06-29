@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV2.0.dtd">
+
+  <device name="left_upper_arm_strain" type="embObjAnalogSensor" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="../../general.xml" />
+    <xi:include href="../../hardware/electronics/left_upper_arm-ems1-eln.xml" />
+	<group name="GENERAL"> 
+       <param name="CanAddress">     0x0D  </param> <!-- currently embedded in EMS firmware, kept for future use -->
+       <param name="Format">           16  </param>
+       <param name="Channels">          6  </param>
+       <param name="Period">            1  </param>
+       <param name="UseCalibration">    1  </param>
+    </group>
+  </device>
+
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV2.0.dtd">
+
+  <device name="head_mc" type="canmotioncontrol" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/head-cfw2_can0-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/head-cfw2_can0-mec.xml" />
+  </device>
+
+

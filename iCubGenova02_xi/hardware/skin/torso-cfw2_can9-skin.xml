@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV2.0.dtd">
+
+  <device name="torso_skin" type="canBusSkin" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <xi:include href="../../general.xml" />
+
+	  
+        <param name="canDeviceNum"> 9         </param>  
+        <param name="skinCanIds">   7 8 9 10  </param>   
+        <param name="period"> 10              </param>
+        <param name="canbusDevice"> cfw2can   </param>
+      
+        <xi:include href="../../hardware/skin/torso-cfw2_can9-skinSpec.xml" /> 
+  </device>
+
+
+
+

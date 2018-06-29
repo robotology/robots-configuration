@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV2.0.dtd">
+
+  <device name="left_hand_mais" type="embObjAnalogSensor" xmlns:xi="http://www.w3.org/2001/XInclude">
+     <xi:include href="../../general.xml" />
+     <xi:include href="../../hardware/electronics/pc104.xml" />
+     <xi:include href="../../hardware/electronics/left_lower_arm-ems2-eln.xml" />
+     <group name="GENERAL"> 
+        <param name="CanAddress">     0x0E	</param>
+        <param name="Format">		8	</param>
+        <param name="Channels"> 	15	</param>
+        <param name="Period">		10	</param>
+     </group>
+  </device> 
+

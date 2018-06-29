@@ -1,0 +1,3094 @@
+<?xml version="1.0"?>
+<robot xmlns:xi="http://www.w3.org/2001/XInclude" name="iCubGenova02" build="1" portprefix="icub">
+    <!--  <xi:include href="hardware/electronics/pc104.xml" /> --> 
+
+    <!-- CARTESIANS --> 
+    <device name="left_arm_cartesian" type="cartesiancontrollerserver" xml:base="cartesian/left_arm-cartesian.xml">
+        <group name="GENERAL">
+            <param name="ControllerName">icub/cartesianController/left_arm</param>
+            <param name="ControllerPeriod">10</param>
+            <param name="TaskRefVelPeriodFactor">4</param>
+            <param name="SolverNameToConnect">cartesianSolver/left_arm</param>
+            <param name="KinematicPart">arm</param>
+            <param name="KinematicType">left_v2</param>
+            <param name="PositionControl">on</param>
+            <param name="NumberOfDrivers">2</param>
+        </group>
+
+        <group name="DRIVER_0">
+            <param name="Key">torso</param>
+            <param name="JointsOrder">reversed</param>
+            <param name="MinAbsVels">(0.35 0.35 0.35)</param>
+        </group>
+
+        <group name="DRIVER_1">
+            <param name="Key">left_arm</param>
+            <param name="JointsOrder">direct</param>
+            <param name="MinAbsVels">(0.35 0.35 0.35 0.35 0.35 0.35 0.35)</param>
+        </group>
+
+        <group name="PLANT_MODEL">
+            <!-- P(s)=(Kp/s)*((1+Tz*s)/(1+2*Zeta*Tw*s+(Tw*s)^2))*exp(-Td*s) -->
+            <param name="plant_compensator">on</param>
+            <param name="smith_predictor">off</param>
+
+            <param name="joint_0">((Kp 1.022) (Tz 0.405) (Tw 0.248) (Zeta 0.797) (Td 0.000))</param>
+            <param name="joint_1">((Kp 1.026) (Tz 0.407) (Tw 0.243) (Zeta 0.822) (Td 0.000))</param>
+            <param name="joint_2">((Kp 1.040) (Tz 0.344) (Tw 0.160) (Zeta 1.110) (Td 0.000))</param>
+            <param name="joint_3">((Kp 1.035) (Tz 0.410) (Tw 0.178) (Zeta 1.198) (Td 0.000))</param>
+            <param name="joint_4">((Kp 1.016) (Tz 0.384) (Tw 0.159) (Zeta 1.222) (Td 0.000))</param>
+            <param name="joint_5">((Kp 1.025) (Tz 0.823) (Tw 0.405) (Zeta 1.030) (Td 0.000))</param>
+            <param name="joint_6">((Kp 1.022) (Tz 0.300) (Tw 0.120) (Zeta 1.303) (Td 0.000))</param>
+            <param name="joint_7">((Kp 1.016) (Tz 0.123) (Tw 0.030) (Zeta 2.204) (Td 0.000))</param>
+            <param name="joint_8">((Kp 1.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+            <param name="joint_9">((Kp 1.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+        </group>
+
+        <action phase="startup" level="15" type="attach">
+            <paramlist name="networks">
+                <elem name="torso">torso_mc_wrapper</elem>
+                <elem name="left_arm">left_arm_mc_wrapper</elem>
+          </paramlist>
+        </action>
+
+        <action phase="shutdown" level="2" type="detach"/>
+
+    </device>
+    <device name="right_arm_cartesian" type="cartesiancontrollerserver" xml:base="cartesian/right_arm-cartesian.xml">
+        <group name="GENERAL">
+            <param name="ControllerName">icub/cartesianController/right_arm</param>
+            <param name="ControllerPeriod">10</param>
+            <param name="TaskRefVelPeriodFactor">4</param>
+            <param name="SolverNameToConnect">cartesianSolver/right_arm</param>
+            <param name="KinematicPart">arm</param>
+            <param name="KinematicType">right_v2</param>
+            <param name="PositionControl">on</param>
+            <param name="NumberOfDrivers">2</param>
+        </group>
+
+        <group name="DRIVER_0">
+            <param name="Key">torso</param>
+            <param name="JointsOrder">reversed</param>
+            <param name="MinAbsVels">(0.35 0.35 0.35)</param>
+        </group>
+
+        <group name="DRIVER_1">
+            <param name="Key">right_arm</param>
+            <param name="JointsOrder">direct</param>
+            <param name="MinAbsVels">(0.35 0.35 0.35 0.35 0.35 0.35 0.35)</param>
+        </group>
+
+        <group name="PLANT_MODEL">
+            <!-- P(s)=(Kp/s)*((1+Tz*s)/(1+2*Zeta*Tw*s+(Tw*s)^2))*exp(-Td*s) -->
+            <param name="plant_compensator">on</param>
+            <param name="smith_predictor">off</param>
+
+            <param name="joint_0">((Kp 1.022) (Tz 0.405) (Tw 0.248) (Zeta 0.797) (Td 0.000))</param>
+            <param name="joint_1">((Kp 1.026) (Tz 0.407) (Tw 0.243) (Zeta 0.822) (Td 0.000))</param>
+            <param name="joint_2">((Kp 1.040) (Tz 0.344) (Tw 0.160) (Zeta 1.110) (Td 0.000))</param>
+            <param name="joint_3">((Kp 1.035) (Tz 0.410) (Tw 0.178) (Zeta 1.198) (Td 0.000))</param>
+            <param name="joint_4">((Kp 1.016) (Tz 0.384) (Tw 0.159) (Zeta 1.222) (Td 0.000))</param>
+            <param name="joint_5">((Kp 1.025) (Tz 0.823) (Tw 0.405) (Zeta 1.030) (Td 0.000))</param>
+            <param name="joint_6">((Kp 1.022) (Tz 0.300) (Tw 0.120) (Zeta 1.303) (Td 0.000))</param>
+            <param name="joint_7">((Kp 1.016) (Tz 0.123) (Tw 0.030) (Zeta 2.204) (Td 0.000))</param>
+            <param name="joint_8">((Kp 1.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+            <param name="joint_9">((Kp 1.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+        </group>
+
+        <action phase="startup" level="15" type="attach">
+            <paramlist name="networks">
+                <elem name="torso">torso_mc_wrapper</elem>
+                <elem name="right_arm">right_arm_mc_wrapper</elem>
+          </paramlist>
+        </action>
+
+        <action phase="shutdown" level="2" type="detach"/>
+
+    </device>
+    
+    <!-- HEAD -->	
+    <device name="head_mc" type="canmotioncontrol" xml:base="hardware/motorControl/head-cfw2_can0-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/head-cfw2_can0-eln.xml">
+
+    <param name="canbusdevice">  cfw2can </param>
+    <group name="CAN">
+        <param name="CanDeviceNum">         0       </param>
+        <param name="CanMyAddress">         0       </param>
+        <param name="CanPollingInterval">   10      </param>
+        <param name="CanTimeout">           300     </param>
+        <param name="CanTxTimeout">         500     </param>
+        <param name="CanRxTimeout">         500     </param>
+
+        <param name="CanAddresses">         1 2 3 </param>
+        <param name="broadcast_pos">		    1             1             1             1             1             1     </param>
+        <param name="broadcast_pid">		    0             0             0             0             0             0     </param>
+        <param name="broadcast_fault">		    1             1             1             1             1             1     </param>
+        <param name="broadcast_current">	    0             0             0             0             0             0     </param>
+        <param name="broadcast_overflow">	    1             1             1             1             1             1     </param>
+        <param name="broadcast_canprint">	    1             1             1             1             1             1     </param>
+        <param name="broadcast_vel_acc">	    0             0             0             0             0             0     </param>
+        <param name="broadcast_pid_err">	    0             0             0             0             0             0     </param>
+        <param name="broadcast_rotor_pos">	    0             0             0             0             0             0     </param>
+        <param name="broadcast_rotor_vel_acc">	0             0             0             0             0             0     </param>
+    </group>
+
+</params>
+      <params xml:base="../mechanicals/head-cfw2_can0-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  1 </param>
+        <param name="Joints"> 6  </param> <!-- the number of joints of the robot part -->
+        <param name="AxisMap"> 		         0             1             2             3             4             5    </param>
+        <param name="AxisName">       "neck_pitch" "neck_roll"    "neck_yaw"    "eyes_tilt"  "eyes_vergence"  "eyes_version" </param>
+        <param name="HasHallSensor">         0             0             0             0             0             0    </param>
+        <param name="HasTempSensor">         0             0             0             0             0             0    </param>
+        <param name="HasRotorEncoder">       1             1             1             1             1             1    </param>
+        <param name="HasRotorEncoderIndex">  0             0             0             0             0             0    </param>
+        <param name="Encoder">          11.375       -11.375        11.375        11.375       568.880       284.440    </param>
+        <param name="Zeros">            179.10       -179.30        180.00        180.00        -45.00          0.00    </param>
+        <param name="TorqueId">  	         0             0             0             0             0             0    </param>
+        <param name="TorqueChan">	         0             0             0             0             0             0    </param>
+        <param name="TorqueMax"> 	         0             0             0             0             0             0    </param>
+        <param name="RotorEncoderRes">       1             1             1             1             1             1    </param>
+        <param name="RotorIndexOffset">      0             0             0             0             0             0    </param>
+        <param name="Gearbox">          100.00        100.00        100.00        100.00        100.00        100.00    </param>
+        <param name="MotorPoles">            0             0             0             0             0             0    </param>
+        <param name="Verbose">		0	</param>
+    </group>
+
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">	1             1             1             1             1             1	    </param>
+        <param name="MOT_accel_estimation">	1             1             1             1             1             1	    </param>
+        <param name="JNT_accel_estimation">	5             5             5             5             5             5	    </param>
+        <param name="JNT_speed_estimation">	5             5             5             5             5             5	    </param>
+        <param name="Shifts">              	8             8             8             8             8             8	    </param>
+        <param name="Timeout">             	100           100           100           100           100           100 	</param>
+    </group>
+
+    <group name="LIMITS">
+        <!--                      		0             1             2             3             4             5          -->
+        <param name="Max">        		17            20            45            30            30            50 	</param>
+        <param name="Min">             -30           -20           -45           -30           -30            0 	</param>
+        <param name="RotorMin">         0             0             0             0             0             0     </param> 
+        <param name="RotorMax">         0             0             0             0             0             0     </param>
+        <param name="Currents">  		2000          2000          1200          620           600           600	</param>
+    </group>
+
+    <group name="POS_PIDS">      
+        <param name="kp">           6000          -6000         3200          -400          100           100           </param>       
+        <param name="kd">           500           -500          3200          -400          1000          1000          </param>       
+        <param name="ki">           5             -5            10            -4            10            10            </param>     
+        <param name="limPwm">       800           800           800           1333          1333          1333          </param>               
+        <param name="maxPwm">       800           800           800           1333          1333          1333          </param>       
+        <param name="maxInt">       800           800           800           1333          1333          1333          </param>       
+        <param name="shift">        9             9             6             4             5             5             </param>       
+        <param name="ko">           0             0             0             0             0             0             </param>       
+        <param name="stictionUp">   0             0             0             0             0             0             </param>       
+        <param name="stictionDwn">  0             0             0             0             0             0             </param>       
+    </group>
+</params>
+  </device>
+    <device name="head_mc_wrapper" type="controlboardwrapper2" xml:base="wrappers/motorControl/head-mc_wrapper.xml">
+      <paramlist name="networks">
+	<!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+	  <elem name="FirstSetOfJoints">  0  5  0  5 </elem>
+      </paramlist>
+
+<param name="period"> 10 </param>
+<param name="name">   /icub/head   </param>
+      <param name="ports">  head		</param>
+      <param name="joints"> 6			</param>
+
+
+      <action phase="startup" level="5" type="attach">
+	  <paramlist name="networks">
+	  <!-- The param value must match the device name in the corresponding emsX file -->
+	      <elem name="FirstSetOfJoints">  head_mc </elem>
+	  </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach"/>
+
+  </device>
+
+    <!-- TORSO -->
+    <device name="torso_mc" type="embObjMotionControl" xml:base="hardware/motorControl/torso-ems5-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/torso-ems5-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.5	</param>
+        <param name="Ems">		    5		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    3	</param> 
+            <param name="entityMCmotorNumberOf">                    3	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   0	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+      <params xml:base="../mechanicals/torso-ems5-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints"> 3 </param> 
+        <param name="AxisMap">               2             0             1           </param>   
+        <param name="AxisName">      "torso_pitch" "torso_yaw" "torso_roll"          </param>
+        <param name="HasHallSensor">         1             1             1           </param>
+        <param name="HasTempSensor">         0             0             0           </param>
+        <param name="HasRotorEncoder">       1             1             1           </param>
+        <param name="HasRotorEncoderIndex">  0             0             0           </param>
+        <param name="Encoder">         182.044       182.044       182.044           </param>
+        <param name="TorqueId">          0x0C          0x0C          0x0C            </param>
+        <param name="TorqueChan">        0             1             2               </param>
+        <param name="TorqueMax">         24            24            24              </param>
+        <param name="JointEncoderType">  "AEA"          "AEA"       "AEA"            </param>
+        <param name="RotorEncoderType">  "ROIE"         "ROIE"      "ROIE"           </param>
+        <param name="JointEncoderRes">   4096          4096         4096             </param>
+        <param name="RotorEncoderRes">   -14400        -14400       -14400           </param>
+        <param name="RotorIndexOffset">  0             0            0                </param>
+        <param name="Gearbox">           -100.00       -100.00      -100.00          </param>
+        <param name="MotorPoles">        8             8            8                </param>
+        <param name="Verbose">		0	</param>
+    </group>
+
+    <group name="JOINTS_COUPLING">
+        <param name="kinematic_mj">   0.55    0.275   0.275   0.00
+                                      0.00    0.50    0.50    0.00
+                                      0.00    -0.5    0.50    0.00
+                                      0.00    0.00    0.00    1.00   </param>
+    </group>
+    
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">	1             1             1	</param>
+        <param name="MOT_accel_estimation">	1             1             1	</param>
+        <param name="JNT_accel_estimation">	5             5             5	</param>
+        <param name="JNT_speed_estimation">	5             5             5	</param>
+        <param name="Shifts">              	8             8             8  	</param>
+        <param name="Timeout">             	100           100           100 </param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <param name="Max">              50            30            70          </param>
+        <param name="Min">             -50           -30           -20          </param>
+        <param name="RotorMin">         0             0             0           </param> 
+        <param name="RotorMax">         0             0             0           </param>
+        <param name="Currents">         5000          5000          5000        </param>
+        <param name="JntVelocityMax">   1000          1000          1000        </param>   
+    </group>
+
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">            711.11    -1066.66    -1066.66 </param>       
+        <param name="kd">              0.00        0.00        0.00 </param>       
+        <param name="ki">           7111.09   -10666.64   -14222.18 </param>       
+        <param name="limPwm">          4000        4000        8000 </param>       
+        <param name="maxPwm">          8000        8000       16000 </param>  
+        <param name="maxInt">           750        1000        2000 </param>       
+        <param name="shift">              0           0           0 </param>       
+        <param name="ko">                 0           0           0 </param>       
+        <param name="stictionUp">         0           0           0 </param>       
+        <param name="stictionDwn">        0           0           0 </param>       
+        <param name="kff">                0           0           0 </param>     
+    </group>
+	
+	<group name="TORQUE_CONTROL">
+        <param name="controlLaw">    motor_pid_with_friction_v1 </param>    
+        <param name="controlUnits">  metric_units               </param>        
+        <param name="kp">            450       -400       -400  </param>       
+        <param name="kd">              0          0          0  </param>       
+        <param name="ki">              0          0          0  </param>
+        <param name="limPwm">       3000       3000       3000  </param>        
+        <param name="maxPwm">       8000       8000       8000  </param>       
+        <param name="maxInt">        500        500        500  </param>       
+        <param name="shift">           0          0          0  </param>       
+        <param name="ko">              0          0          0  </param>       
+        <param name="stictionUp">      2          2          2  </param>       
+        <param name="stictionDwn">    -2         -2         -2  </param>       
+        <param name="kff">             1          1          1  </param>   
+        <param name="kbemf">          -0.0016    -0.003     -0.003  </param>    
+        <param name="filterType">      0          0          0  </param>           
+        <param name="ktau">          200       -200       -200  </param>  
+    </group>	
+	
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0      0     </param>    
+        <param name="damping">         0      0      0     </param>    
+    </group>	
+	
+  </device>
+    <device name="torso_mc_wrapper" type="controlboardwrapper2" xml:base="wrappers/motorControl/torso-mc_wrapper.xml">
+      <paramlist name="networks">
+	<!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+	  <elem name="FirstSetOfJoints">  0  2  0  2 </elem>
+      </paramlist>
+
+<param name="period"> 10 </param>
+<param name="name">   /icub/torso   </param>
+      <param name="ports">  torso               </param>
+      <param name="joints"> 3                   </param>
+
+
+      <action phase="startup" level="5" type="attach">
+	  <paramlist name="networks">
+	  <!-- The param value must match the device name in the corresponding emsX file -->
+	      <elem name="FirstSetOfJoints">  torso_mc </elem>
+	  </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach"/>
+
+  </device>
+
+    <!-- LEFT ARM -->
+    <device name="left_upper_arm_mc" type="embObjMotionControl" xml:base="hardware/motorControl/left_upper_arm-ems1-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/left_upper_arm-ems1-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.1	</param> 
+        <param name="Ems">		    1		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">  		                5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>  
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>
+</params>
+      <params xml:base="../mechanicals/left_upper_arm-ems1-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints"> 4 </param> 
+        <param name="AxisMap">               0           1             2             3      </param>
+        <param name="AxisName"> "l_shoulder_pitch" "l_shoulder_roll" "l_shoulder_yaw" "l_elbow" </param>
+        <param name="HasHallSensor">         1           1             1             1      </param>
+        <param name="HasTempSensor">         0           0             0             0      </param>
+        <param name="HasRotorEncoder">       1           1             1             1      </param>
+        <param name="HasRotorEncoderIndex">  0           0             0             0      </param>
+        <param name="Encoder">         182.044     182.044       182.044       182.044      </param>
+        <param name="TorqueId">           0x0C        0x0C          0x0C          0x0C      </param>
+        <param name="TorqueChan">          0            1             2              3      </param>
+        <param name="TorqueMax">           24          24            24             24      </param>
+        <param name="RotorEncoderRes">   -14400        -14400        -14400        -14400   </param>
+        <param name="JointEncoderType">  "AEA"         "AEA"         "AEA"         "AEA"    </param>
+        <param name="RotorEncoderType">  "ROIE"        "ROIE"        "ROIE"        "ROIE"   </param>
+        <param name="JointEncoderRes">   -4096         -4096         4096          -4096    </param>
+        <param name="RotorIndexOffset">      0             0             0             0    </param>
+        <param name="Gearbox">          100.00        100.00        100.00        100.00    </param>
+        <param name="MotorPoles">        8             8             8             8        </param>
+        <param name="Verbose">		0	</param>
+    </group>
+
+    <group name="JOINTS_COUPLING">
+        <param name="kinematic_mj">   1.00    0.00    0.00    0.00
+                                      1.00    0.625   0.00    0.00
+                                      0.00    -0.625  0.625   0.00
+                                      0.00    0.00    0.00    1.00   </param>  
+    </group>
+    
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">	1             1             1             1	</param>
+        <param name="MOT_accel_estimation">	1             1             1             1	</param>
+        <param name="JNT_accel_estimation">	5             5             5             5	</param>
+        <param name="JNT_speed_estimation">	5             5             5             5	</param>
+        <param name="Shifts">              	8             8             8             8	</param>
+        <param name="Timeout">             	100           100           100           100	</param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <!--                            0               1               2             3 -->
+        <param name="Max">              10              160.8            80           106       </param>  
+        <param name="Min">              -95.5           0               -37           15        </param>
+        <param name="RotorMin">         0               0               0             0         </param> 
+        <param name="RotorMax">         0               0               0             0         </param>
+        <param name="JntVelocityMax">      1000            1000            1000          1000      </param>
+        <param name="Currents">         5000            5000            5000          5000      </param>
+    </group>
+
+    <group name="IMPEDANCE">
+      <param name="stiffness">	0.1     0.1   0.1    0.1    </param>
+      <param name="damping">	0.05   0.05  0.05   0.05    </param>
+    </group>
+
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">           711.11    1066.66     711.11    1066.66 </param>       
+        <param name="kd">             0.00       0.00       0.00       0.00 </param>       
+        <param name="ki">          7111.09   10666.64    7111.09   10666.64 </param>       
+        <param name="limPwm">         3000       3000       3000       3000 </param>       
+        <param name="maxPwm">         8000       8000       8000       8000 </param>    
+        <param name="maxInt">          200        200        200       1000 </param>       
+        <param name="shift">             0          0          0          0 </param>       
+        <param name="ko">                0          0          0          0 </param>       
+        <param name="stictionUp">        0          0          0          0 </param>       
+        <param name="stictionDwn">       0          0          0          0 </param>       
+        <param name="kff">               0          0          0          0 </param>    
+    </group>
+
+    <group name="TORQUE_CONTROL">
+        <param name="controlLaw">    motor_pid_with_friction_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">            200        200        250        300     </param>       
+        <param name="kd">              0          0          0          0     </param>       
+        <param name="ki">              0          0          0          0     </param>
+        <param name="limPwm">       3000       3000       3000       3000     </param>        
+        <param name="maxPwm">       8000       8000       8000       8000     </param>       
+        <param name="maxInt">        500        500        500        500     </param>       
+        <param name="shift">           0          0          0          0     </param>       
+        <param name="ko">              0          0          0          0     </param>       
+        <param name="stictionUp">      0.5        0.5        1          1.7   </param>       
+        <param name="stictionDwn">    -0.7       -0.7       -0.8       -1.2   </param>    
+        <param name="kff">             1          1          1          1     </param>  
+        <param name="kbemf">      0.0030     0.0006     0.0007     0.0007     </param>    
+        <param name="filterType">      0          0          0          0     </param>    
+        <param name="ktau">          180        464        463        449     </param>             
+    </group>
+	
+  </device>
+    <device name="left_lower_arm_mc" type="embObjMotionControl" xml:base="hardware/motorControl/left_lower_arm-ems2-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/left_lower_arm-ems2-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.2	</param>
+        <param name="Ems">		    2   		</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>           
+        <param name="TXrate">                       1       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    12	</param> 
+            <param name="entityMCmotorNumberOf">                    12	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   0	</param> 
+            <param name="entityASmaisNumberOf">                     1	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            <param name="entityASinertialNumberOf">                 1	</param>
+            
+        <param name="endpointSkinIsSupported">                  1   </param> 
+            <param name="entitySKskinNumberOf">                     1	</param>        
+    </group>
+
+
+    <group name="SERVICES">
+
+        <group name="INERTIALS">
+            <param name="InertialsCAN1mapping"> 
+                none 
+                none            none            none            none            none            none            none 
+                none            none            none            none            none            none            none               
+            </param>
+
+            <param name="InertialsCAN2mapping">
+                none    
+                none            none            none            none            none            none            none
+                l_upper_arm_4   l_upper_arm_1   l_upper_arm_3   l_upper_arm_2   l_forearm_1     l_forearm_2     l_hand                
+            </param>
+        </group>
+
+    </group>
+</params>
+      <params xml:base="../mechanicals/left_lower_arm-ems2-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints"> 12 </param>
+        <param name="AxisMap">               0             1             2             3             4             5             6             7             8             9             10            11    </param>
+        <param name="AxisName">      "l_wrist_prosup" "l_wrist_pitch" "l_wrist_yaw"  "l_hand_finger"    "l_thumb_oppose"     "l_thumb_proximal"     "l_thumb_distal"   "l_index_proximal"    "l_index_distal"    "l_middle_proximal"   "l_middle_distal"    "l_pinky"  </param>
+        <param name="HasHallSensor">         0             0             0             0             0             0             0             0             0             0             0             0     </param>
+        <param name="HasTempSensor">         0             0             0             0             0             0             0             0             0             0             0             0     </param>
+        <param name="HasRotorEncoder">       1             1             1             1             1             1             1             1             1             1             1             1     </param>
+        <param name="HasRotorEncoderIndex">  0             0             0             0             0             0             0             0             0             0             0             0     </param>
+        <param name="Encoder">         182.044        182.044      182.044       182.044       182.044       182.044       182.044       182.044       182.044       182.044       182.044       182.044     </param>
+        <param name="TorqueId">           0x0C             0             0             0             0             0             0             0             0             0             0             0     </param>
+        <param name="TorqueChan">            4             0             0             0             0             0             0             0             0             0             0             0     </param>
+        <param name="TorqueMax">             2             2             2             2             2             2             2             2             2             2             2             2     </param>
+        <param name="RotorEncoderRes">       1             1             1             1             1             1             1             1             1             1             1             1     </param>
+        <param name="RotorIndexOffset">      0             0             0             0             0             0             0             0             0             0             0             0     </param>
+        <param name="Gearbox">               1             1             1             1             1             1             1             1             1             1             1             1     </param>
+        <param name="JointEncoderType">  "OPTICAL_QUAD"  "AEA"          "AEA"       "HALL_ADC"     "HALL_ADC"     "MAIS"        "MAIS"        "MAIS"      "MAIS"         "MAIS"        "MAIS"         "MAIS" </param>
+        <param name="RotorEncoderType">  "NONE"          "NONE"         "NONE"      "NONE"         "NONE"         "NONE"        "NONE"        "NONE"      "NONE"         "NONE"        "NONE"         "NONE" </param>
+        <param name="JointEncoderRes">  254440         -4096          4096          1860          6320          -871          -974          -920          -995         -1000         -1080          -832     </param>
+        <param name="MotorPoles">            1             1             1             1             1             1             1             1             1             1             1             1     </param>
+        <param name="Verbose"> 0 </param> 
+    </group>
+
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">1             1             1             1             1             1             1             1             1             1             1             1</param>
+        <param name="MOT_accer_estimation">1             1             1             1             1             1             1             1             1             1             1             1</param>
+        <param name="JNT_accel_estimation">5             5             5             5             5             5             5             5             5             5             5             5</param>
+        <param name="JNT_speed_estimation">5             5             5             5             5             5             5             5             5             5             5             5</param>
+        <param name="Shifts">              8             8             8             8             8             8             8             8             8             8             8             8</param>
+        <param name="Timeout">             100           100           100           100           100           100           100           100           100           100           100           100</param>
+    </group>
+</params>
+    
+
+    <group name="LIMITS">
+        <param name="Max">         60            25            25            60            90            90            180           90            180           90            180           270    	</param>
+        <param name="Min">        -60           -80           -20           0             10            0             0             0             0             0             0             0  	</param>
+        <param name="Currents">   500           800           800           485           485           485           485           485           485           485           485           485   	</param>
+        <param name="RotorMin">     0             0             0           0             0             0             0             0             0             0             0             0   </param> 
+        <param name="RotorMax">     0             0             0           0             0             0             0             0             0             0             0             0   </param>
+        <param name="JntVelocityMax"> 1000        1000          1000        1000          1000          1000          1000          1000          1000          1000          1000          1000   </param>   
+    </group>
+
+    <group name="POSITION_CONTROL">
+        <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  machine_units               </param> 
+        <param name="kp">          -200          1000          -1000         -200    -500          -8000         -8000         -8000         8000          -8000         -8000         1200         </param>       
+        <param name="kd">          -1000         10000         -10000        -200    -32000        -32000        -32000        -32000        32000         -32000        -32000        12500        </param>       
+        <param name="ki">          -1            1             -1            -1      -1            -5            -5            -5            5             -5            -5            1            </param>       
+        <param name="limPwm">      1333          1333          1333          1333    1333          1333          1333          1333          1333          1333          1333          1333         </param>       
+        <param name="maxPwm">      1333          1333          1333          1333    1333          1333          1333          1333          1333          1333          1333          1333         </param>       
+        <param name="maxInt">      1333          1333          1333          1333    1333          1333          1333          1333          1333          1333          1333          1333         </param>       
+        <param name="shift">       6             7             7             4       6             8             8             8             8             8             8             6            </param>       
+        <param name="ko">          0             0             0             0       0             0             0             0             0             0             0             0            </param>       
+        <param name="stictionUp">  0             0             0             0       0             0             0             0             0             0             0             0            </param>       
+        <param name="stictionDwn"> 0             0             0             0       0             0             0             0             0             0             0             0            </param>       
+        <param name="kff">         0             0             0             0       0             0             0             0             0             0             0             0            </param>       
+    </group>
+   
+    <group name="TORQUE_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  machine_units               </param> 
+        <param name="kp">            -80      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="kd">              0      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="ki">              0      0      0      0      0      0      0      0      0      0      0      0    </param>
+        <param name="limPwm">       1333      0      0      0      0      0      0      0      0      0      0      0    </param>        
+        <param name="maxPwm">       1333      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="maxInt">       1333      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="shift">          10      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="ko">              0      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="stictionUp">      0      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="stictionDwn">     0      0      0      0      0      0      0      0      0      0      0      0    </param>    
+        <param name="kff">             0      0      0      0      0      0      0      0      0      0      0      0    </param> 
+        <param name="kbemf">           0      0      0      0      0      0      0      0      0      0      0      0    </param>     
+        <param name="filterType">      0      0      0      0      0      0      0      0      0      0      0      0    </param>   
+        <param name="ktau">            1      1      1      1      1      1      1      1      1      1      1      1    </param>   
+    </group>
+    
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0      0      0      0      0      0      0      0      0      0      0    </param>    
+        <param name="damping">         0      0      0      0      0      0      0      0      0      0      0      0    </param>    
+    </group>
+    
+  </device>
+    <device name="left_arm_mc_wrapper" type="controlboardwrapper2" xml:base="wrappers/motorControl/left_arm-mc_wrapper.xml">
+    <paramlist name="networks">
+      <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+	<elem name="FirstSetOfJoints">  0  3  0  3 </elem> 
+	<elem name="SecondSetOfJoints"> 4 15  0 11 </elem> 	
+    </paramlist>
+
+<param name="period"> 10 </param>
+<param name="name">   /icub/left_arm   </param>
+    <param name="ports">  left_arm		</param>
+    <param name="joints"> 16			</param>
+    
+
+    <action phase="startup" level="5" type="attach">
+      <paramlist name="networks">
+    <!-- The param value must match the device name in the corresponding emsX file -->
+     <elem name="FirstSetOfJoints">  left_upper_arm_mc </elem>	
+     <elem name="SecondSetOfJoints"> left_lower_arm_mc </elem>  
+
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="5" type="detach"/>
+
+	</device> 
+
+    <!-- RIGHT ARM -->
+    <device name="right_upper_arm_mc" type="embObjMotionControl" xml:base="hardware/motorControl/right_upper_arm-ems3-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/right_upper_arm-ems3-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.3	</param>
+        <param name="Ems">	    	3		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>  
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>
+</params>
+      <params xml:base="../mechanicals/right_upper_arm-ems3-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints"> 4 	</param> 
+        <param name="AxisMap">               0           1             2             3        </param>
+        <param name="AxisName"> "r_shoulder_pitch" "r_shoulder_roll" "r_shoulder_yaw" "r_elbow" </param>
+        <param name="HasHallSensor">         1           1             1             1        </param>
+        <param name="HasTempSensor">         0           0             0             0        </param>
+        <param name="HasRotorEncoder">       1           1             1             1        </param>
+        <param name="HasRotorEncoderIndex">  0           0             0             0        </param>
+        <param name="Encoder">         182.044     182.044       182.044       182.044        </param>
+        <param name="TorqueId">           0x0C        0x0C          0x0C          0x0C        </param>
+        <param name="TorqueChan">            0           1             2             3        </param>
+        <param name="TorqueMax">            24          24            24            24        </param>
+        <param name="JointEncoderType">      "AEA"       "AEA"         "AEA"         "AEA"    </param>
+        <param name="RotorEncoderType">      "ROIE"      "ROIE"        "ROIE"        "ROIE"   </param>
+        <param name="JointEncoderRes">       4096        4096          -4096         4096     </param>
+        <param name="RotorEncoderRes">       -14400      -14400        -14400       -14400    </param>
+        <param name="RotorIndexOffset">      0           0             0             0        </param>
+        <param name="Gearbox">               -100.00     -100.00       -100.00       -100.00  </param>
+        <param name="MotorPoles">            8           8             8             8        </param>
+        <param name="Verbose">	0	</param>
+    </group>
+
+    <group name="JOINTS_COUPLING">
+        <param name="kinematic_mj">   1.00    0.00    0.00    0.00
+                                      1.00    0.625   0.00    0.00
+                                      0.00    -0.625  0.625   0.00
+                                      0.00    0.00    0.00    1.00   </param>  
+    </group>
+    
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">	1	1	1	1	</param>
+        <param name="MOT_accel_estimation">	1	1	1	1	</param>
+        <param name="JNT_accel_estimation">	5	5	5	5	</param>
+        <param name="JNT_speed_estimation">	5	5	5	5	</param>
+        <param name="Shifts">              	8	8	8	8	</param>
+        <param name="Timeout">             	100	100	100	100	</param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <!--                      0             1               2            3      -->
+        <param name="Max">        10            160.8         80            106         </param>
+        <param name="Min">        -95.5         0             -37           15          </param>
+        <param name="RotorMin">   0             0             0             0           </param> 
+        <param name="RotorMax">   0             0             0             0           </param>
+        <param name="Currents">   5000          5000          5000          5000        </param>
+        <param name="JntVelocityMax"> 1000         1000          1000          1000        </param>   
+    </group>
+
+    <group name="IMPEDANCE">
+      <param name="stiffness">	 0.1   0.1   0.1  0.1   </param>
+      <param name="damping">	0.00  0.00  0.00 0.00   </param>
+    </group>
+
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">          -711.11   -1066.66    -711.11   -1066.66 </param>       
+        <param name="kd">             0.00       0.00       0.00       0.00 </param>       
+        <param name="ki">         -7111.09  -10666.64   -7111.09  -10666.64 </param>       
+        <param name="limPwm">         3000       3000       3000       3000 </param>      
+        <param name="maxPwm">         8000       8000       8000       8000 </param>              
+        <param name="maxInt">          200        200        200       1000 </param>       
+        <param name="shift">             0          0          0          0 </param>       
+        <param name="ko">                0          0          0          0 </param>       
+        <param name="stictionUp">        0          0          0          0 </param>       
+        <param name="stictionDwn">       0          0          0          0 </param>       
+        <param name="kff">               0          0          0          0 </param>       
+    </group>
+
+    <group name="TORQUE_CONTROL">
+        <param name="controlLaw">    motor_pid_with_friction_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">             -50      -200       -250       -300     </param>       
+        <param name="kd">              0          0          0          0     </param>       
+        <param name="ki">              0          0          0          0     </param>
+        <param name="limPwm">       3000       3000       3000       3000     </param>       
+        <param name="maxPwm">       8000       8000       8000       8000     </param>       
+        <param name="maxInt">        500        500        500        500     </param>       
+        <param name="shift">           0          0          0          0     </param>       
+        <param name="ko">              0          0          0          0     </param>       
+        <param name="stictionUp">     -0.5       -0.2       -0.5       -1.5   </param>       
+        <param name="stictionDwn">     1.4        1          0.6        1.5   </param>       
+        <param name="kff">             1          1          1          1     </param>  
+        <param name="kbemf">     -0.0032    -0.0007    -0.0007    -0.0007     </param>            
+        <param name="filterType">      0          0          0          0     </param>     
+        <param name="ktau">           -204     -481       -466       -588     </param>   
+    </group>
+	
+  </device>
+    <device name="right_lower_arm_mc" type="embObjMotionControl" xml:base="hardware/motorControl/right_lower_arm-ems4-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/right_lower_arm-ems4-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.4	</param>
+        <param name="Ems">		    4		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       1       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    12	</param> 
+            <param name="entityMCmotorNumberOf">                    12	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   0	</param> 
+            <param name="entityASmaisNumberOf">                     1	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            <param name="entityASinertialNumberOf">                 1	</param>
+            
+        <param name="endpointSkinIsSupported">                  1   </param> 
+            <param name="entitySKskinNumberOf">                     1	</param>        
+    </group>
+
+    <group name="SERVICES">
+
+        <group name="INERTIALS">
+            <param name="InertialsCAN1mapping"> 
+                none 
+                none            none            none            none            none            none            none 
+                none            none            none            none            none            none            none               
+            </param>
+
+            <param name="InertialsCAN2mapping">
+                none    
+                none            none            none            none            none            none            none
+                r_upper_arm_4   r_upper_arm_1   r_upper_arm_3   r_upper_arm_2   r_forearm_1     r_forearm_2     r_hand                
+            </param>
+        </group>
+
+    </group>
+</params>
+      <params xml:base="../mechanicals/right_lower_arm-ems4-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints"> 12 </param>
+        <param name="AxisMap"> 	             0             1             2             3             4             5             6             7            8             9            10            11     </param>
+        <param name="AxisName">      "r_wrist_prosup" "r_wrist_pitch" "r_wrist_yaw"  "r_hand_finger"    "r_thumb_oppose"     "r_thumb_proximal"     "r_thumb_distal"   "r_index_proximal"    "r_index_distal"    "r_middle_proximal"   "r_middle_distal"    "r_pinky"  </param>
+        <param name="HasHallSensor">         0             0             0             0             0             0             0             0            0             0            0             0      </param>
+        <param name="HasTempSensor">         0             0             0             0             0             0             0             0            0             0            0             0      </param>
+        <param name="HasRotorEncoder">       1             1             1             1             1             1             1             1            1             1            1             1      </param>
+        <param name="HasRotorEncoderIndex">  0             0             0             0             0             0             0             0            0             0            0             0      </param>
+        <param name="Encoder">         182.044        182.044      182.044       182.044       182.044       182.044       182.044       182.044      182.044       182.044      182.044       182.044      </param>
+        <param name="TorqueId">           0x0C             0             0             0             0             0             0             0            0             0            0             0      </param>
+        <param name="TorqueChan">            4             0             0             0             0             0             0             0            0             0            0             0      </param>
+        <param name="TorqueMax">             2             2             2             2             0             0             0             0            0             0            0             0      </param>
+        <param name="JointEncoderType"> "OPTICAL_QUAD"  "AEA"         "AEA"          "HALL_ADC"    "HALL_ADC"    "MAIS"       "MAIS"        "MAIS"      "MAIS"        "MAIS"       "MAIS"        "MAIS"     </param>
+        <param name="RotorEncoderType"> "NONE"          "NONE"        "NONE"         "NONE"        "NONE"        "NONE"       "NONE"        "NONE"      "NONE"        "NONE"       "NONE"        "NONE"     </param>
+        <param name="JointEncoderRes"> -254440             4096         -4096         840          5280          -840          -855          -920         -855          -940        -1080          -858     </param>
+        <param name="RotorEncoderRes">       1             1            1               1             1             1             1             1            1             1           1             1      </param>
+        <param name="RotorIndexOffset">      0             0            0               0             0             0             0             0            0             0           0             0      </param>
+        <param name="Gearbox">               1             1            1               1             1             1             1             1            1             1           1             1      </param>
+        <param name="MotorPoles">            1             1            1               1             1             1             1             1            1             1           1             1      </param>
+        <param name="Verbose">      0    </param>
+    </group>
+
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">1             1             1             1             1             1             1             1             1             1             1             1</param>
+        <param name="MOT_accel_estimation">1             1             1             1             1             1             1             1             1             1             1             1</param>
+        <param name="JNT_accel_estimation">5             5             5             5             5             5             5             5             5             5             5             5</param>
+        <param name="JNT_speed_estimation">5             5             5             5             5             5             5             5             5             5             5             5</param>
+       <param name="Shifts">              	8             8             8             8             8             8             8             8             8             8               8             8 	</param>
+        <param name="Timeout">             	100           100           100           100           100           100           100           100           100           100           100           100           </param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <!--                      0             1             2             3             4             5             6             7             8             9             10            11-->
+        <param name="Max">         60            25            25            60            90            90            180           90            180           90            180           270    	</param>
+        <param name="Min">        -60           -80           -20           0             10            0             0             0             0             0             0             0   </param>
+        <param name="Currents">   500           800           800           485           485           485           485           485           485           485           485           485 </param>
+        <param name="RotorMin">     0             0             0           0             0             0             0             0             0             0             0             0   </param> 
+        <param name="RotorMax">     0             0             0           0             0             0             0             0             0             0             0             0   </param>
+        <param name="JntVelocityMax"> 1000        1000          1000        1000          1000          1000          1000          1000          1000          1000          1000          1000   </param>   
+        </group>
+
+    
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  machine_units               </param> 
+        <param name="kp">           -200          1000          -1000         200   -500          -8000         8000          -8000         -8000         -8000         8000          -1200    </param>       
+        <param name="kd">           -1000         10000         -10000        200   -32000        -32000        32000         -32000        -32000        -32000        32000         -12500   </param>       
+        <param name="ki">           -1            1             -1            1     -1            -5            5             -5            -5            -5            5             -1       </param>       
+        <param name="limPwm">       1333          1333          1333          1333   1333          1333          1333          1333          1333          1333          1333          1333     </param>       
+        <param name="maxPwm">       1333          1333          1333          1333   1333          1333          1333          1333          1333          1333          1333          1333     </param>       
+        <param name="maxInt">       1333          1333          1333          1333   1333          1333          1333          1333          1333          1333          1333          1333     </param>       
+        <param name="shift">        6             7             7             4      6             8             8             8             8             8             8             6        </param>       
+        <param name="ko">           0             0             0             0      0             0             0             0             0             0             0             0        </param>       
+        <param name="stictionUp">   0             0             0             0      0             0             0             0             0             0             0             0        </param>       
+        <param name="stictionDwn">  0             0             0             0      0             0             0             0             0             0             0             0        </param>      
+        <param name="kff">          0             0             0             0      0             0             0             0             0             0             0             0        </param>              
+    </group>
+	
+	<group name="TORQUE_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  machine_units               </param> 
+        <param name="kp">             80      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="kd">              0      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="ki">              0      0      0      0      0      0      0      0      0      0      0      0    </param>
+        <param name="limPwm">       1333      0      0      0      0      0      0      0      0      0      0      0    </param>        
+        <param name="maxPwm">       1333      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="maxInt">       1333      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="shift">          10      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="ko">              0      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="stictionUp">      0      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="stictionDwn">     0      0      0      0      0      0      0      0      0      0      0      0    </param>       
+        <param name="kff">             0      0      0      0      0      0      0      0      0      0      0      0    </param> 
+        <param name="kbemf">           0      0      0      0      0      0      0      0      0      0      0      0    </param> 
+        <param name="filterType">       0      0      0      0      0      0      0      0      0      0      0      0    </param> 
+        <param name="ktau">            1      1      1      1      1      1      1      1      1      1      1      1    </param>   
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0      0      0      0      0      0      0      0      0      0      0    </param>    
+        <param name="damping">         0      0      0      0      0      0      0      0      0      0      0      0    </param>    
+    </group>
+	
+  </device>
+    <device name="right_arm_mc_wrapper" type="controlboardwrapper2" xml:base="wrappers/motorControl/right_arm-mc_wrapper.xml">
+      <paramlist name="networks">
+	<!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+	  <elem name="FirstSetOfJoints">  0  3  0  3 </elem>
+	  <elem name="SecondSetOfJoints"> 4 15  0 11 </elem>
+      </paramlist>
+
+<param name="period"> 10 </param>
+<param name="name">   /icub/right_arm   </param>
+      <param name="ports">  right_arm		</param>
+      <param name="joints"> 16			</param>
+
+
+      <action phase="startup" level="5" type="attach">
+	  <paramlist name="networks">
+	  <!-- The param value must match the device name in the corresponding emsX file -->
+	      <elem name="FirstSetOfJoints">  right_upper_arm_mc </elem>
+	      <elem name="SecondSetOfJoints"> right_lower_arm_mc </elem>
+	  </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach"/>
+
+  </device>
+
+    <!-- ANALOG SENSOR FT -->
+    <device name="left_arm_as_wrapper" type="analogServer" xml:base="wrappers/FT/left_arm-FT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     left_arm				</param>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstStrain">  left_upper_arm_strain </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+    <device name="left_arm_as_wrapper" type="analogServer" xml:base="wrappers/FT/right_arm-FT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     right_arm				</param>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstStrain">  right_upper_arm_strain </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device>
+    <device name="right_leg_as_wrapper" type="analogServer" xml:base="wrappers/FT/right_leg-FT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     right_leg				</param>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstStrain">  right_upper_leg_strain </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+    <device name="left_leg_as_wrapper" type="analogServer" xml:base="wrappers/FT/left_leg-FT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     left_leg				</param>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstStrain">  left_upper_leg_strain </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device>
+    <device name="right_foot_as_wrapper" type="analogServer" xml:base="wrappers/FT/right_foot-FT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     right_foot				</param>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstStrain">  right_lower_leg_strain </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+    <device name="left_foot_as_wrapper" type="analogServer" xml:base="wrappers/FT/left_foot-FT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     left_foot				</param>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstStrain">  left_lower_leg_strain </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device>
+    <device name="left_upper_arm_strain" type="embObjAnalogSensor" xml:base="hardware/FT/left_upper_arm-ems1-strain.xml">
+    <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+    <params xml:base="../electronics/left_upper_arm-ems1-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.1	</param> 
+        <param name="Ems">		    1		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">  		                5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>  
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>
+</params>
+	<group name="GENERAL"> 
+       <param name="CanAddress">     0x0D  </param> <!-- currently embedded in EMS firmware, kept for future use -->
+       <param name="Format">           16  </param>
+       <param name="Channels">          6  </param>
+       <param name="Period">            1  </param>
+       <param name="UseCalibration">    1  </param>
+    </group>
+  </device> 
+    <device name="right_upper_arm_strain" type="embObjAnalogSensor" xml:base="hardware/FT/right_upper_arm-ems3-strain.xml">
+    <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+    <params xml:base="../electronics/right_upper_arm-ems3-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.3	</param>
+        <param name="Ems">	    	3		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>  
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>
+</params>
+    <group name="GENERAL"> 
+        <param name="CanAddress">     0x0D  </param>  <!-- currently embedded in EMS firmware, kept for future use -->
+        <param name="Format">           16  </param>
+        <param name="Channels">          6  </param>
+        <param name="Period">            1  </param>
+        <param name="UseCalibration">    1  </param>
+    </group>
+  </device>
+    <device name="left_upper_leg_strain" type="embObjAnalogSensor" xml:base="hardware/FT/left_upper_leg-ems6-strain.xml">
+    <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+    <params xml:base="../electronics/left_upper_leg-ems6-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.6	</param>
+        <param name="Ems">	    	6       	</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+    <group name="GENERAL"> 
+        <param name="CanAddress">       0x0D    </param>    <!-- currently embedded in EMS firmware, kept for future use -->
+        <param name="Format">           16      </param>
+        <param name="Channels">         6       </param>
+        <param name="Period">           1       </param>
+        <param name="UseCalibration">       1       </param>
+    </group>
+  </device> 
+    <device name="right_upper_leg_strain" type="embObjAnalogSensor" xml:base="hardware/FT/right_upper_leg-ems8-strain.xml">
+    <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+    <params xml:base="../electronics/right_upper_leg-ems8-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.8	</param>
+        <param name="Ems">		    8	    	</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>     
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+    <group name="GENERAL"> 
+        <param name="CanAddress">     0x0D  </param>      <!-- currently embedded in EMS firmware, kept for future use -->
+        <param name="Format">           16  </param>
+        <param name="Channels">         6   </param>
+        <param name="Period">           1   </param>
+        <param name="UseCalibration">   1   </param>
+    </group>
+  </device>
+    <device name="left_lower_leg_strain" type="embObjAnalogSensor" xml:base="hardware/FT/left_lower_leg-ems7-strain.xml">
+    <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+    <params xml:base="../electronics/left_lower_leg-ems7-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.7	</param>
+        <param name="Ems">		    7		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    2	</param> 
+            <param name="entityMCmotorNumberOf">                    2	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+    <group name="GENERAL"> 
+        <param name="CanAddress">       0x01    </param>    <!-- currently embedded in EMS firmware, kept for future use -->
+        <param name="Format">           16      </param>
+        <param name="Channels">         6       </param>
+        <param name="Period">           1       </param>
+        <param name="UseCalibration">       1       </param>
+    </group>
+  </device> 
+    <device name="right_lower_leg_strain" type="embObjAnalogSensor" xml:base="hardware/FT/right_lower_leg-ems9-strain.xml">
+    <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+    <params xml:base="../electronics/right_lower_leg-ems9-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.9	</param>
+        <param name="Ems">	    	9	    	</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    2	</param> 
+            <param name="entityMCmotorNumberOf">                    2	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+    <group name="GENERAL"> 
+        <param name="CanAddress">     0x01  </param>      <!-- currently embedded in EMS firmware, kept for future use -->
+        <param name="Format">           16  </param>
+        <param name="Channels">         6   </param>
+        <param name="Period">           1   </param>
+        <param name="UseCalibration">   1   </param>
+    </group>
+  </device>
+
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY-->
+    <device name="left_arm_VFTserver" type="virtualAnalogServer" xml:base="wrappers/VFT/left_arm-VFT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     left_arm				</param>
+		
+		 <paramlist name="networks">
+		      <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+			<elem name="FirstSetOfJoints">  0  3  0  3 </elem> 
+			<elem name="SecondSetOfJoints"> 4  6  0  2 </elem> 	
+		    </paramlist>
+
+		<param name="channels">       7  				</param>
+		<param name="name"> 	     /left_arm				</param>
+
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+			<!-- The param value must match the device name in the corresponding emsX file -->
+			 <elem name="FirstSetOfJoints">  left_upper_arm_mc </elem>	
+	     		 <elem name="SecondSetOfJoints"> left_lower_arm_mc </elem>  
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+    <device name="right_leg_VFTserver" type="virtualAnalogServer" xml:base="wrappers/VFT/right_leg-VFT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     right_leg				</param>
+		
+		 <paramlist name="networks">
+		      <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+			<elem name="FirstSetOfJoints">  0  3  0  3 </elem> 
+			<elem name="SecondSetOfJoints"> 4  5  0  1 </elem> 	
+		    </paramlist>
+
+		<param name="channels">       6  				</param>
+		<param name="name"> 	      /right_leg				</param>
+
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+			<!-- The param value must match the device name in the corresponding emsX file -->
+			 <elem name="FirstSetOfJoints">  right_upper_leg_mc </elem>	
+	     		 <elem name="SecondSetOfJoints"> right_lower_leg_mc </elem>  
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+    <device name="left_leg_VFTserver" type="virtualAnalogServer" xml:base="wrappers/VFT/left_leg-VFT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     left_leg				</param>
+		
+		 <paramlist name="networks">
+		      <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+			<elem name="FirstSetOfJoints">  0  3  0  3 </elem> 
+			<elem name="SecondSetOfJoints"> 4 5  0 1 </elem> 	
+		    </paramlist>
+
+		<param name="channels">       6  				</param>
+		<param name="name"> 	     /left_leg				</param>
+
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+			<!-- The param value must match the device name in the corresponding emsX file -->
+			 <elem name="FirstSetOfJoints">  left_upper_leg_mc </elem>	
+	     		 <elem name="SecondSetOfJoints"> left_lower_leg_mc </elem>  
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device>     
+    <device name="right_arm_VFTserver" type="virtualAnalogServer" xml:base="wrappers/VFT/right_arm-VFT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     right_arm				</param>
+		
+		 <paramlist name="networks">
+		      <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+			<elem name="FirstSetOfJoints">  0  3  0  3 </elem> 
+			<elem name="SecondSetOfJoints"> 4  6  0  2 </elem> 	
+		    </paramlist>
+
+		<param name="channels">       7  				</param>
+		<param name="name"> 	      /right_arm				</param>
+
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+			<!-- The param value must match the device name in the corresponding emsX file -->
+			 <elem name="FirstSetOfJoints">  right_upper_arm_mc </elem>	
+	     		 <elem name="SecondSetOfJoints"> right_lower_arm_mc </elem>  
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+    <device name="torso_VFTserver" type="virtualAnalogServer" xml:base="wrappers/VFT/torso-VFT_wrapper.xml">
+		<param name="period">       10  				</param>
+		<param name="deviceId">     torso				</param>
+		
+		 <paramlist name="networks">
+		      <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+			<elem name="FirstSetOfJoints">  0  2  0  2 </elem> 
+		    </paramlist>
+
+		<param name="channels">       3  				</param>
+		<param name="name"> 	     /torso				</param>
+
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+			<!-- The param value must match the device name in the corresponding emsX file -->
+			 <elem name="FirstSetOfJoints">  torso_mc </elem>	
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+
+    <!-- ANALOG SENSOR MAIS -->
+    <device name="left_arm_as_wrapperMais" type="analogServer" xml:base="wrappers/MAIS/left_hand-mais_wrapper.xml">
+        <param name="period">       10                  </param>
+        <param name="deviceId">     left_hand           </param>
+
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+        <!-- The param value must match the device name in the corresponding emsX file -->
+                <elem name="leftMais">  left_hand_mais </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach"/>
+        </device> 
+    <device name="right_arm_as_wrapperMais" type="analogServer" xml:base="wrappers/MAIS/right_hand-mais_wrapper.xml">
+        <param name="period">       10                  </param>
+        <param name="deviceId">     right_hand           </param>
+
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+        <!-- The param value must match the device name in the corresponding emsX file -->
+                <elem name="leftMais">  right_hand_mais </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach"/>
+        </device> 
+    <device name="left_hand_mais" type="embObjAnalogSensor" xml:base="hardware/MAIS/left_hand-ems2-mais.xml">
+     <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+     <group name="PC104" xml:base="../electronics/pc104.xml">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+     <params xml:base="../electronics/left_lower_arm-ems2-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.2	</param>
+        <param name="Ems">		    2   		</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>           
+        <param name="TXrate">                       1       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    12	</param> 
+            <param name="entityMCmotorNumberOf">                    12	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   0	</param> 
+            <param name="entityASmaisNumberOf">                     1	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            <param name="entityASinertialNumberOf">                 1	</param>
+            
+        <param name="endpointSkinIsSupported">                  1   </param> 
+            <param name="entitySKskinNumberOf">                     1	</param>        
+    </group>
+
+
+    <group name="SERVICES">
+
+        <group name="INERTIALS">
+            <param name="InertialsCAN1mapping"> 
+                none 
+                none            none            none            none            none            none            none 
+                none            none            none            none            none            none            none               
+            </param>
+
+            <param name="InertialsCAN2mapping">
+                none    
+                none            none            none            none            none            none            none
+                l_upper_arm_4   l_upper_arm_1   l_upper_arm_3   l_upper_arm_2   l_forearm_1     l_forearm_2     l_hand                
+            </param>
+        </group>
+
+    </group>
+</params>
+     <group name="GENERAL"> 
+        <param name="CanAddress">     0x0E	</param>
+        <param name="Format">		8	</param>
+        <param name="Channels"> 	15	</param>
+        <param name="Period">		10	</param>
+     </group>
+  </device> 
+    <device name="right_hand_mais" type="embObjAnalogSensor" xml:base="hardware/MAIS/right_hand-ems4-mais.xml">
+    <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+    <group name="PC104" xml:base="../electronics/pc104.xml">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    <params xml:base="../electronics/right_lower_arm-ems4-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.4	</param>
+        <param name="Ems">		    4		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       1       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    12	</param> 
+            <param name="entityMCmotorNumberOf">                    12	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   0	</param> 
+            <param name="entityASmaisNumberOf">                     1	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            <param name="entityASinertialNumberOf">                 1	</param>
+            
+        <param name="endpointSkinIsSupported">                  1   </param> 
+            <param name="entitySKskinNumberOf">                     1	</param>        
+    </group>
+
+    <group name="SERVICES">
+
+        <group name="INERTIALS">
+            <param name="InertialsCAN1mapping"> 
+                none 
+                none            none            none            none            none            none            none 
+                none            none            none            none            none            none            none               
+            </param>
+
+            <param name="InertialsCAN2mapping">
+                none    
+                none            none            none            none            none            none            none
+                r_upper_arm_4   r_upper_arm_1   r_upper_arm_3   r_upper_arm_2   r_forearm_1     r_forearm_2     r_hand                
+            </param>
+        </group>
+
+    </group>
+</params>
+    <group name="GENERAL"> 
+       <param name="CanAddress">     0x0E	</param>
+       <param name="Format">		8	</param>
+       <param name="Channels"> 	15	</param>
+       <param name="Period">		10	</param>
+    </group>
+  </device>  
+    
+    <!-- LEFT LEG -->
+    <device name="left_upper_leg_mc" type="embObjMotionControl" xml:base="hardware/motorControl/left_upper_leg-ems6-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/left_upper_leg-ems6-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.6	</param>
+        <param name="Ems">	    	6       	</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+      <params xml:base="../mechanicals/left_upper_leg-ems6-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints"> 4 </param> 
+        <param name="AxisMap">               0             1             2             3       </param>
+        <param name="AxisName">     "l_hip_pitch"   "l_hip_roll"    "l_hip_yaw"   "l_knee"     </param>
+        <param name="HasHallSensor">         1             1             1             1       </param>
+        <param name="HasTempSensor">         0             0             0             0       </param>
+        <param name="HasRotorEncoder">       1             1             1             1       </param>
+        <param name="HasRotorEncoderIndex">  0             0             0             0       </param>
+        <param name="Encoder">         182.044       182.044       182.044       182.044       </param>
+        <param name="TorqueId">  	      0x0B          0x0B          0x0B          0x0B       </param>
+        <param name="TorqueChan">	         0             1             2             3       </param>
+        <param name="TorqueMax"> 	        24            24            24            24       </param>
+        <param name="JointEncoderType">     "AEA"          "AEA"        "AEA"         "AEA"    </param>
+        <param name="RotorEncoderType">     "ROIE"         "ROIE"       "ROIE"        "ROIE"   </param>
+        <param name="JointEncoderRes">       4096          4096          4096          -4096   </param>
+        <param name="RotorEncoderRes">   -14400.0      -14400.0      -14400.0       -14400.0   </param>
+        <param name="RotorIndexOffset">         0             0             0              0   </param>
+        <param name="Gearbox">   	       -100.0         100.0        -100.0         -100.0   </param>
+        <param name="MotorPoles">               8             8            8               8   </param>
+        <param name="Verbose">0</param>
+    </group>
+
+    <group name="JOINTS_COUPLING">
+        <param name="kinematic_mj">   1.00    0.00    0.00    0.00
+                                      0.00    1.00    0.00    0.00
+                                      0.00    0.00    1.00    0.00
+                                      0.00    0.00    0.00    1.00   </param>
+    </group>
+    
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">	1             1             1             1	</param>
+        <param name="MOT_accel_estimation">	1             1             1             1	</param>
+        <param name="JNT_accel_estimation">	5             5             5             5 	</param>
+        <param name="JNT_speed_estimation">	5             5             5             5 	</param>
+        <param name="Shifts">              	8             8             8             8	</param>
+        <param name="Timeout">             	100           100           100           100	</param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <param name="Max">                      85            90            70            0     </param>
+        <param name="Min">                      -30           0             -70           -100  </param>
+        <param name="RotorMin">                 0             0             0             0     </param> 
+        <param name="RotorMax">                 0             0             0             0     </param>
+        <param name="JntVelocityMax">              1000          1000          1000          1000  </param>   
+        <param name="Currents">                 5000          5000          5000          5000  </param>
+    </group>
+
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">           -1066.66     2066.66    -711.11    1066.66 </param>       
+        <param name="kd">               0.00        0.00       0.00       0.00 </param>       
+        <param name="ki">          -10666.64    14222.18   -7111.09   10666.64 </param>       
+        <param name="limPwm">           2500        2500       2500       2500 </param>       
+        <param name="maxPwm">           8000        8000       8000       8000 </param>       
+        <param name="maxInt">           1500        1500        750       1000 </param>       
+        <param name="shift">               0           0          0          0 </param>       
+        <param name="ko">                  0           0          0          0 </param>       
+        <param name="stictionUp">          0           0          0          0 </param>       
+        <param name="stictionDwn">         0           0          0          0 </param>       
+        <param name="kff">                 0           0          0          0 </param>  
+    </group>
+    
+     <group name="IMPEDANCE">
+        <param name="stiffness">       0      0      0      0     </param>    
+        <param name="damping">         0      0      0      0     </param>    
+    </group>
+    
+    <group name="TORQUE_CONTROL">
+        <param name="controlLaw">    motor_pid_with_friction_v1               </param>
+        <param name="controlUnits">  metric_units                             </param>         
+        <param name="kp">           -200        200       -200        200     </param>       
+        <param name="kd">              0          0          0          0     </param>       
+        <param name="ki">              0          0          0          0     </param>
+        <param name="limPwm">       2500       2500       2500       2500     </param>        
+        <param name="maxPwm">       8000       8000       8000       8000     </param>       
+        <param name="maxInt">        500        500        500        500     </param>       
+        <param name="shift">           0          0          0          0     </param>       
+        <param name="ko">              0          0          0          0     </param>       
+        <param name="stictionUp">     -2.0        2.0       -1.0       -1.0   </param>       
+        <param name="stictionDwn">     1.4       -2.0        1.3        0.2   </param>       
+        <param name="kff">             1          1          1          1     </param>      
+        <param name="kbemf">          -0.004      0.002     -0.003     -0.0035</param>     
+        <param name="filterType">      0          0          0          0     </param>              
+        <param name="ktau">         -162        178       -197        167     </param>      
+    </group>
+	
+  </device>
+    <device name="left_lower_leg_mc" type="embObjMotionControl" xml:base="hardware/motorControl/left_lower_leg-ems7-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/left_lower_leg-ems7-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.7	</param>
+        <param name="Ems">		    7		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    2	</param> 
+            <param name="entityMCmotorNumberOf">                    2	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+      <params xml:base="../mechanicals/left_lower_leg-ems7-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints">  2  </param>  
+        <param name="AxisMap">               0             1   </param>
+        <param name="AxisName">   "l_ankle_pitch"  "l_ankle_roll"  </param>
+        <param name="HasHallSensor">         1             1   </param>
+        <param name="HasTempSensor">         0             0   </param>
+        <param name="HasRotorEncoder">       1             1   </param>
+        <param name="HasRotorEncoderIndex">  0             0   </param>
+        <param name="Encoder">         182.044       182.044   </param>
+        <param name="TorqueId">           0x0C          0x0C   </param>
+        <param name="TorqueChan">            4             5   </param>
+        <param name="TorqueMax">            24            24   </param>
+        <param name="RotorEncoderRes">   -14400       -14400   </param>
+        <param name="JointEncoderRes">    -4096         4096   </param>
+        <param name="JointEncoderType">    "AEA"       "AEA"   </param>
+        <param name="RotorEncoderType">   "ROIE"      "ROIE"   </param>
+        <param name="RotorIndexOffset">       0            0   </param>
+        <param name="Gearbox">           100.00       100.00   </param>
+        <param name="MotorPoles">             8            8   </param>
+        <param name="Verbose"> 0 </param>
+    </group>
+
+    <group name="JOINTS_COUPLING">
+        <param name="kinematic_mj">   1.00    0.00    0.00    0.00
+                                      0.00    1.00    0.00    0.00
+                                      0.00    0.00    1.00    0.00
+                                      0.00    0.00    0.00    1.00   </param>
+    </group>
+    
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">	1	1	</param>
+        <param name="MOT_accel_estimation">	1	1	</param>
+        <param name="JNT_accel_estimation">	5	5	</param>
+        <param name="JNT_speed_estimation">	5	5	</param>
+        <param name="Shifts">              	8	8	</param>
+        <param name="Timeout">             	100	100	</param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <!--                      0             1      -->
+        <param name="Max">        30.00         20.00		</param>
+        <param name="Min">       -20.00        -20.00		</param>
+        <param name="RotorMin">   0             0           </param> 
+        <param name="RotorMax">   0             0           </param>
+        <param name="Currents">   5000          5000		</param>
+        <param name="JntVelocityMax"> 1000        1000         </param>
+    </group>
+
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  metric_units              </param> 
+        <param name="kp">          711.11       711.11         </param>       
+        <param name="kd">            0.00         0.00         </param>       
+        <param name="ki">         7111.09      7111.09         </param>       
+        <param name="limPwm">        2500         2500         </param>       
+        <param name="maxPwm">        8000         8000         </param>       
+        <param name="maxInt">         750          750         </param>       
+        <param name="shift">            0            0         </param>       
+        <param name="ko">               0            0         </param>       
+        <param name="stictionUp">       0            0         </param>       
+        <param name="stictionDwn">      0            0         </param>      
+        <param name="kff">              0            0         </param>          
+        </group>
+
+    <group name="IMPEDANCE">
+      <param name="stiffness">	0.0	0.0	</param>
+      <param name="damping">	0.0	0.0	</param>
+    </group>
+
+    <group name="TORQUE_CONTROL">
+        <param name="controlLaw">    motor_pid_with_friction_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">         200          200              </param>       
+        <param name="kd">           0            0              </param>       
+        <param name="ki">           0            0              </param>
+        <param name="limPwm">    2500         2500              </param>         
+        <param name="maxPwm">    8000         8000              </param>       
+        <param name="maxInt">     500          500              </param>       
+        <param name="shift">        0            0              </param>       
+        <param name="ko">           0            0              </param>       
+        <param name="stictionUp">   1.7	         0.8            </param>       
+        <param name="stictionDwn"> -1.7         -1.8            </param>   
+        <param name="kff">          1            1              </param>         
+        <param name="kbemf">        0.0025       0.0035         </param>      
+        <param name="filterType">   0            0              </param>                 
+        <param name="ktau">       209          160              </param>          
+    </group>
+
+  </device>
+    <device name="left_leg_mc_wrapper" type="controlboardwrapper2" xml:base="wrappers/motorControl/left_leg-mc_wrapper.xml">
+      <paramlist name="networks">
+	<!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+	  <elem name="FirstSetOfJoints">  0  3  0  3 </elem>
+	  <elem name="SecondSetOfJoints"> 4  5  0  1 </elem>
+      </paramlist>
+
+<param name="period"> 10 </param>
+<param name="name">   /icub/left_leg   </param>
+      <param name="ports">  left_leg            </param>
+      <param name="joints"> 6                   </param>
+
+
+      <action phase="startup" level="5" type="attach">
+	  <paramlist name="networks">
+	  <!-- The param value must match the device name in the corresponding emsX file -->
+	      <elem name="FirstSetOfJoints">  left_upper_leg_mc </elem>
+	      <elem name="SecondSetOfJoints"> left_lower_leg_mc </elem>
+	  </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach"/>
+
+  </device> 
+
+    <!-- RIGHT LEG -->
+    <device name="right_upper_leg_mc" type="embObjMotionControl" xml:base="hardware/motorControl/right_upper_leg-ems8-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/right_upper_leg-ems8-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.8	</param>
+        <param name="Ems">		    8	    	</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>     
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    4	</param> 
+            <param name="entityMCmotorNumberOf">                    4	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+      <params xml:base="../mechanicals/right_upper_leg-ems8-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints"> 4 </param> 
+
+        <param name="AxisMap">               0             1             2             3   </param>
+        <param name="AxisName">     "r_hip_pitch"   "r_hip_roll"    "r_hip_yaw"   "r_knee" </param>
+        <param name="HasHallSensor">         1             1             1             1   </param>
+        <param name="HasTempSensor">         0             0             0             0   </param>
+        <param name="HasRotorEncoder">       1             1             1             1   </param>
+        <param name="HasRotorEncoderIndex">  0             0             0             0   </param>
+        <param name="Encoder">         182.044       182.044       182.044       182.044   </param>
+        <param name="TorqueId">          0x0B          0x0B          0x0B          0x0B        </param>
+        <param name="TorqueChan">        0             1             2             3           </param>
+        <param name="TorqueMax">         24            24            24            24          </param>
+        <param name="JointEncoderType">  "AEA"         "AEA"        "AEA"          "AEA"        </param>
+        <param name="RotorEncoderType">  "ROIE"        "ROIE"       "ROIE"         "ROIE"       </param>
+        <param name="JointEncoderRes">   -4096         -4096        -4096          4096         </param>
+        <param name="RotorEncoderRes">   -14400        -14400       -14400         -14400       </param>
+        <param name="RotorIndexOffset">  0             0            0              0            </param>
+        <param name="Gearbox">           100.00        -100.00       100.00        100.00       </param>
+        <param name="MotorPoles">        8             8            8             8             </param>
+        <param name="Verbose">		0    	</param>
+    </group>
+
+    <group name="JOINTS_COUPLING">
+        <param name="kinematic_mj">   1.00    0.00    0.00    0.00
+                                      0.00    1.00    0.00    0.00
+                                      0.00    0.00    1.00    0.00
+                                      0.00    0.00    0.00    1.00   </param>
+    </group>
+    
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">	1	1		1		1	</param>
+        <param name="MOT_accel_estimation">	1	1		1		1	</param>
+        <param name="JNT_accel_estimation">	5	5		5		5	</param>
+        <param name="JNT_speed_estimation">	5	5		5		5	</param>
+        <param name="Shifts">              	8	8		8		8	</param>
+        <param name="Timeout">             	100	100		100		100	</param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <!--                            0             	1            2          3          -->
+        <param name="Max">              85            90            70          0       </param>
+        <param name="Min">             -30             0           -70         -100     </param>
+        <param name="RotorMin">         0             0             0           0       </param> 
+        <param name="RotorMax">         0             0             0           0       </param>
+        <param name="Currents">         5000          5000          5000        5000    </param>
+        <param name="JntVelocityMax">      1000          1000          1000        1000    </param>   
+    </group>
+
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">            1066.66    -1066.66     711.11   -1066.66 </param>       
+        <param name="kd">               0.00        0.00       0.00       0.00 </param>       
+        <param name="ki">           10666.64   -14222.18    7111.09  -10666.64 </param>       
+        <param name="limPwm">           2500        2500       2500       2500 </param>      
+        <param name="maxPwm">           8000        8000       8000       8000 </param>          
+        <param name="maxInt">           1500        1500        750       1000 </param>       
+        <param name="shift">               0           0          0          0 </param>       
+        <param name="ko">                  0           0          0          0 </param>       
+        <param name="stictionUp">          0           0          0          0 </param>       
+        <param name="stictionDwn">         0           0          0          0 </param>     
+        <param name="kff">                 0           0          0          0 </param>   
+    </group>
+
+    <group name="TORQUE_CONTROL">
+        <param name="controlLaw">    motor_pid_with_friction_v1               </param> 
+        <param name="controlUnits">  metric_units                             </param>         
+        <param name="kp">            300       -500        300       -300    </param>       
+        <param name="kd">              0          0          0          0     </param>       
+        <param name="ki">              0          0          0          0     </param>
+        <param name="limPwm">       3000       3000       3000       3000     </param>        
+        <param name="maxPwm">       8000       8000       8000       8000     </param>       
+        <param name="maxInt">        500        500        500        500     </param>       
+        <param name="shift">           0          0          0          0     </param>       
+        <param name="ko">              0          0          0          0     </param>       
+        <param name="stictionUp">      2.3       -1.79       1.8        1.2   </param>       
+        <param name="stictionDwn">    -3.3        1.76      -1.4       -1.7   </param>       
+        <param name="kff">             1          1          1          1     </param>  
+        <param name="kbemf">           0.0045    -0.002      0.002      0.002 </param>            
+        <param name="filterType">      0          0          0          0     </param>     
+        <param name="ktau">          147       -180          217       -282     </param>          
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0      0      0     </param>    
+        <param name="damping">         0      0      0      0     </param>    
+    </group>
+	
+  </device>
+    <device name="right_lower_leg_mc" type="embObjMotionControl" xml:base="hardware/motorControl/right_lower_leg-ems9-mc.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/right_lower_leg-ems9-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+    
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.9	</param>
+        <param name="Ems">	    	9	    	</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       5       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    2	</param> 
+            <param name="entityMCmotorNumberOf">                    2	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   1	</param> 
+            <param name="entityASmaisNumberOf">                     0	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            
+        <param name="endpointSkinIsSupported">                  0   </param> 
+            <param name="entitySKskinNumberOf">                     0	</param>        
+    </group>    
+</params>
+      <params xml:base="../mechanicals/right_lower_leg-ems9-mec.xml">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion">  2 </param>
+        <param name="Joints">  2  </param>  
+        <param name="AxisMap">               0             1       </param>
+        <param name="AxisName">   "r_ankle_pitch"  "r_ankle_roll"  </param>
+        <param name="HasHallSensor">         1             1       </param>
+        <param name="HasTempSensor">         0             0       </param>
+        <param name="HasRotorEncoder">       1             1       </param>
+        <param name="HasRotorEncoderIndex">  0             0       </param>
+        <param name="Encoder">        182.044        182.044       </param>
+        <param name="TorqueId">         0x0B            0x0B     </param>
+        <param name="TorqueChan">       4               5        </param>
+        <param name="TorqueMax">        24              24       </param>
+        <param name="JointEncoderType">  "AEA"          "AEA"    </param>
+        <param name="RotorEncoderType">  "ROIE"         "ROIE"   </param>
+        <param name="JointEncoderRes">   4096          -4096     </param>
+        <param name="RotorEncoderRes">   -14400        -14400    </param>
+        <param name="RotorIndexOffset">  0             0         </param>
+        <param name="Gearbox">           -100.00       -100.00   </param>
+        <param name="MotorPoles">        8             8         </param>
+        <param name="Verbose">   0   </param>
+    </group>
+
+    <group name="JOINTS_COUPLING">
+        <param name="kinematic_mj">   1.00    0.00    0.00    0.00
+                                      0.00    1.00    0.00    0.00
+                                      0.00    0.00    1.00    0.00
+                                      0.00    0.00    0.00    1.00   </param>
+    </group>
+    
+    <group name="VELOCITY">
+        <param name="MOT_speed_estimation">     1		1	</param>
+        <param name="MOT_accel_estimation">     1		1	</param>
+        <param name="JNT_accel_estimation">     5		5	</param>
+        <param name="JNT_speed_estimation">     5		5	</param>
+        <param name="Shifts">                   8		8	</param>
+        <param name="Timeout">                  100		100	</param>
+    </group>
+</params>
+
+    <group name="LIMITS">
+        <param name="Max">                      30            20        </param>
+        <param name="Min">                     -20           -20        </param>
+        <param name="RotorMin">                 0             0         </param> 
+        <param name="RotorMax">                 0             0         </param>
+        <param name="Currents">                 5000          5000      </param>
+        <param name="JntVelocityMax">              1000          1000      </param>   
+    </group>
+	
+	<group name="POSITION_CONTROL">
+	    <param name="controlLaw">    joint_pid_v1 </param> 
+        <param name="controlUnits">  metric_units              </param> 
+        <param name="kp">         -711.11      -711.11         </param>       
+        <param name="kd">            0.00         0.00         </param>       
+        <param name="ki">        -7111.09     -7111.09         </param>       
+        <param name="limPwm">        2500         2500         </param>       
+        <param name="maxPwm">        8000         8000         </param>      
+        <param name="maxInt">         750          750         </param>       
+        <param name="shift">            0            0          </param>       
+        <param name="ko">               0            0         </param>       
+        <param name="stictionUp">       0            0         </param>       
+        <param name="stictionDwn">      0            0         </param>       
+        <param name="kff">              0            0         </param>     
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0     </param>    
+        <param name="damping">         0      0     </param>    
+    </group>
+    
+    <group name="TORQUE_CONTROL">
+        <param name="controlLaw">    motor_pid_with_friction_v1 </param> 
+        <param name="controlUnits">  metric_units               </param> 
+        <param name="kp">         -200        -200              </param>       
+        <param name="kd">            0           0              </param>       
+        <param name="ki">            0           0              </param>
+        <param name="limPwm">     2500        2500              </param>       
+        <param name="maxPwm">     8000        8000              </param>       
+        <param name="maxInt">      500         500              </param>       
+        <param name="shift">         0           0              </param>       
+        <param name="ko">            0           0              </param>       
+        <param name="stictionUp">   -1.4        -1.5	        </param>       
+        <param name="stictionDwn">   2.4         1.6            </param>       
+        <param name="kff">           1           1              </param>      
+        <param name="kbemf">        -0.0025     -0.0035         </param>  
+        <param name="filterType">    0           0              </param>  
+        <param name="ktau">       -231        -180              </param>        
+    </group>
+	
+  </device>
+    <device name="right_leg_mc_wrapper" type="controlboardwrapper2" xml:base="wrappers/motorControl/right_leg-mc_wrapper.xml">
+      <paramlist name="networks">
+	<!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+	  <elem name="FirstSetOfJoints">  0  3  0  3 </elem>
+	  <elem name="SecondSetOfJoints"> 4  5  0  1 </elem>
+      </paramlist>
+
+<param name="period"> 10 </param>
+<param name="name">   /icub/right_leg   </param>
+      <param name="ports">  right_leg		</param>
+      <param name="joints"> 6			</param>
+
+
+      <action phase="startup" level="5" type="attach">
+	  <paramlist name="networks">
+	  <!-- The param value must match the device name in the corresponding emsX file -->
+	      <elem name="FirstSetOfJoints">  right_upper_leg_mc </elem>
+	      <elem name="SecondSetOfJoints"> right_lower_leg_mc </elem>
+	  </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach"/>
+
+  </device>
+ 
+    <!-- INERTIAL SENSOR -->
+    <device name="inertial" type="inertial" xml:base="hardware/inertial.xml">
+      <param name="name"> /icub/inertial </param>
+      <group name="GENERAL" xml:base="../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <param name="subdevice">  xsensmtx  </param>
+      <param name="serial">  /dev/ttyS0   </param>
+  </device>
+
+    <!--  SKINS -->
+    <device name="left_arm_skin_wrapper" type="skinWrapper" xml:base="wrappers/skin/left_arm-skin_wrapper.xml">
+		<param name="period">       20  				</param>
+		<param name="total_taxels"> 1344				</param>
+		<param name="device">       skinWrapper				</param>
+		
+		<paramlist name="ports">
+		  <elem name="left_hand"> 	0   191  0 191</elem>
+		  <elem name="left_forearm"> 	192 575  0 383</elem>
+		  <elem name="left_arm"> 	576 1343 0 767</elem>
+		</paramlist>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstSetOfSkins">  left_lower_arm_skin </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device>
+    <device name="right_arm_skin_wrapper" type="skinWrapper" xml:base="wrappers/skin/right_arm-skin_wrapper.xml">
+		<param name="period">       20  				</param>
+		<param name="total_taxels"> 1344				</param>
+		<param name="device">       skinWrapper				</param>
+		
+		<paramlist name="ports">
+		  <elem name="right_hand"> 	0   191  0 191</elem>
+		  <elem name="right_forearm"> 	192 575  0 383</elem>
+		  <elem name="right_arm"> 	576 1343 0 767</elem>
+		</paramlist>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstSetOfSkins">  right_lower_arm_skin </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device>  
+    <device name="torso_skin_wrapper" type="skinWrapper" xml:base="wrappers/skin/torso-skin_wrapper.xml">
+		<param name="period">       20  				</param>
+		<param name="total_taxels"> 768				</param>
+		<param name="device">       skinWrapper				</param>
+		
+		<paramlist name="ports">
+		  <elem name="torso"> 	0 767 0 767	</elem>
+		</paramlist>
+		
+		<action phase="startup" level="5" type="attach">
+		    <paramlist name="networks">
+		<!-- The param value must match the device name in the corresponding emsX file -->
+		        <elem name="FirstSetOfSkins">  torso_skin </elem>
+		    </paramlist>
+		</action>
+
+		<action phase="shutdown" level="5" type="detach"/>
+	</device> 
+    <device name="torso_skin" type="canBusSkin" xml:base="hardware/skin/torso-cfw2_can9-skin.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+
+	  
+        <param name="canDeviceNum"> 9         </param>  
+        <param name="skinCanIds">   7 8 9 10  </param>   
+        <param name="period"> 10              </param>
+        <param name="canbusDevice"> cfw2can   </param>
+      
+        <params>
+        <group name="defaultCfgBoard">
+            <param name="period">        50  </param> 
+            <param name="skinType">      0  </param> <!-- 0 ==> new skin
+                                                              1 ==> palm and fingertips skin
+                                                              2 ==> old skin without temperature compensation -->
+            <param name="noLoad">         0xf0  </param>
+            <param name="diagnostic">    false  </param>     <!-- used to config high level -->
+        </group>
+        
+        
+       <group name="defaultCfgTriangle">
+            <param name="enabled">         true  </param> 
+            <param name="shift">           2  </param>
+            <param name="cdcOffset">       0x2200  </param>
+        </group>
+</params> 
+  </device>
+    <device name="left_lower_arm_skin" type="embObjSkin" xml:base="hardware/skin/left_arm-ems2-skin.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/left_lower_arm-ems2-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.2	</param>
+        <param name="Ems">		    2   		</param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>           
+        <param name="TXrate">                       1       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    12	</param> 
+            <param name="entityMCmotorNumberOf">                    12	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   0	</param> 
+            <param name="entityASmaisNumberOf">                     1	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            <param name="entityASinertialNumberOf">                 1	</param>
+            
+        <param name="endpointSkinIsSupported">                  1   </param> 
+            <param name="entitySKskinNumberOf">                     1	</param>        
+    </group>
+
+
+    <group name="SERVICES">
+
+        <group name="INERTIALS">
+            <param name="InertialsCAN1mapping"> 
+                none 
+                none            none            none            none            none            none            none 
+                none            none            none            none            none            none            none               
+            </param>
+
+            <param name="InertialsCAN2mapping">
+                none    
+                none            none            none            none            none            none            none
+                l_upper_arm_4   l_upper_arm_1   l_upper_arm_3   l_upper_arm_2   l_forearm_1     l_forearm_2     l_hand                
+            </param>
+        </group>
+
+    </group>
+</params>
+	<group name="patches">
+            <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8</param> 
+      </group>
+            <params>
+        <group name="defaultCfgBoard">
+            <param name="period">        50  </param> 
+            <param name="skinType">      0  </param> <!-- 0 ==> new skin
+                                                              1 ==> palm and fingertips skin
+                                                              2 ==> old skin without temperature compensation -->
+            <param name="noLoad">         0xf0  </param>
+            <param name="diagnostic">    false  </param>     <!-- used to config high level -->
+        </group>
+        
+        
+       <group name="defaultCfgTriangle">
+            <param name="enabled">         true  </param> 
+            <param name="shift">           2  </param>
+            <param name="cdcOffset">       0x2200  </param>
+        </group>
+
+        
+        <group name="specialCfgTriangles">
+           <param name="numOfSets">         20  </param> 
+           <param name="triangleSetCfg1">      2            14        0             6             1              0            0x2000      </param>
+		   <param name="triangleSetCfg2">      2            14        8             11             1              2           0x2200       </param>
+		   
+		   <param name="triangleSetCfg3">      2            13        0             15             1              2           0x2200       </param>
+		   
+		   <param name="triangleSetCfg4">      2            12        0             1              1              2           0x2200       </param>
+		   <param name="triangleSetCfg5">      2            12        3             3              1              2           0x2200       </param>
+		   <param name="triangleSetCfg6">      2            12        6             6              1              2          0x2200       </param>
+		   <param name="triangleSetCfg7">      2            12        8             9              1              2          0x2200       </param>		   
+		   <param name="triangleSetCfg8">      2            12       12            13              1              2          0x2200       </param>
+		   
+		   <param name="triangleSetCfg9">      2            11        1              4             1              2          0x2200       </param>
+		   <param name="triangleSetCfg10">     2            11        8             13             1              2          0x2200       </param>
+		  
+		   <param name="triangleSetCfg11">     2            10        0              1             1              2          0x2200       </param>
+		   <param name="triangleSetCfg12">     2            10        6              6             1              2          0x2200       </param>
+		   <param name="triangleSetCfg13">     2            10        8             15             1              2          0x2200       </param>
+		   
+		   <param name="triangleSetCfg14">     2            9        0               8             1              2          0x2200       </param>	   
+		   <param name="triangleSetCfg15">     2            9       12              13             1              2          0x2200       </param>
+		   
+		   <param name="triangleSetCfg16">     2            8        0              0             1              2           0x2200       </param>
+		   <param name="triangleSetCfg17">     2            8        8              9             1              2           0x2200       </param>
+		   <param name="triangleSetCfg18">     2            8        10             11            1              2           0x2200       </param>
+		   <param name="triangleSetCfg19">     2            8        13             13            1             2           0x2200       </param>
+		   <param name="triangleSetCfg20">     2            8        15             15            1             2           0x2200       </param>
+        </group>
+</params>
+  </device>
+    <device name="right_lower_arm_skin" type="embObjSkin" xml:base="hardware/skin/right_arm-ems4-skin.xml">
+      <group name="GENERAL" xml:base="../../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+      <params xml:base="../electronics/right_lower_arm-ems4-eln.xml">
+    <group name="PC104">
+     <param name="PC104IpAddress"> 10.0.1.104 </param> 
+     <param name="PC104TXrate">	            1	</param> 
+     <param name="PC104RXrate">	            5	</param> 
+  </group>
+
+    <group name="ETH">
+        <param name="IpAddress">	10.0.1.4	</param>
+        <param name="Ems">		    4		    </param>
+        <param name="CmdPort">		12345		</param>
+        <param name="SrvPort">		4444		</param>
+    </group>
+    
+    <group name="TRANSCEIVER">
+        <param name="listeningPort">	            12345	</param> 
+        <param name="destinationPort">              12345   </param>
+        <param name="maxSizeRXpacket">		        768		</param>
+        <param name="maxSizeTXpacket">		        1408	</param>
+        <param name="maxSizeROPframeRegulars">      1024    </param>
+        <param name="maxSizeROPframeReplies">  	    256     </param>
+        <param name="maxSizeROPframeOccasionals">   128	    </param>
+        <param name="maxSizeROP">  		            256     </param>
+        <param name="maxNumberRegularROPs">  		32      </param>
+        <param name="TXrate">                       1       </param>
+    </group>
+    
+    <group name="PROTOCOL">
+        <param name="endpointManagementIsSupported">	        1   </param>
+            <param name="entityMNcommunicationNumberOf">            1	</param>
+            <param name="entityMNapplicationNumberOf">              1	</param>
+            <param name="entityMNinformationNumberOf">              1	</param>
+            
+        <param name="endpointMotionControlIsSupported">         1   </param> 
+            <param name="entityMCjointNumberOf">                    12	</param> 
+            <param name="entityMCmotorNumberOf">                    12	</param>
+            <param name="entityMCcontrollerNumberOf">               1	</param> 
+            
+        <param name="endpointAnalogSensorsIsSupported">         1   </param> 
+            <param name="entityASstrainNumberOf">                   0	</param> 
+            <param name="entityASmaisNumberOf">                     1	</param>
+            <param name="entityASextorqueNumberOf">                 1	</param>   
+            <param name="entityASinertialNumberOf">                 1	</param>
+            
+        <param name="endpointSkinIsSupported">                  1   </param> 
+            <param name="entitySKskinNumberOf">                     1	</param>        
+    </group>
+
+    <group name="SERVICES">
+
+        <group name="INERTIALS">
+            <param name="InertialsCAN1mapping"> 
+                none 
+                none            none            none            none            none            none            none 
+                none            none            none            none            none            none            none               
+            </param>
+
+            <param name="InertialsCAN2mapping">
+                none    
+                none            none            none            none            none            none            none
+                r_upper_arm_4   r_upper_arm_1   r_upper_arm_3   r_upper_arm_2   r_forearm_1     r_forearm_2     r_hand                
+            </param>
+        </group>
+
+    </group>
+</params>
+	<group name="patches">
+            <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8</param> 
+      </group>
+            <params>
+        <group name="defaultCfgBoard">
+            <param name="period">        50  </param> 
+            <param name="skinType">      0  </param>     <!-- 0 ==> new skin
+                                                              1 ==> palm and fingertips skin
+                                                              2 ==> old skin without temperature compensation -->
+            <param name="noLoad">         0xf0  </param>
+            <param name="diagnostic">    false  </param>     <!-- used to config high level -->
+        </group>
+        
+        
+       <group name="defaultCfgTriangle">
+            <param name="enabled">         true  </param> 
+            <param name="shift">           2  </param>
+            <param name="cdcOffset">       0x2200  </param>
+        </group>
+ 
+		<group name="specialCfgTriangles">
+        	<param name="numOfSets">         20  </param>
+           	<param name="triangleSetCfg1">      2            14        0             6             1              0            0x2000      </param>
+		   <param name="triangleSetCfg2">      2            14        8             11             1              2           0x2200       </param>
+		   
+		   <param name="triangleSetCfg3">      2            13        0             15             1              2           0x2200       </param>
+		   
+		   <param name="triangleSetCfg4">      2            12        0             1              1              2           0x2200       </param>
+		   <param name="triangleSetCfg5">      2            12        3             3              1              2           0x2200       </param>
+		   <param name="triangleSetCfg6">      2            12        6             6              1              2          0x2200       </param>
+		   <param name="triangleSetCfg7">      2            12        8             9              1              2          0x2200       </param>		   
+		   <param name="triangleSetCfg8">      2            12       12            13              1              2          0x2200       </param>
+		   
+		   <param name="triangleSetCfg9">      2            11        1              4             1              2          0x2200       </param>
+		   <param name="triangleSetCfg10">     2            11        8             13             1              2          0x2200       </param>
+		  
+		   <param name="triangleSetCfg11">     2             9        0              1             1              2          0x2200       </param>
+		   <param name="triangleSetCfg12">     2             9        6              6             1              2          0x2200       </param>
+		   <param name="triangleSetCfg13">     2             9        8             15             1              2          0x2200       </param>
+		   
+		   <param name="triangleSetCfg14">     2            10        0               8             1              2          0x2200       </param>	   
+		   <param name="triangleSetCfg15">     2            10       12              13             1              2          0x2200       </param>
+		   
+		   <param name="triangleSetCfg16">     2            8        0              0             1              2           0x2200       </param>
+		   <param name="triangleSetCfg17">     2            8        8              9             1              2           0x2200       </param>
+		   <param name="triangleSetCfg18">     2            8        10             11            1              2           0x2200       </param>
+		   <param name="triangleSetCfg19">     2            8        13             13            1             2           0x2200       </param>
+		   <param name="triangleSetCfg20">     2            8        15             15            1             2           0x2200       </param>
+        </group>
+</params> 
+  </device>
+   <!--   <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" />-->
+   <!--   <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />-->
+   <!--   <xi:include href="hardware/skin/left_leg-ems10-skin.xml" />-->
+   <!--   <xi:include href="hardware/skin/right_leg-ems11-skin.xml" />-->
+   
+    <!--  CALIBRATORS -->
+    <device name="left_arm_calibrator" type="parametricCalibratorEth" xml:base="calibrators/left_arm-calib.xml">
+                <group name="GENERAL" xml:base="../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+
+		<group name="GENERAL">
+		    <param name="joints">  16  </param> <!-- the number of joints of the robot part -->
+		    <param name="deviceName"> Left_Arm_Calibrator </param>
+		</group>
+
+<group name="HOME">
+<param name="positionHome">                       -30        30         0          45         0          0          40         15         30         0          0          0          0          0          0          0          </param>
+<param name="velocityHome">                       10         10         10         10         30         30         30         100        10         10         10         10         10         10         10         10         </param>
+</group>
+
+
+<group name="CALIBRATION">
+<param name="calibrationType">                    3          3          3          3          0          3          3          3          3          4          4          4          4          4          4          4          </param>
+<param name="calibration1">                       38229.2    51882.5    32767.9    24575.9    500.0      2047.5     2047.5     2030.0     670.6      238.0      0.0        230.0      20.0       250.0      0.0        673.0      </param>
+<param name="calibration2">                       10.0       10.0       10.0       10.0       20.0       10.0       10.0       100.0      10.0       10.0       30.0       10.0       10.0       10.0       10.0       10.0       </param>
+<param name="calibration3">                       51535.9    20128.0    12928.1    4778.1     0.0        4072.5     2469.5     0.0        0.0        6000.0     -6600.0    6000.0     7000.0     6000.0     -7000.0    -14000.0   </param>
+<param name="calibrationZero">                    -180.00    -330.00    180.00     -180.00    -75.00     -180.00    180.00     392.90     28.20     -98.26      -170.00    -90.00     -177.23    -90.00     -170.00    -291.09    </param>
+<param name="calibrationDelta">                   1.0        1.0        -21.0      -3.0        0.0        0.0       3.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0        </param>
+
+<param name="startupPosition">                    -35.97     29.97      0.06       50.00      0.0        0.0        0.0        15.0       30.0       0.0        0.0        0.0        0.0        0.0        0.0        0.0        </param>
+<param name="startupVelocity">                    10.0       10.0       10.0       10.0       30.0       30.0       30.0       100.0      100.0      100.0      100.0      100.0      100.0      100.0      100.0      100.0      </param>
+<param name="startupMaxPwm">                      2000       2000       2000       2000       0          0          0          0          0          0          0          0          0          0          0          0          </param>
+<param name="startupPosThreshold">                2          2          2          2          2          2          90         90         1000       1000       1000       1000       1000       1000       1000       1000       </param>
+</group>
+
+		<param name="CALIB_ORDER">(0 1 2 3) (4) (5 6 7) (8 9 11 13) (10 12 14 15) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">left_arm_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">left_arm_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort"/>
+
+	</device>
+    <device name="right_arm_calibrator" type="parametricCalibratorEth" xml:base="calibrators/right_arm-calib.xml">
+                <group name="GENERAL" xml:base="../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+
+		<group name="GENERAL">
+		    <param name="joints">16</param> <!-- the number of joints of the robot part -->
+		    <param name="deviceName"> Right_Arm_Calibrator </param>
+		</group>
+
+<group name="HOME">
+<param name="positionHome">                       -30       30        0         45        0         0         40        15        30        0         0         0         0         0         0         0         </param>
+<param name="velocityHome">                       10        10        10        10        30        30        30        100       10        10        10        10        10        10        10        10        </param>
+</group>
+
+
+<group name="CALIBRATION">
+<param name="calibrationType">                    3         3         3         3         0         3         3         3         3         4         4         4         4         4         4         4         </param>
+<param name="calibration1">                       27306.6   13653.3   32767.9   40959.9   500.0     2047.5    2047.5    2650.0    416.7     250.0     5.0       230.0     25.0      235.0     0.0       736.0     </param>
+<param name="calibration2">                       10.0      10.0      10.0      10.0      -20.0     10.0      10.0      100.0     10.0      10.0      30.0      10.0      10.0      10.0      10.0      10.0      </param>
+<param name="calibration3">                       6560.1    48592.0   15744.1   39007.9   0.0       3580.5    2777.5    0.0       0.0       6000.0    6600.0    6000.0    -7000.0   6000.0    7000.0    14000.0   </param>
+<param name="calibrationZero">                    180.00    30.00     -180.00   180.00    -75.00    180.00    -180.00   1135.71   18.41     -107.14   -171.83   -90.00    -179.14   -90.00    -170.00   -308.72   </param>
+<param name="calibrationDelta">                   6.0       1.50      -15.0     -3.0      0.0       0.0       -4.0       0.0       0.0       0.0       0.0       0.0       0.0       0.0       0.0       0.0       </param>
+
+<param name="startupPosition">                    -35.97    29.97     0.06      50.00     0.0       0.0       0.0       15.0      30.0      0.0       0.0       0.0       0.0       0.0       0.0       0.0       </param>
+<param name="startupVelocity">                    10.0      10.0      10.0      10.0      30.0      30.0      30.0      100.0     100.0     100.0     100.0     100.0     100.0     100.0     100.0     100.0     </param>
+<param name="startupMaxPwm">                      2000      2000      2000      2000      0         0         0         0         0         0         0         0         0         0         0         0         </param>
+<param name="startupPosThreshold">                2         2         2         2         2         2         90        90        1000      1000      1000      1000      1000      1000      1000      1000      </param>
+</group>
+
+        <param name="CALIB_ORDER">(0 1 2 3) (4) (5 6 7) (8 9 11 13) (10 12 14 15)</param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">right_arm_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">right_arm_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort"/>
+
+	</device> 
+    <device name="left_leg_calibrator" type="parametricCalibratorEth" xml:base="calibrators/left_leg-calib.xml">
+                <group name="GENERAL" xml:base="../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+
+		<group name="GENERAL">
+		    <param name="joints">  6  </param> <!-- the number of joints of the robot part -->
+		    <param name="deviceName"> Left_Leg_Calibrator </param>
+		</group>
+		
+<group name="HOME">
+<param name="positionHome">                       0.00           10.00       0.00         0.00        0.00      0.00        </param>
+<param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00     10.00       </param>
+</group>
+
+
+
+<group name="CALIBRATION">
+<param name="calibrationType">                    3              3          3            3           3         3           </param>
+<param name="calibration1">                       32767.9        32767.9    32767.9      32767.9     32767.9   32767.9     </param>
+<param name="calibration2">                       10.0           10.0       10.0         10.0        10.0      10.0        </param>
+<param name="calibration3">                       59487.9        28320.1    29008.1      42511.9     34335.9   19472.1     </param>
+<param name="calibrationZero">                    180.00         180.00     180.00       -180.00     -180.00   180.00      </param>
+<param name="calibrationDelta">                   1.40           -2.0       0.0          -3.0        -1.0      2.7         </param>
+
+<param name="startupPosition">                    12             5          0           -10         -4        -5           </param>
+<param name="startupVelocity">                    10.0           10.0       10.0         10.0        10.0      10.0        </param>
+<param name="startupMaxPwm">                      1200           1200       1200         1200        1200      1200        </param>
+<param name="startupPosThreshold">                2              2          2            2           2         2           </param>
+</group>
+
+		<param name="CALIB_ORDER"> (0 1 2 3 4 5) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">left_leg_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">left_leg_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort"/>
+
+	</device>
+    <device name="right_leg_calibrator" type="parametricCalibratorEth" xml:base="calibrators/right_leg-calib.xml">
+                <group name="GENERAL" xml:base="../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+                
+		<group name="GENERAL">
+		    <param name="joints">  6  </param> <!-- the number of joints of the robot part -->
+		    <param name="deviceName"> Right_Leg_Calibrator </param>
+		</group>
+
+<group name="HOME">
+<param name="positionHome">                       0.00            10.00        0.00      0.00           0.00          0.00          </param>
+<param name="velocityHome">                       10.00           10.00       10.00     10.00          10.00         10.00         </param>
+</group>
+
+
+
+<group name="CALIBRATION">
+<param name="calibrationType">                    3               3           3         3              3             3             </param>
+<param name="calibration1">                       32767.9         32767.9     32767.9   32767.9        32767.9       32767.9       </param>
+<param name="calibration2">                       10.0            10.0        10.0      10.0           10.0          10.0          </param>
+<param name="calibration3">                       46137.9         32096.1     10352.1   56511.9        51199.9       42175.9       </param>
+<param name="calibrationZero">                    -180.00         -180.00     -180.00   180.00         180.00        -180.00       </param>
+<param name="calibrationDelta">                   1.0             1.0         0.0       -2.0           4.50          3.0           </param>
+
+<param name="startupPosition">                    12              5           0        -10            -4            -5             </param>
+<param name="startupVelocity">                    10.0            10.0        10.0      10.0           10.0          10.0          </param>
+<param name="startupMaxPwm">                      1200            1200        1200      1200           1200          1200          </param>
+<param name="startupPosThreshold">                2               2           2         2              2             2             </param>
+</group>
+
+		<param name="CALIB_ORDER">(0 1 2 3 4 5) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">right_leg_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">right_leg_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort"/>
+
+	</device>
+    <device name="torso_calibrator" type="parametricCalibratorEth" xml:base="calibrators/torso-calib.xml">
+                <group name="GENERAL" xml:base="../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+                
+		<group name="GENERAL">
+		    <param name="joints"> 3 </param> <!-- the number of joints of the robot part -->
+		    <param name="deviceName"> Torso_Calibrator </param>
+		</group>
+
+<group name="HOME">
+<param name="positionHome">                       0                       0                         -20                                 </param>
+<param name="velocityHome">                       10                      10                        10                                  </param>
+</group>
+
+
+
+<group name="CALIBRATION">
+<param name="calibrationType">                    3                       3                         3                                   </param>
+<param name="calibration1">                       32767.9                 32767.9                   32767.9                             </param>
+<param name="calibration2">                       10.0                    10.0                      10.0                                </param>
+<param name="calibration3">                       62927.9                 52567.9                   21520.1                             </param>
+<param name="calibrationZero">                    180.00                  180.00                    180.00                              </param>
+<param name="calibrationDelta">                   0.0                     -1.0                      -1.0                                </param>
+
+<param name="startupPosition">                    0.0                     0.0                      -10.0                                </param>
+<param name="startupVelocity">                    10.0                    10.0                      10.0                                </param>
+<param name="startupMaxPwm">                      2500                    2500                      2500                                </param>
+<param name="startupPosThreshold">                2                       2                         2                                   </param>
+</group>
+
+ <!-- check old calibrator for the correct sequence, then ask to Randazz -->
+		<param name="CALIB_ORDER"> (0 1 2) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">torso_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">torso_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort"/>
+
+	</device> 
+    <device name="head_calibrator" type="parametricCalibratorEth" xml:base="calibrators/head-calib.xml">
+                <group name="GENERAL" xml:base="../general.xml">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+
+		<group name="GENERAL">
+		  <param name="joints"> 6 </param> <!-- the number of joints of the robot part  in the canbus version which one is read? check how parameters are spead-->
+		    <param name="deviceName"> Head_Calibrator </param>	<!-- simple string to be used in code to have a human readable description -->
+		</group>
+
+<group name="HOME">
+<param name="positionHome">                       -30        0       0       0          0         0            </param>
+<param name="velocityHome">                       10         10      10      10         10        10           </param>
+</group>
+
+
+
+<group name="CALIBRATION">
+<param name="calibrationType">                    3          3       3       3          0         0            </param>
+<param name="calibration1">                       2047.5     2047.5  2047.5  2047.5     900.0     900.0        </param>
+<param name="calibration2">                       10.0       10.0    10.0    10.0       20.0      20.0         </param>
+<param name="calibration3">                       1803.5     44.5    287.5   1795.5     0.0       0.0          </param>
+<param name="calibrationZero">                    0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibrationDelta">                   0.00       0.00    0.00    0.00       0.00      0.00         </param>
+
+<param name="startupPosition">                    0.0        0.0     0.0     0.0        0.0       0.0          </param>
+<param name="startupVelocity">                    10.0       10.0    10.0    10.0       10.0      10.0         </param>
+<param name="startupMaxPwm">                      130        130     0       0          0         0            </param>
+<param name="startupPosThreshold">                2          2       2       2          2         2            </param>
+</group>
+
+ <!-- check old calibrator for the correct sequence, then ask to Randazz -->
+        <param name="CALIB_ORDER"> (0 1 2) (3) (4) (5) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">head_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">head_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort"/>
+
+	</device> 
+    </robot>

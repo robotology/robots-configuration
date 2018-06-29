@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV2.0.dtd">
+
+  <device name="left_leg_skin" type="embObjSkin" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <xi:include href="../../general.xml" />
+<xi:include href="../../hardware/electronics/left_lower_leg-ems10-eln.xml" />
+	<group name="patches">
+	    <param name="skinCanAddrsPatch1"> 1 2 3 4 5 6 7 </param> 
+            <param name="skinCanAddrsPatch2"> 13 12 8 9 10 11 </param> 
+      </group>
+           <xi:include href="../../hardware/skin/left_leg-ems10-skinSpec.xml" />
+  </device>
+
+  
