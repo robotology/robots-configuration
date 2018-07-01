@@ -2,12 +2,12 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
 
-  <device name="right_arm-eb4-j4_15-mc" type="embObjMotionControl">
-      <xi:include href="general.xml" />
-      <xi:include href="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
-      <xi:include href="hardware/mechanicals/right_arm-eb4-j4_15-mec.xml" />
+  <device name="right_arm-eb4-j4_15-mc" type="embObjMotionControl" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/right_arm-eb4-j4_15-mec.xml" />
 
-      <xi:include href="hardware/motorControl/right_arm-eb4-j4_15-mc_service.xml" />
+      <xi:include href="../../hardware/motorControl/right_arm-eb4-j4_15-mc_service.xml" />
 
     <group name="LIMITS">
         <!--                                    0             1             2             3             4             5             6             7             8             9             10            11-->

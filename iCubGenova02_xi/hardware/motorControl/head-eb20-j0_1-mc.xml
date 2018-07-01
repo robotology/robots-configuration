@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-    <device name="head-eb20-j0_1-mc" type="embObjMotionControl">
+    <device name="head-eb20-j0_1-mc" type="embObjMotionControl" xmlns:xi="http://www.w3.org/2001/XInclude">
     
-        <xi:include href="general.xml" />
-        <xi:include href="hardware/electronics/head-eb20-j0_1-eln.xml" />
-        <xi:include href="hardware/mechanicals/head-eb20-j0_1-mec.xml" />
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/head-eb20-j0_1-eln.xml" />
+        <xi:include href="../../hardware/mechanicals/head-eb20-j0_1-mec.xml" />
 
-        <xi:include href="hardware/motorControl/head-eb20-j0_1-mc_service.xml" />
+        <xi:include href="../../hardware/motorControl/head-eb20-j0_1-mc_service.xml" />
         
         <!-- joint logical number               0           1           -->
         <!-- joint name                         neck-pitch  neck-roll   -->           

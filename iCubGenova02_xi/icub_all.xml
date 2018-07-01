@@ -19,52 +19,51 @@
 
 
     <!-- TORSO -->
-    <xi:include href="hardware/motorControl/torso-ems5-mc.xml" />
+    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
 
     <!-- LEFT ARM -->
-    <xi:include href="hardware/motorControl/left_upper_arm-ems1-mc.xml" />
-    <xi:include href="hardware/motorControl/left_lower_arm-ems2-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb1-j0_3-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb2-j4_15-mc.xml" />
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
 
     <!-- RIGHT ARM -->
-    <xi:include href="hardware/motorControl/right_upper_arm-ems3-mc.xml" />
-    <xi:include href="hardware/motorControl/right_lower_arm-ems4-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb3-j0_3-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb4-j4_15-mc.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
-
-
-
-
     
     <!-- LEFT LEG -->
-    <xi:include href="hardware/motorControl/left_upper_leg-ems6-mc.xml" />
-    <xi:include href="hardware/motorControl/left_lower_leg-ems7-mc.xml" />
+    <xi:include href="hardware/motorControl/left_leg-eb6-j0_3-mc.xml" />
+    <xi:include href="hardware/motorControl/left_leg-eb7-j4_5-mc.xml" />
     <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
 
     <!-- RIGHT LEG -->
-    <xi:include href="hardware/motorControl/right_upper_leg-ems8-mc.xml" />
-    <xi:include href="hardware/motorControl/right_lower_leg-ems9-mc.xml" />
+    <xi:include href="hardware/motorControl/right_leg-eb8-j0_3-mc.xml" />
+    <xi:include href="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
     <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
+    
  
     <!-- INERTIAL SENSOR -->
     <xi:include href="hardware/inertial.xml" />
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_hand-mais_wrapper.xml" /> 
     <xi:include href="wrappers/MAIS/right_hand-mais_wrapper.xml" /> 
-    <xi:include href="hardware/MAIS/left_hand-ems2-mais.xml" /> 
-    <xi:include href="hardware/MAIS/right_hand-ems4-mais.xml" />  
+    <xi:include href="hardware/MAIS/left_arm-eb2-j4_15-mais.xml" /> 
+    <xi:include href="hardware/MAIS/right_arm-eb4-j4_15-mais.xml" />  
 
     <!--  SKINS -->
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/left_arm-eb2-j4_15-skin.xml" />
     <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />  
-    <xi:include href="wrappers/skin/torso-skin_wrapper.xml" /> 
-    <xi:include href="hardware/skin/torso-cfw2_can9-skin.xml" />
-    <xi:include href="hardware/skin/left_arm-ems2-skin.xml" />
-    <xi:include href="hardware/skin/right_arm-ems4-skin.xml" />
-   <!--   <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" />-->
-   <!--   <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />-->
-   <!--   <xi:include href="hardware/skin/left_leg-ems10-skin.xml" />-->
-   <!--   <xi:include href="hardware/skin/right_leg-ems11-skin.xml" />-->
+    <xi:include href="hardware/skin/right_arm-eb4-j4_15-skin.xml" /> 
+    <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" />
+    <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/left_leg-eb10-skin.xml" />
+    <xi:include href="hardware/skin/right_leg-eb11-skin.xml" />
+    <!-- Skin torso is never tested"
+    <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/torso-eb22-skin.xml" />
+    -->
     <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
@@ -72,12 +71,12 @@
     <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
-    <xi:include href="hardware/FT/left_upper_arm-ems1-strain.xml" /> 
-    <xi:include href="hardware/FT/right_upper_arm-ems3-strain.xml" />
-    <xi:include href="hardware/FT/left_upper_leg-ems6-strain.xml" /> 
-    <xi:include href="hardware/FT/right_upper_leg-ems8-strain.xml" />
-    <xi:include href="hardware/FT/left_lower_leg-ems7-strain.xml" /> 
-    <xi:include href="hardware/FT/right_lower_leg-ems9-strain.xml" />
+    <xi:include href="hardware/FT/left_arm-eb1-j0_3-strain.xml" /> 
+    <xi:include href="hardware/FT/right_arm-eb3-j0_3-strain.xml" />
+    <xi:include href="hardware/FT/left_leg-eb6-j0_3-strain.xml" /> 
+    <xi:include href="hardware/FT/left_leg-eb7-j4_5-strain.xml" />
+    <xi:include href="hardware/FT/right_leg-eb8-j0_3-strain.xml" /> 
+    <xi:include href="hardware/FT/right_leg-eb9-j4_5-strain.xml" />
 
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY-->
     <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
