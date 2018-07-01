@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV2.0.dtd">
 
-	<device name="torso_skin_wrapper" type="skinWrapper">
+	<device name="torso-skin_wrapper" type="skinWrapper">
 		<param name="period">       20  				</param>
 		<param name="total_taxels"> 768				</param>
 		<param name="device">       skinWrapper				</param>
@@ -12,8 +12,8 @@
 		
 		<action phase="startup" level="5" type="attach">
 		    <paramlist name="networks">
-		<!-- The param value must match the device name in the corresponding emsX file -->
-		        <elem name="FirstSetOfSkins">  torso_skin </elem>
+
+		        <elem name="FirstSetOfSkins">  torso-eb22-skin </elem>
 		    </paramlist>
 		</action>
 

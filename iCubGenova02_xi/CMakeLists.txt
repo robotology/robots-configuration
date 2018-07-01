@@ -1,4 +1,4 @@
-set(appname iCubGenova02)
+set(appname iCubGenova02XI)
 
 set(scripts icub_all.xml icub_all_inertials.xml robotInterface.ini general.xml)
 
