@@ -3,9 +3,9 @@
 
 <device name="right_arm-eb4-j4_15-mais" type="embObjMais" xmlns:xi="http://www.w3.org/2001/XInclude">
     
-        <params file="../../general.xml" />
+        <xi:include href="../../general.xml" />
 
-        <params file="../../hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
         
         <group name="SERVICE">
         
