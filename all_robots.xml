@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<robot_database  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<xi:include href="./iCubGenova02_xi/icub_all.xml" />
+<!-- <xi:include href="./iCubGenova02_xi/icub_all.xml" /> -->
+
+</robot_database > 
+
+
