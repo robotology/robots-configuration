@@ -11,33 +11,34 @@
 		</group>
 
 <group name="HOME">
-<param name="positionHome">                       0                       0                         -20                                 </param>
-<param name="velocityHome">                       10                      10                        10                                  </param>
-</group>
-
-
-
-<group name="CALIBRATION">
-<param name="calibrationType">                    12                      12                        12                                   </param>
-
-<param name="calibration1">	               35531                   58233                      8433                                   </param> 
-<param name="calibration2">                        0                       0                         0                                   </param> 
-<param name="calibration3">                        0                       0                         0                                   </param> 
-
-
-<param name="calibration4">                       0.0                     0.0                       0.0                                 </param>
-<param name="calibration5">                       0.0                     0.0                       0.0                                 </param>
-<param name="calibrationZero">                    0.0                     0.0                       0.0                                 </param>
-<param name="calibrationDelta">                   0.0                     0.0                       0.0                                 </param>
-
-<param name="startupPosition">                    0.0                     0.0                       0.0                                </param>
-<param name="startupVelocity">                    10.0                    10.0                      10.0                                </param>
-<param name="startupMaxPwm">                      5500                    5500                      5500                                </param>
-<param name="startupPosThreshold">                2                       2                         2                                   </param>
+<param name="positionHome">                         0                       -20                    0                       </param>
+<param name="velocityHome">                         10                      10                     10                      </param>
+</group>                                                                                           
+                                                                                                   
+                                                                                                   
+                                                                                                   
+<group name="CALIBRATION">                                                                         
+<!--                                                roll                    pitch                  yaw                          -->
+<param name="calibrationType">                      12                      12                     12                      </param>
+                                                                                                   
+<param name="calibration1">	                        58233                   8433                   35531                   </param> 
+<param name="calibration2">                         0                       0                      0                       </param> 
+<param name="calibration3">                         0                       0                      0                       </param> 
+                                                                                                   
+                                                                                                   
+<param name="calibration4">                         0                       0                      0                       </param>
+<param name="calibration5">                         0                       0                      0                       </param>
+<param name="calibrationZero">                      0                       0                      0                       </param>
+<param name="calibrationDelta">                     0                       0                      0                       </param>
+                                                                                                   
+<param name="startupPosition">                      0                       0                      0                       </param>
+<param name="startupVelocity">                      10                      10                     10                      </param>
+<param name="startupMaxPwm">                        5500                    5500                   5500                    </param>
+<param name="startupPosThreshold">                  2                       2                      2                       </param>
 </group>
 
  <!-- check old calibrator for the correct sequence, then ask to Randazz -->
-		<param name="CALIB_ORDER"> (0 1 2) </param>
+		<param name="CALIB_ORDER"> (1) (0) (2) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-mc_wrapper</param>

@@ -42,6 +42,7 @@
     </group>
 
 	<group name="POS_PID_DEFAULT">
+		<param name="controlLaw">    Pid_inPos_outPwm </param>
         <param name="fbkControlUnits">     metric_units       </param> 
         <param name="outputControlUnits">  machine_units      </param>
         <param name="pos_kp">            -1060.0  -1000.0      </param>       
@@ -90,7 +91,11 @@
         <param name="cur_stictionDwn">      0            0          </param>   
         <param name="cur_kff">              0            0          </param>            
     </group>
-    
+
+    <group name="OTHER_CONTROL_PARAMETERS">
+        <param name="deadZone"> 0.0049 0.0049 </param>
+    </group>
+
   </device>
 </devices>
 

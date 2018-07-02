@@ -27,6 +27,7 @@
     </group>
 
     <group name="2FOC">
+		<param name="Verbose">                  0                   0                   </param>
         <param name="AutoCalibration">          0                   0                   </param>
         <param name="HasHallSensor">            0                   0                   </param>
         <param name="HasTempSensor">            0                   0                   </param> <!-- pero' ha il sensore di temp, quindi ... metti 1 -->

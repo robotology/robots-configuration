@@ -91,6 +91,10 @@
         <param name="cur_stictionDwn">      0            0          </param>   
         <param name="cur_kff">              0            0          </param>            
     </group>
+   
+    <group name="OTHER_CONTROL_PARAMETERS">
+        <param name="deadZone"> 0.0049 0.0049 </param>
+    </group>
     
   </device>
 </devices>
