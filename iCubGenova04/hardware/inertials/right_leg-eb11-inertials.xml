@@ -5,9 +5,9 @@
 
     <device name="right_leg-eb11-inertials" type="embObjInertials">
 
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
 
-        <params file="hardware/electronics/right_leg-eb11-skin-eln.xml" />
+        <xi:include href="hardware/electronics/right_leg-eb11-skin-eln.xml" />
 
         <group name="SERVICE">
 

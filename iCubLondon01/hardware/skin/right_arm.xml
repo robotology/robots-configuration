@@ -4,7 +4,7 @@
  <!-- Initialization file for cfw002  motor contol for the head - 6 joints -->
 <devices robot="iCubLondon01" build="1"> 
   <device name="right_arm_skin" type="canBusSkin">
-      <params file="general.xml" />
+      <xi:include href="general.xml" />
 
 	  <params robot="iCubLondon01" build="1">
         <param name="canDeviceNum"> 8         </param>
@@ -12,6 +12,6 @@
         <param name="period"> 10              </param>
         <param name="canbusDevice"> cfw2can   </param>
       </params>
-    <params file="hardware/skin/right_arm-cfw2_can8-skinSpec.xml" /> 
+    <xi:include href="hardware/skin/right_arm-cfw2_can8-skinSpec.xml" /> 
   </device>
 </devices>

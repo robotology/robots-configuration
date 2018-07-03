@@ -3,7 +3,7 @@
 
 <params robot="naoPrague01" build="1">
 
-    <params file="hardware/electronics/nao_client.xml" />
+    <xi:include href="hardware/electronics/nao_client.xml" />
     
     <group name="ETH_BOARD">
 

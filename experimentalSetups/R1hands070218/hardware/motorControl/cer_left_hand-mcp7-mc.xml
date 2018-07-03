@@ -5,10 +5,10 @@
 
 <devices robot="CER01" build="1">
   <device name="cer_left_hand_mc" type="embObjMotionControl">
-      <params file="general.xml" />
-      <params file="hardware/electronics/cer_left_hand-mcp7-eln.xml" />
-      <params file="hardware/mechanicals/cer_left_hand-mcp7-mec.xml" />
-      <params file="hardware/motorControl/cer_left_hand-mcp7-mc-service.xml" />
+      <xi:include href="general.xml" />
+      <xi:include href="hardware/electronics/cer_left_hand-mcp7-eln.xml" />
+      <xi:include href="hardware/mechanicals/cer_left_hand-mcp7-mec.xml" />
+      <xi:include href="hardware/motorControl/cer_left_hand-mcp7-mc-service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                130     120           </param>

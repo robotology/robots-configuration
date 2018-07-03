@@ -4,9 +4,9 @@
  <!-- Initialization file for cfw002  motor contol for the head - 6 joints -->
 <devices robot="iCubSheffield01" build="1">
   <device name="head-cfw2_can0-mc" type="canmotioncontrol">
-      <params file="general.xml" />
-      <params file="hardware/electronics/head-cfw2_can0-eln.xml" />
-      <params file="hardware/mechanicals/head-cfw2_can0-mec.xml" />
+      <xi:include href="general.xml" />
+      <xi:include href="hardware/electronics/head-cfw2_can0-eln.xml" />
+      <xi:include href="hardware/mechanicals/head-cfw2_can0-mec.xml" />
   </device>
 </devices>
 

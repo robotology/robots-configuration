@@ -2,8 +2,8 @@
 <robot name="icub">
 
     <!-- REAL ANALOG SENSORS -->
-    <devices file="wrappers/FT/left_arm_FT_wrapper.xml" /> 
-    <devices file="hardware/FT/left_arm_strain.xml" /> 
+    <xi:include href="wrappers/FT/left_arm_FT_wrapper.xml" /> 
+    <xi:include href="hardware/FT/left_arm_strain.xml" /> 
   
 </robot> 
 

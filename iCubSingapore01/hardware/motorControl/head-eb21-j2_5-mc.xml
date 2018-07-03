@@ -6,11 +6,11 @@
     
      <device name="head-eb21-j2_5-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/head-eb21-j2_5-eln.xml" />
-        <params file="hardware/mechanicals/head-eb21-j2_5-mec.xml" />
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/head-eb21-j2_5-eln.xml" />
+        <xi:include href="hardware/mechanicals/head-eb21-j2_5-mec.xml" />
 
-        <params file="hardware/motorControl/head-eb21-j2_5-mc_service.xml" />
+        <xi:include href="hardware/motorControl/head-eb21-j2_5-mc_service.xml" />
         
         
         <!-- joint logical number               0           1           2           3           -->

@@ -10,10 +10,10 @@
     <device name="body_part_skin" type="embObjSkin">
     
         <!-- Include the file which specifies global configuration -->
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
         
         <!-- Include the file which specifies which ETH board hosts the service -->
-        <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+        <xi:include href="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
         
             <!-- this group contains the address of the MTB boards divided in skin patches. 
                  so far the patches can be 1 or 2, and their names must be exactly: skinCanAddrsPatch1 and skinCanAddrsPatch2  
@@ -26,7 +26,7 @@
             </group>
             
         <!-- specifies how the embObjSkin device must configure the MTB boards -->    
-        <params file="hardware/skin/body_part-ebX-skinSpec.xml" />
+        <xi:include href="hardware/skin/body_part-ebX-skinSpec.xml" />
         
     </device>
     

@@ -7,13 +7,13 @@
     <!-- MOTOR CONTROLLERS -->
     
     <!-- CER hand motor controller. there is only one board mc2plu -->
-    <devices file="./hardware/motorControl/CERhand_mc_hardware.xml" /> 
-    <devices file="./wrappers/motorControl/CERhand_mc_wrapper.xml" /> 
+    <xi:include href="./hardware/motorControl/CERhand_mc_hardware.xml" /> 
+    <xi:include href="./wrappers/motorControl/CERhand_mc_wrapper.xml" /> 
 
     <!-- CALIBRATORS -->
     
     <!-- hand calibrator -->
-    <devices file="./calibrators/CERhand_calib.xml" />
+    <xi:include href="./calibrators/CERhand_calib.xml" />
     
 </robot> 
 

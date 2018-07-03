@@ -5,9 +5,9 @@
 
     <device name="left_leg-eb6-j0_1-strain" type="embObjStrain">
     
-        <params file="general.xml"/>
+        <xi:include href="general.xml"/>
 
-        <params file="hardware/electronics/left_leg-eb6-j0_1-eln.xml" />
+        <xi:include href="hardware/electronics/left_leg-eb6-j0_1-eln.xml" />
     
         <group name="SERVICE">
             

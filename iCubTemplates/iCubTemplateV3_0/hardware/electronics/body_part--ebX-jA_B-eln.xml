@@ -8,7 +8,7 @@
 <params robot="myrobot" build="1">
 
     <!-- It includes details of the Linux host. -->
-    <params file="hardware/electronics/pc104.xml" />
+    <xi:include href="hardware/electronics/pc104.xml" />
     
     <!-- It contains the details of the ETH board. -->
     <group name="ETH_BOARD">

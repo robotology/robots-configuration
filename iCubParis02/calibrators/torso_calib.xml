@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 <devices robot="iCubParis02" build="1"> 
     <device name="torso_calibrator" type="parametricCalibrator">       
-                     <params file="general.xml" />           
+                     <xi:include href="general.xml" />           
         <group name="GENERAL">             
             <param name="joints"> 4 </param>             
             <param name="deviceName"> Torso_Calibrator </param>        

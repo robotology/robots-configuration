@@ -3,7 +3,7 @@
 
 <devices robot="iCubGrenoble01" build="1">
   <device name="torso_mc" type="canmotioncontrol">
-  <params file="general.xml" />
+  <xi:include href="general.xml" />
   
 <group name="CAN">
 <param name="canbusdevice"> sharedcan     </param>

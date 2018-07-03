@@ -5,22 +5,22 @@
 
     <!-- BOARD MC4PLUSjig -->
     <!-- motor controllers -->
-    <!-- <devices file="./hardware/motorControl/mc4plusjig_mc_hardware.xml" /> -->
-    <!-- <devices file="./wrappers/motorControl/mc4plusjig_mc_wrapper.xml" />  -->
+    <!-- <xi:include href="./hardware/motorControl/mc4plusjig_mc_hardware.xml" /> -->
+    <!-- <xi:include href="./wrappers/motorControl/mc4plusjig_mc_wrapper.xml" />  -->
 
     <!-- analog sensors-mais -->
-    <devices file="./wrappers/MAIS/mc4plusjig-mais_wrapper.xml" />
-    <devices file="./hardware/MAIS/mc4plusjig-mais.xml" />
+    <xi:include href="./wrappers/MAIS/mc4plusjig-mais_wrapper.xml" />
+    <xi:include href="./hardware/MAIS/mc4plusjig-mais.xml" />
 
     <!--    analog sensors-mais2 //this is not REALLY another mais, cause it's the same phisical device of the first one, but handled by another board
             This leads to the initialization of two different analog sensor device at high level, but they roughly refer to the same data-->
 <!--
-    <devices file="./wrappers/MAIS/mc4plusjig-mais2_wrapper.xml" />
-    <devices file="./hardware/MAIS/mc4plusjig-mais2.xml" />
+    <xi:include href="./wrappers/MAIS/mc4plusjig-mais2_wrapper.xml" />
+    <xi:include href="./hardware/MAIS/mc4plusjig-mais2.xml" />
 -->
 
     <!-- CALIBRATORS -->
-    <!--<devices file="./calibrators/mc4plusjig_calib.xml" /> -->
+    <!--<xi:include href="./calibrators/mc4plusjig_calib.xml" /> -->
 
     
 </robot> 

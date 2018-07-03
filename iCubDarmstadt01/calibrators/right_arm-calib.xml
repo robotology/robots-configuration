@@ -3,7 +3,7 @@
 
 <devices robot="iCubDarmstadt01" build="1">
 	<device name="right_arm-calibrator" type="parametricCalibratorEth">
-                <params file="general.xml" />
+                <xi:include href="general.xml" />
 
 		<group name="GENERAL">
 		    <param name="joints">16</param> <!-- the number of joints of the robot part -->

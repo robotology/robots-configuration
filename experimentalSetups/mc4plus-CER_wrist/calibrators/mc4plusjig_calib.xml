@@ -3,7 +3,7 @@
 
 <devices robot="iCubExpSetupMC4PLUS_CER" build="1">
 	<device name="mc4plusCER_calibrator" type="parametricCalibratorEth">
-                <params file="general.xml" />
+                <xi:include href="general.xml" />
                 
 		<group name="GENERAL">
 		    <param name="joints"> 3 </param> <!-- the number of joints of the robot part -->

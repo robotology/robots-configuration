@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="vizzy">
 <!-- motor controllers wrappers -->
-<devices file="wrappers/left_shoulder_arm_mc_wrapper.xml" />
-<devices file="wrappers/right_shoulder_arm_mc_wrapper.xml" />
-<devices file="wrappers/torso_mc_wrapper.xml" />
-<devices file="wrappers/head_mc_wrapper.xml" />
-<devices file="hardware/head_torso.xml" />
-<devices file="hardware/shoulders.xml" />
-<devices file="hardware/left_arm_flt_fingers.xml" />
-<devices file="hardware/right_arm_flt_fingers.xml" />
+<xi:include href="wrappers/left_shoulder_arm_mc_wrapper.xml" />
+<xi:include href="wrappers/right_shoulder_arm_mc_wrapper.xml" />
+<xi:include href="wrappers/torso_mc_wrapper.xml" />
+<xi:include href="wrappers/head_mc_wrapper.xml" />
+<xi:include href="hardware/head_torso.xml" />
+<xi:include href="hardware/shoulders.xml" />
+<xi:include href="hardware/left_arm_flt_fingers.xml" />
+<xi:include href="hardware/right_arm_flt_fingers.xml" />
 
  <!-- CALIBRATORS -->
-<devices file="calibrators/head_calib.xml" />
-<devices file="calibrators/shoulders_calib.xml" />
-<devices file="calibrators/left_arm_calib.xml" />
-<devices file="calibrators/right_arm_calib.xml" />
+<xi:include href="calibrators/head_calib.xml" />
+<xi:include href="calibrators/shoulders_calib.xml" />
+<xi:include href="calibrators/left_arm_calib.xml" />
+<xi:include href="calibrators/right_arm_calib.xml" />
 
 <!-- MTX INERTIAL SENSOR -->
-<!--<devices file="hardware/inertial.xml" /> -->
+<!--<xi:include href="hardware/inertial.xml" /> -->
 </robot> 

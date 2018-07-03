@@ -4,11 +4,11 @@
 
         
     <!-- motor controllers wrappers -->    
-    <devices file="wrappers/motorControl/head_mc_wrapper.xml" />   
-    <devices file="hardware/motorControl/icub_head_nozeros.xml" />
+    <xi:include href="wrappers/motorControl/head_mc_wrapper.xml" />   
+    <xi:include href="hardware/motorControl/icub_head_nozeros.xml" />
 	
     <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
-    <devices file="hardware/inertial.xml" />
+    <xi:include href="hardware/inertial.xml" />
 
    
 </robot> 

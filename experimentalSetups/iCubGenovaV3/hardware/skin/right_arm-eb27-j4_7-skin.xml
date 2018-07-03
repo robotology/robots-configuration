@@ -3,12 +3,12 @@
 
 <devices robot="iCubGenovaV3" build="1">
     <device name="right_arm-eb27-j4_7-skin" type="embObjSkin">
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
  
-        <params file="hardware/electronics/right_arm-eb27-j4_7-eln.xml" />
+        <xi:include href="hardware/electronics/right_arm-eb27-j4_7-eln.xml" />
         <group name="patches">
             <param name="skinCanAddrsPatch1"> 14 13 12 11 10 9 8</param> 
         </group>
-        <params file="hardware/skin/right_arm-eb27-j4_7-skinSpec.xml" /> 
+        <xi:include href="hardware/skin/right_arm-eb27-j4_7-skinSpec.xml" /> 
     </device>  
 </devices>

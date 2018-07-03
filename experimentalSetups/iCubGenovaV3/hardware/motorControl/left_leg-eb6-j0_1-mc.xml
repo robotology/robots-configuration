@@ -5,11 +5,11 @@
 
 <devices robot="iCubGenovaV3" build="1">
   <device name="left_leg-eb6-j0_1-mc" type="embObjMotionControl">
-      <params file="general.xml" />
-      <params file="hardware/electronics/left_leg-eb6-j0_1-eln.xml" />
-      <params file="hardware/mechanicals/left_leg-eb6-j0_1-mec.xml" />
+      <xi:include href="general.xml" />
+      <xi:include href="hardware/electronics/left_leg-eb6-j0_1-eln.xml" />
+      <xi:include href="hardware/mechanicals/left_leg-eb6-j0_1-mec.xml" />
       
-    <params file="hardware/motorControl/left_leg-eb6-j0_1-mc_service.xml" />
+    <xi:include href="hardware/motorControl/left_leg-eb6-j0_1-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                      125          111      </param>

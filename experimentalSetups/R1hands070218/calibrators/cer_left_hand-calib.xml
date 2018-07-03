@@ -3,7 +3,7 @@
 
 <devices robot="CER01" build="1">
     <device name="left_hand_calibrator" type="parametricCalibratorEth">
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
                 
     <group name="GENERAL">
         <param name="joints">  2  </param> <!-- the number of joints of the robot part -->

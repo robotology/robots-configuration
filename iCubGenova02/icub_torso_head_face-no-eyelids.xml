@@ -3,27 +3,27 @@
 
 <robot name="iCubGenova02" build="1" portprefix="icub">
     
-    <params file="hardware/electronics/pc104.xml" />
+    <xi:include href="hardware/electronics/pc104.xml" />
     
     
     <!-- TORSO --> 
-    <devices file="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-    <devices file="wrappers/motorControl/torso-mc_wrapper.xml" /> 
+    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" /> 
     
     <!-- HEAD -->
-    <devices file="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
-    <devices file="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
-    <devices file="./wrappers/motorControl/head-mc_wrapper.xml" /> 
+    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
+    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
+    <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" /> 
  
     <!-- FACE -->
-    <devices file="./hardware/motorControl/face-eb22-j0_1-mc.xml" />  
-    <devices file="./hardware/motorControl/face-eb23-j2_5-mc.xml" /> 
-    <devices file="./wrappers/motorControl/face-no-eyelids-mc_wrapper.xml" /> 
+    <xi:include href="./hardware/motorControl/face-eb22-j0_1-mc.xml" />  
+    <xi:include href="./hardware/motorControl/face-eb23-j2_5-mc.xml" /> 
+    <xi:include href="./wrappers/motorControl/face-no-eyelids-mc_wrapper.xml" /> 
 
 
     <!--  CALIBRATORS -->
-    <devices file="calibrators/torso-calib.xml" />
-    <devices file="calibrators/head-calib.xml" />
-    <devices file="calibrators/face-no-eyelids-calib.xml" />
+    <xi:include href="calibrators/torso-calib.xml" />
+    <xi:include href="calibrators/head-calib.xml" />
+    <xi:include href="calibrators/face-no-eyelids-calib.xml" />
        
 </robot> 

@@ -2,7 +2,7 @@
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 <params robot="CER_hand" build="1">
-    <params file="hardware/electronics/pc104.xml" />
+    <xi:include href="hardware/electronics/pc104.xml" />
     
     <group name="ETH">
         <param name="IpAddress">    10.0.1.20    </param>

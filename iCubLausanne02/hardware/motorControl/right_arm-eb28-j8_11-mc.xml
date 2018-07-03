@@ -5,11 +5,11 @@
 
     <device name="right_arm-eb28-j8_11-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/right_arm-eb28-j8_11-eln.xml" />
-        <params file="hardware/mechanicals/right_arm-eb28-j8_11-mec.xml" />
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/right_arm-eb28-j8_11-eln.xml" />
+        <xi:include href="hardware/mechanicals/right_arm-eb28-j8_11-mec.xml" />
         
-        <params file="hardware/motorControl/right_arm-eb28-j8_11-mc_service.xml" />
+        <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc_service.xml" />
 
         <!-- joint number in sub-part             0              1               2                3        -->
         <!-- joint name               "r_thumb_oppose" "r_thumb_proximal" "r_thumb_distal" "r_index_proximal" -->

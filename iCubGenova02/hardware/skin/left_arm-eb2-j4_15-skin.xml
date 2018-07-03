@@ -3,8 +3,8 @@
 
 <devices robot="iCubGenova02" build="1">
     <device name="left_arm-eb2-j4_15-skin" type="embObjSkin">
-        <params file="general.xml" /> 
-        <params file="hardware/electronics/left_arm-eb2-j4_15-eln.xml" />
+        <xi:include href="general.xml" /> 
+        <xi:include href="hardware/electronics/left_arm-eb2-j4_15-eln.xml" />
 
         <group name="SERVICE">
         
@@ -33,7 +33,7 @@
         <group name="patches">
             <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8 </param> 
         </group>
-        <params file="hardware/skin/left_arm-eb2-j4_15-skinSpec.xml" />
+        <xi:include href="hardware/skin/left_arm-eb2-j4_15-skinSpec.xml" />
     </device>
 </devices>
   

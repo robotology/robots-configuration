@@ -6,9 +6,9 @@
 
     <device name="head-j0_1-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/head-j0_1-eln.xml" />
-        <params file="hardware/mechanicals/head-j0_1-mec.xml" />
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/head-j0_1-eln.xml" />
+        <xi:include href="hardware/mechanicals/head-j0_1-mec.xml" />
         
         <!-- joint logical number               0           1           -->
         <!-- joint name                         neck_pitch  neck_roll   -->           

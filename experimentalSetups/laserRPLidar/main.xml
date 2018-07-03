@@ -3,8 +3,8 @@
 <robot name="icub">
 
     <!-- laser -->
-    <devices file="./laser_hw.xml" /> 
-    <devices file="./laser_wrapper.xml" /> 
-   <!--   <devices file="./robotDescriptionServer.xml" />    -->
+    <xi:include href="./laser_hw.xml" /> 
+    <xi:include href="./laser_wrapper.xml" /> 
+   <!--   <xi:include href="./robotDescriptionServer.xml" />    -->
 </robot> 
 

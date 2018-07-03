@@ -3,9 +3,9 @@
 <robot name="icub">
 
     <!-- motor -->
-    <devices file="./motor_hw.xml" /> 
-    <devices file="./motor_wrapper.xml" /> 
-    <devices file="./robotDescriptionServer.xml" /> 
+    <xi:include href="./motor_hw.xml" /> 
+    <xi:include href="./motor_wrapper.xml" /> 
+    <xi:include href="./robotDescriptionServer.xml" /> 
     
 </robot> 
 

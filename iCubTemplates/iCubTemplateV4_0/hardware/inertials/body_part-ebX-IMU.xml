@@ -9,10 +9,10 @@
     <device name="body_part-ebX-imu" type="embObjIMU">
     
         <!-- Include the file which specifies global configuration -->
-        <params file="general.xml"/>
+        <xi:include href="general.xml"/>
 
         <!-- Include the file which specifies which ETH board hosts the service -->
-        <params file="hardware/electronics/filenameOfETHboard-eln.xml" /> 
+        <xi:include href="hardware/electronics/filenameOfETHboard-eln.xml" /> 
     
         <!-- This group defines the service -->
         <group name="SERVICE">

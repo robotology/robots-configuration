@@ -5,8 +5,8 @@
 
     <device name="left_hand_multienc2" type="embObjMultiEnc">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/left_lower_arm-j8_11-eln.xml" />
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/left_lower_arm-j8_11-eln.xml" />
 <!-- <params name="listofjoints"> 0 1 2 3 </params> -->
         <group name="PIPPO">
             <param name="listofjoints"> 0 1 2 3 </param>

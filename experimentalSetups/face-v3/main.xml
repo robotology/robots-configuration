@@ -5,15 +5,15 @@
 
     <!-- head_face v3 -->
     <!-- motor controllers wrappers -->
-     <devices file="./hardware/motorControl/face0_mc_hardware.xml" /> 
-     <devices file="./hardware/motorControl/face1_mc_hardware.xml" /> 
-     <devices file="./wrappers/motorControl/face_mc_wrapper.xml" /> 
+     <xi:include href="./hardware/motorControl/face0_mc_hardware.xml" /> 
+     <xi:include href="./hardware/motorControl/face1_mc_hardware.xml" /> 
+     <xi:include href="./wrappers/motorControl/face_mc_wrapper.xml" /> 
 
     <!-- CALIBRATORS -->
     <!-- it is teh gloabl face -->
-    <devices file="./calibrators/face_calib.xml" />
+    <xi:include href="./calibrators/face_calib.xml" />
     <!-- 
-    <devices file="./calibrators/face1_calib.xml" />
+    <xi:include href="./calibrators/face1_calib.xml" />
 -->
     
 </robot> 

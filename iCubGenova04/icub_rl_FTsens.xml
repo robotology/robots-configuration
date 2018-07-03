@@ -3,10 +3,10 @@
 
     <robot name="iCubGenova04" build="1" portprefix="icub">
     
-    <params file="hardware/electronics/pc104.xml" />
+    <xi:include href="hardware/electronics/pc104.xml" />
     
    <!-- ANALOG SENSOR FT -->
-    <devices file="wrappers/FT/right_foot-FT_wrapper_multipleSens.xml" /> 
-    <devices file="hardware/FT/right_leg-eb9-j4_5-strain2.xml" />   
+    <xi:include href="wrappers/FT/right_foot-FT_wrapper_multipleSens.xml" /> 
+    <xi:include href="hardware/FT/right_leg-eb9-j4_5-strain2.xml" />   
 
         </robot> 

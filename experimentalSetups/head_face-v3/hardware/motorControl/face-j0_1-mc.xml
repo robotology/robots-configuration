@@ -5,9 +5,9 @@
 
     <device name="face-j0_1-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/face-j0_1-eln.xml" />
-        <params file="hardware/mechanicals/face-j0_1-mec.xml" />
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/face-j0_1-eln.xml" />
+        <xi:include href="hardware/mechanicals/face-j0_1-mec.xml" />
 
         <!-- joint number in sub-part           0           1               -->
         <!-- joint name                         jaw         eyelids         -->     

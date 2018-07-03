@@ -3,15 +3,15 @@
 <robot name="icub">
 
     <!-- motor controllers wrappers -->
-    <devices file="./wrappers/motorControl/left_leg_mc_wrapper.xml" /> 
-    <devices file="./hardware/motorControl/icub_left_leg.xml" /> 
+    <xi:include href="./wrappers/motorControl/left_leg_mc_wrapper.xml" /> 
+    <xi:include href="./hardware/motorControl/icub_left_leg.xml" /> 
 
     <!-- REAL ANALOG SENSORS -->
-    <devices file="./wrappers/FT/left_leg_FT_wrapper.xml" /> 
-    <devices file="./hardware/FT/left_leg_strain.xml" /> 
+    <xi:include href="./wrappers/FT/left_leg_FT_wrapper.xml" /> 
+    <xi:include href="./hardware/FT/left_leg_strain.xml" /> 
    
     <!-- CALIBRATORS -->
-    <devices file="./calibrators/left_leg_calib.xml" /> 
+    <xi:include href="./calibrators/left_leg_calib.xml" /> 
     
 </robot> 
 

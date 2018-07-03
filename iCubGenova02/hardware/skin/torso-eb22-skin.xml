@@ -3,8 +3,8 @@
 
 <devices robot="iCubGenova02" build="1">
     <device name="torso-eb22-skin" type="embObjSkin">
-        <params file="general.xml" /> 
-        <params file="hardware/electronics/face-eb22-j0_1-eln.xml" />
+        <xi:include href="general.xml" /> 
+        <xi:include href="hardware/electronics/face-eb22-j0_1-eln.xml" />
         
         <group name="SERVICE">
         
@@ -33,6 +33,6 @@
         <group name="patches">
             <param name="skinCanAddrsPatch1"> 7 8 9 10 </param> 
         </group>
-        <params file="hardware/skin/torso-eb22-skinSpec.xml" />
+        <xi:include href="hardware/skin/torso-eb22-skinSpec.xml" />
     </device>
 </devices>

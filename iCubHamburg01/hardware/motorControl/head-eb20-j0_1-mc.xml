@@ -6,11 +6,11 @@
 
     <device name="head-eb20-j0_1-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/head-eb20-j0_1-eln.xml" />
-        <params file="hardware/mechanicals/head-eb20-j0_1-mec.xml" />
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/head-eb20-j0_1-eln.xml" />
+        <xi:include href="hardware/mechanicals/head-eb20-j0_1-mec.xml" />
 
-        <params file="hardware/motorControl/head-eb20-j0_1-mc_service.xml" />
+        <xi:include href="hardware/motorControl/head-eb20-j0_1-mc_service.xml" />
         
         <!-- joint logical number               0           1           -->
         <!-- joint name                         neck-pitch  neck-roll   -->           

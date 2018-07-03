@@ -2,8 +2,8 @@
 <robot name="icub">
 
     <!-- battery -->
-    <devices file="./wrappers/battery/battery.xml" /> 
-    <devices file="./hardware/battery/battery.xml" /> 
+    <xi:include href="./wrappers/battery/battery.xml" /> 
+    <xi:include href="./hardware/battery/battery.xml" /> 
     
 </robot> 
 

@@ -5,11 +5,11 @@
 
     <device name="left_arm-eb26-j12_15-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/left_arm-eb26-j12_15-eln.xml" />
-        <params file="hardware/mechanicals/left_arm-eb26-j12_15-mec.xml" />
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/left_arm-eb26-j12_15-eln.xml" />
+        <xi:include href="hardware/mechanicals/left_arm-eb26-j12_15-mec.xml" />
         
-        <params file="hardware/motorControl/left_arm-eb26-j12_15-mc_service.xml" />
+        <xi:include href="hardware/motorControl/left_arm-eb26-j12_15-mc_service.xml" />
 
         <!-- joint number in sub-part           0               1               2               3          -->
         <!-- joint name                    index-distal   middle-proximal   middle-distal   little-fingers -->     

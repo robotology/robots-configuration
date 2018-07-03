@@ -3,7 +3,7 @@
 
 <devices robot="iCubOsaka01" build="1">
   <device name="right_arm_mc" type="canmotioncontrol">
-  <params file="general.xml" />
+  <xi:include href="general.xml" />
 <group name="CAN">
 <param name="canbusdevice"> sharedcan     </param>
 <param name="physDevice">   cfw2can       </param>

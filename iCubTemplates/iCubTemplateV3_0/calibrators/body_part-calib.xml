@@ -4,7 +4,7 @@
 <devices robot="RobotName" build="1">
     <device name="BodyPart-calibrator" type="parametricCalibratorEth"> <!-- NOTE: the name is used in wrapper files -->
     
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
         
         <group name="GENERAL">
             <param name="joints"> number of joints of the robot part </param>

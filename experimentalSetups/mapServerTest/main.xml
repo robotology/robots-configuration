@@ -3,7 +3,7 @@
 <robot name="icub">
 
     <!-- laser -->
-    <devices file="./map_server.xml" /> 
+    <xi:include href="./map_server.xml" /> 
     
 </robot> 
 

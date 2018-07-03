@@ -5,9 +5,9 @@
 
     <device name="left_arm-eb2-j4_15-mais" type="embObjMais">
     
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
 
-        <params file="hardware/electronics/left_arm-eb2-j4_15-eln.xml" />
+        <xi:include href="hardware/electronics/left_arm-eb2-j4_15-eln.xml" />
         
         <group name="SERVICE">
         

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><devices build="1" robot="iCubNancy01">
   <device name="right_arm-eb3-j0_3-mc" type="embObjMotionControl">
-      <params file="general.xml"/>
-      <params file="hardware/electronics/right_arm-eb3-j0_3-eln.xml" />
-      <params file="hardware/mechanicals/right_arm-eb3-j0_3-mec.xml" />
+      <xi:include href="general.xml"/>
+      <xi:include href="hardware/electronics/right_arm-eb3-j0_3-eln.xml" />
+      <xi:include href="hardware/mechanicals/right_arm-eb3-j0_3-mec.xml" />
       
-      <params file="hardware/motorControl/right_arm-eb3-j0_3-mc_service.xml" />
+      <xi:include href="hardware/motorControl/right_arm-eb3-j0_3-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                10            160.8             80            106       </param>

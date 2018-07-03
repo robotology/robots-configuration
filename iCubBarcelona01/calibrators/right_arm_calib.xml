@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 <devices robot="iCubBarcelona01" build="1">              
     <device name="right_arm_calibrator" type="parametricCalibrator">   
-<params file="general.xml" />              
+<xi:include href="general.xml" />              
         <group name="GENERAL">             
             <param name="joints"> 8 </param>             
             <param name="deviceName"> Right_Arm_Calibrator </param>    

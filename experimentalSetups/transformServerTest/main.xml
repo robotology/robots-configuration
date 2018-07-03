@@ -3,7 +3,7 @@
 <robot name="icub">
 
     <!-- laser -->
-    <devices file="./transform_server.xml" /> 
+    <xi:include href="./transform_server.xml" /> 
     
 </robot> 
 

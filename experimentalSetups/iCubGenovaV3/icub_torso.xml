@@ -3,13 +3,13 @@
 
     <robot name="iCubGenovaV3" build="1" portprefix="icub">
     
-    <params file="hardware/electronics/pc104.xml" />
+    <xi:include href="hardware/electronics/pc104.xml" />
     
         <!-- TORSO --> 
-    <devices file="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-    <devices file="wrappers/motorControl/torso-mc_wrapper.xml" /> 
+    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" /> 
 
-    <devices file="calibrators/torso-calib.xml" />
+    <xi:include href="calibrators/torso-calib.xml" />
    
    
     </robot> 

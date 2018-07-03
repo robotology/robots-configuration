@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 <devices robot="iCubLyon01" build="1">     
   <device name="torso_mc" type="canmotioncontrol">       
-<params file="general.xml" />              
+<xi:include href="general.xml" />              
 <group name="CAN">           
 <param name="canbusdevice"> sharedcan     </param>       
 <param name="physDevice">   cfw2can       </param>       

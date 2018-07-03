@@ -3,11 +3,11 @@
 
 <devices robot="iCubDarmstadt01" build="1">
     <device name="right_leg-eb8-j0_3-mc" type="embObjMotionControl">
-      <params file="general.xml" />
-      <params file="hardware/electronics/right_leg-eb8-j0_3-eln.xml" />
-      <params file="hardware/mechanicals/right_leg-eb8-j0_3-mec.xml" />
+      <xi:include href="general.xml" />
+      <xi:include href="hardware/electronics/right_leg-eb8-j0_3-eln.xml" />
+      <xi:include href="hardware/mechanicals/right_leg-eb8-j0_3-mec.xml" />
       
-      <params file="hardware/motorControl/right_leg-eb8-j0_3-mc_service.xml" />
+      <xi:include href="hardware/motorControl/right_leg-eb8-j0_3-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                  85            90            70            0    </param>

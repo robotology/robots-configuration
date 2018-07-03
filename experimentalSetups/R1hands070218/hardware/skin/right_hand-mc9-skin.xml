@@ -3,13 +3,13 @@
 
 <devices robot="CER01" build="1">
     <device name="right_hand_skin" type="embObjSkin">
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
  
-        <params file="hardware/electronics/cer_right_hand-mcp9-eln.xml" />
+        <xi:include href="hardware/electronics/cer_right_hand-mcp9-eln.xml" />
         <group name="patches">
             <param name="skinCanAddrsPatch1"> 13 </param> 
         </group>
-        <params file="hardware/skin/right_hand-mc9-skinSpec.xml" />
+        <xi:include href="hardware/skin/right_hand-mc9-skinSpec.xml" />
     </device>
 </devices>
   

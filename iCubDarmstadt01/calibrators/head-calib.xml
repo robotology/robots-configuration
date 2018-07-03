@@ -3,7 +3,7 @@
 
 <devices robot="iCubDarmstadt01" build="1">
 	<device name="head-calibrator" type="parametricCalibratorEth">
-                <params file="general.xml" />
+                <xi:include href="general.xml" />
 
 		<group name="GENERAL">
 		  <param name="joints"> 6 </param> <!-- the number of joints of the robot part  in the canbus version which one is read? check how parameters are spead-->

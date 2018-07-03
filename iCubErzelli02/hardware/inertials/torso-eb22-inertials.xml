@@ -5,9 +5,9 @@
 
     <device name="torso_inertialMTB" type="embObjInertials">
 
-        <params file="general.xml" />
+        <xi:include href="general.xml" />
 
-        <params file="hardware/electronics/face-eb22-j0_1-eln.xml" />
+        <xi:include href="hardware/electronics/face-eb22-j0_1-eln.xml" />
 
         <group name="SERVICE">
 
