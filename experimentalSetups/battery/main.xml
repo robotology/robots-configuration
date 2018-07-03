@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="icub">
-
+<devices>
     <!-- battery -->
     <xi:include href="./wrappers/battery/battery.xml" /> 
     <xi:include href="./hardware/battery/battery.xml" /> 
     
+</devices>
 </robot> 
 

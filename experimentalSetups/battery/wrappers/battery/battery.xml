@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices>
+
   <device name="icubBattery" type="batteryWrapper">
 
       <param name="period"> 10 </param>
@@ -13,4 +13,4 @@
 
       <action phase="shutdown" level="5" type="detach" />
   </device>
-</devices>
+

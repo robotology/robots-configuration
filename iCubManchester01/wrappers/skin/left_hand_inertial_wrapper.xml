@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices robot="iCubManchester01" build="1">      
+      
 	<device name="left_hand_mtb_wrapper" type="analogServer">
 		<param name="period">       10  				</param>
 		<param name="deviceId">     left_hand_inertial			</param>
@@ -12,4 +12,4 @@
 
 		<action phase="shutdown" level="6" type="detach" />
 	</device>
-</devices>
+

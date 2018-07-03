@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices robot="iCubAnkara01" build="1">   
+   
 <device type="canBusAnalogSensor" name="left_leg_strain">
 	<param name="canbusDevice"> "sharedcan" </param>
 	<param name="physDevice"> "cfw2can" </param>
@@ -10,4 +10,4 @@
 	<param name="period"> 1 </param>
 	<param name="useCalibration"> 1 </param>
 </device>
-</devices>
+

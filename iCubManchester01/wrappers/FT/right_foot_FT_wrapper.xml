@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices robot="iCubManchester01" build="1">      
+      
 	<device name="right_foot_as_wrapper" type="analogServer">
 		<param name="period">       10  				</param>
 		<param name="name">     /icub/right_foot/analog:o </param>
@@ -12,4 +12,4 @@
 
 		<action phase="shutdown" level="5" type="detach" />
 	</device>
-</devices>
+

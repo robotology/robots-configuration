@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubGenova01" build="1">
+
   <device name="right_arm_mc_wrapper" type="controlboardwrapper2">
       <paramlist name="networks">
 	  <elem name="right_arm_joints">  0  7  0  7 </elem>
@@ -22,4 +22,4 @@
 
       <action phase="shutdown" level="5" type="detach" />
   </device>
-</devices>
+

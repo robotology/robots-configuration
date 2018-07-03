@@ -1,4 +1,4 @@
-<devices>
+
     <device name="right_arm_cartesian" type="cartesiancontrollerserver">
         <group name="GENERAL">
             <param name="ControllerName">icub/cartesianController/right_arm</param>
@@ -50,4 +50,4 @@
         <action phase="shutdown" level="2" type="detach" />
 
     </device>
-</devices>
+

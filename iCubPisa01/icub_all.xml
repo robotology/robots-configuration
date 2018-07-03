@@ -2,6 +2,7 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 <robot name="iCubPisa01" build="1" portprefix="icub">
 
+<devices>
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/left_arm_mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/right_arm_mc_wrapper.xml" />
@@ -31,4 +32,5 @@
     <xi:include href="calibrators/left_arm_calib.xml" />
     <xi:include href="calibrators/right_arm_calib.xml" />
     <xi:include href="calibrators/left_hand_calib.xml" />
+</devices>
 </robot>

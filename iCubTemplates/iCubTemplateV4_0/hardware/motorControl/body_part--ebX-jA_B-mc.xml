@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="myrobot" build="1">
+
     
     <device name="body_part-ebX-jA_B-mc" type="embObjMotionControl">
     <xi:include href="general.xml"/>
@@ -168,6 +168,6 @@
     
     </device>
   
-</devices>
+
 
 

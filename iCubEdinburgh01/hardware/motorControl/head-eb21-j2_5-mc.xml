@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
  
-<devices robot="iCubEdinburgh01" build="1">
+
     
     <device name="head-eb21-j2_5-mc" type="embObjMotionControl">
     
@@ -60,4 +60,4 @@
         </group>
     
     </device>
-</devices>
+

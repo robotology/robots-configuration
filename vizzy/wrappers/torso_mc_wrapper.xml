@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<devices robot="vizzy" build="1">
+
 	<device name="torso_mc_wrapper" type="controlboardwrapper2">
 		<paramlist name="networks">
 			<elem name="torso_joints"> 0 0 0 0 </elem>
@@ -16,5 +16,5 @@
 		</action>
 		<action phase="shutdown" level="5" type="detach" />
 	</device>
-</devices>
+
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<devices>
+
     <device name="left_hand_as_wrapperMais" type="analogServer">
         <param name="period">       10                  </param>
         <param name="name">     /cer/left_hand/analog:o           </param>
@@ -21,4 +21,4 @@
       
         <action phase="shutdown" level="5" type="detach" />
         </device>
-</devices>
+

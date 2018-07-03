@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<devices robot="iCubHertfordshire01" build="0">      
+      
   <device name="torso_mc" type="canmotioncontrol">       
 <group name="CAN">           
 <param name="canbusdevice"> sharedcan     </param>       
@@ -81,5 +81,5 @@
 </group>       
  
   </device>    
-</devices>     
+     
  

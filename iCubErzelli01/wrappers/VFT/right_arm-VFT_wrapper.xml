@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubErzelli01" build="1">
+
     <device name="right_arm-VFTserver" type="virtualAnalogServer">
         <param name="period">       10                  </param>
         
@@ -24,6 +24,6 @@
 
         <action phase="shutdown" level="5" type="detach" />
     </device>
-</devices>
+
 
 

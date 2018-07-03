@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubLausanne02" build="1">
+
     <device name="left_arm-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <!-- when we'll use entire arm we should use following sets -->
@@ -30,4 +30,4 @@
         <action phase="shutdown" level="5" type="detach" />
 
     </device>
-</devices>
+

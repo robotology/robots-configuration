@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 <robot name="icub">
-
+<devices>
       <!-- motor controllers wrappers -->    
     <xi:include href="wrappers/motorControl/head_mc_wrapper.xml" />  
     <xi:include href="hardware/motorControl/icub_head.xml" />
@@ -12,5 +12,6 @@
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/head_calib.xml" /> 
   
+</devices>
 </robot> 
 

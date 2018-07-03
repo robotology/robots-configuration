@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><devices build="1" robot="iCubNancy01">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
   <device name="torso-eb5-j0_2-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/torso-eb5-j0_2-eln.xml" />
@@ -81,4 +82,4 @@
     </group>
     
   </device>
-</devices>
+

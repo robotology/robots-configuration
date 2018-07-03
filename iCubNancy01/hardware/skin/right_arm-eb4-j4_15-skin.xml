@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubNancy01" build="1">
+
     <device name="right_arm-eb4-j4_15-skin" type="embObjSkin">
         <xi:include href="general.xml" />
  
@@ -11,4 +11,4 @@
         </group>
         <xi:include href="hardware/skin/right_arm-eb4-j4_15-skinSpec.xml" /> 
     </device>  
-</devices>
+

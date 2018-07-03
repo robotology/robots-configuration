@@ -3,6 +3,7 @@
 
     <robot name="iCubEdinburgh01" portprefix="icub">
     
+    <devices>
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
     <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
@@ -98,4 +99,5 @@
     <xi:include href="cartesian/right_arm-cartesian.xml" /> 
     
 
-    </robot> 
+    </devices>
+</robot> 

@@ -1,4 +1,4 @@
-<devices robot="SkinFingertipDemo">
+
     <device name="fingertip" type="canBusSkin">
         <param name="canbusDevice"> "socketcan" </param>
         <param name="physDevice"> "socketcan" </param>
@@ -23,4 +23,4 @@
         <param name="4E_EnaL">      0xFF </param>
         <param name="4E_EnaH">      0xFF </param>
     </device>  
-</devices>
+

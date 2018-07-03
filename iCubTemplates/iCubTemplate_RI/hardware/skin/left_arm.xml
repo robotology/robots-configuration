@@ -1,4 +1,4 @@
-<devices>
+
 	<device name="left_arm_skin" type="canBusSkin">
 		<param name="canbusDevice"> "sharedcan" </param>
 		<param name="physDevice"> "cfw2can" </param>
@@ -26,4 +26,4 @@
         <param name="4E_EnaH">      0x0F 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF </param>
 
 	</device>  
-</devices>
+

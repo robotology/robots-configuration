@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="icub">
 
+<devices>
      <!-- SKIN -->
     <xi:include href="wrappers/skin/left_arm_skin_wrapper.xml" />
     <xi:include href="wrappers/skin/right_arm_skin_wrapper.xml" />  
@@ -17,5 +18,6 @@
     <xi:include href="hardware/skin/right_hand_inertial_mtb_ecan.xml" />  
 
    
+</devices>
 </robot> 
 

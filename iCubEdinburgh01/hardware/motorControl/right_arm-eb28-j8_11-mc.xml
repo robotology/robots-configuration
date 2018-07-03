@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubEdinburgh01" build="1">
+
 
     <device name="right_arm-eb28-j8_11-mc" type="embObjMotionControl">
     
@@ -58,4 +58,4 @@
        
     </device> 
     
-</devices>
+

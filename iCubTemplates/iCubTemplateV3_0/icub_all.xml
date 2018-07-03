@@ -5,9 +5,11 @@
            The specified devices here below depend on robot mechanics and electronic version.-->
 
     <robot name="myrobot" build="1" portprefix="icub">
-    
+    <params>
     <xi:include href="hardware/electronics/pc104.xml" />
-    
+    </params>
+        
+    <devices>
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
     <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
@@ -97,4 +99,5 @@
     <xi:include href="cartesian/left_arm-cartesian.xml" />
     <xi:include href="cartesian/right_arm-cartesian.xml" /> 
     
-    </robot> 
+    </devices>
+</robot> 

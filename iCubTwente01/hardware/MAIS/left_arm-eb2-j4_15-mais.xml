@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubTwente01" build="1">
+
 
     <device name="left_arm-eb2-j4_15-mais" type="embObjMais">
     
@@ -46,5 +46,5 @@
         
     </device> 
     
-</devices>
+
 

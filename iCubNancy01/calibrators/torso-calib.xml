@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<devices build="1" robot="iCubNancy01">
+
 	<device name="torso-calibrator" type="parametricCalibratorEth">
                 <xi:include href="general.xml"/>
                 
@@ -45,4 +45,4 @@
 		<action level="1" phase="interrupt3" type="abort"/>
 
 	</device>
-</devices>
+

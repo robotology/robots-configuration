@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Initialization file for EMS 9 - Right Lower Leg, 2 dof -->
-<devices build="1" robot="iCubNancy01">
+
   <device name="right_leg-eb9-j4_5-mc" type="embObjMotionControl">
         <xi:include href="general.xml" />
         <xi:include href="hardware/electronics/right_leg-eb9-j4_5-eln.xml" />
@@ -84,4 +84,4 @@
     </group>
     
   </device>
-</devices>
+

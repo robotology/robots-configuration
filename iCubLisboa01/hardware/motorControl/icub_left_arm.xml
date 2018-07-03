@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<devices robot="iCubLisboa01" build="1">      
+      
   <device name="left_arm_mc" type="canmotioncontrol">    
 <xi:include href="general.xml" />              
 <group name="CAN">           
@@ -84,4 +84,4 @@
 </group>       
  
   </device>    
-</devices>     
+     

@@ -3,7 +3,7 @@
 
  <!-- Initialization file for EMS 2 - Left Lower Arm, 12 dof plus skin-->
 
-<devices robot="iCubDarmstadt01" build="1">
+
   <device name="left_lower_arm_skin" type="embObjSkin">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/left_lower_arm-ems2-eln.xml" />
@@ -13,5 +13,5 @@
       </group>
       <xi:include href="hardware/skin/left_arm-ems2-skinV1Spec.xml" /> 
   </device>
-</devices>
+
   

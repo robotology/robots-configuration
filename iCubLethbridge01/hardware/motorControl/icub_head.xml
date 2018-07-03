@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
-<devices>      
+      
   <device name="head_mc" type="canmotioncontrol">   
  <xi:include href="general.xml" />  
 <group name="CAN">           
@@ -83,5 +83,5 @@
 </group>       
  
   </device>    
-</devices>     
+     
  

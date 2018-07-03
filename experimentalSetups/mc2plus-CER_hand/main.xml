@@ -3,7 +3,7 @@
 
 <robot name="CER_hand" build="1" portprefix="icub">
 
-    
+<devices>
     <!-- MOTOR CONTROLLERS -->
     
     <!-- CER hand motor controller. there is only one board mc2plu -->
@@ -15,5 +15,6 @@
     <!-- hand calibrator -->
     <xi:include href="./calibrators/CERhand_calib.xml" />
     
+</devices>
 </robot> 
 

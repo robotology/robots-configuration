@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubGenova01" build="1">
+
 	<device name="left_leg_as_wrapper" type="analogServer">
 		<param name="period">       10  				</param>
 <param name="name">     /icub/left_leg/analog:o </param>
@@ -14,4 +14,4 @@
 
 		<action phase="shutdown" level="5" type="detach" />
 	</device>
-</devices>
+

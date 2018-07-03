@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
-<devices robot="iCubTwente01" build="1">
+
   <device name="right_arm-eb4-j4_15-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
@@ -74,4 +74,4 @@
     </group>
 
   </device>
-</devices>
+

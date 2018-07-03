@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubNancy01" build="1">
+
     <device name="torso-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
@@ -25,4 +25,4 @@
       <action phase="shutdown" level="5" type="detach" />
 
     </device>
-</devices>
+

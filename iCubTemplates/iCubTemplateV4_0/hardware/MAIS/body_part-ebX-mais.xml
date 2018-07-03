@@ -3,7 +3,7 @@
 
 <!--    This file contains details of how the mais service is configured. 
   -->
-<devices robot="myrobot" build="1">
+
 
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjMais. -->
     <device name="body_part_mais" type="embObjMais">
@@ -76,6 +76,6 @@
         
     </device> 
     
-</devices>
+
 
 

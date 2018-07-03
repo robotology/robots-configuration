@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubTwente01" build="1">
+
   <device name="inertial" type="inertial">
       <param name="name"> /icub/inertial </param>
       <xi:include href="general.xml" />
       <param name="subdevice">  xsensmtx  </param>
       <param name="serial">  /dev/ttyS0   </param>
   </device>
-</devices>
+

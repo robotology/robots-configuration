@@ -3,7 +3,7 @@
 
  <!-- Initialization file for EMS 10 - CER hand, 2 dof -->
 
-<devices robot="CER01" build="1">
+
   <device name="cer_right_hand_mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/cer_right_hand-mcp9-eln.xml" />
@@ -58,7 +58,7 @@
     </group>
 	
   </device>
-</devices>
+
 
 
 

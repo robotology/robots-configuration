@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- La skin ha bisogno delle info presenti nella parte eln e di info per il suo wrapper, qui sotto -->
-<devices robot="iCubAnkara01" build="1">   
+   
 	<device name="torso_skin_wrapper" type="skinWrapper">
 		<param name="period">       20  				</param>
 		<param name="total_taxels"> 768				</param>
@@ -19,4 +19,4 @@
 
 		<action phase="shutdown" level="5" type="detach" />
 	</device>
-</devices>
+

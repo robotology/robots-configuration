@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
  
-<devices robot="iCubGenova01" build="1"> 
+ 
   <device name="torso_skin" type="canBusSkin">
       <xi:include href="general.xml" />
 
@@ -14,4 +14,4 @@
       </params>
     <xi:include href="hardware/skin/torso-cfw2_can9-skinSpec.xml" /> 
   </device>
-</devices>
+

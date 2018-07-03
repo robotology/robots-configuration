@@ -3,7 +3,7 @@
 
  <!-- Initialization file for EMS 5 - Torso, 3 dof -->
 
-<devices robot="iCubTwente01" build="1">
+
   <device name="torso-eb5-j0_2-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/torso-eb5-j0_2-eln.xml" />
@@ -87,4 +87,4 @@
     </group>
     
   </device>
-</devices>
+

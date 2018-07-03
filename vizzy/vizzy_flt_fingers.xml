@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="vizzy">
+<devices>
 <!-- motor controllers wrappers -->
 <xi:include href="wrappers/left_shoulder_arm_mc_wrapper.xml" />
 <xi:include href="wrappers/right_shoulder_arm_mc_wrapper.xml" />
@@ -18,4 +19,5 @@
 
 <!-- MTX INERTIAL SENSOR -->
 <!--<xi:include href="hardware/inertial.xml" /> -->
+</devices>
 </robot> 

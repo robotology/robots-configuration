@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices>
+
 <device type="canBusInertialMTB" name="left_hand_inertial_mtb">
 	<param name="canbusDevice"> "sharedcan" </param>
 	<param name="physDevice"> "cfw2can" </param>
@@ -8,4 +8,4 @@
     <param name="period"> 10 </param>
     <param name="sensorType"> "extAccAndGyro" </param>
 </device>
-</devices>
+

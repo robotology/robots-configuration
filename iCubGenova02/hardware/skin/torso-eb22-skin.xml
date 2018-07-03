@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubGenova02" build="1">
+
     <device name="torso-eb22-skin" type="embObjSkin">
         <xi:include href="general.xml" /> 
         <xi:include href="hardware/electronics/face-eb22-j0_1-eln.xml" />
@@ -35,4 +35,4 @@
         </group>
         <xi:include href="hardware/skin/torso-eb22-skinSpec.xml" />
     </device>
-</devices>
+

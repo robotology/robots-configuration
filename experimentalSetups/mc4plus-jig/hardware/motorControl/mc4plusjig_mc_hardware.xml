@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubExpSetupMC4PLUSjig" build="1">
+
   <device name="devmc4plusjig_mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/devmc4plusjig-mc4plus01-eln.xml" />
@@ -60,4 +60,4 @@
 	
 	
   </device>
-</devices>
+

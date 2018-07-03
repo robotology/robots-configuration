@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="icub">
-
+<devices>
     <!-- REAL ANALOG SENSORS -->
     <xi:include href="wrappers/FT/left_arm_FT_wrapper.xml" /> 
     <xi:include href="hardware/FT/left_arm_strain.xml" /> 
   
+</devices>
 </robot> 
 

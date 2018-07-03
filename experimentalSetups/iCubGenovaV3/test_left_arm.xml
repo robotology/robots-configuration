@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-    <robot name="iCubGenovaV3" build="1" portprefix="icub">
-    
+<robot name="iCubGenovaV3" build="1" portprefix="icub">
+    <params>
     <xi:include href="hardware/electronics/pc104.xml" />
-    
+    </params>
 
-
+<devices>
     <!-- LEFT ARM -->
     <xi:include href="hardware/motorControl/left_arm-eb1-j0_1-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb2-j2_3-mc.xml" />
@@ -47,4 +47,5 @@
   -->
    
     
-    </robot> 
+    </devices>
+</robot> 

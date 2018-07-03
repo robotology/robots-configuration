@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
-<devices robot="iCubManchester01" build="1">      
+      
     <device name="left_arm_calibrator" type="parametricCalibrator">    
 <xi:include href="general.xml" />              
         <group name="GENERAL">             
@@ -38,7 +38,7 @@
         <action phase="interrupt3" level="1" type="abort" />           
  
 </device>      
-</devices>     
+     
  
  
  

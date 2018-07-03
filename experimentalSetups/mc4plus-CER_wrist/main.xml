@@ -2,7 +2,7 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 <robot name="iCubExpSetupMC4PLUS_CER" build="1" portprefix="icub">
-
+<devices>
     <!-- BOARD MC4PLUSjig -->
     <!-- motor controllers wrappers -->
     <xi:include href="./hardware/motorControl/mc4plusjig_mc_hardware.xml" /> 
@@ -11,5 +11,6 @@
     <!-- CALIBRATORS -->
     <xi:include href="./calibrators/mc4plusjig_calib.xml" />
     
+</devices>
 </robot> 
 

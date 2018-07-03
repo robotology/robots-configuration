@@ -3,7 +3,7 @@
 
  <!-- Initialization file for EMS 8 - Right Upper Leg, 4 dof -->
 
-<devices robot="iCubGenovaV3" build="1">
+
   <device name="right_leg-eb11-j2_3-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/right_leg-eb11-j2_3-eln.xml" />
@@ -94,7 +94,7 @@
     </group>
     
   </device>
-</devices>
+
 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<devices robot="iCubDaejeon01" build="0">
+
 <device type="canBusInertialMTB" name="left_hand_inertial_mtb">
 	<param name="canbusDevice"> "sharedcan" </param>
 	<param name="physDevice"> "cfw2can" </param>
@@ -8,4 +8,4 @@
 	<param name="canAddress"> 0x0E </param>
     <param name="period"> 10 </param>
 </device>
-</devices>
+

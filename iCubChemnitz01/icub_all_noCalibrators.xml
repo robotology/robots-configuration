@@ -2,7 +2,7 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 <robot name="icub">
 
-        
+<devices>
     <!-- motor controllers wrappers -->    
     <xi:include href="wrappers/motorControl/head_mc_wrapper.xml" />   
     <xi:include href="hardware/motorControl/icub_head_nozeros.xml" />
@@ -11,5 +11,6 @@
     <xi:include href="hardware/inertial.xml" />
 
    
+</devices>
 </robot> 
 

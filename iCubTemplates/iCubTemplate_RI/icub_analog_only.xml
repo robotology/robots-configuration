@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="icub">
     
+<devices>
     <!-- cartesian --> 
     <!--
     <xi:include href="cartesian/left_arm_cartesian.xml" />
@@ -84,5 +85,6 @@
     <xi:include href="calibrators2/right_hand_calib.xml" />
     -->
 
+</devices>
 </robot> 
 

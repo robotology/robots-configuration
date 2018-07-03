@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubGenova02" build="1">
+
   <device name="right_leg-eb9-j4_5-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/right_leg-eb9-j4_5-eln.xml" />
@@ -88,4 +88,4 @@
     </group>
 
   </device>
-</devices>
+

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubGenova04" build="1">
+
 
     <device name="left_leg-eb6-j0_3-strain" type="embObjStrain">
     
@@ -50,7 +50,7 @@
     
   </device>
   
-</devices>
+
 
 
 

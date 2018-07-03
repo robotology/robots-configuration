@@ -3,7 +3,7 @@
 
  <!-- Initialization file for EMS 7 - Left Lower Leg, 2 dof -->
 
-<devices robot="iCubDarmstadt01" build="1">
+
   <device name="left_leg-eb7-j4_5-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/left_leg-eb7-j4_5-eln.xml" />
@@ -86,4 +86,4 @@
     </group>
     
   </device>
-</devices>
+

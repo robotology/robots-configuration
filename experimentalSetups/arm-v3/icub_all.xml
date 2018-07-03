@@ -2,7 +2,7 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 <robot name="iCubExpArmV3" build="1" portprefix="icub">
-
+<devices>
     <!-- LEFT ARM-V3 -->
     
     <!-- MOTOR CONTROLLERS -->  
@@ -24,5 +24,6 @@
     <!-- left-arm calibrator-->
     <xi:include href="./calibrators/left_arm-calib.xml" /> 
     
+</devices>
 </robot> 
 

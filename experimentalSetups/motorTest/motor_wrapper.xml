@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices>
+
   <device name="left_arm_wrapper" type="controlboardwrapper2">
 
       <param name="period"> 10 </param>
@@ -17,4 +17,4 @@
 
       <action phase="shutdown" level="5" type="detach" />
   </device>
-</devices>
+

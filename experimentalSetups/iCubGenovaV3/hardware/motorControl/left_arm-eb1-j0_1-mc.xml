@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
  <!-- Initialization file for EMS 1 - Left Upper Arm, 4 dof -->
 
-<devices robot="iCubGenovaV3" build="1">
+
   <device name="left_arm-eb1-j0_1-mc" type="embObjMotionControl">
       <xi:include href="general.xml"/>
       <xi:include href="hardware/electronics/left_arm-eb1-j0_1-eln.xml" />
@@ -97,6 +97,6 @@
     </group>
     
   </device>
-</devices>
+
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<devices robot="iCubHertfordshire01" build="0">
+
     <device name="right_arm_cartesian" type="cartesiancontrollerserver">
         <group name="GENERAL">
             <param name="ControllerName">icub/cartesianController/right_arm</param>
@@ -52,4 +52,4 @@
         <action phase="shutdown" level="2" type="detach" />
 
     </device>
-</devices>
+

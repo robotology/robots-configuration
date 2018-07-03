@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubDarmstadt01" build="1">
+
 
     <device name="head-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
@@ -25,4 +25,4 @@
 
     </device>
   
-</devices>
+

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 <robot name="icub">
-
+<devices>
     <!-- motor -->
     <xi:include href="./motor_hw.xml" /> 
     <xi:include href="./motor_wrapper.xml" /> 
     <xi:include href="./robotDescriptionServer.xml" /> 
     
+</devices>
 </robot> 
 

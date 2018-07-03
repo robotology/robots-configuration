@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 <robot name="icub">
-    
+    <devices>
     <!-- cartesian --> 
     <!--
     <xi:include href="cartesian/left_arm_cartesian.xml" />
@@ -86,5 +86,6 @@
     <xi:include href="calibrators2/right_hand_calib.xml" />
     -->
 
+</devices>
 </robot> 
 

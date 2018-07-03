@@ -2,8 +2,11 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
     <robot name="iCubNottingham01" build="1" portprefix="icub">
+    <params>
     <xi:include href="hardware/electronics/pc104.xml" />
-
+    </params>
+    
+    <devices>
     <!-- CARTESIANS --> 
     <xi:include href="cartesian/left_arm-cartesian.xml" />
     <xi:include href="cartesian/right_arm-cartesian.xml" /> 
@@ -96,4 +99,5 @@
     <xi:include href="calibrators/right_leg-calib.xml" />
     <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/head-calib.xml" /> 
-    </robot> 
+    </devices>
+</robot> 

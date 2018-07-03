@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubErzelli02" build="1">
+
 	<device name="left_leg-calibrator" type="parametricCalibratorEth">
                 <xi:include href="general.xml" />
 
@@ -45,4 +45,4 @@
 		<action phase="interrupt3" level="1" type="abort" />
 
 	</device>
-</devices>
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="icub">
-
+<devices>
     <!-- cartesian --> 
     
     <!-- motor controllers wrappers -->
@@ -22,5 +22,6 @@
 
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/head_calib.xml" /> 
+</devices>
 </robot> 
 

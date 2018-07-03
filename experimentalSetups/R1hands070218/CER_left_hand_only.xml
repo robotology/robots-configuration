@@ -2,8 +2,11 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 <robot name="CER01" build="1" portprefix="cer">
+<params>
     <xi:include href="hardware/electronics/pc104.xml" />
-
+</params>
+    
+<devices>
     <!-- DEVICE -->
     <xi:include href="hardware/motorControl/cer_left_hand-mcp7-mc.xml" />
     <xi:include href="wrappers/motorControl/cer_left_hand-mc_wrapper.xml" />
@@ -14,6 +17,7 @@
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/cer_left_hand-calib.xml" />
+</devices>
 </robot> 
 
 

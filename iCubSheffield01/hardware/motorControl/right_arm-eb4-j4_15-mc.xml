@@ -3,7 +3,7 @@
 
  <!-- Initialization file for EMS 4 - Right Lower Arm, 12 dof plus skin  -->
 
-<devices robot="iCubSheffield01" build="1">
+
   <device name="right_arm-eb4-j4_15-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
@@ -74,4 +74,4 @@
     </group>
 	
   </device>
-</devices>
+

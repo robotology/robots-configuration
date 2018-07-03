@@ -1,4 +1,4 @@
-<devices robot="iCubRome02" build="1">   
+   
     <device name="left_arm_cartesian" type="cartesiancontrollerserver">
         <group name="GENERAL">
             <param name="ControllerName">icub/cartesianController/left_arm</param>
@@ -50,4 +50,4 @@
         <action phase="shutdown" level="2" type="detach" />
 
     </device>
-</devices>
+

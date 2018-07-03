@@ -4,7 +4,7 @@
 <!--    This file contains details of how the skin service is configured. 
   -->
   
-<devices robot="myrobot" build="1">
+
 
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjSkin. -->
     <device name="body_part_skin" type="embObjSkin">
@@ -30,6 +30,6 @@
         
     </device>
     
-</devices>
+
 
   

@@ -2,7 +2,7 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 <robot name="iCubExpHeadV3" build="1" portprefix="icub">
-
+<devices>
     <!-- head_face v3 -->
     <!-- motor controllers wrappers -->
      <xi:include href="./hardware/motorControl/face0_mc_hardware.xml" /> 
@@ -16,5 +16,6 @@
     <xi:include href="./calibrators/face1_calib.xml" />
 -->
     
+</devices>
 </robot> 
 

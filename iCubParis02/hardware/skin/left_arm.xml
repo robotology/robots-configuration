@@ -1,4 +1,4 @@
-<devices>
+
 	<device name="left_arm_skin" type="canBusSkin">
 		<param name="canbusDevice"> "sharedcan" </param>
 		<param name="physDevice"> "cfw2can" </param>
@@ -6,4 +6,4 @@
 		<param name="skinCanIds"> 14 13 12 11 10 9 8 </param>
 		<param name="period"> 10 </param>
 	</device>  
-</devices>
+

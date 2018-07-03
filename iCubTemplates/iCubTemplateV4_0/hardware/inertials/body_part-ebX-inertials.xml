@@ -3,7 +3,7 @@
 
 <!--    This file contains details of how the inertials service is configured. 
   -->
-<devices robot="myrobot" build="1">
+
    
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjInertials. -->
     <device name="body_part_inertials" type="embObjInertials">
@@ -90,7 +90,7 @@
         
     </device>
     
-</devices>
+
 
 
 

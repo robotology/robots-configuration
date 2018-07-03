@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-<devices robot="iCubSingapore01" build="1">
+
     <device name="left_arm-skin_wrapper" type="skinWrapper">
         <param name="period">       20                  </param>
         <param name="total_taxels"> 1344                </param>
@@ -23,4 +23,4 @@
 
         <action phase="shutdown" level="5" type="detach" />
     </device>
-</devices>
+

@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
  <!-- Initialization file for cfw002  motor contol for the head - 6 joints -->
-<devices robot="iCubGenova01" build="1"> 
+ 
   <device name="right_arm_skin" type="canBusSkin">
       <xi:include href="general.xml" />
 
@@ -14,4 +14,3 @@
       </params>
     <xi:include href="hardware/skin/right_arm-cfw2_can8-skinSpec.xml" /> 
   </device>
-</devices>
