@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<robot name="iCubDaejeon01" build="0" portprefix="icub">
+<robot name="iCubDaejeon01" build="0" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
     <!-- cartesian --> 
     <xi:include href="cartesian/left_arm-cartesian.xml" />
@@ -59,7 +59,6 @@
     <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/left_arm-calib.xml" /> 
     <xi:include href="calibrators/right_arm-calib.xml" />
-
 </devices>
 </robot> 
 

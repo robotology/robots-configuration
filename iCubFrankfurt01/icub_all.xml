@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<robot name="iCubFrankfurt01" portprefix="icub" build="1">
+<robot name="iCubFrankfurt01" portprefix="icub" build="1" xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <devices>
     <!-- motor controllers wrappers -->
