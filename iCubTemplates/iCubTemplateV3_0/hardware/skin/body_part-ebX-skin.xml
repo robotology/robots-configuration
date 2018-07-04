@@ -7,7 +7,7 @@
 
 
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjSkin. -->
-    <device name="body_part_skin" type="embObjSkin">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_skin" type="embObjSkin">
     
         <!-- Include the file which specifies global configuration -->
         <xi:include href="general.xml" />

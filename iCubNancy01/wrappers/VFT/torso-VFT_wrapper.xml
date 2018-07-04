@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
-    <device name="torso-VFTserver" type="virtualAnalogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-VFTserver" type="virtualAnalogServer">
         <param name="period">       10                  </param>
         
         

@@ -3,7 +3,7 @@
 
 
 
-    <device name="right_leg-eb8-imu" type="embObjIMU">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb8-imu" type="embObjIMU">
 
         <xi:include href="general.xml" />
 

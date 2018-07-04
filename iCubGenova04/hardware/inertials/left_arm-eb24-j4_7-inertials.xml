@@ -3,7 +3,7 @@
 
 
 
-    <device name="left_arm-eb24-j4_7-inertials" type="embObjInertials">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb24-j4_7-inertials" type="embObjInertials">
 
         <xi:include href="general.xml" />
 

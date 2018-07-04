@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
-    <device name="right_arm-skin_wrapper" type="skinWrapper">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-skin_wrapper" type="skinWrapper">
         <param name="period">       20                  </param>
         <param name="total_taxels"> 1344                </param>
         <param name="device">       skinWrapper             </param>

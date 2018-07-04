@@ -3,7 +3,7 @@
 
 
 
-  <device name="right_leg-eb10-j0_1-mc" type="embObjMotionControl">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb10-j0_1-mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/right_leg-eb10-j0_1-eln.xml" />
       <xi:include href="hardware/mechanicals/right_leg-eb10-j0_1-mec.xml" />

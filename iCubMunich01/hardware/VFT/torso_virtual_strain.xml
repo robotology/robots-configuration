@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-	<device type="canBusVirtualAnalogSensor" name="torso_virtual_strain">
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" type="canBusVirtualAnalogSensor" name="torso_virtual_strain">
 		<param name="canbusDevice"> "sharedcan" </param>
         <param name="physDevice"> "cfw2can" </param>
         <param name="canDeviceNum"> 0 </param>

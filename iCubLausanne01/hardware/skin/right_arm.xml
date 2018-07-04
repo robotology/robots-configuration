@@ -3,7 +3,7 @@
 
  <!-- Initialization file for cfw002  motor contol for the head - 6 joints -->
  
-  <device name="right_arm_skin" type="canBusSkin">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm_skin" type="canBusSkin">
       <xi:include href="general.xml" />
 
 	  <params robot="iCubLausanne01" build="1">

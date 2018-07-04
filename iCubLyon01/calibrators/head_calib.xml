@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
      
-    <device name="head_calibrator" type="parametricCalibrator">        
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_calibrator" type="parametricCalibrator">        
 <xi:include href="general.xml" />              
         <group name="GENERAL">             
             <param name="joints"> 6 </param>             

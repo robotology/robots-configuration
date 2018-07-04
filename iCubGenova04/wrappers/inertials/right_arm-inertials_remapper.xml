@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
-    <device name="right_arm-inertials_remapper" type="multipleanalogsensorsremapper">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-inertials_remapper" type="multipleanalogsensorsremapper">
         <param name="period">       10                  </param>
         <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
              defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-  <device name="icubBattery" type="batteryWrapper">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="icubBattery" type="batteryWrapper">
 
       <param name="period"> 10 </param>
       <param name="name">   /icub/battery:o       </param>

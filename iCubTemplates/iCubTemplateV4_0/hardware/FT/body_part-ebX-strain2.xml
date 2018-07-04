@@ -6,7 +6,7 @@
 
 
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjFTsensor. -->
-    <device name="body_part-ebX-FTsensor" type="embObjFTsensor">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX-FTsensor" type="embObjFTsensor">
     
         <!-- Include the file which specifies global configuration -->
         <xi:include href="general.xml"/>

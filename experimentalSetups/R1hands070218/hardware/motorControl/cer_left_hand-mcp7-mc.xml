@@ -4,7 +4,7 @@
  <!-- Initialization file for EMS 10 - CER hand, 2 dof -->
 
 
-  <device name="cer_left_hand_mc" type="embObjMotionControl">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_left_hand_mc" type="embObjMotionControl">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/cer_left_hand-mcp7-eln.xml" />
       <xi:include href="hardware/mechanicals/cer_left_hand-mcp7-mec.xml" />

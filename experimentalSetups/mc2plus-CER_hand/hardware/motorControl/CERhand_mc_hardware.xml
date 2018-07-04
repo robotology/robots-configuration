@@ -4,7 +4,7 @@
 
 <devices robot="CER_hand" build="1">
 
-    <device name="CER_hand_device" type="embObjMotionControl">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="CER_hand_device" type="embObjMotionControl">
     
         <xi:include href="general.xml" />
         <xi:include href="hardware/electronics/CERhand-mc2plus-eln.xml" />

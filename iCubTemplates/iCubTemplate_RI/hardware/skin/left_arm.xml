@@ -1,5 +1,5 @@
 
-	<device name="left_arm_skin" type="canBusSkin">
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_skin" type="canBusSkin">
 		<param name="canbusDevice"> "sharedcan" </param>
 		<param name="physDevice"> "cfw2can" </param>
 		<param name="canDeviceNum"> 7 </param>

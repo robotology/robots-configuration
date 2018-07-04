@@ -3,7 +3,7 @@
 
 
 
-    <device name="left_arm_mc_wrapper" type="controlboardwrapper2">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <!-- when we'll use entire arm we should use following sets 
             <elem name="FirstSetOfJoints">  4  7   0  3 </elem>

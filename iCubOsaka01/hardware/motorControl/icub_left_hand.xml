@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
-  <device name="left_hand_mc" type="canmotioncontrol">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_mc" type="canmotioncontrol">
   <xi:include href="general.xml" />
 <group name="CAN">
 <param name="canbusdevice"> sharedcan     </param>

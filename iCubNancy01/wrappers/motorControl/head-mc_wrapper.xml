@@ -3,7 +3,7 @@
 
 
 
-    <device name="head-mc_wrapper" type="controlboardwrapper2">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <elem name="FirstSetOfJoints">  0  5  0  5 </elem> 
         </paramlist>

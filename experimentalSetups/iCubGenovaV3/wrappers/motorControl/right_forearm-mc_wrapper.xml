@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
-    <device name="right_forearm-mc_wrapper" type="controlboardwrapper2">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_forearm-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <elem name="SecondSetOfJoints"> 0  3   0  3 </elem> 
             <elem name="ThirdSetOfJoints">  4  7   0  3 </elem> 

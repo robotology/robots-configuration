@@ -3,7 +3,7 @@
 
 
 
-    <device name="right_arm-eb29-j12_15-mais" type="embObjMais">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb29-j12_15-mais" type="embObjMais">
     
         <xi:include href="general.xml" />
 

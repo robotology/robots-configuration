@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 <devices robot="iCubExpSetupMC4PLUS_CER" build="1">
-  <device name="devmc4plusCER_mc_wrapper" type="controlboardwrapper2">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="devmc4plusCER_mc_wrapper" type="controlboardwrapper2">
       <paramlist name="networks">
 	<!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
 	  <elem name="FirstSetOfJoints">  0  2  0  2 </elem> <!-- the 4 numbers are: joint-start-user, jonit-end-user, joint-startboard, joint-end-board -->

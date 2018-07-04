@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
-	<device name="torso_skin" type="canBusSkin">
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_skin" type="canBusSkin">
 		<param name="canbusDevice"> "sharedcan" </param>
 		<param name="physDevice"> "cfw2can" </param>
 		<param name="canDeviceNum"> 9 </param>

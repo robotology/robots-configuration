@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<device type="canBusAnalogSensor" name="left_upper_leg_sg">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" type="canBusAnalogSensor" name="left_upper_leg_sg">
 	<param name="canbusDevice"> "sharedcan" </param>
 	<param name="physDevice"> "cfw2can" </param>
 	<param name="canDeviceNum"> 3 </param>

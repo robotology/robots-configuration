@@ -6,7 +6,7 @@
 
 
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjIMU. -->
-    <device name="body_part-ebX-imu" type="embObjIMU">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX-imu" type="embObjIMU">
     
         <!-- Include the file which specifies global configuration -->
         <xi:include href="general.xml"/>

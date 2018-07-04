@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
       
-	<device name="left_hand_mtb_wrapper" type="analogServer">
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_mtb_wrapper" type="analogServer">
 		<param name="period">       10  				</param>
 		<param name="deviceId">     left_hand_inertial			</param>
 		

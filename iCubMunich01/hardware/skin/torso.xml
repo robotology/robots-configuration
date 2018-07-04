@@ -3,7 +3,7 @@
 
  
  
-  <device name="torso_skin" type="canBusSkin">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_skin" type="canBusSkin">
       <xi:include href="general.xml" />
 
 	  <params robot="iCubMunich01" build="1">

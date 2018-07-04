@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 
 
-    <device name="robotDescription" type="robotDescriptionServer">  
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="robotDescription" type="robotDescriptionServer">  
         <param name="local">  /robotDescription	</param>
          
         <action phase="startup" level="5" type="attach">

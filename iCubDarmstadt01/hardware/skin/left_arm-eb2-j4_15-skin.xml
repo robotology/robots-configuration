@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
-    <device name="left_arm-eb2-j4_15-skin" type="embObjSkin">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb2-j4_15-skin" type="embObjSkin">
         <xi:include href="general.xml" />
  
         <xi:include href="hardware/electronics/left_arm-eb2-j4_15-eln.xml" />

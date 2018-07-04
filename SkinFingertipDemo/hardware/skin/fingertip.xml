@@ -1,5 +1,5 @@
 
-    <device name="fingertip" type="canBusSkin">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="fingertip" type="canBusSkin">
         <param name="canbusDevice"> "socketcan" </param>
         <param name="physDevice"> "socketcan" </param>
         <param name="canDeviceNum"> 0 </param>

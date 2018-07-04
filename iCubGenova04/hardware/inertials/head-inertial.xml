@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
 
 
- <device name="inertial" type="inertial">
+ <device xmlns:xi="http://www.w3.org/2001/XInclude" name="inertial" type="inertial">
       <param name="name">  /icub/inertial  </param>
       <param name="subdevice">  imuBosch_BNO055  </param>
       <param name="comport">  /dev/ttyFTDI   </param>

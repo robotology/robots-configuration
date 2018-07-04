@@ -4,7 +4,7 @@
  <!-- Initialization file for EMS 2 - Left Lower Arm, 12 dof plus skin-->
 
 
-  <device name="left_lower_arm_skin" type="embObjSkin">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_lower_arm_skin" type="embObjSkin">
       <xi:include href="general.xml" />
       <xi:include href="hardware/electronics/left_lower_arm-ems2-eln.xml" />
 	<group name="patches">
