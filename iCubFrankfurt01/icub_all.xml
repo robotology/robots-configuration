@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<robot name="iCubFrankfurt01" portprefix="icub" build="1">
+
+<devices>
+    <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/head_mc_wrapper.xml" />
+    <xi:include href="hardware/motorControl/icub_head.xml" />
+    
+
+    <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
+    <xi:include href="hardware/inertial.xml" />
+   
+    <!-- CALIBRATORS -->
+    <xi:include href="calibrators/head_calib.xml" /> 
+</devices>
+</robot> 
+
