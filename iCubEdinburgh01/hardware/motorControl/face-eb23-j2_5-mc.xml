@@ -9,7 +9,7 @@
         <xi:include href="hardware/electronics/face-eb23-j2_5-eln.xml" />
         <xi:include href="hardware/mechanicals/face-eb23-j2_5-mec.xml" />
 
-        <xi:include href="hardware/motorControl/face-eb23-j2_5-mc_service.xml" />
+        <xi:include href="./face-eb23-j2_5-mc_service.xml" />
 
         <!-- joint number in sub-part           0           1           2           3            -->
         <!-- joint name                         lip-right   lip-high    lip-left   lip-bottom   -->   

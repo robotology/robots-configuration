@@ -9,7 +9,7 @@
       <xi:include href="hardware/electronics/left_arm-eb2-j4_15-eln.xml" />
       <xi:include href="hardware/mechanicals/left_arm-eb2-j4_15-mec.xml" />
 
-      <xi:include href="hardware/motorControl/left_arm-eb2-j4_15-mc_service.xml" />
+      <xi:include href="./left_arm-eb2-j4_15-mc_service.xml" />
       
     <group name="LIMITS">
         <param name="jntPosMax">                      60            25            25            60            90            90            180           90            180           90            180           270       </param>

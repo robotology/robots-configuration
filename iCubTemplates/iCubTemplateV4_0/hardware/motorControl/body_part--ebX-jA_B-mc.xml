@@ -9,7 +9,7 @@
     <xi:include href="hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
       
       
-    <xi:include href="hardware/motorControl/body_part-ebX-jA_B-mc_service.xml" /> 
+    <xi:include href="./body_part-ebX-jA_B-mc_service.xml" /> 
 
     <group name="LIMITS">
         <param name="jntPosMax">     Max position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMax. See https://wiki.icub.org/wiki/ICub_joints_limits for more details</param>  

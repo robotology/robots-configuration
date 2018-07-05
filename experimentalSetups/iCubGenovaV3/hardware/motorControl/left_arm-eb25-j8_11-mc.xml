@@ -9,7 +9,7 @@
         <xi:include href="hardware/electronics/left_arm-eb25-j8_11-eln.xml" />
         <xi:include href="hardware/mechanicals/left_arm-eb25-j8_11-mec.xml" />
         
-        <xi:include href="hardware/motorControl/left_arm-eb25-j8_11-mc_service.xml" /> 
+        <xi:include href="./left_arm-eb25-j8_11-mc_service.xml" /> 
 
         <!-- joint number in sub-part             0              1               2                3        -->
         <!-- joint name               "l_thumb_oppose" "l_thumb_proximal" "l_thumb_distal" "l_index_proximal" -->

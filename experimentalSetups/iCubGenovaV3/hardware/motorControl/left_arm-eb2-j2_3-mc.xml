@@ -8,7 +8,7 @@
       <xi:include href="hardware/electronics/left_arm-eb2-j2_3-eln.xml" />
       <xi:include href="hardware/mechanicals/left_arm-eb2-j2_3-mec.xml" />
 
-      <xi:include href="hardware/motorControl/left_arm-eb2-j2_3-mc_service.xml" />            
+      <xi:include href="./left_arm-eb2-j2_3-mc_service.xml" />            
 
     <group name="LIMITS">
         <!--                                    0                1  -->
