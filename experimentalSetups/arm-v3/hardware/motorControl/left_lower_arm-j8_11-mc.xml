@@ -6,7 +6,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_lower_arm-j8_11-mc" type="embObjMotionControl">
     
         <xi:include href="../../general.xml" />
-        <xi:include href="hardware/electronics/left_lower_arm-j8_11-eln.xml" />
+        <xi:include href="../../hardware/electronics/left_lower_arm-j8_11-eln.xml" />
         <xi:include href="hardware/mechanicals/left_lower_arm-j8_11-mec.xml" />
         <xi:include href="hardware/motorControl/left_arm-j8_11-mc-service.xml"/>
 

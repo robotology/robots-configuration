@@ -6,7 +6,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="face-j0_1-mc" type="embObjMotionControl">
     
         <xi:include href="../../general.xml" />
-        <xi:include href="hardware/electronics/face-j0_1-eln.xml" />
+        <xi:include href="../../hardware/electronics/face-j0_1-eln.xml" />
         <xi:include href="hardware/mechanicals/face-j0_1-mec.xml" />
 
         <!-- joint number in sub-part           0           1               -->

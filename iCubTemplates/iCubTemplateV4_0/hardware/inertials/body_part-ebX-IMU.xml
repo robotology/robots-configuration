@@ -12,7 +12,7 @@
         <xi:include href="../../general.xml"/>
 
         <!-- Include the file which specifies which ETH board hosts the service -->
-        <xi:include href="hardware/electronics/filenameOfETHboard-eln.xml" /> 
+        <xi:include href="../../hardware/electronics/filenameOfETHboard-eln.xml" /> 
     
         <!-- This group defines the service -->
         <group name="SERVICE">

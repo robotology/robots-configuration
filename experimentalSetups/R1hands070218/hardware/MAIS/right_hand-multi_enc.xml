@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_hand_multienc" type="embObjMultiEnc">
         <xi:include href="../../general.xml" />
-        <xi:include href="hardware/electronics/cer_right_hand-mcp9-eln.xml" />
+        <xi:include href="../../hardware/electronics/cer_right_hand-mcp9-eln.xml" />
         <group name="JOINTS">
             <param name="listofjoints"> 0 1 </param>
             <param name="encoderConversionFactor"> -182.044 182.044 1.0 -182.044 182.044 1.0 </param>

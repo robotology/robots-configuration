@@ -4,7 +4,7 @@
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb5-j0_2-mc" type="embObjMotionControl">
       <xi:include href="../../general.xml" />
-      <xi:include href="hardware/electronics/torso-eb5-j0_2-eln.xml" />
+      <xi:include href="../../hardware/electronics/torso-eb5-j0_2-eln.xml" />
       <xi:include href="hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
       
     <xi:include href="./torso-eb5-j0_2-mc_service.xml" />

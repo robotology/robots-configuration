@@ -7,7 +7,7 @@
 
         <xi:include href="../../general.xml" />
 
-        <xi:include href="hardware/electronics/right_leg-eb11-skin-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_leg-eb11-skin-eln.xml" />
 
         <group name="SERVICE">
 

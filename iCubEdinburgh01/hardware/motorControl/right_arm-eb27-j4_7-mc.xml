@@ -6,7 +6,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb27-j4_7-mc" type="embObjMotionControl">
     
         <xi:include href="../../general.xml" />
-        <xi:include href="hardware/electronics/right_arm-eb27-j4_7-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb27-j4_7-eln.xml" />
         <xi:include href="hardware/mechanicals/right_arm-eb27-j4_7-mec.xml" />
         
         <xi:include href="./right_arm-eb27-j4_7-mc_service.xml" />
