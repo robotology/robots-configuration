@@ -5,7 +5,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="face-eb23-j2_5-mc" type="embObjMotionControl">
     
-        <xi:include href="general.xml" />
+        <xi:include href="../../general.xml" />
         <xi:include href="hardware/electronics/face-eb23-j2_5-eln.xml" />
         <xi:include href="hardware/mechanicals/face-eb23-j2_5-mec.xml" />
 

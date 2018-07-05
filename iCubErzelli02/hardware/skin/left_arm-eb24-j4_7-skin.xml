@@ -3,7 +3,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb24-j4_7-skin" type="embObjSkin">
-        <xi:include href="general.xml" />
+        <xi:include href="../../general.xml" />
  
         <xi:include href="hardware/electronics/left_arm-eb24-j4_7-eln.xml" />
         <group name="patches">

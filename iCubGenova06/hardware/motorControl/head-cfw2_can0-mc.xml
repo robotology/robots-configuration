@@ -4,7 +4,7 @@
  <!-- Initialization file for cfw002  motor contol for the head - 6 joints -->
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_mc" type="canmotioncontrol">
-      <xi:include href="general.xml" />
+      <xi:include href="../../general.xml" />
       <xi:include href="hardware/electronics/head-cfw2_can0-eln.xml" />
       <xi:include href="hardware/mechanicals/head-cfw2_can0-mec.xml" />
   </device>

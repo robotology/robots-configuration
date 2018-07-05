@@ -3,7 +3,7 @@
 
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="mc4plusjig_mais2" type="embObjAnalogSensor">
-     <xi:include href="general.xml" />
+     <xi:include href="../../general.xml" />
      <xi:include href="hardware/electronics/pc104.xml" />
      <xi:include href="hardware/electronics/devmc4plusjig-mc4plus02-eln.xml" />
      <group name="GENERAL"> 

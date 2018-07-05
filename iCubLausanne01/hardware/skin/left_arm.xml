@@ -4,7 +4,7 @@
  <!-- Initialization file for cfw002  motor contol for the head - 6 joints -->
  
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_skin" type="canBusSkin">
-      <xi:include href="general.xml" />
+      <xi:include href="../../general.xml" />
 
 	  <params robot="iCubLausanne01" build="1">
         <param name="canDeviceNum"> 7         </param>

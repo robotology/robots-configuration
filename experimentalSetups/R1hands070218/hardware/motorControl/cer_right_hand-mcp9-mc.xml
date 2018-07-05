@@ -5,7 +5,7 @@
 
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_right_hand_mc" type="embObjMotionControl">
-      <xi:include href="general.xml" />
+      <xi:include href="../../general.xml" />
       <xi:include href="hardware/electronics/cer_right_hand-mcp9-eln.xml" />
       <xi:include href="hardware/mechanicals/cer_right_hand-mcp9-mec.xml" />
       <xi:include href="hardware/motorControl/cer_right_hand-mcp9-mc-service.xml" />

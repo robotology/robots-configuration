@@ -5,7 +5,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb29-j12_15-mais" type="embObjMais">
     
-        <xi:include href="general.xml" />
+        <xi:include href="../../general.xml" />
 
         <xi:include href="hardware/electronics/right_arm-eb29-j12_15-eln.xml" />
         

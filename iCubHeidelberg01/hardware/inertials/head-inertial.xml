@@ -4,7 +4,7 @@
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="inertial" type="inertial">
       <param name="name"> /icub/inertial </param>
-      <xi:include href="general.xml" />
+      <xi:include href="../../general.xml" />
       <param name="subdevice">  xsensmtx  </param>
       <param name="serial">  /dev/ttyS0   </param>
   </device>

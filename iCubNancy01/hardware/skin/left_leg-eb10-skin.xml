@@ -3,7 +3,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb10-skin" type="embObjSkin">
-        <xi:include href="general.xml" />
+        <xi:include href="../../general.xml" />
  
         <xi:include href="hardware/electronics/left_leg-eb10-skin-eln.xml" />
         <group name="patches">

@@ -9,7 +9,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_inertials" type="embObjInertials">
     
         <!-- Include the file which specifies global configuration -->
-        <xi:include href="general.xml" />     
+        <xi:include href="../../general.xml" />     
 
         <!-- Include the file which specifies which ETH board hosts the service -->
         <xi:include href="hardware/electronics/body_part-ebX-jA_B-eln.xml" />

@@ -3,7 +3,7 @@
 
  
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-cfw2_can9-skin" type="canBusSkin">
-      <xi:include href="general.xml" />
+      <xi:include href="../../general.xml" />
 
 	  <params robot="iCubTwente01" build="1">
         <param name="canDeviceNum"> 9         </param>  

@@ -5,7 +5,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_lower_arm_skin" type="embObjSkin">
-        <xi:include href="general.xml" />
+        <xi:include href="../../general.xml" />
  
         <xi:include href="hardware/electronics/right_lower_arm-ems4-eln.xml" />
         <group name="patches">

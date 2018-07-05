@@ -9,7 +9,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX" type="embObjStrain">
     
         <!-- Include the file which specifies global configuration -->
-        <xi:include href="general.xml"/>
+        <xi:include href="../../general.xml"/>
 
         <!-- Include the file which specifies which ETH board hosts the service -->
         <xi:include href="hardware/electronics/filenameOfETHboard-eln.xml" /> 

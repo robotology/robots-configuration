@@ -5,7 +5,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_inertialMTB" type="embObjInertials">
 
-        <xi:include href="general.xml" />
+        <xi:include href="../../general.xml" />
 
         <xi:include href="hardware/electronics/face-eb22-j0_1-eln.xml" />
 

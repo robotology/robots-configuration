@@ -5,7 +5,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_multienc2" type="embObjMultiEnc">
     
-        <xi:include href="general.xml" />
+        <xi:include href="../../general.xml" />
         <xi:include href="hardware/electronics/left_lower_arm-j8_11-eln.xml" />
 <!-- <params name="listofjoints"> 0 1 2 3 </params> -->
         <group name="PIPPO">

@@ -5,7 +5,7 @@
 
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb11-j2_3-mc" type="embObjMotionControl">
-      <xi:include href="general.xml" />
+      <xi:include href="../../general.xml" />
       <xi:include href="hardware/electronics/right_leg-eb11-j2_3-eln.xml" />
       <xi:include href="hardware/mechanicals/right_leg-eb11-j2_3-mec.xml" />
       
