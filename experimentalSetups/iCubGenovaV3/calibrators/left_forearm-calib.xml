@@ -3,7 +3,7 @@
 
 
 	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_forearm-calibrator" type="parametricCalibratorEth">
-                <xi:include href="general.xml" />
+                <xi:include href="../general.xml" />
 
 		<group name="GENERAL">
 		    <param name="joints"> 12 </param>

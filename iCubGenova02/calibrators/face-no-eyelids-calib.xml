@@ -5,7 +5,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="face-no-eyelids-calibrator" type="parametricCalibratorEth">
     
-        <xi:include href="general.xml" />
+        <xi:include href="../general.xml" />
                 
         <group name="GENERAL">
             <param name="joints"> 5 </param> 

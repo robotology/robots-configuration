@@ -3,7 +3,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-calibrator" type="parametricCalibratorEth">
-                <xi:include href="general.xml" />
+                <xi:include href="../general.xml" />
 
         <group name="GENERAL">
             <param name="joints">16</param> <!-- the number of joints of the robot part -->
