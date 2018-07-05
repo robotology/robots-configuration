@@ -3,7 +3,7 @@
 
 <params robot="iCubGenovaV3" build="1">
 
-    <xi:include href="hardware/electronics/pc104.xml" />
+    <xi:include href="./pc104.xml" />
   
     <group name="ETH_BOARD">
   

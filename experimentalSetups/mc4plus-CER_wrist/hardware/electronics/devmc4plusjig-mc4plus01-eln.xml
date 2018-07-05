@@ -2,7 +2,7 @@
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <params robot="iCubExpSetupMC4PLUS_CER" build="1">
-    <xi:include href="hardware/electronics/pc104.xml" />
+    <xi:include href="./pc104.xml" />
     
     <group name="ETH">
         <param name="IpAddress">	10.0.1.22	</param>
