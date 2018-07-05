@@ -7,7 +7,7 @@
     
         <xi:include href="../../general.xml" />
         <xi:include href="../../hardware/electronics/left_lower_arm-j4_7-eln.xml" />
-<!-- <params name="listofjoints"> 0 1 2 3 </params> -->
+<!-- <params xmlns:xi="http://www.w3.org/2001/XInclude" name="listofjoints"> 0 1 2 3 </params> -->
         <group name="JOINTS">
             <param name="listofjoints"> 0 1 2 3 </param>
         </group>

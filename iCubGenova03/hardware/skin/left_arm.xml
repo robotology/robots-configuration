@@ -5,7 +5,7 @@
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_skin" type="canBusSkin">
       <xi:include href="../../general.xml" />
 
-	  <params robot="iCubGenova03" build="1">
+	  <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova03" build="1">
         <param name="canDeviceNum"> 7         </param>
         <param name="skinCanIds">   14 13 12 11 10 9 8  </param>
         <param name="period"> 10              </param>

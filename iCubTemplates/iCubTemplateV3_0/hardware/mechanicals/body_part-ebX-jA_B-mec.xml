@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params robot="myrobot" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="myrobot" build="1">
     <group name="GENERAL">
         <param name="MotioncontrolVersion">  Version of motor control device.  Currently is 3.</param>
         <param name="Joints">           Number of joints manged from this device. Usually is the number of joints controlled by Ethernet board.       </param> 

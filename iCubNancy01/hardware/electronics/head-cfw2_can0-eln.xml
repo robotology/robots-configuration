@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><params build="1" robot="iCubNancy01">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><params xmlns:xi="http://www.w3.org/2001/XInclude" build="1" robot="iCubNancy01">
 
     <param name="canbusdevice">  cfw2can </param>
     <group name="CAN">

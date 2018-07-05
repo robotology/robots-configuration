@@ -6,7 +6,7 @@
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_skin" type="canBusSkin">
       <xi:include href="../../general.xml" />
 
-	  <params robot="iCubPlymouth01" build="1">
+	  <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubPlymouth01" build="1">
         <param name="canDeviceNum"> 9         </param>
         <param name="skinCanIds">   7 8 9 10  </param>
         <param name="period"> 10              </param>

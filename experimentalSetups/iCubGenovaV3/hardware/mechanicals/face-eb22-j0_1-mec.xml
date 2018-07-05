@@ -5,7 +5,7 @@
  encoder-resolution x motor-reduction(if present) x 4,  where 4 is given by hal which samples 4 time 
       each line of the encoder -->
 
-<params robot="iCubGenovaV3" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenovaV3" build="1">
 
     <group name="GENERAL">
         <param name="MotioncontrolVersion">  5 </param>

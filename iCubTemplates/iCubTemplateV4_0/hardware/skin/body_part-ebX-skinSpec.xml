@@ -4,7 +4,7 @@
 <!--    This file contains details of how the skin service is configured. 
   -->
   
-<params robot="myrobot" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="myrobot" build="1">
          
         <!--    This group contains the default board configuration common to all MTBs. All boards receive these settings.
           -->

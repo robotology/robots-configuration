@@ -3,7 +3,7 @@
 
 
 
-<params robot="CER_hand" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="CER_hand" build="1">
 
     <group name="GENERAL">
         <param name="MotioncontrolVersion">  2 </param>
