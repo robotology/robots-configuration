@@ -6,7 +6,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX-jA_B-mc" type="embObjMotionControl">
     <xi:include href="../../general.xml"/>
     <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
-    <xi:include href="hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
+    <xi:include href="../../hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
       
       
     <xi:include href="./body_part-ebX-jA_B-mc_service.xml" /> 

@@ -8,7 +8,7 @@
     
         <xi:include href="../../general.xml" />
         <xi:include href="../../hardware/electronics/head-eb20-j0_1-eln.xml" />
-        <xi:include href="hardware/mechanicals/head-eb20-j0_1-mec.xml" />
+        <xi:include href="../../hardware/mechanicals/head-eb20-j0_1-mec.xml" />
 
         <xi:include href="./head-eb20-j0_1-mc_service.xml" />
         

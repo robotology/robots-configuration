@@ -7,7 +7,7 @@
     
         <xi:include href="../../general.xml" />
         <xi:include href="../../hardware/electronics/left_lower_arm-j4_7-eln.xml" />
-        <xi:include href="hardware/mechanicals/left_lower_arm-j4_7-mec.xml" />
+        <xi:include href="../../hardware/mechanicals/left_lower_arm-j4_7-mec.xml" />
         <xi:include href="hardware/motorControl/left_arm-j4_7-mc-service.xml"/><!-- left_arm-j4_7-mc-board.xml-->
 
 

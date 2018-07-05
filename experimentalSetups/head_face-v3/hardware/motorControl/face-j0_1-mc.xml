@@ -7,7 +7,7 @@
     
         <xi:include href="../../general.xml" />
         <xi:include href="../../hardware/electronics/face-j0_1-eln.xml" />
-        <xi:include href="hardware/mechanicals/face-j0_1-mec.xml" />
+        <xi:include href="../../hardware/mechanicals/face-j0_1-mec.xml" />
 
         <!-- joint number in sub-part           0           1               -->
         <!-- joint name                         jaw         eyelids         -->     

@@ -8,7 +8,7 @@
     
         <xi:include href="../../general.xml" />
         <xi:include href="../../hardware/electronics/CERhand-mc2plus-eln.xml" />
-        <xi:include href="hardware/mechanicals/CERhand-mc2plus-mec.xml" />
+        <xi:include href="../../hardware/mechanicals/CERhand-mc2plus-mec.xml" />
 
         <!-- joint number in sub-part           0           1               -->
         <!-- joint name                         first       second           -->     

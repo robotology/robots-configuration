@@ -5,7 +5,7 @@
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="devmc4plusjig_mc" type="embObjMotionControl">
       <xi:include href="../../general.xml" />
       <xi:include href="../../hardware/electronics/devmc4plusjig-mc4plus01-eln.xml" />
-      <xi:include href="hardware/mechanicals/devmc4plusjig-mc4plus01-mec.xml" />
+      <xi:include href="../../hardware/mechanicals/devmc4plusjig-mc4plus01-mec.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">               360	 360                  </param>
