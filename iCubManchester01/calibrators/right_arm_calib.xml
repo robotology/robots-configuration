@@ -1,4 +1,3 @@
- 
 <?xml version="1.0" encoding="UTF-8" ?>    
 <devices robot="iCubManchester01" build="1">      
     <device name="right_arm_calibrator" type="parametricCalibrator">   
