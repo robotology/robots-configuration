@@ -10,54 +10,60 @@
         <xi:include href="../../hardware/electronics/right_leg-eb11-skin-eln.xml" />
         
         <group name="SERVICE">
-        
-            <param name="type"> eomn_serv_AS_inertials </param>                
-        
+
+            <param name="type"> eomn_serv_AS_inertials </param>
+
             <group name="PROPERTIES">
-            
+
                 <group name="CANBOARDS">
                     <param name="type">                 eobrd_mtb           </param>
 
                     <group name="PROTOCOL">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param>     
-                    </group>                    
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param> 
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
                         <param name="build">            0                   </param>
                     </group>
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       on_eb11_accel          on_eb11_gyros          r_upper_leg_1_10B1      
-                                            r_upper_leg_2_10B2      r_upper_leg_3_10B3      r_upper_leg_4_10B4      r_upper_leg_5_10B5  
-                                            r_upper_leg_6_10B6      r_upper_leg_7_10B7      r_lower_leg_1_10B8      r_lower_leg_2_10B9  
-                                            r_lower_leg_3_10B10     r_lower_leg_4_10B11     r_foot_1_10B12          r_foot_2_10B13              
+                    <param name="id">       r_upper_leg_ems_acc_eb11   r_upper_leg_ems_gyro_eb11
+                                            r_upper_leg_mtb_acc_11b1   r_upper_leg_mtb_acc_11b2   r_upper_leg_mtb_acc_11b3   r_upper_leg_mtb_acc_11b4
+                                            r_upper_leg_mtb_acc_11b5   r_upper_leg_mtb_acc_11b6   r_upper_leg_mtb_acc_11b7
+                                            r_lower_leg_mtb_acc_11b8   r_lower_leg_mtb_acc_11b9   r_lower_leg_mtb_acc_11b10  r_lower_leg_mtb_acc_11b11
+                                            r_foot_mtb_acc_11b12       r_foot_mtb_acc_11b13
                     </param>
 
-                    <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d  eoas_accel_mtb_int     
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int   
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int   
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int           
+                    <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d  eoas_accel_mtb_int
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
                     </param>
 
-                    <param name="location"> ETH:0                   ETH:0                   CAN1:1             
-                                            CAN1:2                  CAN1:3                  CAN1:4                  CAN1:5              
-                                            CAN1:6                  CAN1:7                  CAN2:8                  CAN2:9              
-                                            CAN2:10                 CAN2:11                 CAN2:12                 CAN2:13             
-                    </param>            
+                    <param name="location"> ETH:0                   ETH:0                   CAN1:1
+                                            CAN1:2                  CAN1:3                  CAN1:4                  CAN1:5
+                                            CAN1:6                  CAN1:7                  CAN2:8                  CAN2:9
+                                            CAN2:10                 CAN2:11                 CAN2:12                 CAN2:13
+                    </param>
                 </group>
-                                            
+
             </group>
-            
-            <group name="SETTINGS"> 
+
+            <group name="SETTINGS">
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">       r_upper_leg_1_10B1  r_upper_leg_2_10B2 r_upper_leg_3_10B3 r_upper_leg_4_10B4 </param>                
+                <param name="enabledSensors">       r_upper_leg_ems_gyro_eb11
+                                                    r_upper_leg_mtb_acc_11b1   r_upper_leg_mtb_acc_11b2   r_upper_leg_mtb_acc_11b3   r_upper_leg_mtb_acc_11b4
+                                                    r_upper_leg_mtb_acc_11b5   r_upper_leg_mtb_acc_11b6   r_upper_leg_mtb_acc_11b7
+                                                    r_lower_leg_mtb_acc_11b8   r_lower_leg_mtb_acc_11b9   r_lower_leg_mtb_acc_11b10  r_lower_leg_mtb_acc_11b11
+                                                    r_foot_mtb_acc_11b12       r_foot_mtb_acc_11b13
+                </param>
             </group>
-            
-        </group>        
-        
+
+        </group>
+
     </device>
     
 

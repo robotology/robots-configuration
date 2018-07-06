@@ -30,9 +30,9 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       on_eb2_accel           on_eb2_gyros               
-                                            l_upper_arm_4           l_upper_arm_1           l_upper_arm_3           l_upper_arm_2 
-                                            l_forearm_1             l_forearm_2             l_hand                  l_hand_gyro
+                    <param name="id">       l_upper_arm_ems_acc_eb2   l_upper_arm_ems_gyro_eb2
+                                            l_upper_arm_mtb_acc_1b10  l_upper_arm_mtb_acc_1b11  l_upper_arm_mtb_acc_1b12  l_upper_arm_mtb_acc_1b13
+                                            l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9     l_hand_gyro
                     </param>
 
                     <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d       
@@ -50,7 +50,10 @@
             
             <group name="SETTINGS"> 
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">       l_hand l_forearm_1 l_forearm_2 l_hand_gyro </param>                
+                <param name="enabledSensors">       l_upper_arm_ems_acc_eb2   l_upper_arm_ems_gyro_eb2
+                                                    l_upper_arm_mtb_acc_1b10  l_upper_arm_mtb_acc_1b11  l_upper_arm_mtb_acc_1b12  l_upper_arm_mtb_acc_1b13
+                                                    l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9
+                </param>
             </group>
             
         </group>        
