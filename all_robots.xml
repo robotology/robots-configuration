@@ -50,7 +50,7 @@
 	<!-- <xi:include href="./iCubOffenbach02" /> -->
 	<!-- <xi:include href="./iCubPrototype01" /> -->
 	<xi:include href="./iCubHamburg01/icub_all.xml" />
-	<xi:include href="./iCubFrankfurt01/icub_head.xml" />
+	<xi:include href="./iCubFrankfurt01/icub_all.xml" />
 	<xi:include href="./iCubPlymouth01/icub_all.xml" />
 	<xi:include href="./iCubParis02/icub_all.xml" />
 	<xi:include href="./iCubTwente01/icub_all.xml" />
