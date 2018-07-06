@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 3.0//EN" "http://www.icub.org/DTD/robotInterfaceV3.0.dtd">
-<robot name="iCubBarcelona01" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<robot name="iCubBarcelona01" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
     <!-- cartesian --> 
     <xi:include href="cartesian/left_arm_cartesian.xml" />
