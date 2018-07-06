@@ -18,7 +18,6 @@
     <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
 
     <!-- FOOT MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR -->
-    <!--
 
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/head_calib.xml" /> 

@@ -19,11 +19,10 @@
             <param name="cdcOffset">       0x2200  </param>
         </group>
         
-        <!-- <group name="specialCfgTriangles">
-        <param name="numOfSets">         33  </param> <!-- id starts from 1 for triangleSetCfg-->
         <!--                                 patch       boardAddr    idStart       idEnd        enabled          shift       cdcOffset      -->
+        <!-- <group name="specialCfgTriangles">
+        <param name="numOfSets">         33  </param>
         
-            <!-- UPPER LEG ->
             
            <param name="triangleSetCfg1">      1            1            0             3             1              2            0x2200      </param>
            <param name="triangleSetCfg2">     1            1            5            15             1              2            0x2200      </param>
@@ -53,7 +52,6 @@
            <param name="triangleSetCfg18">      1            7           6            6              1              2            0x2200       </param>
            <param name="triangleSetCfg19">      1            7           9           15              1              2            0x2200       </param>
           
-           <!-- LOWER LEG ->
 
            <param name="triangleSetCfg18">      2            8           0            0               1              2            0x2200       </param>
            <param name="triangleSetCfg19">      2            8           3            6               1              2            0x2200       </param>
@@ -72,8 +70,7 @@
            <param name="triangleSetCfg29">      2            11             1             8             1            2            0x2200      </param>
            <param name="triangleSetCfg30">      2            11            12            13             1            2            0x2200      </param>
                    
-           <!-- FOOT ->
-           
+          
            <param name="triangleSetCfg31">      2            13             0             4             1             2            0x2200      </param>
            <param name="triangleSetCfg32">      2            13             8            15             1             2            0x2200      </param>
            
