@@ -10,7 +10,7 @@
             <param name="skinCanAddrsPatch1"> 1 2 3 4  </param> 
             <param name="skinCanAddrsPatch2"> 5 6 7 8 </param> 
         </group>
-        <xi:include href="hardware/skin/nao-eb1-skinSpec.xml" />
+        <xi:include href="./nao-eb1-SkinSpec.xml" />
     </device>
 
   

@@ -9,7 +9,7 @@
         <group name="patches">
             <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8 </param> 
         </group>
-        <xi:include href="hardware/skin/left_arm-ems2-skinSpec.xml" />
+        <xi:include href="./left_arm-ems2-SkinSpec.xml" />
     </device>
 
   

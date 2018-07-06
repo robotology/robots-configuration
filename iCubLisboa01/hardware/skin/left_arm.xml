@@ -12,6 +12,6 @@
         <param name="period"> 10              </param>
         <param name="canbusDevice"> cfw2can   </param>
       </params>
-    <xi:include href="hardware/skin/left_arm-cfw2_can7-skinSpec.xml" /> 
+    <xi:include href="./left_arm-cfw2_can7-SkinSpec.xml" /> 
   </device>
 
