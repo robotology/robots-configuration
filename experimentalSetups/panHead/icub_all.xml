@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<robot name="icub">
-    
+<robot name="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
     <!-- motor controllers wrappers -->
-    <devices file="wrappers/motorControl/head_mc_wrapper.xml" />
-    <devices file="hardware/motorControl/icub_head.xml" />
+    <xi:include href="wrappers/motorControl/head_mc_wrapper.xml" />
+    <xi:include href="hardware/motorControl/icub_head.xml" />
 
     <!-- CALIBRATORS -->
-    <devices file="calibrators/head_calib.xml" /> 
+    <xi:include href="calibrators/head_calib.xml" /> 
 
+</devices>
 </robot> 
 

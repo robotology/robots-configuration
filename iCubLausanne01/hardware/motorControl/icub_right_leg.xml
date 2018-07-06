@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
-<devices>      
-  <device name="right_leg_mc" type="canmotioncontrol">   
-<params file="general.xml" />              
+      
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg_mc" type="canmotioncontrol">   
+<xi:include href="../../general.xml" />              
 <group name="CAN">           
 <param name="canbusdevice"> sharedcan     </param>       
 <param name="physDevice">   cfw2can       </param>       
@@ -81,4 +81,4 @@
 </group>       
  
   </device>    
-</devices>     
+     

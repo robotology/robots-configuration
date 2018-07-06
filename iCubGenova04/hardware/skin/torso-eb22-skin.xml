@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenova04" build="1">
-    <device name="torso-eb22-skin" type="embObjSkin">
-        <params file="general.xml" />
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb22-skin" type="embObjSkin">
+        <xi:include href="../../general.xml" />
  
         <!--the torso skin is connected to face eb 22 board -->
-        <params file="hardware/electronics/face-eb22-j0_1-eln.xml" /> 
+        <xi:include href="../../hardware/electronics/face-eb22-j0_1-eln.xml" /> 
         <group name="patches">
             <param name="skinCanAddrsPatch1"> 7 8 9 10 </param> 
         </group>
-        <params file="hardware/skin/torso-eb22-skinSpec.xml" />
+        <xi:include href="./torso-eb22-SkinSpec.xml" />
     </device>
-</devices>
+

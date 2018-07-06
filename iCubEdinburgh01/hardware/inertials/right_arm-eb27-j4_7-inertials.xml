@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubEdinburgh01" build="1">
+
    
-    <device name="right_arm-eb27-j4_7-inertials" type="embObjInertials">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb27-j4_7-inertials" type="embObjInertials">
     
-        <params file="general.xml" />     
+        <xi:include href="../../general.xml" />     
 
-        <params file="hardware/electronics/right_arm-eb27-j4_7-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb27-j4_7-eln.xml" />
         
         <group name="SERVICE">
         
@@ -57,5 +57,5 @@
         
     </device>
     
-</devices>
+
 

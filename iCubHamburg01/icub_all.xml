@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<robot name="iCubHamburg01" build="1" portprefix="icub">
-    
+<robot name="iCubHamburg01" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
      <!-- head motor controller. there are two board/devices: head0 and head1 -->
     <!-- HEAD -->
-    <devices file="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
-    <devices file="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
-    <devices file="./wrappers/motorControl/head-mc_wrapper.xml" /> 
+    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
+    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
+    <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" /> 
 
- <!--    <devices file="hardware/inertials/head-inertial.xml" />-->
+ <!--    <xi:include href="hardware/inertials/head-inertial.xml" />-->
 
     <!-- head calibrator -->
-    <devices file="./calibrators/head_calib.xml" />
+    <xi:include href="./calibrators/head_calib.xml" />
     
+</devices>
 </robot> 
 

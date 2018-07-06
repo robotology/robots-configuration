@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="torsoSkinLaptop" build="1"> 
-  <device name="torso_skin" type="canBusSkin">
-      <!-- <params file="general.xml" /> -->
-      <params robot="torsoSkinLaptop" build="1">
+ 
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_skin" type="canBusSkin">
+      <!-- <xi:include href="../../general.xml" /> -->
+      <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="torsoSkinLaptop" build="1">
         <param name="canDeviceNum"> 0         </param>  
         <param name="skinCanIds">   7 8 9 10  </param>   
         <param name="period"> 10              </param>
         <param name="canbusDevice"> socketcan   </param>
       </params>
-      <params file="hardware/skin/torso-skinSpec.xml" /> 
+      <xi:include href="./torso-SkinSpec.xml" /> 
   </device>
-</devices>
+
 
 
 

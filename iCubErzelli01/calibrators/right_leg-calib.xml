@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubErzelli01" build="1">
-	<device name="right_leg-calibrator" type="parametricCalibratorEth">
-                <params file="general.xml" />
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-calibrator" type="parametricCalibratorEth">
+                <xi:include href="../general.xml" />
                 
 		<group name="GENERAL">
 		    <param name="joints">  6  </param> <!-- the number of joints of the robot part -->
@@ -47,4 +47,4 @@
 		<action phase="interrupt3" level="1" type="abort" />
 
 	</device>
-</devices>
+

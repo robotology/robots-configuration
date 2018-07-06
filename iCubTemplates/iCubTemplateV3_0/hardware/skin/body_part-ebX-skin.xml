@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <!--    This file contains details of how the skin service is configured. 
   -->
   
-<devices robot="myrobot" build="1">
+
 
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjSkin. -->
-    <device name="body_part_skin" type="embObjSkin">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_skin" type="embObjSkin">
     
         <!-- Include the file which specifies global configuration -->
-        <params file="general.xml" />
+        <xi:include href="../../general.xml" />
         
         <!-- Include the file which specifies which ETH board hosts the service -->
-        <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+        <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
         
             <!-- this group contains the address of the MTB boards divided in skin patches. 
                  so far the patches can be 1 or 2, and their names must be exactly: skinCanAddrsPatch1 and skinCanAddrsPatch2  
@@ -26,10 +26,10 @@
             </group>
             
         <!-- specifies how the embObjSkin device must configure the MTB boards -->    
-        <params file="hardware/skin/body_part-ebX-skinSpec.xml" />
+        <xi:include href="./body_part-ebX-SkinSpec.xml" />
         
     </device>
     
-</devices>
+
 
   

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 
-<devices>
-    <device name="ikartLaser" type="rpLidar">  
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="ikartLaser" type="rpLidar">  
 
     <group name="GENERAL">
     <param name="name">      ikart_laser        </param>
@@ -17,7 +17,7 @@
     </group>
 
     </device>
-</devices>
+
 
  
  

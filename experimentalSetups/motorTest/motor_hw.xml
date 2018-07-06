@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 
-<devices>      
-	<device name="left_arm_mc" type="fakeMotionControl">  
+      
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_mc" type="fakeMotionControl">  
 
 	<group name="GENERAL">    
 		<param name="name">      left_arm_mc_port        </param>     
@@ -10,7 +10,7 @@
 		
 
 	</device>    
-</devices>     
+     
 
  
  

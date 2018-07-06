@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubNancy01" build="1">
-    <device name="right_arm-eb4-j4_15-skin" type="embObjSkin">
-        <params file="general.xml" />
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb4-j4_15-skin" type="embObjSkin">
+        <xi:include href="../../general.xml" />
  
-        <params file="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
         <group name="patches">
             <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8</param> 
         </group>
-        <params file="hardware/skin/right_arm-eb4-j4_15-skinSpec.xml" /> 
+        <xi:include href="./right_arm-eb4-j4_15-SkinSpec.xml" /> 
     </device>  
-</devices>
+

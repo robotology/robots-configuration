@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <!--    This file contains details of how the inertials service is configured. 
   -->
-<devices robot="myrobot" build="1">
+
    
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjInertials. -->
-    <device name="body_part_inertials" type="embObjInertials">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_inertials" type="embObjInertials">
     
         <!-- Include the file which specifies global configuration -->
-        <params file="general.xml" />     
+        <xi:include href="../../general.xml" />     
 
         <!-- Include the file which specifies which ETH board hosts the service -->
-        <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+        <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
         
         <!-- this group defines the service -->
         <group name="SERVICE">
@@ -90,7 +90,7 @@
         
     </device>
     
-</devices>
+
 
 
 

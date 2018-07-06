@@ -1,5 +1,5 @@
-<devices>
-    <device name="right_arm_cartesian" type="cartesiancontrollerserver">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm_cartesian" type="cartesiancontrollerserver">
         <group name="GENERAL">
             <param name="ControllerName">icub/cartesianController/right_arm</param>
             <param name="ControllerPeriod">10</param>
@@ -50,4 +50,4 @@
         <action phase="shutdown" level="2" type="detach" />
 
     </device>
-</devices>
+

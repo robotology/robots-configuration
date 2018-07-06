@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenova01" build="1"> 
-  <device name="left_arm_skin" type="canBusSkin">
-      <params file="general.xml" />
+ 
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_skin" type="canBusSkin">
+      <xi:include href="../../general.xml" />
 
-	  <params robot="iCubGenova01" build="1">
+	  <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova01" build="1">
         <param name="canDeviceNum"> 7         </param>
         <param name="skinCanIds">   14 13 12 11 10 9 8  </param>
         <param name="period"> 10              </param>
         <param name="canbusDevice"> cfw2can   </param>
       </params>
-    <params file="hardware/skin/left_arm-cfw2_can7-skinSpec.xml" /> 
+    <xi:include href="./left_arm-cfw2_can7-SkinSpec.xml" /> 
   </device>
-</devices>
+

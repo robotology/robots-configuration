@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 <!-- La skin ha bisogno delle info presenti nella parte eln e di info per il suo wrapper, qui sotto -->
-<devices robot="iCubBarcelona01" build="1">
-	<device name="right_arm_skin_wrapper" type="skinWrapper">
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm_skin_wrapper" type="skinWrapper">
 		<param name="period">       20  				</param>
 		<param name="total_taxels"> 1344				</param>
 		<param name="device">       skinWrapper				</param>
@@ -22,4 +22,4 @@
 
 		<action phase="shutdown" level="5" type="detach" />
 	</device>
-</devices>
+

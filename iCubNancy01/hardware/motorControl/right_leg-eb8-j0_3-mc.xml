@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Initialization file for EMS 8 - Right Upper Leg, 4 dof -->
 
-<devices build="1" robot="iCubNancy01">
- <device name="right_leg-eb8-j0_3-mc" type="embObjMotionControl">
-      <params file="general.xml" />
-      <params file="hardware/electronics/right_leg-eb8-j0_3-eln.xml" />
-      <params file="hardware/mechanicals/right_leg-eb8-j0_3-mec.xml" />
+
+ <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb8-j0_3-mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/right_leg-eb8-j0_3-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/right_leg-eb8-j0_3-mec.xml" />
       
-      <params file="hardware/motorControl/right_leg-eb8-j0_3-mc_service.xml" />
+      <xi:include href="./right_leg-eb8-j0_3-mc_service.xml" />
 
     <group name="LIMITS">
         <!--                                    0             	1            2          3          -->
@@ -85,4 +85,4 @@
     </group>
     
   </device>
-</devices>
+

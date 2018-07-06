@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
 <!--    This file contains details of how the IMU service is configured. Attention: it is supported only from strain board version 2  -->
-<devices robot="myrobot" build="1">
+
 
     <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjIMU. -->
-    <device name="body_part-ebX-imu" type="embObjIMU">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX-imu" type="embObjIMU">
     
         <!-- Include the file which specifies global configuration -->
-        <params file="general.xml"/>
+        <xi:include href="../../general.xml"/>
 
         <!-- Include the file which specifies which ETH board hosts the service -->
-        <params file="hardware/electronics/filenameOfETHboard-eln.xml" /> 
+        <xi:include href="../../hardware/electronics/filenameOfETHboard-eln.xml" /> 
     
         <!-- This group defines the service -->
         <group name="SERVICE">
@@ -73,5 +73,5 @@
         
     </device>
     
-</devices>
+
 

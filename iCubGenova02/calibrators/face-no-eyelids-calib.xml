@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<devices robot="iCubGenova02" build="1">
-    <device name="face-no-eyelids-calibrator" type="parametricCalibratorEth">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="face-no-eyelids-calibrator" type="parametricCalibratorEth">
     
-        <params file="general.xml" />
+        <xi:include href="../general.xml" />
                 
         <group name="GENERAL">
             <param name="joints"> 5 </param> 
@@ -49,4 +49,4 @@
         <action phase="interrupt3" level="1" type="abort" />
 
     </device>
-</devices>
+

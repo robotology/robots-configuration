@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices>
-	<device name="left_arm_as_wrapper" type="analogServer">
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_as_wrapper" type="analogServer">
 		<param name="period">       10  				</param>
 		<param name="name">     /icub/left_arm/analog:o				</param>
 		
@@ -12,4 +12,4 @@
 
 		<action phase="shutdown" level="5" type="detach" />
 	</device>
-</devices>
+

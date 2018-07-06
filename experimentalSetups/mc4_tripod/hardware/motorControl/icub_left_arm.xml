@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
-<devices>      
-  <device name="left_arm_mc" type="canmotioncontrol">    
+      
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_mc" type="canmotioncontrol">    
 <group name="CAN">           
 <param name="canbusdevice"> sharedcan     </param>       
 <param name="physDevice">   ecan          </param>       
@@ -61,7 +61,7 @@
  
 
   </device>    
-</devices>     
+     
 
  
  

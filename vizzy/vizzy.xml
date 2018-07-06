@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<robot name="vizzy">
+<robot name="vizzy" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
 <!-- motor controllers wrappers -->
-<devices file="wrappers/left_shoulder_arm_mc_wrapper.xml" />
-<devices file="wrappers/right_shoulder_arm_mc_wrapper.xml" />
-<!--<devices file="wrappers/shoulders_mc_wrapper.xml" />
-<devices file="wrappers/head_torso_mc_wrapper.xml" />  -->
-<devices file="wrappers/torso_mc_wrapper.xml" />
-<devices file="wrappers/head_mc_wrapper.xml" />
-<devices file="hardware/head_torso.xml" />
-<devices file="hardware/shoulders.xml" />
-<devices file="hardware/left_arm.xml" />
-<devices file="hardware/right_arm.xml" />
+<xi:include href="wrappers/left_shoulder_arm_mc_wrapper.xml" />
+<xi:include href="wrappers/right_shoulder_arm_mc_wrapper.xml" />
+<!--<xi:include href="wrappers/shoulders_mc_wrapper.xml" />
+<xi:include href="wrappers/head_torso_mc_wrapper.xml" />  -->
+<xi:include href="wrappers/torso_mc_wrapper.xml" />
+<xi:include href="wrappers/head_mc_wrapper.xml" />
+<xi:include href="hardware/head_torso.xml" />
+<xi:include href="hardware/shoulders.xml" />
+<xi:include href="hardware/left_arm.xml" />
+<xi:include href="hardware/right_arm.xml" />
 
  <!-- CALIBRATORS -->
-<devices file="calibrators/head_calib.xml" />
-<devices file="calibrators/shoulders_calib.xml" />
-<devices file="calibrators/left_arm_calib.xml" />
-<devices file="calibrators/right_arm_calib.xml" />
+<xi:include href="calibrators/head_calib.xml" />
+<xi:include href="calibrators/shoulders_calib.xml" />
+<xi:include href="calibrators/left_arm_calib.xml" />
+<xi:include href="calibrators/right_arm_calib.xml" />
 
 <!-- MTX INERTIAL SENSOR -->
-<!--<devices file="hardware/inertial.xml" /> -->
+<!--<xi:include href="hardware/inertial.xml" /> -->
+</devices>
 </robot> 

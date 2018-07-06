@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<devices robot="iCubOsaka01" build="1">
-	<device type="canBusVirtualAnalogSensor" name="torso_virtual_strain">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" type="canBusVirtualAnalogSensor" name="torso_virtual_strain">
 		<param name="canbusDevice"> "sharedcan" </param>
         <param name="physDevice"> "cfw2can" </param>
         <param name="canDeviceNum"> 0 </param>
@@ -12,4 +12,4 @@
 		<param name="useCalibration"> 1 </param>
 		<param name="fullScale"> 12 12 12 12 12 12 </param>
 	</device>
-</devices>
+

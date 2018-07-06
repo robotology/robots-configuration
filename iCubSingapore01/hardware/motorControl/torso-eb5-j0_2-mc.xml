@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
  <!-- Initialization file for EMS 5 - Torso, 3 dof -->
 
-<devices robot="iCubSingapore01" build="1">
-  <device name="torso-eb5-j0_2-mc" type="embObjMotionControl">
-      <params file="general.xml" />
-      <params file="hardware/electronics/torso-eb5-j0_2-eln.xml" />
-      <params file="hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb5-j0_2-mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/torso-eb5-j0_2-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
       
-    <params file="hardware/motorControl/torso-eb5-j0_2-mc_service.xml" />
+    <xi:include href="./torso-eb5-j0_2-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                      50            30            70        </param>
@@ -87,4 +87,4 @@
     </group>
     
   </device>
-</devices>
+

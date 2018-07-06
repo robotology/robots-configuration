@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
-<devices robot="iCubParis02" build="1">    
-    <device name="right_arm_calibrator" type="parametricCalibrator">   
-    <params file="general.xml" />
+    
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm_calibrator" type="parametricCalibrator">   
+    <xi:include href="../general.xml" />
         <group name="GENERAL">             
             <param name="joints"> 8 </param>             
             <param name="deviceName"> Right_Arm_Calibrator </param>    
@@ -37,7 +37,7 @@
         <action phase="interrupt3" level="1" type="abort" />           
  
     </device>  
-</devices>     
+     
  
  
  
