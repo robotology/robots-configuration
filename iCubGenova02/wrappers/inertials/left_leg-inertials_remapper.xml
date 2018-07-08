@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenova02" build="1">
-    <device name="left_leg-inertials_remapper" type="multipleanalogsensorsremapper">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-inertials_remapper" type="multipleanalogsensorsremapper">
         <param name="period">       10                  </param>
         <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
              defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->
@@ -31,4 +31,3 @@
 
         <action phase="shutdown" level="5" type="detach" />
     </device>
-</devices>
