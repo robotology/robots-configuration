@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
+
+    <robot name="iCubGenova02" build="1" portprefix="icub">
+    
+    <params file="hardware/electronics/pc104.xml" />
+    
+    <!-- HEAD -->
+    <devices file="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
+    <devices file="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
+    <devices file="./wrappers/motorControl/head-mc_wrapper.xml" /> 
+ 
+    <!-- FACE -->
+    <devices file="./hardware/motorControl/face-eb22-j0_1-mc.xml" />  
+    <devices file="./hardware/motorControl/face-eb23-j2_5-mc.xml" /> 
+    <devices file="./wrappers/motorControl/face-mc_wrapper.xml" /> 
+   
+
+    <!-- TORSO --> 
+    <devices file="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
+    <devices file="wrappers/motorControl/torso-mc_wrapper.xml" /> 
+
+    <!-- LEFT ARM -->
+    <devices file="hardware/motorControl/left_arm-eb1-j0_3-mc.xml" />
+    <devices file="hardware/motorControl/left_arm-eb2-j4_15-mc.xml" />
+    <devices file="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
+
+    <!-- RIGHT ARM -->
+    <devices file="hardware/motorControl/right_arm-eb3-j0_3-mc.xml" />
+    <devices file="hardware/motorControl/right_arm-eb4-j4_15-mc.xml" />
+    <devices file="wrappers/motorControl/right_arm-mc_wrapper.xml" />
+
+    <!-- LEFT LEG -->
+    <devices file="hardware/motorControl/left_leg-eb6-j0_3-mc.xml" />
+    <devices file="hardware/motorControl/left_leg-eb7-j4_5-mc.xml" />
+    <devices file="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
+
+    <!-- RIGHT LEG -->
+    <devices file="hardware/motorControl/right_leg-eb8-j0_3-mc.xml" />
+    <devices file="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
+    <devices file="wrappers/motorControl/right_leg-mc_wrapper.xml" />
+    
+
+    <!-- INERTIAL SENSOR--> 
+    <devices file="hardware/inertials/head-inertial.xml" />
+    
+    <!-- ANALOG SENSOR MAIS -->
+    <devices file="wrappers/MAIS/left_arm-mais_wrapper.xml" /> 
+    <devices file="wrappers/MAIS/right_arm-mais_wrapper.xml" /> 
+    <devices file="hardware/MAIS/left_arm-eb2-j4_15-mais.xml" /> 
+    <devices file="hardware/MAIS/right_arm-eb4-j4_15-mais.xml" />  
+    
+    <!--  SKINS --> 
+    <devices file="wrappers/skin/left_arm-skin_wrapper.xml" />
+    <devices file="hardware/skin/left_arm-eb2-j4_15-skin.xml" />
+    <devices file="wrappers/skin/right_arm-skin_wrapper.xml" />  
+    <devices file="hardware/skin/right_arm-eb4-j4_15-skin.xml" /> 
+    <devices file="wrappers/skin/left_leg-skin_wrapper.xml" />
+    <devices file="wrappers/skin/right_leg-skin_wrapper.xml" />
+    <devices file="hardware/skin/left_leg-eb10-skin.xml" />
+    <devices file="hardware/skin/right_leg-eb11-skin.xml" />
+    <!-- Skin torso is never tested"
+    <devices file="wrappers/skin/torso-skin_wrapper.xml" />
+    <devices file="hardware/skin/torso-eb22-skin.xml" />
+    -->
+    
+    <!-- DEVICES FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="hardware/inertials/left_leg-eb6-inertials.xml" />
+    <devices file="hardware/inertials/left_leg-eb7-inertials.xml" />
+    <devices file="hardware/inertials/left_leg-eb10-inertials.xml" />
+    <devices file="hardware/inertials/right_leg-eb8-inertials.xml" />
+    <devices file="hardware/inertials/right_leg-eb9-inertials.xml" />
+    <devices file="hardware/inertials/right_leg-eb11-inertials.xml" />
+    
+    <!-- REMAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="wrappers/inertials/left_leg-inertials_remapper.xml" />
+    <devices file="wrappers/inertials/right_leg-inertials_remapper.xml" />
+        
+    <!-- WRAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="wrappers/inertials/left_leg-inertials_wrapper.xml" />
+    <devices file="wrappers/inertials/right_leg-inertials_wrapper.xml" />
+    
+    
+    <!-- ANALOG SENSOR FT -->
+    <devices file="wrappers/FT/left_arm-FT_wrapper.xml" /> 
+    <devices file="wrappers/FT/right_arm-FT_wrapper.xml" />
+    <devices file="wrappers/FT/right_leg-FT_wrapper.xml" /> 
+    <devices file="wrappers/FT/left_leg-FT_wrapper.xml" />
+    <devices file="wrappers/FT/right_foot-FT_wrapper.xml" /> 
+    <devices file="wrappers/FT/left_foot-FT_wrapper.xml" />
+    <devices file="hardware/FT/left_arm-eb1-j0_3-strain.xml" /> 
+    <devices file="hardware/FT/right_arm-eb3-j0_3-strain.xml" />
+    <devices file="hardware/FT/left_leg-eb6-j0_3-strain.xml" /> 
+    <devices file="hardware/FT/left_leg-eb7-j4_5-strain.xml" />
+    <devices file="hardware/FT/right_leg-eb8-j0_3-strain.xml" /> 
+    <devices file="hardware/FT/right_leg-eb9-j4_5-strain.xml" />
+    
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
+    <devices file="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
+    <devices file="wrappers/VFT/right_leg-VFT_wrapper.xml" /> 
+    <devices file="wrappers/VFT/left_leg-VFT_wrapper.xml" />     
+    <devices file="wrappers/VFT/right_arm-VFT_wrapper.xml" /> 
+    <devices file="wrappers/VFT/torso-VFT_wrapper.xml" />
+    
+    <!--  CALIBRATORS -->
+    <devices file="calibrators/left_arm-calib.xml" />
+    <devices file="calibrators/right_arm-calib.xml" /> 
+    <devices file="calibrators/left_leg-calib.xml" />
+    <devices file="calibrators/right_leg-calib.xml" />
+    <devices file="calibrators/torso-calib.xml" />
+    <devices file="calibrators/head-calib.xml" />
+    <devices file="calibrators/face-calib.xml" />
+   
+    <!-- CARTESIANS --> 
+    <devices file="cartesian/left_arm-cartesian.xml" />
+    <devices file="cartesian/right_arm-cartesian.xml" /> 
+    
+    </robot> 
