@@ -7,8 +7,10 @@
         there is only one group called host which contains name and as many rows as the supported
         devices. each one is tagged <hasdevice> and contains a type (ETH or CFW) and an address 
         (in ip format or just a number for the case of CFW).
-
-        then there are many board groups: one per physical board on teh robot.
+        
+        then there are many groups called part. each one may contain many groups called boards: 
+        one per physical board on the robot on that part.
+        
         every <board> has two compulsory properties: type, name. it may also have an 
         additional property: required. so far the only value of required is "version".
         each <board> contains three compulsory fields: ondevice, ataddress, connected. 
@@ -33,7 +35,7 @@
         the aim of this files is to be parsed by the python program robotFWmanager.py
   -->
 
-<robot>
+<robotnetwork>
 
     <host name="icub-head" >
         <hasdevice type= "ETH" address="10.0.1.104" />
@@ -667,5 +669,5 @@
     </part>
 
 
-</robot>
+</robotnetwork>
 
