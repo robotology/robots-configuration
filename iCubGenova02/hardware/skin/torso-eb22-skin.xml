@@ -33,6 +33,6 @@
         <group name="patches">
             <param name="skinCanAddrsPatch1"> 7 8 9 10 </param> 
         </group>
-        <xi:include href="./torso-eb22-SkinSpec.xml" />
+        <xi:include href="./torso-eb22-skinSpec.xml" />
     </device>
 
