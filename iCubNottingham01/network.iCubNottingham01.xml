@@ -113,21 +113,21 @@
         </board> 
 
         <board type='mc4' name="mc4.left_arm.3" required="version">
-            <version major="2" minor="25" /> <!-- 1.0x19.anybuild -->
+            <version major="2" minor="25" /> <!-- 2.0x19.anybuild -->
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.2" canbus="1" canadr="3"  />
             <connected bus="CAN" />
         </board>    
 
         <board type='mc4' name="mc4.left_arm.5" required="version">
-            <version major="2" minor="40" /> <!-- 1.0x28.anybuild -->
+            <version major="2" minor="40" /> <!-- 2.0x28.anybuild -->
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.2" canbus="1" canadr="5"  />
             <connected bus="CAN" />
         </board>           
 
         <board type='mc4' name="mc4.left_arm.7" required="version">
-            <version major="2" minor="48" /> <!-- 1.0x30.anybuild -->
+            <version major="2" minor="48" /> <!-- 2.0x30.anybuild -->
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.2" canbus="1" canadr="7"  />
             <connected bus="CAN" />
@@ -651,7 +651,7 @@
     </part>
 
 
-    <part name="custom"> 
+    <part name="custom">
     </part>
 
 
