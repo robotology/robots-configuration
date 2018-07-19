@@ -2,12 +2,11 @@
 <robot_database  xmlns:xi="http://www.w3.org/2001/XInclude">
 	<xi:include href="./iCubLugano01/icub_all.xml" />
 	<xi:include href="./iCubErzelli01/icub_all.xml" />
-	<xi:include href="./iCubGenova02_xi/icub_all.xml" />
 	<xi:include href="./iCubParis01/icub_all.xml" />
 	<xi:include href="./iCubGrenoble01/icub_all.xml" />
 	<xi:include href="./iCubPisa01/icub_all.xml" />
 	<xi:include href="./iCubPlymouth02/icub_all.xml" />
-	<xi:include href="./iCubHeidelberg01/icub_no_skin.xml" />
+	<xi:include href="./iCubHeidelberg01/icub_all.xml" />
 	<xi:include href="./iCubDarmstadt01/icub_all.xml" />
 	<xi:include href="./iCubErzelli02/icub_all.xml" />
 	<xi:include href="./iCubOsaka01/icub_all.xml" />
@@ -27,9 +26,10 @@
 	<xi:include href="./iCubHertfordshire02/icub_all.xml" />
 	<xi:include href="./iCubMunich01/icub_all.xml" />
 	<xi:include href="./iCubSheffield01/icub_all.xml" />
-	<xi:include href="./iCubBarcelona01/icub_nolegs.xml" />
+	<xi:include href="./iCubBarcelona01/icub_all.xml" />
 	<xi:include href="./iCubGenova02/icub_all.xml" />
-	<xi:include href="./iCubGenova01/icub_all_no_legs.xml" />
+    <xi:include href="./iCubGenova01/icub_all.xml" />
+	<!-- <xi:include href="./iCubGenova01/icub_all_no_legs.xml" /> -->
 	<!-- <xi:include href="./iCubTemplates" /> -->
 	<xi:include href="./iCubGenova04/icub_all.xml" />
 	<xi:include href="./iCubAnkara01/icub_all.xml" />

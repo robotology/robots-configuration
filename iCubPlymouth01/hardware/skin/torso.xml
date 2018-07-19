@@ -12,6 +12,6 @@
         <param name="period"> 10              </param>
         <param name="canbusDevice"> cfw2can   </param>
       </params>
-    <xi:include href="./torso-cfw2_can9-SkinSpec.xml" /> 
+    <xi:include href="./torso-cfw2_can9-skinSpec.xml" /> 
   </device>
 

@@ -10,7 +10,7 @@
         <param name="period"> 10              </param>
         <param name="canbusDevice"> socketcan   </param>
       </params>
-      <xi:include href="./torso-SkinSpec.xml" /> 
+      <xi:include href="./torso-skinSpec.xml" /> 
   </device>
 
 
