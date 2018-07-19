@@ -33,6 +33,6 @@
         <group name="patches">
             <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8</param> 
         </group>
-        <xi:include href="./right_arm-eb4-j4_15-skinSpec.xml" /> 
+        <xi:include href="./right_arm-eb4-j4_15-SkinSpec.xml" /> 
     </device>  
 
