@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenovaV3" build="1">
 
-    <device name="left_arm-eb26-j12_15-mc" type="embObjMotionControl">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb26-j12_15-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/left_arm-eb26-j12_15-eln.xml" />
-        <params file="hardware/mechanicals/left_arm-eb26-j12_15-mec.xml" />
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/left_arm-eb26-j12_15-eln.xml" />
+        <xi:include href="../../hardware/mechanicals/left_arm-eb26-j12_15-mec.xml" />
         
-        <params file="hardware/motorControl/left_arm-eb26-j12_15-mc_service.xml" />
+        <xi:include href="./left_arm-eb26-j12_15-mc_service.xml" />
 
         <!-- joint number in sub-part           0               1               2               3          -->
         <!-- joint name                    index-distal   middle-proximal   middle-distal   little-fingers -->     
@@ -43,7 +43,8 @@
 
 	    <group name="POS_PID_DEFAULT">
 	        <param name="controlLaw">    Pid_inPos_outPwm                          </param> 
-            <param name="controlUnits">     metric_units                                        </param> 
+            <param name="fbkControlUnits">     metric_units       </param> 
+            <param name="outputControlUnits">  machine_units      </param>
             <param name="pos_kp">                  -500.0       500.0       500.0      -200.0       </param>
             <param name="pos_kd">                   0.0         0.0         0.0         0.0         </param>      
             <param name="pos_ki">                  -50.0        50.0        50.0       -20.0        </param>        
@@ -58,4 +59,4 @@
 
     </device> 
     
-</devices>
+

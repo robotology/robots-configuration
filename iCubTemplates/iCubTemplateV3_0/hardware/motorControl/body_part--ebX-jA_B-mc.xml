@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="myrobot" build="1">
+
     
-    <device name="body_part-ebX-jA_B-mc" type="embObjMotionControl">
-    <params file="general.xml"/>
-    <params file="hardware/electronics/body_part-ebX-jA_B-eln.xml" />
-    <params file="hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX-jA_B-mc" type="embObjMotionControl">
+    <xi:include href="../../general.xml"/>
+    <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
       
       
-    <params file="hardware/motorControl/body_part-ebX-jA_B-mc_service.xml" /> 
+    <xi:include href="./body_part-ebX-jA_B-mc_service.xml" /> 
 
     <group name="LIMITS">
         <param name="jntPosMax">     Max position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMax. </param>  
@@ -161,6 +161,6 @@
     
     </device>
   
-</devices>
+
 
 

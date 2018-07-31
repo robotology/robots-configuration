@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<devices robot="iCubHertfordshire01" build="0">      
-  <device name="left_hand_mc" type="canmotioncontrol">   
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+      
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_mc" type="canmotioncontrol">   
 <group name="CAN">           
 <param name="canbusdevice"> sharedcan     </param>       
 <param name="physDevice">   cfw2can       </param>       
@@ -81,5 +81,5 @@
 </group>       
  
   </device>    
-</devices>     
+     
  

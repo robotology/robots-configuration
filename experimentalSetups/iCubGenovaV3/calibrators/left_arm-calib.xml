@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenovaV3" build="1">
-	<device name="left_arm-calibrator" type="parametricCalibratorEth">
-                <params file="general.xml" />
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-calibrator" type="parametricCalibratorEth">
+                <xi:include href="../general.xml" />
 
 		<group name="GENERAL">
 		    <param name="joints">16</param> <!-- the number of joints of the robot part -->
@@ -11,7 +11,7 @@
 		</group>
 
 <group name="HOME">
-<param name="positionHome">           -30        30         0          45           0     0      0    35    65     0     0     0     0      0      0     0 </param>
+<param name="positionHome">            5          15         0          10           0     0      0    35    65     0     0     0     0      0      0     0 </param>
 <param name="velocityHome">           10         10         10         10           30    30     30   60    30    30    30    30    30     30     30    30  </param>
 </group>                                                                        
                                                                                 
@@ -25,13 +25,13 @@
 <param name="calibrationZero">        0           0           0          0           0       0       0       0       0       0       0       0       0       0       0       0       </param>
 <param name="calibrationDelta">       0           0           0          0           0       0       0       0       0       0       0       0       0       0       0       0       </param>
                                                                                                                              
-<param name="startupPosition">        -35.97     29.97        0.06       50.00       0       0       0       25      65      0       0       0       0       0       0       0       </param>
-<param name="startupVelocity">        10.0       10.0         10.0       10.0        30      30      30      60      100     100     100     100     100     100     100     100     </param>
+<param name="startupPosition">        -30        30           0         45           0       0       0       25      65      0       0       0       0       0       0       0       </param>
+<param name="startupVelocity">        10.0       10.0         10.0      10.0         30      30      30      60      100     100     100     100     100     100     100     100     </param>
 <param name="startupMaxPwm">          8000       8000         8000      8000         2000    0       0       0       0       0       0       0       0       0       0       0       </param>
 <param name="startupPosThreshold">    2          2            2          2           90      90      90      90      90      90      90      90      90      90      90      90      </param>
 </group>
 
-<param name="CALIB_ORDER">(0 1 2 3) (4) (5 6 7) (8 9) (11 13) (10 12 15) </param> <!-- removed joint 14 -->
+<param name="CALIB_ORDER">(0) (1) (2) (3) (4) (5 6 7) (8 9) (11 13) (10 12 14 15) </param> <!-- removed joint 14 -->
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">left_arm-mc_wrapper</param>
@@ -44,6 +44,6 @@
 		<action phase="interrupt3" level="1" type="abort" />
 
 	</device>
-</devices>
+
 
  

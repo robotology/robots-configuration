@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
  
-<devices robot="iCubGenova02" build="1">
-    
-    <device name="head-eb21-j2_5-mc" type="embObjMotionControl">
-    
-        <params file="general.xml" />
-        <params file="hardware/electronics/head-eb21-j2_5-eln.xml" />
-        <params file="hardware/mechanicals/head-eb21-j2_5-mec.xml" />
 
-        <params file="hardware/motorControl/head-eb21-j2_5-mc_service.xml" />
+    
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-eb21-j2_5-mc" type="embObjMotionControl">
+    
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/head-eb21-j2_5-eln.xml" />
+        <xi:include href="../../hardware/mechanicals/head-eb21-j2_5-mec.xml" />
+
+        <xi:include href="./head-eb21-j2_5-mc_service.xml" />
         
         <!-- joint logical number               0           1           2           3           -->
         <!-- joint name                         neck-yaw    eyes-tilt   eyes-vers   eyes-verg   -->         <!-- j2 is right-eye, j3 is left-eye -->
@@ -18,7 +18,7 @@
             <param name="jntPosMin">                  -45         -30         -30         0           </param> 
             <param name="jntPosMax">                  +45         +30         +30         +45         </param>
             <param name="motorOverloadCurrents">    2500         2500         3000        3000        </param>
-            <param name="motorNominalCurrents">      700          700          700         700        </param>
+            <param name="motorNominalCurrents">     1000          700          700         700        </param>
             <param name="motorPeakCurrents">        2500         2500         2500        2500        </param>
             <param name="jntVelMax">                1000        1000          1000        1000        </param>
             <param name="motorPwmLimit">            3360        3360          3360        3360        </param>
@@ -45,7 +45,8 @@
     
         <group name="POS_PID_DEFAULT">
             <param name="controlLaw">    Pid_inPos_outPwm </param> 
-            <param name="controlUnits">     metric_units                                        </param> 
+            <param name="fbkControlUnits">  metric_units                              </param> 
+            <param name="outputControlUnits">  machine_units                              </param> 
             <param name="pos_kp">                    1100.00     -1000       3500        3500       </param>       
             <param name="pos_kd">                    0.0         0.0         0.0         0.0        </param>     
             <param name="pos_ki">                    0.0         -100         600.0       600.0      </param>          
@@ -59,4 +60,4 @@
         </group>
     
     </device>
-</devices>
+

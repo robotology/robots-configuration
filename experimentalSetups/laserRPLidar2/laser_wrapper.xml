@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices>
-  <device name="ikartLaserWrapper" type="Rangefinder2DWrapper">
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="ikartLaserWrapper" type="Rangefinder2DWrapper">
 
       <param name="period"> 10 </param>
       <param name="name">   /ikart/laser:o       </param>
@@ -20,4 +20,4 @@
 
       <action phase="shutdown" level="5" type="detach" />
   </device>
-</devices>
+

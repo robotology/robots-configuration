@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
-<robot name="icub">
-
+<robot name="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
     <!-- motor controllers wrappers -->
-    <devices file="./wrappers/motorControl/left_arm_mc_wrapper.xml" /> 
-    <devices file="./hardware/motorControl/icub_left_arm.xml" /> 
+    <xi:include href="./wrappers/motorControl/left_arm_mc_wrapper.xml" /> 
+    <xi:include href="./hardware/motorControl/icub_left_arm.xml" /> 
 
     <!-- CALIBRATORS -->
-   <!--  <devices file="./calibrators/left_arm_calib.xml" /> -->
+   <!--  <xi:include href="./calibrators/left_arm_calib.xml" /> -->
     
+</devices>
 </robot> 
 

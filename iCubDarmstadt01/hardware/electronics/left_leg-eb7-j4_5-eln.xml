@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params robot="iCubDarmstadt01" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubDarmstadt01" build="1">
 
-    <params file="hardware/electronics/pc104.xml" />
+    <xi:include href="./pc104.xml" />
   
     <group name="ETH_BOARD">
   

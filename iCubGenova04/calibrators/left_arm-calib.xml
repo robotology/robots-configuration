@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenova04" build="1">
-	<device name="left_arm-calibrator" type="parametricCalibratorEth">
-                <params file="general.xml" />
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-calibrator" type="parametricCalibratorEth">
+                <xi:include href="../general.xml" />
 
 		<group name="GENERAL">
 		    <param name="joints">16</param> <!-- the number of joints of the robot part -->
 		    <param name="deviceName"> Left_Arm_Calibrator </param>
 		</group>
 
+<!-- joint logical number              0         1           2         3           4      5      6     7     8     9    10    11    12     13     14    15 -->
+ 
 <group name="HOME">
 <param name="positionHome">           -30        30         0          45           0     0      0    35    65     0     0     0     0      0      0     0 </param>
 <param name="velocityHome">           10         10         10         10           30    30     30   60    30    30    30    30    30     30     30    30  </param>
@@ -20,10 +22,10 @@
 <param name="calibration1">           0   	 0          0          0        -1500     0      0     0     0     0     0     0     0      0      0     0 </param>
 <param name="calibration2">	      0          0          0          0	16384     0      0     0     0  9102  9102  9102  9102   9102   9102  3640 </param>
 <param name="calibration3">         30431.08  3135.14    6479.08     64526.92       0  5635    351     0     0    -1     1    -1     1     -1     1     -1 </param>
-<param name="calibration4">           0          0          0          0            0     0      0  2170   200   241   499   255   465    226    485  694 </param>
-<param name="calibration5">           0          0          0          0            0     0      0  2580  2372   46    22     16   10     33      5   135 </param>
-<param name="calibrationZero">        -180.00    -315.00    180.00     -180.00      0  -180    180     0     0     0     0     0     0      0      0     0 </param>
-<param name="calibrationDelta">       -68.5      -11.0     -17.5      -0.8         0     0      0     0     0     0     0     0     0      0      0     0 </param>
+<param name="calibration4">           0          0          0          0            0     0      0  2240   200   241   499   254   465    226    485  694  </param>
+<param name="calibration5">           0          0          0          0            0     0      0  2580  2372   46    22     9   10     33      5   135  </param>
+<param name="calibrationZero">        -180.00   -315.00    180.00     -180.00       0  -180    180     0     0     0     0     0     0      0      0     0 </param>
+<param name="calibrationDelta">       106.4     -11.0      -17.0       -0.8         0     0      0     0     0     0     0     0     0      0      0     0 </param>
                                                                                 
 <param name="startupPosition">        -35.97     29.97      0.06       50.00        0     0      0    25    65     0     0     0     0      0      0     0       </param>
 <param name="startupVelocity">        10.0       10.0       10.0       10.0        30    30     30    60    100   100   100   100    100   100    100  100       </param>
@@ -44,6 +46,6 @@
 		<action phase="interrupt3" level="1" type="abort" />
 
 	</device>
-</devices>
+
 
  

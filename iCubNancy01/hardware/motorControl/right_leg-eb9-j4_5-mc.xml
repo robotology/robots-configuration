@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Initialization file for EMS 9 - Right Lower Leg, 2 dof -->
-<devices build="1" robot="iCubNancy01">
-  <device name="right_leg-eb9-j4_5-mc" type="embObjMotionControl">
-        <params file="general.xml" />
-        <params file="hardware/electronics/right_leg-eb9-j4_5-eln.xml" />
-        <params file="hardware/mechanicals/right_leg-eb9-j4_5-mec.xml" />
 
-        <params file="hardware/motorControl/right_leg-eb9-j4_5-mc_service.xml" />
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb9-j4_5-mc" type="embObjMotionControl">
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/right_leg-eb9-j4_5-eln.xml" />
+        <xi:include href="../../hardware/mechanicals/right_leg-eb9-j4_5-mec.xml" />
+
+        <xi:include href="./right_leg-eb9-j4_5-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                  30            20        </param>
@@ -84,4 +84,4 @@
     </group>
     
   </device>
-</devices>
+

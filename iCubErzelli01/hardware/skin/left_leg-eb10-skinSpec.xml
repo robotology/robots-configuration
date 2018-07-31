@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params robot="iCubErzelli01" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubErzelli01" build="1">
 
         <group name="defaultCfgBoard">
             <param name="period">        50  </param> 
@@ -44,8 +44,6 @@
            <param name="triangleSetCfg15">      1            7           0            1              1              2            0x2200       </param>
            <param name="triangleSetCfg16">      1            7           8            8              1              2            0x2200       </param>
            <param name="triangleSetCfg17">      1            7          10           15              1              2            0x2200       </param>
-          
-           <!-- LOWER LEG ->
 
            <param name="triangleSetCfg18">      2            8           0            0               1              2            0x2200       </param>
            <param name="triangleSetCfg19">      2            8           3            6               1              2            0x2200       </param>
@@ -64,8 +62,7 @@
            <param name="triangleSetCfg29">      2            11             1             8             1              2            0x2200      </param>
            <param name="triangleSetCfg30">      2            11            12            13             1              2            0x2200      </param>
                    
-           <!-- FOOT ->
-           
+          
            <param name="triangleSetCfg31">      2            13             0             4             1              2            0x2200      </param>
            <param name="triangleSetCfg32">      2            13             8            15             1              2            0x2200      </param>
            
@@ -73,7 +70,6 @@
            <param name="triangleSetCfg32">      2            12             8            13             1             2            0x2200      </param>
         </group>
         
-            <!-- UPPER LEG ->
             
            <param name="triangleSetCfg1">      1            1            0            15             1              2            0x2200      </param>
            
@@ -99,7 +95,6 @@
            <param name="triangleSetCfg16">      1            7           8            8              1              2            0x2200       </param>
            <param name="triangleSetCfg17">      1            7          10           15              1              2            0x2200       </param>
           
-           <!-- LOWER LEG ->
 
            <param name="triangleSetCfg18">      2            8           0            0               1              2            0x2200       </param>
            <param name="triangleSetCfg19">      2            8           3            6               1              2            0x2200       </param>
@@ -118,7 +113,6 @@
            <param name="triangleSetCfg29">      1            11             1             8             1              2            0x2200      </param>
            <param name="triangleSetCfg30">      1            11            12            13             1              2            0x2200      </param>
                    
-           <!-- FOOT ->
            
            <param name="triangleSetCfg31">      1            13             0             4             1              2            0x2200      </param>
            <param name="triangleSetCfg32">      1            13             8            15             1              2            0x2200      </param>

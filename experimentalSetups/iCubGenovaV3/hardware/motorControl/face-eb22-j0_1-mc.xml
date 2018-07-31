@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenovaV3" build="1">
 
-    <device name="face-eb22-j0_1-mc" type="embObjMotionControl">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="face-eb22-j0_1-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/face-eb22-j0_1-eln.xml" />
-        <params file="hardware/mechanicals/face-eb22-j0_1-mec.xml" />
-        <params file="hardware/motorControl/face-eb22-j0_1-mc_service.xml" />
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/face-eb22-j0_1-eln.xml" />
+        <xi:include href="../../hardware/mechanicals/face-eb22-j0_1-mec.xml" />
+        <xi:include href="./face-eb22-j0_1-mc_service.xml" />
 
 
         <group name="LIMITS">
@@ -40,7 +40,8 @@
 
         <group name="POS_PID_DEFAULT">
             <param name="controlLaw">           Pid_inPos_outPwm                </param>    
-            <param name="controlUnits">         metric_units                    </param> 
+            <param name="fbkControlUnits">     metric_units       </param> 
+            <param name="outputControlUnits">  machine_units      </param>
             <param name="pos_kp">                   -400.00     400             </param>       
             <param name="pos_kd">                   0.0         0.0             </param>     
             <param name="pos_ki">                   0.0         0.0             </param>         
@@ -55,4 +56,4 @@
        
     </device> 
     
-</devices>
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<devices robot="iCubAnkara01" build="1">   
-  <device name="left_arm_mc_wrapper" type="controlboardwrapper2">
+   
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_mc_wrapper" type="controlboardwrapper2">
     <paramlist name="networks">
 	  <elem name="left_arm_joints">  0  7  0  7 </elem>
 	  <elem name="left_hand_joints"> 8 15  0  7 </elem>
@@ -20,4 +20,4 @@
 
     <action phase="shutdown" level="5" type="detach" />
 	</device>
-</devices>
+

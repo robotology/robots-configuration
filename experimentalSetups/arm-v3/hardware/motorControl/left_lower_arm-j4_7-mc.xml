@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubExpArmV3" build="1">
 
-    <device name="left_lower_arm-j4_7-mc" type="embObjMotionControl">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_lower_arm-j4_7-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/left_lower_arm-j4_7-eln.xml" />
-        <params file="hardware/mechanicals/left_lower_arm-j4_7-mec.xml" />
-        <params file="hardware/motorControl/left_arm-j4_7-mc-service.xml"/>
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/left_lower_arm-j4_7-eln.xml" />
+        <xi:include href="../../hardware/mechanicals/left_lower_arm-j4_7-mec.xml" />
+        <xi:include href="hardware/motorControl/left_arm-j4_7-mc-service.xml"/>
 
 
         <!-- joint number in sub-part           0               1               2               3              -->
@@ -67,4 +67,4 @@
        
     </device> 
     
-</devices>
+

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<robot name="icub">
+<robot name="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
 
+<devices>
      <!-- SKIN -->
-    <devices file="wrappers/skin/left_arm_skin_wrapper.xml" />
-    <devices file="wrappers/skin/right_arm_skin_wrapper.xml" />  
-    <devices file="wrappers/skin/torso_skin_wrapper.xml" />  
-    <devices file="hardware/skin/left_arm_ecan.xml" />
-    <devices file="hardware/skin/right_arm_ecan.xml" />  
-    <devices file="hardware/skin/torso_ecan.xml" />  
+    <xi:include href="wrappers/skin/left_arm_skin_wrapper.xml" />
+    <xi:include href="wrappers/skin/right_arm_skin_wrapper.xml" />  
+    <xi:include href="wrappers/skin/torso_skin_wrapper.xml" />  
+    <xi:include href="hardware/skin/left_arm_ecan.xml" />
+    <xi:include href="hardware/skin/right_arm_ecan.xml" />  
+    <xi:include href="hardware/skin/torso_ecan.xml" />  
 
     <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
 
-    <devices file="wrappers/skin/left_hand_inertial_wrapper.xml" />  
-    <devices file="wrappers/skin/right_hand_inertial_wrapper.xml" />  
-    <devices file="hardware/skin/left_hand_inertial_mtb_ecan.xml" />  
-    <devices file="hardware/skin/right_hand_inertial_mtb_ecan.xml" />  
+    <xi:include href="wrappers/skin/left_hand_inertial_wrapper.xml" />  
+    <xi:include href="wrappers/skin/right_hand_inertial_wrapper.xml" />  
+    <xi:include href="hardware/skin/left_hand_inertial_mtb_ecan.xml" />  
+    <xi:include href="hardware/skin/right_hand_inertial_mtb_ecan.xml" />  
 
    
+</devices>
 </robot> 
 

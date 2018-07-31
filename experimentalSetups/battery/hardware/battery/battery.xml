@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>    
 
-<devices>      
-	<device name="icub_battery" type="bcbBattery">  
+      
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="icub_battery" type="bcbBattery">  
 
 	<group name="GENERAL">    
 		<param name="name">      icub_battery       </param>     
@@ -38,7 +38,7 @@
 	</group>                
 
 	</device>    
-</devices>     
+     
 
  
  

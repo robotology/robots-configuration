@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params robot="iCubGenovaV3" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenovaV3" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  4 </param>
+        <param name="MotioncontrolVersion">  5 </param>
         <param name="Joints"> 3 </param> 
-        <param name="AxisMap">               2             0                 1              </param>   
-        <param name="AxisName">         "torso_yaw"    "torso_roll"    "torso_pitch"        </param>
-        <param name="AxisType">         "revolute"     "revolute"      "revolute"           </param>
-        <param name="Encoder">            182.044         182.044         182.044           </param>
-        <param name="fullscalePWM">     32000           32000           32000               </param>
-        <param name="ampsToSensor">      1000.0          1000.0          1000.0             </param>
-        <param name="Gearbox_M2J">       -100.0          -100.0          -100.0             </param>
-        <param name="Gearbox_E2J">          1               1               1               </param>
-        <param name="useMotorSpeedFbk">     1               1               1               </param> 
-        <param name="MotorType">       "MOOG_C2900576"   "MOOG_C2900576"   "MOOG_C2900576"        </param>
-        <param name="Verbose">		0	</param>
-    </group>
-
-    <group name="LIMITS">
-        <param name="hardwareJntPosMax">    45            25            65        </param>
-        <param name="hardwareJntPosMin">   -45           -25           -25        </param>
-        <param name="rotorPosMin">           0             0             0        </param> 
-        <param name="rotorPosMax">           0             0             0        </param>
-    </group>
-
-    <group name="2FOC">
-        <param name="HasHallSensor">         0             0             0           </param>
-        <param name="HasTempSensor">         0             0             0           </param>
-        <param name="HasRotorEncoder">       1             1             1           </param>
-        <param name="HasRotorEncoderIndex">  1             1             1           </param>
-        <param name="HasSpeedEncoder">       0             0             0           </param>
-        <param name="RotorIndexOffset">      0             48            33          </param>
-        <param name="MotorPoles">            8             8             8           </param>
+        <param name="AxisMap">              0                   1                2                   </param>   
+        <param name="AxisName">             "torso_roll"        "torso_pitch"    "torso_yaw"         </param>
+        <param name="AxisType">             "revolute"          "revolute"       "revolute"          </param>
+        <param name="Encoder">              182.044             182.044          182.044             </param>
+        <param name="fullscalePWM">         32000               32000            32000               </param>
+        <param name="ampsToSensor">         1000.0              1000.0           1000.0              </param>
+        <param name="Gearbox_M2J">          -100.0              -100.0           -100.0              </param>
+        <param name="Gearbox_E2J">          1                   1                1                   </param>
+        <param name="useMotorSpeedFbk">     1                   1                1                   </param> 
+        <param name="MotorType">            "MOOG_C2900576"     "MOOG_C290057"   "MOOG_C2900576"     </param>
+        <param name="Verbose"> 0 </param>                           
+    </group>                                                        
+                                                                    
+    <group name="LIMITS">                                           
+        <param name="hardwareJntPosMax">    25                  65               45                  </param>
+        <param name="hardwareJntPosMin">    -25                 -25              -45                 </param>
+        <param name="rotorPosMin">          0                   0                0                   </param> 
+        <param name="rotorPosMax">          0                   0                0                   </param>
+    </group>                                                        
+                                                                    
+    <group name="2FOC">                                             
+		<param name="Verbose">              0                   0                0                  </param>
+        <param name="AutoCalibration">      0                   0                0                  </param>
+        <param name="HasHallSensor">        0                   0                0                  </param>
+        <param name="HasTempSensor">        0                   0                0                  </param>
+        <param name="HasRotorEncoder">      1                   1                1                  </param>
+        <param name="HasRotorEncoderIndex"> 1                   1                1                  </param>
+        <param name="HasSpeedEncoder">      0                   0                0                  </param>
+        <param name="RotorIndexOffset">     48                  33               122                </param>
+        <param name="MotorPoles">           8                   8                8                  </param>
    </group>
 
     <group name="COUPLINGS"> 
-
         <param name ="matrixJ2M"> 
-            0.500   -0.500    0.000    0.000
-            0.500    0.500    0.000    0.000
+            1.000    0.000    0.000    0.000
+            0.000    1.000    0.000    0.000
             0.000    0.000    1.000    0.000
             0.000    0.000    0.000    1.000   
         </param>
 
-        <!-- alfa=22/80=0,275; 2*alfa= 0.55 -->
         <param name ="matrixM2J"> 
-            0.500    0.500    0.000    0.000
-           -0.500    0.500    0.000    0.000
-            0.275    0.275    0.550    0.000
+            1.000    0.000    0.000    0.000
+            0.000    1.000    0.000    0.000
+            0.000    0.000    1.000    0.000
             0.000    0.000    0.000    1.000   
         </param>
        
@@ -58,17 +58,28 @@
             0.00    0.00    1.00    0.00    0.00    0.00
             0.00    0.00    0.00    1.00    0.00    0.00   
         </param>
-        
     </group>                
     
     <group name="JOINTSET_CFG"> 
-        <param name= "numberofsets"> 1 </param>
+        <param name= "numberofsets"> 3 </param>
         <group name="JOINTSET_0">
-            <param name="listofjoints">  0 1 2         </param>
+            <param name="listofjoints">  0             </param>
             <param name="constraint">    none          </param>
             <param name="param1">        0             </param>
             <param name="param2">        0             </param>
         </group> 
+        <group name="JOINTSET_1">
+            <param name="listofjoints">  1             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group>
+        <group name="JOINTSET_2">
+            <param name="listofjoints">  2             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group>
     </group>                     
  
 </params>

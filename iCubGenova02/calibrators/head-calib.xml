@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenova02" build="1">
-    <device name="head-calibrator" type="parametricCalibratorEth">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-calibrator" type="parametricCalibratorEth">
     
-        <params file="general.xml" />
+        <xi:include href="../general.xml" />
         
         <group name="GENERAL">
             <param name="joints"> 6 </param> 
@@ -27,7 +27,7 @@
         <param name="calibration5">         0           0           0           0          0           0           </param>        
         
         <param name="calibrationZero">       0.0        0.0         0.0         0.0        0           0           </param>
-        <param name="calibrationDelta">      11.2      -1.6         3.6        -12.4       6.0         4.6         </param>
+        <param name="calibrationDelta">      8.7       -0.9         10.8        -12.4       6.0         4.6         </param>
        
         <param name="startupPosition">      0.0         0.0         0.0         0.0         0.0         0.0         </param>        
         <param name="startupVelocity">      10          10          20.0        20.0        20.0        20.0        </param>        
@@ -48,4 +48,4 @@
         <action phase="interrupt3" level="1" type="abort" />
 
     </device>
-</devices>
+

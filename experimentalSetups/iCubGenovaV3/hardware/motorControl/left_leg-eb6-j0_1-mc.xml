@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
  <!-- Initialization file for EMS 6 - Left Upper Leg, 4 dof -->
 
-<devices robot="iCubGenovaV3" build="1">
-  <device name="left_leg-eb6-j0_1-mc" type="embObjMotionControl">
-      <params file="general.xml" />
-      <params file="hardware/electronics/left_leg-eb6-j0_1-eln.xml" />
-      <params file="hardware/mechanicals/left_leg-eb6-j0_1-mec.xml" />
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb6-j0_1-mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/left_leg-eb6-j0_1-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/left_leg-eb6-j0_1-mec.xml" />
       
-    <params file="hardware/motorControl/left_leg-eb6-j0_1-mc_service.xml" />
+    <xi:include href="./left_leg-eb6-j0_1-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                      125          111      </param>
         <param name="jntPosMin">                      -40          5        </param>
         <param name="jntVelMax">                     1000         1000        </param>   
         <param name="motorNominalCurrents">          5000         5000        </param>
-        <param name="motorPeakCurrents">             6000        10000        </param>
+        <param name="motorPeakCurrents">            10000        10000        </param>
         <param name="motorOverloadCurrents">        15000        15000        </param>
         <param name="motorPwmLimit">                10000        10000        </param>    
     </group>
@@ -35,7 +35,8 @@
 
 	<group name="POS_PID_DEFAULT">
 	    <param name="controlLaw"> Pid_inPos_outPwm </param> 
-        <param name="controlUnits">  metric_units  </param> 
+        <param name="fbkControlUnits">     metric_units       </param> 
+        <param name="outputControlUnits">  machine_units      </param>
         <param name="pos_kp">            -1066.66     2066.66   </param>      
         <param name="pos_kd">                0.00        0.00   </param>      
         <param name="pos_ki">           -10666.64    14222.18   </param>           
@@ -55,7 +56,8 @@
     
     <group name="TRQ_PID_DEFAULT">
         <param name="controlLaw">    Pid_inTrq_outPwm                         </param>
-        <param name="controlUnits">  metric_units                             </param>         
+        <param name="fbkControlUnits">     metric_units       </param> 
+        <param name="outputControlUnits">  machine_units      </param>        
         <param name="trq_kp">           -200        200      </param>      <!--        -200        200       -200        200      --> 
         <param name="trq_kd">              0          0      </param>       
         <param name="trq_ki">              0          0      </param>     
@@ -63,17 +65,18 @@
         <param name="trq_maxInt">        500        500      </param>       
         <param name="trq_shift">           0          0      </param>       
         <param name="trq_ko">              0          0      </param>       
-        <param name="trq_stictionUp">     -2.0        2.0    </param>       
-        <param name="trq_stictionDwn">     1.4       -2.0    </param>       
+        <param name="trq_stictionUp">      0          0      </param>       
+        <param name="trq_stictionDwn">     0          0      </param>       
         <param name="trq_kff">             1          1      </param>      
         <param name="trq_kbemf">           0          0      </param>     
         <param name="trq_filterType">      0          0      </param>              
-        <param name="trq_ktau">         -162        178      </param>      
+        <param name="trq_ktau">            0          0      </param>      
     </group>
 	
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">       limitscurrent          </param> 
-        <param name="controlUnits">     metric_units           </param> 
+        <param name="fbkControlUnits">     machine_units       </param> 
+        <param name="outputControlUnits">  machine_units       </param> 
         <param name="cur_kp">               8           8       </param>       
         <param name="cur_kd">               0           0       </param>       
         <param name="cur_ki">               2           2       </param>
@@ -87,7 +90,7 @@
     </group>
     
   </device>
-</devices>
+
 
 
 

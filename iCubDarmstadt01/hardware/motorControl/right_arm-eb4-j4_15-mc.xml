@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
  <!-- Initialization file for EMS 4 - Right Lower Arm, 12 dof plus skin  -->
 
-<devices robot="iCubDarmstadt01" build="1">
-  <device name="right_arm-eb4-j4_15-mc" type="embObjMotionControl">
-      <params file="general.xml" />
-      <params file="hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
-      <params file="hardware/mechanicals/right_arm-eb4-j4_15-mec.xml" />
 
-      <params file="hardware/motorControl/right_arm-eb4-j4_15-mc_service.xml" />
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb4-j4_15-mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/right_arm-eb4-j4_15-mec.xml" />
+
+      <xi:include href="./right_arm-eb4-j4_15-mc_service.xml" />
 
     <group name="LIMITS">
         <!--                                 0             1             2             3             4             5             6             7             8             9             10            11-->
@@ -74,4 +74,4 @@
     </group>
     
   </device>
-</devices>
+

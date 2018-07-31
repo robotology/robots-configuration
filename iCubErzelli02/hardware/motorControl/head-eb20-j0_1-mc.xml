@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
  
-<devices robot="iCubErzelli02" build="1">
 
-    <device name="head-eb20-j0_1-mc" type="embObjMotionControl">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-eb20-j0_1-mc" type="embObjMotionControl">
     
-        <params file="general.xml" />
-        <params file="hardware/electronics/head-eb20-j0_1-eln.xml" />
-        <params file="hardware/mechanicals/head-eb20-j0_1-mec.xml" />
+        <xi:include href="../../general.xml" />
+        <xi:include href="../../hardware/electronics/head-eb20-j0_1-eln.xml" />
+        <xi:include href="../../hardware/mechanicals/head-eb20-j0_1-mec.xml" />
 
-        <params file="hardware/motorControl/head-eb20-j0_1-mc_service.xml" />
+        <xi:include href="./head-eb20-j0_1-mc_service.xml" />
         
         <!-- joint logical number               0           1           -->
         <!-- joint name                         neck-pitch  neck-roll   -->           
@@ -59,4 +59,4 @@
         </group>
 
     </device>
-</devices>
+

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenova04" build="1">
 
-    <device name="torso_inertialMTB" type="embObjInertials">
 
-        <params file="general.xml" />
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb22-inertials" type="embObjInertials">
 
-        <params file="hardware/electronics/face-eb22-j0_1-eln.xml" />
+        <xi:include href="../../general.xml" />
+
+        <xi:include href="../../hardware/electronics/face-eb22-j0_1-eln.xml" />
 
         <group name="SERVICE">
 
@@ -30,7 +30,7 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       chest_1_9B7             chest_2_9B8             chest_3_9B9             chest_4_9B10
+                    <param name="id">       chest_mtb_acc_0b7       chest_mtb_acc_0b8       chest_mtb_acc_0b9       chest_mtb_acc_0b10
                     </param>
 
                     <param name="type">     eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
@@ -44,7 +44,7 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">      chest_1_9B7             chest_2_9B8             chest_3_9B9             chest_4_9B10
+                <param name="enabledSensors">       chest_mtb_acc_0b7       chest_mtb_acc_0b8       chest_mtb_acc_0b9       chest_mtb_acc_0b10
                 </param>
             </group>
 
@@ -52,4 +52,4 @@
 
     </device>
 
-</devices>
+

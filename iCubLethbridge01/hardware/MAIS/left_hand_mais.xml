@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 1.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV1.0.dtd">
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="iCubGenova01" build="1">
-<device type="canBusAnalogSensor" name="left_hand_mais">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" type="canBusAnalogSensor" name="left_hand_mais">
 	<param name="canbusDevice"> "sharedcan" </param>
 	<param name="physDevice"> "cfw2can" </param>
 	<param name="canDeviceNum"> 5 </param>
@@ -11,4 +11,4 @@
 	<param name="channels"> 16 </param>
 	<param name="period"> 1 </param>
 </device>
-</devices>
+
