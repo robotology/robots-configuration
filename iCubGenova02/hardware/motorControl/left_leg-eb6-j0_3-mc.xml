@@ -55,13 +55,13 @@
     
     <group name="TRQ_PID_DEFAULT">
         <param name="controlLaw">    Pid_inTrq_outPwm </param> 
-        <param name="fbkControlUnits">  metric_units                              </param> 
-        <param name="outputControlUnits">  machine_units                              </param> 
-        <param name="trq_kp">          -200        200          0       -200     </param> 
+        <param name="fbkControlUnits">  metric_units                             </param> 
+        <param name="outputControlUnits">  dutycycle_percent                     </param> 
+        <param name="trq_kp">             0          0          0          0     </param> 
         <param name="trq_kd">             0          0          0          0     </param>
         <param name="trq_ki">             0          0          0          0     </param>
-        <param name="trq_maxOutput">   8000       8000       8000       8000     </param>
-        <param name="trq_maxInt">       500        500        500        500     </param>
+        <param name="trq_maxOutput">     25         25         25         25     </param>
+        <param name="trq_maxInt">         1.56       1.56       1.56       1.56  </param>
         <param name="trq_shift">          0          0          0          0     </param>
         <param name="trq_ko">             0          0          0          0     </param>
         <param name="trq_stictionUp">     0          0          0          0     </param>
@@ -69,8 +69,8 @@
         <param name="trq_kff">            1          1          1          1     </param>
         <param name="trq_kbemf">          0          0          0          0     </param>
         <param name="trq_filterType">     0          0          0          0     </param>
-        <param name="trq_ktau">           0          0          0          0      </param>
-     </group>
+        <param name="trq_ktau">          -0.46       0.56      -0.62      -0.88  </param>
+</group>
 
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">       limitscurrent          </param> 
