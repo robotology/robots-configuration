@@ -12,6 +12,14 @@
 	    </paramlist>
 	</action>
 
+    <group name ="ROS">
+         <param name ="useROS"> true </param>
+         <param name ="ROS_nodeName"> /yarprobotinterface/FT_sensor_1_publisher</param>
+         <param name ="ROS_topicName"> /FT_sensor_1/ROS_data </param>
+         <param name ="frame_id"> /FT_sensor_1_frame  </param>
+         <param name ="ROS_msgType"> geometry_msgs/WrenchStamped </param>
+    </group>
+      
 	<action phase="shutdown" level="5" type="detach" />
 </device>
 
