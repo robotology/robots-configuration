@@ -48,6 +48,8 @@
                                             CAN1:6                  CAN1:7                  CAN2:8                  CAN2:9
                                             CAN2:10                 CAN2:11                 CAN2:13                 CAN2:12
                     </param>
+                    
+                    
                 </group>
 
             </group>
@@ -60,6 +62,12 @@
                                                     l_lower_leg_mtb_acc_10b8   l_lower_leg_mtb_acc_10b9   l_lower_leg_mtb_acc_10b10  l_lower_leg_mtb_acc_10b11
                                                     l_foot_mtb_acc_10b12       l_foot_mtb_acc_10b13
                 </param>
+                <param name="fullscale">            250                    
+                                                    19.62                   19.62                   19.62                  19.62                 
+                                                    19.62                   19.62                   19.62                                     
+                                                    19.62                   19.62                   19.62                  19.62   
+                                                    19.62                   19.62          
+                    </param> <!-- 19.62=2g-->
             </group>
 
         </group>

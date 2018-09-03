@@ -46,6 +46,8 @@
                 <param name="acquisitionRate">      50              </param>
                 <param name="enabledSensors">       torso_ems_gyro_eb1
                 </param>
+                <param name="fullscale">             250
+                </param>
             </group>
 
         </group>
