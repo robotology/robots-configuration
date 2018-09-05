@@ -36,7 +36,7 @@
                                                                   * Pid_inPos_outPwm: simple pid with posistion setpoint in input and pwm values in output.
                                                                   * PidPos_withInnerVelPid: position pid with inner velocity pid closed on motor. In this case this group should contain pos pid and vel pid values. See example MY_POS_VEL_CTRL below                                                 -->
         <param name="fbkControlUnits">     metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
-        <param name="outputControlUnits">  metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->        <param name="pos_kp"> </param> <!-- Proportional constant in PID control. [expressed in pwm_raw/degrees (metric_units) or pwm_raw/encoder (machine_units)] -->
+        <param name="outputControlUnits">  dutycycle_percent       </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->        <param name="pos_kp"> </param> <!-- Proportional constant in PID control. [expressed in pwm_raw/degrees (metric_units) or pwm_raw/encoder (machine_units)] -->
         <param name="pos_kd">           0  </param> <!-- Derivative constant in PID control. [expressed in pwm_raw/(degrees/sec) (metric_units) or pwm_raw/(encoder/sec) (machine_units)] -->
         <param name="pos_ki">           0  </param> <!-- Integral constant in PID control. [expressed in pwm_raw/(degrees*sec) (metric_units) or pwm_raw/(encoder*sec) (machine_units)]  -->
         <param name="pos_maxOutput">    0  </param> <!-- Limit on PID output [expressed in PWM raw units] -->
@@ -51,7 +51,7 @@
     <group name="MY_POS_VEL_CTRL">
         <param name="controlLaw">       PidPos_withInnerVelPid     </param> <!-- Specifies the type of algorithm firmware should be performed. -->
         <param name="fbkControlUnits">     metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
-        <param name="outputControlUnits">  metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
+        <param name="outputControlUnits">  dutycycle_percent       </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->
         <param name="pos_kp">               0   </param> <!-- Proportional part of the outer PID control loop [expressed in 1/sec] -->
         <param name="pos_kd">               0   </param> <!-- Not used.                                                    -->
         <param name="pos_ki">               0   </param> <!-- Not used.                                                    -->
@@ -79,7 +79,7 @@
                                                                     * Pid_inTrq_outPwm: simple pid with torue setpoint in input and pwm values in output.
                                                                     * PidTrq_withInnerVelPid: torque pid with inner velocity pid closed on motor. In this case this group should contain torue pid and vel pid values. See example MY_TRQ_VEL_CTRL below-->
         <param name="fbkControlUnits">     metric_units      </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
-        <param name="outputControlUnits">  metric_units      </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
+        <param name="outputControlUnits">  dutycycle_percent </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->
         <param name="trq_kp">              0      </param> <!-- Proportional part of the PID control loop [expressed in pwm_raw/Nm]                                  -->
         <param name="trq_kd">              0      </param> <!-- Derivative part of the PID control loop [expressed in pwm_raw/(Nm/sec)]                              -->
         <param name="trq_ki">              0      </param> <!-- Integral part of the PID control loop [expressed in pwm_raw/(Nm*sec)]                                -->
@@ -98,7 +98,7 @@
     <group name="MY_TRQ_VEL_CTRL">
         <param name="controlLaw">          PidTrq_withInnerVelPid  </param> <!-- Specifies the type of algorithm firmware should be performed. -->
         <param name="fbkControlUnits">     metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
-        <param name="outputControlUnits">  metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
+        <param name="outputControlUnits">  dutycycle_percent       </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->
         <param name="trq_kp">              0      </param> <!-- Torque outer loop proportional part [expressed in (degrees/sec)/Nm]                                -->
         <param name="trq_kd">              0      </param> <!-- Torque outer loop derivative part [expressed in (degrees/sec)/(Nm/sec)]                            -->
         <param name="trq_ki">              0      </param> <!-- Torque outer loop itegral part [expressed in (degrees/sec)/(Nm*sec)]                               -->
