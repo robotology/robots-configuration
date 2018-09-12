@@ -25,8 +25,8 @@
 
     <group name="CONTROLS">
        <param name="positionControl">  POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT           </param>
-       <param name="velocityControl">  none                   none                  none                   </param>
-       <param name="torqueControl">    TRQ_PID_DEFAULT  TRQ_PID_DEFAULT TRQ_PID_DEFAULT  </param>
+       <param name="velocityControl">  none                      none                     none                      </param>
+       <param name="torqueControl">    TRQ_PID_TUNED             TRQ_PID_TUNED            TRQ_PID_TUNED             </param>
        <param name="currentPid">       2FOC_CUR_CONTROL          2FOC_CUR_CONTROL         2FOC_CUR_CONTROL          </param>
     </group>
 
@@ -63,8 +63,26 @@
         <param name="trq_kbemf">           0          0          0   </param>
         <param name="trq_filterType">      0          0          0   </param>
         <param name="trq_ktau">         -0.63      -0.63      -0.63  </param>
-</group>
-    
+    </group>
+
+    <group name="TRQ_PID_TUNED">
+        <param name="controlLaw">    Pid_inTrq_outPwm                </param>
+        <param name="fbkControlUnits">  metric_units                 </param>
+        <param name="outputControlUnits">  dutycycle_percent         </param>
+        <param name="trq_kp">          -0.31      -0.31      -0.31   </param>
+        <param name="trq_kd">              0          0          0   </param>
+        <param name="trq_ki">              0          0          0   </param>
+        <param name="trq_maxOutput">      25         25         25   </param>
+        <param name="trq_maxInt">       1.56       1.56       1.56   </param>
+        <param name="trq_shift">           0          0          0   </param>
+        <param name="trq_ko">              0          0          0   </param>
+        <param name="trq_stictionUp">      0          0          0   </param>
+        <param name="trq_stictionDwn">     0          0          0   </param>
+        <param name="trq_kff">             1          1          1   </param>
+        <param name="trq_kbemf">           0          0          0   </param>
+        <param name="trq_filterType">      0          0          0   </param>
+        <param name="trq_ktau">         -0.63      -0.63      -0.63  </param>
+    </group>
 
     <group name="IMPEDANCE">
         <param name="stiffness">       0      0      0     </param>    
