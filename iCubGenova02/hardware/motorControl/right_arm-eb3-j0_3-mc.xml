@@ -88,7 +88,7 @@
         <param name="trq_stictionUp">      0          0          0          0     </param>
         <param name="trq_stictionDwn">     0          0          0          0     </param>
         <param name="trq_kff">             1          1          1          1     </param>
-        <param name="trq_kbemf">        -0.0005    -0.0005   - 0.0005      -0.00  </param>
+        <param name="trq_kbemf">        -0.0005    -0.0005   -0.0005      -0.00   </param>
         <param name="trq_filterType">      0          0          0          0     </param>
         <param name="trq_ktau">         -0.56      -1.45      -1.45      -1.40    </param>
    </group>
