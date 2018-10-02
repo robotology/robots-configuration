@@ -83,6 +83,14 @@
                      the device will publish values with this order.
                   -->
                 <param name="enabledSensors">       l_hand l_forearm_1 l_forearm_2 l_hand_gyro </param>   
+                <!-- the full scale of each enabled sensor:
+                        * inertial sensors embedded on the MTB boards: the only configurable full scale is ±2g;
+                        * accelerometers on the EMS boards: sensors not supported by the firmware.
+                        * gyroscopes on the EMS boards: 250 dps, 500 dps and 2000 dps. (default is 500 dps)
+                        * gyroscopes on the MTB boards: it can not be changed. The default values is used (500 dps)
+                    This parameter is not mandatory. If it there isn't, the default values are used.
+                -->
+                <param name="fullscale">            19.62   19.62    19.62   500</param> <!-- 19.62=2g-->
                 
             </group>
             
