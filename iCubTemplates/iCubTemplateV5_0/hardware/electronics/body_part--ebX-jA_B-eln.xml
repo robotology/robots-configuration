@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<!--    This file contains details of an ETH board. 
+        It is included by other files which specify a service which needs this particular ETH board 
+  -->
+  
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="myrobot" build="1">
+
+    <!-- It includes details of the Linux host. -->
+    <xi:include href="./pc104.xml" />
+    
+    <!-- It contains the details of the ETH board. -->
+    <group name="ETH_BOARD">
+   
+        <!-- This group contains properties of the ETH board which are hard-coded in the FW and cannot be configured in runtime. -->
+        <group name="ETH_BOARD_PROPERTIES">
+        
+            <!-- The IP address of board. Use the X specified in the HW schematics. It cannot be: 0, 104, 255. -->
+            <param name="IpAddress">                10.0.1.X             </param>  
+            
+            <!-- The IP port used by the board to communicate with yarprobotinterface. It must be = PC104::PC104IpPort. [NOTE: not parsed]. -->
+            <param name="IpPort">                   12345                </param>  
+            
+            <!-- The type of eth board. It can be [ems4, mc4plus, mc2plus] or any other/future eObrd_ethtype_t in compact or long form. [NOTE: also supported EMS4, MC4PLUS, MC2PLUS]. -->            
+            <param name="Type">                     ems4                 </param> 
+
+            <!-- The maximum size of UDP packet which the ETH board can receive. The object EthResource uses this value to allocate its internal TX UDP packet, one for each board. -->            
+            <param name="maxSizeRXpacket">          768                  </param>   
+            
+            <!-- The maximum size of ROP (Remote OPeration) that can be decoded or transmitted by the board. The object EthResource uses this value to form / parse the tx / rx ROP. -->
+            <param name="maxSizeROP">               384                  </param>   
+            
+        </group>
+
+        <!-- This group contains values which the user is free to change and which yarprobotinterface loads at startup  -->
+        <group name="ETH_BOARD_SETTINGS">
+        
+            <!-- String of max 31 characters used to identify the board in terminal prints (together with its IP address) -->
+            <param name="Name">                     "body_part-ebX-jA_B" </param>
+
+            <!-- This group contains values for configuration of the times of the board when in RUNNING mode  -->
+            <group name="RUNNINGMODE">
+
+                <!-- The period in microseconds of the control loop. IT MUST BE 1000 -->
+                <param name="period">                   1000                </param>
+
+                <!-- The time of the period in microseconds dedicated to the RX activity. Default is 400, range is [5, 990]. 
+                     Very important: t must be period = maxTimeOfRXactivity + maxTimeOfDOactivity + maxTimeOfDOactivity 
+                  -->
+                <param name="maxTimeOfRXactivity">      400                 </param>
+
+                <!-- The time of the period in microseconds dedicated to the DO activity. Default is 400, range is [5, 990]. 
+                     Very important: t must be period = maxTimeOfRXactivity + maxTimeOfDOactivity + maxTimeOfDOactivity 
+                  -->
+                <param name="maxTimeOfDOactivity">      300                 </param>  
+
+                <!-- The time of the period in microseconds dedicated to the TX activity. Default is 400, range is [5, 990]. 
+                     Very important: t must be period = maxTimeOfRXactivity + maxTimeOfDOactivity + maxTimeOfDOactivity 
+                  -->
+                <param name="maxTimeOfTXactivity">      300                 </param>    
+
+                <!-- The period in multiples of RUNNINGMODE::period with which the ETH boards transmits the regular ROPs. Its range is [1, 20] and if out of bound it is clipped to limits. 
+                     The recommended value is 5 (3 for boards which support skin). IMPORTANT: reply ROPs and diagnostics ROPs are transmitted ASAP with 1 ms granularity.
+                                  
+                     This number is related to many other system parameters: (1) the ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate of other boards; (2) the PC104::PC104RXrate decoding 
+                     rate inside PC104; (3) rate of the wrappers which typically is 10 ms. 
+                     A value of PC104::PC104RXrate = 1 for every board is possible, but it adds extra useless effort in the CPU of PC104 to decode many UDP packets. 
+                     The effort is useless because the information carried by regular ROPs is read by wrappers typically at 10 ms rate.
+                     hence, any value lower than the rate of wrappers is enough. The only exception is for presence of skin, where it is required a lower value so that the ETH 
+                     board can consume the CAN packets sent by the CAN boards without losing info (if it happens, diagnostics messages are sent which complain about loss of skin data).  
+                  -->              
+                <param name="TXrateOfRegularROPs">      5                   </param> 
+
+            </group>              
+                        
+        </group>
+
+        
+        <!-- This group contains actions which yarprobotinterface can execute on the ETH board  -->
+        <group name="ETH_BOARD_ACTIONS">
+        
+            <!-- This group specifies how yarprobotinterface monitors presence of the ETH board  
+                 The thread EthReceiver, every time it is called, checks all board which have MONITOR_ITS_PRESENCE::enabled = true.
+                 If they haven't transmitted for MONITOR_ITS_PRESENCE::timeout seconds, than the board is declared missing. 
+                 The situation is immediately printed by yarprobotinterface. If the board does not transmits anymore, a periodical report
+                 is printed every MONITOR_ITS_PRESENCE::periodOfMissingReport seconds. Otherwise, it is printed the time when the board transmits
+                 again. 
+              -->
+            <group name="MONITOR_ITS_PRESENCE">
+        
+                <!-- It enables or not the monitoring of this ETH board. Values are [true / false].  
+                  -->
+                <param name="enabled">                          true                    </param>
+                
+                <!-- The timeout in seconds (floating point value) of the timeout bofore the board is declared missing. Use a value > ETH_BOARD_SETTINGS::regularsTXrate ms.
+                  -->            
+                <param name="timeout">                          0.020                    </param> 
+                
+                <!-- The period in seconds (floating point value) of the missing board report.
+                  -->            
+                <param name="periodOfMissingReport">            60.0                    </param> 
+            
+            </group>
+            
+        </group>
+        
+    </group>  
+    
+</params>
+

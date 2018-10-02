@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX-jA_B-mc" type="embObjMotionControl">
+    <xi:include href="../../general.xml"/>
+    <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/body_part-ebX-jA_B-mec.xml" />
+    <xi:include href="./body_part-ebX-jA_B-mc_service.xml" /> 
+
+    <group name="LIMITS">
+        <param name="jntPosMax">  -10  </param> <!--  Max position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMax. See https://wiki.icub.org/wiki/ICub_joints_limits for more details -->
+        <param name="jntPosMin">  10   </param> <!--  Min position of joint (user defined) [expressed in degrees]. It should be minor or equal of hwJntPosMin. See https://wiki.icub.org/wiki/ICub_joints_limits for more details -->
+        <param name="jntVelMax">  10   </param> <!--  Max velocity of joint [expressed in degrees/second].                                                                                                                        -->
+        <param name="motorNominalCurrents">   100 </param>  <!-- It is the current which can be kept for an indefinite amount of time without damaging the motor. The 2FOC uses any value beyond
+                                                                 this threshold in the computation of i2T. It is expressed in [mA]. In datasheet it is found under the name "continuous stall current".      -->
+        <param name="motorPeakCurrents">      100 </param>  <!-- It is the max current that it can be applied to the motor for a short amount of time. The 2FOC saturates to this value and also 
+                                                                 use this value for the integtaion of I2T. It is expressed in [mA]. In datasheet it is found under the name "peak stall current".      -->
+        <param name="motorOverloadCurrents">  100  </param> <!-- It is the current which instantaneously damages the motor. It is expressed in [mA]. 
+                                                                 However, this value is not used by 2FOC FW. Keep it fixed at 21000.  -->
+        <param name="motorPwmLimit">          100  </param> <!-- Limit of max PWM which can be applied to the motor. Max value is 32000. This threshold is used after decoupling.  -->
+    </group>
+
+    <group name="TIMEOUTS">
+        <param name="velocity"> 10 </param> <!-- timeout on recpetion of velocity setopint by firmware. [expressed in millisec] -->
+    </group>
+
+    <group name="CONTROLS">
+        <param name="positionControl">  name </param> <!-- User name tag of position control. The tag name should be present below. EXAMPLE: MY_PID_POS  -->
+        <param name="velocityControl">  name </param> <!--  User name tag of velocity control. The tag name should be present below. If joint can't perform velocity control, use "none". EXAMPLE: MY_PID_VEL  -->
+        <param name="torqueControl">    name </param> <!--  User name tag of torque control. The tag name should be present below. If joint can't perform torque control, use "none". EXAMPLE: MY_PID_TRQ      -->
+        <param name="currentPid">       name </param> <!-- User name tag of current control. The tag name should be present below. If joint can't perform current control, use "none". EXAMPLE: MY_PID_CUR     -->
+    </group>
+
+    <group name="MY_PID_POS">
+        <param name="controlLaw"> Pid_inPos_outPwm </param>  <!-- Specifies the type of algorithm firmware should be performed. Values of this param is:
+                                                                  * Pid_inPos_outPwm: simple pid with posistion setpoint in input and pwm values in output.
+                                                                  * PidPos_withInnerVelPid: position pid with inner velocity pid closed on motor. In this case this group should contain pos pid and vel pid values. See example MY_POS_VEL_CTRL below                                                 -->
+        <param name="fbkControlUnits">     metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
+        <param name="outputControlUnits">  dutycycle_percent       </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->        <param name="pos_kp"> </param> <!-- Proportional constant in PID control. [expressed in pwm_raw/degrees (metric_units) or pwm_raw/encoder (machine_units)] -->
+        <param name="pos_kd">           0  </param> <!-- Derivative constant in PID control. [expressed in pwm_raw/(degrees/sec) (metric_units) or pwm_raw/(encoder/sec) (machine_units)] -->
+        <param name="pos_ki">           0  </param> <!-- Integral constant in PID control. [expressed in pwm_raw/(degrees*sec) (metric_units) or pwm_raw/(encoder*sec) (machine_units)]  -->
+        <param name="pos_maxOutput">    0  </param> <!-- Limit on PID output [expressed in PWM raw units] -->
+        <param name="pos_maxInt">       0  </param> <!-- Anti-windup limit on PID integral part [expressed in PWM raw units] -->
+        <param name="pos_shift">        0  </param> <!-- 0 for EMS and MC4+ boards, right shift of kp, kd and ki parameters on boards with integer parameters -->
+        <param name="pos_ko">           0  </param> <!-- Openloop output [expressed in PWM raw units] -->
+        <param name="pos_stictionUp">   0  </param> <!-- Not used at present -->
+        <param name="pos_stictionDwn">  0  </param> <!-- Not used at present -->
+        <param name="pos_kff">          0  </param> <!-- Feed forward term constant. The output is proportional to reference. [expressed in pwm_raw/degrees (metric_units) or pwm_raw/encoder (machine_units)] -->
+    </group>
+
+    <group name="MY_POS_VEL_CTRL">
+        <param name="controlLaw">       PidPos_withInnerVelPid     </param> <!-- Specifies the type of algorithm firmware should be performed. -->
+        <param name="fbkControlUnits">     metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
+        <param name="outputControlUnits">  dutycycle_percent       </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->
+        <param name="pos_kp">               0   </param> <!-- Proportional part of the outer PID control loop [expressed in 1/sec] -->
+        <param name="pos_kd">               0   </param> <!-- Not used.                                                    -->
+        <param name="pos_ki">               0   </param> <!-- Not used.                                                    -->
+        <param name="pos_maxOutput">        0   </param> <!-- Not used (output is limited by max velocity of joint).       -->
+        <param name="pos_maxInt">           0   </param> <!-- Not used.                                                    -->
+        <param name="pos_shift">            0   </param> <!-- Not used.                                                    -->
+        <param name="pos_ko">               0   </param> <!-- Not used.                                                    -->
+        <param name="pos_stictionUp">       0   </param> <!-- Not used.                                                    -->
+        <param name="pos_stictionDwn">      0   </param> <!-- Not used.                                                    -->
+        <param name="pos_kff">              0   </param> <!-- Feed forward velocity term, usually equal to 1 [adimensional] -->
+        <param name="vel_kp">               0   </param> <!-- Proportional part of the inner PID control loop [expressed in pwm_raw/(icubdegrees/msec)] -->
+        <param name="vel_kd">               0   </param> <!-- Derivative part of the inner PID control loop [expressed in pwm_raw/(icubdegrees/msec^2)] -->
+        <param name="vel_ki">               0   </param> <!-- Integral part of the inner PID control loop [expressed in pwm_raw/icubdegrees]            -->
+        <param name="vel_maxOutput">        0   </param> <!-- Max output of the inner PID control loop [expressed in pwm_raw]     -->
+        <param name="vel_maxInt">           0   </param> <!-- Anti-windup limit on inner PID integral part [expressed in pwm_raw] -->
+        <param name="vel_shift">            0   </param> <!-- Right shift of kp, kd and ki parameters                             -->
+        <param name="vel_ko">               0   </param> <!-- Not used. -->
+        <param name="vel_stictionUp">       0   </param> <!-- Not used. -->
+        <param name="vel_stictionDwn">      0   </param> <!-- Not used. -->
+        <param name="vel_kff">              0   </param> <!-- Not used. -->
+    </group>
+
+    <group name="MY_PID_TRQ">
+        <param name="controlLaw">          Pid_inTrq_outPwm  </param> <!-- Specifies the type of algorithm firmware should be performed. Values of this param is:
+                                                                    * Pid_inTrq_outPwm: simple pid with torue setpoint in input and pwm values in output.
+                                                                    * PidTrq_withInnerVelPid: torque pid with inner velocity pid closed on motor. In this case this group should contain torue pid and vel pid values. See example MY_TRQ_VEL_CTRL below-->
+        <param name="fbkControlUnits">     metric_units      </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
+        <param name="outputControlUnits">  dutycycle_percent </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->
+        <param name="trq_kp">              0      </param> <!-- Proportional part of the PID control loop [expressed in pwm_raw/Nm]                                  -->
+        <param name="trq_kd">              0      </param> <!-- Derivative part of the PID control loop [expressed in pwm_raw/(Nm/sec)]                              -->
+        <param name="trq_ki">              0      </param> <!-- Integral part of the PID control loop [expressed in pwm_raw/(Nm*sec)]                                -->
+        <param name="trq_maxOutput">       0      </param> <!-- Limit on PID output [expressed in PWM raw units]                                                     -->
+        <param name="trq_maxInt">          0      </param> <!-- Anti-windup limit on PID integral part [expressed in PWM raw units]                                  -->
+        <param name="trq_shift">           0      </param> <!-- 0 for EMS and MC4+ boards, right shift of kp, kd and ki parameters on boards with integer parameters -->
+        <param name="trq_ko">              0      </param> <!-- Openloop output [expressed in PWM raw units]                            -->
+        <param name="trq_stictionUp">      0      </param> <!-- Not used at present.                                                    -->
+        <param name="trq_stictionDwn">     0      </param> <!-- Not used at present.                                                    -->
+        <param name="trq_kff">             0      </param> <!-- Feed forward torque part [expressed in pwm_raw/Nm]                      -->
+        <param name="trq_kbemf">           0      </param> <!-- Friction compensation [expressed in pwm_raw/(degrees/sec)]              -->
+        <param name="trq_filterType">      0      </param> <!-- Low pass filter on output 0=no filter 1=3 HZ 2=1.1 Hz 3=0.8 Hz 4=0.5 Hz -->
+        <param name="trq_ktau">            0      </param> <!-- Gain on Kff and Kbemf parts (usually 1) [adimensional]                  -->
+    </group>
+
+    <group name="MY_TRQ_VEL_CTRL">
+        <param name="controlLaw">          PidTrq_withInnerVelPid  </param> <!-- Specifies the type of algorithm firmware should be performed. -->
+        <param name="fbkControlUnits">     metric_units            </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
+        <param name="outputControlUnits">  dutycycle_percent       </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->
+        <param name="trq_kp">              0      </param> <!-- Torque outer loop proportional part [expressed in (degrees/sec)/Nm]                                -->
+        <param name="trq_kd">              0      </param> <!-- Torque outer loop derivative part [expressed in (degrees/sec)/(Nm/sec)]                            -->
+        <param name="trq_ki">              0      </param> <!-- Torque outer loop itegral part [expressed in (degrees/sec)/(Nm*sec)]                               -->
+        <param name="trq_maxOutput">       0      </param> <!-- Limit on PID output [%]                                                        -->
+        <param name="trq_maxInt">          0      </param> <!-- Anti-windup limit on PID integral part [%]                                     -->
+        <param name="trq_shift">           0      </param> <!-- for EMS and MC4+ boards, right shift of kp, kd and ki parameters on boards with integer parameters -->
+        <param name="trq_ko">              0      </param> <!-- Not used. -->
+        <param name="trq_stictionUp">      0      </param> <!-- Not used. -->
+        <param name="trq_stictionDwn">     0      </param> <!-- Not used. -->
+        <param name="trq_kff">             0      </param> <!-- Not used. -->
+        <param name="trq_kbemf">           0      </param> <!-- Not used. -->
+        <param name="trq_filterType">      0      </param> <!-- Not used. -->
+        <param name="trq_ktau">            0      </param> <!-- Not used. -->
+        <param name="vel_kp">              0      </param> <!-- Velocity inner loop proportional part constant [expressed in pwm_raw/(icubdegrees/msec)] -->
+        <param name="vel_kd">              0      </param> <!-- Velocity inner loop derivative part constant [expressed in pwm_raw/(icubdegrees/msec^2)] -->
+        <param name="vel_ki">              0      </param> <!-- Velocity inner loop integral part constant [expressed in pwm_raw/icubdegrees/msec]       -->
+        <param name="vel_maxOutput">       0      </param> <!-- Limit on PID output [expressed icubdegrees/msec]                                         -->
+        <param name="vel_maxInt">          0      </param> <!-- Anti-windup limit on PID integral part [expressed in icubegrees/msec]                    -->
+        <param name="vel_shift">           0      </param> <!-- Right shift of kp, kd and ki parameters                                                  -->
+        <param name="vel_ko">              0      </param> <!-- Not used. -->
+        <param name="vel_stictionUp">      0      </param> <!-- Not used. -->
+        <param name="vel_stictionDwn">     0      </param> <!-- Not used. -->
+        <param name="vel_kff">             0      </param> <!-- Not used. -->
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">   1   </param> <!-- stiffness values. If torque control pid has metric_units, measurament units is [Nm/degree]  else raw value  -->
+        <param name="damping">     1   </param> <!-- damping values. If torque control pid has metric_units, measurament units is [Nm/(degree/sec)]  else raw value -->
+    </group>
+
+    <group name="MY_PID_CUR">
+        <param name="controlLaw">          limitscurrent    </param> <!-- At present, not a real current pid is implemented, but a simple feedback control.
+                                                                         So the only value of this parameter is: limitscurrent -->
+        <param name="fbkControlUnits">     machine_units    </param> <!-- fixed value -->
+        <param name="outputControlUnits">  machine_units    </param> <!-- fixed value -->
+        <param name="cur_kp">              0 </param> <!-- Current control loop proportional part [expressed in pwm_raw/mA] -->
+        <param name="cur_kd">              0 </param> <!-- Current control loop derivative part [expressed in pwm_raw/(mA/sec)] -->
+        <param name="cur_ki">              0 </param> <!-- Current control loop integral part [expressed in pwm_raw/(mA*sec)] -->
+        <param name="cur_shift">           0 </param> <!-- right shift of kp, kd and ki parameters  -->
+        <param name="cur_maxOutput">       0 </param> <!-- Limit on PID output [expressed in PWM raw units]  -->
+        <param name="cur_maxInt">          0 </param> <!-- Anti-windup limit on PID integral part [expressed in PWM raw units] -->
+        <param name="cur_ko">              0 </param> <!-- Not used. -->
+        <param name="cur_stictionUp">      0 </param> <!-- Not used. -->
+        <param name="cur_stictionDwn">     0 </param> <!-- Not used. -->
+        <param name="cur_kff">             0 </param> <!-- Not used. -->
+    </group>
+
+    <group name="OTHER_CONTROL_PARAMETERS">
+        <param name="deadZone">  </param>  <!-- the maximum precision in reaching the target position. This is an optional paramter, therefore if is not specified the firmware use the following ones: 
+                                             - for joints with aea encoder it is  0.0495 degree
+                                             - for joints with amo encoder it is  0.0049 degree -->
+    </group>
+    
+</device>
+
+
+
+
