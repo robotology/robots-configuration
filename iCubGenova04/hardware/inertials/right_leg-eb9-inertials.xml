@@ -38,6 +38,7 @@
 
                     <param name="location"> ETH:0
                     </param>
+                    
                 </group>
 
             </group>
@@ -46,6 +47,8 @@
                 <param name="acquisitionRate">      50              </param>
                 <param name="enabledSensors">       r_lower_leg_ems_gyro_eb9
                 </param>
+                <param name="fullscale">             250
+                    </param>
             </group>
 
         </group>

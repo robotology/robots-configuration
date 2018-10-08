@@ -50,6 +50,9 @@
                 <param name="enabledSensors">       l_upper_arm_mtb_acc_1b10  l_upper_arm_mtb_acc_1b11  l_upper_arm_mtb_acc_1b12  l_upper_arm_mtb_acc_1b13
                                                     l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9
                 </param>
+                <param name="fullscale">            19.62                   19.62                   19.62                  19.62                 
+                                                    19.62                   19.62                   19.62 
+                    </param> <!-- 19.62=2g-->
             </group>
 
         </group>

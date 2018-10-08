@@ -10,21 +10,21 @@
         <xi:include href="../../hardware/electronics/right_leg-eb11-skin-eln.xml" />
         
         <group name="SERVICE">
-
-            <param name="type"> eomn_serv_AS_inertials </param>
-
+        
+            <param name="type"> eomn_serv_AS_inertials </param>                
+        
             <group name="PROPERTIES">
-
+            
                 <group name="CANBOARDS">
                     <param name="type">                 eobrd_mtb           </param>
 
                     <group name="PROTOCOL">
-                        <param name="major">            0                   </param>
-                        <param name="minor">            0                   </param>
-                    </group>
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group>                    
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>
-                        <param name="minor">            0                   </param>
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
                         <param name="build">            0                   </param>
                     </group>
                 </group>
@@ -37,22 +37,22 @@
                                             r_foot_mtb_acc_11b12       r_foot_mtb_acc_11b13
                     </param>
 
-                    <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d  eoas_accel_mtb_int
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                    <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d  eoas_accel_mtb_int     
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int   
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int   
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int           
                     </param>
 
-                    <param name="location"> ETH:0                   ETH:0                   CAN1:1
-                                            CAN1:2                  CAN1:3                  CAN1:4                  CAN1:5
-                                            CAN1:6                  CAN1:7                  CAN2:8                  CAN2:9
-                                            CAN2:10                 CAN2:11                 CAN2:12                 CAN2:13
-                    </param>
+                    <param name="location"> ETH:0                   ETH:1                   CAN1:1             
+                                            CAN1:2                  CAN1:3                  CAN1:4                  CAN1:5              
+                                            CAN1:6                  CAN1:7                  CAN2:8                  CAN2:9              
+                                            CAN2:10                 CAN2:11                 CAN2:12                 CAN2:13             
+                    </param>            
                 </group>
-
+                                            
             </group>
-
-            <group name="SETTINGS">
+            
+            <group name="SETTINGS"> 
                 <param name="acquisitionRate">      50      </param>
                 <param name="enabledSensors">       r_upper_leg_ems_gyro_eb11
                                                     r_upper_leg_mtb_acc_11b1   r_upper_leg_mtb_acc_11b2   r_upper_leg_mtb_acc_11b3   r_upper_leg_mtb_acc_11b4
@@ -61,9 +61,9 @@
                                                     r_foot_mtb_acc_11b12       r_foot_mtb_acc_11b13
                 </param>
             </group>
-
-        </group>
-
+            
+        </group>        
+        
     </device>
     
 
