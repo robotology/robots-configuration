@@ -4,7 +4,7 @@
 
  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="inertial" type="inertial">
       <param name="name">  /icub/inertial  </param>
-      <param name="subdevice">  imuBosch_BNO055  </param>
-      <param name="comport">  /dev/ttyUSB0   </param>
+      <param name="subdevice">  xsensmtx   </param>
+      <param name="serial">  /dev/ttyS0   </param>
 </device>
 

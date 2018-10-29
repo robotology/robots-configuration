@@ -12,8 +12,8 @@
     <xi:include href="./torso-eb5-j0_2-mc_service.xml" />
 
     <group name="LIMITS">
-        <param name="jntPosMax">                    20          60          40          </param>
-        <param name="jntPosMin">                    -20         -20         -40         </param>
+        <param name="jntPosMax">                    20          45          40          </param>
+        <param name="jntPosMin">                   -20         -10         -40         </param>
         <param name="motorOverloadCurrents">        15000       15000       15000       </param>
         <param name="motorNominalCurrents">         4000        4000        4000        </param>
         <param name="motorPeakCurrents">            5000        5000        5000        </param>
