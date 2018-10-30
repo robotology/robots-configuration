@@ -14,10 +14,10 @@
     <group name="LIMITS">
         <param name="jntPosMax">                      40            20     </param>
         <param name="jntPosMin">                     -40           -20     </param>
+        <param name="jntVelMax">                      45            45     </param>
         <param name="motorNominalCurrents">         5000          5000     </param>
         <param name="motorPeakCurrents">           10000         10000     </param>
         <param name="motorOverloadCurrents">       15000         15000     </param>
-        <param name="jntVelMax">                    1000          1000     </param>
         <param name="motorPwmLimit">               10000         10000     </param>    
     </group>
 	
@@ -29,7 +29,7 @@
      <group name="CONTROLS">
        <param name="positionControl">  JOINT_POS_VEL_CTRL        JOINT_POS_VEL_CTRL       </param>
        <param name="velocityControl">  none                      none                     </param>
-       <param name="torqueControl">    JOINT_TRQ_VEL_CTRL        JOINT_TRQ_VEL_CTRL       </param>
+       <param name="torqueControl">    none                      none                     </param>
        <param name="currentPid">       2FOC_CUR_CONTROL          2FOC_CUR_CONTROL         </param>
     </group>
 
