@@ -12,8 +12,8 @@
     <xi:include href="./left_leg-eb7-j2_3-mc_service.xml" />
 
     <group name="LIMITS">
-        <param name="jntPosMax">                    62.5             0        </param>
-        <param name="jntPosMin">                   -62.5          -100        </param>
+        <param name="jntPosMax">                    60               3        </param>
+        <param name="jntPosMin">                   -60             -68        </param>
         <param name="jntVelMax">                    45              45        </param>   
         <param name="motorNominalCurrents">         5000          5000        </param>
         <param name="motorPeakCurrents">           10000         10000        </param>
