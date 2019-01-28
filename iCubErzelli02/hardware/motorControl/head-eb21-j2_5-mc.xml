@@ -46,7 +46,8 @@
     
         <group name="POS_PID_DEFAULT">
 	        <param name="controlLaw">    Pid_inPos_outPwm </param> 
-            <param name="controlUnits">     metric_units                                        </param> 
+            <param name="fbkControlUnits">  machine_units   </param>
+            <param name="outputControlUnits">  machine_units      </param> 
             <param name="pos_kp">                    1100.00     -1000       3500        3500       </param>       
             <param name="pos_kd">                    0.0         0.0         0.0         0.0        </param>     
             <param name="pos_ki">                    0.0         -100         600.0       600.0      </param>          
