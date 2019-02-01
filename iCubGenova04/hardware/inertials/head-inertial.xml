@@ -5,6 +5,6 @@
  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="inertial" type="inertial">
       <param name="name">  /icub/inertial  </param>
       <param name="subdevice">  imuBosch_BNO055  </param>
-      <param name="i2c">  /dev/i2c-1   </param>
+      <param name="i2c">  /dev/icub-i2c-imu   </param>
 </device>
 
