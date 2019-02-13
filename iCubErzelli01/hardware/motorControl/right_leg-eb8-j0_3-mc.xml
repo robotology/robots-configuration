@@ -84,12 +84,12 @@
         <param name="trq_maxInt">        500        500        500        500     </param>
         <param name="trq_shift">           0          0          0          0     </param>
         <param name="trq_ko">              0          0          0          0     </param>
-        <param name="trq_stictionUp">      2.3       -1.79       1.8        1.2   </param>
-        <param name="trq_stictionDwn">    -3.3        1.76      -1.4       -1.7   </param>
+        <param name="trq_stictionUp">0 0 0 0</param>
+        <param name="trq_stictionDwn">0 0 0 0</param>
         <param name="trq_kff">             1          1          1          1     </param>
-        <param name="trq_kbemf">           0          0          0          0     </param>
+        <param name="trq_kbemf">0 0 0 0</param>
         <param name="trq_filterType">      0          0          0          0     </param>
-        <param name="trq_ktau">          147       -180        217        282     </param>
+        <param name="trq_ktau">0 0 0 0</param>
     </group>
 
    <group name="2FOC_CUR_CONTROL">

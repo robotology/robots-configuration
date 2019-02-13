@@ -68,12 +68,12 @@
             <param name="trq_maxInt">        500           0           0           0    </param>
             <param name="trq_shift">           0           0           0           0    </param>
             <param name="trq_ko">              0           0           0           0    </param>
-            <param name="trq_stictionUp">      0           0           0           0    </param>
-            <param name="trq_stictionDwn">     0           0           0           0    </param>
+            <param name="trq_stictionUp">0 0 0 0</param>
+            <param name="trq_stictionDwn">0 0 0 0</param>
             <param name="trq_kff">             0           0           0           0    </param>
-            <param name="trq_kbemf">           0           0           0           0    </param>
+            <param name="trq_kbemf">0 0 0 0</param>
             <param name="trq_filterType">      0           0           0           0    </param>
-            <param name="trq_ktau">            1           0           0           0    </param>
+            <param name="trq_ktau">0 0 0 0</param>
         </group>
 
     </device>
