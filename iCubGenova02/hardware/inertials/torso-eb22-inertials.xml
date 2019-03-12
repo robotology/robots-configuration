@@ -7,7 +7,7 @@
 
         <xi:include href="../../general.xml" />
 
-        <xi:include href="../../hardware/electronics/face-eb22-j0_1-eln.xml" />
+        <xi:include href="../../hardware/electronics/face-eb22-j0-eln.xml" />
 
         <group name="SERVICE">
 
