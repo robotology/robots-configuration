@@ -12,28 +12,28 @@
         </group>
 
         <group name="HOME">
-            <param name="positionHome">               0               </param>
-            <param name="velocityHome">               10              </param>
+            <param name="positionHome">                 0               </param>
+            <param name="velocityHome">                 10              </param>
         </group>
         
-        <!-- joint logical number                      0              -->
-        <!-- joint name                                eyelids    -->        
+        <!-- joint logical number                       0               -->
+        <!-- joint name                                 eyelids         -->        
         <group name="CALIBRATION">
             <param name="calibrationType">              12              </param>
-            <param name="calibration1">                -7656          </param> 
-            <param name="calibration2">                 0              </param> 
-            <param name="calibration3">                 0             </param>
+            <param name="calibration1">                 -1572           </param> 
+            <param name="calibration2">                 0               </param> 
+            <param name="calibration3">                 0               </param>
 
-            <param name="calibration4">                0              </param>
-            <param name="calibration5">                0              </param>
+            <param name="calibration4">                 0               </param>
+            <param name="calibration5">                 0               </param>
             
-            <param name="calibrationZero">            0         </param>
-            <param name="calibrationDelta">            0            </param>
+            <param name="calibrationZero">              0               </param>
+            <param name="calibrationDelta">             0               </param>
 
-            <param name="startupPosition">             0              </param> 
-            <param name="startupVelocity">             10             </param> 
-            <param name="startupMaxPwm">               3360              </param> 
-            <param name="startupPosThreshold">         90             </param> 
+            <param name="startupPosition">              0               </param> 
+            <param name="startupVelocity">              10              </param> 
+            <param name="startupMaxPwm">                3360            </param> 
+            <param name="startupPosThreshold">          90              </param> 
         </group>
         
         <!-- calibration of eyelids where Gearbox_E2J is != 1: 
