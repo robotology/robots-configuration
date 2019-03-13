@@ -47,6 +47,13 @@
         <!-- INERTIAL SENSOR--> 
         <xi:include href="hardware/inertials/head-inertial.xml" />
         
+        <!-- IMU --> 
+<!--    it is the imu bosch bno055 inside the rfe board       
+        <xi:include href="hardware/inertials/head-imu-rfe.xml" />
+        <xi:include href="wrappers/inertials/head-imu-rfe_wrapper.xml" />
+  -->
+
+  
         <!-- ANALOG SENSOR MAIS -->
         <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" /> 
         <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" /> 
