@@ -42,7 +42,7 @@
             <param name="controlLaw">               Pid_inPos_outPwm    </param>    
             <param name="fbkControlUnits">          metric_units        </param> 
             <param name="outputControlUnits">       machine_units       </param> 
-            <param name="pos_kp">                   -1200.00            </param>       
+            <param name="pos_kp">                   +1200.00            </param>       
             <param name="pos_kd">                   0.0                 </param>     
             <param name="pos_ki">                   0.0                 </param>         
             <param name="pos_maxOutput">            3360                </param>  
