@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-FT_wrapper" type="analogServer">
+        <param name="period">      10                           </param>
+        <param name="name">       /icub/left_leg/analog:o       </param>
+        
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+        <!-- The param value must match the device name in the corresponding body_part-ebX-jA_B-strain.xml file -->
+                <elem name="FirstStrain"> left_leg-eb6-j0_3-strain </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
