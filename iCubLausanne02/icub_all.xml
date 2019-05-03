@@ -42,7 +42,7 @@
     
 
     <!-- INERTIAL SENSOR--> 
-    <xi:include href="hardware/inertials/head-inertial.xml" /> 
+    <xi:include href="hardware/inertials/head-inertial.xml" />
     
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" /> 
