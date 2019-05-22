@@ -106,7 +106,26 @@
         <param name="kff">             1           1            </param>
         <param name="kbemf">           0           0            </param>
         <param name="filterType">      0           0            </param>
-        <param name="ktau">           0.72       0.53           </param>
+        <param name="ktau">         0.72        0.53            </param>
+    </group>
+
+    <group name="TRQ_PID_OUTPUT_CURR">
+        <param name="controlLaw">          torque                       </param>
+        <param name="outputType">          current                      </param>
+        <param name="fbkControlUnits">     metric_units                 </param>
+        <param name="outputControlUnits">  machine_units                </param>
+        <param name="kp">             0            0            </param>
+        <param name="kd">             0            0            </param>
+        <param name="ki">             0            0            </param>
+        <param name="maxOutput">      25          25            </param>
+        <param name="maxInt">       1.56          1.56          </param>
+        <param name="ko">              0           0            </param>
+        <param name="stictionUp">      0           0            </param>
+        <param name="stictionDown">    0           0            </param>
+        <param name="kff">             1           1            </param>
+        <param name="kbemf">           0           0            </param>
+        <param name="filterType">      0           0            </param>
+        <param name="ktau">          162         163            </param>
     </group>
 
     <group name="TRQ_PID_NO_FRICTION">
