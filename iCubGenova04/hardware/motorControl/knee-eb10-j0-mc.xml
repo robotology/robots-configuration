@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+ <!-- Initialization file for EMS 8 - Right Upper Leg, 4 dof -->
+
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="knee-eb10-j0-mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../../hardware/electronics/knee-eb10-j0-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/knee-eb10-j0-mec.xml" />
+
+      <xi:include href="./knee-eb10-j0-mc_service.xml" />
+
+
+    <group name="LIMITS">
+        <!--                                      3         -->
+        <param name="jntPosMax">                100    </param>
+        <param name="jntPosMin">                  0    </param>
+        <param name="motorNominalCurrents">     5000   </param>
+	    <param name="motorPeakCurrents">       10000   </param>
+        <param name="motorOverloadCurrents">   15000   </param>
+        <param name="jntVelMax">                1000   </param>
+        <param name="motorPwmLimit">           10000   </param>
+    </group>
+
+    <group name="TIMEOUTS">
+        <param name="velocity">                  100   </param>
+    </group>
+
+    
+    <group name="CONTROLS">
+       <param name="positionControl">  POS_PID_DEFAULT         </param>
+       <param name="velocityControl">  none                    </param>
+       <param name="mixedControl">     none                    </param>
+       <param name="torqueControl">    TRQ_PID_TUNED           </param>
+       <param name="currentPid">       2FOC_CUR_CONTROL        </param>
+       <param name="speedPid">         2FOC_VEL_CONTROL        </param>
+    </group>
+
+    <group name="POS_PID_DEFAULT">
+        <param name="controlLaw">             minjerk                   </param>
+        <param name="outputType">             pwm                       </param>
+        <param name="fbkControlUnits">        metric_units              </param> 
+        <param name="outputControlUnits">     machine_units             </param>
+        <param name="kp">          9000.0    </param>
+        <param name="kd">              0.00   </param>
+        <param name="ki">          800.0    </param>
+        <param name="maxOutput">       8000   </param>
+        <param name="maxInt">          1000   </param>
+        <param name="stictionUp">         0   </param>
+        <param name="stictionDown">       0   </param>
+        <param name="kff">                0   </param>
+    </group>
+
+    <group name="POS_PID_CUSTOM">
+        <param name="controlLaw">             minjerk                   </param>
+        <param name="outputType">             pwm                       </param>
+        <param name="fbkControlUnits">        metric_units              </param> 
+        <param name="outputControlUnits">     machine_units             </param>
+        <param name="kp">          2066.66  </param>
+        <param name="kd">           100.00  </param>
+        <param name="ki">          1066.64  </param>
+        <param name="maxOutput">       8000 </param>
+        <param name="maxInt">          1000 </param>
+        <param name="stictionUp">         0 </param>
+        <param name="stictionDown">       0 </param>
+        <param name="kff">                0 </param>
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0     </param>
+        <param name="damping">         0     </param>
+    </group>
+
+    <group name="TRQ_PID_DEFAULT">
+        <param name="controlLaw">          torque                       </param>
+        <param name="outputType">          pwm                          </param>
+        <param name="fbkControlUnits">     metric_units                 </param>
+        <param name="outputControlUnits">  dutycycle_percent            </param>
+        <param name="kp">             0.47   </param>      <!--    200       -200        0      300    -->
+        <param name="kd">              0     </param>
+        <param name="ki">              0     </param>
+        <param name="maxOutput">      25     </param>
+        <param name="maxInt">       1.56     </param>
+        <param name="ko">              0     </param>
+        <param name="stictionUp">      0     </param>
+        <param name="stictionDown">    0     </param>
+        <param name="kff">             1     </param>
+        <param name="kbemf">           0     </param>
+        <param name="filterType">      0     </param>
+        <param name="ktau">          0.88    </param>
+    </group>
+
+    <group name="TRQ_PID_TUNED">
+        <param name="controlLaw">          torque                       </param>
+        <param name="outputType">          pwm                          </param>
+        <param name="fbkControlUnits">     metric_units                 </param>
+        <param name="outputControlUnits">  dutycycle_percent            </param>
+        <param name="kp">            0.47    </param>      <!--    200       -200        0      300    -->
+        <param name="kd">              0     </param>
+        <param name="ki">              0     </param>
+        <param name="maxOutput">      25     </param>
+        <param name="maxInt">       1.56     </param>
+        <param name="ko">              0     </param>
+        <param name="stictionUp">      0     </param>
+        <param name="stictionDown">    0     </param>
+        <param name="kff">             1     </param>
+        <param name="kbemf">           0     </param>
+        <param name="filterType">      0     </param>
+        <param name="ktau">          0.63    </param>
+    </group>
+
+    <group name="TRQ_PID_NO_FRICTION">
+        <param name="controlLaw">          torque                       </param>
+        <param name="outputType">          pwm                          </param>
+        <param name="fbkControlUnits">     metric_units                 </param>
+        <param name="outputControlUnits">  dutycycle_percent            </param>
+        <param name="kp">              0     </param>      <!--    200       -200        0      300    -->
+        <param name="kd">              0     </param>
+        <param name="ki">              0     </param>
+        <param name="maxOutput">      25     </param>
+        <param name="maxInt">       1.56     </param>
+        <param name="ko">              0     </param>
+        <param name="stictionUp">      0     </param>
+        <param name="stictionDown">    0     </param>
+        <param name="kff">             1     </param>
+        <param name="kbemf">           0     </param>
+        <param name="filterType">      0     </param>
+        <param name="ktau">          0.63    </param>
+    </group>
+
+    <group name="2FOC_CUR_CONTROL">
+        <param name="controlLaw">          low_lev_current      </param> 
+        <param name="fbkControlUnits">     machine_units        </param> 
+        <param name="outputControlUnits">  machine_units        </param>
+        <param name="kp">               8      </param>
+        <param name="kd">               0      </param>
+        <param name="ki">               2      </param>
+        <param name="shift">            10     </param>
+        <param name="maxOutput">        32000  </param>
+        <param name="maxInt">           32000  </param>
+        <param name="kff">                  0  </param>
+    </group>
+    
+    <group name="2FOC_VEL_CONTROL">
+        <param name="controlLaw">          low_lev_speed        </param> 
+        <param name="fbkControlUnits">     machine_units        </param> 
+        <param name="outputControlUnits">  machine_units        </param>
+        <param name="kff">                     0      </param>
+        <param name="kp">                     12      </param>       
+        <param name="kd">                      0      </param>       
+        <param name="ki">                     16      </param>
+        <param name="shift">                  10      </param>
+        <param name="maxOutput">           32000      </param>                 
+        <param name="maxInt">              32000      </param>        
+    </group>
+
+  </device>
+
