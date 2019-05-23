@@ -40,7 +40,7 @@
             <param name="gravityCompensationAxesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch,neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         </group>
        
-        <group name="FT_SECONDARY_CALIBRATION">
+      <!--  <group name="FT_SECONDARY_CALIBRATION">
              <param name="l_leg_ft_sensor"> 
                    (5.969361e-01,2.428213e-02,-5.463457e-02,4.254463e-01,1.123516e+00,-1.303151e-01 
                     ,-2.818578e-02,6.863783e-01,2.028274e-02,6.585433e-01,1.573658e-01,1.544577e+00 
@@ -57,7 +57,7 @@
                    ,3.959038e-02,1.290493e-03,-6.796986e-04,-6.866659e-02,8.221872e-01,-6.964079e-03 
                    ,-1.542292e-04,3.264395e-04,-6.124671e-04,-2.551378e-02,5.215466e-03,7.234167e-01)</param> 
 
-         </group>
+         </group> -->
 
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
