@@ -27,9 +27,9 @@
 
 
         <group name="CONTROLS">
-    <!--<param name="positionControl">         JOINT_MINJERK_OUT_PWM_CTRL       JOINT_MINJERK_OUT_PWM_CTRL    </param>
-        <param name="positionControl">         JOINT_MINJERK_OUT_VEL_CTRL       JOINT_MINJERK_OUT_VEL_CTRL    </param>-->
-        <param name="positionControl">         JOINT_MINJERK_OUT_CUR_CTRL       JOINT_MINJERK_OUT_CUR_CTRL    </param>
+        <param name="positionControl">         JOINT_MINJERK_OUT_PWM_CTRL       JOINT_MINJERK_OUT_PWM_CTRL    </param>
+    <!--<param name="positionControl">         JOINT_MINJERK_OUT_VEL_CTRL       JOINT_MINJERK_OUT_VEL_CTRL    </param>
+	<param name="positionControl">         JOINT_MINJERK_OUT_CUR_CTRL       JOINT_MINJERK_OUT_CUR_CTRL    </param>-->
                                                                                                             
     <!--<param name="velocityControl">         JOINT_MINJERK_OUT_PWM_CTRL       JOINT_MINJERK_OUT_PWM_CTRL    </param>
         <param name="velocityControl">         JOINT_MINJERK_OUT_VEL_CTRL       JOINT_MINJERK_OUT_VEL_CTRL    </param>-->
@@ -47,9 +47,9 @@
         <param name="velDirectControl">        JOINT_DIRECT_OUT_VEL_CTRL        JOINT_DIRECT_OUT_VEL_CTRL     </param>
         <param name="velDirectControl">        JOINT_DIRECT_OUT_CUR_CTRL        JOINT_DIRECT_OUT_CUR_CTRL     </param>-->
                                                                                                             
-        <param name="torqueControl">           none                             none                          </param>
-    <!--<param name="torqueControl">           JOINT_TORQUE_OUT_PWM_CTRL        JOINT_TORQUE_OUT_PWM_CTRL     </param>
-        <param name="torqueControl">           JOINT_TORQUE_OUT_VEL_CTRL        JOINT_TORQUE_OUT_VEL_CTRL     </param>
+    <!--<param name="torqueControl">           none                             none                          </param>-->
+        <param name="torqueControl">           JOINT_TORQUE_OUT_PWM_CTRL        JOINT_TORQUE_OUT_PWM_CTRL     </param>
+    <!--<param name="torqueControl">           JOINT_TORQUE_OUT_VEL_CTRL        JOINT_TORQUE_OUT_VEL_CTRL     </param>
         <param name="torqueControl">           JOINT_TORQUE_OUT_CUR_CTRL        JOINT_TORQUE_OUT_CUR_CTRL     </param>-->
         
         <param name="currentPid">              2FOC_CUR_CONTROL                 2FOC_CUR_CONTROL             </param>
@@ -57,7 +57,7 @@
     </group>
     
     <group name="JOINT_MINJERK_OUT_CUR_CTRL">
-	    <param name="controlLaw">             minjerk                   </param>
+	<param name="controlLaw">             minjerk                   </param>
         <param name="outputType">             current                   </param>
         <param name="fbkControlUnits">        metric_units              </param> 
         <param name="outputControlUnits">     machine_units             </param>
@@ -71,20 +71,19 @@
         <param name="stictionDown">                0         0    </param>     
     </group>
     
-    <group name="POS_PID_DEFAULT">
-        <param name="controlLaw">    Pid_inPos_outPwm                 </param>
-        <param name="fbkControlUnits">     metric_units               </param>
-        <param name="outputControlUnits">  machine_units              </param>
-        <param name="pos_kp">           -4000.00     -2310.00         </param>
-        <param name="pos_kd">               0.00         0.00         </param>
-        <param name="pos_ki">              -200.0        -0.09         </param>
-        <param name="pos_maxOutput">     8000         8000            </param>
-        <param name="pos_maxInt">         750          750            </param>
-        <param name="pos_shift">            0            0            </param>
-        <param name="pos_ko">               0            0            </param>
-        <param name="pos_stictionUp">       0            0            </param>
-        <param name="pos_stictionDwn">      0            0            </param>
-        <param name="pos_kff">              0            0            </param>
+    <group name="JOINT_MINJERK_OUT_PWM_CTRL">
+	    <param name="controlLaw">             minjerk                   </param>
+        <param name="outputType">             pwm                       </param>
+        <param name="fbkControlUnits">        metric_units              </param> 
+        <param name="outputControlUnits">     machine_units             </param>
+        <param name="kff">                     0.0          0.0         </param> 
+        <param name="kp">                 -4000.00     -2310.00         </param>
+        <param name="kd">                     0.00         0.00         </param>
+        <param name="ki">                   -200.0        -0.09         </param>
+        <param name="maxOutput">              8000         8000         </param>                
+        <param name="maxInt">                  750          750         </param>                             
+        <param name="stictionUp">                0            0         </param>          
+        <param name="stictionDown">              0            0         </param>        
     </group>
 
     <group name="IMPEDANCE">
@@ -92,27 +91,43 @@
         <param name="damping">         0      0     </param>
     </group>
 
-    <group name="TRQ_PID_DEFAULT">
-        <param name="controlLaw">    Pid_inTrq_outPwm               </param>
-        <param name="fbkControlUnits">  metric_units                </param>
-        <param name="outputControlUnits">  dutycycle_percent        </param>
-   <!-- <param name="trq_kp">          -200        -200             </param> -->
-        <param name="trq_kp">          -0.53        -0.53           </param>
-        <param name="trq_kd">              0          0             </param>
-        <param name="trq_ki">              0          0             </param>
-        <param name="trq_maxOutput">      25         25             </param>
-        <param name="trq_maxInt">       1.56       1.56             </param>
-        <param name="trq_shift">           0          0             </param>
-        <param name="trq_ko">              0          0             </param>
-        <param name="trq_stictionUp">      0          0             </param>
-        <param name="trq_stictionDwn">     0          0             </param>
-        <param name="trq_kff">             1          1             </param>
-        <param name="trq_kbemf">           0          0             </param>
-        <param name="trq_filterType">      0          0             </param>
-        <param name="trq_ktau">          -0.72      -0.56           </param>
+    <group name="JOINT_TORQUE_OUT_PWM_CTRL_DEFAULT">
+        <param name="controlLaw">           direct            </param>
+        <param name="outputType">           pwm               </param>
+        <param name="fbkControlUnits">      metric_units      </param> 
+        <param name="outputControlUnits">   dutycycle_percent </param>        
+        <param name="kff">              1          1          </param>  
+        <param name="kp">           -0.53      -0.53          </param>
+        <param name="kd">               0          0          </param>
+        <param name="ki">               0          0          </param>
+        <param name="maxOutput">       25         25          </param>       
+        <param name="maxInt">        1.56       1.56          </param> 
+        <param name="ko">               0          0          </param>       
+        <param name="stictionUp">       0          0          </param>       
+        <param name="stictionDown">     0          0          </param>       
+        <param name="kbemf">            0          0          </param>
+        <param name="ktau">         -0.72      -0.56          </param>
+        <param name="filterType">       0          0          </param>              
     </group>
 
-
+    <group name="JOINT_TORQUE_OUT_PWM_CTRL">
+        <param name="controlLaw">           direct            </param>
+        <param name="outputType">           pwm               </param>
+        <param name="fbkControlUnits">      metric_units      </param>
+        <param name="outputControlUnits">   dutycycle_percent </param>    
+        <param name="kff">              1          1          </param>
+        <param name="kp">           -0.31      -0.31          </param>
+        <param name="kd">               0          0          </param>
+        <param name="ki">               0          0          </param>
+        <param name="maxOutput">       25         25          </param> 
+        <param name="maxInt">        1.56       1.56          </param>
+        <param name="ko">               0          0          </param>
+        <param name="stictionUp">       0          0          </param>
+        <param name="stictionDown">     0          0          </param>
+        <param name="kbemf">            0          0          </param>
+        <param name="ktau">         -0.72      -0.53          </param>
+        <param name="filterType">       0          0          </param>
+    </group>
 
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">          low_lev_current      </param> 
