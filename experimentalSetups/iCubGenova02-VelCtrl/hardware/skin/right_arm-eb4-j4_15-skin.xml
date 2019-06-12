@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb4-j4_15-skin" type="embObjSkin">
+        <xi:include href="../../general.xml" /> 
+        <xi:include href="../../hardware/electronics/right_arm-eb4-j4_15-eln.xml" />
+        
+        <group name="SERVICE">
+        
+            <param name="type"> eomn_serv_SK_skin </param>
+
+            <group name="PROPERTIES">
+            
+                <group name="CANBOARDS">
+                    <param name="type">                 mtb                 </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group>                    
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+           
+            </group>  
+        
+        </group>  
+        
+        <group name="patches">
+            <param name="skinCanAddrsPatch2"> 14 13 12 11 10 9 8</param> 
+        </group>
+        <xi:include href="./right_arm-eb4-j4_15-skinSpec.xml" /> 
+    </device>  
+

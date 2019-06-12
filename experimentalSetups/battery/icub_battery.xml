@@ -3,7 +3,7 @@
 <devices>
     <!-- battery -->
     <xi:include href="./wrappers/battery/battery.xml" /> 
-    <xi:include href="./hardware/battery/battery.xml" /> 
+    <xi:include href="./hardware/battery/icubbattery.xml" /> 
     
 </devices>
 </robot> 

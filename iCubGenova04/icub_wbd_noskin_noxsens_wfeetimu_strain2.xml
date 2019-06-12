@@ -47,7 +47,7 @@
 
 
     <!--inertials3-->
-    <xi:include href="hardware/inertials/left_leg-eb7-IMU.xml" /> 
+   <!-- <xi:include href="hardware/inertials/left_leg-eb7-IMU.xml" /> 
     <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" /> 
     <xi:include href="hardware/inertials/right_leg-eb9-IMU.xml" /> 
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" /> 
@@ -76,10 +76,10 @@
     <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
+   <!-- <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> -->
     <xi:include href="wrappers/FT/right_foot-FT_wrapper_multipleSens.xml" />
     <xi:include href="wrappers/FT/right_leg-FT_wrapper_multipleSens.xml" />
     <xi:include href="wrappers/FT/left_leg-FT_wrapper_multipleSens.xml" />
