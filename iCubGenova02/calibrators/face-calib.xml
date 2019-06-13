@@ -20,7 +20,7 @@
         <!-- joint name                                 eyelids         -->        
         <group name="CALIBRATION">
             <param name="calibrationType">              12              </param>
-            <param name="calibration1">                 -1572           </param> 
+            <param name="calibration1">                 -7643           </param> 
             <param name="calibration2">                 0               </param> 
             <param name="calibration3">                 0               </param>
 
