@@ -7,9 +7,9 @@
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="knee-eb10-j0-mc" type="embObjMotionControl">
       <xi:include href="../../general.xml" />
       <xi:include href="../../hardware/electronics/knee-eb10-j0-eln.xml" />
-      <xi:include href="../../hardware/mechanicals/knee-eb10-j0-mec.xml" />
+      <xi:include href="../../hardware/mechanicals/knee-eb10-j0-mec-V25.xml" />
 
-      <xi:include href="./knee-eb10-j0-mc_service.xml" />
+      <xi:include href="./knee-eb10-j0-mc_service-V25.xml" />
 
 
     <group name="LIMITS">
