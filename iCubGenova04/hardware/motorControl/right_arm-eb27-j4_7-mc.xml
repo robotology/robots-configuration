@@ -30,8 +30,8 @@
 
         <group name="CONTROLS">
            <param name="positionControl">           POS_PID_DEFAULT    POS_PID_DEFAULT    POS_PID_DEFAULT    POS_PID_DEFAULT    </param>
-           <param name="velocityControl">           none               none               none               none            </param>
-           <param name="mixedControl">              none               none               none               none               </param> 
+           <param name="velocityControl">           POS_PID_DEFAULT    POS_PID_DEFAULT    POS_PID_DEFAULT    POS_PID_DEFAULT    </param>
+           <param name="mixedControl">              POS_PID_DEFAULT    POS_PID_DEFAULT    POS_PID_DEFAULT    POS_PID_DEFAULT    </param> 
            <param name="torqueControl">             TRQ_PID_DEFAULT    none               none               none               </param>
            <param name="currentPid">                none               none               none               none               </param>
            <param name="speedPid">                  none               none               none               none               </param> 
