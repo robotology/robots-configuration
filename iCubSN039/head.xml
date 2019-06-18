@@ -18,7 +18,10 @@
     <xi:include href="./hardware/motorControl/face-eb22-j0-mc.xml" /> 
     <xi:include href="./wrappers/motorControl/face-mc_wrapper.xml" /> 
 
-      
+      <!-- INERTIAL SENSOR--> 
+    <xi:include href="hardware/inertials/head-inertial.xml" />
+    
+
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/head-calib.xml" />
     <xi:include href="calibrators/face-calib.xml" />
