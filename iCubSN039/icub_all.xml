@@ -59,7 +59,7 @@
     <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />  
     
     <!--  SKINS  --> 
-    <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
+<!--    <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
     <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />  
     <xi:include href="hardware/skin/right_arm-eb27-j4_7-skin.xml" />
@@ -68,7 +68,7 @@
     <xi:include href="hardware/skin/left_leg-eb10-skin.xml" />
     <xi:include href="hardware/skin/right_leg-eb11-skin.xml" />
     <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />
-    <xi:include href="hardware/skin/torso-eb22-skin.xml" /> 
+    <xi:include href="hardware/skin/torso-eb22-skin.xml" />  -->
    
     <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
