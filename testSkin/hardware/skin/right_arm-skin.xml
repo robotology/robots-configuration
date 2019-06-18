@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+ <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-skin" type="canBusSkin">
+      <xi:include href="../../general.xml" />
+
+	  <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="testSkin" build="1">
+        <param name="canDeviceNum"> 0         </param>
+        <param name="skinCanIds">   14 13 12 11 10 9 8  </param>
+        <param name="period"> 10              </param>
+        <param name="canbusDevice"> socketcan   </param>
+      </params>
+    <xi:include href="./right_arm-skinSpec.xml" />  
+  </device>
+  
