@@ -47,9 +47,9 @@
          <param name="ki">          -1            1             -1            1     -1            -5            5             -5            -5            -5            5             -1       </param>
          <param name="maxOutput">   1333          1333          1333          1333   1333          1333          1333          1333          1333          1333          1333          1333     </param>
          <param name="maxInt">      1333          1333          1333          1333   1333          1333          1333          1333          1333          1333          1333          1333     </param>
-         <param name="stictionUp">  0             0             0             0      0             0             0             0             0             0             0             0        </param>
-         <param name="stictionDwn"> 0             0             0             0      0             0             0             0             0             0             0             0        </param>
-         <param name="kff">         0             0             0             0      0             0             0             0             0             0             0             0        </param>
+         <param name="stictionUp">   0             0             0             0      0             0             0             0             0             0             0             0        </param>
+         <param name="stictionDown"> 0             0             0             0      0             0             0             0             0             0             0             0        </param>
+         <param name="kff">          0             0             0             0      0             0             0             0             0             0             0             0        </param>
      </group>
 
     <group name="TRQ_PID_DEFAULT">
@@ -64,7 +64,7 @@
         <param name="maxInt">         1333      0      0      0      0      0      0      0      0      0      0      0    </param>
         <param name="ko">                0      0      0      0      0      0      0      0      0      0      0      0    </param>
         <param name="stictionUp">        0      0      0      0      0      0      0      0      0      0      0      0    </param>
-        <param name="stictionDwn">       0      0      0      0      0      0      0      0      0      0      0      0    </param>
+        <param name="stictionDown">      0      0      0      0      0      0      0      0      0      0      0      0    </param>
         <param name="kff">               0      0      0      0      0      0      0      0      0      0      0      0    </param>
         <param name="kbemf">             0      0      0      0      0      0      0      0      0      0      0      0    </param>
         <param name="filterType">        0      0      0      0      0      0      0      0      0      0      0      0    </param>

@@ -88,13 +88,13 @@
        <param name="controlLaw">          low_lev_speed        </param>
        <param name="fbkControlUnits">     machine_units        </param>
        <param name="outputControlUnits">  machine_units        </param>
-       <param name="kff">                     0         0       0         0      </param>
-       <param name="kp">                     12        12      12        12      </param>
-       <param name="kd">                      0         0       0         0      </param>
-       <param name="ki">                     16        16      16        16      </param>
-       <param name="shift">                  10        10      10        10      </param>
-       <param name="maxOutput">           32000     32000   32000     32000      </param>
-       <param name="maxInt">              32000     32000   32000     32000      </param>
+       <param name="kff">                     0         0       0   </param>
+       <param name="kp">                     12        12      12   </param>
+       <param name="kd">                      0         0       0   </param>
+       <param name="ki">                     16        16      16   </param>
+       <param name="shift">                  10        10      10   </param>
+       <param name="maxOutput">           32000     32000   32000   </param>
+       <param name="maxInt">              32000     32000   32000   </param>
    </group>
 
   </device>
