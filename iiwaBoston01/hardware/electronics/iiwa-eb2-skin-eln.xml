@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iiwaBoston01" build="1">
 
-    <xi:include href="hardware/electronics/iiwa_client.xml" />
+    <xi:include href="../../hardware/electronics/iiwa_client.xml" />
     
     <group name="ETH_BOARD">
 
@@ -22,7 +22,7 @@
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>   
                 <param name="maxTimeOfTXactivity">      300                 </param>                
-                <param name="TXrateOfRegularROPs">      3                   </param> 
+                <param name="TXrateOfRegularROPs">      1                   </param> 
             </group>              
         </group>                 
         

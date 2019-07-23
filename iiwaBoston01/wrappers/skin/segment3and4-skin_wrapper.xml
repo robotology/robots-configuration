@@ -10,8 +10,8 @@
         <paramlist name="ports">
          <elem name="ThreeLeft">   1728 2303  0 575 </elem>  <!-- 2 boards CANBUS2N2 ID 4-6  -->
          <elem name="ThreeRight">  1152 1727  0 575 </elem>  <!-- 2 boards CANBUS2N2 ID 1-3  -->
-         <elem name="FourRight">   0 575      0 575 </elem>  <!-- 2 boards CANBUS2N1 ID 4-6 -->
-         <elem name="FourLeft">    576 1151   0 575 </elem>  <!-- 2 boards CANBUS2N1 ID 1-3 -->
+         <elem name="FourRight">   0    575   0 575 </elem>  <!-- 2 boards CANBUS2N1 ID 4-6 -->
+         <elem name="FourLeft">    576 	1151  0 575 </elem>  <!-- 2 boards CANBUS2N1 ID 1-3 -->
          		 		 
 		</paramlist>
         

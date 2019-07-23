@@ -9,10 +9,10 @@
         
         <paramlist name="ports">
          
-         <elem name="FiveLeft">   2112 2687  0 575 </elem>  <!-- 3 boards CANBUS1N2 ID 4-6  -->
-         <elem name="FiveRight">  1536 2111  0 575 </elem>  <!-- 3 boards CANBUS1N2 ID 1-3  -->
-         <elem name="SixLeft">    768  1535  0 767 </elem>  <!-- 4 boards CANBUS1N1 ID 5-8  -->
          <elem name="SixRight">   0    767   0 767 </elem>  <!-- 4 boards CANBUS1N1 ID 1-4  -->
+         <elem name="SixLeft">    768  1535  0 767 </elem>  <!-- 4 boards CANBUS1N1 ID 5-8  -->
+         <elem name="FiveRight">  1536 2111  0 575 </elem>  <!-- 3 boards CANBUS1N2 ID 1-3  -->
+         <elem name="FiveLeft">   2112 2687  0 575 </elem>  <!-- 3 boards CANBUS1N2 ID 4-6  -->
          		 		 
 		</paramlist>
         
