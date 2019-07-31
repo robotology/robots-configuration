@@ -1,4 +1,4 @@
-set(appname iCubSN039)
+set(appname iCubShenzen01)
 
 file(GLOB xml ${CMAKE_CURRENT_SOURCE_DIR}/*.xml)
 file(GLOB ini ${CMAKE_CURRENT_SOURCE_DIR}/*.ini)
