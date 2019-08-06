@@ -76,6 +76,19 @@
     <!-- WRAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
     <xi:include href="wrappers/inertials/left_leg-inertials_wrapper.xml" />
 
+    <!-- DEVICES FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="hardware/inertials/right_leg-eb8-IMU.xml" />
+    <devices file="hardware/inertials/right_leg-eb8-inertials.xml" />
+    <devices file="hardware/inertials/right_leg-eb9-IMU.xml" />
+    <devices file="hardware/inertials/right_leg-eb9-inertials.xml" />
+    <devices file="hardware/inertials/right_leg-eb11-inertials.xml" />
+
+    <!-- REMAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="wrappers/inertials/right_leg-inertials_remapper.xml" />
+
+    <!-- WRAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
+    <devices file="wrappers/inertials/right_leg-inertials_wrapper.xml" />
+
     <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
