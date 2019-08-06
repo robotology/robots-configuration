@@ -7,18 +7,18 @@
         <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
              defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->
         <param name="ThreeAxisGyroscopesNames">
-          (r_upper_leg_imu_gyro_1
+          (r_upper_leg_ft_gyro_3b11
            r_upper_leg_ems_gyro_eb8
            r_upper_leg_ems_gyro_eb11
            r_lower_leg_ems_gyro_eb9
-           r_lower_leg_imu_gyro_2)
+           r_lower_leg_ft_gyro_3b14)
         </param>
         <param name="ThreeAxisLinearAccelerometersNames">
-          (r_upper_leg_imu_acc_1
+          (r_upper_leg_ft_acc_3b11
            r_upper_leg_mtb_acc_11b1   r_upper_leg_mtb_acc_11b2   r_upper_leg_mtb_acc_11b3   r_upper_leg_mtb_acc_11b4
            r_upper_leg_mtb_acc_11b5   r_upper_leg_mtb_acc_11b6   r_upper_leg_mtb_acc_11b7
            r_lower_leg_mtb_acc_11b8   r_lower_leg_mtb_acc_11b9   r_lower_leg_mtb_acc_11b10  r_lower_leg_mtb_acc_11b11
-           r_lower_leg_imu_acc_2
+           r_lower_leg_ft_acc_3b14
            r_foot_mtb_acc_11b12       r_foot_mtb_acc_11b13)
         </param>
         <action phase="startup" level="5" type="attach">
