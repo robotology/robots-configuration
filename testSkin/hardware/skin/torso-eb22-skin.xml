@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-skin" type="canBusSkin">
+        <xi:include href="../../general.xml" />
+ 
+        <!--the torso skin is connected to face eb 22 board -->
+        <xi:include href="../../hardware/electronics/face-eb22-j0-eln.xml" /> 
+        <group name="patches">
+            <param name="skinCanAddrsPatch1"> 7 8 9 10 </param> 
+        </group>
+        <xi:include href="./torso-skinSpec.xml" />
+    </device>
+

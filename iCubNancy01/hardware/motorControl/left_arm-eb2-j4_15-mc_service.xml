@@ -36,7 +36,7 @@
                 </group>
 
                 <group name="BROADCASTPOLICY">
-                    <param name="enable">    eomc_mc4broadcast_position    status  print   pidvalues     </param>
+                    <param name="enable">    position    status  print   pidvalues     </param>
                 </group>
 
 

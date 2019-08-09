@@ -11,7 +11,27 @@
             <param name="noLoad">         0xf0  </param>
             <param name="diagnostic">    false  </param>     <!-- used to config high level -->
         </group>
-        
+        <group name="specialCfgBoards"> 
+           
+            <!-- It contains the number of special configurations which follow. As an example, if numOfSets is 2, there will be boardSetCfg1 and boardSetCfg2. 
+                 But there can be as many special configuration as one wants. The upper limit is one per each MTB board.
+              -->
+            <param name="numOfSets">         1  </param> 
+
+            <!-- boardSetCfgX contains the X-th configuration set. It is formed by 6 values.
+                - patch_number:             it is 1 or 2. The value is referred to skinCanAddrsPatch1 or skinCanAddrsPatch2. 
+                - start_address:            it is the first can address of the MTB board will receive the settings.
+                - end_address:              it is the last can address of the MTB board will receive the settings.
+                - tx_period:                tx period of the boards. same as defaultCfgBoard::period.
+                - skin_type                 the skin type. same as defaultCfgBoard::skinType.
+                - no_load:                  same as defaultCfgBoard::noLoad
+                In following, all MTB board from CAN2:12 to CAN2:14 must have txperiod = 30 ms, be of skintype = 1, have nload = 0xff
+                and MTB board CAN1:10 must have txperiod = 30 ms, be of skintype = 1, have nload = 0xf2
+              -->
+           <!--                             patch       start       end         period          type        no_load     -->                  
+           <param name="boardSetCfg1">      1           14           14          50              1           0xf0        </param> 
+                       
+        </group>     
         
        <group name="defaultCfgTriangle">
             <param name="enabled">         true  </param> 

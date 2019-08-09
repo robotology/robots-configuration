@@ -62,16 +62,16 @@
 
     <part name="face">
 
-        <board type='mc4plus' name="face-eb22-j0_1">
+        <board type='mc4plus' name="face-eb22-j0">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.22" />
-            <connected bus="ETH" prev="10.0.1.21" next="10.0.1.23" />
+            <connected bus="ETH" prev="10.0.1.21" next="10.0.1.1" />
         </board>
         
-        <board type='mc4plus' name="face-eb23-j2_5">
+        <board type='rfe' name="rfe.1.1">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.23" />
-            <connected bus="ETH" prev="10.0.1.22" next="10.0.1.1" />
+            <ataddress ip="10.0.1.22" canbus="1" canadr="1"  />
+            <connected bus="CAN" />
         </board>        
 
     </part>
@@ -82,7 +82,7 @@
         <board type='ems4' name="left_arm-eb1-j0_3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.1" />
-            <connected bus="ETH" prev="10.0.1.23" next="10.0.1.2" />
+            <connected bus="ETH" prev="10.0.1.21" next="10.0.1.2" />
         </board>
 
         <board type='foc' name="foc.1.1">
@@ -418,13 +418,13 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.left_leg">
+        <board type='strain2' name="strain2.left_leg">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.6" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.left_foot">
+        <board type='strain2' name="strain2.left_foot">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.7" canbus="2" canadr="13"  />
             <connected bus="CAN" />
@@ -567,13 +567,13 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.right_leg">
+        <board type='strain2' name="strain2.right_leg">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.8" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.right_foot">
+        <board type='strain2' name="strain2.right_foot">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.9" canbus="2" canadr="13"  />
             <connected bus="CAN" />
