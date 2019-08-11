@@ -30,7 +30,7 @@
        <param name="positionControl">  POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT         </param>
        <param name="velocityControl">  POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT         </param>
        <param name="mixedControl">     POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT         </param>
-       <param name="torqueControl">    TRQ_PID_TUNED             TRQ_PID_TUNED            TRQ_PID_TUNED            TRQ_PID_TUNED           </param>
+       <param name="torqueControl">    TRQ_PID_OUTPUT_CURR       TRQ_PID_OUTPUT_CURR      TRQ_PID_OUTPUT_CURR      TRQ_PID_OUTPUT_CURR     </param>
        <param name="currentPid">       2FOC_CUR_CONTROL          2FOC_CUR_CONTROL         2FOC_CUR_CONTROL         2FOC_CUR_CONTROL        </param>
        <param name="speedPid">         2FOC_VEL_CONTROL          2FOC_VEL_CONTROL         2FOC_VEL_CONTROL         2FOC_VEL_CONTROL        </param>
     </group>
@@ -132,16 +132,16 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">            0.00       0.00       0.00       0.00    </param>      <!--   -200        200       0       -200    -->
+        <param name="kp">            0.00       0.00       0.00      -0.47    </param>
         <param name="kd">              0          0          0          0     </param>
         <param name="ki">              0          0          0          0     </param>
-        <param name="maxOutput">      25         25         25         25     </param>
-        <param name="maxInt">       1.56       1.56       1.56       1.56     </param>
+        <param name="maxOutput">    2500       2500       2500       2500     </param>
+        <param name="maxInt">        750        750        750        750     </param>
         <param name="ko">              0          0          0          0     </param>
         <param name="stictionUp">      0          0          0          0     </param>
         <param name="stictionDown">    0          0          0          0     </param>
         <param name="kff">             1          1          1          1     </param>
-        <param name="kbemf">           0          0          0          0     </param>
+        <param name="kbemf">           0.66       0.26       0.44       0.35  </param>
         <param name="filterType">      0          0          0          0     </param>
         <param name="ktau">         -176        178       -176       -230     </param>
     </group>
