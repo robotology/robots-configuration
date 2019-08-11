@@ -143,7 +143,7 @@
         <param name="stictionUp">      0          0          0          0     </param>
         <param name="stictionDown">    0          0          0          0     </param>
         <param name="kff">             1          1          1          1     </param>
-        <param name="kbemf">           0.59       0.18       0.57       0.40  </param>
+        <param name="kbemf">           0.0002    -0.0003     0.0003     0.0001</param>
         <param name="filterType">      0          0          0          0     </param>
         <param name="ktau">          196.52    -185.41     185.70     270.78  </param>
     </group>
