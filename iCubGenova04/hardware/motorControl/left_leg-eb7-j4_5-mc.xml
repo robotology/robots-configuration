@@ -125,7 +125,7 @@
         <param name="kff">             1           1            </param>
         <param name="kbemf">           0.0008      0.0014       </param>
         <param name="filterType">      0           0            </param>
-        <param name="ktau">          162         163            </param>
+        <param name="ktau">          162.24      163.96         </param>
     </group>
 
     <group name="TRQ_PID_NO_FRICTION">
