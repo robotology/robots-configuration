@@ -112,7 +112,7 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">          -0.31      -0.31      -0.31      </param>
+        <param name="kp">              0          0          0      </param>
         <param name="kd">              0          0          0      </param>
         <param name="ki">              0          0          0      </param>
         <param name="maxOutput">    2500       2500       2500      </param>
@@ -121,7 +121,7 @@
         <param name="stictionUp">      0          0          0      </param>
         <param name="stictionDown">    0          0          0      </param>
         <param name="kff">             1          1          1      </param>
-        <param name="kbemf">          -0.0004    -0.0004    -0.0002 </param>
+        <param name="kbemf">          -0.0001    -0.0003    -0.0003 </param>
         <param name="filterType">      0          0          0      </param>
         <param name="ktau">         -426.33    -209.96    -164.01   </param>
     </group>
