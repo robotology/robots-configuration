@@ -141,9 +141,9 @@
         <param name="stictionUp">      0          0       </param>
         <param name="stictionDown">    0          0       </param>
         <param name="kff">             1          1       </param>
-        <param name="kbemf">          -0.0003    -0.0003  </param>
+        <param name="kbemf">          -0.0003    -0.0004  </param>
         <param name="filterType">      0          0       </param>
-        <param name="ktau">         -181.17    -172.08    </param>
+        <param name="ktau">         -181.17    -230.00    </param>
     </group>
 
     <group name="2FOC_CUR_CONTROL">
