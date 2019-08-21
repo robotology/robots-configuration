@@ -49,7 +49,7 @@
    
  
     <!-- INERTIAL SENSOR 
-    <xi:include href="hardware/inertial.xml" /> -->
+    <xi:include href="hardware/inertials/head-inertial.xml" /> -->
 
     <!--  SKINS -->
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />

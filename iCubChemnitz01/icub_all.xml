@@ -8,7 +8,7 @@
     <xi:include href="hardware/motorControl/icub_head.xml" />
  
     <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
-    <xi:include href="hardware/inertial.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />
     
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/head_calib.xml" /> 

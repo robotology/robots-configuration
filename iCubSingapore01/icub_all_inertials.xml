@@ -67,7 +67,7 @@
     <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />	
  
     <!-- INERTIAL SENSOR -->
-    <xi:include href="hardware/inertial.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />
     
     <!-- INERTIAL SENSORS ON MTB -->
     <xi:include href="wrappers/skin/left_hand-skin_inertial_wrapper.xml" />
