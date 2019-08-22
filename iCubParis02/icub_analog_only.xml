@@ -81,6 +81,7 @@
     <xi:include href="hardware/skin/torso.xml" />  
 
     <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
     <!--
     <xi:include href="wrappers/skin/left_hand_inertial_wrapper.xml" />  
