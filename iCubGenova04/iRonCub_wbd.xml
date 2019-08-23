@@ -5,7 +5,7 @@
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
-        
+
 <devices>
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
@@ -42,19 +42,19 @@
 
     <!-- INERTIAL SENSOR-->
     <xi:include href="hardware/inertials/head-inertial.xml" />
-    <xi:include href="hardware/inertials/waist-inertial.xml" /> 
+    <xi:include href="hardware/inertials/waist-inertial.xml" />
 
     <!-- DEVICES FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
-    <devices file="hardware/inertials/left_arm-eb24-j4_7-inertials.xml" />
-    <devices file="hardware/inertials/right_arm-eb27-j4_7-inertials.xml" />
+<!--     <devices file="hardware/inertials/left_arm-eb24-j4_7-inertials.xml" />
+    <devices file="hardware/inertials/right_arm-eb27-j4_7-inertials.xml" /> -->
 
     <!-- REMAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
-    <devices file="wrappers/inertials/left_arm-inertials_remapper.xml" />
-    <devices file="wrappers/inertials/right_arm-inertials_remapper.xml" />
+<!--     <devices file="wrappers/inertials/left_arm-inertials_remapper.xml" />
+    <devices file="wrappers/inertials/right_arm-inertials_remapper.xml" /> -->
 
     <!-- WRAPPERS FOR INERTIAL SENSORS ON MTB, EMS AND FT STRAIN BOARDS -->
-    <devices file="wrappers/inertials/left_arm-inertials_wrapper.xml" />
-    <devices file="wrappers/inertials/right_arm-inertials_wrapper.xml" />
+<!--     <devices file="wrappers/inertials/left_arm-inertials_wrapper.xml" />
+    <devices file="wrappers/inertials/right_arm-inertials_wrapper.xml" /> -->
 
     <!-- ANALOG SENSOR MAIS -->
 <!--    <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
