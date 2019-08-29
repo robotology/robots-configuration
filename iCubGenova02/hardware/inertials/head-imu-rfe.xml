@@ -43,7 +43,7 @@
             </group>
 
             <group name="SETTINGS">
-                <param name="acquisitionRate">      50      </param>
+                <param name="acquisitionRate">      10      </param>
                 <param name="enabledSensors">       rfeimu_acc  rfeimu_gyro  rfeimu_mag  rfeimu_status </param>
             </group>
 
