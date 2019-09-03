@@ -17,7 +17,7 @@
     <xi:include href="./hardware/motorControl/head-j2_5-mc.xml" /> 
     <xi:include href="./wrappers/motorControl/head_mc_wrapper.xml" /> 
 
-   <xi:include href="hardware/inertial.xml" />
+   <xi:include href="hardware/inertials/head-inertial.xml" />
 
     <!-- CALIBRATORS -->
     
