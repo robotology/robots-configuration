@@ -3,12 +3,12 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iiwaBoston01" build="1">
 
-    <xi:include href="hardware/electronics/iiwa_client.xml" />
+    <xi:include href="../../hardware/electronics/iiwa_client.xml" />
     
     <group name="ETH_BOARD">
 
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.3               </param>
+            <param name="IpAddress">                10.0.1.3                </param>
             <param name="IpPort">                   12345                   </param>
             <param name="Type">                     ems4                    </param>
             <param name="maxSizeRXpacket">          768                     </param>
@@ -22,7 +22,7 @@
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>   
                 <param name="maxTimeOfTXactivity">      300                 </param>                
-                <param name="TXrateOfRegularROPs">      3                   </param> 
+                <param name="TXrateOfRegularROPs">      1                   </param> 
             </group>              
         </group>                 
         
