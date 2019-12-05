@@ -21,7 +21,12 @@
            l_foot_ft_acc_3b13
            l_foot_mtb_acc_10b12       l_foot_mtb_acc_10b13)
         </param>
-
+        <param name="OrientationSensorsNames">
+          (l_upper_leg_ft_eul_3b12 l_foot_ft_eul_3b13)
+        </param>
+        <param name="ThreeAxisMagnetometersNames">
+          (l_upper_leg_ft_mag_3b12 l_foot_ft_mag_3b13)
+        </param>        
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <!-- The name of the element can be any string (we use SetOfInertials to better express its nature).
