@@ -81,5 +81,9 @@
     <name>fixationPointActionBridge</name>
     <node>vizzy-desktop</node>
   </module>
+  <module>
+    <name>torsoMotorInterface</name>
+    <node>vizzy-desktop</node>
+  </module>
 
 </application>
