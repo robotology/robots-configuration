@@ -9,7 +9,7 @@
     <xi:include href="../../hardware/mechanicals/right_arm-eb27-j4_7-mec.xml" />
     <xi:include href="./right_arm-eb27-j4_7-mc_service.xml" />
 
-    <!-- joint number in sub-part               0                   1                   2                   3                   -->
+    <!-- joint number                           0                   1                   2                   3                   -->
     <!-- joint name                             "r_wrist_prosup"    "r_wrist_pitch"     "r_wrist_yaw"       "r_hand_finger"     -->
     <group name="LIMITS">
         <param name="jntPosMax">                 60                 25                  35                  60                  </param>
