@@ -9,7 +9,7 @@
     <xi:include href="../../hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
     <xi:include href="./torso-eb5-j0_2-mc_service.xml" />
 
-    <!-- joint logical number                   0                   1                   2               -->
+    <!-- joint number                           0                   1                   2               -->
     <!-- joint name -->          
     <group name="LIMITS">
         <param name="jntPosMax">                50                  30                  70                  </param>

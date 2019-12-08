@@ -9,7 +9,7 @@
     <xi:include href="../../hardware/mechanicals/face-eb22-j0-mec.xml" />
     <xi:include href="./face-eb22-j0-mc_service.xml" />
 
-    <!-- joint logical number                   0                   -->
+    <!-- joint number                           0                   -->
     <!-- joint name                                                 -->
     <group name="LIMITS">
         <param name="jntPosMin">                -5                  </param>

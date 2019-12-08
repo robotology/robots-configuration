@@ -9,7 +9,7 @@
     <xi:include href="../../hardware/mechanicals/head-eb20-j0_1-mec.xml" />
     <xi:include href="./head-eb20-j0_1-mc_service.xml" />
 
-    <!-- joint logical number                   0                   1                   -->
+    <!-- joint number                           0                   1                   -->
     <!-- joint name                             neck-pitch          neck-roll           -->
     <group name="LIMITS">
         <param name="jntPosMin">                -30                 -20                 </param>

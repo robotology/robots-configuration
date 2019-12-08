@@ -10,7 +10,7 @@
         <xi:include href="../../hardware/mechanicals/face-eb23-j2_5-mec.xml" />
         <xi:include href="./face-eb23-j2_5-mc_service.xml" />
 
-        <!-- joint number in sub-part           0           1           2           3            -->
+        <!-- joint number                       0           1           2           3            -->
         <!-- joint name                         lip-right   lip-high    lip-left   lip-bottom   -->   
         <group name="LIMITS">
             <param name="jntPosMin">              -35         -28         -35         0           </param> 

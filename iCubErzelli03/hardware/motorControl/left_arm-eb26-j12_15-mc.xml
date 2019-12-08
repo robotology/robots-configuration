@@ -9,7 +9,7 @@
     <xi:include href="../../hardware/mechanicals/left_arm-eb26-j12_15-mec.xml" />   
     <xi:include href="./left_arm-eb26-j12_15-mc_service.xml" />
 
-    <!-- joint logical number                   0                   1                   2                   3                   -->
+    <!-- joint number                           0                   1                   2                   3                   -->
     <!-- joint name                             index-distal        middle-proximal     middle-distal       little-fingers      -->     
     <group name="LIMITS">
         <param name="jntPosMax">                180                 90                  180                 270                 </param>
