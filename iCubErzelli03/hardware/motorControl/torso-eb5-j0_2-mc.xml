@@ -81,11 +81,6 @@
         <param name="ktau">        -0.63      -0.63      -0.63  </param>
     </group>
 
-    <group name="IMPEDANCE">
-        <param name="stiffness">       0      0      0     </param>
-        <param name="damping">         0      0      0     </param>
-    </group>
-
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">           low_lev_current     </param>
         <param name="fbkControlUnits">      machine_units       </param>
