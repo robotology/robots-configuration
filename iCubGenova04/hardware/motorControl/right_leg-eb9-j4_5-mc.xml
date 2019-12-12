@@ -184,6 +184,7 @@
         <param name="ktau">         -181.17    -230.00    </param>
     </group>
 
+    <!-- custom PIDs: end -->
     
 </device>
 
