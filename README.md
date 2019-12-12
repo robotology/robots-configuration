@@ -2,6 +2,14 @@ Robots Configuration
 ====================
 
 [![ZenHub](https://img.shields.io/badge/Shipping_faster_with-ZenHub-435198.svg)](https://zenhub.com)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/icub)
+
+## Maintainers
+This repository is maintained by:
+
+| | |
+|:---:|:---:|
+| [<img src="https://github.com/marcoaccame.png" width="40">](https://github.com/marcoaccame) | [@marcoaccame](https://github.com/marcoaccame) |
 
 ## Installation
 
@@ -36,8 +44,10 @@ $ yarp-config robot --import $YARP_ROBOT_NAME
 
 You should end up finding the local copies under `~/.local/share/yarp/robots/$YARP_ROBOT_NAME`.
 
-## License
+## Contributing
+We accept contributions via [forks and pull-requests](https://guides.github.com/activities/forking).
 
+## License
 Material included here is Copyright of _iCub Facility - Istituto Italiano di
 Tecnologia_ and is released under the terms of the GPL v2.0 or later.
 See the file LICENSE for details.
