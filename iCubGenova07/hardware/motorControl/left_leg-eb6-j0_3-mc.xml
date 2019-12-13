@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb6-j0_3-mc" type="embObjMotionControl">
+ 
+    <xi:include href="../../general.xml" />
+    <xi:include href="../../hardware/electronics/left_leg-eb6-j0_3-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/left_leg-eb6-j0_3-mec.xml" />
+    <xi:include href="./left_leg-eb6-j0_3-mc_service.xml" />
+
+    <!-- joint number                           0                   1                   2                   3                   -->
+    <!-- joint name --> 
+    <group name="LIMITS">
+        <param name="jntPosMax">                85                  85                  70                  0                   </param>
+        <param name="jntPosMin">                -30                 0                   -70                 -100                </param>
+        <param name="jntVelMax">                1000                1000                1000                1000                </param>
+        <param name="motorNominalCurrents">     5000                5000                5000                5000                </param>
+        <param name="motorPeakCurrents">        6000                10000               6000                10000               </param>
+        <param name="motorOverloadCurrents">    15000               15000               15000               15000               </param>
+        <param name="motorPwmLimit">            10000               10000               10000               10000               </param>
+    </group>
+   
+    <group name="TIMEOUTS">
+        <param name="velocity">                 100                 100                 100                 100                 </param>
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">                0.0                 0.0                 0.0                 0.0                 </param>
+        <param name="damping">                  0.0                 0.0                 0.0                 0.0                 </param>
+    </group>
+    
+    <group name="CONTROLS">
+      <param name="positionControl">            POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
+      <param name="velocityControl">            POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
+      <param name="mixedControl">               POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
+      <param name="torqueControl">              TRQ_PID_DEFAULT     TRQ_PID_DEFAULT     TRQ_PID_DEFAULT     TRQ_PID_DEFAULT     </param>
+      <param name="currentPid">                 2FOC_CUR_CONTROL    2FOC_CUR_CONTROL    2FOC_CUR_CONTROL    2FOC_CUR_CONTROL    </param>
+      <param name="speedPid">                   2FOC_VEL_CONTROL    2FOC_VEL_CONTROL    2FOC_VEL_CONTROL    2FOC_VEL_CONTROL    </param>
+    </group>
+
+
+    <!-- default position PID: begin -->
+
+    <group name="POS_PID_DEFAULT">
+        <param name="controlLaw">           minjerk                   </param>
+        <param name="outputType">           pwm                       </param>
+        <param name="fbkControlUnits">      metric_units              </param>
+        <param name="outputControlUnits">   machine_units             </param>
+        <param name="kp">            -1066.66     2066.66    -711.11    -1066.66    </param>
+        <param name="kd">               0.00        0.00       0.00       0.00      </param>
+        <param name="ki">          -10666.64    14222.18   -7111.09    -1066.64     </param>
+        <param name="maxOutput">        8000        8000       8000       8000      </param>
+        <param name="maxInt">           1500        1500        750       1000        </param>
+        <param name="stictionUp">          0           0          0          0      </param>
+        <param name="stictionDown">        0           0          0          0      </param>
+        <param name="kff">                 0           0          0          0      </param>
+    </group>
+    
+    <!-- default position PID: end -->
+
+
+    <!-- other default PIDs: begin -->  
+    
+    <group name="TRQ_PID_DEFAULT">
+        <param name="controlLaw">           torque              </param>
+        <param name="outputType">           pwm                 </param>
+        <param name="fbkControlUnits">      metric_units        </param>
+        <param name="outputControlUnits">   machine_units       </param>
+        <param name="kp">           -200        200          0       -200     </param>
+        <param name="kd">              0          0          0          0     </param>
+        <param name="ki">              0          0          0          0     </param>
+        <param name="maxOutput">    8000       8000       8000       8000     </param>
+        <param name="maxInt">        500        500        500        500     </param>
+        <param name="ko">              0          0          0          0     </param>
+        <param name="stictionUp">     -2.0        2.0       -1.0       -1.0   </param>
+        <param name="stictionDown">    1.4       -2.0        1.3        0.2   </param>
+        <param name="kff">             1          1          1          1     </param>
+        <param name="kbemf">           0          0          0          0     </param>
+        <param name="filterType">      0          0          0          0     </param>
+        <param name="ktau">            -162        178       -197       -167  </param>
+    </group>
+
+    <group name="2FOC_CUR_CONTROL">
+        <param name="controlLaw">           low_lev_current     </param>
+        <param name="fbkControlUnits">      machine_units       </param>
+        <param name="outputControlUnits">   machine_units       </param>
+        <param name="kp">                   8           8           8           8       </param>
+        <param name="kd">                   0           0           0           0       </param>
+        <param name="ki">                   2           2           2           2       </param>
+        <param name="shift">                10          10          10          10      </param>
+        <param name="maxOutput">            32000       32000       32000       32000   </param>
+        <param name="maxInt">               32000       32000       32000       32000   </param>
+        <param name="kff">                  0           0           0           0       </param>
+    </group>
+
+    <group name="2FOC_VEL_CONTROL">
+        <param name="controlLaw">           low_lev_speed       </param>
+        <param name="fbkControlUnits">      machine_units       </param>
+        <param name="outputControlUnits">   machine_units       </param>
+        <param name="kff">                  0           0           0           0       </param>
+        <param name="kp">                   12          12          12          12      </param>
+        <param name="kd">                   0           0           0           0       </param>
+        <param name="ki">                   16          16          16          16      </param>
+        <param name="shift">                10          10          10          10      </param>
+        <param name="maxOutput">            32000       32000       32000       32000   </param>
+        <param name="maxInt">               32000       32000       32000       32000   </param>
+    </group>
+    
+    <!-- other default PIDs: end -->
+
+
+    <!-- custom PIDs: begin -->  
+    <!-- custom PIDs: end -->
+    
+</device>
+
