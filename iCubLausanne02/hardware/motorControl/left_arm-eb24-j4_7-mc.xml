@@ -43,7 +43,8 @@
         <!-- ATTENTION: PID VALUES are not safe!!! -->
         <group name="POS_PID_DEFAULT">
             <param name="controlLaw">       Pid_inPos_outPwm                          </param> 
-            <param name="controlUnits">     metric_units                                         </param>
+            <param name="fbkControlUnits">  metric_units   </param>
+            <param name="outputControlUnits">  machine_units      </param>
             <param name="pos_kp">              -200.0     -500.0      -500.0      -500.0      </param>
             <param name="pos_kd">                 0.0        0.0         0.0         0.0      </param>
             <param name="pos_ki">              -200.0      -50.0       -50.0       -50.0      </param>
@@ -58,7 +59,8 @@
     
         <group name="TRQ_PID_DEFAULT">
             <param name="controlLaw">    Pid_inTrq_outPwm </param> 
-            <param name="controlUnits">  metric_units                   </param>
+            <param name="fbkControlUnits">  machine_units   </param>
+            <param name="outputControlUnits">  machine_units      </param>
             <param name="trq_kp">          -1000           0           0           0      </param>
             <param name="trq_kd">              0           0           0           0      </param>
             <param name="trq_ki">              0           0           0           0      </param>
@@ -66,12 +68,12 @@
             <param name="trq_maxInt">        500           0           0           0      </param>
             <param name="trq_shift">           0           0           0           0      </param>
             <param name="trq_ko">              0           0           0           0      </param>
-            <param name="trq_stictionUp">      0           0           0           0      </param>
-            <param name="trq_stictionDwn">     0           0           0           0      </param>
+            <param name="trq_stictionUp">0 0 0 0</param>
+            <param name="trq_stictionDwn">0 0 0 0</param>
             <param name="trq_kff">             0           0           0           0      </param>
-            <param name="trq_kbemf">           0           0           0           0      </param>
+            <param name="trq_kbemf">0 0 0 0</param>
             <param name="trq_filterType">      0           0           0           0      </param>
-            <param name="trq_ktau">            1           0           0           0      </param>
+            <param name="trq_ktau">0 0 0 0</param>
         </group>
     
     </device> 
