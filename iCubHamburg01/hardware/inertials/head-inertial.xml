@@ -1,7 +1,6 @@
 
-  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="inertial" type="inertial">
-      <param name="name">  /icub/inertial  </param>
-      <param name="subdevice">  imuBosch_BNO055  </param>
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-inertial" type="imuBosch_BNO055">
       <param name="comport">  /dev/ttyUSB0   </param>
 </device>
+
 

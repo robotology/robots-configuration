@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="iiwa_12-skin_wrapper" type="skinWrapper">
+        <param name="period">       20                  </param>
+        <param name="total_taxels"> 1536                </param> <!-- 34 board x 16 triangle x 12 -->
+        <param name="device">       skinWrapper         </param>
+        
+        <paramlist name="ports">
+         <elem name="OneLeft">    1152 1535 0 383  </elem>  <!-- 2 boards CANBUS3N1 ID 7-8  -->
+         <elem name="OneRight">   768  1151 0 383  </elem>  <!-- 2 boards CANBUS3N1 ID 5-6  -->
+         <elem name="TwoRight">   0    383  0 383  </elem>  <!-- 2 boards CANBUS3N1 ID 1-2  -->
+         <elem name="TwoLeft">    384  767  0 383  </elem>  <!-- 2 boards CANBUS3N1 ID 3-4  -->
+         
+         		 		 
+		</paramlist>
+        
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+            <!-- The param value must match the device name in the corresponding body_part-ebX-jA_B-skin.xml file 
+                 or body_part-ebX-skin.xml-->
+                <elem name="FirstSetOfSkins">  iiwa-eb3-skin </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+

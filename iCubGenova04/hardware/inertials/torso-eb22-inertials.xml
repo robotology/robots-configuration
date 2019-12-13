@@ -38,6 +38,7 @@
 
                     <param name="location"> CAN1:7                  CAN1:8                  CAN1:9                  CAN1:10
                     </param>
+                    
                 </group>
 
             </group>
@@ -46,6 +47,7 @@
                 <param name="acquisitionRate">      50      </param>
                 <param name="enabledSensors">       chest_mtb_acc_0b7       chest_mtb_acc_0b8       chest_mtb_acc_0b9       chest_mtb_acc_0b10
                 </param>
+                <param name="fullscale">            19.62                   19.62                   19.62                  19.62          </param><!-- 19.62=2g-->
             </group>
 
         </group>

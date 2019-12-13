@@ -1,0 +1,90 @@
+<application>
+<name>iCubStartup</name>
+
+        <dependencies>
+        </dependencies>
+
+        <module>
+                <name>yarplogger</name>
+                <parameters>--start --no_stop</parameters>
+                <node>console</node>
+        </module>
+
+        <module>
+                <name>yarprobotinterface</name>
+                <node>pc104</node>
+        </module>
+
+        <module>
+                <name>iKinCartesianSolver</name>
+                <parameters>--from cartesianSolver.ini --part right_arm</parameters>
+                <node>console</node>
+                <dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
+                </dependencies>
+        </module>
+
+        <module>
+                <name>iKinCartesianSolver</name>
+                <parameters>--from cartesianSolver.ini --part left_arm</parameters>
+                <node>console</node>
+                <dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
+                </dependencies>
+        </module>
+
+        <module>
+                <name>iKinGazeCtrl</name>
+                <parameters>--from configv3.ini</parameters>
+                <node>console</node>
+                <dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
+                    <port timeout="60">/imuFilter/inertial:o</port>
+                </dependencies>
+        </module>
+
+        <!-- Enable/disable wholeBodyDynamics if you do/don't have torque sensors -->
+        <module>
+                <name>wholeBodyDynamics</name>
+                <!-- Remember to add the "--headV2" parameter for robots equipped with head v. 2.0 -->
+                <parameters>--autoconnect</parameters>
+                <node>pwrNode6</node>
+                <dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
+                </dependencies>
+        </module>
+
+        <!-- Enable/disable gravityCompensator if you do/don't have torque sensors -->
+        <module>
+                <name>gravityCompensator</name>
+                <!-- Remember to add the "--headV2" parameter for robots equipped with head v. 2.0 -->
+                <parameters></parameters>
+                <node>pwrNode6</node>
+                <dependencies>
+                    <port timeout="60">/wholeBodyDynamics/rpc:i</port>
+                </dependencies>
+        </module>
+
+        <module>
+                <name>fingersTuner</name>
+                <node>console</node>
+                <dependencies>
+                    <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
+                </dependencies>
+        </module>
+
+        <module>
+                <name>imuFilter</name>
+                <node>pc104</node>
+                <dependencies>
+                    <port timeout="60">/icub/inertial</port>
+                </dependencies>
+        </module>
+
+        <connection>
+                <from>/icub/inertial</from>
+                <to>/imuFilter/inertial:i</to>
+                <protocol>tcp</protocol>
+        </connection>
+
+</application>

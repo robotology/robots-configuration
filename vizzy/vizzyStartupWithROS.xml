@@ -72,13 +72,32 @@
       <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
     </dependencies>
   </module>
-
+  <module>
+    <name>VizzyArmRoutines</name>
+    <parameters>--arm right</parameters>
+    <node>vizzy-desktop</node>
+    <dependencies>
+      <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+    </dependencies>
+  </module>
+  <module>
+    <name>VizzyArmRoutines</name>
+    <parameters>--arm left</parameters>
+    <node>vizzy-desktop</node>
+    <dependencies>
+      <port timeout="70.0" request="is_ready" reply="[ok]">/vizzy/yarprobotinterface</port>
+    </dependencies>
+  </module>
   <module>
     <name>fixationPointStatusBridge</name>
     <node>vizzy-desktop</node>
   </module>
   <module>
     <name>fixationPointActionBridge</name>
+    <node>vizzy-desktop</node>
+  </module>
+  <module>
+    <name>torsoMotorInterface</name>
     <node>vizzy-desktop</node>
   </module>
 

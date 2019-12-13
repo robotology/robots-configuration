@@ -40,7 +40,6 @@
     <xi:include href="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
     <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
     
-
     <!-- INERTIAL SENSOR--> 
     <xi:include href="hardware/inertials/head-inertial.xml" />
     

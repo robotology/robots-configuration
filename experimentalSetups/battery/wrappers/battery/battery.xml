@@ -3,7 +3,7 @@
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="icubBattery" type="batteryWrapper">
 
       <param name="period"> 10 </param>
-      <param name="name">   /icub/battery:o       </param>
+      <param name="name">   /icub/battery       </param>
 
       <action phase="startup" level="5" type="attach">
          <paramlist name="networks">

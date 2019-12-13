@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova04" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion"> 5 </param>
+        <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 4 </param> 
         <param name="AxisMap">               0             1             2             3       </param>
         <param name="AxisName">     "l_hip_pitch"   "l_hip_roll"    "l_hip_yaw"   "l_knee"     </param>
@@ -11,7 +11,8 @@
         <param name="Encoder">         182.044       182.044       182.044       182.044       </param>     
         <param name="fullscalePWM">   32000         32000         32000         32000    </param>
         <param name="ampsToSensor">     1000.0        1000.0        1000.0           1000.0      </param>
-        <param name="Gearbox_M2J">   	-100.0         100.0        -100.0         -100.0      </param>
+        <param name="Gearbox_M2J">   	-150.0         100.0        -100.0         -100.0      </param>
+                                   <!--NOTE: pitch_gearbox=harmonic drive + reduction ratio due to the cable transmission-->
         <param name="Gearbox_E2J">   	1             1             1              1           </param>
         <param name="useMotorSpeedFbk"> 1             1             1              1           </param>
         <param name="MotorType">       "BLL_MOOG"     "BLL_MOOG"   "BLL_MOOG"    "BLL_MOOG"   </param>

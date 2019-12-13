@@ -2,16 +2,14 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
     <robot name="naoPrague01" build="1" portprefix="nao" xmlns:xi="http://www.w3.org/2001/XInclude">
+
     <devices>
 
-    <!--  SKINS --> 
+        <!--  SKINS --> 
 
-    <xi:include href="hardware/skin/nao-eb1-skin.xml" />
-    <xi:include href="wrappers/skin/nao-skin_wrapper.xml" />
-
-    
-
-
-
+        <xi:include href="hardware/skin/nao-eb1-skin.xml" />
+        <xi:include href="wrappers/skin/nao-skin_wrapper.xml" />
+   
     </devices>
+
 </robot> 

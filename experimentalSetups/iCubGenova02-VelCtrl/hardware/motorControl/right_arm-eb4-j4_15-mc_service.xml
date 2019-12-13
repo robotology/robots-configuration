@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova02" build="1">
+
+    <group name="SERVICE">
+        
+        <param name="type"> eomn_serv_MC_mc4    </param> 
+    
+        <group name="PROPERTIES">
+        
+            <group name="ETHBOARD">
+                <param name="type">                 eobrd_ems4          </param> 
+            </group>          
+
+            <group name="CANBOARDS"> 
+                <param name="type">                 mc4         mais    </param> 
+                <group name="PROTOCOL">
+                    <param name="major">            1           1       </param>    
+                    <param name="minor">            6           0       </param>     
+                </group>                    
+                <group name="FIRMWARE">
+                    <param name="major">            0           0       </param>    
+                    <param name="minor">            0           0       </param> 
+                    <param name="build">            0           0       </param>
+                </group>
+            </group>
+
+            <group name="MC4">
+                <group name="SHIFTS">
+                    <param name="velocity">                 8           </param>
+                    <param name="estimJointVelocity">       5           </param>
+                    <param name="estimJointAcceleration">   5           </param>
+                    <param name="estimMotorVelocity">       1           </param>
+                    <param name="estimMotorAcceleration">   1           </param>
+                </group>
+
+                <group name="BROADCASTPOLICY">
+                    <param name="enable">    position    status  print   pidvalues     </param>
+                </group>
+
+            </group>     
+
+            <group name="MAIS"> 
+                <param name="location">             CAN1:14             </param> 
+            </group>                 
+            
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">
+                    <param name="type">             mc4         mc4           mc4          mc4            mc4          mc4        mc4           mc4        mc4         mc4          mc4           mc4         </param>
+                    <param name="port">             CAN1:3:0    CAN1:3:1      CAN1:4:0     CAN1:4:1       CAN1:5:0     CAN1:5:1   CAN1:6:0     CAN1:6:1    CAN1:7:0    CAN1:7:1     CAN1:8:0      CAN1:8:1     </param>
+                </group>
+
+                <group name="ENCODER1">
+                    <param name="type">             qenc         aea           aea         absanalog      absanalog    mais                mais             mais                 mais       mais          mais          mais         </param>
+                    <param name="port">             CONN:none    CONN:none     CONN:none   CONN:none      CONN:none    MAIS:thumbproximal  MAIS:thumbdistal MAIS:indexproximal   MAIS:indexdistal    MAIS:mediumproximal MAIS:mediumdistal   MAIS:littlefingers    </param>
+                    <param name="position">         atjoint      atjoint       atjoint     atjoint        atjoint      atjoint             atjoint          atjoint           atjoint    atjoint       atjoint       atjoint      </param>
+                    <param name="resolution">       -254440     4096         -4096         65535         65535          65535          65535          65535          65535         65535         65535          65535      </param>
+                    <param name="tolerance">        0           0.703        0.703           0              0                0            0           0           0          0             0             0        </param>
+                </group>
+
+                <group name="ENCODER2">
+                    <param name="type">             none       none        none       none       none       none       none       none      none        none       none       none     </param>
+                    <param name="port">             CONN:none  CONN:none   CONN:none  CONN:none  CONN:none  CONN:none  CONN:none  CONN:non  CONN:nonee  CONN:none  CONN:none  CONN:none </param>
+                    <param name="position">         none       none        none       none       none       none       none       none      none        none       none       none      </param>
+                    <param name="resolution">       1             1           1          1          1          1          1          1         1           1          1          1      </param>
+                    <param name="tolerance">   0             0           0          0          0          0          0          0         0           0          0          0       </param>
+                </group>
+
+           </group>
+
+
+
+        </group>
+           
+    </group>
+    
+  
+</params>
+
+
+

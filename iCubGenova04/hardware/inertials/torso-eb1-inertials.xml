@@ -36,7 +36,7 @@
                     <param name="type">     eoas_gyros_st_l3g4200d
                     </param>
 
-                    <param name="location"> ETH:1
+                    <param name="location"> ETH:0
                     </param>
                 </group>
 
@@ -45,6 +45,8 @@
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50              </param>
                 <param name="enabledSensors">       torso_ems_gyro_eb1
+                </param>
+                <param name="fullscale">             250
                 </param>
             </group>
 
