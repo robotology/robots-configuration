@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova02" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  5 </param>
+        <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 12 </param>
         <param name="AxisMap">               0             1             2             3             4             5             6             7             8             9             10            11    </param>
         <param name="AxisName">      "l_wrist_prosup" "l_wrist_pitch" "l_wrist_yaw"  "l_hand_finger"    "l_thumb_oppose"     "l_thumb_proximal"     "l_thumb_distal"   "l_index_proximal"    "l_index_distal"    "l_middle_proximal"   "l_middle_distal"    "l_pinky"  </param>

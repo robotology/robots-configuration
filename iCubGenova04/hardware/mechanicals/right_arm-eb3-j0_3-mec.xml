@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova04" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion"> 5 </param>
+        <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 4 </param> 
         <param name="AxisMap">               0           1             2             3          </param>
         <param name="AxisName"> "r_shoulder_pitch" "r_shoulder_roll" "r_shoulder_yaw" "r_elbow" </param>

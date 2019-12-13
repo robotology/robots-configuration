@@ -7,21 +7,26 @@
         <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
              defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->
         <param name="ThreeAxisGyroscopesNames">
-          (l_upper_leg_imu_gyro_1
+          (l_upper_leg_ft_gyro_3b12
            l_upper_leg_ems_gyro_eb6
            l_upper_leg_ems_gyro_eb10
            l_lower_leg_ems_gyro_eb7
-           l_lower_leg_imu_gyro_2)
+           l_foot_ft_gyro_3b13)
         </param>
         <param name="ThreeAxisLinearAccelerometersNames">
-          (l_upper_leg_imu_acc_1
+          (l_upper_leg_ft_acc_3b12
            l_upper_leg_mtb_acc_10b1   l_upper_leg_mtb_acc_10b2   l_upper_leg_mtb_acc_10b3   l_upper_leg_mtb_acc_10b4
            l_upper_leg_mtb_acc_10b5   l_upper_leg_mtb_acc_10b6   l_upper_leg_mtb_acc_10b7
            l_lower_leg_mtb_acc_10b8   l_lower_leg_mtb_acc_10b9   l_lower_leg_mtb_acc_10b10  l_lower_leg_mtb_acc_10b11
-           l_lower_leg_imu_acc_2
+           l_foot_ft_acc_3b13
            l_foot_mtb_acc_10b12       l_foot_mtb_acc_10b13)
         </param>
-
+        <param name="OrientationSensorsNames">
+          (l_upper_leg_ft_eul_3b12 l_foot_ft_eul_3b13)
+        </param>
+        <param name="ThreeAxisMagnetometersNames">
+          (l_upper_leg_ft_mag_3b12 l_foot_ft_mag_3b13)
+        </param>        
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <!-- The name of the element can be any string (we use SetOfInertials to better express its nature).

@@ -23,14 +23,14 @@
                         <param name="minor">            0                   </param>
                     </group>
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>
+                        <param name="major">            2                   </param>
                         <param name="minor">            0                   </param>
-                        <param name="build">            0                   </param>
+                        <param name="build">            4                   </param>
                     </group>
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       r_lower_leg_imu_acc_2    r_lower_leg_imu_gyro_2    r_lower_leg_imu_eul_2    r_lower_leg_imu_mag_2    r_lower_leg_imu_stat_2
+                    <param name="id">       r_foot_ft_acc_3b14    r_foot_ft_gyro_3b14    r_foot_ft_eul_3b14    r_foot_ft_mag_3b14    r_foot_ft_stat_3b14
                     </param>
 
                     <param name="type">     eoas_imu_acc  eoas_imu_gyr  eoas_imu_eul  eoas_imu_mag   eoas_imu_status
@@ -47,7 +47,7 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">      50      </param>
-                <param name="enabledSensors">   r_lower_leg_imu_acc_2    r_lower_leg_imu_gyro_2    r_lower_leg_imu_eul_2    r_lower_leg_imu_mag_2    r_lower_leg_imu_stat_2   </param>                
+                <param name="enabledSensors">   r_foot_ft_acc_3b14    r_foot_ft_gyro_3b14    r_foot_ft_eul_3b14    r_foot_ft_mag_3b14    r_foot_ft_stat_3b14   </param>                
             </group>
 
         </group>
