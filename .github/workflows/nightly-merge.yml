@@ -18,7 +18,7 @@ jobs:
         stable_branch: 'master'
         development_branch: 'devel'
         allow_ff: true
-        push_token: 'marcoaccame_TOKEN'
+        push_token: 'GITHUB_TOKEN'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         marcoaccame_TOKEN: ${{ secrets.marcoaccame_TOKEN }}
