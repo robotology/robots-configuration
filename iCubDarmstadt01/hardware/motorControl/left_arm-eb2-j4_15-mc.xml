@@ -26,11 +26,13 @@
         <param name="velocity">    100           100           100           100	    100           100           100           100	   100           100           100           100	</param>
     </group>
 
-     <group name="CONTROLS">
-       <param name="positionControl">  POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT POS_PID_DEFAULT           POS_PID_DEFAULT          POS_PID_DEFAULT          POS_PID_DEFAULT </param> 
-       <param name="velocityControl">  none                   none                  none                  none                  none                   none                  none                  none                  none                   none                  none                  none                  </param> 
-       <param name="torqueControl">    TRQ_PID_DEFAULT  none                  none                  none  none                   none                  none                  none   none                   none                  none                  none</param>
-        <param name="currentPid">none       none                  none                  none  none                   none                  none                  none   none                   none                  none                  none</param> 
+    <group name="CONTROLS">
+        <param name="positionControl">  POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT      POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT </param>
+        <param name="velocityControl">  POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT      POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT </param>
+        <param name="mixedControl">     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT      POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT </param>
+        <param name="torqueControl">    TRQ_PID_DEFAULT     none                none                none                none                 none                none                none                none                none                none                none            </param>
+        <param name="currentPid">       none                none                none                none                none                 none                none                none                none                none                none                none            </param>
+        <param name="speedPid">         none                none                none                none                none                 none                none                none                none                none                none                none            </param>
     </group>
     
     <group name="POS_PID_DEFAULT">
