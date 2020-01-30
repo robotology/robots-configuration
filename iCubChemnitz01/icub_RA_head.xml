@@ -22,13 +22,13 @@
     <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
 
-    <!-- INERTIAL SENSOR 
+    <!-- INERTIAL SENSOR -->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
-    -->
+    
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" /> 
     <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />  
