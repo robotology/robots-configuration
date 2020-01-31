@@ -11,16 +11,10 @@
             <param name="KinematicPart">arm</param>
             <param name="KinematicType">right_v2</param>
             <param name="PositionControl">on</param>
-            <param name="NumberOfDrivers">2</param>
+            <param name="NumberOfDrivers">1</param>
         </group>
 
         <group name="DRIVER_0">
-            <param name="Key">torso</param>
-            <param name="JointsOrder">reversed</param>
-            <param name="MinAbsVels">(0.35 0.35 0.35)</param>
-        </group>
-
-        <group name="DRIVER_1">
             <param name="Key">right_arm</param>
             <param name="JointsOrder">direct</param>
             <param name="MinAbsVels">(0.35 0.35 0.35 0.35 0.35 0.35 0.35)</param>
@@ -42,14 +36,13 @@
             <param name="joint_8">((Kp 1.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
             <param name="joint_9">((Kp 1.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
         </group>
-<!--
+
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
-                <elem name="torso">torso-mc_wrapper</elem>
                 <elem name="right_arm">right_arm-mc_wrapper</elem>
           </paramlist>
         </action>
--->
+
         <action phase="shutdown" level="2" type="detach" />
 
     </device>
