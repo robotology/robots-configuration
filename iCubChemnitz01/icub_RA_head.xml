@@ -9,10 +9,8 @@
     
     <devices>
     <!-- CARTESIANS -->
-    <!-- 
     <xi:include href="cartesian/right_arm-cartesian.xml" />
-    -->
-
+    
     <!-- HEAD -->
     <xi:include href="hardware/motorControl/head-cfw2_can0-mc.xml" />
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
@@ -24,7 +22,7 @@
     <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
 
-    <!-- INERTIAL SENSOR--> 
+    <!-- INERTIAL SENSOR -->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
@@ -39,13 +37,13 @@
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
     <xi:include href="hardware/FT/right_arm-eb3-j0_3-strain.xml" />
 
-    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY)
     <xi:include href="hardware/skin/right_arm-eb27-j4_7-skin.xml" /> 
-     
-    <!--  SKINS --> 
+     -->
+    <!--  SKINS 
     <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />  
     <xi:include href="hardware/skin/right_arm-eb27-j4_7-skin.xml" /> 
-    
+    -->
     
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/head-calib.xml" /> 
