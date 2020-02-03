@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubSheffield01" build="1">
 <group name="GENERAL">
-        <param name="MotioncontrolVersion">  4 </param>
+        <param name="MotioncontrolVersion">  6 </param>
         <param name="Joints"> 4 </param> 
         <param name="AxisMap">               0           1             2             3          </param>
         <param name="AxisName"> "r_shoulder_pitch" "r_shoulder_roll" "r_shoulder_yaw" "r_elbow" </param>
@@ -20,10 +20,10 @@
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">      8            160             80           106       </param>
-        <param name="hardwareJntPosMin">    -95.5           9             -32            15         </param>
-        <param name="rotorPosMin">              0            0              0             0       </param>
-        <param name="rotorPosMax">              0            0              0             0       </param>
+        <param name="hardwareJntPosMax">    8          160             80           106       </param>
+        <param name="hardwareJntPosMin">  -95.5            9            -32            15       </param>
+        <param name="rotorPosMin">          0            0              0             0       </param>
+        <param name="rotorPosMax">          0            0              0             0       </param>
     </group>
 
     <group name="2FOC">
