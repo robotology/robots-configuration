@@ -8,9 +8,11 @@
     </params>
     
     <devices>
-    <!-- CARTESIANS --> 
+    <!-- CARTESIANS -->
+    <!-- 
     <xi:include href="cartesian/right_arm-cartesian.xml" />
-    
+    -->
+
     <!-- HEAD -->
     <xi:include href="hardware/motorControl/head-cfw2_can0-mc.xml" />
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
