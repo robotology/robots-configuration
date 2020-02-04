@@ -34,7 +34,8 @@
     
     <group name="POS_PID_DEFAULT">
         <param name="controlLaw">    Pid_inPos_outPwm </param>
-        <param name="controlUnits">  metric_units                     </param>
+        <param name="fbkControlUnits">  metric_units   </param>
+        <param name="outputControlUnits">  machine_units      </param>
         <param name="pos_kp">        -2105.00     -2310.00         </param>       
         <param name="pos_kd">            0.00         0.00         </param>       
         <param name="pos_ki">           -0.09        -0.09         </param>          
@@ -54,7 +55,8 @@
     
     <group name="TRQ_PID_DEFAULT">
         <param name="controlLaw">    Pid_inTrq_outPwm           </param>
-        <param name="controlUnits">  metric_units               </param>
+        <param name="fbkControlUnits">  metric_units   </param>
+        <param name="outputControlUnits">  machine_units      </param>
         <param name="trq_kp">         -200        -200              </param>       
         <param name="trq_kd">            0           0              </param>       
         <param name="trq_ki">            0           0              </param>     
@@ -63,16 +65,17 @@
         <param name="trq_shift">         0           0              </param>       
         <param name="trq_ko">            0           0              </param>       
         <param name="trq_stictionUp">   -1.4        -1.5	        </param>       
-        <param name="trq_stictionDwn">   2.4         1.6            </param>       
+        <param name="stictionDwn">0 0</param>       
         <param name="trq_kff">           1           1              </param>      
-        <param name="trq_kbemf">         0           0              </param>  
+        <param name="kbemf">0 0</param>  
         <param name="trq_filterType">    0           0              </param>  
-        <param name="trq_ktau">       -231        -180              </param>        
+        <param name="ktau">0 0</param>        
     </group>
 	
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">       limitscurrent           </param>
-        <param name="controlUnits">     metric_units            </param>
+        <param name="fbkControlUnits">  metric_units   </param>
+        <param name="outputControlUnits">  machine_units      </param>
         <param name="cur_kp">               8           8           </param>
         <param name="cur_kd">               0           0           </param>
         <param name="cur_ki">               2           2           </param>
