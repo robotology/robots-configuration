@@ -37,7 +37,7 @@
                     <param name="port">             CONN:P5             CONN:P2             CONN:P4             CONN:none               </param>
                     <param name="position">         atmotor             atmotor             atmotor             none                    </param>
                     <param name="resolution">       -2048               1600                1600                1                       </param>
-                    <param name="tolerance">          0                  0                   0                  0                        </param>  
+                    <param name="tolerance">         0                  0                   0                   0                       </param>  
 
                 </group>  
             </group>    
