@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb3-j0_3-mc" type="embObjMotionControl">
       <xi:include href="../../general.xml"/>
@@ -51,26 +52,6 @@
         <param name="damping">         0      0      0      0     </param>    
     </group>
 
-<!--
-    <group name="TORQUE_CONTROL">
-        <param name="controlLaw">    motor_pid_with_friction_v1       </param> 
-        <param name="fbkControlUnits">  metric_units   </param>
-        <param name="outputControlUnits">  machine_units      </param>
-        <param name="kp">            100       100       100   100    </param>       
-        <param name="kd">              0         0         0     0    </param>       
-        <param name="ki">              0         0         0     0    </param>       
-        <param name="maxOutput">    8000      8000      8000  8000    </param>       
-        <param name="maxInt">          0         0         0     0    </param>       
-        <param name="shift">           0         0         0     0    </param>       
-        <param name="ko">              0         0         0     0    </param>       
-        <param name="stictionUp">      0         0         0     0    </param>       
-        <param name="stictionDwn">     0         0         0     0    </param>       
-        <param name="kff">             1         1         1     1    </param>   
-        <param name="kbemf">           0         0         0     0    </param>  
-        <param name="filterType">      0         0         0     0    </param>           
-        <param name="ktau">          100       100       100   100    </param>   
-    </group>
--->
 
     <group name="TRQ_PID_DEFAULT">
         <param name="controlLaw">             torque                   </param>
@@ -82,13 +63,13 @@
         <param name="ki">                0         0         0        0    </param>       
         <param name="maxOutput">      8000      8000      8000     8000    </param>       
         <param name="maxInt">          500       500       500      500    </param>       
-        <param name="ko">                0         0         0        0    </param>       
-        <param name="stictionUp">0 0 0 0</param>       
-        <param name="stictionDown">0 0 0 0</param>       
-        <param name="kff">               1         1         1        1    </param>   
-        <param name="kbemf">0 0 0 0</param>  
-        <param name="filterType">        0         0         0        0    </param>           
-        <param name="ktau">0 0 0 0</param>   
+        <param name="ko">              0          0          0          0   </param>
+        <param name="stictionUp">      0          0          0          0   </param>
+        <param name="stictionDown">    0          0          0          0   </param>
+        <param name="kff">             1          1          1          1   </param>
+        <param name="kbemf">           0          0          0          0   </param>
+        <param name="filterType">      0          0          0          0   </param>
+        <param name="ktau">            0          0          0          0   </param>
     </group>
     
     <group name="2FOC_CUR_CONTROL">

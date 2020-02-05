@@ -25,26 +25,7 @@
                     <param name="build">            3                       </param>
                 </group>
             </group>
-            
-            <group name="CONTROLLER"> 
-            
-                <param name="type"> eomc_ctrlboard_ANKLE        </param> 
-                                   
-                <param name ="matrixJ2M"> 
-                    1.00    0.00    0.00    0.00
-                    0.00    1.00    0.00    0.00
-                    0.00    0.00    1.00    0.00
-                    0.00    0.00    0.00    1.00   
-                </param>
-               
-                <param name ="matrixE2J">  
-                    1.00    0.00    0.00    0.00
-                    0.00    1.00    0.00    0.00
-                    0.00    0.00    1.00    0.00
-                    0.00    0.00    0.00    1.00   
-                </param>
-                
-            </group>                
+                       
 
             <group name="JOINTMAPPING">
 
