@@ -16,13 +16,13 @@
             <group name="CANBOARDS"> 
                 <param name="type">                 mais                </param> 
                 <group name="PROTOCOL">
-                    <param name="major">            0                   </param>    
-                    <param name="minor">            0                   </param>     
+                    <param name="major">            3                       </param>    
+                    <param name="minor">            3                       </param>     
                 </group>                    
                 <group name="FIRMWARE">
-                    <param name="major">            0                   </param>    
-                    <param name="minor">            0                   </param> 
-                    <param name="build">            0                   </param>
+                    <param name="major">            3                       </param>    
+                    <param name="minor">            3                       </param> 
+                    <param name="build">            3                       </param>
                 </group>
             </group>
             
