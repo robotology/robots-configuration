@@ -2,7 +2,7 @@
 # Authors: Ugo Pattacini
 # CopyPolicy: Released under the terms of the GNU GPL v2.0.
 
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.5)
 project(robots-configuration)
 
 find_package(YARP REQUIRED)
