@@ -87,7 +87,7 @@
                 <elem name="head-j0">head-eb20-j0_1-mc</elem>
                 <elem name="head-j2">head-eb21-j2_5-mc</elem>
                 <!-- imu -->
-                <elem name="imu">inertial</elem>
+                <elem name="imu">head-inertial</elem>
                 <!-- imu_waist -->
 <!--            <elem name="imu">xsens_inertial</elem> -->
                 <!-- ft -->
