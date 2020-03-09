@@ -63,23 +63,22 @@
     <!-- other default PIDs: begin -->     
     
     <group name="TRQ_PID_DEFAULT">
-        <param name="controlLaw">          torque           </param>
-        <param name="outputType">          pwm              </param>
-        <param name="fbkControlUnits">     metric_units     </param>
-        <param name="outputControlUnits">  machine_units    </param>
-        <param name="kp">         150          150          </param>
-        <param name="kp">           0           0           </param>
-        <param name="kd">           0           0           </param>
-        <param name="ki">           0           0           </param>
-        <param name="maxOutput">   8000         8000        </param>
-        <param name="maxInt">       500         500         </param>
-        <param name="ko">           0           0           </param>
-        <param name="stictionUp">   0           0           </param>
-        <param name="stictionDown"> 0           0           </param>
-        <param name="kff">          1           1           </param>
-        <param name="kbemf">        0           0           </param>
-        <param name="filterType">   0           0           </param>
-        <param name="ktau">         0           0           </param>
+        <param name="controlLaw">          torque                       </param>
+        <param name="outputType">          pwm                          </param>
+        <param name="fbkControlUnits">     metric_units                 </param>
+        <param name="outputControlUnits">  dutycycle_percent            </param>
+        <param name="kp">             0         0            </param>
+        <param name="kd">             0         0              </param>
+        <param name="ki">             0         0              </param>
+        <param name="maxOutput">     25         25             </param>
+        <param name="maxInt">      1.56       1.56             </param>
+        <param name="ko">             0          0             </param>
+        <param name="stictionUp">     0          0             </param>
+        <param name="stictionDown">   0          0             </param>
+        <param name="kff">            1          1             </param>
+        <param name="kbemf">          0          0             </param>
+        <param name="filterType">     0          0             </param>
+        <param name="ktau">          0.65       0.50           </param>
     </group>
             
     <group name="2FOC_CUR_CONTROL">
