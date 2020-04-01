@@ -23,9 +23,9 @@
                         <param name="minor">            0                   </param>
                     </group>
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>
+                        <param name="major">            2                   </param>
                         <param name="minor">            0                   </param>
-                        <param name="build">            0                   </param>
+                        <param name="build">            7                   </param>
                     </group>
                 </group>
 
