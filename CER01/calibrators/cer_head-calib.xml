@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_calibrator" type="parametricCalibratorEth">
+        <xi:include href="../general.xml" />
+                
+    <group name="GENERAL">
+        <param name="joints">  2  </param> <!-- the number of joints of the robot part -->
+        <param name="deviceName"> Head_Calibrator </param>
+    </group>
+
+    <group name="HOME">
+        <param name="positionHome">                       0.00            0.00           </param>
+        <param name="velocityHome">                       10.00           10.00          </param>
+    </group>                                                                      
+
+    <group name="CALIBRATION">                                                    
+        <param name="calibrationType">                    3               3              </param>
+        <param name="calibration1">                       0               0              </param>
+        <param name="calibration2">                       0               0              </param>
+        <param name="calibration3">                       58252           24954          </param> 
+        <param name="calibration4">                       0               0              </param>
+        <param name="calibration5">                       0               0              </param>
+        <param name="calibrationZero">                    180             180            </param>
+        <param name="calibrationDelta">                   0.0             0.0            </param>
+
+        <!--     <param name="calibrationType">                    3               5              </param> 
+        <param name="calibration1">                       0               1200           </param>
+        <param name="calibration2">                       0               12743          </param>
+        <param name="calibration3">                       58072           0              </param> 
+        <param name="calibration4">                       0               0              </param>
+        <param name="calibration5">                       0               0              </param>
+        <param name="calibrationZero">                    180             0              </param>
+        <param name="calibrationDelta">                   0.0             0.0            </param> -->
+
+
+        <param name="startupPosition">                    0.0             0.0            </param>
+        <param name="startupVelocity">                    10.0            10.0           </param>
+        <param name="startupMaxPwm">                      2000            1800           </param>
+        <param name="startupPosThreshold">                4               4              </param>
+    </group>
+
+		<param name="CALIB_ORDER">(0 1) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">cer_head_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">cer_head_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort" />
+
+	</device>
+

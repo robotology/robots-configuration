@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="CERSN002" build="1">
+
+    <group name="SERVICE">
+        
+        <param name="type"> eomn_serv_MC_mc2pluspsc </param> 
+    
+        <group name="PROPERTIES">
+        
+            <group name="ETHBOARD">
+                <param name="type">             mc2plus             </param> 
+            </group>          
+
+            <group name="CANBOARDS"> 
+                <param name="type">                 psc              </param> 
+                <group name="PROTOCOL">                    
+                    <param name="major">            2                  </param>    
+                    <param name="minor">            0                  </param>     
+                </group>                                   
+                <group name="FIRMWARE">                    
+                    <param name="major">            0                  </param>    
+                    <param name="minor">            0                  </param> 
+                    <param name="build">            0                  </param>
+                </group>
+            </group>
+            
+            <group name="PSC"> 
+                <param name="location">             CAN1:1  CAN1:2   CAN1:3        </param> 
+            </group>                      
+            
+           
+
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">                 
+                    <param name="type">              pwm                 pwm                    </param>
+                    <param name="port">              CONN:P2             CONN:P3                </param>
+                </group>
+                
+                <group name="ENCODER1">  
+                    <param name="type">                psc                psc                    </param>  
+                    <param name="port">                finger0            finger1                 </param>
+                    <param name="position">            atjoint             atjoint               </param>
+                    <param name="resolution">          65535               65535                 </param> <!-- 65535:this value will change by fw during calibration (type 6 or 7) --> 
+                    <param name="tolerance">           5                  5                      </param>  
+                </group>        
+                
+                <group name="ENCODER2">
+                    <param name="type">                qenc                qenc                 </param>
+                    <param name="port">                CONN:P2             CONN:P3              </param>
+                    <param name="position">            atmotor             atmotor              </param>
+                    <param name="resolution">          1024                1024                 </param>
+                    <param name="tolerance">           0                   0                    </param>  
+                </group>  
+            </group>    
+            
+           
+       </group>
+             
+    </group>
+    
+  
+</params>
+

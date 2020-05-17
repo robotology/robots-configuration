@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_multienc" type="embObjMultiEnc"> 
+        <xi:include href="general.xml" />
+        <xi:include href="hardware/electronics/cer_left_hand-mcp7-eln.xml" />
+        <group name="JOINTS">
+            <param name="listofjoints"> 0 1 </param>
+            <param name="encoderConversionFactor"> -182.044 182.044 1.0 -182.044 182.044 1.0 </param>
+        </group>
+    </device> 
+    
+
+

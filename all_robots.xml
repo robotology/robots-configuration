@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot_database  xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="./CER01/CER.xml" />
+    <xi:include href="./CER02/CER.xml" />
+    <xi:include href="./CER03/CER.xml" />
 	<xi:include href="./iCubLugano01/icub_all.xml" />
 	<xi:include href="./iCubErzelli01/icub_all.xml" />
 	<xi:include href="./iCubParis01/icub_all.xml" />

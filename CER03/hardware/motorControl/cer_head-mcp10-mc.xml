@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+ <!-- Initialization file for EMS 10 - CER head, 2 dof -->
+
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_head_mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../electronics/cer_head-mcp10-eln.xml" />
+      <xi:include href="../mechanicals/cer_head-mcp10-mec.xml" />
+      <xi:include href="../motorControl/cer_head-mcp10-mc-service.xml" />
+
+    <group name="LIMITS">
+        <param name="jntPosMax">                38      49           </param>
+        <param name="jntPosMin">               -28     -49           </param>
+        <param name="jntVelMax">                50      50           </param>
+        <param name="motorOverloadCurrents">    5000    5000         </param>
+        <param name="motorNominalCurrents">     8000    8000         </param>
+        <param name="motorPeakCurrents">        8000    8000         </param>
+        <param name="motorPwmLimit">            3360    3360         </param>
+    </group>
+
+    
+     <group name="TIMEOUTS">
+        <param name="velocity">             100           100        </param>
+    </group>
+
+
+    <group name="CONTROLS">
+       <param name="positionControl">  JOINT_PID_V1           JOINT_PID_V1         </param> 
+       <param name="velocityControl">  VEL_CONTROL            VEL_CONTROL          </param> 
+       <param name="torqueControl">    none                   none                 </param>
+        <param name="currentPid">      none                   none                 </param> 
+    </group>
+    
+    
+    
+    <group name="JOINT_PID_V1">
+	    <param name="controlLaw">    Pid_inPos_outPwm            </param> 
+        <param name="fbkControlUnits">     machine_units             </param> 
+        <param name="outputControlUnits">  machine_units             </param>
+	    <param name="pos_kp">               2          -1.5      </param>
+        <param name="pos_kd">               0           0        </param>
+        <param name="pos_ki">               1          -5        </param>
+        <param name="pos_maxOutput">     3360        3360        </param>
+        <param name="pos_maxInt">        1000        1500        </param>
+        <param name="pos_shift">            0           0        </param>
+        <param name="pos_ko">               0           0        </param>
+        <param name="pos_stictionUp">       0           0        </param>
+        <param name="pos_stictionDwn">      0           0        </param>
+        <param name="pos_kff">              0           0        </param>
+    </group>
+
+    <group name="VEL_CONTROL">
+	    <param name="controlLaw">    Pid_inVel_outPwm            </param>
+        <param name="fbkControlUnits">     machine_units         </param> 
+        <param name="outputControlUnits">  machine_units         </param>
+        <param name="vel_kp">              -5           5        </param>
+        <param name="vel_kd">              -0           0        </param>
+        <param name="vel_ki">              -5          50        </param>
+        <param name="vel_maxOutput">     3000        3000        </param>
+        <param name="vel_maxInt">        3000        3000        </param>
+        <param name="vel_shift">            0           0        </param>
+        <param name="vel_ko">               0           0        </param>
+        <param name="vel_stictionUp">       0           0        </param>
+        <param name="vel_stictionDwn">      0           0        </param>
+        <param name="vel_kff">              0           0        </param>
+    </group>
+
+    
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0           </param>
+        <param name="damping">         0      0           </param>
+    </group>
+
+  </device>
+
