@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+ <!-- Initialization file for MC4+ 20 - CER right lower arm, 4 dof -->
+
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_right_lower_arm_mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../electronics/cer_right_lower_arm-mcp6-eln.xml" />
+      <xi:include href="../mechanicals/cer_right_lower_arm-mcp6-mec.xml" />
+      <xi:include href="../motorControl/cer_right_lower_arm-mcp6-mc-service.xml" />
+
+    <group name="LIMITS">
+        <param name="jntPosMax">                  0.12     0.12    0.12     89     </param>
+        <param name="jntPosMin">                  0        0       0       -89     </param>
+        <param name="jntVelMax">                  0.02     0.02    0.02     3000   </param>
+        <param name="motorOverloadCurrents">      10000    10000   10000    10000  </param>
+        <param name="motorNominalCurrents">       5000     5000    5000     5000   </param>
+        <param name="motorPeakCurrents">          5000     5000    5000     5000   </param>
+        <param name="motorPwmLimit">              3360     3360    3360     3360   </param>  
+    </group>
+    
+    
+    <group name="TIMEOUTS">
+        <param name="velocity">               100       100           100        100    </param>
+    </group>
+
+
+    <group name="CONTROLS">
+       <param name="positionControl">  JOINT_PID_V1         JOINT_PID_V1          JOINT_PID_V1         JOINT_PID_V1                 </param> 
+       <param name="velocityControl">  VEL_CTRL              VEL_CTRL             VEL_CTRL             VEL_CTRL                     </param> 
+       <param name="torqueControl">    none                  none                  none                MOTOR_PID_WITH_FRICTION_V1   </param>
+        <param name="currentPid">      none                  none                  none                none                         </param> 
+    </group>
+
+
+    <group name="JOINT_PID_V1">
+        <param name="controlLaw">    Pid_inPos_outPwm </param> 
+        <param name="fbkControlUnits">     machine_units             </param> 
+        <param name="outputControlUnits">  machine_units             </param>
+        <param name="pos_kp">              -20        -20        -20      -0.7    </param>       
+        <param name="pos_kd">               0          0          0        0      </param>       
+        <param name="pos_ki">               0          0          0        0      </param>       
+        <param name="pos_maxOutput">        3000       3000       3000     2000   </param>          
+        <param name="pos_maxInt">           0          0          0        0      </param>       
+        <param name="pos_shift">            0          0          0        0      </param>       
+        <param name="pos_ko">               0          0          0        0      </param>       
+        <param name="pos_stictionUp">       0          0          0        0      </param>       
+        <param name="pos_stictionDwn">      0          0          0        0      </param>     
+        <param name="pos_kff">              0          0          0        0      </param>   
+    </group>
+
+    <group name="VEL_CTRL">
+        <param name="controlLaw">    Pid_inVel_outPwm </param> 
+        <param name="fbkControlUnits">     machine_units             </param> 
+        <param name="outputControlUnits">  machine_units             </param>  
+        <param name="pos_kp">              -20        -20        -20      -0.7    </param>       
+        <param name="pos_kd">               0          0          0        0      </param>       
+        <param name="pos_ki">               0          0          0        0      </param>       
+        <param name="pos_maxOutput">        3000       3000       3000     2000   </param>          
+        <param name="pos_maxInt">           0          0          0        0      </param>       
+        <param name="pos_shift">            0          0          0        0      </param>       
+        <param name="pos_ko">               0          0          0        0      </param>       
+        <param name="pos_stictionUp">       0          0          0        0      </param>       
+        <param name="pos_stictionDwn">      0          0          0        0      </param>     
+        <param name="pos_kff">              0          0          0        0      </param>
+        <param name="vel_kp">              -20        -20        -20      -0.7    </param>       
+        <param name="vel_kd">               0          0          0        0      </param>       
+        <param name="vel_ki">               0          0          0        0      </param>       
+        <param name="vel_maxOutput">        3000       3000       3000     2000   </param>          
+        <param name="vel_maxInt">           0          0          0        0      </param>       
+        <param name="vel_shift">            0          0          0        0      </param>       
+        <param name="vel_ko">               0          0          0        0      </param>       
+        <param name="vel_stictionUp">       0          0          0        0      </param>       
+        <param name="vel_stictionDwn">      0          0          0        0      </param>     
+        <param name="vel_kff">              0          0          0        0      </param>      
+    </group>
+
+    <group name="MOTOR_PID_WITH_FRICTION_V1">
+        <param name="controlLaw">    Pid_inTrq_outPwm               </param> 
+        <param name="fbkControlUnits">        metric_units              </param>
+        <param name="outputControlUnits">     machine_units             </param>         
+        <param name="trq_kp">              0          0          0          0     </param>       
+        <param name="trq_kd">              0          0          0          0     </param>       
+        <param name="trq_ki">              0          0          0          0     </param>       
+        <param name="trq_maxOutput">       0          0          0          0     </param>       
+        <param name="trq_maxInt">          0          0          0          0     </param>       
+        <param name="trq_shift">           0          0          0          0     </param>       
+        <param name="trq_ko">              0          0          0          0     </param>       
+        <param name="trq_stictionUp">      0          0          0          0     </param>       
+        <param name="trq_stictionDwn">     0          0          0          0     </param>       
+        <param name="trq_kff">             0          0          0          0     </param>  
+        <param name="trq_kbemf">           0          0          0          0     </param>            
+        <param name="trq_filterType">      0          0          0          0     </param>     
+        <param name="trq_ktau">            0          0          0          0     </param>
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0      0      0     </param>    
+        <param name="damping">         0      0      0      0     </param>    
+    </group>
+	
+	<group name="OTHER_CONTROL_PARAMETERS">
+        <param name="deadZone"> 0.00002   0.00002   0.00002   0.0055   </param>
+    </group>
+	
+  </device>
+
+

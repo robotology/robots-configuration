@@ -22,7 +22,7 @@ set(ROBOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${ROBOT_NAME}")
 icubcontrib_set_default_prefix()
 
 if(INSTALL_ALL_ROBOTS)
-    # List the subdirectory (http://stackoverflow.com/questions/7787823/cmake-how-to-get-the-name-of-all-subdirectories-of-a-directory)
+    # List the subdirectories (http://stackoverflow.com/questions/7787823/cmake-how-to-get-the-name-of-all-subdirectories-of-a-directory)
     macro(SUBDIRLIST result curdir)
         file(GLOB children RELATIVE ${curdir} ${curdir}/*)
         set(dirlist "")

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_right_wrist_equivalent_mc" type="tripodMotionControl">
+      <xi:include href="../../general.xml" />
+
+    <param name="AxisNames">  "r_wrist_heave_eq_joint" "r_wrist_pitch_eq_joint" "r_wrist_roll_eq_joint"  </param>
+
+    <group name="GENERAL">
+      <param name="Joints">    3       </param>
+     <!-- <param name="AxisMap">   0 1 2   </param> -->
+     <!-- <param name="Verbose">   true    </param> -->
+      <param name="Encoder">   1 1 1   </param>
+    </group>
+
+    <group name="TRIPOD">
+      <param name="Radius">      0.018   </param>
+      <param name="Max_el">      0.120  </param>
+      <param name="Min_el">      0.0    </param>
+      <param name="Max_alpha">   30.0   </param>
+
+      <param name="BASE_TRANSFORMATION">   1.0    0.0     0.0    0.0
+                                           0.0    1.0     0.0    0.0
+                                           0.0    0.0     1.0    0.0
+                                           0.0    0.0     0.0    1.0
+      </param>
+    </group>
+
+    <group name="LIMITS">
+        <param name="JntVelocityMax">   0.05  </param>
+    </group>
+
+    <!-- action is alternative to CONNECTION group -->
+    <action phase="startup" level="1" type="attach">
+      <paramlist name="networks">
+          <elem name="FirstSetOfJoints"> cer_right_lower_arm_mc </elem>
+      </paramlist>
+    </action>
+
+    <action phase="shutdown" level="6" type="detach" />
+
+  </device>
+

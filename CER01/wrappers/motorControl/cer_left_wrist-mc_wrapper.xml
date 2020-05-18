@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_left_wrist_mc_wrapper" type="controlboardwrapper2">
+      <param name="period">   10   </param>
+      <paramlist name="networks">
+	  <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+	  <elem name="FirstSetOfJoints">  0  2  0  2 </elem>
+      </paramlist>
+
+      <param name="name">   /cer/left_wrist  </param>
+      <param name="ports">  left_wrist       </param>
+      <param name="joints"> 3                </param>
+
+      <action phase="startup" level="5" type="attach">
+	  <paramlist name="networks">
+	  <!-- The param value must match the device name in the corresponding emsX file -->
+	      <elem name="FirstSetOfJoints"> cer_left_lower_arm_mc</elem>
+
+	  </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach" />
+
+  </device>
+

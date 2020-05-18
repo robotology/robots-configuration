@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cerLaser" type="rpLidar2">  
+       <group name="GENERAL">
+            <param name="name">            cer_laser     </param>
+            <param name="clip_max">        7.0          </param>
+            <param name="clip_min">        0.1          </param>
+            <param name="max_angle">       360          </param>
+            <param name="min_angle">       0            </param>
+            <param name="resolution">      0.5           </param>
+            <param name="allow_infinity">  1            </param>
+            <param name="serial_baudrate"> 115200       </param>
+            <param name="serial_port">     /dev/ttyUSB0 </param>
+            <param name="sample_buffer_life">  1        </param>
+        </group>
+        <group name="SKIP">
+            <param name="min">  35     </param>
+            <param name="max">  325    </param>
+        </group> 
+    </device>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

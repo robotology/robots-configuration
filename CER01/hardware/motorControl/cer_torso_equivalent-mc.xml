@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_torso_equivalent_mc" type="tripodMotionControl">
+      <xi:include href="../../general.xml" />
+
+    <param name="AxisNames">  "torso_heave_eq_joint"   "torso_pitch_eq_joint"   "torso_roll_eq_joint"  </param>
+
+    <group name="GENERAL">
+      <param name="Joints">    3       </param>
+      <!-- <param name="AxisMap">   0 1 2   </param> -->
+      <!-- <param name="Verbose">   true    </param> -->
+      <param name="Encoder">   1 1 1   </param>
+    </group>
+
+    <group name="TRIPOD">
+      <param name="Radius">      0.09   </param>
+      <param name="Max_el">      0.170  </param>
+      <param name="Min_el">      0.0    </param>
+      <param name="Max_alpha">   10.0   </param>
+
+      <param name="BASE_TRANSFORMATION">   1.0    0.0     0.0    0.0
+                                           0.0    1.0     0.0    0.0
+                                           0.0    0.0     1.0    0.0
+                                           0.0    0.0     0.0    1.0
+      </param>
+    </group>
+
+    <group name="LIMITS">
+        <param name="JntVelocityMax">   0.05  </param>
+    </group>
+
+
+    <!--
+    <group name="CONNECTION">
+      <param name="local">         /cerGazeboSim/torso_out  </param>
+      <param name="remote">        /cerGazeboSim/torso      </param>
+      <param name="writeStrict">   off                       </param>
+    </group>
+     -->
+
+    <!-- action is alternative to CONNECTION group -->
+    <action phase="startup" level="5" type="attach">
+      <paramlist name="networks">
+          <elem name="FirstSetOfJoints"> cer_torso_mc </elem>
+      </paramlist>
+    </action>
+
+    <action phase="shutdown" level="6" type="detach" />
+
+  </device>
+

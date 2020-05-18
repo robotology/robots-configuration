@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<devices robot="CER03" build="1">
+    <device name="left_hand_skin_wrapper" type="skinWrapper">
+        <param name="period">       20                  </param>
+        <param name="total_taxels"> 576                 </param>
+        <param name="device">       skinWrapper         </param>
+        
+        <paramlist name="ports">
+            <elem name="left_hand_skin_index">      0   191     0   191   </elem>
+            <elem name="left_hand_skin_paddle">     192 383     0   191   </elem>
+            <elem name="left_hand_skin_thumb">      384 575     0   191   </elem>
+        </paramlist>
+        
+        <!-- used taxels:
+             left-index-proxy:      24 taxels of port left_hand_skin_index in positions [8*12, (9+1)*12-1]      = [96, 119]
+             left-index-distal:     24 taxels of port left_hand_skin_index in positions [0*12, (1+1)*12-1]      = [0, 23]
+             left-paddle-proxy:     48 taxels of port left_hand_skin_paddle in positions [0*12, (3+1)*12-1]     = [0, 47]
+             left-paddle-distal:    48 taxels of port left_hand_skin_paddle in positions [8*12, (11+1)*12-1]    = [96, 143]
+             left-thumb-proxy:      24 taxels of port left_hand_skin_thumb in positions [8*12, (9+1)*12-1]      = [96, 119]
+             left-thumb-distal:     36 taxels of port left_hand_skin_thumb in positions [0*12, (2+1)*12-1]      = [0, 35]
+          -->
+        
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+            <!-- The param value must match the device name in the corresponding emsX file -->
+                <elem name="FirstSetOfSkins"> left_hand_skin </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+</devices>

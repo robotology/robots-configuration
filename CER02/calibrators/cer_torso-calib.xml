@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_calibrator" type="parametricCalibratorEth">
+        <xi:include href="../general.xml" />
+                
+		<group name="GENERAL">
+		    <param name="joints">  4  </param> <!-- the number of joints of the robot part -->
+		    <param name="deviceName"> Torso_Calibrator </param>
+		</group>
+
+<group name="HOME">
+<param name="positionHome">                       0.05            0.0         0.0       0.0           </param>
+<param name="velocityHome">                       0.01            10          10        10            </param>
+</group>
+
+<group name="CALIBRATION">
+<param name="calibrationType">                    9               9           9         12            </param>
+<param name="calibration1">                       10000           10000       10000    -54127         </param>
+<param name="calibration2">                       280             280         280       0             </param>
+<param name="calibration3">                       0               0           0         0             </param>
+<param name="calibration4">                       0               0           0         0             </param>
+<param name="calibration5">                       0               0           0         0             </param>
+<param name="calibrationZero">                    1500            1500        1500      0             </param>
+<param name="calibrationDelta">                   0.0             0.0         0.0       0.0           </param>
+
+<param name="startupPosition">                    0.12            0.0         0.0       0.0           </param>
+<param name="startupVelocity">                    0.01            10          10        10.0          </param>
+<param name="startupTimeout">                     30              30          30        20            </param>
+<param name="startupMaxPwm">                      20000           20000       20000     5000          </param>
+<param name="startupPosThreshold">                0.005           2           2         2             </param>
+</group>
+
+		<param name="CALIB_ORDER">(0 1 2 3) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">cer_torso_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">cer_torso_mc_wrapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort" />
+
+	</device>
+

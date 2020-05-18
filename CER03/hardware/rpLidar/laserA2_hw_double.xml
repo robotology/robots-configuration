@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_double_laser_device" type="cerDoubleLidar">  
+
+	<group name="LASERFRONT-CFG">
+            <param name="sensorName">     L_Front    </param>
+            <param name="pose">        0.070 0.0 0.031 0.0          </param>
+	        <param name="file">        laserA2_hw_front.xml         </param>
+        </group>
+        <group name="LASERBACK-CFG">
+            <param name="sensorName">     L_Back     </param>
+            <param name="pose">        -0.070 0.0 0.031 3.14159     </param>
+	        <param name="file">        laserA2_hw_back.xml          </param>
+        </group>
+
+      <action phase="startup" level="3" type="attach">
+         <paramlist name="networks">
+            <elem name="L_Front">  cer_laser_front_device </elem>
+            <elem name="L_Back">   cer_laser_back_device </elem>
+         </paramlist>
+      </action>
+
+      <action phase="shutdown" level="3" type="detach"/>
+  </device>
+
+
