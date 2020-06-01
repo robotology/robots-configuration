@@ -24,6 +24,7 @@
 	<xi:include href="./iCubLethbridge01/icub_all.xml" />
 	<xi:include href="./iCubNancy01/icub_all.xml" />
 	<xi:include href="./iCubSingapore01/icub_all.xml" />
+	<xi:include href="./iCubHongKong01/icub_all.xml" />
 	<!-- <xi:include href="./iCubBielefeld01" /> -->
 	<xi:include href="./iCubHertfordshire01/icub_all.xml" />
 	<xi:include href="./iCubHertfordshire02/icub_all.xml" />
