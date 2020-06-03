@@ -4,14 +4,17 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cerLaser" type="rpLidar">  
 
     <group name="GENERAL">
-       <param name="name">      cer_laser        </param>
-       <param name="clip_max">  3.5 </param>
-       <param name="clip_min">  0.1 </param>
+	   <param name="name">      cer_laser        </param>
+       <param name="Serial_Configuration">  hardware/rpLidar/serial.ini </param>
+    </group>
+    
+    <group name="SENSOR">
+       <param name="max_distance">  3.5 </param>
+       <param name="min_distance">  0.1 </param>
        <param name="max_angle">  359 </param>
        <param name="min_angle">  0   </param>
        <param name="resolution">  1   </param>
        <param name="allow_infinity">  1 </param>
-       <param name="Serial_Configuration">  hardware/rpLidar/serial.ini </param>
     </group>
 
     <group name="SKIP">

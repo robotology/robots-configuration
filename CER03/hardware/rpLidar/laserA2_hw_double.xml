@@ -6,22 +6,31 @@
 	<group name="LASERFRONT-CFG">
             <param name="sensorName">     L_Front    </param>
             <param name="pose">        0.070 0.0 0.031 0.0          </param>
-	        <param name="file">        laserA2_hw_front.xml         </param>
+            <param name="file">        laserA2_hw_front.xml         </param>
         </group>
         <group name="LASERBACK-CFG">
             <param name="sensorName">     L_Back     </param>
             <param name="pose">        -0.070 0.0 0.031 3.14159     </param>
-	        <param name="file">        laserA2_hw_back.xml          </param>
+            <param name="file">        laserA2_hw_back.xml          </param>
         </group>
-
+        <group name="SENSOR">                      
+            <param name="max_distance">    7.0          </param>
+            <param name="min_distance">    0.1          </param>
+            <param name="max_angle">       360          </param>
+            <param name="min_angle">       0            </param>
+            <param name="resolution">      0.5          </param>
+            <param name="allow_infinity">  1            </param>
+         </group>
+        
       <action phase="startup" level="3" type="attach">
          <paramlist name="networks">
             <elem name="L_Front">  cer_laser_front_device </elem>
             <elem name="L_Back">   cer_laser_back_device </elem>
          </paramlist>
       </action>
-
+      
       <action phase="shutdown" level="3" type="detach"/>
-  </device>
+
+    </device>
 
 

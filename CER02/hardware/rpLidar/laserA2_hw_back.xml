@@ -3,16 +3,18 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_laser_back_device" type="rpLidar2">  
        <group name="GENERAL">
-            <param name="name">            cer_laserBack     </param>
-            <param name="clip_max">        7.0          </param>
-            <param name="clip_min">        0.1          </param>
+            <param name="name">            cer_laserBack </param>
+            <param name="serial_baudrate"> 115200        </param>
+            <param name="serial_port">     /dev/ttyUSB0  </param>
+            <param name="sample_buffer_life">  1         </param>
+       </group>
+       <group name="SENSOR">                      
+            <param name="max_distance">    7.0          </param>
+            <param name="min_distance">    0.1          </param>
             <param name="max_angle">       360          </param>
             <param name="min_angle">       0            </param>
-            <param name="resolution">      0.5           </param>
+            <param name="resolution">      0.5          </param>
             <param name="allow_infinity">  1            </param>
-            <param name="serial_baudrate"> 115200       </param>
-            <param name="serial_port">     /dev/ttyUSB0 </param>
-            <param name="sample_buffer_life">  1        </param>
         </group>
         <group name="SKIP">
             <param name="min">  60     </param>
