@@ -67,7 +67,7 @@
         <param name="outputType">          pwm                          </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  dutycycle_percent            </param>
-        <param name="kp">              0.53       0.53          </param>
+        <param name="kp">             -0.53      -0.53          </param>
         <param name="kd">              0          0             </param>
         <param name="ki">              0          0             </param>
         <param name="maxOutput">      25         25             </param>
