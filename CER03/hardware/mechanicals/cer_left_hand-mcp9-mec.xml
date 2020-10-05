@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="CERSN002" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="CER02" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  5 </param>
+        <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints">                2  </param> 
         <param name="AxisName">              "l_palm"           "l_thumb"       </param>
         <param name="AxisMap">               0                  1               </param>
@@ -40,21 +40,14 @@
             0.000   0.000   1.000   0.000
             0.000   0.000   0.000   1.000   
         </param>
-        
+       
         <param name ="matrixE2J">  
            -0.5     0.5     0.5    -0.5     0.000   0.000
             0.000   0.000   0.000   0.000  -1.000   1.000
             0.000   0.000   0.000   0.000   0.000   0.000
-            0.000   0.000   0.000   0.000   0.000   0.000   
+            0.000   0.000   0.000   0.000   0.000   0.000  
         </param>
-		<!--
-        <param name ="matrixE2J">  
-            0.0     0.0     0.0     1.0     0.000   0.000
-            0.000   0.000   0.000   0.000  -1.000   1.000
-            0.000   0.000   0.000   0.000   0.000   0.000
-            0.000   0.000   0.000   0.000   0.000   0.000   
-        </param>
-        -->                 
+                
     </group>   
 
     <group name="JOINTSET_CFG"> 
