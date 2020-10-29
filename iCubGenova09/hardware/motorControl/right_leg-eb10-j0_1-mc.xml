@@ -14,8 +14,8 @@
         <param name="jntPosMax">                110                 110                 </param>
         <param name="jntPosMin">                -40                 -8                  </param>
         <param name="jntVelMax">                240                 240                 </param>
-        <param name="motorNominalCurrents">     5000                5000                </param>
-        <param name="motorPeakCurrents">        10000               10000               </param>
+        <param name="motorNominalCurrents">     5000                6000                </param>
+        <param name="motorPeakCurrents">        10000               11000               </param>
         <param name="motorOverloadCurrents">    15000               15000               </param>
         <param name="motorPwmLimit">            16000               16000               </param>
     </group>
@@ -47,9 +47,9 @@
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>
         <param name="kff">                      0                   0                   </param>
-        <param name="kp">                       5000                -7000               </param>
+        <param name="kp">                       5000                -25000               </param>
         <param name="kd">                       0                   0                   </param>
-        <param name="ki">                       1500                -4000               </param>
+        <param name="ki">                       1500                -5000               </param>
         <param name="maxOutput">                8000                8000                </param>
         <param name="maxInt">                   1500                5000                </param>
         <param name="stictionUp">               0                   0                   </param>
