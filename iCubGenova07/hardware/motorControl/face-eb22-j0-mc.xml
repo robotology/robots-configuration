@@ -13,7 +13,7 @@
     <!-- joint name                                                 -->
     <group name="LIMITS">
         <param name="jntPosMin">                -5                  </param>
-        <param name="jntPosMax">                +65                 </param>
+        <param name="jntPosMax">                +60                 </param>
         <param name="motorOverloadCurrents">    2000                </param>
         <param name="motorNominalCurrents">     700                 </param>
         <param name="motorPeakCurrents">        1000                </param>

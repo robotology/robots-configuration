@@ -10,7 +10,7 @@
     <xi:include href="./torso-eb5-j0_2-mc_service.xml" />
 
     <!-- joint number                           0                   1                   2               -->
-    <!-- joint name -->          
+    <!-- joint name 				"torso_yaw"	    "torso_roll"	"torso_pitch"	-->          
     <group name="LIMITS">
         <param name="jntPosMax">                50                  30                  70                  </param>
         <param name="jntPosMin">                -50                 -30                 -20                 </param>
