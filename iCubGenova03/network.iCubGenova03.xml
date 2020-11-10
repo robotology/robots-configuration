@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+
+<!--    description 
+
+        this file contains the boards mounted on the robot grouped by body parts.
+
+        there is only one group called host which contains name and as many rows as the supported
+        devices. each one is tagged <hasdevice> and contains a type (ETH or CFW) and an address 
+        (in ip format or just a number for the case of CFW).
+        
+        then there are many groups called part. each one may contain many groups called boards: 
+        one per physical board on the robot on that part.
+        
+        every <board> has two compulsory properties: type, name. it may also have an 
+        additional property: required. so far the only value of required is "version".
+        each <board> contains three compulsory fields: ondevice, ataddress, connected. 
+        and it may have an additional field: version (if there is the required="version" property).
+        here is description of each of the previous:
+        -   type: must have a valid board name in short format: ems4, mc4plus, foc, strain, 
+            strain2, mtb, mtb4, mais, mc4, etc.
+        -   name: can be any string.
+        -   required: if present can be only ="version". it tells that that board MUST match
+            a given version of firmware. it is used to identify amongst the many versions of mc4 
+            boards.
+        -   ondevice: tells on which device the board is located. it can be ETH (for ETH robots)
+            or CFW for first generation CAN robots. 
+        -   ataddress: contains the network address under device. if device is ETH there is
+            ip="10.0.1.x" and if the board is a CAN board there is also canbus="c" canadr="a".
+            if the device is CFW, then there is only canbus="c" canadr="a".
+        -   connected: contains the connection information. if bus ETH there are: prev and next
+            which are the previous and the next ip addresses (they both must be present). the last
+            board must have next="none". if bus is CAN there are no extra fields.
+        -   version: contains the required version. typically only major and minor values are specified.
+         
+        the aim of this files is to be parsed by the python program robotFWmanager.py
+  -->
+
+<robotnetwork>
+
+    <host name="pc104" >
+        <hasdevice type= "CFW" address="0" />
+        <hasdevice type= "CFW" address="1" />
+        <hasdevice type= "CFW" address="2" />
+        <hasdevice type= "CFW" address="3" />
+        <hasdevice type= "CFW" address="4" />
+        <hasdevice type= "CFW" address="5" />
+        <hasdevice type= "CFW" address="6" />
+        <hasdevice type= "CFW" address="7" />
+        <hasdevice type= "CFW" address="8" />
+        <hasdevice type= "CFW" address="9" />
+    </host>
+
+    <part name="head">
+
+        <board type='bll' name="bll.head.CAN0:1" required="version">
+            <version major="1" minor="98" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="0" canadr="1"  />
+            <connected bus="CAN" />
+        </board>
+        
+        <board type='mc4' name="mc4.head.CAN0:2" required="version">
+            <version major="2" minor="21" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="0" canadr="2" />
+            <connected bus="CAN" />
+        </board>
+        
+    </part>
+
+    
+    <part name="face">
+    </part>
+
+
+    <part name="left_arm">
+
+        <board type='bll' name="bll.left_arm.CAN1:1" required="version">
+            <version major="1" minor="80" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="1" canadr="1" />
+            <connected bus="CAN" />
+        </board>
+        
+        <board type='bll' name="bll.left_arm.CAN1:2" required="version">
+            <version major="1" minor="87" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="1" canadr="2" />
+            <connected bus="CAN" />
+        </board>        
+        
+        <board type='mc4' name="mc4.left_arm.CAN1:3" required="version">
+            <version major="2" minor="25" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="1" canadr="3" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='mc4' name="mc4.left_arm.hand.CAN5:5" required="version">
+            <version major="2" minor="40" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="5" canadr="5" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='mc4' name="mc4.left_arm.hand.CAN5:7" required="version">
+            <version major="2" minor="48" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="5" canadr="7" />
+            <connected bus="CAN" />
+        </board> 
+                  
+        <board type='strain' name="strain.left_arm.CAN1:13">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="1" canadr="13" />
+            <connected bus="CAN" />
+        </board> 
+        
+        <board type='mais' name="mais.left_arm.hand.CAN5:14">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="5" canadr="14" />
+            <connected bus="CAN" />
+        </board>  
+
+        <board type='mtb' name="mtb.left_arm:CAN7:8">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="7" canadr="8" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.left_arm:CAN7:9">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="7" canadr="9" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.left_arm:CAN7:10">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="7" canadr="10" />
+            <connected bus="CAN" />
+        </board>    
+
+        <board type='mtb' name="mtb.left_arm:CAN7:11">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="7" canadr="11" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.left_arm:CAN7:12">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="7" canadr="12" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.left_arm:CAN7:13">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="7" canadr="13" />
+            <connected bus="CAN" />
+        </board>   
+
+        <board type='mtb' name="mtb.left_arm:CAN7:14">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="7" canadr="14" />
+            <connected bus="CAN" />
+        </board> 
+      
+    </part>
+
+   
+    <part name="right_arm">
+
+        <board type='bll' name="bll.right_arm.CAN2:1" required="version">
+            <version major="1" minor="80" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="2" canadr="1" />
+            <connected bus="CAN" />
+        </board>
+        
+        <board type='bll' name="bll.right_arm.CAN2:2" required="version">
+            <version major="1" minor="87" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="2" canadr="2" />
+            <connected bus="CAN" />
+        </board>        
+        
+        <board type='mc4' name="mc4.right_arm.CAN2:3" required="version">
+            <version major="2" minor="25" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="2" canadr="3" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='mc4' name="mc4.right_arm.hand.CAN6:5" required="version">
+            <version major="2" minor="40" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="6" canadr="5" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='mc4' name="mc4.right_arm.hand.CAN6:7" required="version">
+            <version major="2" minor="48" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="6" canadr="7" />
+            <connected bus="CAN" />
+        </board> 
+                
+        <board type='strain' name="strain.right_arm.CAN2:13">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="2" canadr="13" />
+            <connected bus="CAN" />
+        </board> 
+        
+        <board type='mais' name="mais.right_arm.hand.CAN6:14">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="6" canadr="14" />
+            <connected bus="CAN" />
+        </board>  
+
+        <board type='mtb' name="mtb.right_arm:CAN8:8">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="8" canadr="8" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.right_arm:CAN8:9">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="8" canadr="9" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.right_arm:CAN8:10">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="8" canadr="10" />
+            <connected bus="CAN" />
+        </board>    
+
+        <board type='mtb' name="mtb.right_arm:CAN8:11">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="8" canadr="11" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.right_arm:CAN8:12">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="8" canadr="12" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.right_arm:CAN8:13">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="8" canadr="13" />
+            <connected bus="CAN" />
+        </board>   
+
+        <board type='mtb' name="mtb.right_arm:CAN8:14">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="8" canadr="14" />
+            <connected bus="CAN" />
+        </board>         
+        
+    </part>
+    
+
+    <part name="torso">
+
+        <board type='bll' name="bll.torso.CAN0:5" required="version">
+            <version major="1" minor="84" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="0" canadr="5" />
+            <connected bus="CAN" />
+        </board>
+        
+        <board type='bll' name="bll.torso.CAN0:6" required="version">
+            <version major="1" minor="82" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="0" canadr="6" />
+            <connected bus="CAN" />
+        </board>   
+        
+        <board type='mtb' name="mtb.torso.CAN9:7">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="7" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.torso.CAN9:8">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="8" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.torso.CAN9:9">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="9" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.torso.CAN9:10">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="10" />
+            <connected bus="CAN" />
+        </board>
+
+    </part>
+
+    
+    <part name="left_leg">
+
+        <board type='bll' name="bll.left_leg.CAN3:5" required="version">
+            <version major="2" minor="81" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="3" canadr="5" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='bll' name="bll.left_leg.CAN3:6" required="version">
+            <version major="2" minor="81" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="3" canadr="6" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='bll' name="bll.left_leg.CAN3:7" required="version">
+            <version major="2" minor="81" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="3" canadr="7" />
+            <connected bus="CAN" />
+        </board> 
+        
+        <board type='strain' name="strain.left_leg.CAN3:13">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="3" canadr="13" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='strain' name="strain.left_leg.foot.CAN3:1">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="3" canadr="1" />
+            <connected bus="CAN" />
+        </board> 
+        
+        <board type='mtb' name="mtb.left_leg.foot.CAN9:2">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="2" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.left_leg.foot.CAN9:3">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="3" />
+            <connected bus="CAN" />
+        </board>
+        
+    </part>
+
+
+    <part name="right_leg">
+
+        <board type='bll' name="bll.right_leg.CAN4:8" required="version">
+            <version major="2" minor="81" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="4" canadr="8" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='bll' name="bll.right_leg.CAN4:9" required="version">
+            <version major="2" minor="81" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="4" canadr="9" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='bll' name="bll.right_leg.CAN4:10" required="version">
+            <version major="2" minor="81" />
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="4" canadr="10" />
+            <connected bus="CAN" />
+        </board> 
+        
+        <board type='strain' name="strain.right_leg.CAN4:14">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="4" canadr="14" />
+            <connected bus="CAN" />
+        </board> 
+
+        <board type='strain' name="strain.right_leg.foot.CAN4:1">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="4" canadr="1" />
+            <connected bus="CAN" />
+        </board> 
+        
+        <board type='mtb' name="mtb.right_leg.foot.CAN9:13">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="13" />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mtb' name="mtb.right_leg.foot.CAN9:14">
+            <ondevice>CFW</ondevice>
+            <ataddress canbus="9" canadr="14" />
+            <connected bus="CAN" />
+        </board>
+
+    </part>
+
+    
+    <part name="custom"> 
+    </part>
+
+
+    <part name="test">
+    </part>
+
+
+</robotnetwork>
+

@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<robot name="iCubGenova03" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="iCubGenova03" build="1">
 <devices>
     <!-- cartesian --> 
     <xi:include href="cartesian/left_arm_cartesian.xml" />
@@ -37,16 +38,18 @@
     <!-- REAL ANALOG SENSORS -->
     <xi:include href="wrappers/FT/left_arm_FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/left_foot_FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/left_leg_FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/right_arm_FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/right_leg_FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/right_foot_FT_wrapper.xml" /> 
     <xi:include href="wrappers/MAIS/left_hand_mais_wrapper.xml" /> 
     <xi:include href="wrappers/MAIS/right_hand_mais_wrapper.xml" /> 
     <xi:include href="hardware/FT/left_arm_strain.xml" /> 
-    <xi:include href="hardware/FT/left_foot_strain.xml" />
+    <xi:include href="hardware/FT/left_leg_strain.xml" />
+    <xi:include href="hardware/FT/left_foot_strain.xml" /> 
     <xi:include href="hardware/FT/right_arm_strain.xml" /> 
     <xi:include href="hardware/FT/right_leg_strain.xml" /> 
-    <xi:include href="hardware/FT/right_foot_strain.xml" />
+    <xi:include href="hardware/FT/right_foot_strain.xml" /> 
     <xi:include href="hardware/MAIS/left_hand_mais.xml" /> 
     <xi:include href="hardware/MAIS/right_hand_mais.xml" /> 
    
@@ -64,18 +67,18 @@
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
-    <!--
+    
     <xi:include href="wrappers/skin/left_hand_inertial_wrapper.xml" />  
     <xi:include href="wrappers/skin/right_hand_inertial_wrapper.xml" />  
     <xi:include href="hardware/skin/left_hand_inertial_mtb.xml" />  
     <xi:include href="hardware/skin/right_hand_inertial_mtb.xml" />  
-    -->
+    
 
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/head_calib.xml" /> 
     <xi:include href="calibrators/torso_calib.xml" />
     <xi:include href="calibrators/right_leg_calib.xml" />
-    <xi:include href="calibrators/left_leg_calib.xml" /> 
+    <xi:include href="calibrators/left_leg_calib.xml" />
     <xi:include href="calibrators/left_arm_calib.xml" /> 
     <xi:include href="calibrators/right_arm_calib.xml" />
     <xi:include href="calibrators/left_hand_calib.xml" /> 
