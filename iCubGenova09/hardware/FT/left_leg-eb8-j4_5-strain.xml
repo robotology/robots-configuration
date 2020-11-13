@@ -30,7 +30,7 @@
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   id_l_lower_leg_strain   </param>
+                    <param name="id">                   id_l_ankle_strain   </param>
                     <param name="type">                 eoas_strain             </param>
                     <param name="location">             CAN2:13                 </param>
                 </group>                
@@ -39,7 +39,7 @@
 
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_l_lower_leg_strain   </param>                
+                <param name="enabledSensors">           id_l_ankle_strain   </param>                
             </group>
             
             <group name="STRAIN_SETTINGS">        

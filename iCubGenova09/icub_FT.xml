@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="iCubGenova09" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <params>
+    <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+
+  
+ 
+      <!-- ANALOG SENSOR FT -->
+    <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />   
+   <!-- <xi:include href="wrappers/FT/left_ankle-FT_wrapper.xml" /> -->   
+    <xi:include href="wrappers/FT/left_foot_tiptoe-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/left_foot_heel-FT_wrapper.xml" />
+  <!-- <xi:include href="wrappers/FT/right_ankle-FT_wrapper.xml" /> -->   
+    <xi:include href="wrappers/FT/right_foot_tiptoe-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_foot_heel-FT_wrapper.xml" />
+
+    <xi:include href="hardware/FT/left_arm-eb1-j0_3-strain.xml" /> 
+    <xi:include href="hardware/FT/right_arm-eb3-j0_3-strain.xml" />
+
+    <xi:include href="hardware/FT/left_leg-eb6-j0_1-strain.xml" /> 
+    <xi:include href="hardware/FT/left_leg-eb7-j2_3-strain.xml" />
+  <!--  <xi:include href="hardware/FT/left_leg-eb8-j4_5-strain.xml" /> -->
+    <xi:include href="hardware/FT/left_leg-eb9-skin-strain.xml" />
+
+    <xi:include href="hardware/FT/right_leg-eb10-j0_1-strain.xml" /> 
+    <xi:include href="hardware/FT/right_leg-eb11-j2_3-strain.xml" />
+  <!-- <xi:include href="hardware/FT/right_leg-eb12-j4_5-strain.xml" /> -->
+    <xi:include href="hardware/FT/right_leg-eb13-skin-strain.xml" />
+
+    
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
+    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
+    <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" /> 
+    <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />     
+    <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" /> 
+    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
+    
+  
+    </devices>
+</robot> 
+ 

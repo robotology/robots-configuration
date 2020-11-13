@@ -3,11 +3,11 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb12-j4_5-strain" type="embObjStrain">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb7-j2_3-strain" type="embObjStrain">
     
         <xi:include href="../../general.xml"/>
 
-        <xi:include href="../../hardware/electronics/right_leg-eb12-j4_5-eln.xml" />
+        <xi:include href="../../hardware/electronics/left_leg-eb7-j2_3-eln.xml" />
     
         <group name="SERVICE">
             
@@ -30,7 +30,7 @@
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   id_r_ankle_strain   </param>
+                    <param name="id">                   id_l_heel_strain   </param>
                     <param name="type">                 eoas_strain             </param>
                     <param name="location">             CAN2:13                 </param>
                 </group>                
@@ -39,7 +39,7 @@
 
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_r_ankle_strain   </param>                
+                <param name="enabledSensors">           id_l_heel_strain   </param>                
             </group>
             
             <group name="STRAIN_SETTINGS">        
@@ -50,8 +50,6 @@
     
   </device>
   
-
-
 
 
 
