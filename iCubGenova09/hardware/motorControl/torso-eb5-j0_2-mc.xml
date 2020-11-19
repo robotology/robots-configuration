@@ -9,8 +9,9 @@
     <xi:include href="../../hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
     <xi:include href="./torso-eb5-j0_2-mc_service.xml" />
 
+    <!-- joint number                           roll               pitch              yaw               -->
     <!-- joint number                           0                   1                   2               -->
-    <!-- joint name -->          
+    <!-- joint name -->
     <group name="LIMITS">
         <param name="jntPosMax">                23                  45                  43                  </param>
         <param name="jntPosMin">                -23                 -18                 -43                 </param>
@@ -29,7 +30,7 @@
         <param name="stiffness">                0                   0                   0                   </param>
         <param name="damping">                  0                   0                   0                   </param>
     </group>
-    
+
     <group name="CONTROLS">
         <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
@@ -47,11 +48,11 @@
         <param name="outputType">             pwm                   </param>
         <param name="fbkControlUnits">        metric_units          </param>
         <param name="outputControlUnits">     machine_units         </param>
-        <param name="kp">           1500        1000       -1500        </param>
+        <param name="kp">           7000        4000       -1500        </param>
         <param name="kd">           0           0           0           </param>
-        <param name="ki">           1000        1000       -1000        </param>
+        <param name="ki">           3000        2000       -1000        </param>
         <param name="maxOutput">    8000        8000        8000        </param>
-        <param name="maxInt">       1000        1000        1000        </param>
+        <param name="maxInt">       3000        2000        1000        </param>
         <param name="stictionUp">   0           0           0           </param>
         <param name="stictionDown"> 0           0           0           </param>
         <param name="kff">          0           0           0           </param>
@@ -60,7 +61,7 @@
     <!-- default position PID: end -->
 
 
-    <!-- other default PIDs: begin -->  
+    <!-- other default PIDs: begin -->
 
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">           low_lev_current     </param>
@@ -89,15 +90,15 @@
     </group>
 
     <!-- other default PIDs: end -->
- 
- 
-    <!-- custom PIDs: begin -->    
+
+
+    <!-- custom PIDs: begin -->
     <!-- custom PIDs: end -->
-    
+
     <group name="OTHER_CONTROL_PARAMETERS">
         <param name="deadZone">             0.0049      0.0049      0.0049  </param>
     </group>
-    
+
 </device>
 
 
