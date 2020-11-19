@@ -15,22 +15,22 @@
         
             <group name="PROPERTIES">
   
-                <group name="CANBOARDS">
-                    <param name="type">                 eobrd_strain            </param>
+                 <group name="CANBOARDS">
+                    <param name="type">                 strain2            </param>
 
                     <group name="PROTOCOL">
-                        <param name="major">            1                       </param>    
+                        <param name="major">            2                       </param>    
                         <param name="minor">            0                       </param>     
                     </group>                    
                     <group name="FIRMWARE">
-                        <param name="major">            0                       </param>    
+                        <param name="major">            2                       </param>    
                         <param name="minor">            0                       </param> 
-                        <param name="build">            0                       </param>
+                        <param name="build">            9                       </param>
                     </group>
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   id_r_lower_leg_strain   </param>
+                    <param name="id">                   id_r_heel_strain   </param>
                     <param name="type">                 eoas_strain             </param>
                     <param name="location">             CAN2:13                 </param>
                 </group>                
@@ -39,7 +39,7 @@
 
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_r_lower_leg_strain   </param>                
+                <param name="enabledSensors">           id_r_heel_strain   </param>                
             </group>
             
             <group name="STRAIN_SETTINGS">        
