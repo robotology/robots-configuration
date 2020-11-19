@@ -7,9 +7,13 @@
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
 
-  
- 
-      <!-- ANALOG SENSOR FT -->
+    <!-- cartesian -->
+    <xi:include href="cartesian/left_arm-cartesian.xml" />
+    <xi:include href="cartesian/right_arm-cartesian.xml" />
+    
+    <devices>
+
+     <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" /> 
@@ -34,15 +38,9 @@
   <!-- <xi:include href="hardware/FT/right_leg-eb12-j4_5-strain.xml" /> -->
     <xi:include href="hardware/FT/right_leg-eb13-skin-strain.xml" />
 
-    
-    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
-    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
-    <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" /> 
-    <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />     
-    <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" /> 
-    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
-    
   
+
+    
     </devices>
 </robot> 
  
