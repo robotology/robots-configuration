@@ -11,7 +11,7 @@
 		</group>
 <!-- joint logical number           0         1        2         3      4      5      6     7     8     9    10    11    12     13     14    15 -->
 <group name="HOME">
-<param name="positionHome">         5        15         0       10      0      0     0     35    65     0     0     0     0      0      0     0     </param>
+<param name="positionHome">         5        30         0       10      0      0     0     35    15    65     0     0     0      0      0     0     </param>
 <param name="velocityHome">        10        10        10       10     30     30     30    60    30    30    30    30    30     30     30    30     </param>
 </group>
 
