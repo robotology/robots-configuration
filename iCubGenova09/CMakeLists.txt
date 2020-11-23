@@ -6,6 +6,7 @@ file(GLOB apps ${CMAKE_CURRENT_SOURCE_DIR}/apps/graspTheBall/*.ini)
 
 yarp_install(FILES ${xml} DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
 yarp_install(FILES ${ini} DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
+yarp_install(DIRECTORY estimators DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
 yarp_install(DIRECTORY calibrators DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})  
 yarp_install(DIRECTORY cartesian DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
 yarp_install(DIRECTORY wrappers DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})

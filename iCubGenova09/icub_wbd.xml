@@ -63,7 +63,7 @@
 	  <xi:include href="hardware/FT/left_leg-eb8-j4_5-strain.xml" />
 	  <xi:include href="hardware/FT/left_leg-eb9-skin-strain.xml" />
 	  <xi:include href="hardware/FT/right_leg-eb12-j4_5-strain.xml" />
-	  <xi:include href="hardware/FT/right_leg-eb13-skin-strain.xml" />
+	  <xi:include href="hardware/FT/right_leg-eb13-skin-strain.xml" /> 
 
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
     <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
@@ -71,6 +71,12 @@
     <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
+ 
+     <!-- INERTIAL SENSOR--> 
+     <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" /> -->
 
     <!--  CALIBRATORS -->
 
@@ -83,8 +89,11 @@
     <xi:include href="calibrators/torso-calib.xml" />
 
     <!-- cartesian -->
-    <xi:include href="cartesian/left_arm-cartesian.xml" />
-    <xi:include href="cartesian/right_arm-cartesian.xml" />
+    <!--    <xi:include href="cartesian/left_arm-cartesian.xml" />
+    <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
 
-    </devices>
+    <!-- estimators -->
+    <xi:include href="estimators/wholebodydynamics.xml"/>
+
+  </devices>
 </robot>

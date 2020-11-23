@@ -18,6 +18,7 @@
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="useSkinForContacts">false</param>
+        <param name="assume_fixed">root_link</param>
 
 
         <group name="GRAVITY_COMPENSATION">
@@ -41,7 +42,7 @@
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
                 <!-- motorcontrol and virtual torque sensors -->
-                <elem name="head-j0">head-eb20-j0_1-mc</elem>
+		<elem name="head-j0">head-eb20-j0_1-mc</elem>
                 <elem name="head-j2">head-eb21-j2_5-mc</elem>
                 <elem name="torso">torso-eb5-j0_2-mc</elem>
                 <elem name="left_upper_arm-j0">left_arm-eb1-j0_1-mc</elem>
@@ -55,7 +56,16 @@
                 <elem name="left_lower_leg">left_leg-eb8-j4_5-mc</elem>
                 <elem name="right_upper_leg-j0">right_leg-eb10-j0_1-mc</elem>
                 <elem name="right_upper_leg-j2">right_leg-eb11-j2_3-mc</elem>
-                <elem name="right_lower_leg">right_leg-eb12-j4_5-mc</elem>
+		<elem name="right_lower_leg">right_leg-eb12-j4_5-mc</elem> 
+
+<!--<elem name="head-mc_wrapper">head-mc_wrapper</elem>
+<elem name="torso-mc_wrapper">torso-mc_wrapper</elem>
+<elem name="left_arm-mc_wrapper">left_arm-mc_wrapper</elem>
+<elem name="right_arm-mc_wrapper">right_arm-mc_wrapper</elem>
+<elem name="left_leg-mc_wrapper">left_leg-mc_wrapper</elem>
+<elem name="right_leg-mc_wrapper">right_leg-mc_wrapper</elem>-->
+
+
 
                 <!-- imu -->
                 <!-- <elem name="imu">head-inertial</elem> -->
@@ -70,10 +80,19 @@
                 <elem name="l_foot_front_ft_sensor">left_leg-eb9-skin-strain</elem>
                 <elem name="l_foot_rear_ft_sensor">left_leg-eb8-j4_5-strain</elem>
                 <elem name="r_foot_front_ft_sensor">right_leg-eb13-skin-strain</elem>
-                <elem name="r_foot_rear_ft_sensor">right_leg-eb12-j4_5-strain</elem>
+		<elem name="r_foot_rear_ft_sensor">right_leg-eb12-j4_5-strain</elem> 
+
+<!--<elem name="left_foot_tiptoe-FT_wrapper">left_foot_tiptoe-FT_wrapper</elem>
+<elem name="left_foot_heel-FT_wrapper">left_foot_heel-FT_wrapper</elem>
+<elem name="right_foot_tiptoe-FT_wrapper">right_foot_tiptoe-FT_wrapper</elem>
+<elem name="right_foot_heel-FT_wrapper">right_foot_heel-FT_wrapper</elem> -->
+
+
+
+
             </paramlist>
         </action>
 
-        <action phase="shutdown" level="2" type="detach" />
+	        <action phase="shutdown" level="2" type="detach" /> 
 
     </device>
