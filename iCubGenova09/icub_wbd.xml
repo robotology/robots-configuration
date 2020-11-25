@@ -70,11 +70,11 @@
     <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
 
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
-    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
+     <!--    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" />
-    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
+    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> -->
  
      <!-- INERTIAL SENSOR--> 
      <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
