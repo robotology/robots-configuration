@@ -42,8 +42,22 @@
 
 
     <!-- INERTIAL SENSOR-->
+    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
     <xi:include href="hardware/inertials/waist-inertial.xml" /> 
+
+ <!--inertials3-->
+   <xi:include href="hardware/inertials/left_leg-eb7-IMU.xml" /> 
+    <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" /> 
+    <xi:include href="hardware/inertials/right_leg-eb9-IMU.xml" /> 
+    <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" /> 
+    <xi:include href="hardware/inertials/left_leg-eb6-IMU.xml" /> 
+    <xi:include href="wrappers/inertials/left_leg-imu_wrapper.xml" /> 
+    <xi:include href="hardware/inertials/right_leg-eb8-IMU.xml" /> 
+    <xi:include href="wrappers/inertials/right_leg-imu_wrapper.xml" /> 
 
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />

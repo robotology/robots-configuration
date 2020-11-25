@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<robot name="iCubSeoul01" build="0" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+    <!-- cartesian --> 
+    <xi:include href="cartesian/left_arm-cartesian.xml" />
+    <xi:include href="cartesian/right_arm-cartesian.xml" />
+    
+    <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
+    <xi:include href="hardware/motorControl/left_arm-mc.xml" /> 
+    <xi:include href="hardware/motorControl/left_hand-mc.xml" /> 
+    <xi:include href="hardware/motorControl/right_arm-mc.xml" />
+    <xi:include href="hardware/motorControl/right_hand-mc.xml" />
+    <xi:include href="hardware/motorControl/head-mc.xml" />
+    <xi:include href="hardware/motorControl/torso-mc.xml" />
+    
+    <!-- VIRTUAL ANALOG SERVERs -->
+    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
+    <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" /> 
+    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> 
+    
+    <xi:include href="hardware/VFT/left_arm-virtual_strain.xml" /> 
+    <xi:include href="hardware/VFT/right_arm-virtual_strain.xml" /> 
+    <xi:include href="hardware/VFT/torso-virtual_strain.xml" /> 
+
+    <!-- REAL ANALOG SENSORS -->
+    <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/MAIS/left_hand-mais_wrapper.xml" /> 
+    <xi:include href="wrappers/MAIS/right_hand-mais_wrapper.xml" /> 
+    <xi:include href="hardware/FT/left_arm-strain.xml" /> 
+    <xi:include href="hardware/FT/right_arm-strain.xml" /> 
+    <xi:include href="hardware/MAIS/left_hand-mais.xml" /> 
+    <xi:include href="hardware/MAIS/right_hand-mais.xml" /> 
+    
+    <!-- SKIN -->
+    <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
+    <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />  
+    <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />  
+    <xi:include href="hardware/skin/left_arm-skin.xml" />
+    <xi:include href="hardware/skin/right_arm-skin.xml" />  
+    <xi:include href="hardware/skin/torso-skin.xml" />  
+
+    <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
+    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />
+    <!--
+    <xi:include href="wrappers/skin/left_hand-inertial_wrapper.xml" />  
+    <xi:include href="wrappers/skin/right_hand-inertial_wrapper.xml" />  
+    <xi:include href="hardware/skin/left_hand-inertial_mtb.xml" />  
+    <xi:include href="hardware/skin/right_hand-inertial_mtb.xml" />  
+    -->
+	
+    <!-- CALIBRATORS -->
+    <xi:include href="calibrators/head-calib.xml" /> 
+    <xi:include href="calibrators/torso-calib.xml" />
+    <xi:include href="calibrators/left_arm-calib.xml" /> 
+    <xi:include href="calibrators/right_arm-calib.xml" />
+</devices>
+</robot> 
+

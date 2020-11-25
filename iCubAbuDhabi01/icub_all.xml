@@ -8,7 +8,11 @@
     
 
     <!-- MTX INERTIAL SENSOR & SKIN INERTIAL SENSOR-->
-    <xi:include href="hardware/inertial.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />
    
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/head_calib.xml" /> 

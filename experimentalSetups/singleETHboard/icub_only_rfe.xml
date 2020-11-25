@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="iCubGenova02" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <params>
+        <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+        
+    <devices>
+   
+        <!-- IMU --> 
+        <!-- it is the imu bosch bno055 inside the rfe board -->       
+        <xi:include href="hardware/inertials/head-imu-rfe.xml" />
+        <xi:include href="wrappers/inertials/head-imu-rfe_wrapper.xml" />
+        
+      
+    
+    </devices>
+    
+</robot> 

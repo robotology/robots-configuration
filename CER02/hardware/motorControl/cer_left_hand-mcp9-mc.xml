@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+ <!-- Initialization file for EMS 10 - CER hand, 2 dof -->
+
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_left_hand_mc" type="embObjMotionControl">
+      <xi:include href="../../general.xml" />
+      <xi:include href="../electronics/cer_left_hand-mcp9-eln.xml" />
+      <xi:include href="../mechanicals/cer_left_hand-mcp9-mec.xml" />
+      <xi:include href="../motorControl/cer_left_hand-mcp9-mc-service.xml" />
+
+    <group name="LIMITS">
+        <param name="jntPosMax">                120     130           </param>
+        <param name="jntPosMin">                0       0             </param>
+        <param name="jntVelMax">                150     150           </param>
+        <param name="motorOverloadCurrents">    5000    5000          </param>
+        <param name="motorNominalCurrents">     1500    1500           </param>
+        <param name="motorPeakCurrents">        2500    2500           </param>
+        <param name="motorPwmLimit">            3360    3360          </param>  
+    </group>
+    
+    
+    <group name="TIMEOUTS">
+        <param name="velocity">                 100           100     </param>
+    </group>
+
+
+    <group name="CONTROLS">
+        <param name="positionControl">         JOINT_MINJERK_OUT_PWM_CTRL  JOINT_MINJERK_OUT_PWM_CTRL   </param>
+        <param name="velocityControl">         JOINT_MINJERK_OUT_PWM_CTRL  JOINT_MINJERK_OUT_PWM_CTRL   </param>
+        <param name="mixedControl">            JOINT_MINJERK_OUT_PWM_CTRL  JOINT_MINJERK_OUT_PWM_CTRL   </param>
+        <param name="posDirectControl">        JOINT_DIRECT_OUT_PWM_CTRL   JOINT_DIRECT_OUT_PWM_CTRL    </param>                
+        <param name="velDirectControl">        JOINT_DIRECT_OUT_PWM_CTRL   JOINT_DIRECT_OUT_PWM_CTRL    </param>
+        <param name="torqueControl">           none                        none                         </param>
+        
+        <param name="currentPid">              none none </param>
+        <param name="speedPid">                none none </param>
+    </group>
+    
+    <group name="JOINT_MINJERK_OUT_PWM_CTRL">
+	    <param name="controlLaw">             minjerk                   </param>
+        <param name="outputType">             pwm                       </param>
+        <param name="fbkControlUnits">        machine_units             </param> 
+        <param name="outputControlUnits">     machine_units             </param>
+        <param name="kff">                        0            0        </param> 
+        <param name="kp">                      -200          200        </param>          
+        <param name="kd">                         0            0        </param>          
+        <param name="ki">                      -100          100        </param>              
+        <param name="maxOutput">               3360         3360        </param>                
+        <param name="maxInt">                  1000         1000        </param>                             
+        <param name="stictionUp">                 0            0        </param>          
+        <param name="stictionDown">                0            0        </param>         
+    </group>
+
+    <group name="JOINT_DIRECT_OUT_PWM_CTRL">
+	    <param name="controlLaw">             direct                    </param>
+        <param name="outputType">             pwm                       </param>
+        <param name="fbkControlUnits">        machine_units             </param> 
+        <param name="outputControlUnits">     machine_units             </param>
+        <param name="kff">                        0            0        </param> 
+        <param name="kp">                      -200          200        </param>          
+        <param name="kd">                         0            0        </param>          
+        <param name="ki">                      -100          100        </param>              
+        <param name="maxOutput">               3360         3360        </param>                
+        <param name="maxInt">                  1000         1000        </param>                             
+        <param name="stictionUp">                 0            0        </param>          
+        <param name="stictionDown">                0            0        </param>        
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">       0      0           </param>    
+        <param name="damping">         0      0           </param>    
+    </group>
+    
+    <group name="OTHER_CONTROL_PARAMETERS">
+        <param name="deadZone">        2.20    2.20        </param>
+	</group>
+    
+  </device>
+
+
+        

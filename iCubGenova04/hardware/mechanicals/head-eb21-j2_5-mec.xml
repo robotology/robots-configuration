@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova04" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion"> 5 </param>
+        <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 4 </param> <!-- the number of joints of the robot part -->
 
         <!-- joint number in sub-part           0             1               2               3           -->

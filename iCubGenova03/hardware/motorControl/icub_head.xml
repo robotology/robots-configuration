@@ -54,18 +54,18 @@
 </group>       
  
 <group name="LIMITS">        
-<param name="jntPosMin">          -30           -20           -45           -30           -30           0             </param>       
-<param name="jntPosMax">          22            20            45            30            30            50            </param>       
+<param name="jntPosMin">          -30           -14           -50           -30           -30           0             </param>       
+<param name="jntPosMax">          22            16            50            30            30            50            </param>       
 <param name="motorOverloadCurrents">     2000          2000          1200          620           600           600           </param>       
 </group>       
  
 <group name="POS_PIDS">      
-<param name="kp">           6000          -6000         3200          -400          100           100           </param>       
-<param name="kd">           500           -500          3200          -400          1000          1000          </param>       
-<param name="ki">           5             -5            10            -4            10            10            </param>       
-<param name="maxOutput">       800           800           1333          1333          1333          1333          </param>       
-<param name="maxInt">       800           800           1333          1333          1333          1333          </param>       
-<param name="shift">        8             8             6             4             5             5             </param>       
+<param name="kp">           3000          -3000         3200          -400          100           100           </param>       
+<param name="kd">           250           -250          3200          -400          1000          1000          </param>       
+<param name="ki">           8             -8            10            -4            10            10            </param>       
+<param name="maxOutput">    480           480           1333          1333          1333          1333          </param>       
+<param name="maxInt">       480           480           1333          1333          1333          1333          </param>       
+<param name="shift">        9             9             6             4             5             5             </param>       
 <param name="ko">           0             0             0             0             0             0             </param>       
 <param name="stictionUp">   0             0             0             0             0             0             </param>       
 <param name="stictionDwn">  0             0             0             0             0             0             </param>       

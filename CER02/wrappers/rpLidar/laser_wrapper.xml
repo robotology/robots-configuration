@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cerLaserWrapper" type="Rangefinder2DWrapper">
+
+      <param name="period"> 10 </param>
+      <param name="name">   /cer/laser:o       </param>
+
+      <action phase="startup" level="5" type="attach">
+         <paramlist name="networks">
+            <elem name="cer_laser">  cer_laser_front_device </elem>
+         </paramlist>
+      </action>
+
+      <group name ="ROS">
+         <param name ="useROS"> true </param>
+         <param name ="ROS_nodeName"> /cer-laser </param>
+         <param name ="ROS_topicName"> /laser </param>
+         <param name ="frame_id"> /mobile_base_lidar </param>
+      </group>
+
+      <action phase="shutdown" level="5" type="detach" />
+  </device>
+

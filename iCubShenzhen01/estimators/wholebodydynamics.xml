@@ -12,6 +12,10 @@
 	<param name="forceTorqueEstimateConfidence">2</param>
         <param name="useJointVelocity">true</param>
         <param name="useJointAcceleration">false</param>
+        <param name="imuFilterCutoffInHz">3.0</param>
+        <param name="forceTorqueFilterCutoffInHz">3.0</param>
+        <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
+        <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
 
         <!-- map between iDynTree links (identified by a name)
              and skinDynLib links (identified by their frame name, a BodyPart enum
@@ -84,7 +88,7 @@
                 <elem name="head-j0">head-eb20-j0_1-mc</elem>
                 <elem name="head-j2">head-eb21-j2_5-mc</elem>
                 <!-- imu -->
-                <elem name="imu">inertial</elem>
+                <elem name="imu">head-inertial</elem>
                 <!-- ft -->
                 <elem name="l_arm_ft_sensor">left_arm-eb1-j0_3-strain</elem>
                 <elem name="r_arm_ft_sensor">right_arm-eb3-j0_3-strain</elem>

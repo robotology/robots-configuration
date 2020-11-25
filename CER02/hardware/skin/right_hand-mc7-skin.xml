@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_hand_skin" type="embObjSkin">
+        <xi:include href="../../general.xml" />
+ 
+        <xi:include href="../electronics/cer_right_hand-mcp7-eln.xml" />
+        <group name="patches">
+            <param name="skinCanAddrsPatch1"> 13 </param> 
+        </group>
+        <xi:include href="./right_hand-mc7-skinSpec.xml" />
+    </device>
+
+  

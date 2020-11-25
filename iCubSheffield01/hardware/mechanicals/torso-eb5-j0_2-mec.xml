@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubSheffield01" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  4 </param>
+        <param name="MotioncontrolVersion">  6 </param>
         <param name="Joints"> 3 </param> 
         <param name="AxisMap">               2             0             1           </param>   
         <param name="AxisName">      "torso_yaw" "torso_roll" "torso_pitch"          </param>
@@ -19,10 +19,10 @@
     </group>
     
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">      50            30            70           </param>
-        <param name="hardwareJntPosMin">     -50           -30           -20           </param>
-        <param name="rotorPosMin">             0             0             0           </param> 
-        <param name="rotorPosMax">             0             0             0           </param>
+        <param name="hardwareJntPosMax">    50            30            70        </param>
+        <param name="hardwareJntPosMin">   -50           -30           -20        </param>
+        <param name="rotorPosMin">           0             0             0        </param> 
+        <param name="rotorPosMax">           0             0             0        </param>
     </group>
 
     <group name="2FOC">

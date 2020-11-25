@@ -57,7 +57,7 @@
                     <param name="port">             CONN:none    CONN:none     CONN:none   CONN:none      CONN:none    MAIS:thumbproximal  MAIS:thumbdistal MAIS:indexproximal   MAIS:indexdistal    MAIS:mediumproximal MAIS:mediumdistal   MAIS:littlefingers    </param>
                     <param name="position">         atjoint      atjoint       atjoint     atjoint        atjoint      atjoint             atjoint          atjoint           atjoint    atjoint       atjoint       atjoint      </param>
                     <param name="resolution">       -254440     4096         -4096         65535         65535          65535          65535          65535          65535         65535         65535          65535      </param>
-                    <param name="tolerance">          0         0.703             0.703           0              0                0            0           0           0          0             0             0        </param>
+                    <param name="tolerance">        0           0.703        0.703           0              0                0            0           0           0          0             0             0        </param>
                 </group>
 
                 <group name="ENCODER2">
@@ -65,7 +65,7 @@
                     <param name="port">             CONN:none  CONN:none   CONN:none  CONN:none  CONN:none  CONN:none  CONN:none  CONN:non  CONN:nonee  CONN:none  CONN:none  CONN:none </param>
                     <param name="position">         none       none        none       none       none       none       none       none      none        none       none       none      </param>
                     <param name="resolution">       1             1           1          1          1          1          1          1         1           1          1          1      </param>
-                    <param name="tolerance">        0             0           0          0          0          0          0          0         0           0          0          0       </param>
+                    <param name="tolerance">   0             0           0          0          0          0          0          0         0           0          0          0       </param>
                 </group>
 
            </group>

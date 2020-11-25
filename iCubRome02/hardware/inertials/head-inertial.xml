@@ -1,0 +1,6 @@
+   
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-inertial" type="xsensmtx">
+      <param name="serial">  /dev/ttyS0   </param>
+</device>
+
+

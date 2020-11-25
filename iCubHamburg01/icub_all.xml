@@ -9,7 +9,11 @@
     <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
     <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" /> 
 
- <!--    <xi:include href="hardware/inertials/head-inertial.xml" />-->
+ <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />-->
 
     <!-- head calibrator -->
     <xi:include href="./calibrators/head_calib.xml" />

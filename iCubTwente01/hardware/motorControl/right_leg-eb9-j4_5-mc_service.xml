@@ -20,9 +20,9 @@
                     <param name="minor">            6           </param>     
                 </group>                    
                 <group name="FIRMWARE">
-                    <param name="major">            0           </param>    
-                    <param name="minor">            0           </param> 
-                    <param name="build">            0           </param>
+                    <param name="major">            3           </param>    
+                    <param name="minor">            3           </param> 
+                    <param name="build">            3           </param>
                 </group>
             </group>
 
@@ -33,7 +33,10 @@
                     <param name="type">             eomc_act_foc        foc                 </param>
                     <param name="port">             CAN1:1:0            CAN1:2:0            </param>
                 </group>
-                 
+                
+
+ 
+ 
                 <group name="ENCODER1">  
                     <param name="type">             eomc_enc_aea        aea                 </param>  
                     <param name="port">             CONN:P6             CONN:P7             </param>
@@ -47,7 +50,7 @@
                     <param name="port">             CAN1:1:0            CAN1:2:0            </param>
                     <param name="position">         atmotor             atmotor             </param>
                     <param name="resolution">       -14400              -14400              </param>
-                    <param name="tolerance">      0                0                   </param>  
+                    <param name="tolerance">        0                   0                   </param>  
                 </group> 
             </group>    
             

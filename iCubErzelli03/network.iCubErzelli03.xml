@@ -65,7 +65,7 @@
         <board type='mc4plus' name="face-eb22-j0">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.22" />
-            <connected bus="ETH" prev="10.0.1.21" next="10.0.1.1" />
+            <connected bus="ETH" prev="10.0.1.21" next="none" />
         </board>
 
     </part>

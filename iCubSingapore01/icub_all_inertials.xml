@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<robot name="iCubSingapore01" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<robot name="iCubSingapore01" xmlns:xi="http://www.w3.org/2001/XInclude">
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
@@ -67,7 +67,11 @@
     <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />	
  
     <!-- INERTIAL SENSOR -->
-    <xi:include href="hardware/inertial.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />
     
     <!-- INERTIAL SENSORS ON MTB -->
     <xi:include href="wrappers/skin/left_hand-skin_inertial_wrapper.xml" />
