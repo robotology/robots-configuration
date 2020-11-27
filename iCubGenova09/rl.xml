@@ -8,11 +8,7 @@
     </params>
     
     <devices>
-    <!-- LEFT LEG -->
-    <xi:include href="hardware/motorControl/left_leg-eb6-j0_1-mc.xml" />
-    <xi:include href="hardware/motorControl/left_leg-eb7-j2_3-mc.xml" />
-    <xi:include href="hardware/motorControl/left_leg-eb8-j4_5-mc.xml" />
-    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
+
 
     <!-- RIGHT LEG -->
     <xi:include href="hardware/motorControl/right_leg-eb10-j0_1-mc.xml" />
@@ -22,7 +18,6 @@
     
 
         <!--  CALIBRATORS -->
-    <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
    
     
