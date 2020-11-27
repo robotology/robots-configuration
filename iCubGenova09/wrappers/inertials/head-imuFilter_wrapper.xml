@@ -18,4 +18,3 @@
 
         <action phase="shutdown" level="6" type="detach" />
     </device>
-    
