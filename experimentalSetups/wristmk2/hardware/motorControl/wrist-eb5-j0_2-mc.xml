@@ -10,7 +10,7 @@
     <xi:include href="./wrist-eb5-j0_2-mc_service.xml" />
 
     <!-- joint number                           0                   1                   2               -->
-    <!-- joint name -->          
+    <!-- joint name -->
     <group name="LIMITS">
         <param name="jntPosMax">                90                  50                  30                  </param>
         <param name="jntPosMin">               -90                 -60                 -30                  </param>
@@ -29,7 +29,7 @@
         <param name="stiffness">                0                   0                   0                   </param>
         <param name="damping">                  0                   0                   0                   </param>
     </group>
-    
+
     <group name="CONTROLS">
         <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
@@ -60,7 +60,7 @@
     <!-- default position PID: end -->
 
 
-    <!-- other default PIDs: begin -->  
+    <!-- other default PIDs: begin -->
 
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">           low_lev_current     </param>
@@ -89,12 +89,12 @@
     </group>
 
     <!-- other default PIDs: end -->
- 
- 
+
+
     <!-- custom PIDs: begin -->
-    
+
     <!-- custom PIDs: end -->
-    
+
 </device>
 
 

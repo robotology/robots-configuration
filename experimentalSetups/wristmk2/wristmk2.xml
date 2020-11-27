@@ -5,15 +5,15 @@
         <params>
             <xi:include href="hardware/electronics/pc104.xml" />
         </params>
-        
+
     <devices>
- 
-    <!-- TORSO --> 
+
+    <!-- TORSO -->
     <xi:include href="hardware/motorControl/wrist-eb5-j0_2-mc.xml" />
-    <xi:include href="wrappers/motorControl/wrist-mc_wrapper.xml" /> 
-    
+    <xi:include href="wrappers/motorControl/wrist-mc_wrapper.xml" />
+
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/wrist-calib.xml" />
-    
+
     </devices>
-</robot> 
+</robot>
