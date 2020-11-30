@@ -7,6 +7,10 @@
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
 
+    <!-- cartesian -->
+    <xi:include href="cartesian/left_arm-cartesian.xml" />
+    <xi:include href="cartesian/right_arm-cartesian.xml" /> 
+
     <devices>
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
@@ -70,17 +74,17 @@
     <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
 
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
-    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
+    <!--    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" />
-    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
+    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> -->
  
      <!-- INERTIAL SENSOR--> 
-     <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="hardware/inertials/head-inertial.xml" /> -->
+    <xi:include href="hardware/inertials/head-inertial.xml" /> 
 
     <!--  CALIBRATORS -->
 
@@ -91,10 +95,6 @@
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
     <xi:include href="calibrators/torso-calib.xml" />
-
-    <!-- cartesian -->
-    <!--    <xi:include href="cartesian/left_arm-cartesian.xml" />
-    <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
 
     <!-- estimators -->
     <xi:include href="estimators/wholebodydynamics.xml"/>

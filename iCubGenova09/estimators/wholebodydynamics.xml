@@ -18,7 +18,7 @@
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="useSkinForContacts">false</param>
-        <param name="assume_fixed">root_link</param>
+	<!--        <param name="assume_fixed">root_link</param>-->
 
 
         <group name="GRAVITY_COMPENSATION">
@@ -33,10 +33,10 @@
             <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand,r_hand,root_link)</param>
             <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param>
             <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param>
-            <param name="/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front,l_foot_front,l_foot_front)</param>
-            <param name="/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o">(l_foot_rear,l_foot_rear,l_foot_rear)</param>
-            <param name="/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o">(r_foot_front,r_foot_front,r_foot_front)</param>
-            <param name="/wholeBodyDynamics/right_foot_rear/cartesianEndEffectorWrench:o">(r_foot_rear,r_foot_rear,r_foot_rear)</param>
+            <param name="/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front,l_sole,l_sole)</param>
+            <param name="/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o">(l_foot_rear,l_sole,l_sole)</param>
+            <param name="/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o">(r_foot_front,r_sole,r_sole)</param>
+            <param name="/wholeBodyDynamics/right_foot_rear/cartesianEndEffectorWrench:o">(r_foot_rear,r_sole,r_sole)</param>
         </group>
 
         <action phase="startup" level="15" type="attach">
@@ -59,7 +59,7 @@
 		<elem name="right_lower_leg">right_leg-eb12-j4_5-mc</elem> 
 
                 <!-- imu -->
-                <!-- <elem name="imu">head-inertial</elem> -->
+                <elem name="imu">head-inertial</elem> 
                 <!-- imu_waist -->
 <!--            <elem name="imu">xsens_inertial</elem> -->
                 <!-- ft -->
