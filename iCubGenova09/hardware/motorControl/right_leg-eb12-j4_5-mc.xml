@@ -11,8 +11,8 @@
     <!-- joint number                           0                   1                   -->
     <!-- joint name                             ankle_pitch         ankle_roll          -->
     <group name="LIMITS">
-        <param name="jntPosMax">                35                  23              </param>
-        <param name="jntPosMin">                -35                 -23             </param>
+        <param name="jntPosMax">                42                  23              </param>
+        <param name="jntPosMin">                -42                 -23             </param>
         <param name="jntVelMax">                240                 240             </param>
         <param name="motorNominalCurrents">     10000               10000            </param>
         <param name="motorPeakCurrents">        15000               15000           </param>
