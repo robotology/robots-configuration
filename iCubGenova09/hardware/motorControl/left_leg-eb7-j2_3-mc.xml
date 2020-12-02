@@ -50,7 +50,7 @@
         <param name="kp">                       -711                -5000               </param>
         <param name="kd">                       0                   0                   </param>
         <param name="ki">                       -7111               -1500               </param>
-        <param name="maxOutput">                8000                8000                </param>
+        <param name="maxOutput">               12000               12000                </param>
         <param name="maxInt">                   750                 2000                </param>
         <param name="stictionUp">               0                   0                   </param>
         <param name="stictionDown">             0                   0                   </param>
