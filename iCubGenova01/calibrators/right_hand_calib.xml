@@ -22,7 +22,7 @@
 <!--USE THIS FOR CAN ROBOT CALIBRATION-->
 <group name="CALIBRATION">
 <param name="calibrationType">                                                                                            3        4        4        4        4        4        4        4        </param>
-<param name="calibration1">                                                                                               1352.33  220.0    0.0      238.0    40.0     243.0    15.0     681.0    </param>
+<param name="calibration1">                                                                                               1547.8  251.0    30.0      238.0    40.0     243.0    15.0     681.0    </param>
 <param name="calibration2">                                                                                               10.0     10.0     30.0     10.0     10.0     10.0     10.0     10.0     </param>
 <param name="calibration3">                                                                                               0.0      6000.0   6600.0   6000.0   -7000.0  6000.0   7000.0   14000.0  </param>
 <param name="startupPosition">                                                                                               45.0     0.0      0.0      0.0      0.0      0.0      0.0      0.0      </param>
