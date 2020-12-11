@@ -15,7 +15,7 @@
         <param name="ampsToSensor">             1000.0           1000.0             1000.0          1000.0           </param>
         <param name="Gearbox_M2J">              256                256                256           256              </param>
         <param name="Gearbox_E2J">   	        1                 1                   1              1               </param>
-        <param name="useMotorSpeedFbk">         1                 1                   1              1               </param>
+        <param name="useMotorSpeedFbk">         0                 0                   0              0               </param>
         <param name="MotorType">                "DC"             "DC"                "DC"           "DC"             </param>
         <param name="Verbose">                  0                                                                    </param>
     </group>
@@ -31,14 +31,14 @@
                             
         <param name ="matrixJ2M"> 
             1.000   0.000   0.000   0.000
-           -1.000  +1.000   0.000   0.000
+            1.000  +1.000   0.000   0.000
             0.000   0.000   1.000   0.000
             0.000   0.000   0.000   1.000   
         </param>
 
          <param name ="matrixM2J"> 
             1.000   0.000   0.000   0.000
-           +1.000  +1.000   0.000   0.000
+           -1.000  +1.000   0.000   0.000
             0.000   0.000   1.000   0.000
             0.000   0.000   0.000   1.000   
         </param>
