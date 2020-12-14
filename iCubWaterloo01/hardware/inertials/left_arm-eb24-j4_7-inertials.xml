@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb24-j4_7-inertials" type="embObjInertials">
+
+        <xi:include href="../../general.xml" />
+
+        <xi:include href="../../hardware/electronics/left_arm-eb24-j4_7-eln.xml" />
+
+        <group name="SERVICE">
+
+            <param name="type"> eomn_serv_AS_inertials </param>
+
+            <group name="PROPERTIES">
+
+                <group name="CANBOARDS">
+                    <param name="type">                 eobrd_mtb           </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+
+                <group name="SENSORS">
+                    <param name="id">       l_upper_arm_mtb_acc_1b10  l_upper_arm_mtb_acc_1b11  l_upper_arm_mtb_acc_1b12  l_upper_arm_mtb_acc_1b13
+                                            l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9     l_hand_gyro
+                    </param>
+
+                    <param name="type">     eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_gyros_mtb_ext
+                    </param>
+
+                    <param name="location"> CAN1:8                  CAN1:9                  CAN1:10                 CAN1:11
+                                            CAN1:12                 CAN1:13                 CAN1:14                 CAN1:14
+                    </param>
+                </group>
+
+            </group>
+
+            <group name="SETTINGS">
+                <param name="acquisitionRate">      50      </param>
+                <param name="enabledSensors">       l_upper_arm_mtb_acc_1b10  l_upper_arm_mtb_acc_1b11  l_upper_arm_mtb_acc_1b12  l_upper_arm_mtb_acc_1b13
+                                                    l_forearm_mtb_acc_1b7     l_forearm_mtb_acc_1b8     l_forearm_mtb_acc_1b9
+                </param>
+            </group>
+
+        </group>
+
+    </device>
+
+
