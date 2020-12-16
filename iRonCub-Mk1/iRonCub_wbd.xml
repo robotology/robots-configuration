@@ -114,7 +114,7 @@
     <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
 
     <!-- ESTIMATORS -->
-    <xi:include href="estimators/wholebodydynamics_iRonCub.xml" />
+    <xi:include href="estimators/wholebodydynamics_iRonCub_noFeet.xml" />
 
     <!-- ROS -->
 <!--    <xi:include href="wrappers/motorControl/icub_ros_wrapper.xml" /> -->
