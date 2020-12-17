@@ -5,8 +5,8 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
-            <elem name="FirstSetOfJoints">  0  3  0  3 </elem>
-            <elem name="SecondSetOfJoints"> 4  5  0  1 </elem> 
+            <elem name="FirstSetOfJoints">  (0  3  0  3) </elem>
+            <elem name="SecondSetOfJoints"> (4  5  0  1) </elem> 
         </paramlist>
       
         <param name="period"> 10                </param>
