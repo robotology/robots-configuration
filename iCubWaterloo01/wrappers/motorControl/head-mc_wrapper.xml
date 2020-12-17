@@ -4,8 +4,8 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
-            <elem name="FirstSetOfJoints">  0  1  0  1 </elem> 
-            <elem name="SecondSetOfJoints"> 2  5  0  3 </elem> 
+            <elem name="FirstSetOfJoints">  (0  1  0  1) </elem> 
+            <elem name="SecondSetOfJoints"> (2  5  0  3) </elem> 
         </paramlist>
 
         <param name="period"> 10                        </param>

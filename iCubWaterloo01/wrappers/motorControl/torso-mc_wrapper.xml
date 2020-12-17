@@ -5,7 +5,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
-            <elem name="FirstSetOfJoints">  0  2  0  2 </elem>
+            <elem name="FirstSetOfJoints">  (0  2  0  2) </elem>
         </paramlist>
        
         <param name="period"> 10            </param>
