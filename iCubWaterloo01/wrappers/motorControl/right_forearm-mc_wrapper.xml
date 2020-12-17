@@ -6,9 +6,9 @@
         <paramlist name="networks">
             <!-- when we'll use entire arm we should use following sets -->
 
-            <elem name="SecondSetOfJoints"> 4  7   0  3 </elem> 
-            <elem name="ThirdSetOfJoints">  8  11  0  3 </elem> 
-            <elem name="FourthSetOfJoints"> 12 15  0  3 </elem> 
+            <elem name="SecondSetOfJoints"> (4  7   0  3) </elem> 
+            <elem name="ThirdSetOfJoints">  (8  11  0  3) </elem> 
+            <elem name="FourthSetOfJoints"> (12 15  0  3) </elem> 
         </paramlist> 
 
         <param name="period"> 10                        </param>
