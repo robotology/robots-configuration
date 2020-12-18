@@ -30,7 +30,7 @@
 <param name="Joints">       8             </param>       
 <param name="AxisMap">      0             1             2             3             4             5             6             7             </param>       
 <param name="Encoder">    11.375        11.375        11.375        11.375       -706.67        11.375       -11.375       2.55</param>
-<param name="Zeros">     175.00         29.00        249.74        174.00         -75.00       180.00       -180.00        876.86</param>
+<param name="Zeros">     179.30         30.00        247.54        174.50         -75.00       180.00       -180.00        876.86</param>
 <param name="fullscalePWM">   800       800           800           800           1333          1333        1333         1333          </param>
 <param name="ampsToSensor">   1000.0    1000.0        1000.0        1000.0        1000.0        1000.0      1000.0       1000.0          </param> 
 <param name="AxisName"> "r_shoulder_pitch" "r_shoulder_roll" "r_shoulder_yaw" "r_elbow" "r_wrist_prosup" "r_wrist_pitch" "r_wrist_yaw"  "r_hand_finger"   </param>  
