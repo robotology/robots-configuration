@@ -9,26 +9,23 @@
 
     <!-- cartesian -->
     <xi:include href="cartesian/left_arm-cartesian.xml" />
-    <xi:include href="cartesian/right_arm-cartesian.xml" />
-    
+    <xi:include href="cartesian/right_arm-cartesian.xml" /> 
+
     <devices>
     <!-- HEAD -->
-    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
-    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
+    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
+    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" />
     <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" />
- 
+
     <!-- FACE -->
     <xi:include href="./hardware/motorControl/face-eb22-j0-mc.xml" /> 
     <xi:include href="./wrappers/motorControl/face-mc_wrapper.xml" />
 
+
+    <!-- TORSO -->
+
     <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
-
-    <!-- ANALOG SENSORS -->
-    <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
-    <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" />
-    <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" />
-    <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
 
     <!-- LEFT ARM -->
     <xi:include href="hardware/motorControl/left_arm-eb1-j0_1-mc.xml" />
@@ -46,35 +43,29 @@
     <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
 
-    <!-- LEFT LEG -->
-    <xi:include href="hardware/motorControl/left_leg-eb6-j0_1-mc.xml" />
-    <xi:include href="hardware/motorControl/left_leg-eb7-j2_3-mc.xml" />
-    <xi:include href="hardware/motorControl/left_leg-eb8-j4_5-mc.xml" />
-    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" />
+   <!-- ANALOG SENSORS MAIS -->
+    <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
+    <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" />
+    <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" />
+    <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
 
-    <!-- RIGHT LEG -->
-    <xi:include href="hardware/motorControl/right_leg-eb10-j0_1-mc.xml" />
-    <xi:include href="hardware/motorControl/right_leg-eb11-j2_3-mc.xml" />
-    <xi:include href="hardware/motorControl/right_leg-eb12-j4_5-mc.xml" />
-    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
+    <!-- ANALOG SENSORS FT -->
+
+    <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
  
-    
-    <!-- INERTIAL SENSOR--> 
-    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
+    <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
 
-    <!--  CALIBRATORS -->    
+
+    <!--  CALIBRATORS -->
+
     <xi:include href="calibrators/head-calib.xml" />
-    <xi:include href="calibrators/face-calib.xml" /> -->
+    <xi:include href="calibrators/face-calib.xml" />
     <xi:include href="calibrators/left_arm-calib.xml" />
     <xi:include href="calibrators/right_arm-calib.xml" />
-    <xi:include href="calibrators/left_leg-calib.xml" />
-    <xi:include href="calibrators/right_leg-calib.xml" />
     <xi:include href="calibrators/torso-calib.xml" />
 
-    
-    </devices>
-</robot> 
- 
+
+  </devices>
+</robot>
