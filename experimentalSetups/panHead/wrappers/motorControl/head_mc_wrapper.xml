@@ -1,24 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
-
-
-  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_mc_wrapper" type="controlboardwrapper2">
-      <paramlist name="networks">
-      <elem name="head_joints">  0 3 0 3 </elem>
-      </paramlist>
-
-<param name="period"> 10 </param>
-      <param name="name">   icub/head   </param>
-      <param name="ports">  head        </param>
-      <param name="joints"> 4           </param>
-
-
-      <action phase="startup" level="5" type="attach">
-      <paramlist name="networks">
-         <elem name="head_joints">  head_mc </elem>
-      </paramlist>
-      </action>
-
-      <action phase="shutdown" level="5" type="detach" />
-  </device>
-
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_mc_wrapper" type="controlboardwrapper2">
+    <paramlist name="networks">
+        <elem name="head_joints">(  0 3 0 3 )</elem>
+    </paramlist>
+    <param name="period"> 10 </param>
+    <param name="name">   icub/head   </param>
+    <param name="ports">  head        </param>
+    <param name="joints"> 4           </param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="head_joints">  head_mc </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
