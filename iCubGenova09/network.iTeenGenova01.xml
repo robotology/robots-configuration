@@ -93,6 +93,12 @@
             <ataddress ip="10.0.1.1" canbus="1" canadr="2"  />
             <connected bus="CAN" />
         </board>
+		
+		<board type='mtb4' name="mtb4.left_arm.CAN2.1">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.1" canbus="2" canadr="1"  />
+            <connected bus="CAN" />
+        </board>
 
          <board type='ems4' name="left_arm-eb2-j2_3">
             <ondevice>ETH</ondevice>
@@ -155,6 +161,12 @@
         <board type='foc' name="foc.3.2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.3" canbus="1" canadr="2"  />
+            <connected bus="CAN" />
+        </board>
+
+		<board type='mtb4' name="mtb4.right_arm.CAN2.1">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.3" canbus="2" canadr="1"  />
             <connected bus="CAN" />
         </board>
 
