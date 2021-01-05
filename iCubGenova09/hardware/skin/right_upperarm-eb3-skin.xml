@@ -5,7 +5,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_upperarm-eb3-skin" type="embObjSkin">
         <xi:include href="../../general.xml" />
  
-        <xi:include href="../../hardware/electronics/right_upperarm-eb3-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb3-j0_1-eln.xml" />
         <group name="patches">
             <param name="skinCanAddrsPatch1"> 5  </param> 
         </group>
