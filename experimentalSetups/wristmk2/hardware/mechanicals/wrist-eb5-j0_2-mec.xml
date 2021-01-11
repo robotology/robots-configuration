@@ -11,7 +11,7 @@
         <param name="Encoder">          182.044       182.044       182.044          </param>
         <param name="fullscalePWM">     32000         32000         32000            </param>
         <param name="ampsToSensor">     1000.0        1000.0        1000.0           </param>
-        <param name="Gearbox_M2J">      384.44        384.44        384.44           </param>
+        <param name="Gearbox_M2J">     -384.44       -384.44       -384.44           </param>
         <param name="Gearbox_E2J">      1.778         1.778         1.778            </param>
         <param name="useMotorSpeedFbk"> 0             0             0                </param>
         <param name="MotorType">        "BLL_MOOG"    "BLL_MOOG"    "BLL_MOOG"       </param>
@@ -19,8 +19,8 @@
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">    90            50            30        </param>
-        <param name="hardwareJntPosMin">   -90           -60           -30        </param>
+        <param name="hardwareJntPosMax">     360             360             360        </param>
+        <param name="hardwareJntPosMin">     -360             -360             -360        </param>
         <param name="rotorPosMin">           0             0             0        </param>
         <param name="rotorPosMax">           0             0             0        </param>
     </group>
@@ -60,11 +60,36 @@
 
     </group>
 
+ 
+    <!--   
+    <group name="JOINTSET_CFG">
+        <param name= "numberofsets"> 3 </param>
+        <group name="JOINTSET_0">
+            <param name="listofjoints">  0             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group>
+        <group name="JOINTSET_1">
+            <param name="listofjoints">  1             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group>
+        <group name="JOINTSET_2">
+            <param name="listofjoints">  2             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group>
+    </group> 
+    --> 
+
     <group name="JOINTSET_CFG">
         <param name= "numberofsets"> 1 </param>
         <group name="JOINTSET_0">
             <param name="listofjoints">  0 1 2         </param>
-            <param name="constraint">    trifid        </param>
+            <param name="constraint">    none          </param>
             <param name="param1">        0             </param>
             <param name="param2">        0             </param>
         </group>
