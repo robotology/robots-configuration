@@ -31,6 +31,12 @@
     <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" />
     <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
 
+    <!--  SKINS --> 
+    <xi:include href="wrappers/skin/left_upperarm-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/left_upperarm-eb1-skin.xml" />
+    <xi:include href="wrappers/skin/right_upperarm-skin_wrapper.xml" />  
+    <xi:include href="hardware/skin/right_upperarm-eb3-skin.xml" /> 
+
     <!-- LEFT ARM -->
     <xi:include href="hardware/motorControl/left_arm-eb1-j0_1-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb2-j2_3-mc.xml" />
