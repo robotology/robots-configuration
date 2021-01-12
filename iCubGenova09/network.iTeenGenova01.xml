@@ -96,7 +96,7 @@
 		
 		<board type='mtb4' name="mtb4.left_arm.CAN2.1">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.1" canbus="2" canadr="1"  />
+            <ataddress ip="10.0.1.1" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
@@ -166,7 +166,7 @@
 
 		<board type='mtb4' name="mtb4.right_arm.CAN2.1">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.3" canbus="2" canadr="1"  />
+            <ataddress ip="10.0.1.3" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
