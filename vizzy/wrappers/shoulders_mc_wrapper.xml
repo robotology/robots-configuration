@@ -1,21 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
-
-	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="shoulders_mc_wrapper" type="controlboardwrapper2">
-		<paramlist name="networks">
-			<elem name="shoulders_joints"> 0 5 0 5 </elem>
-			<!--<elem name="left_shoulder_joints"> 0 2 0 2 </elem>
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="shoulders_mc_wrapper" type="controlboardwrapper2">
+    <paramlist name="networks">
+        <elem name="shoulders_joints">( 0 5 0 5 )</elem>
+        <!--<elem name="left_shoulder_joints"> 0 2 0 2 </elem>
 			<elem name="right_shoulder_joints"> 0 2 3 5 </elem> -->
-		</paramlist>
-<param name="period"> 10 </param>
-		<param name="name"> /vizzy/shoulders </param>
-		<param name="ports"> shoulders </param>
-		<param name="joints"> 6 </param>
-		<action phase="startup" level="5" type="attach">
-			<paramlist name="networks">
-				<elem name="shoulders_joints"> shoulders_mc </elem>
-			</paramlist>
-		</action>
-		<action phase="shutdown" level="5" type="detach" />
-	</device>
-
+    </paramlist>
+    <param name="period"> 10 </param>
+    <param name="name"> /vizzy/shoulders </param>
+    <param name="ports"> shoulders </param>
+    <param name="joints"> 6 </param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="shoulders_joints"> shoulders_mc </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
