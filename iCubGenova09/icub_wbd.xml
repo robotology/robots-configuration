@@ -88,6 +88,12 @@
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" /> 
 
+    <!--  SKINS -->
+    <xi:include href="wrappers/skin/left_upperarm-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/left_upperarm-eb2-skin.xml" />
+    <xi:include href="wrappers/skin/right_upperarm-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/right_upperarm-eb4-skin.xml" />
+
     <!--  CALIBRATORS -->
 
     <xi:include href="calibrators/head-calib.xml" />
