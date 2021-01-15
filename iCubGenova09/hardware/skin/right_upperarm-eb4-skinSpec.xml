@@ -23,7 +23,7 @@
  -->
 		<!-- this is the configuration to enable only the front part -->
 		<!-- check the correct CAN ID and insure it is coherent with the upstream file -->
-		<group name="defaultCfgTriangle">
+	<group name="defaultCfgTriangle">
             <param name="enabled">         false  </param> 
             <param name="shift">           2  </param>
             <param name="cdcOffset">       0x2200  </param>
