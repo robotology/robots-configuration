@@ -31,9 +31,8 @@
 <param name="startupPosThreshold">      90      90      90      90      90      0       90      90      90      90      90      90      </param>
 </group>
 
-<!-- <param name="CALIB_ORDER"> (0) (1 2 3) (4 5 7 9) (6 8 10 11) </param> -->
+<param name="CALIB_ORDER"> (0) (1 2 3) (4 5 7 9) (6 8 10 11) </param> 
 
-<param name="CALIB_ORDER"> (0) (1 2 3) (4 5 7 9) (6 8  11) </param>
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">left_forearm-mc_wrapper</param>
 		</action>

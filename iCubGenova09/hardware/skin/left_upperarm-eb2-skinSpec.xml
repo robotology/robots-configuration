@@ -21,14 +21,15 @@
             <param name="cdcOffset">       0x2200  </param>
         </group>
 <!--  -->
-		<!-- this is the configuration to enable only the front part >
-		<group name="defaultCfgTriangle">
+		    <!-- this is the configuration to enable only the front part -->
+		    <!-- check the correct CAN ID and insure it is coherent with the upstream file >
+	      <group name="defaultCfgTriangle">
             <param name="enabled">         false  </param> 
             <param name="shift">           2  </param>
             <param name="cdcOffset">       0x2200  </param>
         </group>
  
-        < group name="specialCfgTriangles">
+        <group name="specialCfgTriangles">
             <param name="numOfSets">         1  </param>
             <param name="triangleSetCfg1">     2            13        3             10             2              1            0x2200      </param>
         </group>
