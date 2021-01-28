@@ -12,7 +12,7 @@
     <!-- joint name                             hip_pitch         hip_roll              -->
     <group name="LIMITS">
         <param name="jntPosMax">                110                 110                 </param>
-        <param name="jntPosMin">                -40                 -8                  </param>
+        <param name="jntPosMin">                -40                 -15                 </param>
         <param name="jntVelMax">                240                 240                 </param>
         <param name="motorNominalCurrents">     15000               18000               </param>
         <param name="motorPeakCurrents">        20000               20000               </param>
