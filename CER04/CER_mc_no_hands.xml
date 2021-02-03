@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="CER03" build="1" portprefix="cer" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+ 
+    <!-- LASER -->
+    <xi:include href="hardware/rpLidar/laserA2_hw_back.xml" /> 
+    <xi:include href="wrappers/rpLidar/laser_back_wrapper.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA2_hw_front.xml" /> 
+    <xi:include href="wrappers/rpLidar/laser_front_wrapper.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA2_hw_double.xml" /> 
+    <xi:include href="wrappers/rpLidar/laser_double_wrapper.xml" /> 
+
+    <!-- BASE -->
+    <xi:include href="hardware/motorControl/cer_base-ems1-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_base-mc_wrapper.xml" />
+
+    <!-- TORSO -->
+    <xi:include href="hardware/motorControl/cer_torso-ems3-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_torso_tripod-mc_wrapper.xml" />
+    <xi:include href="hardware/motorControl/cer_torso_equivalent-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_torso-mc_wrapper.xml" />
+    
+    <!-- LEFT ARM -->
+    <xi:include href="hardware/motorControl/cer_left_shoulder-ems5-mc.xml" />
+    <xi:include href="hardware/motorControl/cer_left_upper_arm-ems12-mc.xml" />
+    <xi:include href="hardware/motorControl/cer_left_lower_arm-mcp8-mc.xml" />
+    <xi:include href="hardware/motorControl/cer_left_wrist_equivalent-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_left_wrist_tripod-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/cer_left_arm_no_hand-mc_wrapper.xml" />
+    
+    <!-- LEFT HAND -->
+    <xi:include href="hardware/motorControl/cer_left_hand-mcp9-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_left_hand-mc_wrapper.xml" />
+   
+    <!-- RIGHT ARM -->
+    <xi:include href="hardware/motorControl/cer_right_shoulder-ems4-mc.xml" />
+    <xi:include href="hardware/motorControl/cer_right_upper_arm-ems11-mc.xml" />
+    <xi:include href="hardware/motorControl/cer_right_lower_arm-mcp6-mc.xml" />
+    <xi:include href="hardware/motorControl/cer_right_wrist_equivalent-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_right_wrist_tripod-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/cer_right_arm_no_hand-mc_wrapper.xml" />
+    
+    <!-- RIGHT HAND -->
+    <xi:include href="hardware/motorControl/cer_right_hand-mcp7-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_right_hand-mc_wrapper.xml" />
+
+    <!-- HEAD -->
+    <xi:include href="hardware/motorControl/cer_head-mcp10-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_head-mc_wrapper.xml" />
+
+    <!--  CALIBRATORS -->
+    <xi:include href="calibrators/cer_torso-calib.xml" />
+    <xi:include href="calibrators/cer_left_arm_no_hand-calib.xml" />
+    <xi:include href="calibrators/cer_right_arm_no_hand-calib.xml" />
+    <xi:include href="calibrators/cer_head-calib.xml" />
+    <xi:include href="calibrators/cer_base-calib.xml" /> 
+    <xi:include href="calibrators/cer_left_hand-calib.xml" />
+    <xi:include href="calibrators/cer_right_hand-calib.xml" />
+
+    <!-- SKIN-->
+    <xi:include href="hardware/skin/left_hand-mc9-skin.xml" />
+    <xi:include href="wrappers/skin/left_hand-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/right_hand-mc7-skin.xml" />
+    <xi:include href="wrappers/skin/right_hand-skin_wrapper.xml" />
+
+    <!-- PSC -->
+    <xi:include href="wrappers/PSC/cer_right_arm-PSC_wrapper.xml" /> 
+    <xi:include href="hardware/PSC/right_hand-psc.xml" />
+    <xi:include href="wrappers/PSC/cer_left_arm-PSC_wrapper.xml" /> 
+    <xi:include href="hardware/PSC/left_hand-psc.xml" />
+
+    <!--  FT -->
+    <xi:include href="hardware/FT/cer_left_shoulder-ems5-strain.xml" />
+    <xi:include href="hardware/FT/cer_right_shoulder-ems4-strain.xml" />
+    <xi:include href="wrappers/FT/cer_left_arm-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/cer_right_arm-FT_wrapper.xml" /> 
+    
+    <!--  ROS -->
+    <xi:include href="wrappers/motorControl/cer_ros_wrapper.xml" />
+</devices>
+</robot> 

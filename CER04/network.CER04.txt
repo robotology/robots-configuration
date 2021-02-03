@@ -1,0 +1,17 @@
+
+#MK3
+
+
+Base            (EMS1):      software standard di iCub su tutte le 2FOC
+
+Torso           (EMS3):      2FOC-DC.hex    su 2FOC 1,2,3
+                             2FOC-WORM.hex  su 2FOC 4
+
+Left shoulder   (EMS5):      2FOC-WORM.hex  su tutte le 2FOC
+
+Right shoulder  (EMS4):      2FOC-WORM.hex  su tutte le 2FOC
+
+Left upper arm  (EMS12):     2FOC-UARM.hex  su tutte le 2FOC   <!-- diverso rispetto a Mk1 -->
+
+Right upper arm (EMS11):     2FOC-UARM.hex  su tutte le 2FOC   <!-- diverso rispetto a Mk1 -->
+
