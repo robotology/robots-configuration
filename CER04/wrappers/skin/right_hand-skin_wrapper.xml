@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<devices robot="CER03" build="1">
+<devices robot="CER04" build="1">
     <device name="right_hand_skin_wrapper" type="skinWrapper">
         <param name="period">       20                  </param>
         <param name="total_taxels"> 576                 </param>
