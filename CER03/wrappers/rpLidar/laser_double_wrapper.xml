@@ -15,7 +15,7 @@
          <param name ="useROS"> true </param>
          <param name ="ROS_nodeName"> /cer-laser </param>
          <param name ="ROS_topicName"> /laser</param>
-         <param name ="frame_id"> /mobile_base_double_lidar </param>
+         <param name ="frame_id"> mobile_base_double_lidar </param>
       </group>
 
       <action phase="shutdown" level="5" type="detach" />
