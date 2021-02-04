@@ -3,6 +3,7 @@
     <xi:include href="./CER01/CER.xml" />
     <xi:include href="./CER02/CER.xml" />
     <xi:include href="./CER03/CER.xml" />
+    <xi:include href="./CER04/CER.xml" />
 	<xi:include href="./iCubLugano01/icub_all.xml" />
 	<xi:include href="./iCubErzelli01/icub_all.xml" />
 	<xi:include href="./iCubParis01/icub_all.xml" />
