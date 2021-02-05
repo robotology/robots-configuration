@@ -1,4 +1,4 @@
-set(appname iCubGenova04)
+set(appname iCubGenovaV3)
 
 file(GLOB xml ${CMAKE_CURRENT_SOURCE_DIR}/*.xml)
 file(GLOB ini ${CMAKE_CURRENT_SOURCE_DIR}/*.ini)

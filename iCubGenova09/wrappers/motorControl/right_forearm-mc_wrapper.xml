@@ -4,9 +4,9 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_forearm-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
-            <elem name="SecondSetOfJoints"> 0  3   0  3 </elem> 
-            <elem name="ThirdSetOfJoints">  4  7   0  3 </elem> 
-            <elem name="FourthSetOfJoints"> 8  11  0  3 </elem> 
+            <elem name="SecondSetOfJoints"> (0  3   0  3) </elem> 
+            <elem name="ThirdSetOfJoints">  (4  7   0  3) </elem> 
+            <elem name="FourthSetOfJoints"> (8  11  0  3) </elem> 
         </paramlist> 
 
         <param name="period"> 10                        </param>

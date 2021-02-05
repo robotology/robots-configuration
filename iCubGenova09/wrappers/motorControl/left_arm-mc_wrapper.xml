@@ -5,11 +5,11 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <!-- when we'll use entire arm we should use following sets -->
-            <elem name="FirstSetOfJoints">    0  1   0  1 </elem>
-            <elem name="FirstSetOfJointsBIS"> 2  3   0  1 </elem> 
-            <elem name="SecondSetOfJoints">   4  7   0  3 </elem> 
-            <elem name="ThirdSetOfJoints">    8  11  0  3 </elem> 
-            <elem name="FourthSetOfJoints">   12 15  0  3 </elem> 
+            <elem name="FirstSetOfJoints">    (0  1   0  1) </elem>
+            <elem name="FirstSetOfJointsBIS"> (2  3   0  1) </elem> 
+            <elem name="SecondSetOfJoints">   (4  7   0  3) </elem> 
+            <elem name="ThirdSetOfJoints">    (8  11  0  3) </elem> 
+            <elem name="FourthSetOfJoints">   (12 15  0  3) </elem> 
         </paramlist> 
 
         <param name="period"> 10                        </param>

@@ -15,7 +15,7 @@
          <param name ="useROS"> true </param>
          <param name ="ROS_nodeName"> /cer-laserBack </param>
          <param name ="ROS_topicName"> /laserBack </param>
-         <param name ="frame_id"> /mobile_base_lidar_B </param>>
+         <param name ="frame_id"> mobile_base_lidar_B </param>>
 
       </group>
 

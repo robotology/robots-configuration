@@ -21,21 +21,6 @@
     <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
     
 
-    <xi:include href="hardware/skin/left_leg-eb9-skin.xml" />
-    <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" /> 
-    <xi:include href="hardware/skin/right_leg-eb13-skin.xml" />
-    <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />
-    
-    <!-- ANALOG SENSOR FT -->
-   <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" /> 
-    <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> 
-    <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
-   <xi:include href="hardware/FT/left_leg-eb6-j0_1-strain.xml" /> 
-    <xi:include href="hardware/FT/left_leg-eb8-j4_5-strain.xml" />
-    <xi:include href="hardware/FT/right_leg-eb10-j0_1-strain.xml" /> 
-    <xi:include href="hardware/FT/right_leg-eb12-j4_5-strain.xml" />   
-
         <!--  CALIBRATORS -->
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
