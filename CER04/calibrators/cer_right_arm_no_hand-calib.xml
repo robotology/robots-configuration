@@ -18,8 +18,8 @@
         <param name="velocity">                       10        10.00      10.00      10.00      10.00   0.005     10.0       10.0       </param>
     </group>
     <group name="SEQUENCE_1">
-        <param name="position">                       0.00       5.00      0.00       0.00      0.00   0.01        -5.0        0.0       </param>
-        <param name="velocity">                      10.00      10.00     10.00      10.00     10.00   0.005       10.0       10.0       </param>
+        <param name="position">                       -9.29       5.8      -10.2     49.50      -80.0   0.03        0.34        -0.34       </param>
+        <param name="velocity">                       3.00       5.00     10.00      10.00     10.00   0.005       10.0       10.0       </param>
     </group>
  </group>
 
@@ -34,7 +34,7 @@
 <param name="calibrationZero">                    0          0         0          0          90      0          0          0             </param>
 <param name="calibrationDelta">                   0          0         0          0          0       0          0          0             </param>
                                                                                            
-<param name="startupPosition">                   -10         20       -10         35         0.0     0.03       0.0        0.0           </param>
+<param name="startupPosition">                   -10         20        -10        35          0      0.03       0.0        0.0           </param>
 <param name="startupVelocity">                    10         10        10         10         10      0.007      10         10            </param>
 <param name="startupMaxPwm">                      32000      32000     32000      32000      2000    2000       2000       2000          </param>
 <param name="startupPosThreshold">                2          2         2          2          2       0.002      2          2             </param>
