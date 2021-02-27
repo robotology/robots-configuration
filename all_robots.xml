@@ -3,6 +3,7 @@
     <xi:include href="./CER01/CER.xml" />
     <xi:include href="./CER02/CER.xml" />
     <xi:include href="./CER03/CER.xml" />
+    <xi:include href="./CER04/CER.xml" />
 	<xi:include href="./iCubLugano01/icub_all.xml" />
 	<xi:include href="./iCubErzelli01/icub_all.xml" />
 	<xi:include href="./iCubParis01/icub_all.xml" />
@@ -60,4 +61,6 @@
 	<xi:include href="./iCubParis02/icub_all.xml" />
 	<xi:include href="./iCubTwente01/icub_all.xml" />
 	<xi:include href="./iCubAberystwyth01/icub_all.xml" />
+	<xi:include href="./iCubGenova08/icub_all.xml" />
+	<xi:include href="./iCubWaterloo01/icub_all.xml" />
 </robot_database > 
