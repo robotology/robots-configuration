@@ -47,7 +47,7 @@
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
-    <xi:include href="hardware/inertials/waist-inertial.xml" /> 
+<!--    <xi:include href="hardware/inertials/waist-inertial.xml" /> --> 
 
  <!--inertials3-->
    <xi:include href="hardware/inertials/left_leg-eb7-IMU.xml" /> 
