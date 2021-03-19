@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<robot name="iCubZagreb01" build="1">
+<robot name="iCubZagreb01" portprefix="icub" build="1">
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
@@ -11,7 +11,7 @@
    
     <!-- TORSO --> 
     <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
 
   
     <!-- LEFT LEG -->
@@ -24,7 +24,6 @@
     <xi:include href="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
     <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />  
 
-   
     
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/left_leg-calib.xml" />
