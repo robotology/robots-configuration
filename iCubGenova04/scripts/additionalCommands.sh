@@ -17,7 +17,7 @@ export ADDITIONAL_COMMANDS_DIR="$DIR"
 
 
 #Robots Configuration settings
-alias robotsConfigurationInstaller='sh ${ADDITIONAL_COMMANDS_DIR}/installRobotsConfiguration.sh'
+alias robotsConfigurationInstaller='bash ${ADDITIONAL_COMMANDS_DIR}/installRobotsConfiguration.sh'
 export ROBOTS_CONFIGURATION_DIR=${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/robots-configuration/${YARP_ROBOT_NAME}
 alias gotoRobotsConfigurationFolder='cd $ROBOTS_CONFIGURATION_DIR'
 
