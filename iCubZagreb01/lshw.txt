@@ -1,0 +1,521 @@
+icub-head
+    description: Laptop
+    product: Default string (Default string)
+    vendor: Default string
+    version: Default string
+    serial: Default string
+    width: 64 bits
+    capabilities: smbios-3.1.1 dmi-3.1.1 smp vsyscall32
+    configuration: boot=normal chassis=laptop family=Default string sku=Default string uuid=00020003-0004-0005-0006-000700080009
+  *-core
+       description: Motherboard
+       product: COMe-cKL6
+       vendor: Kontron Europe GmbH
+       physical id: 0
+       version: 1.0.1
+       serial: NWD160001
+     *-memory
+          description: System Memory
+          physical id: 3d
+          slot: System board or motherboard
+          size: 16GiB
+        *-bank:0
+             description: SODIMM DDR4 Synchronous Unbuffered (Unregistered) 2400 MHz (0.4 ns)
+             product: D4SO1G644G-A18(HA/NA
+             vendor: Hitachi
+             physical id: 0
+             serial: 0F862830
+             slot: ChannelA-DIMM0
+             size: 8GiB
+             width: 64 bits
+             clock: 2400MHz (0.4ns)
+        *-bank:1
+             description: [empty]
+             physical id: 1
+             slot: ChannelA-DIMM1
+        *-bank:2
+             description: SODIMM DDR4 Synchronous Unbuffered (Unregistered) 2133 MHz (0.5 ns)
+             product: $$.
+             vendor: 0323
+             physical id: 2
+             serial: 00240404
+             slot: ChannelB-DIMM0
+             size: 8GiB
+             width: 64 bits
+             clock: 2133MHz (0.5ns)
+        *-bank:3
+             description: [empty]
+             physical id: 3
+             slot: ChannelB-DIMM1
+     *-cache:0
+          description: L1 cache
+          physical id: 43
+          slot: L1 Cache
+          size: 128KiB
+          capacity: 128KiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=1
+     *-cache:1
+          description: L2 cache
+          physical id: 44
+          slot: L2 Cache
+          size: 512KiB
+          capacity: 512KiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=2
+     *-cache:2
+          description: L3 cache
+          physical id: 45
+          slot: L3 Cache
+          size: 4MiB
+          capacity: 4MiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=3
+     *-cpu
+          description: CPU
+          product: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz
+          vendor: Intel Corp.
+          physical id: 46
+          bus info: cpu@0
+          version: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz
+          serial: To Be Filled By O.E.M.
+          slot: U3E1
+          size: 3603MHz
+          capacity: 4005MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d cpufreq
+          configuration: cores=2 enabledcores=2 threads=4
+     *-firmware
+          description: BIOS
+          vendor: Kontron Europe
+          physical id: 4a
+          version: CKL6R112
+          date: 04/16/2018
+          size: 64KiB
+          capacity: 16MiB
+          capabilities: pci upgrade shadowing cdboot bootselect socketedrom edd int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int14serial int17printer acpi usb biosbootspecification uefi
+     *-pci
+          description: Host bridge
+          product: Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skl_uncore
+          resources: irq:0
+        *-display
+             description: VGA compatible controller
+             product: HD Graphics 620
+             vendor: Intel Corporation
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 02
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pciexpress msi pm vga_controller bus_master cap_list rom
+             configuration: driver=i915 latency=0
+             resources: irq:129 memory:de000000-deffffff memory:c0000000-cfffffff ioport:f000(size=64) memory:c0000-dffff
+        *-generic:0 UNCLAIMED
+             description: System peripheral
+             product: Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model
+             vendor: Intel Corporation
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm cap_list
+             configuration: latency=0
+             resources: memory:df562000-df562fff
+        *-usb
+             description: USB controller
+             product: Sunrise Point-LP USB 3.0 xHCI Controller
+             vendor: Intel Corporation
+             physical id: 14
+             bus info: pci@0000:00:14.0
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: irq:126 memory:df540000-df54ffff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 5.4.0-66-lowlatency xhci-hcd
+                physical id: 0
+                bus info: usb@1
+                logical name: usb1
+                version: 5.04
+                capabilities: usb-2.00
+                configuration: driver=hub slots=12 speed=480Mbit/s
+              *-usb:0
+                   description: Bluetooth wireless interface
+                   vendor: Intel Corp.
+                   physical id: 5
+                   bus info: usb@1:5
+                   version: 0.10
+                   capabilities: bluetooth usb-2.00
+                   configuration: driver=btusb maxpower=100mA speed=12Mbit/s
+              *-usb:1
+                   description: Communication device
+                   product: MTi-300 AHRS
+                   vendor: Xsens
+                   physical id: 7
+                   bus info: usb@1:7
+                   version: 0.00
+                   serial: 037824BB
+                   capabilities: usb-1.10
+                   configuration: driver=xsens_mt maxpower=200mA speed=12Mbit/s
+              *-usb:2
+                   description: Modem
+                   product: STM32 Virtual ComPort
+                   vendor: STMicroelectronics
+                   physical id: 8
+                   bus info: usb@1:8
+                   version: 2.00
+                   serial: 00000000001A
+                   capabilities: usb-2.01
+                   configuration: driver=cdc_acm maxpower=100mA speed=12Mbit/s
+              *-usb:3
+                   description: Human interface device
+                   product: CodeMeter-Stick
+                   vendor: WIBU-SYSTEMS AG
+                   physical id: 9
+                   bus info: usb@1:9
+                   version: 1.00
+                   serial: 000004501104
+                   capabilities: usb-2.00
+                   configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 5.4.0-66-lowlatency xhci-hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 5.04
+                capabilities: usb-3.00
+                configuration: driver=hub slots=6 speed=5000Mbit/s
+        *-generic:1
+             description: Signal processing controller
+             product: Sunrise Point-LP Thermal subsystem
+             vendor: Intel Corporation
+             physical id: 14.2
+             bus info: pci@0000:00:14.2
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi cap_list
+             configuration: driver=intel_pch_thermal latency=0
+             resources: irq:18 memory:df561000-df561fff
+        *-multimedia:0
+             description: Multimedia controller
+             product: Intel Corporation
+             vendor: Intel Corporation
+             physical id: 14.3
+             bus info: pci@0000:00:14.3
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm bus_master cap_list
+             configuration: driver=ipu3-cio2 latency=32
+             resources: irq:134 memory:df530000-df53ffff
+        *-communication
+             description: Communication controller
+             product: Sunrise Point-LP CSME HECI #1
+             vendor: Intel Corporation
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=mei_me latency=0
+             resources: irq:133 memory:df560000-df560fff
+        *-sata
+             description: SATA controller
+             product: Sunrise Point-LP SATA Controller [AHCI mode]
+             vendor: Intel Corporation
+             physical id: 17
+             bus info: pci@0000:00:17.0
+             version: 21
+             width: 32 bits
+             clock: 66MHz
+             capabilities: sata msi pm ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=0
+             resources: irq:127 memory:df558000-df559fff memory:df55f000-df55f0ff ioport:f090(size=8) ioport:f080(size=4) ioport:f060(size=32) memory:df55e000-df55e7ff
+        *-pci:0
+             description: PCI bridge
+             product: Sunrise Point-LP PCI Express Root Port #1
+             vendor: Intel Corporation
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: f1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:122 memory:df400000-df4fffff
+           *-communication
+                description: Serial controller
+                product: Exar Corp.
+                vendor: Exar Corp.
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                version: 03
+                width: 32 bits
+                clock: 33MHz
+                capabilities: msi pm pciexpress 16550 bus_master cap_list
+                configuration: driver=exar_serial latency=0
+                resources: irq:135 memory:df400000-df403fff
+        *-pci:1
+             description: PCI bridge
+             product: Sunrise Point-LP PCI Express Root Port #2
+             vendor: Intel Corporation
+             physical id: 1c.1
+             bus info: pci@0000:00:1c.1
+             version: f1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:123 memory:df300000-df3fffff
+           *-network
+                description: Wireless interface
+                product: Wireless 8265 / 8275
+                vendor: Intel Corporation
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                logical name: wlp2s0
+                version: 78
+                serial: 84:fd:d1:fb:e4:06
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
+                configuration: broadcast=yes driver=iwlwifi driverversion=5.4.0-66-lowlatency firmware=36.77d01142.0 latency=0 link=no multicast=yes wireless=IEEE 802.11
+                resources: irq:136 memory:df300000-df301fff
+        *-pci:2
+             description: PCI bridge
+             product: Sunrise Point-LP PCI Express Root Port #3
+             vendor: Intel Corporation
+             physical id: 1c.2
+             bus info: pci@0000:00:1c.2
+             version: f1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:124 memory:df000000-df1fffff
+           *-pci
+                description: PCI bridge
+                product: XIO2213A/B/XIO2221 PCI Express to PCI Bridge [Cheetah Express]
+                vendor: Texas Instruments
+                physical id: 0
+                bus info: pci@0000:03:00.0
+                version: 01
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pci pm msi pciexpress normal_decode bus_master cap_list
+                resources: memory:df100000-df100fff memory:df000000-df0fffff
+              *-firewire
+                   description: FireWire (IEEE 1394)
+                   product: XIO2213A/B/XIO2221 IEEE-1394b OHCI Controller [Cheetah Express]
+                   vendor: Texas Instruments
+                   physical id: 0
+                   bus info: pci@0000:04:00.0
+                   version: 01
+                   width: 32 bits
+                   clock: 66MHz
+                   capabilities: pm ohci bus_master cap_list
+                   configuration: driver=firewire_ohci latency=32 maxlatency=4 mingnt=2
+                   resources: irq:18 memory:df004000-df0047ff memory:df000000-df003fff
+        *-pci:3
+             description: PCI bridge
+             product: Sunrise Point-LP PCI Express Root Port #4
+             vendor: Intel Corporation
+             physical id: 1c.3
+             bus info: pci@0000:00:1c.3
+             version: f1
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:125 ioport:e000(size=4096) memory:df200000-df2fffff
+           *-network
+                description: Ethernet interface
+                product: 82574L Gigabit Network Connection
+                vendor: Intel Corporation
+                physical id: 0
+                bus info: pci@0000:05:00.0
+                logical name: enp5s0
+                version: 00
+                serial: 00:0c:8b:24:13:9b
+                size: 1Gbit/s
+                capacity: 1Gbit/s
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=3.8.4-NAPI duplex=full firmware=2.1-3 ip=10.0.0.2 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                resources: irq:19 memory:df200000-df21ffff ioport:e000(size=32) memory:df220000-df223fff
+        *-generic:2
+             description: Signal processing controller
+             product: Sunrise Point-LP Serial IO UART Controller #0
+             vendor: Intel Corporation
+             physical id: 1e
+             bus info: pci@0000:00:1e.0
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:20 memory:df55d000-df55dfff
+        *-generic:3
+             description: SD Host controller
+             product: Intel Corporation
+             vendor: Intel Corporation
+             physical id: 1e.4
+             bus info: pci@0000:00:1e.4
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=sdhci-pci latency=0
+             resources: irq:21 memory:df55c000-df55cfff
+        *-generic:4
+             description: SD Host controller
+             product: Sunrise Point-LP Secure Digital IO Controller
+             vendor: Intel Corporation
+             physical id: 1e.6
+             bus info: pci@0000:00:1e.6
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=sdhci-pci latency=0
+             resources: irq:23 memory:df55b000-df55bfff
+        *-isa
+             description: ISA bridge
+             product: Sunrise Point LPC Controller/eSPI Controller
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 21
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+        *-memory UNCLAIMED
+             description: Memory controller
+             product: Sunrise Point-LP PMC
+             vendor: Intel Corporation
+             physical id: 1f.2
+             bus info: pci@0000:00:1f.2
+             version: 21
+             width: 32 bits
+             clock: 33MHz (30.3ns)
+             configuration: latency=0
+             resources: memory:df554000-df557fff
+        *-multimedia:1
+             description: Audio device
+             product: Sunrise Point-LP HD Audio
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=snd_hda_intel latency=32
+             resources: irq:137 memory:df550000-df553fff memory:df520000-df52ffff
+        *-serial
+             description: SMBus
+             product: Sunrise Point-LP SMBus
+             vendor: Intel Corporation
+             physical id: 1f.4
+             bus info: pci@0000:00:1f.4
+             version: 21
+             width: 64 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: irq:16 memory:df55a000-df55a0ff ioport:f040(size=32)
+        *-network
+             description: Ethernet interface
+             product: Ethernet Connection I219-V
+             vendor: Intel Corporation
+             physical id: 1f.6
+             bus info: pci@0000:00:1f.6
+             logical name: enp0s31f6
+             version: 21
+             serial: 00:e0:4b:69:b7:47
+             size: 100Mbit/s
+             capacity: 1Gbit/s
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=3.8.4-NAPI duplex=full firmware=0.2-4 ip=10.0.1.104 latency=0 link=yes multicast=yes port=twisted pair speed=100Mbit/s
+             resources: irq:128 memory:df500000-df51ffff
+     *-pnp00:00
+          product: PnP device PNP0c02
+          physical id: 0
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:01
+          product: PnP device PNP0501
+          physical id: 1
+          capabilities: pnp
+          configuration: driver=serial
+     *-pnp00:02
+          product: PnP device PNP0501
+          physical id: 2
+          capabilities: pnp
+          configuration: driver=serial
+     *-pnp00:03
+          product: PnP device PNP0c02
+          physical id: 3
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:04
+          product: PnP device PNP0c02
+          physical id: 4
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:05
+          product: PnP device PNP0b00
+          physical id: 5
+          capabilities: pnp
+          configuration: driver=rtc_cmos
+     *-pnp00:06
+          product: PnP device INT3f0d
+          physical id: 6
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:07
+          product: PnP device PNP0c02
+          physical id: 7
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:08
+          product: PnP device PNP0c02
+          physical id: 8
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:09
+          product: PnP device PNP0c02
+          physical id: 9
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:0a
+          product: PnP device PNP0c02
+          physical id: a
+          capabilities: pnp
+          configuration: driver=system
+  *-power UNCLAIMED
+       description: To Be Filled By O.E.M.
+       product: To Be Filled By O.E.M.
+       vendor: To Be Filled By O.E.M.
+       physical id: 1
+       version: To Be Filled By O.E.M.
+       serial: To Be Filled By O.E.M.
+       capacity: 32768mWh
