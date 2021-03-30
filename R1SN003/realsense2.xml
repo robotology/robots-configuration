@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ros2test" build="2" portprefix="test" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <devices>
+        <xi:include href="./sensors/realsense2.xml" />
+        <xi:include href="./wrappers/camera/pointcloudsensor_ros.xml" />
+        <xi:include href="./wrappers/camera/rgbdsensor_ros.xml" />
+        <xi:include href="./wrappers/camera/rgbdsensor_yarp.xml" />
+    </devices>
+</robot>

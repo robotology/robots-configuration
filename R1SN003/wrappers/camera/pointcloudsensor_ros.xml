@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="pointCloudWrapR" type="RGBDToPointCloudSensor_nws_ros">
+    <param name="period"> 100                 </param>
+    <param name="nodeName">    /rgbdtopointcloudsensor_ros_node    </param>
+    <param name="pointCloudTopicName">   /RGBD2PointCloud   </param>
+    <param name="frame_Id">    depth_center</param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="subdevicergbd"> realsense2dev </elem> 
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
