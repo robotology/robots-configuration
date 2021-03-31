@@ -35,7 +35,8 @@
 <param name="startupPosThreshold">                2               2           2         2              2             2             </param>
 </group>
 
-		<param name="CALIB_ORDER">(0) (1) (2) (3) (4) (5) </param>
+		<param name="CALIB_ORDER">(0) (1) (2) (3) (4) (5)</param>
+<!-- (1) (2) (3) (4) (5) -->
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">right_leg-mc_wrapper</param>
