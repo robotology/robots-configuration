@@ -31,7 +31,7 @@ alias dcmFolder='cd ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/walking-controllers/
 alias goToBuildSuperbuild='cd ../../build/src/${PWD##*/}'
 
 ## Alias for running a diff between the source and the install of the configuration files
-alias configurationSourceInstallDiff='diff -r --exclude="CMakeLists.txt" $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/src/robots-configuration/$YARP_ROBOT_NAME $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/build/install/share/ICUBcontrib/robots/$YARP_ROBOT_NAME | grep -ve dcm_walking -ve scripts'
+alias configurationSourceInstallDiff='diff -r --exclude="CMakeLists.txt" $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/src/robots-configuration/$YARP_ROBOT_NAME $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/build/install/share/ICUBcontrib/robots/$YARP_ROBOT_NAME | grep -ve dcm_walking -ve extra'
 
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
