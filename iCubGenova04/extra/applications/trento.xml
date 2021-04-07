@@ -1,0 +1,83 @@
+<application>
+    <name>Trento Scripting</name>
+
+    <!-- Blinkers -->
+    <module>
+        <name>iCubBlinker</name>
+        <parameters>--autoStart</parameters>
+        <node>icub30</node>
+    </module>
+
+    <module>
+        <name>gaze.lua</name>
+        <parameters>--look-around</parameters>
+        <deployer>lua</deployer>
+        <node>icub23</node>
+        <dependencies>
+            <port timeout="10">/iKinGazeCtrl/angles:i</port>
+            <port timeout="10">/iKinGazeCtrl/angles:o</port>
+        </dependencies>
+    </module>
+ 
+    <!-- Speakers -->
+    <module>
+        <name>yarpdev</name>
+        <parameters>--device speech --lingware-context speech --robot icub --default-language it-IT --pitch 90 --speed 100</parameters>
+        <node>icub30</node>
+    </module>    
+    <module>
+        <name>iSpeak</name>
+        <parameters>--package speech-dev</parameters>
+        <node>icub30</node>
+    </module>
+    
+    <!-- Movements -->
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part head</parameters>
+        <node>icub30</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part left_arm</parameters>
+        <node>icub30</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part right_arm</parameters>
+        <node>icub30</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part torso</parameters>
+        <node>icub30</node>
+    </module>
+
+    <!-- Connections -->
+    <connection>
+        <from>/iCubBlinker/emotions/raw</from>
+        <to>/icub/face/raw/in</to>
+        <protocol>tcp</protocol>
+    </connection>
+        <connection>
+       <from>/iSpeak/speech-dev/rpc</from>
+       <to>/icub/speech:rpc</to>
+       <protocol>tcp</protocol>
+    </connection>
+    <connection>
+        <from>/iSpeak/emotions:o</from>
+        <to>/icub/face/emotions/in</to>
+        <protocol>tcp</protocol>
+    </connection>
+        <connection>
+        <from>/gaze/tx</from>
+        <to>/iKinGazeCtrl/angles:i</to>
+        <protocol>tcp</protocol>
+    </connection>
+    <connection>
+        <from>/iKinGazeCtrl/angles:o</from>
+        <to>/gaze/rx</to>
+        <protocol>tcp</protocol>
+    </connection>
+
+</application>

@@ -1,0 +1,12 @@
+<cluster name="icub04" user="icub">
+
+<nameserver namespace="/icub04" node="iiticublap091" type="yarpserver"> </nameserver>
+
+<!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
+this is usually the value of the DISPLAY variable when logged on -->
+<node display=":0.0" address="10.0.0.29">icub29</node>
+<node display=":1.0" address="10.0.0.30">icub30</node>
+<node address="10.0.0.2">icub-head</node>
+<node display=":0.0" address="10.0.0.120">icub-virtualizer</node>
+</cluster>
+

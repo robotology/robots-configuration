@@ -1,0 +1,20 @@
+<application>
+<name>iCub sound</name>
+<dependencies>
+</dependencies> 
+<module>
+  <name>yarp-speech-sender</name>
+      <parameters> </parameters>
+  <node>icub-head</node>
+</module>
+<module>
+  <name>yarp-speech-receiver</name>
+  <node>icub30</node>
+</module>
+<connection>
+  <from>/sender</from>
+  <to>/receiver</to>
+  <protocol>fast_tcp</protocol>
+</connection>
+</application>
+

@@ -1,0 +1,54 @@
+<application>
+    <name>Look Pixel</name>
+
+    <dependencies>
+        <port>/iKinGazeCtrl/rpc</port>
+    </dependencies>
+
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /viewer --out /viewer/out</parameters>
+        <node>icub29</node>
+    </module>
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /viewer_ctrl --out /viewer_ctrl/out</parameters>
+        <node>icub30</node>
+    </module>
+    <module>
+        <name>look-pixel.lua</name>
+        <parameters></parameters>
+        <deployer>lua</deployer>
+        <node>icub30</node>
+        <dependencies>
+            <port timeout="10">/iKinGazeCtrl/mono:i</port>
+            <port timeout="10">/viewer/out</port>
+        </dependencies>
+    </module>
+
+    <connection>
+        <from>/look-pixel/tx</from>
+        <to>/iKinGazeCtrl/mono:i</to>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <from>/viewer/out</from>
+        <to>/look-pixel/rx</to>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <from>/viewer_ctrl/out</from>
+        <to>/look-pixel/rx</to>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <from>/icub/camcalib/left/out</from>
+        <to>/viewer</to>
+        <protocol>fast_tcp</protocol>
+    </connection> 
+    <connection>
+        <from>/icub/camcalib/left/out</from>
+        <to>/viewer_ctrl</to>
+        <protocol>fast_tcp</protocol>
+    </connection>
+</application>
