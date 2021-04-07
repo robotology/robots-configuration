@@ -1,0 +1,81 @@
+<application>
+    <name>D&G drawing</name>
+
+    <!-- Blinkers -->
+    <!-- <module>
+        <name>iCubBlinker</name>
+        <parameters>--autoStart</parameters>
+        <node>icubsrv</node>
+    </module> -->
+    
+    <!-- Movements -->
+    <!-- <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part head</parameters>
+        <node>icubsrv</node>
+    </module> -->
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part head</parameters>
+        <node>icub30</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part left_arm</parameters>
+        <node>icub30</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part right_arm</parameters>
+        <node>icub30</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot icub --part torso</parameters>
+        <node>icub30</node>
+    </module>
+
+    <module>
+         <name>iKinCartesianSolver</name>
+         <parameters>--part right_arm</parameters>
+         <node>icub30</node>
+         <dependencies>
+             <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
+        </dependencies>
+    </module>
+
+    <module>
+         <name>iKinCartesianSolver</name>
+         <parameters>--part left_arm</parameters>
+         <node>icub30</node>
+         <dependencies>
+             <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
+        </dependencies>
+    </module>
+
+    <module>
+        <name>cartesianInterfaceControl</name>
+        <parameters>--part right_arm</parameters>
+        <node>icub30</node>
+        <dependencies>
+             <port timeout="60.0">/cartesianSolver/right_arm/rpc</port>
+        </dependencies>
+    </module>
+
+    <module>
+        <name>cartesianInterfaceControl</name>
+        <parameters>--part left_arm</parameters>
+        <node>icub30</node>
+        <dependencies>
+             <port timeout="60.0">/cartesianSolver/left_arm/rpc</port>
+        </dependencies>
+    </module>
+
+    <!-- Connections -->
+    <!-- <connection>
+        <from>/iCubBlinker/emotions/raw</from>
+        <to>/icub/face/raw/in</to>
+        <protocol>tcp</protocol>
+    </connection> -->
+
+</application>

@@ -1,0 +1,41 @@
+<application>
+    <name>JointErrorDumper</name>
+    <description>Streams the joint positioning errors through ports</description>
+    <version>1.0</version>
+    
+   <module>
+        <name>controlBoardDumper</name>
+        <parameters>--part torso --rate 10 --joints "(0 1 2)" --dataToDump "(getPositionErrors)"</parameters>
+        <node>localhost</node>
+        <tag>controlBoardDumper</tag>
+    </module>
+
+   <module>
+        <name>controlBoardDumper</name>
+        <parameters>--part left_arm --rate 10 --joints "(0 1 2 3)" --dataToDump "(getPositionErrors)"</parameters>
+        <node>localhost</node>
+        <tag>controlBoardDumper</tag>
+    </module>
+    
+   <module>
+        <name>controlBoardDumper</name>
+        <parameters>--part right_arm --rate 10 --joints "(0 1 2 3)" --dataToDump "(getPositionErrors)"</parameters>
+        <node>localhost</node>
+        <tag>controlBoardDumper</tag>
+    </module>
+    
+   <module>
+        <name>controlBoardDumper</name>
+        <parameters>--part left_leg --rate 10 --joints "(0 1 2 3 4 5)" --dataToDump "(getPositionErrors)"</parameters>
+        <node>localhost</node>
+        <tag>controlBoardDumper</tag>
+    </module>
+    
+   <module>
+        <name>controlBoardDumper</name>
+        <parameters>--part right_leg --rate 10 --joints "(0 1 2 3 4 5)" --dataToDump "(getPositionErrors)"</parameters>
+        <node>localhost</node>
+        <tag>controlBoardDumper</tag>
+    </module>
+    
+</application>

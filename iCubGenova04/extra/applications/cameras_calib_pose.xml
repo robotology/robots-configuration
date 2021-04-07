@@ -1,0 +1,87 @@
+<application>
+<name>Calib Cameras with Pose</name>
+<dependencies>
+</dependencies> 
+<module>
+  <name>yarpdev</name>
+      <parameters> --from camera/ServerGrabberDualDragon.ini --split true</parameters>
+  <node>icub-head</node>
+</module>
+<module>
+  <name>camCalibWithPose</name>
+  <parameters>--context cameraCalibration --from icubEyes.ini --group CAMERA_CALIBRATION_LEFT --name /icub/camcalib/left --useIMU</parameters>  
+  <node>icub30</node>
+</module>
+<module>
+  <name>camCalibWithPose</name>
+  <parameters>--context cameraCalibration --from icubEyes.ini --group CAMERA_CALIBRATION_RIGHT --name /icub/camcalib/right --useIMU</parameters> 
+  <node>icub30</node>
+</module>
+<module>
+  <name>yarpview</name>
+  <parameters>--name /icub/view/left --x 0 --y 0 --p 50 --w 320 --h 240</parameters>
+  <node>icub30</node>
+</module>
+<module>
+  <name>yarpview</name>
+  <parameters>--name /icub/view/right --x 320 --y 0 --p 50 --w 320 --h 240</parameters>
+  <node>icub30</node>
+</module>
+<module>
+  <name>frameGrabberGui2</name>
+  <parameters>--local /icub/fggui/left --remote /icub/cam/left --x 0 --y 350 --width 350 --height 500</parameters>
+  <node>icub30</node>
+  <dependencies>
+     <port timeout="10">/icub/cam/left</port>
+  </dependencies>  
+</module>
+<module>
+  <name>frameGrabberGui2</name>
+  <parameters>--local /icub/fggui/right --remote /icub/cam/right --x 320 --y 350 --width 350 --height 500</parameters>
+  <node>icub30</node>
+  <dependencies>
+     <port timeout="10">/icub/cam/right</port>
+  </dependencies>  
+</module>
+<connection>
+  <from>/icub/cam/left</from>
+  <to>/icub/camcalib/left/in</to>
+  <protocol>udp</protocol>
+</connection>
+<connection>
+  <from>/icub/cam/right</from>
+  <to>/icub/camcalib/right/in</to>
+  <protocol>udp</protocol>
+</connection>
+<connection>
+  <from>/icub/camcalib/left/out</from>
+  <to>/icub/view/left</to>
+  <protocol>udp</protocol>
+</connection>
+<connection>
+  <from>/icub/camcalib/right/out</from>
+  <to>/icub/view/right</to>
+  <protocol>udp</protocol>
+</connection>
+<connection>
+  <from>/icub/head/state:o</from>
+  <to>/icub/camcalib/left/head_encs/in</to>
+  <protocol>udp</protocol>
+</connection>
+<connection>
+  <from>/icub/head/state:o</from>
+  <to>/icub/camcalib/right/head_encs/in</to>
+  <protocol>udp</protocol>
+</connection>
+<connection>
+  <from>/icub/inertial</from>
+  <to>/icub/camcalib/left/imu/in</to>
+  <protocol>udp</protocol>
+</connection>
+<connection>
+  <from>/icub/inertial</from>
+  <to>/icub/camcalib/right/imu/in</to>
+  <protocol>udp</protocol>
+</connection>
+</application>
+
