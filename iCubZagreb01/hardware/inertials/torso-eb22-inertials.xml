@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb22-inertials" type="embObjInertials">
+
+        <xi:include href="../../general.xml" />
+
+        <xi:include href="../../hardware/electronics/face-eb22-j0_1-eln.xml" />
+
+        <group name="SERVICE">
+
+            <param name="type"> eomn_serv_AS_inertials </param>
+
+            <group name="PROPERTIES">
+
+                <group name="CANBOARDS">
+                    <param name="type">                 eobrd_mtb           </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+
+                <group name="SENSORS">
+                    <param name="id">       chest_mtb_acc_0b7       chest_mtb_acc_0b8       chest_mtb_acc_0b9       chest_mtb_acc_0b10
+                    </param>
+
+                    <param name="type">     eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                    </param>
+
+                    <param name="location"> CAN1:7                  CAN1:8                  CAN1:9                  CAN1:10
+                    </param>
+                </group>
+
+            </group>
+
+            <group name="SETTINGS">
+                <param name="acquisitionRate">      50      </param>
+                <param name="enabledSensors">       chest_mtb_acc_0b7       chest_mtb_acc_0b8       chest_mtb_acc_0b9       chest_mtb_acc_0b10
+                </param>
+            </group>
+
+        </group>
+
+    </device>
+
+
