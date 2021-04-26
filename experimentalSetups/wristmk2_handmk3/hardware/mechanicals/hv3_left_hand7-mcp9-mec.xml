@@ -6,29 +6,35 @@
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 7 </param> 
         
-        <!-- joint number in sub-part       0               1               2               3           4           5           6           -->
-        <!-- joint name                                                                                                                     -->         
-        <param name="AxisMap">              0               1               2               3           4           5           6           </param>
-        <param name="AxisName">             "l_thumb"       "l_index"       "l_medium"      "l_pinky"   "l_thmet"   "l_throt"   "l_indabd"  </param>
-        <param name="AxisType">             "revolute"      "revolute"      "revolute"      "revolute"  "revolute"  "revolute"  "revolute"  </param>
-        <param name="Encoder">              182.044         182.044         182.044         182.044     182.044     182.044     182.044     </param>
-        <param name="fullscalePWM">         3360            3360            3360            3360        3360        3360        3360        </param>
-        <param name="ampsToSensor">         1000.0          1000.0          1000.0          1000.0      1000.0      1000.0      1000.0      </param>
-        <param name="Gearbox_M2J">          159             159             159             159         159         159         159         </param>
-        <param name="Gearbox_E2J">          1               1               1               1           1           1           1           </param>
-        <param name="useMotorSpeedFbk">     0               0               0               0           0           0           0           </param>
-        <param name="MotorType">            "DC"            "DC"            "DC"            "DC"        "DC"        "DC"        "DC"        </param>
+        <!-- joint number in sub-part       0               1               2               3               4               5               6               -->
+        <!-- joint name                                                                                                                                     -->         
+        <param name="AxisMap">              0               1               2               3               4               5               6               </param>
+        <param name="AxisName">             "l_thumb_open"  "l_index_open"  "l_medium_open" "l_pinky_open"  "l_thumb_metac" "l_thumb_rot"   "l_index_adduc" </param>
+        <param name="AxisType">             "revolute"      "revolute"      "revolute"      "revolute"      "revolute"      "revolute"      "revolute"      </param>
+        <param name="Encoder">              182.044         182.044         182.044         182.044         182.044         182.044         182.044         </param>
+        <param name="fullscalePWM">         3360            3360            3360            3360            3360            3360            3360            </param>
+        <param name="ampsToSensor">         1000.0          1000.0          1000.0          1000.0          1000.0          1000.0          1000.0          </param>
+        <param name="Gearbox_M2J">          159             159             159             159             159             159             159             </param>
+        <param name="Gearbox_E2J">          1               1               1               1               1               1               1               </param>
+        <param name="useMotorSpeedFbk">     0               0               0               0               0               0               0               </param>
+        <param name="MotorType">            "DC"            "DC"            "DC"            "DC"            "DC"            "DC"            "DC"            </param>
                 
         <param name="Verbose"> 0 </param>
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">    100             100             100             100         100             100             100 </param>
-        <param name="hardwareJntPosMin">    0               0               0               0           0               0               0   </param>
-        <param name="rotorPosMin">          0               0               0               0           0               0               0   </param>
-        <param name="rotorPosMax">          0               0               0               0           0               0               0   </param>
+        <param name="hardwareJntPosMax">    100             100             100             100             100             100             100             </param>
+        <param name="hardwareJntPosMin">    0               0               0               0               0               0               0               </param>
+        <param name="rotorPosMin">          0               0               0               0               0               0               0               </param>
+        <param name="rotorPosMax">          0               0               0               0               0               0               0               </param>
     </group>
+
     
+    <!-- marco.accame on 08apr2021
+         the COUPLING and JOINTSET_CFG sections manage at maximum 4 joints.
+         this case of 7 joints is nevertheless simple because we have all joints that are independent.
+         so far we can keep the two sections like that. later on we can remove their parsing. 
+      -->  
     <group name="COUPLINGS"> 
 
         <param name ="matrixJ2M"> 
@@ -83,3 +89,4 @@
     </group>                                       
     
 </params>
+

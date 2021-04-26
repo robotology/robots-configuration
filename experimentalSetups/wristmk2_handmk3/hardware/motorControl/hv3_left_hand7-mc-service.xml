@@ -40,7 +40,7 @@
                 
                 <group name="ENCODER1">  
                     <param name="type">             pos                 pos                 pos                 pos                     pos                     pos                 pos                     </param>  
-                    <param name="port">             POS:hand_thumb      POS:hand_index      POS:hand_medium     POS:hand_pinky          POS:thumbmetacarpus     POS:thumbrotation   POS:indexadduction      </param>
+                    <param name="port">             POS:hand_thumb      POS:hand_index      POS:hand_medium     POS:hand_pinky          POS:hand_thumbmetacarpus    POS:hand_thumbrotation   POS:hand_indexadduction      </param>
                     <param name="position">         atjoint             atjoint             atjoint             atjoint                 atjoint                 atjoint             atjoint                 </param> 
                     <param name="resolution">       65535               65535               65535               65535                   65535                   65535               65535                   </param>
                     <param name="tolerance">        5                   5                   5                   5                       5                       5                   5                       </param>  

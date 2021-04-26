@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<portscope rows="3" columns="3" carrier="mcast">
+<portscope rows="3" columns="4" carrier="mcast">
 
     <plot gridx="0"
           gridy="0"
           hspan="1"
           vspan="1"
-          title="Thumb Opening/Closing (J4)"
+          title="Thumb Open/Close (J4)"
           size="100"
           minval="000"
-          maxval="360"
+          maxval="090"
           bgcolor="LightGrey">
         <graph remote="/nfa/left_hand/POS:o"
                index="0"
@@ -22,10 +22,10 @@
           gridy="0"
           hspan="1"
           vspan="1"
-          title="Index Opening/Closing (J5)"
+          title="Index Open/Close (J5)"
           size="100"
           minval="000"
-          maxval="360"
+          maxval="090"
           bgcolor="LightGrey">
         <graph remote="/nfa/left_hand/POS:o"
                index="1"
@@ -39,10 +39,10 @@
           gridy="0"
           hspan="1"
           vspan="1"
-          title="Medium Opening/Closing (J6)"
+          title="Medium Open/Close (J6)"
           size="100"
           minval="000"
-          maxval="360"
+          maxval="090"
           bgcolor="LightGrey">
         <graph remote="/nfa/left_hand/POS:o"
                index="2"
@@ -52,14 +52,14 @@
                size="3" />
     </plot>
  
-    <plot gridx="0"
-          gridy="1"
+    <plot gridx="3"
+          gridy="0"
           hspan="1"
           vspan="1"
-          title="Little Finger Opening/Closing (J7)"
+          title="Pinky Open/Close (J7)"
           size="100"
           minval="000"
-          maxval="360"
+          maxval="090"
           bgcolor="LightGrey">
         <graph remote="/nfa/left_hand/POS:o"
                index="3"
@@ -69,14 +69,14 @@
                size="3" />
     </plot>
     
-    <plot gridx="1"
+    <plot gridx="0"
           gridy="1"
           hspan="1"
           vspan="1"
           title="Thumb Metacarpus (J13)"
           size="100"
           minval="000"
-          maxval="360"
+          maxval="090"
           bgcolor="LightGrey">
         <graph remote="/nfa/left_hand/POS:o"
                index="4"
@@ -86,14 +86,31 @@
                size="3" />
     </plot>
     
-    <plot gridx="2"
+    <plot gridx="1"
           gridy="1"
           hspan="1"
           vspan="1"
           title="Index Adduction (U27)"
           size="100"
           minval="000"
-          maxval="360"
+          maxval="090"
+          bgcolor="LightGrey">
+        <graph remote="/nfa/left_hand/POS:o"
+               index="6"
+               color="Purple"
+               title="Graph 5"
+               type="lines"
+               size="3" />
+    </plot>
+ 
+    <plot gridx="2"
+          gridy="1"
+          hspan="1"
+          vspan="1"
+          title="Thumb Rotation (LR17)"
+          size="100"
+          minval="000"
+          maxval="090"
           bgcolor="LightGrey">
         <graph remote="/nfa/left_hand/POS:o"
                index="5"
@@ -101,13 +118,36 @@
                title="Graph 5"
                type="lines"
                size="3" />
-    </plot>
-     
+    </plot>   
+ 
+    <plot gridx="3"
+          gridy="1"
+          hspan="1"
+          vspan="1"
+          title="QE1 index add [mm] (red) QE2 thumb meta [mm] (green)"
+          size="100"
+          minval="-20"
+          maxval="+20"
+          bgcolor="LightGrey">
+          <graph remote="/nfa/left_hand/POS:o"
+               index="7"
+               color="Red"
+               title="Graph QE1"
+               type="lines"
+               size="3" />
+          <graph remote="/nfa/left_hand/POS:o"
+               index="8"
+               color="Green"
+               title="Graph QE2"
+               type="lines"
+               size="3" />               
+    </plot>   
+        
     <plot gridx="0"
           gridy="2"
-          hspan="3"
+          hspan="4"
           vspan="1"
-          title="J4 J5 J6 J7 J13 U27"
+          title="J4 J5 J6 J7 J13 U27 LR17 QE1 QE2"
           size="300"
           minval="000"
           maxval="360"
@@ -141,14 +181,33 @@
                color="Orange"
                title="Graph 4"
                type="lines"
-               size="3" />    
+               size="3" />  
+       <graph remote="/nfa/left_hand/POS:o"
+               index="6"
+               color="Purple"
+               title="Graph 6"
+               type="lines"
+               size="3" />                    
        <graph remote="/nfa/left_hand/POS:o"
                index="5"
                color="Purple"
                title="Graph 5"
                type="lines"
-               size="3" />                                                                  
+               size="3" />  
+       <graph remote="/nfa/left_hand/POS:o"
+               index="7"
+               color="Purple"
+               title="Graph 7"
+               type="lines"
+               size="3" />   
+       <graph remote="/nfa/left_hand/POS:o"
+               index="8"
+               color="Purple"
+               title="Graph 8"
+               type="lines"
+               size="3" />                                                                                                
     </plot>
           
 </portscope>
+
 
