@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="realsense2dev" type="realsense2">
+	<group name="SETTINGS">
+		<param name="depthResolution"> (640 480)           </param>
+		<param name="rgbResolution">  (640 480) </param>
+		<param name="framerate">    30  </param>
+		<param name="enableEmitter">    true</param>
+		<param name="needAlignment">    true</param>
+		<param name="alignmentFrame">    RGB</param>
+    </group>
+	<group name="HW_DESCRIPTION">
+		<param name="clipPlanes"> (0.2 10.0)</param>
+	</group>
+</device>
