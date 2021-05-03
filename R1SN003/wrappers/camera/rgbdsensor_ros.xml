@@ -4,7 +4,7 @@
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperros" type="rgbdSensor_nws_ros">
     <param name="period"> 33</param>
     <param name="colorTopicName">    /camera/rgbdSensor_nws_ros/color/image_raw    </param>
-    <param name="depthTopicName">    /camera/rgbdSensor_nws_ros/depth/image_raw    </param>
+    <param name="depthTopicName">    /camera/rgbdSensor_nws_ros/depth/image_rect_raw    </param>
     <param name="colorInfoTopicName">    /camera/rgbdSensor_nws_ros/color/camera_info     </param>
     <param name="depthInfoTopicName">    /camera/rgbdSensor_nws_ros/depth/camera_info   </param>
     <param name="frame_Id">    depth_center    </param>
