@@ -11,8 +11,8 @@
     <!-- joint name                           hip_yaw            knee                   -->
     <!-- joint number                           0                   1                   -->
     <group name="LIMITS">
-        <param name="jntPosMax">                60                  3                   </param>
-        <param name="jntPosMin">                -60                 -68                 </param>
+        <param name="jntPosMax">                70                  3                   </param>
+        <param name="jntPosMin">                -70                 -70                 </param>
         <param name="jntVelMax">                240                 240                 </param>
         <param name="motorNominalCurrents">     5000                10000                </param>
         <param name="motorPeakCurrents">        10000               15000               </param>
