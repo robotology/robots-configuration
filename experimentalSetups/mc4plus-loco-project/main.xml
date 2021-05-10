@@ -3,22 +3,13 @@
 
 <robot name="iCubExpSetupMC4PLUSjig" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
-    <!-- BOARD MC4PLUSjig -->
+    <!-- BOARD MC4PLUSloco -->
     <!-- motor controllers wrappers -->
-    <xi:include href="./hardware/motorControl/mc4plusjig_mc_hardware.xml" /> 
-    <xi:include href="./wrappers/motorControl/mc4plusjig_mc_wrapper.xml" /> 
-
-    <!--STRAIN 
-    <xi:include href="wrappers/FT/strain_wrapper.xml" />
-    <xi:include href="hardware/FT/strain.xml" />  -->
-
-    <!--MAIS 
-    <xi:include href="wrappers/MAIS/mais_wrapper.xml" />
-    <xi:include href="hardware/MAIS/mais.xml" /> -->
-
+    <xi:include href="./hardware/motorControl/mc4plusloco_mc_hardware.xml" /> 
+    <xi:include href="./wrappers/motorControl/mc4plusloco_mc_wrapper.xml" /> 
 
     <!-- CALIBRATORS -->
-    <xi:include href="./calibrators/mc4plusjig_calib.xml" />
+    <xi:include href="./calibrators/mc4plusloco_calib.xml" />
     
 </devices>
 </robot> 

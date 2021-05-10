@@ -27,7 +27,7 @@
                     <param name="type">             qenc                qenc                absanalog           absanalog               </param>  
                     <param name="port">             CONN:P5             CONN:P2            CONN:P4             CONN:P3                 </param>
                     <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param>
-                    <param name="resolution">          1                -4096               4096                65535          </param> <!-- 6535: this value will change by fw during calibration (type 6) --> 
+                    <param name="resolution">          1                -4096               4096                4096           </param> 
                     <param name="tolerance">           0                0.703               0.703                  0                        </param>  
 
                 </group>        
@@ -36,7 +36,7 @@
                     <param name="type">             qenc                qenc                none                none                    </param>
                     <param name="port">             CONN:P5             CONN:P2             CONN:none             CONN:none               </param>
                     <param name="position">         atmotor             atmotor             none             none                    </param>
-                    <param name="resolution">       -2048               1600                1                1                       </param>
+                    <param name="resolution">       64                 64                   1                1                       </param> <!-- IE2-16 16x4 (4x interpolation) -->
                     <param name="tolerance">         0                  0                   0                   0                       </param>  
 
                 </group>  
