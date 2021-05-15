@@ -100,5 +100,17 @@
     <name>torsoMotorInterface</name>
     <node>vizzy-desktop</node>
   </module>
+  <module>
+    <name>armDownService</name>
+    <node>vizzy-desktop</node>
+  </module>
+  <module>
+    <name>idleArmsShouldersService</name>
+    <node>vizzy-desktop</node>
+  </module>
+  <module>
+    <name>shutdownStartYarpRunProcess</name>
+    <node>vizzy-desktop</node>
+  </module>
 
 </application>
