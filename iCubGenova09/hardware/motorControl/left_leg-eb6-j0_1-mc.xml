@@ -112,6 +112,25 @@
 
 
     <!-- custom PIDs: begin -->
+    <group name="TRQ_PID_OUTPUT_CURR">
+        <param name="controlLaw">          torque                       </param>
+        <param name="outputType">          current                      </param>
+        <param name="fbkControlUnits">     metric_units                 </param>
+        <param name="outputControlUnits">  machine_units                </param>
+        <param name="kp">           -150.00     150.00                  </param>
+        <param name="kd">              0          0                     </param>
+        <param name="ki">            -80         50                     </param>
+        <param name="maxOutput">    2500       2500                     </param>
+        <param name="maxInt">        200        200                     </param>
+        <param name="ko">              0          0                     </param>
+        <param name="stictionUp">      0          0                     </param>
+        <param name="stictionDown">    0          0                     </param>
+        <param name="kff">             1          1                     </param>
+        <param name="kbemf">          -0.0003     0.0004                </param>
+        <param name="filterType">      0          0                     </param>
+        <param name="ktau">         -175.56     177.83                  </param>
+    </group>
+
     <!-- custom PIDs: end -->
 
     <group name="OTHER_CONTROL_PARAMETERS">
