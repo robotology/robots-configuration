@@ -18,6 +18,7 @@
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="useSkinForContacts">false</param>
+        <param name="publishNetExternalWrenches">true</param>
 	<!--        <param name="assume_fixed">root_link</param>-->
 	<group name="HW_USE_MAS_IMU">
 	    <param name="accelerometer">rfeimu_acc</param>
