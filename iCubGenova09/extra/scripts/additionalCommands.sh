@@ -52,5 +52,12 @@ ${GREEN}test-speaker${NC} Test if the speaker is working.
 ${GREEN}test-microphone${NC} Test if the micorphone is working.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
 
