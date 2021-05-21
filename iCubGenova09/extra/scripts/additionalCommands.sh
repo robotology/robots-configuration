@@ -33,7 +33,7 @@ alias goToBuildSuperbuild='cd ../../build/src/${PWD##*/}'
 ## Alias for running a diff between the source and the install of the configuration files
 alias configurationSourceInstallDiff='bash ${ADDITIONAL_COMMANDS_DIR}/checkConfigurationFiles.sh'
 
-alias test-speaker=speaker-test -t wav -c 1
+alias test-speaker='speaker-test -t wav -c 1'
 
 # Test if the microphone is working
 test-microphone() {
