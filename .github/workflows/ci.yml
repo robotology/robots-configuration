@@ -17,7 +17,7 @@ jobs:
         os: [ubuntu-latest]
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
         
     # Remove apt repos that are known to break from time to time
     # See https://github.com/actions/virtual-environments/issues/323
