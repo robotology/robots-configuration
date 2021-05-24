@@ -44,5 +44,8 @@ ${GREEN}connectToJoypad${NC} To reconnect the bluetooth connection of the robot 
 ${GREEN}sudo bash ~/battery_bluetooth.sh ${NC} To reconnect to the BCB bluetooth to retrieve the battery status.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
-echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
+
+if [ "$PS1" ]; then
+  echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
+fi
 
