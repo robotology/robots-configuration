@@ -1,0 +1,33 @@
+<application>
+
+    <name>iCub3SkinGui</name>
+    <description>Application for iCub3 skin gui visualization</description>
+
+    <var name="generic_node">localhost</var>
+
+    <module>
+        <name>iCubSkinGui</name>
+        <parameters>--from left_upperarm_V3.ini</parameters>
+        <node>${generic_node}</node>
+    </module>
+
+    <module>
+        <name>iCubSkinGui</name>
+        <parameters>--from right_upperarm_V3.ini</parameters>
+        <node>${generic_node}</node>
+        <tag>yarpdatadumper</tag>
+     </module>
+
+     <connection>
+        <from>/icub/skin/left_upperarm</from>
+        <to>/skinGui/left_upperarm:i</to>
+        <protocol>udp</protocol>
+     </connection>
+
+     <connection>
+        <from>/icub/skin/right_upperarm</from>
+        <to>/skinGui/right_upperarm:i</to>
+        <protocol>udp</protocol>
+     </connection>
+
+</application>

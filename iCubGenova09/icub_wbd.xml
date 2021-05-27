@@ -8,8 +8,9 @@
     </params>
 
     <!-- cartesian -->
+    <!--
     <xi:include href="cartesian/left_arm-cartesian.xml" />
-    <xi:include href="cartesian/right_arm-cartesian.xml" /> 
+    <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
 
     <devices>
     <!-- HEAD -->
@@ -83,8 +84,8 @@
     <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> -->
  
      <!-- INERTIAL SENSOR--> 
-    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+<!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" /> -->
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" /> 
 

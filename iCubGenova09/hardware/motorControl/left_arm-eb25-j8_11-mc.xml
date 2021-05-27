@@ -19,7 +19,7 @@
         <param name="motorNominalCurrents">     600                 600                 600                 600                 </param>
         <param name="motorPeakCurrents">        1000                1000                1000                1000                </param>
    <!-- to fix problem in https://github.com/robotology/icub-tech-support/issues/1048 the values are changed-->
-        <param name="motorPwmLimit">            3360                3360                3360                3360                </param>
+        <param name="motorPwmLimit">            1800                1800                1800                1800                </param>
     </group>
 
     <group name="TIMEOUTS">
@@ -52,8 +52,8 @@
         <param name="kd">                   0           0           0           0       </param>
         <param name="ki">                   -50         50          50          50      </param>
    <!-- to fix problem in https://github.com/robotology/icub-tech-support/issues/1048 the values are changed-->
-        <param name="maxOutput">            3360       3360        3360        3360    </param>
-        <param name="maxInt">               3360       3360        3360        3360    </param>
+        <param name="maxOutput">            1800       1800        1800        1800    </param>
+        <param name="maxInt">               1800       1800        1800        1800    </param>
         <param name="stictionUp">           0           0           0           0       </param>
         <param name="stictionDown">         0           0           0           0       </param>
         <param name="kff">                  0           0           0           0       </param>
