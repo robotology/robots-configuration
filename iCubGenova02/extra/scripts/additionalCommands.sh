@@ -35,5 +35,8 @@ ${GREEN}robotsConfigurationInstaller${NC} Takes care of installing the robot con
 ${GREEN}gotoRobotsConfigurationFolder${NC} Go to the source folder of the robot configuration files.
 ${GREEN}configurationSourceInstallDiff${NC} Performs a diff between the source and install configuration files. If there is no difference, it prints nothing.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
-echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
+
+if [ "$PS1" ]; then
+  echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
+fi
 
