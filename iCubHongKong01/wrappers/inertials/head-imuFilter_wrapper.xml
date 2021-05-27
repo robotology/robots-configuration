@@ -3,7 +3,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-imuFilter_wrapper" type="multipleanalogsensorsserver">
-        <param name="period">       10                  </param>
+        <param name="period">       20                  </param>
         <param name="name">     /imuFilter              </param>
 
 

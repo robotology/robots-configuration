@@ -1,0 +1,79 @@
+<application>
+<name>iRonCubStartup_wbd</name>
+
+        <dependencies>
+        </dependencies>
+
+        <module>
+                <name>yarplogger</name>
+                <parameters>--start --no_stop</parameters>
+                <node>icub30</node>
+        </module>
+
+
+        <module>
+                <name>yarprobotinterface</name>
+                <node>icub-head</node>
+                <parameters>--config iRonCub_wbd.xml</parameters>
+                <!-- <parameters>--config iRonCub-noLegs_wbd.xml</parameters> -->
+        </module>
+
+        <module>
+                <name>yarpmotorgui</name>
+                <node>icub30</node>
+                <parameters>--from homePoseiRonCub.ini</parameters>
+        </module>
+
+	<module>
+                <name>yarpdatadumper</name>
+		<parameters>--name /dumper/ft-leftArm/analog --type bottle </parameters>
+                <node>icub30</node>
+		<tag>data-dumperState</tag>
+        </module>
+
+	<module>
+                <name>yarpdatadumper</name>
+		<parameters>--name /dumper/ft-rightArm/analog --type bottle </parameters>
+                <node>icub30</node>
+		<tag>data-dumperState</tag>
+        </module>
+
+	<module>
+                <name>yarpdatadumper</name>
+		<parameters>--name /dumper/stateExt-leftArm/stateExt --type bottle </parameters>
+                <node>icub30</node>
+		<tag>data-dumperState</tag>
+        </module>
+
+	<module>
+                <name>yarpdatadumper</name>
+		<parameters>--name /dumper/stateExt-rightArm/stateExt --type bottle </parameters>
+                <node>icub30</node>
+		<tag>data-dumperState</tag>
+        </module>
+
+	<connection>
+                <from>/icub/left_arm/analog:o</from>
+                <to>/dumper/ft-leftArm/analog</to>
+                <protocol>udp</protocol>
+        </connection>
+
+	<connection>
+                <from>/icub/right_arm/analog:o</from>
+                <to>/dumper/ft-rightArm/analog</to>
+                <protocol>udp</protocol>
+        </connection>
+
+	<connection>
+                <from>/icub/left_arm/stateExt:o</from>
+                <to>/dumper/stateExt-leftArm/stateExt</to>
+                <protocol>udp</protocol>
+        </connection>
+
+	<connection>
+                <from>/icub/right_arm/stateExt:o</from>
+                <to>/dumper/stateExt-rightArm/stateExt</to>
+                <protocol>udp</protocol>
+        </connection>
+
+</application>

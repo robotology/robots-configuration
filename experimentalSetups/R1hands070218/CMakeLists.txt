@@ -1,4 +1,4 @@
-set(appname CER01)
+set(appname R1SN000)
 
 set(scripts CER_ALL.xml CER_ALL_fix.xml CER_ALL_fix_no_laser.xml CER_ALL_no_laser_skin.xml
             yarprobotinterface.ini general.xml yarpmotorgui.ini)
