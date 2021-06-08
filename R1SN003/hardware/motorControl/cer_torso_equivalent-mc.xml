@@ -11,7 +11,7 @@
       <param name="Joints">    3       </param>
       <!-- <param name="AxisMap">   0 1 2   </param> -->
       <!-- <param name="Verbose">   true    </param> -->
-      <param name="Encoder">   1 1 1   </param>
+      <param name="Encoder">   1 -1 1   </param>
     </group>
 
     <group name="TRIPOD">
