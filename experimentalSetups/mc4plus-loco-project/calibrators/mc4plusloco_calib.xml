@@ -16,16 +16,16 @@
 		</group>
 
 		<group name="CALIBRATION">
-		    <param name="calibrationType">        5         3      3     3</param>
-		    <param name="calibration1">           200       0      0     0</param> <!-- used pwm  -->
-		    <param name="calibration2">           65536     0      0     0      </param> 
+		    <param name="calibrationType">        3         3      3     3</param>
+		    <param name="calibration1">           0         0      0     0</param> <!-- used pwm  -->
+		    <param name="calibration2">           0         0      0     0      </param> 
 		    <param name="calibration3">           0         0      0     0      </param> 
             <param name="calibration4">           0         0      0     0      </param> 
             <param name="calibration5">           0         0      0     0      </param> 
 
 
             <param name="calibrationZero">         0.0      0      0     0     </param>
-            <param name="calibrationDelta">        3.0      0      0     0     </param>
+            <param name="calibrationDelta">        0.0      0      0     0     </param>
 
 		    <param name="startupPosition">        0.0       0      0     0     </param> <!-- target position in deg after high level calib is terminated --> 
 		    <param name="startupVelocity">       20.0       20     20.0       20</param> <!-- and its velocity in deg/sec -->
