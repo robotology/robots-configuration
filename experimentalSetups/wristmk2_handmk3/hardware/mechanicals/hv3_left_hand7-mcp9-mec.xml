@@ -6,18 +6,18 @@
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 7 </param> 
         
-        <!-- joint number in sub-part       0               1               2               3               4               5               6               -->
-        <!-- joint name                                                                                                                                     -->         
-        <param name="AxisMap">              0               1               2               3               4               5               6               </param>
-        <param name="AxisName">             "l_thumb_open"  "l_index_open"  "l_medium_open" "l_pinky_open"  "l_thumb_metac" "l_thumb_rot"   "l_index_adduc" </param>
-        <param name="AxisType">             "revolute"      "revolute"      "revolute"      "revolute"      "revolute"      "revolute"      "revolute"      </param>
-        <param name="Encoder">              182.044         182.044         182.044         182.044         182.044         182.044         182.044         </param>
-        <param name="fullscalePWM">         3360            3360            3360            3360            3360            3360            3360            </param>
-        <param name="ampsToSensor">         1000.0          1000.0          1000.0          1000.0          1000.0          1000.0          1000.0          </param>
-        <param name="Gearbox_M2J">          159             159             159             159             159             159             159             </param>
-        <param name="Gearbox_E2J">          1               1               1               1               1               1               1               </param>
-        <param name="useMotorSpeedFbk">     0               0               0               0               0               0               0               </param>
-        <param name="MotorType">            "DC"            "DC"            "DC"            "DC"            "DC"            "DC"            "DC"            </param>
+        <!-- joint number in sub-part       0                       1                       2                           3                       4                   5                       6                           -->
+        <!-- joint name                                                                                                                                                                                                 -->             
+        <param name="AxisMap">              0                       1                       2                           3                       4                   5                       6                           </param>
+        <param name="AxisName">             "l_hand_thumb_proximal" "l_hand_index_proximal" "l_hand_medium_proximal"    "l_hand_pinky_proximal" "l_hand_metacarpus" "l_hand_thumb_rotation" "l_hand_index_adduction"    </param>
+        <param name="AxisType">             "revolute"              "revolute"              "revolute"                  "revolute"              "revolute"          "revolute"              "revolute"                  </param>
+        <param name="Encoder">              182.044                 182.044                 182.044                     182.044                 182.044             182.044                 182.044                     </param>
+        <param name="fullscalePWM">         3360                    3360                    3360                        3360                    3360                3360                    3360                        </param>
+        <param name="ampsToSensor">         1000.0                  1000.0                  1000.0                      1000.0                  1000.0              1000.0                  1000.0                      </param>
+        <param name="Gearbox_M2J">          159                     159                     159                         159                     159                 159                     159                         </param>
+        <param name="Gearbox_E2J">          1                       1                       1                           1                       1                   1                       1                           </param>
+        <param name="useMotorSpeedFbk">     0                       0                       0                           0                       0                   0                       0                           </param>
+        <param name="MotorType">            "DC"                    "DC"                    "DC"                        "DC"                    "DC"                "DC"                    "DC"                        </param>
                 
         <param name="Verbose"> 0 </param>
     </group>
