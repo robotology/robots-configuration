@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="iCubExpSetupMC4PLUSloco" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+    <!-- BOARD MC4PLUSloco -->
+    <!-- motor controllers wrappers -->
+    <xi:include href="./hardware/motorControl/mc4plusloco_mc_hardware.xml" /> 
+    <xi:include href="./wrappers/motorControl/mc4plusloco_mc_wrapper.xml" /> 
+
+    <!-- CALIBRATORS -->
+    <xi:include href="./calibrators/mc4plusloco_calib.xml" />
+    
+</devices>
+</robot> 
+

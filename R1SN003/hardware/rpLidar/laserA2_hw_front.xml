@@ -5,7 +5,7 @@
        <group name="GENERAL">
             <param name="name">            cer_laserFront     </param>
             <param name="serial_baudrate"> 115200       </param>
-            <param name="serial_port">     /dev/ttyUSB1 </param>
+            <param name="serial_port">     /dev/ttyUSB0 </param>
             <param name="sample_buffer_life">  1        </param>
        </group>
        <group name="SENSOR">    
