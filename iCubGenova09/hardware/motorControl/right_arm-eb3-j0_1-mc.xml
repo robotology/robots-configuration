@@ -26,7 +26,7 @@
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                0.1                 0.1                 </param>
+        <param name="stiffness">                0.3                 0.3                 </param>
         <param name="damping">                  0.05                0.05                </param>
     </group>
 
@@ -97,18 +97,18 @@
         <param name="outputType">          pwm                   </param>
         <param name="fbkControlUnits">     metric_units          </param>
         <param name="outputControlUnits">  dutycycle_percent     </param>
-        <param name="kp">                -0.5       -0.5         </param>
+        <param name="kp">                -3       -2         </param>
         <param name="kd">                0          0            </param>
-        <param name="ki">                0          0            </param>
+        <param name="ki">                -6          -4          </param>
         <param name="maxOutput">         25         25           </param>
         <param name="maxInt">            1.56       1.56         </param>
         <param name="ko">                0          0            </param>
         <param name="stictionUp">        0          0            </param>
         <param name="stictionDown">      0          0            </param>
         <param name="kff">               1          1            </param>
-        <param name="kbemf">            -0.0025    -0.0025       </param>
+        <param name="kbemf">            -0.004    -0.004       </param>
         <param name="filterType">        0          0            </param>
-        <param name="ktau">             -0.65       -0.7         </param>
+        <param name="ktau">             -0.86       -0.72         </param>
     </group>    
     <!-- torque PID default: end -->
 
