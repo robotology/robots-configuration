@@ -7,6 +7,7 @@
 this is usually the value of the DISPLAY variable when logged on -->
 <node display=":1" address="10.0.0.158">icub-console</node>
 <node display=":0" address="10.0.10.164">icub-console-gui</node>
+<node address="10.0.10.115" user="pi">pi-ifeel</node>
 <node display=":1">icub-cuda</node>
 <node address="10.0.0.2">icub-head</node>
 <node>icub-virtualizer</node>
