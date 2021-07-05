@@ -19,25 +19,25 @@
             <group name="JOINTMAPPING">
 
                 <group name="ACTUATOR">                 
-                    <param name="type">             pwm                 pwm                 pwm                 pwm                     </param>
-                    <param name="port">             CONN:P5             CONN:P2             CONN:P4             CONN:P3                 </param>
+                    <param name="type">             pwm                 pwm                 pwm            pwm           </param>
+                    <param name="port">             CONN:P5             CONN:P2             CONN:P4        CONN:P3       </param>
                 </group>
                 
                 <group name="ENCODER1">  
-                    <param name="type">             qenc                qenc                absanalog           absanalog               </param>  
-                    <param name="port">             CONN:P5             CONN:P2            CONN:P4             CONN:P3                 </param>
-                    <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param>
-                    <param name="resolution">          1                -4096               4096                4096           </param> 
-                    <param name="tolerance">           0                0.703               0.703                  0                        </param>  
+                    <param name="type">             none                none                none             none         </param>  
+                    <param name="port">             CONN:none           CONN:none            CONN:none         CONN:none    </param>
+                    <param name="position">         none                none             none             none         </param>
+                    <param name="resolution">          1                4096               4096             4096         </param> 
+                    <param name="tolerance">           0                0.703               0.703            0.703        </param>  
 
                 </group>        
                 
                 <group name="ENCODER2">
-                    <param name="type">             qenc                qenc                none                none                    </param>
-                    <param name="port">             CONN:P5             CONN:P2             CONN:none             CONN:none               </param>
-                    <param name="position">         atmotor             atmotor             none             none                    </param>
-                    <param name="resolution">       64                 64                   1                1                       </param> <!-- IE2-16 16x4 (4x interpolation) -->
-                    <param name="tolerance">         0                  0                   0                   0                       </param>  
+                    <param name="type">             qenc                qenc                qenc            qenc          </param>
+                    <param name="port">             CONN:P5             CONN:P2             CONN:P4         CONN:P3       </param>
+                    <param name="position">         atmotor             atmotor             atmotor         atmotor       </param>
+                    <param name="resolution">       64                 -64                   64               -64          </param> <!-- IE2-16 16x4 (4x interpolation) -->
+                    <param name="tolerance">         0                  0                   0               0             </param>  
 
                 </group>  
             </group>    
