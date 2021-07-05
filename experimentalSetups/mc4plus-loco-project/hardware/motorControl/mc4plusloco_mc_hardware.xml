@@ -11,13 +11,13 @@
     <!-- joint number                           0                   1                   2                   3                   -->
     <!-- joint name                             "joint1"    "joint2"     "joint3"       "joint4"     -->
     <group name="LIMITS">
-        <param name="jntPosMax">                 180                180                  30                  30                  </param>
-        <param name="jntPosMin">                -180                 -180                 -30                 -30                  </param>
-        <param name="jntVelMax">                1000                1000                1000                1000                </param>
-        <param name="motorOverloadCurrents">    1000                1000                1000                1000                </param>
-        <param name="motorNominalCurrents">     1000                1000                1000                600                 </param>
-        <param name="motorPeakCurrents">        1000                2000                2000                1000                </param>
-        <param name="motorPwmLimit">            1360                1360                1360                1360                </param>  <!-- max is 3360 --> 
+        <param name="jntPosMax">                 0                0                  0                 0                  </param>
+        <param name="jntPosMin">                 0                0                  0                 0                  </param>
+        <param name="jntVelMax">                1000                1000                1000           1000                </param>
+        <param name="motorOverloadCurrents">    1000                1000                1000           1000                </param>
+        <param name="motorNominalCurrents">     1000                160                1000           160                 </param>
+        <param name="motorPeakCurrents">        2000                500                2000           500                </param>
+        <param name="motorPwmLimit">            3360                3360                3360           3360                </param>  <!-- max is 3360 --> 
     </group>
 
     <group name="TIMEOUTS">

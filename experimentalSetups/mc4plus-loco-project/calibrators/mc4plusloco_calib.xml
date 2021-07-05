@@ -29,14 +29,16 @@
 
 		    <param name="startupPosition">        0.0       0      0     0     </param> <!-- target position in deg after high level calib is terminated --> 
 		    <param name="startupVelocity">       20.0       20     20.0       20</param> <!-- and its velocity in deg/sec -->
-		    <param name="startupMaxPwm">         1500        1500    1500        1500</param> <!-- max pwm used in calib (it is a pid param)-->
+		    <param name="startupMaxPwm">         3360        3360     0        1500</param> <!-- max pwm used in calib (it is a pid param)-->
 		    <param name="startupPosThreshold">     1          1       1            1</param> <!-- tolerance of position in deg relative to positionZero param -->  
+		    <param name="startupDisablePosCheck">  1          1       1            1</param>
+		    <param name="calibrationTimeout">     1.0        1.0     1.0          1.0</param>
 		</group>
 
 		
 
  
-		<param name="CALIB_ORDER"> (0) </param>	<!-- order of calibration-goto-zero in parallel. within () they can go in parallel -->
+		<param name="CALIB_ORDER"> (2 3) </param>	<!-- order of calibration-goto-zero in parallel. within () they can go in parallel -->
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">devmc4plusloco_mc_wrapper</param>
