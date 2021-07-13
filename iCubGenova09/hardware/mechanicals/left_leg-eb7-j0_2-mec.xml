@@ -76,7 +76,7 @@
             <param name="param1">         0             </param>
             <param name="param2">         0             </param>
         </group> 
-        <group name="JOINTSET_3">
+        <group name="JOINTSET_2">
             <param name="listofjoints">   2             </param>
             <param name="constraint">     none          </param>
             <param name="param1">         0             </param>
