@@ -4,7 +4,7 @@
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova09" build="1">
     <group name="GENERAL">
         <param name="MotioncontrolVersion"> 6  </param>
-        <param name="Joints">  2  </param>  
+        <param name="Joints">  3  </param>  
         <param name="AxisMap">                    0                1                 2           </param>
         <param name="AxisName">                 "r_knee"    "r_ankle_pitch"     "r_ankle_roll"   </param>
         <param name="AxisType">                "revolute"    "revolute"          "revolute"       </param>
