@@ -31,7 +31,7 @@
 
                 <group name="ACTUATOR">                
                     <param name="type">         foc         eomc_act_foc        foc                 </param>
-                    <param name="port">         CAN1:2:0    CAN1:1:0            CAN1:2:0            </param>
+                    <param name="port">         CAN1:3:0    CAN1:1:0            CAN1:2:0            </param>
                 </group>
                 
                 <group name="ENCODER1">  
