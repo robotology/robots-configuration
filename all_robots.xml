@@ -62,6 +62,8 @@
 	<xi:include href="./iCubTwente01/icub_all.xml" />
 	<xi:include href="./iCubAberystwyth01/icub_all.xml" />
 	<xi:include href="./iCubGenova08/icub_all.xml" />
+	<xi:include href="./iCubGenova09/icub_all.xml" />
+	<xi:include href="./iCubGenova10/icub_all.xml" />
 	<xi:include href="./iCubWaterloo01/icub_all.xml" />
 	<xi:include href="./iCubZagreb01/icub_all.xml" />
 	<xi:include href="./iCubPrague01/icub_all.xml" />
