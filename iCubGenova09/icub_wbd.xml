@@ -107,7 +107,7 @@
     <xi:include href="calibrators/torso-calib.xml" />
 
     <!-- estimators -->
-    <!--<xi:include href="estimators/wholebodydynamics.xml" />  -->
+    <xi:include href="estimators/wholebodydynamics.xml" />
 
   </devices>
 </robot>
