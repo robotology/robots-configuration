@@ -8,6 +8,11 @@
     <xi:include href="./hardware/motorControl/mc4plusloco_mc_hardware.xml" /> 
     <xi:include href="./wrappers/motorControl/mc4plusloco_mc_wrapper.xml" /> 
 
+    <!-- IMU-->
+    <xi:include href="hardware/inertials/mc4plusloco-IMU.xml" /> 
+    
+    <xi:include href="wrappers/inertials/mc4plusloco-IMU-wrapper.xml" /> 
+
     <!-- CALIBRATORS -->
     <xi:include href="./calibrators/mc4plusloco_calib.xml" />
     
