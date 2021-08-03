@@ -26,11 +26,8 @@
     <param name="calibration4">                       0.0            0.0        0.0          0.0         0.0       0.0      </param>
     <param name="calibration5">                       0.0            0.0        0.0          0.0         0.0       0.0      </param>
     <param name="calibrationZero">                    0.0            0.0        0.0          0.0         0.0       0.0      </param>
-<<<<<<< HEAD
-    <param name="calibrationDelta">     2.657     -4.738      1.254     -0.069     15.540     -2.813</param>
-=======
+
     <param name="calibrationDelta">     -2.53     -4.738      1.254     0.0     0.0     -2.813</param>
->>>>>>> 69308424b (added fingertip support - mods for legs after rework)
 
     <param name="startupPosition">                    5              15          0           -20           0         0           </param>
     <param name="startupVelocity">                    10.0           10.0       10.0         10.0        10.0      10.0        </param>
