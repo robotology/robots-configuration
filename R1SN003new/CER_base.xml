@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="R1SN003" build="1" portprefix="cer" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+ 
+    <!-- LASER -->
+    <xi:include href="hardware/rpLidar/laserA2_hw_back.xml" /> 
+    <xi:include href="wrappers/rpLidar/laser_back_wrapper.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA2_hw_front.xml" /> 
+    <xi:include href="wrappers/rpLidar/laser_front_wrapper.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA2_hw_double.xml" /> 
+    <xi:include href="wrappers/rpLidar/laser_double_wrapper.xml" /> 
+
+    <!-- BASE -->
+    <xi:include href="hardware/motorControl/cer_base-ems1-mc.xml" />
+    <xi:include href="wrappers/motorControl/cer_base-mc_wrapper.xml" />
+   
+
+    <!--  CALIBRATORS -->
+    <xi:include href="calibrators/cer_base-calib.xml" /> 
+  
+    <!--  ROS -->
+    <xi:include href="wrappers/motorControl/cer_ros_wrapper_base_only.xml" /> 
+</devices>
+</robot> 
