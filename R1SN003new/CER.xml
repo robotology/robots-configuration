@@ -5,11 +5,11 @@
 <devices>
  
     <!-- LASER -->
-    <xi:include href="hardware/rpLidar/laserA2_hw_back.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA3_hw_back.xml" /> 
     <xi:include href="wrappers/rpLidar/laser_back_nws_yarp.xml" /> 
-    <xi:include href="hardware/rpLidar/laserA2_hw_front.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA3_hw_front.xml" /> 
     <xi:include href="wrappers/rpLidar/laser_front_nws_yarp.xml" /> 
-    <xi:include href="hardware/rpLidar/laserA2_hw_double.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA3_hw_double.xml" /> 
     <xi:include href="wrappers/rpLidar/laser_double_nws_yarp.xml" />
     <xi:include href="wrappers/rpLidar/laser_double_nws_ros.xml" />
 
