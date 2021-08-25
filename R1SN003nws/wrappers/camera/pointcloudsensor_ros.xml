@@ -3,9 +3,9 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="pointCloudWrapR" type="RGBDToPointCloudSensor_nws_ros">
     <param name="period"> 0.033 </param>
-    <param name="nodeName">    /camera/rgbdPointCloud_nws_ros </param>
-    <param name="pointCloudTopicName">  /camera/depth/color/points  </param>
-    <param name="frame_Id">    depth_center</param>
+    <param name="node_name">    /camera/rgbdPointCloud_nws_ros </param>
+    <param name="topic_name">  /camera/depth/color/points  </param>
+    <param name="frame_id">    depth_center</param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="subdevicergbd"> realsense2dev </elem>

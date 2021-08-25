@@ -3,12 +3,11 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperros" type="rgbdSensor_nws_ros">
     <param name="period"> 33</param>
-    <param name="colorTopicName">    /camera/rgbdSensor_nws_ros/color/image_raw    </param>
-    <param name="depthTopicName">    /camera/rgbdSensor_nws_ros/depth/image_rect_raw    </param>
-    <param name="colorInfoTopicName">    /camera/rgbdSensor_nws_ros/color/camera_info     </param>
-    <param name="depthInfoTopicName">    /camera/rgbdSensor_nws_ros/depth/camera_info   </param>
-    <param name="frame_Id">    depth_center    </param>
-    <param name="nodeName">    /camera/rgbdSensor_nws_ros/rgbdwrapperros    </param>
+    <param name="color_topic_name">    /camera_rgbd/color/image_rect_color    </param>
+    <param name="depth_topic_name">    /camera_rgbd/depth/image_rect    </param>
+    <param name="color_frame_id">    depth_center    </param>
+    <param name="depth_frame_id">    depth_center    </param>
+    <param name="node_name">    /rgbdsensor_ros_node    </param>
 
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
