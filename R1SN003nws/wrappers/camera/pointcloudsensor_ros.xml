@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="pointCloudWrapR" type="RGBDToPointCloudSensor_nws_ros">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="pointCloudWrapR" type="rgbdToPointCloudSensor_nws_ros">
     <param name="period"> 0.033 </param>
     <param name="node_name">    /camera/rgbdPointCloud_nws_ros </param>
     <param name="topic_name">  /camera/depth/color/points  </param>
