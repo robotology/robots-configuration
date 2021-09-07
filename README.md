@@ -8,10 +8,10 @@ Robots Configuration
 ## Maintainers
 This repository is maintained by:
 
-| | |
-|:---:|:---|
-| [<img src="https://github.com/pattacini.png" width="40">](https://github.com/pattacini) | [@pattacini](https://github.com/pattacini) |
-| [<img src="https://github.com/Nicogene.png" width="40">](https://github.com/Nicogene) | [@pattacini](https://github.com/Nicogene) |
+| | | |
+|:---:|:---|:---|
+| [<img src="https://github.com/pattacini.png" width="40">](https://github.com/pattacini) | [@pattacini](https://github.com/pattacini) | Main responsible |
+| [<img src="https://github.com/Nicogene.png" width="40">](https://github.com/Nicogene) | [@Nicogene](https://github.com/Nicogene) | Deputy |
 
 ## Installation
 
