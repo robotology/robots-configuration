@@ -23,12 +23,12 @@
 <param name="calibration4">                       0.0             0.0         0.0       0.0            0.0           0.0           </param>
 <param name="calibration5">                       0.0             0.0         0.0       0.0            0.0           0.0           </param>
 <param name="calibrationZero">                    -180.00         -180.00    -180.00   180.00         180.00        -180.00       </param>
-<param name="calibrationDelta">                   0.5             -3.5        0.5      -3.5           5.2            1.0           </param>
+<param name="calibrationDelta">                   0.5             3.2       0.5      -3.5           5.2            1.0           </param>
 
 <!-- put j1 >= 5 for startup to avoid touching the pole with the leg cover -->
 <param name="startupPosition">                    0               5.0           0         0              0             0             </param>
 <param name="startupVelocity">                    10.0            10.0        10.0      10.0           10.0          10.0          </param>
-<param name="startupMaxPwm">                      1200            1200        1200      1200           4200          4200          </param>
+<param name="startupMaxPwm">                      1500           1500       1500         1500        1200      1200           </param>
 <param name="startupPosThreshold">                2               2           2         2              2             2             </param>
 </group>
 

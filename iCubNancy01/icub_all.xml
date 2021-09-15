@@ -78,9 +78,9 @@
     <xi:include href="hardware/skin/left_arm-eb2-j4_15-skin.xml" />
     <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />  
     <xi:include href="hardware/skin/right_arm-eb4-j4_15-skin.xml" /> 
-<!-- <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" /> -->
+    <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" /> 
     <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />
-<!-- <xi:include href="hardware/skin/left_leg-eb10-skin.xml" /> -->
+    <xi:include href="hardware/skin/left_leg-eb10-skin.xml" /> 
     <xi:include href="hardware/skin/right_leg-eb11-skin.xml" />
     <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />
     <xi:include href="hardware/skin/torso-cfw2_can9-skin.xml" />
