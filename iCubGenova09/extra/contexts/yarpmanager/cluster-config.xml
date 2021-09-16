@@ -1,0 +1,17 @@
+<cluster name="icub09" user="icub">
+
+<!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
+<nameserver namespace="/icub09" node="icub-console" type="yarpserver"> </nameserver>
+
+<!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
+this is usually the value of the DISPLAY variable when logged on -->
+<node display=":1" address="10.0.0.158">icub-console</node>
+<node display=":0" address="10.0.10.164">icub-console-gui</node>
+<node address="10.0.10.115" user="pi">pi-ifeel</node>
+<node display=":1">icub-cuda</node>
+<node address="10.0.0.2">icub-head</node>
+<node>icub-virtualizer</node>
+<node display=":1" address="10.0.10.29">icub29</node>
+
+</cluster>
+

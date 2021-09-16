@@ -3,14 +3,15 @@ Robots Configuration
 
 [![ZenHub](https://img.shields.io/badge/Shipping_faster_with-ZenHub-435198.svg)](https://zenhub.com)
 [![Community](https://img.shields.io/badge/Join-Robotology_Community-blue?style=plastic&logo=github)](https://github.com/robotology/community)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Maintainers
 This repository is maintained by:
 
-| | |
-|:---:|:---|
-| [<img src="https://github.com/pattacini.png" width="40">](https://github.com/pattacini) | [@pattacini](https://github.com/pattacini) |
-| [<img src="https://github.com/marcoaccame.png" width="40">](https://github.com/marcoaccame) | [@marcoaccame](https://github.com/marcoaccame) |
+| | | |
+|:---:|:---|:---|
+| [<img src="https://github.com/pattacini.png" width="40">](https://github.com/pattacini) | [@pattacini](https://github.com/pattacini) | Main responsible |
+| [<img src="https://github.com/Nicogene.png" width="40">](https://github.com/Nicogene) | [@Nicogene](https://github.com/Nicogene) | Deputy |
 
 ## Installation
 
@@ -47,6 +48,8 @@ You should end up finding the local copies under `~/.local/share/yarp/robots/$YA
 
 ## Contributing
 We accept contributions via [forks and pull-requests](https://guides.github.com/activities/forking).
+
+**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
 
 ## License
 Material included here is Copyright of _iCub Facility - Istituto Italiano di

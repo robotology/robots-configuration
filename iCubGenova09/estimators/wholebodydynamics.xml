@@ -18,6 +18,7 @@
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="useSkinForContacts">false</param>
+        <param name="publishNetExternalWrenches">true</param>
 	<!--        <param name="assume_fixed">root_link</param>-->
 	<group name="HW_USE_MAS_IMU">
 	    <param name="accelerometer">rfeimu_acc</param>
@@ -55,12 +56,10 @@
                 <elem name="right_upper_arm-j0">right_arm-eb3-j0_1-mc</elem>
                 <elem name="right_upper_arm-j2">right_arm-eb4-j2_3-mc</elem>
                 <elem name="right_lower_arm">right_arm-eb27-j4_7-mc</elem>
-                <elem name="left_upper_leg-j0">left_leg-eb6-j0_1-mc</elem>
-                <elem name="left_upper_leg-j2">left_leg-eb7-j2_3-mc</elem>
-                <elem name="left_lower_leg">left_leg-eb8-j4_5-mc</elem>
-                <elem name="right_upper_leg-j0">right_leg-eb10-j0_1-mc</elem>
-                <elem name="right_upper_leg-j2">right_leg-eb11-j2_3-mc</elem>
-		<elem name="right_lower_leg">right_leg-eb12-j4_5-mc</elem> 
+                <elem name="left_upper_leg-j0">left_leg-eb7-j0_2-mc</elem>
+                <elem name="left_lower_leg-j2">left_leg-eb8-j3_5-mc</elem>
+                <elem name="right_upper_leg-j0">right_leg-eb11-j0_2-mc</elem>
+                <elem name="right_lower_leg-j2">right_leg-eb12-j3_5-mc</elem>
 
                 <!-- imu -->
                 <elem name="imu">head-inertial</elem> 
@@ -73,10 +72,10 @@
 
   		 <elem name="l_arm_ft_sensor">left_arm-eb1-j0_1-strain</elem>
                 <elem name="r_arm_ft_sensor">right_arm-eb3-j0_1-strain</elem>
-                <elem name="l_foot_front_ft_sensor">left_leg-eb9-skin-strain</elem>
-                <elem name="l_foot_rear_ft_sensor">left_leg-eb8-j4_5-strain</elem>
-                <elem name="r_foot_front_ft_sensor">right_leg-eb13-skin-strain</elem>
-		<elem name="r_foot_rear_ft_sensor">right_leg-eb12-j4_5-strain</elem> 
+                <elem name="l_foot_front_ft_sensor">left_leg-eb8-j3_5-strain</elem>
+                <elem name="l_foot_rear_ft_sensor">left_leg-eb7-j0_2-strain</elem>
+                <elem name="r_foot_front_ft_sensor">right_leg-eb12-j3_5-strain</elem>
+		<elem name="r_foot_rear_ft_sensor">right_leg-eb11-j0_2-strain</elem> 
             </paramlist>
         </action>
 

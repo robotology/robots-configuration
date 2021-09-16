@@ -1,0 +1,17 @@
+
+#MK3
+
+
+Base            (EMS1):      standard iCub SW on all 2FOC
+
+Torso           (EMS3):      2FOC-DC.hex    on 2FOC 1,2,3
+                             2FOC-WORM.hex  on 2FOC 4
+
+Left shoulder   (EMS5):      2FOC-WORM.hex  on all 2FOC
+
+Right shoulder  (EMS4):      2FOC-WORM.hex  on all 2FOC
+
+Left upper arm  (EMS12):     2FOC-UARM.hex  on all 2FOC   <!-- different wrt Mk1 -->
+
+Right upper arm (EMS11):     2FOC-UARM.hex  on all 2FOC   <!-- different wrt Mk1 -->
+
