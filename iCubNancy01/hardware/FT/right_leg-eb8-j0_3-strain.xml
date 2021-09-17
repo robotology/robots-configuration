@@ -39,13 +39,14 @@
 
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_r_upper_leg_strain   </param>                
+                <param name="enabledSensors">           id_r_upper_leg_strain   </param>  
+                <param name="temperature-acquisitionRate"> 1000                  </param> <!-- 1 seconds -->                           
             </group>
             
             <group name="STRAIN_SETTINGS">        
                 <param name="useCalibration">           true                    </param>          
-            </group>            
-            
+            </group>  
+       
         </group>
     
   </device>
