@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" type="canBusInertialMTB" name="right_arm_accelerometers_mtb">
+    <param name="canbusDevice"> "sharedcan" </param>
+    <param name="physDevice"> "cfw2can" </param>
+    <param name="canDeviceNum"> 8 </param>
+	<param name="canAddress"> 8 9 10 11 12 13 </param>
+    <param name="period"> 10 </param>
+    <param name="sensorPeriod"> 10 </param>
+    <param name="sensorType"> "acc" </param>
+</device>
+
