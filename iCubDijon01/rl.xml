@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<robot name="iCubLondon01" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+    
+   
+    <!-- motor controllers wrappers -->
+    
+    <xi:include href="wrappers/motorControl/right_leg_mc_wrapper.xml" />
+    <xi:include href="hardware/motorControl/icub_right_leg.xml" />
+ 
+    
+    <!-- VIRTUAL ANALOG SERVERs -->
+    
+   <!-- <xi:include href="wrappers/VFT/right_leg_VFT_wrapper.xml" />
+    <xi:include href="hardware/VFT/right_leg_virtual_strain.xml" />-->
+    
+    <!-- REAL ANALOG SENSORS -->
+    
+    
+    <!--<xi:include href="wrappers/FT/right_leg_FT_wrapper.xml" />
+    <xi:include href="hardware/FT/right_leg_strain.xml" />-->
+
+
+    <!-- CALIBRATORS -->
+    
+    <xi:include href="calibrators/right_leg_calib.xml" />
+    
+
+</devices>
+</robot>

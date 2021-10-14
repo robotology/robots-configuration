@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+ <!-- Initialization file for cfw002  motor contol for the head - 6 joints -->
+ 
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm_skin" type="canBusSkin">
+      <xi:include href="../../general.xml" />
+
+	  <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubLondon01" build="1">
+        <param name="canDeviceNum"> 8         </param>
+        <param name="skinCanIds">   14 13 12 11 10 9 8  </param>
+        <param name="period"> 10              </param>
+        <param name="canbusDevice"> cfw2can   </param>
+      </params>
+    <xi:include href="./right_arm-cfw2_can8-skinSpec.xml" /> 
+  </device>
+
