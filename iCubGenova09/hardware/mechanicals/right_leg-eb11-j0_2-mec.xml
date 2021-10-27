@@ -13,7 +13,8 @@
         <param name="fullscalePWM">     32000              32000           32000  </param>
         <param name="ampsToSensor">     1000.0             1000.0           1000.0  </param>
         <param name="Gearbox_M2J">      100.00             -100.00          100.0  </param>
-        <param name="Gearbox_E2J">   	1                  1                  1</param>
+        <param name="Gearbox_E2J">   	  1                   1              1 </param>
+    <!--<param name="Gearbox_E2J">   	  64                  64             64</param>-->
         <param name="useMotorSpeedFbk"> 1                  1                1  </param>
         <param name="MotorType">       "MOOG_C2900580"     "MOOG_C2900576" "MOOG_C2900576"  </param>
 
@@ -22,8 +23,8 @@
     
     <group name="LIMITS">
         <!--                                 0        1             	2            -->
-        <param name="hardwareJntPosMax">       114            118   80.5      </param>
-        <param name="hardwareJntPosMin">       -47            -20  -80.5      </param>
+        <param name="hardwareJntPosMax">       114            118   80.7      </param>
+        <param name="hardwareJntPosMin">       -47            -16  -80.5      </param>
         <param name="rotorPosMin">            0              0      0   </param> 
         <param name="rotorPosMax">            0              0      0   </param>
     </group>
