@@ -31,14 +31,13 @@
         <param name="JntVelocityMax">   0.05  </param>
     </group>
 
-    <!-- action is alternative to CONNECTION group -->
-    <action phase="startup" level="1" type="attach">
+    <action phase="startup" level="4" type="attach">
       <paramlist name="networks">
           <elem name="FirstSetOfJoints"> cer_left_lower_arm_mc </elem>
       </paramlist>
     </action>
 
-    <action phase="shutdown" level="6" type="detach" />
+    <action phase="shutdown" level="21" type="detach" />
 
   </device>
 
