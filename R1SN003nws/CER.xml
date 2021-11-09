@@ -4,6 +4,11 @@
 <robot name="R1SN003" build="1" portprefix="cer" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
  
+    <!-- ODOMETRY -->
+    <xi:include href="wrappers/odometry/odometry_nws_yarp.xml" />
+    <xi:include href="wrappers/odometry/odometry_nws_ros.xml" />
+    <xi:include href="hardware/odometry/odometry.xml" />
+
     <!-- LASER -->
     <xi:include href="hardware/rpLidar/laserA3_hw_back.xml" /> 
     <xi:include href="wrappers/rpLidar/laser_back_nws_yarp.xml" /> 

@@ -20,14 +20,14 @@
             <param name="allow_infinity">  1            </param>
          </group>
         
-      <action phase="startup" level="3" type="attach">
+      <action phase="startup" level="5" type="attach">
          <paramlist name="networks">
             <elem name="L_Front">  cer_laser_front_device </elem>
             <elem name="L_Back">   cer_laser_back_device </elem>
          </paramlist>
       </action>
       
-      <action phase="shutdown" level="3" type="detach"/>
+      <action phase="shutdown" level="20" type="detach"/>
 
     </device>
 
