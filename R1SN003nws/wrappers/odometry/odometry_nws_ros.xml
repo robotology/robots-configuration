@@ -4,8 +4,8 @@
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_odometry_nws_ros" type="odometry2D_nws_ros">
     <param name="topic_name">   /odometry </param>
     <param name="node_name">    /cer_odometry_nws_ros </param>
-    <param name="base_frame">   mobile_base_link </param>
-    <param name="odom_frame">   odometry </param>
+    <param name="base_frame">   mobile_base_body_link </param>
+    <param name="odom_frame">   odom </param>
     
     <action phase="startup" level="10" type="attach">
             <param name="device">  cer_odometry </param>

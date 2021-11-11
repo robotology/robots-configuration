@@ -4,7 +4,8 @@
     <param name="joints"> 28 </param>
     <paramlist name="networks">
         <elem name="head">(            0  1   0  1 )</elem>
-        <elem name="torso">(           2  5   0  3 )</elem>
+        <elem name="torso">(           2  4   0  2 )</elem>
+        <elem name="torso_yaw">(       5  5   3  3 )</elem>
         <elem name="right_arm">(       6  13  0  7 )</elem>
         <elem name="left_arm">(        14 21  0  7 )</elem>
         <elem name="right_hand">(      22 23  0  1 )</elem>
@@ -14,7 +15,8 @@
     <action phase="startup" level="6" type="attach">
         <paramlist name="networks">
             <elem name="head">            cer_head_mc               </elem>
-            <elem name="torso">           cer_torso_mc              </elem>
+            <elem name="torso">           cer_torso_equivalent_mc   </elem>
+            <elem name="torso_yaw">       cer_torso_mc              </elem>
             <elem name="base">            cer_mobile_base_mc        </elem>
             <elem name="right_arm">       cer_right_arm_no_hand_mc_remapper  </elem>
             <elem name="right_hand">      cer_right_hand_mc         </elem>
