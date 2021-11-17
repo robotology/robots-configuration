@@ -28,7 +28,7 @@
             
             
 
-            <group name="JOINTMAPPING">
+            <group name="JOINTMAPPING">  
 
                 <group name="ACTUATOR">                
                     <param name="type">             foc                 foc         foc        </param>
