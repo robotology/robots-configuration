@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_hand_as_wrapperMais" type="analogServer">
+        <param name="period">       10                  </param>
+        <param name="name">     /cer/right_hand/analog:o          </param>
+
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+                <elem name="right_hand_mais_network">  right_hand_multienc </elem>
+            </paramlist>
+        </action>
+
+        <group name ="ROS">
+           <param name ="useROS"> true </param>
+           <param name ="ROS_nodeName"> /cer-right_hand_MAIS </param>
+           <param name ="ROS_topicName"> /joint_states </param>
+           <param name ="ROS_msgType"> sensor_msgs/JointState </param>
+           <param name ="joint_names"> r_hand_paddle_distal_joint r_hand_paddle_proximal_joint r_dummy_1 r_hand_thumb_distal_joint r_hand_thumb_proximal_joint r_dummy_2 </param>
+        </group>
+        
+        <action phase="shutdown" level="5" type="detach" />
+        </device>
+

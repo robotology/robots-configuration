@@ -31,8 +31,8 @@
 <param name="AxisMap">      0             1             2             3             4             5             6             7             </param>       
 <param name="AxisName">    "r_thumb_oppose"     "r_thumb_proximal"     "r_thumb_distal"   "r_index_proximal"    "r_index_distal"    "r_middle_proximal"   "r_middle_distal"    "r_pinky"  </param>
 <param name="AxisType">    "revolute"  "revolute"    "revolute"    "revolute"   "revolute"     "revolute"   "revolute"     "revolute"       </param>
-<param name="Encoder">       10.778    -2.344   -2.771   -2.500   -2.559   -2.733   -2.794   -1.400   </param>
-<param name="Zeros">         133.61   -107.06  -180.83  -98.00   -186.41  -92.56   -175.01  -480.70  </param>
+<param name="Encoder">       6.844    -2.567   -2.453   -2.078   -2.365   -2.300   -2.359   -1.716   </param>
+<param name="Zeros">         244.58   -99.35  -172.04  -94.33   -175.50  -90.00   -179.33  -365.38  </param>
 <param name="fullscalePWM">           1333            1333         1333      1333     1333    1333     1333    1333  </param>
 <param name="ampsToSensor">           1000.0          1000.0       1000.0    1000.0   1000.0  1000.0   1000.0  1000.0   </param>
 

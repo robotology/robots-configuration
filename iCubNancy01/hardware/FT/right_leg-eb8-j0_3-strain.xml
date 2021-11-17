@@ -3,7 +3,7 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb8-j0_3-strain" type="embObjStrain">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb8-j0_3-strain" type="embObjFTsensor">
     
         <xi:include href="../../general.xml"/>
 
@@ -16,16 +16,16 @@
             <group name="PROPERTIES">
   
                 <group name="CANBOARDS">
-                    <param name="type">                 eobrd_strain            </param>
+                    <param name="type">                 strain2            </param>
 
                     <group name="PROTOCOL">
-                        <param name="major">            1                       </param>    
+                        <param name="major">            2                       </param>    
                         <param name="minor">            0                       </param>     
                     </group>                    
                     <group name="FIRMWARE">
                         <param name="major">            2                       </param>    
                         <param name="minor">            0                       </param> 
-                        <param name="build">            4                       </param>
+                        <param name="build">            9                       </param>
                     </group>
                 </group>
                 
@@ -39,13 +39,14 @@
 
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_r_upper_leg_strain   </param>                
+                <param name="enabledSensors">           id_r_upper_leg_strain   </param>  
+                <param name="temperature-acquisitionRate"> 1000                  </param> <!-- 1 seconds -->                           
             </group>
             
             <group name="STRAIN_SETTINGS">        
                 <param name="useCalibration">           true                    </param>          
-            </group>            
-            
+            </group>  
+       
         </group>
     
   </device>
