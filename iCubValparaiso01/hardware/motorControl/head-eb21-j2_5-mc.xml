@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-eb21-j2_5-mc" type="embObjMotionControl">
+
+    <xi:include href="../../general.xml" />
+    <xi:include href="../../hardware/electronics/head-eb21-j2_5-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/head-eb21-j2_5-mec.xml" />
+    <xi:include href="./head-eb21-j2_5-mc_service.xml" />
+
+    <!-- joint number                           0                   1                   2                   3                   -->
+    <!-- joint name                             neck-yaw            eyes-tilt           eyes-vers           eyes-verg           -->         <!-- j2 is right-eye, j3 is left-eye -->
+    <group name="LIMITS">
+        <param name="jntPosMin">                -45                 -30                 -30                 0                   </param>
+        <param name="jntPosMax">                +45                 +30                 +30                 +45                 </param>
+        <param name="jntVelMax">                1000                1000                1000                1000                </param>
+        <param name="motorOverloadCurrents">    2000                2000                2500                2500                </param>
+        <param name="motorNominalCurrents">     700                 700                 700                 700                 </param>
+        <param name="motorPeakCurrents">        1500                1500                1500                1500                </param>
+    
+        <param name="motorPwmLimit">            3360                3360                3360                3360                </param>
+    </group>
+   
+    <group name="TIMEOUTS">
+        <param name="velocity">                 100                 100                 100                 100                 </param>
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">                0.0                 0.0                 0.0                 0.0                 </param>
+        <param name="damping">                  0.0                 0.0                 0.0                 0.0                 </param>
+    </group>
+    
+    <group name="CONTROLS">
+        <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
+        <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
+        <param name="mixedControl">             POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
+        <param name="torqueControl">            none                none                none                none                </param>
+        <param name="currentPid">               none                none                none                none                </param>
+        <param name="speedPid">                 none                none                none                none                </param>
+    </group>
+
+
+    <!-- default position PID: begin -->
+    
+    <group name="POS_PID_DEFAULT">
+        <param name="controlLaw">               minjerk         </param>
+        <param name="outputType">               pwm             </param>
+        <param name="fbkControlUnits">          metric_units    </param>
+        <param name="outputControlUnits">       machine_units   </param>
+        <param name="kp">                       1100.00     -1000       3500        3500        </param>
+        <param name="kd">                       0.0         0.0         0.0         0.0         </param>
+        <param name="ki">                       0.0         -100        600.0       600.0       </param>
+        <param name="maxOutput">                3360        3360        3360        3360        </param>
+        <param name="maxInt">                   3360        3360        3360        3360        </param>
+        <param name="stictionUp">               0           0           0           0           </param>
+        <param name="stictionDown">             0           0           0           0           </param>
+        <param name="kff">                      0           0           0           0           </param>
+    </group>
+
+    <!-- default position PID: end -->
+
+
+    <!-- other default PIDs: begin -->   
+    <!-- other default PIDs: end -->
+
+
+    <!-- custom PIDs: begin -->    
+    <!-- custom PIDs: end -->
+    
+</device>
