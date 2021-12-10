@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>    
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_calibrator" type="parametricCalibrator">   
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_calibrator" type="parametricCalibrator">
                 <xi:include href="../general.xml" />
- 
-        <group name="GENERAL">             
-            <param name="joints"> 8 </param>             
-            <param name="deviceName"> Left_Hand_Calibrator </param>    
-        </group>             
- 
+
+        <group name="GENERAL">
+            <param name="joints"> 8 </param>
+            <param name="deviceName"> Left_Hand_Calibrator </param>
+        </group>
+
 
 
 <!--USE THIS FOR CAN ROBOT CALIBRATION-->
@@ -31,45 +31,17 @@
 </group>
 
 
- 
-        <param name="CALIB_ORDER">(0 1 3 5) (2 4 6 7) </param>         
-               
-        <action phase="startup" level="10" type="calibrate">           
-            <param name="target">left_hand_mc</param>    
-        </action>            
- 
-        <action phase="interrupt1" level="1" type="park">              
-            <param name="target">left_hand_mc</param>    
-        </action>            
- 
-        <action phase="interrupt3" level="1" type="abort" />           
- 
-    </device>  
-     
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+        <param name="CALIB_ORDER">(0 1 3 5) (2 4 6 7) </param>
+
+        <action phase="startup" level="15" type="calibrate">
+            <param name="target">left_hand_mc</param>
+        </action>
+
+        <action phase="interrupt1" level="1" type="park">
+            <param name="target">left_hand_mc</param>
+        </action>
+
+        <action phase="interrupt3" level="1" type="abort" />
+
+    </device>
