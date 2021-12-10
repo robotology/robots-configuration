@@ -30,13 +30,13 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">           rfeimu_acc      rfeimu_gyro     rfeimu_mag      rfeimu_status
+                    <param name="id">           rfeimu_acc      rfeimu_gyro     rfeimu_mag     rfeimu_eul      rfeimu_status
                     </param>
-                    <param name="type">         eoas_imu_acc    eoas_imu_gyr    eoas_imu_mag    eoas_imu_status
+                    <param name="type">         eoas_imu_acc    eoas_imu_gyr    eoas_imu_mag    eoas_imu_eul    eoas_imu_status
                     </param>
-                    <param name="boardType">    rfe             rfe             rfe             rfe
+                    <param name="boardType">    rfe             rfe             rfe             rfe             rfe
                     </param>
-                    <param name="location">     CAN1:1          CAN1:1          CAN1:1          CAN1:1
+                    <param name="location">     CAN1:1          CAN1:1          CAN1:1          CAN1:1          CAN1:1
                     </param>
                 </group>
 
@@ -44,7 +44,7 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">      10      </param>
-                <param name="enabledSensors">       rfeimu_acc  rfeimu_gyro  rfeimu_mag  rfeimu_status </param>
+                <param name="enabledSensors">       rfeimu_acc  rfeimu_gyro  rfeimu_mag  rfeimu_eul  rfeimu_status </param>
             </group>
 
         </group>
