@@ -31,23 +31,13 @@
         <param name="JntVelocityMax">   0.05  </param>
     </group>
 
-
-    <!--
-    <group name="CONNECTION">
-      <param name="local">         /cerGazeboSim/torso_out  </param>
-      <param name="remote">        /cerGazeboSim/torso      </param>
-      <param name="writeStrict">   off                       </param>
-    </group>
-     -->
-
-    <!-- action is alternative to CONNECTION group -->
-    <action phase="startup" level="5" type="attach">
+    <action phase="startup" level="4" type="attach">
       <paramlist name="networks">
           <elem name="FirstSetOfJoints"> cer_torso_mc </elem>
       </paramlist>
     </action>
 
-    <action phase="shutdown" level="6" type="detach" />
+    <action phase="shutdown" level="21" type="detach" />
 
   </device>
 

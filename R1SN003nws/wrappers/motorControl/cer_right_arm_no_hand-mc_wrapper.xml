@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_right_arm_no_hand_mc_wrapper" type="controlBoard_nws_yarp">
-    <param name="name">   /cer/right_arm  </param>
-    <action phase="startup" level="10" type="attach">
-            <param name="device">  cer_right_arm_no_hand_mc_remapper </param>
-    </action>
-    <action phase="shutdown" level="15" type="detach" />
-</device>
