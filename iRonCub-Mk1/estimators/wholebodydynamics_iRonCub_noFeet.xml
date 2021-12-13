@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="wholebodydynamics" type="wholebodydynamics">
         <param name="axesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch, neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
-        <param name="modelFile">model.urdf</param>
+        <param name="modelFile">model_no-feet-ft.urdf</param>
         <param name="fixedFrameGravity">(0,0,-9.81)</param>
         <param name="defaultContactFrames">(root_link,l_sole,r_sole,l_elbow_1,r_elbow_1)</param>
 	<!--param name="defaultContactFrames">(root_link,l_sole,r_sole,r_lower_leg,l_lower_leg,l_elbow_1,r_elbow_1)</param-->
@@ -18,6 +18,7 @@
         <param name="forceTorqueFilterCutoffInHz">3.0</param>
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
+        <param name="additionalConsideredFixedJoints">(l_foot_ft_sensor,r_foot_ft_sensor)</param> <!-- Feet FT sensors are removed from the URDF model so these fixed joints should be added explicitly-->
 
         <!-- map between iDynTree links (identified by a name)
              and skinDynLib links (identified by their frame name, a BodyPart enum
@@ -33,8 +34,8 @@
             <param name="r_elbow_1">(r_elbow_1, 4, 4)</param>
             <param name="l_lower_leg">(l_lower_leg,5,3)</param>
             <param name="l_ankle_1">(l_ankle_1,5,4)</param>
-            <!--param name="l_foot">(l_foot_dh_frame,5,5)</param-->
-            <!--param name="r_foot">(r_foot_dh_frame,6,5)</param-->
+            <param name="l_foot">(l_foot_dh_frame,5,5)</param>
+            <param name="r_foot">(r_foot_dh_frame,6,5)</param>
             <param name="r_lower_leg">(r_lower_leg,6,3)</param>
             <param name="r_ankle_1">(r_ankle_1,6,4)</param>
             <param name="r_ankle_2">(r_foot_dh_frame,6,5)</param>
