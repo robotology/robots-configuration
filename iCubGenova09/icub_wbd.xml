@@ -13,46 +13,35 @@
     <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
 
     <devices>
-    <!-- HEAD -->
-    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
-    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" />
-    <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" />
 
-    <!-- FACE -->
-    <xi:include href="./hardware/motorControl/face-eb22-j0-mc.xml" /> 
-    <xi:include href="./wrappers/motorControl/face-mc_wrapper.xml" />
+    <!-- all joints -->
+    <!-- <xi:include href="wrappers/motorControl/alljoints_mc_remapper.xml" /> 
+    <xi:include href="wrappers/motorControl/alljoints_mc_ros_nws.xml" /> -->
 
-
-    <!-- TORSO -->
-
-    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
-
-    <!-- LEFT ARM -->
-    <xi:include href="hardware/motorControl/left_arm-eb1-j0_1-mc.xml" />
-    <xi:include href="hardware/motorControl/left_arm-eb2-j2_3-mc.xml" />
-    <xi:include href="hardware/motorControl/left_arm-eb24-j4_7-mc.xml" />
-    <xi:include href="hardware/motorControl/left_arm-eb25-j8_11-mc.xml" />
-    <xi:include href="hardware/motorControl/left_arm-eb26-j12_15-mc.xml" />
-    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
-
-    <!-- RIGHT ARM -->
-    <xi:include href="hardware/motorControl/right_arm-eb3-j0_1-mc.xml" />
-    <xi:include href="hardware/motorControl/right_arm-eb4-j2_3-mc.xml" />
-    <xi:include href="hardware/motorControl/right_arm-eb27-j4_7-mc.xml" />
-    <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc.xml" />
-    <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
+    <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
-
-    <!-- LEFT LEG -->
-    <xi:include href="hardware/motorControl/left_leg-eb7-j0_2-mc.xml" />
-    <xi:include href="hardware/motorControl/left_leg-eb8-j3_5-mc.xml" />
-    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" />
-
-    <!-- RIGHT LEG -->
-    <xi:include href="hardware/motorControl/right_leg-eb11-j0_2-mc.xml" />
-    <xi:include href="hardware/motorControl/right_leg-eb12-j3_5-mc.xml" />
-    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/face-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/face-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" /> 
+    <xi:include href="hardware/motorControl/icub_left_arm.xml" /> 
+    <xi:include href="hardware/motorControl/icub_left_hand.xml" /> 
+    <xi:include href="hardware/motorControl/icub_right_arm.xml" />
+    <xi:include href="hardware/motorControl/icub_right_hand.xml" />
+    <xi:include href="hardware/motorControl/icub_left_leg.xml" /> 
+    <xi:include href="hardware/motorControl/icub_right_leg.xml" /> 
+    <xi:include href="hardware/motorControl/icub_head.xml" />
+    <xi:include href="hardware/motorControl/icub_face.xml" />
+    <xi:include href="hardware/motorControl/icub_torso.xml" />
 
     <!-- ANALOG SENSORS MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
