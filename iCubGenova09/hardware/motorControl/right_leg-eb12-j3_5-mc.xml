@@ -25,15 +25,15 @@
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                0.1     0.1                 0.1                 </param>
-        <param name="damping">                  0.05    0.05                0.05                </param>
+        <param name="stiffness">                0.1     30.0                 0.45                 </param>
+        <param name="damping">                  0.05    0.05               0.05                </param>
     </group>
 
     <group name="CONTROLS">
         <param name="positionControl">        POS_PID_DEFAULT   POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="velocityControl">        POS_PID_DEFAULT   POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="mixedControl">           POS_PID_DEFAULT   POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
-        <param name="torqueControl">          TRQ_PID_DEFAULT   TRQ_PID_DEFAULT     TRQ_PID_DEFAULT     </param>
+        <param name="torqueControl">          TRQ_PID_OUTPUT_CURR   TRQ_PID_OUTPUT_CURR     TRQ_PID_OUTPUT_CURR     </param>
         <param name="currentPid">             2FOC_CUR_CONTROL  2FOC_CUR_CONTROL    2FOC_CUR_CONTROL    </param>
         <param name="speedPid">               2FOC_VEL_CONTROL  2FOC_VEL_CONTROL    2FOC_VEL_CONTROL    </param>
     </group>
@@ -116,18 +116,18 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">            150.00       40.44      28.27      </param>
+        <param name="kp">               0          1000        400      </param>
         <param name="kd">               0          0          0      </param>
-        <param name="ki">            80.00         0          0    </param>
+        <param name="ki">               0          500          40    </param>
         <param name="maxOutput">     2500       2500       2500        </param>
         <param name="maxInt">         200        200        200       </param>
         <param name="ko">               0          0          0     </param>
         <param name="stictionUp">       0          0          0     </param>
         <param name="stictionDown">     0          0          0     </param>
         <param name="kff">              1          1          1     </param>
-        <param name="kbemf">         0.0001        0.0003     0.0004    </param>
+        <param name="kbemf">         0.00        0.0009     0.0003    </param>
         <param name="filterType">       0          0          0     </param>
-        <param name="ktau">          270.78      181.17     230.00     </param>
+        <param name="ktau">          50.0      128.81     318.2379     </param>
     </group>
     <!-- custom PIDs: end -->
 
