@@ -5,7 +5,7 @@
     <param name="nodeName"> /yri_controlBoard_nws_ros </param>
     <param name="topicName"> /all_joints </param>
     <action phase="startup" level="10" type="attach">
-            <param name="device"> alljoints_remapper </param>
+            <param name="device"> alljoints-mc_remapper </param>
     </action>
     <action phase="shutdown" level="15" type="detach" />
 </device>
