@@ -12,18 +12,30 @@
     <xi:include href="cartesian/right_arm-cartesian.xml" />
     
     <devices>
+    
+    <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
+ <!--   <xi:include href="wrappers/motorControl/face-mc_wrapper.xml" /> -->
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
+    
+    <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
+ <!--   <xi:include href="wrappers/motorControl/face-mc_remapper.xml" /> -->
+    <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
+
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
     <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" />
-    <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" />
  
     <!-- FACE -->
 <!-- <xi:include href="./hardware/motorControl/face-eb22-j0_1-mc.xml" />
-    <xi:include href="./hardware/motorControl/face-eb23-j2_5-mc.xml" />
-    <xi:include href="./wrappers/motorControl/face-mc_wrapper.xml" />  -->
+    <xi:include href="./hardware/motorControl/face-eb23-j2_5-mc.xml" /> -->
 
+    <!-- TORSO -->
     <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
 
     <!-- ANALOG SENSORS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
@@ -37,7 +49,6 @@
     <xi:include href="hardware/motorControl/left_arm-eb24-j4_7-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb25-j8_11-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb26-j12_15-mc.xml" />
-    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
 
     <!-- RIGHT ARM -->
     <xi:include href="hardware/motorControl/right_arm-eb3-j0_1-mc.xml" />
@@ -45,7 +56,6 @@
     <xi:include href="hardware/motorControl/right_arm-eb27-j4_7-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
-    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
 
     <!--  CALIBRATORS -->
 

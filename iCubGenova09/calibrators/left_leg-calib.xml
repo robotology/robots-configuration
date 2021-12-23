@@ -34,11 +34,11 @@
   <param name="CALIB_ORDER"> (2) (4) (5) (3) (0) (1) </param>
 
   <action phase="startup" level="10" type="calibrate">
-    <param name="target">left_leg-mc_wrapper</param>
+    <param name="target">left_leg-mc_remapper</param>
   </action>
 
   <action phase="interrupt1" level="1" type="park">
-    <param name="target">left_leg-mc_wrapper</param>
+    <param name="target">left_leg-mc_remapper</param>
   </action>
 
   <action phase="interrupt3" level="1" type="abort"/>

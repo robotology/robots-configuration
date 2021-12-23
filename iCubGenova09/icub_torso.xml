@@ -8,10 +8,15 @@
     </params>
     
     <devices>
-        <!-- TORSO --> 
-    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" /> 
+     <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
 
+    <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
+
+    <!-- TORSO --> 
+    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
+
+    <!-- CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />
    
    

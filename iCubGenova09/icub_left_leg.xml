@@ -8,10 +8,14 @@
     </params>
     
     <devices>
+     <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
+
+    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" /> 
+
     <!-- LEFT LEG -->
     <xi:include href="hardware/motorControl/left_leg-eb7-j0_2-mc.xml" />
     <xi:include href="hardware/motorControl/left_leg-eb8-j3_5-mc.xml" />
-    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" />
 
 
         <!--  CALIBRATORS -->
