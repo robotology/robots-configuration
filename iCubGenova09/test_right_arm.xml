@@ -7,7 +7,10 @@
     </params>
 
 <devices>
-
+     <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
+    
+    <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
 
     <!-- RIGHT ARM -->
     <xi:include href="hardware/motorControl/right_arm-eb3-j0_1-mc.xml" />
@@ -15,7 +18,6 @@
     <xi:include href="hardware/motorControl/right_arm-eb27-j4_7-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
-    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
 
 
 
