@@ -9,8 +9,8 @@
 
     <devices>
     <!-- cartesian --> 
-    <xi:include href="cartesian/left_arm-cartesian.xml" />
-    <xi:include href="cartesian/right_arm-cartesian.xml" />
+   <!-- <xi:include href="cartesian/left_arm-cartesian.xml" />
+    <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
 
     <!-- all joints -->
      <!-- <xi:include href="wrappers/motorControl/alljoints_mc_remapper.xml" /> 
