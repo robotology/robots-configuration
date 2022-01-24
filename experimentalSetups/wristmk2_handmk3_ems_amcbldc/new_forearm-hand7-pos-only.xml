@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+    <robot name="new_forearm" build="1" portprefix="nfa" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <params>
+            <xi:include href="hardware/electronics/pc104.xml" />
+        </params>
+
+        <devices>
+
+            <!-- POS -->
+            <xi:include href="wrappers/POS/hv3_left_arm-POS_wrapper.xml" /> 
+            <xi:include href="hardware/POS/left_hand-pos.xml" />
+ 
+ <!--   
+
+            <xi:include href="wrappers/motorControl/hv3_left_hand7-mc_wrapper.xml" />
+            <xi:include href="hardware/motorControl/hv3_left_hand7-mc.xml" />   
+    
+            <xi:include href="calibrators/hv3_left_hand7-calib.xml" />  
+ 
+ -->       
+    </devices>
+</robot>
