@@ -66,10 +66,10 @@
         <param name="controlLaw">           low_lev_current     </param>
         <param name="fbkControlUnits">      machine_units       </param>
         <param name="outputControlUnits">   machine_units       </param>
-        <param name="kp">                   8       </param>
+        <param name="kp">                   2.0       </param>
         <param name="kd">                   0       </param>
-        <param name="ki">                   2       </param>
-        <param name="shift">                10      </param>
+        <param name="ki">                   500.0       </param>
+        <param name="shift">                0      </param>
         <param name="maxOutput">            32000   </param>
         <param name="maxInt">               32000   </param>
         <param name="kff">                   0      </param>
