@@ -3,6 +3,7 @@
 
 <robot name="5-setup" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <devices>
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>

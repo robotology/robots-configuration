@@ -11,7 +11,7 @@
         <param name="Encoder">              182.044               </param>
         <param name="fullscalePWM">         32000                 </param>
         <param name="ampsToSensor">         1000.0                </param>
-        <param name="Gearbox_M2J">          100.0                </param>
+        <param name="Gearbox_M2J">          1                     </param>
         <param name="Gearbox_E2J">          1                     </param>
         <param name="useMotorSpeedFbk">     1                     </param> 
         <param name="MotorType">            "MOOG_C2900576"       </param>
@@ -19,8 +19,8 @@
     </group>                                                 
                                                              
     <group name="LIMITS">                                    
-        <param name="hardwareJntPosMax">    25                    </param>
-        <param name="hardwareJntPosMin">   -25                   </param>
+        <param name="hardwareJntPosMax">    1800                 </param>
+        <param name="hardwareJntPosMin">   -1800                 </param>
         <param name="rotorPosMin">          0                     </param> 
         <param name="rotorPosMax">          0                     </param>
     </group>                                                 
@@ -33,8 +33,8 @@
         <param name="HasRotorEncoder">      1                    </param>
         <param name="HasRotorEncoderIndex"> 1                    </param>
         <param name="HasSpeedEncoder">      0                    </param>
-        <param name="RotorIndexOffset">     48                   </param>
-        <param name="MotorPoles">           8                    </param>
+        <param name="RotorIndexOffset">     2                    </param>
+        <param name="MotorPoles">           20                   </param>
    </group>
 
     <group name="COUPLINGS"> 
