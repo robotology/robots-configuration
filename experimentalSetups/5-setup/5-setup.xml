@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="5-setup" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <devices>
+    <params>
+    <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+
+    <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/5-setup-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/5-setup-mc_remapper.xml" />
+
+    <!-- TORSO -->
+    <xi:include href="hardware/motorControl/5-setup-mc.xml" />
+
+    <!--  CALIBRATORS -->
+    <xi:include href="calibrators/5-setup-calib.xml" />
+
+  </devices>
+</robot>
