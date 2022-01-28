@@ -11,16 +11,12 @@
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
-    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" /> 
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/face-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
     
     <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" /> 
     <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
-    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" /> 
     <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/face-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
