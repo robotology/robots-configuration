@@ -54,6 +54,7 @@ ${GREEN}connectToJoypad${NC} To reconnect the bluetooth connection of the robot 
 ${GREEN}test-speaker${NC} Test if the speaker is working.
 ${GREEN}test-microphone${NC} Test if the micorphone is working.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
+${GREEN}teleoperationFolder${NC} Go to the walking-teleoperation source folder.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
 
 if [ "$PS1" ]; then
