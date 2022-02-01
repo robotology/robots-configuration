@@ -27,6 +27,9 @@ alias connectToJoypad='sudo expect ${ADDITIONAL_COMMANDS_DIR}/bluetoothConnect.s
 # Go to DCM folder
 alias dcmFolder='cd ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/walking-controllers/src/WalkingModule/app/robots/${YARP_ROBOT_NAME}'
 
+# Go to Teleoperation folder
+alias teleoperationFolder='cd ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/walking-teleoperation'
+
 # Go to the corresponding build folder in the superbuild
 alias goToBuildSuperbuild='cd ../../build/src/${PWD##*/}'
 
