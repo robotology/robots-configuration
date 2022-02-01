@@ -21,8 +21,8 @@
     <group name="LIMITS">
         <param name="hardwareJntPosMax">     52          </param>
         <param name="hardwareJntPosMin">    -62          </param>
-        <param name="rotorPosMin">           -20           </param>
-        <param name="rotorPosMax">           20           </param>
+        <param name="rotorPosMin">           0           </param>
+        <param name="rotorPosMax">           0           </param>
     </group>
 
     <group name="2FOC">
