@@ -78,7 +78,9 @@
     <xi:include href="wrappers/FT/right_foot_heel-FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper.xml" /> 
 
+    <xi:include href="hardware/FT/torso-eb5-j0_2-strain.xml" /> <!-- right hip -->
 
     <xi:include href="hardware/FT/left_leg-eb7-j0_2-strain.xml" />
     <xi:include href="hardware/FT/left_leg-eb8-j3_5-strain.xml" />
