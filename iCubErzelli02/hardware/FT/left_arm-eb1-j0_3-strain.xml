@@ -40,7 +40,7 @@
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
                 <param name="enabledSensors">           id_l_upper_arm_strain   </param>
-                <param name="temperature-acquisitionRate"> 1000                
+                <param name="temperature-acquisitionRate"> 1000                 </param>                
             </group>
             
             <group name="STRAIN_SETTINGS">        
