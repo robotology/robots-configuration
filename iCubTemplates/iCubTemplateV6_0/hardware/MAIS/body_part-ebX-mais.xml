@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<!--    This file contains details of how the mais service is configured. 
+  -->
+
+
+    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjMais. -->
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_mais" type="embObjMais">
+    
+        <!-- Include the file which specifies global configuration -->
+        <xi:include href="../../general.xml" />
+
+        <!-- Include the file which specifies which ETH board hosts the service -->
+        <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+        
+        <!-- This group defines the service -->
+        <group name="SERVICE">
+        
+            <!-- The type of service expressed as stringised values of eOmn_serv_type_t. For mais it must be eomn_serv_AS_mais -->
+            <param name="type"> eomn_serv_AS_mais </param>
+        
+            <!-- This group defines the properties of the service -->
+            <group name="PROPERTIES">
+                            
+                <!-- This group defines the properties of the CAN boards -->
+                <group name="CANBOARDS">
+                
+                    <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
+                         so far it can be only mais
+                      -->
+                    <param name="type">                 eobrd_mais           </param>
+
+                    <!-- This param tells the protocol version required to run the service. Values are in range [0, 255] 
+                         if (0, 0) no check is done, otherwise there must be a CAN board with detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor -->
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group> 
+                    
+                    <!-- This param tells the firmware version required to run the service. Values are in range [0, 255] 
+                         if (0, 0, 0) no check is done, otherwise there must be a CAN board with detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor -->
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
+                    
+                </group>
+            
+                <!-- This group defines the available sensors. They are those defined by production. In mais there is only one sensor -->
+                <group name="SENSORS">
+                
+                    <!-- This param is the id of the sensor. its name should be defined in production -->
+                    <param name="id">                   id_l_hand_mais      </param>
+                    <!-- This param is the type of the sensor. it must be eoas_mais  -->
+                    <param name="type">                 eoas_mais           </param>
+                    <!-- This param is the address of the sensor. Its uses the format CANx:addr  -->
+                    <param name="location">             CAN1:14             </param>
+                    
+                </group>
+            
+            </group>        
+            
+            <!-- This group defines the settings which can be applied to the available sensor. -->
+            <group name="SETTINGS"> 
+            
+                <!-- The acquisition rate of all the sensor in ms. values are in range [1, 255]. Use 10 -->
+                <param name="acquisitionRate">          10                  </param>
+                <!-- The list of the enabled sensors ... there is always one and is the value of PROPERTIES.PROPERTIES.SENSORS.id -->
+                <param name="enabledSensors">           id_l_hand_mais      </param>
+                
+            </group>
+            
+        </group>
+        
+    </device> 
+    
+
+
+
