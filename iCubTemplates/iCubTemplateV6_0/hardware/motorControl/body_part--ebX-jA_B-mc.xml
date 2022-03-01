@@ -24,14 +24,10 @@
         <param name="velocity"> 10 </param> <!-- timeout on reception of velocity setpoint by firmware. [expressed in millisec] -->
     </group>
 
-    <!--
-        
-    CONTROLS tag allows the user to save in file different PID configurations and can choose which configuration to use.
-    To do this, the user writes one or more sections of PID within the file and indicates the selected PID in the "CONTROLS" group.
+   <!-- CONTROLS tag allows the user to save in file different PID configurations and can choose which configuration to use.
+        To do this, the user writes one or more sections of PID within the file and indicates the selected PID in the "CONTROLS" group.
          
-    currentPid and speddPid are used only if 2FOC boards are present.
-     
-    -->
+        currentPid and speddPid are used only if 2FOC boards are present. -->
 
     <group name="CONTROLS">
         <!-- positionControl, velocityControl and mixedControl are separated for general ->
