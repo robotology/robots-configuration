@@ -68,4 +68,5 @@
 	<xi:include href="./iCubZagreb01/icub_all.xml" />
 	<xi:include href="./iCubPrague01/icub_all.xml" />
 	<xi:include href="./iCubValparaiso01/icub_all.xml" />
+	<xi:include href="./ergoCubSN000/ergocub_all.xml" />
 </robot_database > 

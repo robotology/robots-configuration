@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_upperarm-eb2-skin" type="embObjSkin">
+        <xi:include href="../../general.xml" />
+ 
+        <xi:include href="../../hardware/electronics/left_arm-eb2-j2_3-eln.xml" />
+        <group name="patches">
+            <param name="skinCanAddrsPatch2"> 13 </param> 
+        </group>
+        <xi:include href="./left_upperarm-eb2-skinSpec.xml" /> 
+    </device>  
+
