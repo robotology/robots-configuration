@@ -43,6 +43,8 @@ test-microphone() {
     arecord -vvv -f dat /dev/null
 }
 
+alias run-yarp-openmct='cd /usr/local/src/robot/yarp-openmct/ && npm start'
+
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 ## Alias for displaying info messages about the other aliases
@@ -55,7 +57,8 @@ ${GREEN}test-speaker${NC} Test if the speaker is working.
 ${GREEN}test-microphone${NC} Test if the micorphone is working.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}teleoperationFolder${NC} Go to the walking-teleoperation source folder.
-${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
+${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
+${GREEN}run-yarp-openmct${NC} Run yarp-openmct server for online logging visualization."'
 
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
