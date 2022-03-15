@@ -34,7 +34,7 @@
         <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT   POS_PID_DEFAULT  </param>
         <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT   POS_PID_DEFAULT  </param>
         <param name="mixedControl">             POS_PID_DEFAULT     POS_PID_DEFAULT   POS_PID_DEFAULT  </param>
-        <param name="torqueControl">            TRQ_PID_DEFAULT     TRQ_PID_DEFAULT   TRQ_PID_DEFAULT  </param>
+        <param name="torqueControl">            TRQ_PID_OUTPUT_CURR     TRQ_PID_OUTPUT_CURR   TRQ_PID_OUTPUT_CURR  </param>
         <param name="currentPid">               2FOC_CUR_CONTROL    2FOC_CUR_CONTROL  2FOC_CUR_CONTROL  </param>
         <param name="speedPid">                 2FOC_VEL_CONTROL    2FOC_VEL_CONTROL  2FOC_VEL_CONTROL  </param>
     </group>
@@ -117,18 +117,18 @@
         <param name="outputType">          current                        </param>
         <param name="fbkControlUnits">     metric_units                   </param>
         <param name="outputControlUnits">  machine_units                  </param>
-        <param name="kp">            150.00    -150.00        200.00      </param>
+        <param name="kp">              0         -0             0         </param>
         <param name="kd">              0          0             0         </param>
-        <param name="ki">             80        -50            80         </param>
+        <param name="ki">             0        -0            0         </param>
         <param name="maxOutput">    2500       2500          2500         </param>
         <param name="maxInt">        200        200           200         </param>
         <param name="ko">              0          0             0         </param>
         <param name="stictionUp">      0          0             0         </param>
         <param name="stictionDown">    0          0             0         </param>
         <param name="kff">             1          1             1         </param>
-        <param name="kbemf">           0.0002    -0.0003      0.0003      </param>
+        <param name="kbemf">           0.0    -0.0      0.0      </param>
         <param name="filterType">      0          0             0         </param>
-        <param name="ktau">          196.52    -185.41        185.70      </param>
+        <param name="ktau">            50    -50        50      </param>
     </group>
 
     <!-- custom PIDs: end -->

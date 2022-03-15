@@ -1,0 +1,39 @@
+<!-- Copyright (C) 2021 Fondazione Istituto Italiano di Tecnologia (IIT) -->
+<!-- All Rights Reserved. -->
+
+<application>
+
+  <name>FaceExpressionsRetargeting</name>
+  <description>Application to run Psychophysiological related modules for retargeting.</description>
+  <version>1.0</version>
+  <authors>
+    <author email="stefano.dafarra@iit.it">Stefano Dafarra</author>
+  </authors>
+
+   <!-- Modules -->
+   <module>
+     <name>SRanipalModule</name>
+     <parameters>--forceEyeCalibration true --noGaze false --useRawEyelids --gazeVelocityGain 2.0 --gazeDeadzone 0.02 --rawEyelidsCloseValue 30 --rawEyelidsOpenValue 50</parameters>
+     <node>icub-virtualizer</node>
+   </module>
+
+  <!-- Connections -->
+  <connection>
+    <from>/SRanipalModule/emotions:o</from>
+    <to>/icub/face/emotions/in</to>
+    <protocol>fast_tcp</protocol>
+  </connection>
+  
+  <connection>
+    <from>/SRanipalModule/face/raw:o</from>
+    <to>/icub/face/raw/in</to>
+    <protocol>fast_tcp</protocol>
+  </connection>
+  
+  <connection>
+    <from>/SRanipalModule/VR/rpc:o</from>
+    <to>/joypadDevice/Oculus/rpc</to>
+    <protocol>fast_tcp</protocol>
+  </connection>
+
+</application>
