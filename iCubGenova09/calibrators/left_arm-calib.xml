@@ -12,7 +12,7 @@
 
 <group name="HOME">
 <param name="positionHome">            5         30         0          10           0     0      0    35    15    65     0     0     0      0      0     0 </param>
-<param name="velocityHome">           10         10         10         10           30    30     30   60    30    30    30    30    30     30     30    30  </param>
+<param name="velocityHome">           10         10         10         10           30    30     30   15    30    30    30    30    30     30     30    30  </param>
 </group>                                                                        
                                                                                 
 <group name="CALIBRATION">                                                      
@@ -26,7 +26,7 @@
 <param name="calibrationZero">        25       -8.4        -51.3       -5           0       0       0       0       0       0       0       0       0       0       0       0       </param>
 <param name="calibrationDelta">       0           0           0          0           0       0       0       0       0       0       0       0       0       0       0       0       </param>
                                                                                                                              
-<param name="startupPosition">        24        50            0        10           -75       0       0       25      45      0       0       0       0       0       0       0       </param>
+<param name="startupPosition">        24        50            0        10           -75       0       0      15      45      0       0       0       0       0       0       0       </param>
 <param name="startupVelocity">        10.0       10.0         10.0      10.0         30      30      30      60      100     100     100     100     100     100     100     100     </param>
 <param name="startupMaxPwm">          8000       8000         8000      8000         2000    0       0       0       0       0       0       0       0       0       0       0       </param>
 <param name="startupPosThreshold">    2          2            2          2           90      90      90      90      90      90      90      90      90      90      90      90      </param>
