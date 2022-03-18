@@ -24,21 +24,27 @@
         <param name="velocity"> 10 </param> <!-- timeout on reception of velocity setpoint by firmware. [expressed in millisec] -->
     </group>
 
-   <!-- CONTROLS tag allows the user to save in file different PID configurations and can choose which configuration to use.
-        To do this, the user writes one or more sections of PID within the file and indicates the selected PID in the "CONTROLS" group.
-         
-        currentPid and speddPid are used only if 2FOC boards are present. -->
+    
+   <!-- IMPORTANT NOTES about CONTROLS tag: 
+        1) CONTROL tag allows the user to save in file different PID configurations and can choose which configuration to use.
+           To do this, the user writes one or more sections of PID within the file and indicates the selected PID in the "CONTROLS" group.
+
+        2) positionControl, velocityControl and mixedControl are separated for general purpose but, at present, each joint MUST has the same PID configuration for position, velocity and mixed control.
+        
+        3) currentPid and speddPid are used only if 2FOC boards are present. 
+    -->
 
     <group name="CONTROLS">
-        <!-- positionControl, velocityControl and mixedControl are separated for general ->
-             purpose but, at present, they must be all the same in iCub robots for each joint. -->
-        <param name="positionControl">  name </param> <!-- User name tag of position control. The tag name should be present below. EXAMPLE: MY_POS_CTRL_OUT_PWM, MY_POS_CTRL_OUT_CURRENT, MY_POS_CTRL_OUT_VEL -->
-        <param name="velocityControl">  name </param> <!-- User name tag of velocity control. The tag name should be present below. If joint can't perform velocity control, use "none". EXAMPLE: MY_POS_CTRL_OUT_PWM, MY_POS_CTRL_OUT_CURRENT, MY_POS_CTRL_OUT_VEL -->
-        <param name="mixedControl">     name </param> <!-- User name tag of velocity control. The tag name should be present below. If joint can't perform velocity control, use "none". EXAMPLE: MY_POS_CTRL_OUT_PWM, MY_POS_CTRL_OUT_CURRENT, MY_POS_CTRL_OUT_VEL -->
+        <!-- For each control type, set the user name tag for each joints managed by this board.
+             The tag name MUST be defined below.
+        -->
+        <param name="positionControl"> user_name_tag_of_position_control       </param> <!--  EXAMPLE: MY_POS_CTRL_OUT_PWM, MY_POS_CTRL_OUT_CURRENT, MY_POS_CTRL_OUT_VEL -->
+        <param name="velocityControl"> user_name_tag_of_position_control       </param> <!-- If joint can't perform velocity control, use "none", else use user_name_tag_of_position_control as explained above.-->
+        <param name="mixedControl">    user_name_tag_of_position_control       </param> <!-- If joint can't perform mixed control, use "none". EXAMPLE: MY_POS_CTRL_OUT_PWM, MY_POS_CTRL_OUT_CURRENT, MY_POS_CTRL_OUT_VEL -->
         
-        <param name="torqueControl">    name </param> <!-- User name tag of torque control. The tag name should be present below. If joint can't perform torque control, use "none". EXAMPLE: MY_TRQ_CONTROL                     -->
-        <param name="currentPid">       name </param> <!-- User name tag of current control. The tag name should be present below. If joint can't perform current control, use "none". EXAMPLE: MY_CUR_CONTROL; in case of EMS+2FOC it has to be defined, otherwise in case of MC4+ set as none -->
-        <param name="speedPid">         name </param> <!-- User name tag of low-level speed control. The tag name should be present below. If joint can't perform low-level speed control, use "none". EXAMPLE: MY_SPEED_CONTROL;in case of EMS+2FOC it has to be defined, otherwise in case of MC4+ set as none -->
+        <param name="torqueControl">   user_name_tag_of_torque_control          </param> <!--  If joint can't perform torque control, use "none". EXAMPLE: MY_TRQ_CONTROL                     -->
+        <param name="currentPid">      user_name_tag_of_current_control         </param> <!-- If joint can't perform current control, use "none". In case of EMS+2FOC it has to be defined, otherwise in case of MC4+ set as none EXAMPLE: MY_CUR_CONTROL;  -->
+        <param name="speedPid">        user_name_tag_of_low-level_speed_control </param> <!-- If joint can't perform low-level speed control, use "none". In case of EMS+2FOC it has to be defined, otherwise in case of MC4+ set as none. EXAMPLE: MY_SPEED_CONTROL -->
     </group>
     
     <!-- WARNING: in updating files do not change control unit types (outputControlUnits, fbkControlUnits) -->
@@ -58,10 +64,11 @@
         <param name="kff">          0  </param> <!-- Feed forward term constant. The output is proportional to reference. [expressed in pwm_raw/degrees (metric_units) or pwm_raw/encoder (machine_units)] -->
     </group>
     
-    <!-- WARNING: in updating files do not change control unit types (outputControlUnits, fbkControlUnits) -->
-    <!-- without proper conversions -->
+    <!-- WARNING: in updating files do not change control unit types (outputControlUnits, fbkControlUnits)
+                  without proper conversions 
+    -->
     <group name="MY_POS_CTRL_OUT_CURRENT">                                    
-        <param name="controlLaw">          minjerk </param> <!-- Specifies that trajectories will be generated by a minimum jerk algorithm. This is the only one available-->
+        <param name="controlLaw">          minjerk </param> <!-- Specifies that trajectories will be generated by a minimum jerk algorithm. This is the only one available -->
         <param name="outputType">          current </param> <!-- Specifies the motor control reference type "current". --> 
         <param name="fbkControlUnits">     metric_units   </param> <!-- metric_units  or machine_units(raw values). Recommended value: metric_units -->
         <param name="outputControlUnits">  machine_units  </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->        
@@ -82,7 +89,9 @@
         <param name="outputControlUnits">  machine_units  </param> <!-- machine_units (basically the control loop is demanded to lower control level)-->        
         <param name="kp">           5  </param> <!-- Proportional constant. [expressed in 1/sec]. 5 is a typical value. -->
         <param name="kd">           0  </param> <!-- Derivative constant in PID control. [expressed in pwm_raw/(degrees/sec) (metric_units) or pwm_raw/(encoder/sec) (machine_units)] -->
+        <param name="ki">           0  </param> <!-- Not used at present  -->
         <param name="maxOutput">    0  </param> <!-- Limit on output [expressed in icubdegrees/msec] -->
+        <param name="maxInt">       0  </param> <!-- Not used at present -->
         <param name="kff">          1  </param> <!-- Adimensional, tipically equal to 1 -->
     </group>
     
