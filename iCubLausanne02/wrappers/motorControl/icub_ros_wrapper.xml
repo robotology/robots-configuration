@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="icub_all_joints_mc_wrapper" type="controlboardwrapper2">
+    <param name="period"> 10 </param>
+    <param name="name">   /icub04/all_joints </param>
+    <param name="joints"> 50 </param>
+    <paramlist name="networks">
+        <elem name="head_firstset">(   0  1   0  1 )</elem>
+        <!-- 2 -->
+        <elem name="head_secondset">(  2  2   0  0 )</elem>
+        <!-- 1 -->
+        <elem name="torso">(           3  5   0  2 )</elem>
+        <!-- 3 -->
+        <elem name="right_arm_firstset">(   6   9   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="right_arm_secondset">( 10  13   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="right_arm_thirdset">(  14  17   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="right_arm_fourthset">( 18  21   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="left_arm_firstset">(   22  25   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="left_arm_secondset">(  26  29   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="left_arm_thirdset">(   30  33   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="left_arm_fourthset">(  34  37   0  3 )</elem>
+        <!-- 4 -->
+        <elem name="left_leg_firstset">(  38  41  0  3 )</elem>
+        <!-- 4 -->
+        <elem name="left_leg_secondset">( 42  43  0  1 )</elem>
+        <!-- 2 -->
+        <elem name="right_leg_firstset">(  44  47  0  3 )</elem>
+        <!-- 4 -->
+        <elem name="right_leg_secondset">( 48  49  0  1 )</elem>
+        <!-- 2 -->
+    </paramlist>
+    <group name="ROS">
+        <param name="useROS"> true </param>
+        <param name="ROS_topicName">  /icub04/joint_states </param>
+        <param name="ROS_nodeName">   /icub04/joint_state_publisher </param>
+    </group>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="head_firstset">  head-eb20-j0_1-mc    </elem>
+            <elem name="head_secondset">  head-eb21-j2_5-mc    </elem>
+            <elem name="torso">       torso-eb5-j0_2-mc   </elem>
+            <elem name="right_arm_firstset">  right_arm-eb3-j0_3-mc </elem>
+            <elem name="right_arm_secondset"> right_arm-eb27-j4_7-mc </elem>
+            <elem name="right_arm_thirdset">  right_arm-eb28-j8_11-mc </elem>
+            <elem name="right_arm_fourthset"> right_arm-eb29-j12_15-mc </elem>
+            <elem name="left_arm_firstset">  left_arm-eb1-j0_3-mc </elem>
+            <elem name="left_arm_secondset">left_arm-eb24-j4_7-mc </elem>
+            <elem name="left_arm_thirdset">  left_arm-eb25-j8_11-mc </elem>
+            <elem name="left_arm_fourthset">  left_arm-eb26-j12_15-mc </elem>
+            <elem name="left_leg_firstset">  left_leg-eb6-j0_3-mc </elem>
+            <elem name="left_leg_secondset"> left_leg-eb7-j4_5-mc </elem>
+            <elem name="right_leg_firstset">  right_leg-eb8-j0_3-mc </elem>
+            <elem name="right_leg_secondset"> right_leg-eb9-j4_5-mc </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
