@@ -27,7 +27,7 @@
 
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
-                <elem name="left_leg">left_leg-mc_wrapper</elem>
+                <elem name="left_leg">left_leg-mc_remapper</elem>
           </paramlist>
         </action>
 
