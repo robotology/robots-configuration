@@ -17,11 +17,9 @@
 	      -->
 	    <param name="numOfSets"> 1 </param> 
 	    <!--                            patch       adr start   adr end     period      type    no_load     -->            
-	    <param name="boardSetCfg1">     1           14          14          50          1       0xf0        </param> 
+	    <param name="boardSetCfg1">     2           14          14          50          1       0xf0        </param> 
 		                  
 	</group>
-	
-	
        <group name="defaultCfgTriangle">
             <param name="enabled">         false  </param> 
             <param name="shift">           2  </param>
