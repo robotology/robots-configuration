@@ -5,13 +5,13 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="wrist-mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
             <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
-            <elem name="FirstSetOfJoints">  0  0  0  0 </elem>
+            <elem name="FirstSetOfJoints">  0  2  0  2 </elem>
         </paramlist>
        
         <param name="period"> 10            </param>
         <param name="name">   /nfa/wrist_mc </param>
         <param name="ports">  wrist_mc      </param>
-        <param name="joints"> 1             </param>
+        <param name="joints"> 3             </param>
        
        
         <action phase="startup" level="5" type="attach">
