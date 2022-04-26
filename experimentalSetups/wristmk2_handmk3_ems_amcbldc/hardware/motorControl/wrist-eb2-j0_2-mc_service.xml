@@ -29,24 +29,24 @@
             <group name="JOINTMAPPING">
 
                 <group name="ACTUATOR">
-                    <param name="type">             foc         </param>
-                    <param name="port">             CAN1:1:0      </param>
+                    <param name="type">             eomc_act_foc        foc                 foc         </param>
+                    <param name="port">             CAN1:1:0            CAN1:2:0            CAN1:3:0    </param>
                 </group>
 
                 <group name="ENCODER1">
-                    <param name="type">             aea         </param>
-                    <param name="port">             CONN:P7     </param>
-                    <param name="position">         atjoint     </param>
-                    <param name="resolution">       4096        </param>
-                    <param name="tolerance">        0.4         </param>
+                    <param name="type">             eomc_enc_aea        aea                 aea         </param>
+                    <param name="port">             CONN:P6             CONN:P7             CONN:P8     </param>
+                    <param name="position">         eomc_pos_atjoint    atjoint             atjoint     </param>
+                    <param name="resolution">       4096                4096                4096        </param>
+                    <param name="tolerance">        0.4                 0.4                 0.4         </param>
                 </group>
 
                 <group name="ENCODER2">
-                    <param name="type">             none        </param>
-                    <param name="port">             CONN:none   </param>
-                    <param name="position">         none        </param>
-                    <param name="resolution">       0           </param>
-                    <param name="tolerance">        0           </param>
+                    <param name="type">             none                none                none        </param>
+                    <param name="port">             CONN:none           CONN:none           CONN:none   </param>
+                    <param name="position">         none                none                none        </param>
+                    <param name="resolution">       0                   0                   0           </param>
+                    <param name="tolerance">        0                   0                   0           </param>
                 </group>
 
             </group>
