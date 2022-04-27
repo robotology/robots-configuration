@@ -89,6 +89,10 @@
 
     <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
     <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
+    
+    <!-- MULTI ANALOG SENSORS FT -->
+    <xi:include href="wrappers/FT/right_arm-FT_wrapper_multipleSens.xml" />
+    <xi:include href="wrappers/FT/left_arm-FT_wrapper_multipleSens.xml" />
 
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
     <!--    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
