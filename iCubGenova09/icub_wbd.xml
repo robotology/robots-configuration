@@ -93,6 +93,11 @@
     <!-- MULTI ANALOG SENSORS FT -->
     <xi:include href="wrappers/FT/right_arm-FT_wrapper_multipleSens.xml" />
     <xi:include href="wrappers/FT/left_arm-FT_wrapper_multipleSens.xml" />
+    <xi:include href="wrappers/FT/left_foot_tiptoe-FT_wrapper_multipleSens.xml" />
+    <xi:include href="wrappers/FT/left_foot_heel-FT_wrapper_multipleSens.xml" />
+    <xi:include href="wrappers/FT/right_foot_tiptoe-FT_wrapper_multipleSens.xml" />
+    <xi:include href="wrappers/FT/right_foot_heel-FT_wrapper_multipleSens.xml" />
+    <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper_multipleSens.xml" />
 
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
     <!--    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
