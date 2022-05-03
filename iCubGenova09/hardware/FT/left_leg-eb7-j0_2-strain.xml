@@ -40,7 +40,7 @@
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
                 <param name="enabledSensors">           id_l_heel_strain   </param>                
-				 <param name="temperature-acquisitionRate"> 1000                  </param> <!-- 1 seconds -->
+		 <param name="temperature-acquisitionRate"> 1000                  </param> <!-- 1 seconds -->
             </group>
             
             <group name="STRAIN_SETTINGS">        

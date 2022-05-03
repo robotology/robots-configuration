@@ -6,7 +6,7 @@
         <param name="axesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch, neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,l_wrist_prosup,l_wrist_pitch,l_wrist_yaw,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,r_wrist_prosup,r_wrist_pitch,r_wrist_yaw,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         <param name="modelFile">model.urdf</param>
         <param name="fixedFrameGravity">(0,0,-9.81)</param>
-	<param name="defaultContactFrames">(l_hand,r_hand,root_link,l_foot_front,l_foot_rear,r_foot_front,r_foot_rear,l_lower_leg,r_lower_leg)</param>
+	<param name="defaultContactFrames">(l_hand,r_hand,root_link,l_foot_front,l_foot_rear,r_upper_leg,r_foot_front,r_foot_rear,l_lower_leg,r_lower_leg)</param>
         <param name="imuFrameName">imu_frame</param>
         <param name="publishOnROS">true</param>
 	<param name="forceTorqueEstimateConfidence">2</param>
@@ -14,11 +14,54 @@
         <param name="useJointAcceleration">false</param>
 	<param name="streamFilteredFT">true</param>
         <param name="imuFilterCutoffInHz">3.0</param>
-        <param name="forceTorqueFilterCutoffInHz">3.0</param>
+        <param name="forceTorqueFilterCutoffInHz">2.0</param>
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="useSkinForContacts">false</param>
         <param name="publishNetExternalWrenches">true</param>
+        <param name="estimateJointVelocityAcceleration">false</param>  <!-- if true a kf will estimate the joint velocities and accelerations -->
+        <param name="processNoiseCovariance">(1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                              1.0e+1, 1.0e+1, 1.0e+1,
+                                              1.0e+1, 1.0e+1, 1.0e+1,
+                                              1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1,
+                                              1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1,
+                                              1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1,
+                                              1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1, 1.0e+1)</param>
+        <param name="measurementNoiseCovariance">(1.0e-3, 1.0e-3, 1.0e-3,
+                                                  1.0e-3, 1.0e-3, 1.0e-3,
+                                                  1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                                  1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                                  1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                                  1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3)</param>
+        <param name="stateCovariance">(5.0e-4, 5.0e-4, 5.0e-4,
+                                       5.0e-4, 5.0e-4, 5.0e-4,
+                                       5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4,
+                                       5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4,
+                                       5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4,
+                                       5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4, 5.0e-4,
+                                       1.0e-3, 1.0e-3, 1.0e-3,
+                                       1.0e-3, 1.0e-3, 1.0e-3,
+                                       1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                       1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                       1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                       1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3,
+                                       1.0e-1, 1.0e-1, 1.0e-1,
+                                       1.0e-1, 1.0e-1, 1.0e-1,
+                                       1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1,
+                                       1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1,
+                                       1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1,
+                                       1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1)</param>
 	<!--        <param name="assume_fixed">root_link</param>-->
 	<group name="HW_USE_MAS_IMU">
 	    <param name="accelerometer">rfeimu_acc</param>
@@ -32,12 +75,42 @@
             <param name="gravityCompensationAxesNames">(torso_roll,torso_pitch,torso_yaw,neck_pitch,neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         </group>
 
+	<group name="FT_SECONDARY_CALIBRATION">
+            <param name="l_arm_ft_sensor">
+                   (-0.453943748858079,-0.0207290731454895,0.0259765206090363,-0.718082150306232,20.0760035320647,-31.8380701315778,
+0.246893385284633,0.131596038814277,-0.0311012312708342,-6.80536484234716,-2.50755415278684,5.54450412565179,
+0.355624671215812,0.0288883339093784,1.07987839437286,1.74993294368285,-4.13534211854201,5.17353495406937,
+-0.0282045676873515,-0.010639094001773,-0.0276521318915258,0.454542458253858,0.272315682629766,-0.432257093387273,
+-0.0426175259925151,-0.00226319226759765,-0.0252830271716641,-0.0945190281452346,1.56472162917137,-2.39647445051718,
+-0.00618535407666329,0.00270756194409757,-0.000126188940004081,-0.193262353184156,0.503149786495756,-0.792725998694521)
+            </param>
+
+            <param name="r_arm_ft_sensor">
+                    (-0.3074986450118,0.166319460647718,-0.0744761172303641,2.28351161269885,17.803567176725,29.7657227144731,
+-0.0550976408308005,0.180526981376886,-0.0305221915946819,-5.86934063764629,2.35283003548601,12.7102669990724,
+-0.0413098446573611,-0.15161778882429,1.15947861552172,-2.18397653661656,2.11337659942283,6.52597994212099,
+0.00252878385866509,-0.0183198480563073,0.0390861481806284,0.369040878113529,-0.0942012366965869,-0.688710410261083,
+-0.0221727541161846,0.0138043289728184,-0.015898266246628,0.187998975528831,1.29240192105994,2.11309829209008,
+0.0094914880635709,-0.0036234283827821,0.00212121520644588,-0.126864592608127,-0.556355373823465,-0.875100018833281)
+            </param>
+        </group>
+        
+        <group name="FT_OFFSET">
+            <param name="l_arm_ft_sensor">
+                   (-8.458958238581,18.9645423508596,5.01464123963002,-1.54527454195987,-0.75593243710498,0.247784639700732)
+            </param>
+
+            <param name="r_arm_ft_sensor">
+                    (-11.0545900497843,-19.1558631667883,1.55355109320928,1.46258051785715,-0.824085201312761,0.18996767949017)
+            </param>
+        </group>
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
 	     <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand,l_hand,root_link)</param>
             <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand,r_hand,root_link)</param>
-            <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param>
-            <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param>
+            <param name="/wholeBodyDynamics/right_upper_leg/cartesianEndEffectorWrench:o">(r_upper_leg,r_upper_leg,root_link)</param>
+            <param name="/wholeBodyDynamics/left_lower_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param>
+            <param name="/wholeBodyDynamics/right_lower_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param>
             <param name="/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front,l_sole,l_sole)</param>
             <param name="/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o">(l_foot_rear,l_sole,l_sole)</param>
             <param name="/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o">(r_foot_front,r_sole,r_sole)</param>
@@ -75,7 +148,8 @@
                 <elem name="l_foot_front_ft_sensor">left_leg-eb8-j3_5-strain</elem>
                 <elem name="l_foot_rear_ft_sensor">left_leg-eb7-j0_2-strain</elem>
                 <elem name="r_foot_front_ft_sensor">right_leg-eb12-j3_5-strain</elem>
-		<elem name="r_foot_rear_ft_sensor">right_leg-eb11-j0_2-strain</elem> 
+		<elem name="r_foot_rear_ft_sensor">right_leg-eb11-j0_2-strain</elem>
+		<elem name="r_leg_ft_sensor">torso-eb5-j0_2-strain</elem>
             </paramlist>
         </action>
 

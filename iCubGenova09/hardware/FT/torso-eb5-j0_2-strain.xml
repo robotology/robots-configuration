@@ -3,11 +3,11 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb12-j3_5-strain" type="embObjFTsensor">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb5-j0_2-strain" type="embObjFTsensor">
     
         <xi:include href="../../general.xml"/>
 
-        <xi:include href="../../hardware/electronics/right_leg-eb12-j3_5-eln.xml" />
+        <xi:include href="../../hardware/electronics/torso-eb5-j0_2-eln.xml" />
     
         <group name="SERVICE">
             
@@ -30,7 +30,7 @@
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   id_r_tiptoe_strain   </param>
+                    <param name="id">                   id_r_hip_strain   </param>
                     <param name="type">                 eoas_strain             </param>
                     <param name="location">             CAN2:13                 </param>
                 </group>                
@@ -39,7 +39,7 @@
 
             <group name="SETTINGS">        
                 <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_r_tiptoe_strain   </param>                
+                <param name="enabledSensors">           id_r_hip_strain   </param>                
 		 <param name="temperature-acquisitionRate"> 1000                  </param> <!-- 1 seconds -->
             </group>
             
@@ -51,7 +51,6 @@
     
   </device>
   
-
 
 
 
