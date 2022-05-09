@@ -15,25 +15,14 @@
         </group>     
         
 		<!-- to enable the full upperarm uncommment this  -->
-
        <group name="defaultCfgTriangle">
-            <param name="enabled">         false  </param> 
+            <param name="enabled">         true  </param> 
             <param name="shift">           2  </param>
             <param name="cdcOffset">       0x2200  </param>
         </group>
 <!-- -->
 		    <!-- this is the configuration to enable only the front part -->
 		    <!-- check the correct CAN ID and insure it is coherent with the upstream file >
-	<group name="specialCfgBoards">           
-	    <!-- it tells some boards to be special. 
-		 we can configure only: tx period, skinType, noLoad value. 
-		 rule #1 -> CAN1:14 has: period = 50 ms, skinType = 1 (palm and fingertips skin), noLoad = 0xf0
-	      -->
-	    <param name="numOfSets"> 1 </param> 
-	    <!--                            patch       adr start   adr end     period      type    no_load     -->            
-	    <param name="boardSetCfg1">     1           14          14          50          1       0xf0        </param> 
-		                  
-	</group>
 	      <group name="defaultCfgTriangle">
             <param name="enabled">         false  </param> 
             <param name="shift">           2  </param>
