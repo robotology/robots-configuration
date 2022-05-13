@@ -17,6 +17,10 @@
 <param name="calibration1">                       2047.5          2047.5      2047.5    2047.5         2047.5        2047.5        </param>
 <param name="calibration2">                       10.0            10.0        10.0      10.0           10.0          10.0          </param>
 <param name="calibration3">                       2297.5          2971.5      1204.5    3920.5         354.5         2303.5        </param>
+		<param name="calibration4">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+		<param name="calibration5">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+		<param name="calibrationZero">                    0.00       0.00    0.00    0.00       0.00      0.00         </param>
+		<param name="calibrationDelta">                   0.00       0.00    0.00    0.00       0.00      0.00         </param>
 <param name="startupPosition">                       0.0             0.0         0.0       0.0            0.0           0.0           </param>
 <param name="startupVelocity">                       10.0            10.0        10.0      10.0           10.0          10.0          </param>
 <param name="startupMaxPwm">                             120             120         120       120            120           120           </param>
@@ -26,11 +30,11 @@
         <param name="CALIB_ORDER">(0 1 2 3 4 5) </param>               
                
         <action phase="startup" level="10" type="calibrate">           
-            <param name="target">right_leg_mc_wrapper</param>          
+            <param name="target">right_leg_mc_remapper</param>          
         </action>            
  
         <action phase="interrupt1" level="1" type="park">              
-            <param name="target">right_leg_mc_wrapper</param>          
+            <param name="target">right_leg_mc_remapper</param>          
         </action>            
  
         <action phase="interrupt3" level="1" type="abort" />           

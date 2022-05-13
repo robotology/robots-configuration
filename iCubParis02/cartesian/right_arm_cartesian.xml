@@ -42,8 +42,8 @@
 
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
-                <elem name="torso">torso_mc_wrapper</elem>
-                <elem name="right_arm">right_arm_mc_wrapper</elem>
+                <elem name="torso">torso_mc_remapper</elem>
+                <elem name="right_arm">right_arm_mc_remapper</elem>
           </paramlist>
         </action>
 
