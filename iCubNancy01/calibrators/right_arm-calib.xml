@@ -33,11 +33,11 @@
         <param name="CALIB_ORDER">(0 1 2 3) (4 6 7) (5) (8 9 11 13) (10 12 14 15) </param>
 
 		<action level="10" phase="startup" type="calibrate">
-		    <param name="target">right_arm-mc_wrapper</param>
+		    <param name="target">right_arm-mc_remapper</param>
 		</action>
 
 		<action level="1" phase="interrupt1" type="park">
-		    <param name="target">right_arm-mc_wrapper</param>
+		    <param name="target">right_arm-mc_remapper</param>
 		</action>
 
 		<action level="1" phase="interrupt3" type="abort"/>
