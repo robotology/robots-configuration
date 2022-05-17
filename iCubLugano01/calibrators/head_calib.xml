@@ -8,22 +8,28 @@
             <param name="deviceName"> Head_Calibrator </param>         
         </group>             
  
+  
+<group name="HOME">          
+<param name="positionHome"> -40           0             0             0             0             0             </param>       
+<param name="velocityHome"> 10            10            10            10            10            10            </param>       
+</group>  
+
 <group name="CALIBRATION">   
  
 <param name="calibrationType">            0             0             0             0             0             0             </param>       
 <param name="calibration1">               500           1333          1333          600           500           500           </param>       
 <param name="calibration2">               20            20            20            -20           20            20            </param>       
-<param name="calibration3">               0             0             0             0             0             0             </param>       
+<param name="calibration3">               0             0             0             0             0             0             </param>    
+<param name="calibration4">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibration5">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibrationZero">                    0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibrationDelta">                   0.00       0.00    0.00    0.00       0.00      0.00         </param>   
 <param name="startupPosition">               0             0             0             0             0             0             </param>       
 <param name="startupVelocity">               10            10            10            10            10            10            </param>       
 <param name="startupMaxPwm">                     1300          1300          1330          1300          1300          1300          </param>       
 <param name="startupPosThreshold">           2             2             180           2             180           180           </param>       
 </group>       
- 
-<group name="HOME">          
-<param name="positionHome"> -40           0             0             0             0             0             </param>       
-<param name="velocityHome"> 10            10            10            10            10            10            </param>       
-</group>       
+     
  
         <param name="CALIB_ORDER"> (0) (1) (2 3) (5) (4) </param>      
                

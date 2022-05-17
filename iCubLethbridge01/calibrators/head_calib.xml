@@ -10,21 +10,27 @@
             <param name="deviceName"> HeadV2_Calibrator </param>
         </group>
 
+         
+        <group name="HOME">          
+            <param name="positionHome">                           0             0                        </param>       
+            <param name="velocityHome">                         10            10                        </param>       
+        </group>   
+
         <group name="CALIBRATION">   
             <param name="calibrationType">                        3             3                                  </param>       
             <param name="calibration1">                       2047.5        2047.5                          </param>       
             <param name="calibration2">                          10            10                       </param>       
             <param name="calibration3">                     273.5       3139.5                     </param>       
+      		<param name="calibration4">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+    		<param name="calibration5">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+	    	<param name="calibrationZero">                    0.00       0.00    0.00    0.00       0.00      0.00         </param>
+		    <param name="calibrationDelta">                   0.00       0.00    0.00    0.00       0.00      0.00         </param>
             <param name="startupPosition">                           0             0                        </param>       
             <param name="startupVelocity">                          10            10                       </param>       
             <param name="startupMaxPwm">                               0           0                       </param>       
             <param name="startupPosThreshold">                       2             2                       </param>       
         </group>       
-         
-        <group name="HOME">          
-            <param name="positionHome">                           0             0                        </param>       
-            <param name="velocityHome">                         10            10                        </param>       
-        </group>       
+    
 
         <param name="CALIB_ORDER"> (0) </param>
         
