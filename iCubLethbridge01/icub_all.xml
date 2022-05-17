@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="iCubLethbridge01" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
-    <!-- cartesian --> 
+        <!-- cartesian -->
+    <xi:include href="cartesian/left_arm_cartesian.xml" />
+    <xi:include href="cartesian/right_arm_cartesian.xml" />
     
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
