@@ -6,8 +6,8 @@
     <param name="odometer_port_name">  /cer/odometer </param>
     <param name="velocity_port_name">  /cer/velocity </param>
     
-    <action phase="startup" level="10" type="attach">
+    <action phase="startup" level="15" type="attach">
             <param name="device">  cer_odometry </param>
     </action>
-    <action phase="shutdown" level="15" type="detach" />
+    <action phase="shutdown" level="5" type="detach" />
 </device>
