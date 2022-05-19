@@ -5,8 +5,8 @@
     <param name="geom_r">   0.16416 </param> <!--//m wheels radius          ((320.0 / 2 / 1000.0)*1.026) -->
     <param name="geom_l">   0.338   </param> <!--//m wheels distance                                     -->
     
-    <action phase="startup" level="20" type="attach">
+    <action phase="startup" level="10" type="attach">
             <param name="device">  cer_mobile_base_mc_remapper </param>
     </action>
-    <action phase="shutdown" level="5" type="detach" />
+    <action phase="shutdown" level="10" type="detach" />
 </device>
