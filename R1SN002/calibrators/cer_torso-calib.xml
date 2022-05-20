@@ -44,14 +44,14 @@
 		<param name="CALIB_ORDER">(0 1 2 3) </param>
 
 		<action phase="startup" level="10" type="calibrate">
-		    <param name="target">cer_torso_mc_wrapper</param>
+		    <param name="target">cer_torso_mc_remapper</param>
 		</action>
 
 		<action phase="interrupt1" level="1" type="park">
-		    <param name="target">cer_torso_mc_wrapper</param>
+		    <param name="target">cer_torso_mc_remapper</param>
 		</action>
 		<action phase="interrupt1" level="2" type="park">
-		    <param name="target">cer_torso_mc_wrapper</param>
+		    <param name="target">cer_torso_mc_remapper</param>
 		</action>
 
 
