@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://www.w3.org/2001/XInclude" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.w3.org/2001/XInclude" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="include">
+    <xs:complexType>
+      <xs:attribute name="href" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
