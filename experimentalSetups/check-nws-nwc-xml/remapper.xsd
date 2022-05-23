@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:xi="http://www.w3.org/2001/XInclude" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="device">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="paramlist">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="elem">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="name" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" fixed="networks"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="param">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="name" type="xs:string" use="required" fixed="joints" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" name="action">
+          <xs:complexType>
+            <xs:sequence minOccurs="0">
+              <xs:element name="paramlist">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="elem">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="name" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="phase" type="phase-values" use="required" />
+            <xs:attribute name="level" type="level-values" use="required" />
+            <xs:attribute name="type" type="type-values" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="type" type="xs:string" use="required" fixed="controlboardremapper"/>
+    </xs:complexType>
+  </xs:element>
+
+<xs:simpleType name="phase-values">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="startup" />
+    <xs:enumeration value="shutdown" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="level-values">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="20" />
+    <xs:enumeration value="5" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="type-values">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="attach" />
+    <xs:enumeration value="detach" />
+  </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
