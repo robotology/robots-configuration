@@ -35,7 +35,7 @@
 
         <module>
                 <name>iKinGazeCtrl</name>
-                <parameters>--from config_no_imu.ini</parameters>
+                <parameters>--from iKinGazeCtrl.ini</parameters>
                 <node>icub-head</node>
                 <dependencies>
                     <port timeout="60.0" request="is_ready" reply="[ok]">/icub/yarprobotinterface</port>
