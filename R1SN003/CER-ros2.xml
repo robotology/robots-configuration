@@ -6,6 +6,7 @@
  
     <!-- ODOMETRY -->
     <xi:include href="wrappers/odometry/odometry_nws_yarp.xml" />
+    <xi:include href="wrappers/odometry/odometry_nws_ros2.xml" />
     <xi:include href="hardware/odometry/odometry.xml" />
 
     <!-- LASER -->
@@ -15,7 +16,8 @@
     <xi:include href="wrappers/rpLidar/laser_front_nws_yarp.xml" /> 
     <xi:include href="hardware/rpLidar/laserA3_hw_double.xml" /> 
     <xi:include href="wrappers/rpLidar/laser_double_nws_yarp.xml" />
- 
+    <xi:include href="wrappers/rpLidar/laser_double_nws_ros2.xml" />
+
     <!-- BASE -->
     <xi:include href="hardware/motorControl/cer_base-ems1-mc.xml" />
     <xi:include href="wrappers/motorControl/cer_base-mc_remapper.xml" />
@@ -91,5 +93,8 @@
     <xi:include href="wrappers/FT/cer_left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/cer_right_arm-FT_wrapper.xml" /> 
     
+    <!--  ROS -->
+    <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" />
+    <xi:include href="wrappers/motorControl/cer_alljoints_ros2_wrapper.xml" />
 </devices>
 </robot> 
