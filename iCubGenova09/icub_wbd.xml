@@ -72,40 +72,25 @@
     <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
 
     <!-- ANALOG SENSORS FT -->
-    <xi:include href="wrappers/FT/left_foot_tiptoe-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/left_foot_heel-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_foot_tiptoe-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_foot_heel-FT_wrapper.xml" /> 
-    <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
-    <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper.xml" /> 
 
-    <xi:include href="hardware/FT/torso-eb5-j0_2-strain.xml" /> <!-- right hip -->
+   <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> 
 
-    <xi:include href="hardware/FT/left_leg-eb7-j0_2-strain.xml" />
-    <xi:include href="hardware/FT/left_leg-eb8-j3_5-strain.xml" />
-    <xi:include href="hardware/FT/right_leg-eb11-j0_2-strain.xml" />
-    <xi:include href="hardware/FT/right_leg-eb12-j3_5-strain.xml" />
-
-    <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
-    <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
+   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
     
-    <!-- MULTI ANALOG SENSORS FT -->
-    <xi:include href="wrappers/FT/right_arm-FT_wrapper_multipleSens.xml" />
-    <xi:include href="wrappers/FT/left_arm-FT_wrapper_multipleSens.xml" />
-    <xi:include href="wrappers/FT/left_foot_tiptoe-FT_wrapper_multipleSens.xml" />
-    <xi:include href="wrappers/FT/left_foot_heel-FT_wrapper_multipleSens.xml" />
-    <xi:include href="wrappers/FT/right_foot_tiptoe-FT_wrapper_multipleSens.xml" />
-    <xi:include href="wrappers/FT/right_foot_heel-FT_wrapper_multipleSens.xml" />
-    <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper_multipleSens.xml" />
+   <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper.xml" /> 
+   <xi:include href="wrappers/FT/left_leg_hip-FT_wrapper.xml" /> 
 
-    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
-    <!--    <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
-    <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" />
-    <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />
-    <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" />
-    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> -->
- 
+
+   <xi:include href="hardware/FT/left_leg-eb7-j0_2-strain.xml" />
+   <xi:include href="hardware/FT/right_leg-eb11-j0_2-strain.xml" /> 
+   <xi:include href="hardware/FT/left_leg-eb8-j3_5-strain.xml" />
+   <xi:include href="hardware/FT/right_leg-eb12-j3_5-strain.xml" />
+
+   <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
+   <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" /> 
+    
      <!-- INERTIAL SENSOR--> 
 <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" /> -->

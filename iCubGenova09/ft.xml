@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="iCubGenova09" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <params>
+    <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+
+    <devices>
+
+    <!-- ANALOG SENSORS FT -->
+
+   <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> 
+
+   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
+    
+   <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper.xml" /> 
+   <xi:include href="wrappers/FT/left_leg_hip-FT_wrapper.xml" /> 
+
+
+   <xi:include href="hardware/FT/left_leg-eb7-j0_2-strain.xml" />
+   <xi:include href="hardware/FT/right_leg-eb11-j0_2-strain.xml" /> 
+   <xi:include href="hardware/FT/left_leg-eb8-j3_5-strain.xml" />
+   <xi:include href="hardware/FT/right_leg-eb12-j3_5-strain.xml" />
+
+   <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
+   <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" /> 
+    
+
+  </devices>
+</robot>
