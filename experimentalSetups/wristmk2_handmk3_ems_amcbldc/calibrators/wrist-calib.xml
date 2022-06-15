@@ -19,7 +19,9 @@
         <param name="calibrationType">                  12      12      12      </param>
 
 
-        <param name="calibration1">                     6172    18789   11688   </param>
+        <!-- NEW wrist, OLD calibration values for joints defined as yaw pitch roll 
+            <param name="calibration1">                7261  29830 30460   </param> -->
+        <param name="calibration1">                     6865    29533   30289   </param>
         <param name="calibration2">                     0       0       0       </param>
         <param name="calibration3">                     0       0       0       </param>
         <param name="calibration4">                     0       0       0       </param>
@@ -28,7 +30,7 @@
         <param name="calibrationDelta">                 0       0       0       </param>
 
         <param name="startupPosition">                  0.0     0.0     0.0     </param>
-        <param name="startupVelocity">                  30.0    30.0    30.0    </param>
+        <param name="startupVelocity">                  10.0    10.0    10.0    </param>
         <param name="startupMaxPwm">                    16000   16000   16000   </param>
         <param name="startupPosThreshold">              2       2       2       </param>
     </group>
