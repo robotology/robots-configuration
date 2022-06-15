@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubShanghai01" build="1">
+
+    <xi:include href="./pc104.xml" />
+
+    <group name="ETH_BOARD">
+
+        <group name="ETH_BOARD_PROPERTIES">
+            <param name="IpAddress">                10.0.1.9                </param>
+            <param name="IpPort">                   12345                   </param>
+            <param name="Type">                     ems4                    </param>
+            <param name="maxSizeRXpacket">          768                     </param>
+            <param name="maxSizeROP">               384                     </param>
+        </group>
+
+        <group name="ETH_BOARD_SETTINGS">
+            <param name="Name">                     "right_leg-eb9-j4_5"    </param> 
+            <group name="RUNNINGMODE">
+                <param name="period">                   1000                </param>
+                <param name="maxTimeOfRXactivity">      400                 </param>
+                <param name="maxTimeOfDOactivity">      300                 </param>   
+                <param name="maxTimeOfTXactivity">      300                 </param>                
+                <param name="TXrateOfRegularROPs">      5                   </param> 
+            </group>              
+        </group>                 
+        
+        <group name="ETH_BOARD_ACTIONS">
+            <group name="MONITOR_ITS_PRESENCE">
+                <param name="enabled">                  true                </param> 
+                <param name="timeout">                  0.020               </param> 
+                <param name="periodOfMissingReport">    60.0                </param> 
+            </group>
+        </group>
+
+    </group>  
+
+</params>
+

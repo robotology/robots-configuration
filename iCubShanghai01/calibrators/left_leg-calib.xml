@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-calibrator" type="parametricCalibratorEth">
+                <xi:include href="../general.xml" />
+
+		<group name="GENERAL">
+		    <param name="joints">  6  </param> <!-- the number of joints of the robot part -->
+		    <param name="deviceName"> Left_Leg_Calibrator </param>
+		</group>
+		
+<group name="HOME">
+	<param name="positionHome">                       0.00           10.00       0.00         0.00        0.00      0.00       </param>
+	<param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00     10.00       </param>
+</group>
+
+
+<group name="CALIBRATION">
+<param name="calibrationType">           12        12         12        12      12      12        </param>
+<param name="calibration1">              40960     41170      57980     46930   22500   21630      </param> 
+<param name="calibration2">              0         0          0         0       0       0         </param> 
+<param name="calibration3">              0         0          0         0       0       0         </param> 
+                                                               
+<param name="calibration4">              0         0          0         0       0       0         </param>
+<param name="calibration5">              0         0          0         0       0       0         </param>
+<param name="calibrationZero">           0         0          0         0       0       0         </param>
+<param name="calibrationDelta">          0         0          0         0       0       0         </param>
+
+
+<param name="startupPosition">           0         10          0         0       0       0         </param>
+<param name="startupVelocity">           5         5          10        10      10      10        </param>
+<param name="startupMaxPwm">             2500      2500       2500      2500    2500    2500      </param>
+<param name="startupPosThreshold">       2         2          2         2       2       2         </param>
+</group>
+
+	        <param name="CALIB_ORDER"> (0 1 2 3 4 5) </param>
+
+		<action phase="startup" level="10" type="calibrate">
+		    <param name="target">left_leg-mc_remapper</param>
+		</action>
+
+		<action phase="interrupt1" level="1" type="park">
+		    <param name="target">left_leg-mc_remapper</param>
+		</action>
+
+		<action phase="interrupt3" level="1" type="abort" />
+
+	</device>
+
