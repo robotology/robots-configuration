@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="iCubShanghai01" portprefix="icub" build="1">
+    <params>
+    <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+          
+    <devices>
+	
+   
+    <!-- TORSO --> 
+    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" /> 
+
+  
+  
+    <!--  CALIBRATORS -->
+    <xi:include href="calibrators/torso-calib.xml" />
+
+    </devices>
+</robot> 

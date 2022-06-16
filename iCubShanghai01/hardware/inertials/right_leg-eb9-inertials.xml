@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb9-inertials" type="embObjInertials">
+
+        <xi:include href="../../general.xml" />
+
+        <xi:include href="../../hardware/electronics/right_leg-eb9-j4_5-eln.xml" />
+
+        <group name="SERVICE">
+
+            <param name="type"> eomn_serv_AS_inertials </param>
+
+            <group name="PROPERTIES">
+
+                <group name="CANBOARDS">
+                    <param name="type">                 eobrd_mtb           </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+
+                <group name="SENSORS">
+                    <param name="id">       r_lower_leg_ems_gyro_eb9
+                    </param>
+
+                    <param name="type">     eoas_gyros_st_l3g4200d
+                    </param>
+
+                    <param name="location"> ETH:1
+                    </param>
+                </group>
+
+            </group>
+
+            <group name="SETTINGS">
+                <param name="acquisitionRate">      50              </param>
+                <param name="enabledSensors">       r_lower_leg_ems_gyro_eb9
+                </param>
+            </group>
+
+        </group>
+
+    </device>
+
+
