@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
-
-
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-inertial" type="imuBosch_BNO055">
-      <param name="i2c">  /dev/i2c-1   </param>
-</device>
-
