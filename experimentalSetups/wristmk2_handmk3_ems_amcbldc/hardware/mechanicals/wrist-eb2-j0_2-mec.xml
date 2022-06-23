@@ -6,7 +6,7 @@
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 3 </param>
         <param name="AxisMap">               0             1             2           </param>
-        <param name="AxisName">         "wrist_yaw"   "wrist_pitch" "wrist_roll"     </param>
+        <param name="AxisName">         "wrist_yaw"   "wrist_roll" "wrist_pitch"     </param>
         <param name="AxisType">         "revolute"    "revolute"    "revolute"       </param>
         <param name="Encoder">          182.044       182.044       182.044          </param>
         <param name="fullscalePWM">     32000         32000         32000            </param>
