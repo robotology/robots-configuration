@@ -95,7 +95,19 @@
 <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" /> -->
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="hardware/inertials/head-inertial.xml" /> 
+    <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="hardware/inertials/left_leg-eb7-IMU.xml" />
+    <xi:include href="wrappers/inertials/left_leg-IMU_wrapper.xml" />
+    <xi:include href="hardware/inertials/left_leg-eb8-IMU.xml" />
+    <xi:include href="wrappers/inertials/left_foot-IMU_wrapper.xml" />
+    <xi:include href="hardware/inertials/right_leg-eb11-IMU.xml" />
+    <xi:include href="wrappers/inertials/right_leg-IMU_wrapper.xml" />
+    <xi:include href="hardware/inertials/right_leg-eb12-IMU.xml" />
+    <xi:include href="wrappers/inertials/right_foot-IMU_wrapper.xml" />
+    <xi:include href="hardware/inertials/left_arm-eb1-IMU.xml" />
+    <xi:include href="wrappers/inertials/left_arm-IMU_wrapper.xml" />
+    <xi:include href="hardware/inertials/right_arm-eb3-IMU.xml" />
+    <xi:include href="wrappers/inertials/right_arm-IMU_wrapper.xml" />
 
     <!--  SKINS -->
     <xi:include href="wrappers/skin/left_upperarm-skin_wrapper.xml" />
