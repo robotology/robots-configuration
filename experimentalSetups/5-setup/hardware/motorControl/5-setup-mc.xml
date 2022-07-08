@@ -14,11 +14,11 @@
     <group name="LIMITS">
         <param name="jntPosMax">                0               </param>
         <param name="jntPosMin">                0               </param>
-        <param name="jntVelMax">                7200                 </param>
-        <param name="motorNominalCurrents">     1000                </param>
-        <param name="motorPeakCurrents">        2000                </param>
+        <param name="jntVelMax">                18000                 </param>
+        <param name="motorNominalCurrents">     3500                </param>
+        <param name="motorPeakCurrents">        5100                </param>
         <param name="motorOverloadCurrents">    15000               </param>
-        <param name="motorPwmLimit">            8000               </param>
+        <param name="motorPwmLimit">            12000               </param>
     </group>
 
     <group name="TIMEOUTS">
@@ -47,10 +47,10 @@
         <param name="outputType">             pwm                   </param>
         <param name="fbkControlUnits">        metric_units          </param>
         <param name="outputControlUnits">     machine_units         </param>
-        <param name="kp">           500              </param>
+        <param name="kp">           -500              </param>
         <param name="kd">           0                </param>
-        <param name="ki">           100              </param>
-        <param name="maxOutput">    8000           </param>
+        <param name="ki">           -100              </param>
+        <param name="maxOutput">    12000           </param>
         <param name="maxInt">       3000           </param>
         <param name="stictionUp">   0              </param>
         <param name="stictionDown"> 0              </param>
