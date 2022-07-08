@@ -3,7 +3,7 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb12-j3_5-strain" type="embObjFTsensor">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb12-j3_5-strain" type="embObjMultipleFTsensors">
     
         <xi:include href="../../general.xml"/>
 
@@ -11,7 +11,7 @@
     
         <group name="SERVICE">
             
-            <param name="type"> eomn_serv_AS_strain </param>
+            <param name="type"> eomn_serv_AS_ft </param>
         
             <group name="PROPERTIES">
   
@@ -19,33 +19,36 @@
                     <param name="type">                 strain2            </param>
 
                     <group name="PROTOCOL">
-                        <param name="major">            2                       </param>    
-                        <param name="minor">            0                       </param>     
+                        <param name="major">            2        	            </param>    
+                        <param name="minor">            0    	            </param>     
                     </group>                    
                     <group name="FIRMWARE">
-                        <param name="major">            2                       </param>    
-                        <param name="minor">            0                       </param> 
-                        <param name="build">            9                       </param>
+                        <param name="major">            2   		            </param>    
+                        <param name="minor">            0  		            </param> 
+                        <param name="build">            9  		       </param>
                     </group>
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   id_r_tiptoe_strain   </param>
-                    <param name="type">                 eoas_strain             </param>
-                    <param name="location">             CAN2:13                 </param>
+                    <param name="id">                   r_foot_rear_ft_sensor	r_foot_front_ft_sensor   </param>
+                    <param name="board">                 strain2		strain2             </param>
+                    <param name="location">             CAN2:13		CAN2:14                 </param>
                 </group>                
             
             </group>
 
             <group name="SETTINGS">        
-                <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_r_tiptoe_strain   </param>                
-		 <param name="temperature-acquisitionRate"> 1000                  </param> <!-- 1 seconds -->
-            </group>
-            
-            <group name="STRAIN_SETTINGS">        
-                <param name="useCalibration">           true                    </param>          
-            </group>            
+                <param name="enabledSensors">       r_foot_rear_ft_sensor          r_foot_front_ft_sensor       </param>
+                <param name="ftPeriod">             10         		 10                     </param>
+                <param name="temperaturePeriod">    1000      		 1000                    </param>
+                <param name="useCalibration">       true      		 true                 </param>           
+            </group>       
+        
+            <group name="CANMONITOR">        
+                <param name="checkPeriod">      100     </param>
+                <param name="reportMode">       ALL     </param>
+                <param name="ratePeriod">       20000 </param>
+            </group>              
             
         </group>
     

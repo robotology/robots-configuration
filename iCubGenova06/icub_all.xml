@@ -7,6 +7,7 @@
         <!-- HEAD -->	
         <xi:include href="hardware/motorControl/head-cfw2_can0-mc.xml" />
         <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
+        <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
 
         <!--  CALIBRATORS -->
         <xi:include href="calibrators/head-calib.xml" /> 

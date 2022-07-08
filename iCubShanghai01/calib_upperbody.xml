@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="iCubShanghai01" portprefix="icub" build="1">
+    <params>
+    <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+          
+    <devices>
+	
+    
+    <!-- HEAD -->
+    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
+    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
+    <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" />
+
+    <!-- FACE -->
+   <!-- <xi:include href="./hardware/motorControl/face-eb22-j0-mc.xml" /> 
+    <xi:include href="./wrappers/motorControl/face-mc_wrapper.xml" />-->
+
+    <!-- LEFT ARM -->
+    <xi:include href="hardware/motorControl/left_arm-eb1-j0_3-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb24-j4_7-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb25-j8_11-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb26-j12_15-mc.xml" /> 
+    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
+
+    <!-- RIGHT ARM -->
+    <xi:include href="hardware/motorControl/right_arm-eb3-j0_3-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb27-j4_7-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" /> 
+    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" /> 
+    
+      <!-- ANALOG SENSOR FT -->
+    <!--<xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
+    <xi:include href="hardware/FT/left_arm-eb1-j0_3-strain.xml" /> 
+    <xi:include href="hardware/FT/right_arm-eb3-j0_3-strain.xml" />-->
+    
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
+   <!-- <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
+    <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" /> -->
+
+    <!-- ANALOG SENSOR MAIS -->
+    <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
+    <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" /> 
+    <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" />
+    <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
+    
+    <!--  CALIBRATORS -->
+    <xi:include href="calibrators/left_arm-calib.xml" />
+    <xi:include href="calibrators/right_arm-calib.xml" /> 
+    <xi:include href="calibrators/head-calib.xml" />
+   <!-- <xi:include href="calibrators/face-calib.xml" />-->
+
+    </devices>
+</robot> 

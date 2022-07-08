@@ -3,6 +3,7 @@
 
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="realsense2dev" type="realsense2">
+	<param name="rotateImage180">true</param>
 	<group name="SETTINGS">
 		<param name="depthResolution"> (640 480)           </param>
 		<param name="rgbResolution">  (640 480) </param>
@@ -13,5 +14,8 @@
     </group>
 	<group name="HW_DESCRIPTION">
 		<param name="clipPlanes"> (0.2 10.0)</param>
+	</group>
+	<group name="QUANT_PARAM">
+		<param name="depth_quant">2</param>
 	</group>
 </device>

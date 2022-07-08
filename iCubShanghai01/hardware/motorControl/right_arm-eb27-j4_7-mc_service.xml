@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubShanghai01" build="1">
+
+    <group name="SERVICE">
+        
+        <param name="type"> eomn_serv_MC_mc4plus </param> 
+    
+        <group name="PROPERTIES">
+        
+            <group name="ETHBOARD">
+                <param name="type">             mc4plus             </param> 
+            </group>          
+
+
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">                 
+                    <param name="type">             pwm                 pwm                 pwm                 pwm                     </param>
+                    <param name="port">             CONN:P5             CONN:P2             CONN:P4             CONN:P3                 </param>
+                </group>
+                
+                <group name="ENCODER1">  
+                    <param name="type">             qenc                aea                 aea                 absanalog               </param>  
+                    <param name="port">             CONN:P5             CONN:P10            CONN:P11            CONN:P3                 </param>
+                    <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param>
+                    <param name="resolution">       1                   4096               -4096                65535                     </param> <!-- 65535:this value will change by fw during calibration (type 6 or 7) -->
+                    <param name="tolerance">        0                   0.703               0.703                  0                    </param>  
+                </group>        
+                
+                <group name="ENCODER2">
+                    <param name="type">             qenc                qenc                qenc                none                    </param>
+                    <param name="port">             CONN:P5             CONN:P2             CONN:P4             CONN:none               </param>
+                    <param name="position">         atmotor             atmotor             atmotor             none                    </param>
+                    <param name="resolution">       -2048               1600                1600                1                       </param>
+                    <param name="tolerance">         0                   0                   0                  0                       </param>  
+                </group>  
+            </group>    
+            
+        </group>
+           
+    </group>
+    
+  
+</params>
+

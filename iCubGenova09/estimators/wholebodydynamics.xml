@@ -66,7 +66,13 @@
 	<group name="HW_USE_MAS_IMU">
 	    <param name="accelerometer">rfeimu_acc</param>
 	    <param name="gyroscope">rfeimu_gyro</param>
-	</group>
+        </group>
+
+        <group name="multipleAnalogSensorsNames">
+              <!--param name="TemperatureSensorsNames">(l_leg_ft_sensor,r_leg_ft_sensor,l_foot_ft_sensor,r_foot_ft_sensor)</param-->
+              <param name="SixAxisForceTorqueSensorsNames">(l_arm_ft_sensor, r_arm_ft_sensor,  r_leg_ft_sensor,l_foot_front_ft_sensor, l_foot_rear_ft_sensor, r_foot_front_ft_sensor, r_foot_rear_ft_sensor)</param>
+        </group>`
+
 
 
         <group name="GRAVITY_COMPENSATION">
@@ -145,11 +151,11 @@
 
   		 <elem name="l_arm_ft_sensor">left_arm-eb1-j0_1-strain</elem>
                 <elem name="r_arm_ft_sensor">right_arm-eb3-j0_1-strain</elem>
-                <elem name="l_foot_front_ft_sensor">left_leg-eb8-j3_5-strain</elem>
-                <elem name="l_foot_rear_ft_sensor">left_leg-eb7-j0_2-strain</elem>
-                <elem name="r_foot_front_ft_sensor">right_leg-eb12-j3_5-strain</elem>
-		<elem name="r_foot_rear_ft_sensor">right_leg-eb11-j0_2-strain</elem>
-		<elem name="r_leg_ft_sensor">torso-eb5-j0_2-strain</elem>
+                <elem name="l_foot_ft_sensors">left_leg-eb8-j3_5-strain</elem>
+			<!-- <elem name="l_leg_ft_sensor">left_leg-eb7-j0_2-strain</elem>-->
+                <elem name="r_foot_ft_sensors">right_leg-eb12-j3_5-strain</elem>
+		<elem name="r_leg_ft_sensor">right_leg-eb11-j0_2-strain</elem>
+			<!-- <elem name="r_leg_ft_sensor">torso-eb5-j0_2-strain</elem> -->
             </paramlist>
         </action>
 

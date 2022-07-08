@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubShanghai01" build="1">
+
+        <group name="defaultCfgBoard">
+            <param name="period">        50  </param> 
+            <param name="skinType">      8 </param>     <!-- 0 ==> new skin
+                                                              1 ==> palm and fingertips skin
+                                                              2 ==> old skin without temperature compensation 
+                                                              8 ==> rugged skin with temperature compensation (4535.C) -->
+            <param name="noLoad">         0xf0  </param>
+            <param name="diagnostic">    false  </param>     <!-- used to config high level -->
+        </group>
+    
+<group name="specialCfgBoards">           
+	    <!-- it tells some boards to be special. 
+		 we can configure only: tx period, skinType, noLoad value. 
+		 rule #1 -> CAN1:14 has: period = 50 ms, skinType = 1 (palm and fingertips skin), noLoad = 0xf0
+	      -->
+	    <param name="numOfSets"> 1 </param> 
+	    <!--                            patch       adr start   adr end     period      type    no_load     -->            
+	    <param name="boardSetCfg1">     1           14          14          50          1       0xf0        </param> 
+		                  
+	</group>
+ 
+       <group name="defaultCfgTriangle">
+            <param name="enabled">         false  </param> 
+            <param name="shift">           2  </param>
+            <param name="cdcOffset">       0x2200  </param>
+        </group>
+ 
+        <group name="specialCfgTriangles">
+            <param name="numOfSets">         20  </param>
+            <param name="triangleSetCfg1">     1            14        0             6             1              0            0x2000      </param>
+           <param name="triangleSetCfg2">      1            14        8             11             1              2           0x2200       </param>
+           
+           <param name="triangleSetCfg3">      1            13        0             15             1              2           0x2200       </param>
+           
+           <param name="triangleSetCfg4">      1            12        0             1              1              2           0x2200       </param>
+           <param name="triangleSetCfg5">      1            12        3             3              1              2           0x2200       </param>
+           <param name="triangleSetCfg6">      1            12        6             6              1              2          0x2200       </param>
+           <param name="triangleSetCfg7">      1            12        8             9              1              2          0x2200       </param>         
+           <param name="triangleSetCfg8">      1            12       12            13              1              2          0x2200       </param>
+           
+           <param name="triangleSetCfg9">      1            11        1              4             1              2          0x2200       </param>
+           <param name="triangleSetCfg10">     1            11        8             13             1              2          0x2200       </param>
+          
+           <param name="triangleSetCfg11">     1             9        0              1             1              2          0x2200       </param>
+           <param name="triangleSetCfg12">     1             9        6              6             1              2          0x2200       </param>
+           <param name="triangleSetCfg13">     1             9        8             15             1              2          0x2200       </param>
+           
+           <param name="triangleSetCfg14">     1            10        0               8             1              2          0x2200       </param>    
+           <param name="triangleSetCfg15">     1            10       12              13             1              2          0x2200       </param>
+           
+           <param name="triangleSetCfg16">     1            8        0              0             1              2           0x2200       </param>
+           <param name="triangleSetCfg17">     1            8        8              9             1              2           0x2200       </param>
+           <param name="triangleSetCfg18">     1            8        10             11            1              2           0x2200       </param>
+           <param name="triangleSetCfg19">     1            8        13             13            1             2           0x2200       </param>
+           <param name="triangleSetCfg20">     1            8        15             15            1             2           0x2200       </param>
+        </group>
+
+        
+</params>

@@ -23,6 +23,10 @@
 <param name="calibration1">                       2047.5     2047.5  2047.5  2047.5     900.0     900.0        </param>
 <param name="calibration2">                       10.0       10.0    10.0    10.0       20.0      20.0         </param>
 <param name="calibration3">                       3697.5     2103.5  1891.5  3617.5     0.0       0.0          </param>
+<param name="calibration4">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibration5">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibrationZero">                    0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibrationDelta">                   0.00       0.00    0.00    0.00       0.00      0.00         </param>
 <param name="startupPosition">                       0.0        0.0     0.0     0.0        0.0       0.0          </param>
 <param name="startupVelocity">                       10.0       10.0    10.0    10.0       10.0      10.0         </param>
 <param name="startupMaxPwm">                             130        130     0       0          0         0            </param>
@@ -32,11 +36,11 @@
         <param name="CALIB_ORDER"> (0 1 2) (3) (4) (5) </param>          
                
         <action phase="startup" level="10" type="calibrate">           
-            <param name="target">head_mc_wrapper</param>               
+            <param name="target">head-mc_remapper</param>               
         </action>            
  
         <action phase="interrupt1" level="1" type="park">              
-            <param name="target">head_mc_wrapper</param>               
+            <param name="target">head-mc_remapper</param>               
         </action>            
  
         <action phase="interrupt3" level="1" type="abort" />           

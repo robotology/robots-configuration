@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubShanghai01" build="1">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion"> 6 </param>
+        <param name="Joints"> 4 </param> 
+        <param name="AxisMap">               0             1             2             3       </param>
+        <param name="AxisName">     "l_hip_pitch"   "l_hip_roll"    "l_hip_yaw"   "l_knee"     </param>
+        <param name="AxisType">       "revolute"    "revolute"    "revolute"  "revolute"       </param>
+        <param name="Encoder">         182.044       182.044       182.044       182.044       </param>     
+        <param name="fullscalePWM">   32000         32000         32000         32000    </param>
+        <param name="ampsToSensor">     1000.0        1000.0        1000.0           1000.0      </param>
+        <param name="Gearbox_M2J">   	-150.0         100.0        -100.0         -100.0      </param>
+        <param name="Gearbox_E2J">   	1             1             1              1           </param>
+        <param name="useMotorSpeedFbk"> 1             1             1              1           </param>
+        <param name="MotorType">       "BLL_MOOG"     "BLL_MOOG"   "BLL_MOOG"    "BLL_MOOG"   </param>
+        <param name="Verbose">0</param>
+    </group>
+    
+    <group name="LIMITS">
+        <param name="hardwareJntPosMax">    92            92            72            0     </param>
+        <param name="hardwareJntPosMin">   -30           -15           -72         -100     </param>
+        <param name="rotorPosMin">           0             0             0            0     </param> 
+        <param name="rotorPosMax">           0             0             0            0     </param>
+    </group>
+
+    <group name="2FOC">
+        <param name="HasHallSensor">         1             1             1             1       </param>
+        <param name="HasTempSensor">         0             0             0             0       </param>
+        <param name="HasRotorEncoder">       1             1             1             1       </param>
+        <param name="HasRotorEncoderIndex">  0             0             0             0       </param>
+        <param name="HasSpeedEncoder">       0             0             0             0       </param>
+        <param name="RotorIndexOffset">      0             0             0             0       </param>
+        <param name="MotorPoles">            8             8             8             8       </param>
+   </group>
+
+    <group name="COUPLINGS"> 
+                                
+        <param name ="matrixJ2M"> 
+            1.00    0.00    0.00    0.00
+            0.00    1.00    0.00    0.00
+            0.00    0.00    1.00    0.00
+            0.00    0.00    0.00    1.00   
+        </param>
+       
+        <param name ="matrixM2J"> 
+            1.00    0.00    0.00    0.00
+            0.00    1.00    0.00    0.00
+            0.00    0.00    1.00    0.00
+            0.00    0.00    0.00    1.00   
+        </param>
+
+        <param name ="matrixE2J">  
+            1.00    0.00    0.00    0.00    0.00    0.00
+            0.00    1.00    0.00    0.00    0.00    0.00
+            0.00    0.00    1.00    0.00    0.00    0.00
+            0.00    0.00    0.00    1.00    0.00    0.00   
+        </param>
+                
+    </group>    
+
+    <group name="JOINTSET_CFG"> 
+        <param name= "numberofsets"> 4 </param>
+        <group name="JOINTSET_0">
+            <param name="listofjoints">  0             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group> 
+        <group name="JOINTSET_1">
+            <param name="listofjoints">   1             </param>
+            <param name="constraint">     none          </param>
+            <param name="param1">         0             </param>
+            <param name="param2">         0             </param>
+        </group> 
+        <group name="JOINTSET_2">
+            <param name="listofjoints">   2             </param>
+            <param name="constraint">     none          </param>
+            <param name="param1">         0             </param>
+            <param name="param2">         0             </param>
+        </group> 
+        <group name="JOINTSET_3">
+            <param name="listofjoints">   3             </param>
+            <param name="constraint">     none          </param>
+            <param name="param1">         0             </param>
+            <param name="param2">         0             </param>
+        </group> 
+    </group>                          
+    
+
+
+</params>

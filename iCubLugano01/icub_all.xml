@@ -7,12 +7,16 @@
     <xi:include href="cartesian/right_arm_cartesian.xml" />
     
     <!-- motor controllers wrappers -->
-    <xi:include href="wrappers/motorControl/left_arm_mc_wrapper.xml" />
-    <xi:include href="wrappers/motorControl/right_arm_mc_wrapper.xml" />
-    <xi:include href="wrappers/motorControl/head_mc_wrapper.xml" />
-    <xi:include href="wrappers/motorControl/torso_mc_wrapper.xml" />
-    <xi:include href="hardware/motorControl/icub_left_arm.xml" />
-    <xi:include href="hardware/motorControl/icub_left_hand.xml" />
+    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" /> 
+    <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
+    <xi:include href="hardware/motorControl/icub_left_arm.xml" /> 
+    <xi:include href="hardware/motorControl/icub_left_hand.xml" /> 
     <xi:include href="hardware/motorControl/icub_right_arm.xml" />
     <xi:include href="hardware/motorControl/icub_right_hand.xml" />
     <xi:include href="hardware/motorControl/icub_head.xml" />

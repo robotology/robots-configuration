@@ -1,0 +1,35 @@
+<application>
+    <name>Look Pixel</name>
+
+    <dependencies>
+        <port>/iKinGazeCtrl/rpc</port>
+    </dependencies>
+
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /viewer --out /viewer/out</parameters>
+        <node>icub-console</node>
+    </module>
+    <module>
+        <name>look-pixel.lua</name>
+        <parameters></parameters>
+        <deployer>lua</deployer>
+        <node>icub-console</node>
+    </module>
+
+    <connection>
+        <from>/look-pixel/tx</from>
+        <to>/iKinGazeCtrl/mono:i</to>
+        <protocol>tcp</protocol>
+    </connection>
+    <connection>
+        <from>/viewer/out</from>
+        <to>/look-pixel/rx</to>
+        <protocol>tcp</protocol>
+    </connection>
+    <connection>
+        <from>/icub/camcalib/left/out</from>
+        <to>/viewer</to>
+        <protocol>mjpeg</protocol>
+    </connection>
+</application>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubShanghai01" build="1">
+
+    <group name="SERVICE">
+        
+        <param name="type"> eomn_serv_MC_mc4plusmais </param> 
+    
+        <group name="PROPERTIES">
+        
+            <group name="ETHBOARD">
+                <param name="type">             mc4plus             </param> 
+            </group>          
+
+            <group name="CANBOARDS"> 
+                <param name="type">                 mais                </param> 
+                <group name="PROTOCOL">
+                    <param name="major">            0                   </param>    
+                    <param name="minor">            0                   </param>     
+                </group>                    
+                <group name="FIRMWARE">
+                    <param name="major">            0                   </param>    
+                    <param name="minor">            0                   </param> 
+                    <param name="build">            0                   </param>
+                </group>
+            </group>
+            
+            <group name="MAIS"> 
+                <param name="location">             CAN1:14             </param> 
+            </group>                      
+            
+
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">                 
+                    <param name="type">             pwm                 pwm                 pwm                 pwm                     </param>
+                    <param name="port">             CONN:P3             CONN:P2             CONN:P4             CONN:P5                 </param>
+                </group>
+                
+                <group name="ENCODER1">  
+                    <param name="type">             absanalog           mais                mais                mais                    </param>  
+                    <param name="port">             CONN:P3             MAIS:thumbproximal  MAIS:thumbdistal    MAIS:indexproximal      </param>
+                    <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param> 
+                    <param name="resolution">        65535              65535               65535               65535           </param> <!-- 65535:this value will change by fw during calibration (type 6 or 7) --> 
+                    <param name="tolerance">         0                  0                   0                   0                        </param>  
+                </group>        
+                
+                <group name="ENCODER2">
+                    <param name="type">             none                qenc                qenc                qenc                    </param>
+                    <param name="port">             CONN:none           CONN:P2             CONN:P4             CONN:P5                 </param>
+                    <param name="position">         none                atmotor             atmotor             atmotor                 </param>
+                    <param name="resolution">          1                40                  40                  40                      </param>
+                    <param name="tolerance">           0                0                   0                   0                       </param>  
+                </group>  
+    
+            </group>    
+            
+        </group>
+           
+    </group>
+    
+  
+</params>
+
