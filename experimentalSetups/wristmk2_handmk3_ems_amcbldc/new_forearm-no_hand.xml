@@ -11,6 +11,7 @@
             <!-- WRIST MC -->
             <xi:include href="hardware/motorControl/wrist-eb2-j0_2-mc.xml" />
             <xi:include href="wrappers/motorControl/wrist-mc_wrapper.xml" />  
+            <xi:include href="wrappers/motorControl/wrist-mc_remapper.xml" />  
     
             <!--  CALIBRATORS -->  
             <xi:include href="calibrators/wrist-calib.xml" />
