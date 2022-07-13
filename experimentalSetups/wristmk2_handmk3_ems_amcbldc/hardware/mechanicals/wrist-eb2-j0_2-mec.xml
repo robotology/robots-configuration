@@ -28,8 +28,8 @@
     <group name="2FOC">
         <param name="HasHallSensor">         1             1             1           </param>
         <param name="HasTempSensor">         0             0             0           </param>
-        <param name="HasRotorEncoder">       0             0             0           </param>
-        <param name="HasRotorEncoderIndex">  0             0             0           </param>
+        <param name="HasRotorEncoder">       1             1             1           </param>
+        <param name="HasRotorEncoderIndex">  1             1             1           </param>
         <param name="HasSpeedEncoder">       0             0             0           </param>
         <param name="RotorIndexOffset">      0             0             0           </param>
         <param name="MotorPoles">            14            14            14          </param>
