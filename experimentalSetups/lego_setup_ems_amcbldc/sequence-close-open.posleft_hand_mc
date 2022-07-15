@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sequence_posleft_hand_mc TotPositions="5" ReferencePart="left_hand_mc">
+    <Position Index="0" Timing="1.00">
+        <JointPositions Count="4">
+            <PosValue>10.00</PosValue>
+            <PosValue>10.00</PosValue>
+            <PosValue>10.00</PosValue>
+            <PosValue>10.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="4">
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="1" Timing="1.00">
+        <JointPositions Count="4">
+            <PosValue>70.00</PosValue>
+            <PosValue>10.00</PosValue>
+            <PosValue>10.00</PosValue>
+            <PosValue>10.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="4">
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="2" Timing="1.00">
+        <JointPositions Count="4">
+            <PosValue>70.00</PosValue>
+            <PosValue>70.00</PosValue>
+            <PosValue>10.00</PosValue>
+            <PosValue>10.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="4">
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="3" Timing="1.00">
+        <JointPositions Count="4">
+            <PosValue>70.00</PosValue>
+            <PosValue>70.00</PosValue>
+            <PosValue>70.00</PosValue>
+            <PosValue>10.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="4">
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="4" Timing="1.00">
+        <JointPositions Count="4">
+            <PosValue>70.00</PosValue>
+            <PosValue>70.00</PosValue>
+            <PosValue>70.00</PosValue>
+            <PosValue>70.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="4">
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+            <SpeedValue>40.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+</Sequence_posleft_hand_mc>
