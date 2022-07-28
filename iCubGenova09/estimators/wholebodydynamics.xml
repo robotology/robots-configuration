@@ -17,6 +17,7 @@
         <param name="forceTorqueFilterCutoffInHz">2.0</param>
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
+	<param name="devicePeriodInSeconds">0.002</param>
         <param name="useSkinForContacts">false</param>
         <param name="publishNetExternalWrenches">true</param>
         <param name="estimateJointVelocityAcceleration">false</param>  <!-- if true a kf will estimate the joint velocities and accelerations -->

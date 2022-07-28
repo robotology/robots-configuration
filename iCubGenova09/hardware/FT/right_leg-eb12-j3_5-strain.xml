@@ -39,7 +39,7 @@
 
             <group name="SETTINGS">        
                 <param name="enabledSensors">       r_foot_rear_ft_sensor          r_foot_front_ft_sensor       </param>
-                <param name="ftPeriod">             10         		 10                     </param>
+                <param name="ftPeriod">             2         		 2                     </param>
                 <param name="temperaturePeriod">    1000      		 1000                    </param>
                 <param name="useCalibration">       true      		 true                 </param>           
             </group>       
