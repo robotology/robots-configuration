@@ -11,7 +11,7 @@
     </group>
 
         <group name="DEBUG">
-        <param name="embBoardsConnected"> 0 </param>
+        <param name="embBoardsConnected"> 1 </param>
     </group>
 
 </params>

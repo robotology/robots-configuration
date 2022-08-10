@@ -11,22 +11,20 @@
  
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/left_shoulder-mc_wrapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_shoulder-mc_wrapper.xml" /> 
+
  
     <xi:include href="wrappers/motorControl/left_shoulder-mc_remapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_shoulder-mc_remapper.xml" />  
+
   
     <!-- LEFT ARM -->
-    <xi:include href="hardware/motorControl/right_arm-eb1-j0_1-mc.xml" />
-    <xi:include href="hardware/motorControl/right_arm-eb3-j2_3-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb1-j0_1-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb3-j2_3-mc.xml" />
  
-    <!-- RIGHT ARM -->
-    <xi:include href="hardware/motorControl/left_arm-eb2-j0_1-mc.xml" />
-    <xi:include href="hardware/motorControl/left_arm-eb4-j2_3-mc.xml" />
+
  
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/left_shoulder-calib.xml" />
-    <xi:include href="calibrators/right_shoulder-calib.xml" />
+
 
   </devices>
 </robot>
