@@ -9,8 +9,8 @@
     <param name="joints"> 4 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="left_arm_joints1"> left_arm-eb1-j0_1-mc </elem>
-            <elem name="left_arm_joints2"> left_arm-eb3-j2_3-mc </elem>                       
+            <elem name="left_arm_joints1"> left_arm-eb2-j0_1-mc </elem>
+            <elem name="left_arm_joints2"> left_arm-eb4-j2_3-mc </elem>                       
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />

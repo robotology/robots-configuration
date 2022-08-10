@@ -2,21 +2,20 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb2-j0_1-mc" type="embObjMotionControl">
-
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb3-j2_3-mc" type="embObjMotionControl">
     <xi:include href="../../general.xml"/>
-    <xi:include href="../../hardware/electronics/right_arm-eb2-j0_1-eln.xml" />
-    <xi:include href="../../hardware/mechanicals/right_arm-eb2-j0_1-mec.xml" />
-    <xi:include href="./right_arm-eb2-j0_1-mc_service.xml" />
+    <xi:include href="../../hardware/electronics/right_arm-eb3-j2_3-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/right_arm-eb3-j2_3-mec.xml" />
+    <xi:include href="./right_arm-eb3-j2_3-mc_service.xml" />
 
-    <!-- joint number                           0                   1                   -->
-    <!-- joint name                          shoulder_pitch            shoulder_roll    -->
+    <!-- joint number                           2                   3                   -->
+    <!-- joint name                          shoulder_yaw            elbow              -->
     <group name="LIMITS">
-        <param name="jntPosMax">                14                  163                </param>
-        <param name="jntPosMin">                -88                 17                  </param>
+        <param name="jntPosMax">                80                  105                  </param>
+        <param name="jntPosMin">                -50                 -3                  </param>
         <param name="jntVelMax">                120                 120                 </param>
         <param name="motorNominalCurrents">     5000                5000                </param>
-        <param name="motorPeakCurrents">        12000               12000               </param>
+        <param name="motorPeakCurrents">        9000                9000                </param>
         <param name="motorOverloadCurrents">    15000               15000               </param>
         <param name="motorPwmLimit">            8000                8000                </param>
     </group>
@@ -26,7 +25,7 @@
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                0.3                 0.3                 </param>
+        <param name="stiffness">                0.2                 0.1                 </param>
         <param name="damping">                  0.05                0.05                </param>
     </group>
 
@@ -48,9 +47,9 @@
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>
         <param name="kff">                      0                   0                   </param>
-        <param name="kp">                       -1500               -1000               </param>
+        <param name="kp">                       -1000               1000                </param>
         <param name="kd">                       0                   0                   </param>
-        <param name="ki">                       -1000               -1000               </param>
+        <param name="ki">                       -1000               1000                </param>
         <param name="maxOutput">                8000                8000                </param>
         <param name="maxInt">                   2000                2000                </param>
         <param name="stictionUp">               0                   0                   </param>
@@ -58,6 +57,29 @@
     </group>
 
     <!-- default position PID: end -->
+
+    
+    <!-- torque PID default: start -->
+    <group name="TRQ_PID_DEFAULT">
+        <param name="controlLaw">          torque                </param>
+        <param name="outputType">          pwm                   </param>
+        <param name="fbkControlUnits">     metric_units          </param>
+        <param name="outputControlUnits">  dutycycle_percent     </param>
+        <param name="kp">                -2.5       3            </param>
+        <param name="kd">                0          0            </param>
+        <param name="ki">                -3.5       4            </param>
+        <param name="maxOutput">         25         25           </param>
+        <param name="maxInt">            1.56       1.56         </param>
+        <param name="ko">                0          0            </param>
+        <param name="stictionUp">        0          0            </param>
+        <param name="stictionDown">      0          0            </param>
+        <param name="kff">               1          1            </param>
+        <param name="kbemf">            -0.003      0.0023       </param>
+        <param name="filterType">        0          0            </param>
+        <param name="ktau">             -0.9        0.7          </param>
+    </group>
+    <!-- torque PID default: end -->
+
 
 
     <!-- other default PIDs: begin -->
@@ -89,28 +111,6 @@
     </group>
 
     <!-- other default PIDs: end -->
-
-
-    <!-- torque PID default: start -->
-    <group name="TRQ_PID_DEFAULT">
-        <param name="controlLaw">          torque                </param>
-        <param name="outputType">          pwm                   </param>
-        <param name="fbkControlUnits">     metric_units          </param>
-        <param name="outputControlUnits">  dutycycle_percent     </param>
-        <param name="kp">                -3       -2         </param>
-        <param name="kd">                0          0            </param>
-        <param name="ki">                -6          -4          </param>
-        <param name="maxOutput">         25         25           </param>
-        <param name="maxInt">            1.56       1.56         </param>
-        <param name="ko">                0          0            </param>
-        <param name="stictionUp">        0          0            </param>
-        <param name="stictionDown">      0          0            </param>
-        <param name="kff">               1          1            </param>
-        <param name="kbemf">            -0.004    -0.004       </param>
-        <param name="filterType">        0          0            </param>
-        <param name="ktau">             -0.86       -0.72         </param>
-    </group>    
-    <!-- torque PID default: end -->
 
 
     <!-- custom PIDs: begin -->
