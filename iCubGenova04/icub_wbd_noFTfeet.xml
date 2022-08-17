@@ -5,7 +5,7 @@
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
-        
+
 <devices>
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
@@ -43,7 +43,9 @@
 
     <!-- INERTIAL SENSOR-->
     <xi:include href="hardware/inertials/head-inertial.xml" />
-    <xi:include href="hardware/inertials/waist-inertial.xml" /> 
+    <xi:include href="hardware/inertials/waist-inertial.xml" />
+    <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper-deprecated.xml" />
 
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
@@ -103,7 +105,7 @@
     <!-- ESTIMATORS -->
     <xi:include href="estimators/wholebodydynamics_noFeet.xml" />
     <xi:include href="estimators/floatingbaseestimator.xml" />
-   
+
     <!-- ROS -->
     <xi:include href="wrappers/motorControl/icub_ros_wrapper.xml" />
 

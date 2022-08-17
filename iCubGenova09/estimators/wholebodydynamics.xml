@@ -100,7 +100,7 @@
 0.0094914880635709,-0.0036234283827821,0.00212121520644588,-0.126864592608127,-0.556355373823465,-0.875100018833281)
             </param>
         </group>
-        
+
         <group name="FT_OFFSET">
             <param name="l_arm_ft_sensor">
                    (-8.458958238581,18.9645423508596,5.01464123963002,-1.54527454195987,-0.75593243710498,0.247784639700732)
@@ -141,11 +141,11 @@
                 <elem name="right_lower_leg-j2">right_leg-eb12-j3_5-mc</elem>
 
                 <!-- imu -->
-                <elem name="imu">head-inertial</elem> 
+                <elem name="imu">head-inertial</elem>
                 <!-- imu_waist -->
-<!--            <elem name="imu">xsens_inertial</elem> -->
+<!--            <elem name="imu">xsensmt-inertial</elem> -->
                 <!-- ft -->
-                <!-- 
+                <!--
                 <elem name="l_leg_ft_sensor">left_leg-eb6-j0_3-strain</elem>
                 <elem name="r_leg_ft_sensor">right_leg-eb8-j0_3-strain</elem> -->
 
@@ -159,6 +159,6 @@
             </paramlist>
         </action>
 
-	<action phase="shutdown" level="2" type="detach" /> 
+	<action phase="shutdown" level="2" type="detach" />
 
     </device>
