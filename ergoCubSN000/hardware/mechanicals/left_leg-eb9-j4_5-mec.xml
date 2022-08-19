@@ -33,8 +33,8 @@
         <param name="HasTempSensor">             0             0   </param>
         <param name="HasRotorEncoder">           1             1   </param>
         <param name="HasRotorEncoderIndex">      1             1   </param>
-        <param name="RotorIndexOffset">          242           151 </param>
         <param name="HasSpeedEncoder">           0             0   </param>
+        <param name="RotorIndexOffset">          152           209 </param>
         <param name="MotorPoles">                12            8   </param>
     </group>
 
