@@ -31,7 +31,7 @@
 
                 <group name="ACTUATOR">                
                     <param name="type">                 foc             foc                 </param>
-                    <param name="port">             CAN1:1:0            CAN1:2:0            </param>
+                    <param name="port">             CAN2:1:0            CAN2:2:0            </param>
                 </group>
                 
                 <group name="ENCODER1">  
@@ -44,7 +44,7 @@
                 
                 <group name="ENCODER2">
                     <param name="type">         roie                roie                </param>
-                    <param name="port">         CAN1::0             CAN1:2:0            </param>
+                    <param name="port">         CAN2::0             CAN2:2:0            </param>
                     <param name="position">     atmotor             atmotor             </param>
                     <param name="resolution">   14400               14400               </param>
                     <param name="tolerance">    3.6                 3.6                 </param>  
