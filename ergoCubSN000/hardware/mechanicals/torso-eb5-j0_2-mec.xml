@@ -27,13 +27,13 @@
                                                                     
     <group name="2FOC">                                             
 		<param name="Verbose">              0                   0                0                  </param>
-        <param name="AutoCalibration">      0                   0                0                  </param>
+        <param name="AutoCalibration">      0                   0               0                  </param>
         <param name="HasHallSensor">        0                   0                0                  </param>
         <param name="HasTempSensor">        0                   0                0                  </param>
         <param name="HasRotorEncoder">      1                   1                1                  </param>
         <param name="HasRotorEncoderIndex"> 1                   1                1                  </param>
         <param name="HasSpeedEncoder">      0                   0                0                  </param>
-        <param name="RotorIndexOffset">     66                  131              43                </param>
+        <param name="RotorIndexOffset">     66                  99               228                </param>
         <param name="MotorPoles">           8                   8                8                  </param>
    </group>
 
