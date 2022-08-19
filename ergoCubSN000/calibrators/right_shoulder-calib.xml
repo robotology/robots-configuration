@@ -19,7 +19,7 @@
 <group name="CALIBRATION">
 <param name="calibrationType">     12          12          12         12        </param> <!--
 <param name="calibration1">        6576       -12866      -4585      -47529     </param> -->
-<param name="calibration1">        -11711       -7817      -25844       -11080     </param>
+<param name="calibration1">        40139     -2945     -60282      -59034   </param>
 <param name="calibration2">	       0           0           0          0	         </param>
 <param name="calibration3">        0           0           0          0        </param>
 <param name="calibration4">        0           0           0          0         </param>
@@ -34,7 +34,7 @@
 </group>
 
 <!--param name="CALIB_ORDER"> (1) (0) (2) (3) (4) (5 6) (7) (8 9) (11 13) (10 12 14 15) </param-->
-<param name="CALIB_ORDER"> (1) (0) (2) (3)  </param> 
+<param name="CALIB_ORDER"> (1) (0) (2) (3) </param> 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">right_shoulder-mc_remapper</param>
 		</action>

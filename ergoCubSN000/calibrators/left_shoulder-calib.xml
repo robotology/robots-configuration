@@ -18,7 +18,7 @@
 <group name="CALIBRATION">                                                      
 <param name="calibrationType">        12          12          12         12          </param> <!-- 
 <param name="calibration1">           -54795      22399       44679      53215       </param> -->
-<param name="calibration1">           -30987      9620       20370      47497       </param>
+<param name="calibration1">           -41179      7782       11224      25717       </param>
 <param name="calibration2">	          0           0           0          0            </param>
 <param name="calibration3">           0           0           0          0          </param>
 <param name="calibration4">           0           0           0          0           </param>
