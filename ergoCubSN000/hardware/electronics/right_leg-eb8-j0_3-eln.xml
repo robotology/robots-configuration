@@ -16,7 +16,7 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "right_leg-eb8-j0_2"     </param> 
+            <param name="Name">                     "right_leg-eb8-j0_3"     </param> 
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
