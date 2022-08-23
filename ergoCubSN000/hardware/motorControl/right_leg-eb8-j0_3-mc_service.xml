@@ -33,7 +33,7 @@
                 <group name="ACTUATOR">                
                     <param name="type">             foc                 foc         foc        foc       </param>
                     <param name="port">             CAN1:1:0            CAN1:2:0    CAN1:3:0   CAN1:4:0  </param>
-                </group4
+                </group>
                 
                 <group name="ENCODER1">  
                     <param name="type">             amo                 amo         amo         amo       </param>  
@@ -59,4 +59,3 @@
     
   
 </params>
-
