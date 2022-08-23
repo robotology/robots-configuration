@@ -19,22 +19,22 @@
     </group>
     
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">    6   94           120      80.5  </param>
-        <param name="hardwareJntPosMin">  -80  -47           -20     -80.5  </param>
-        <param name="rotorPosMin">        0      0             0       0  </param> 
-        <param name="rotorPosMax">        0      0             0       0  </param>
+        <param name="hardwareJntPosMax">    94           120      80.5      6  </param>
+        <param name="hardwareJntPosMin">   -47           -20     -80.5    -80  </param>
+        <param name="rotorPosMin">           0             0       0      0  </param> 
+        <param name="rotorPosMax">           0             0       0      0  </param>
     </group>
 
     <group name="2FOC">
-        <param name="AutoCalibration">       0           0             0     0    </param>
-        <param name="Verbose">               0           0             0     0    </param>
-        <param name="HasHallSensor">         0           0             0     0    </param>
-        <param name="HasTempSensor">         0           0             0     0    </param>
-        <param name="HasRotorEncoder">       1           1             1     1    </param>
-        <param name="HasRotorEncoderIndex">  1           1             1     1    </param>
-        <param name="HasSpeedEncoder">       146         0             0     0    </param>
-        <param name="RotorIndexOffset">      0           189           7     64   </param>
-        <param name="MotorPoles">            12          12            8     8   </param>
+        <param name="AutoCalibration">            0             0     0     0     </param>
+        <param name="Verbose">                    0             0     0     0     </param>
+        <param name="HasHallSensor">              0             0     0     0     </param>
+        <param name="HasTempSensor">              0             0     0     0     </param>
+        <param name="HasRotorEncoder">            1             1     1     1     </param>
+        <param name="HasRotorEncoderIndex">       1             1     1     1     </param>
+        <param name="HasSpeedEncoder">            0             0     0     146   </param>
+        <param name="RotorIndexOffset">           189           7     64    0     </param>
+        <param name="MotorPoles">                 12            8     8     12   </param>
    </group>
 
     <group name="COUPLINGS"> 
