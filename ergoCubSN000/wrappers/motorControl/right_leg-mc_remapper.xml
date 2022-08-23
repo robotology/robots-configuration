@@ -8,8 +8,8 @@
     <param name="joints"> 6                   </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="right_leg_joints1">  right_leg-eb9-j0_2-mc </elem>
-            <elem name="right_leg_joints2">  right_leg-eb10-j3_5-mc </elem>
+            <elem name="right_leg_joints1">  right_leg-eb8-j0_2-mc </elem>
+            <elem name="right_leg_joints2">  right_leg-eb9-j3_5-mc </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />

@@ -2,11 +2,11 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb10-j3_5-mc" type="embObjMotionControl">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb9-j3_5-mc" type="embObjMotionControl">
     <xi:include href="../../general.xml" />
-    <xi:include href="../../hardware/electronics/right_leg-eb10-j3_5-eln.xml" />
-    <xi:include href="../../hardware/mechanicals/right_leg-eb10-j3_5-mec.xml" />
-    <xi:include href="./right_leg-eb10-j3_5-mc_service.xml" />
+    <xi:include href="../../hardware/electronics/right_leg-eb9-j3_5-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/right_leg-eb9-j3_5-mec.xml" />
+    <xi:include href="./right_leg-eb9-j3_5-mc_service.xml" />
 
     <!-- joint name                             knee        ankle_pitch          ankle_roll         -->
     <!-- joint number                              0         1                   2                   -->
@@ -136,4 +136,3 @@
     </group>
 
 </device>
-

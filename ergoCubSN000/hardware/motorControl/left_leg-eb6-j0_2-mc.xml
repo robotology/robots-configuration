@@ -2,18 +2,18 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb7-j0_2-mc" type="embObjMotionControl">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb6-j0_2-mc" type="embObjMotionControl">
     <xi:include href="../../general.xml" />
-    <xi:include href="../../hardware/electronics/left_leg-eb7-j0_2-eln.xml" />
-    <xi:include href="../../hardware/mechanicals/left_leg-eb7-j0_2-mec.xml" />
-    <xi:include href="./left_leg-eb7-j0_2-mc_service.xml" />
+    <xi:include href="../../hardware/electronics/left_leg-eb6-j0_2-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/left_leg-eb6-j0_2-mec.xml" />
+    <xi:include href="./left_leg-eb6-j0_2-mc_service.xml" />
 
     <!-- joint name                           hip_pitch            hip_roll   hip_yaw      -->
     <!-- joint number                           0                   1           0          -->
     <!-- joint name -->
     <group name="LIMITS">
         <param name="jntPosMax">                 90                 100       70        </param>
-        <param name="jntPosMin">                -40                 -15        -70       </param>
+        <param name="jntPosMin">                -40                 -15      -70        </param>
         <param name="jntVelMax">                240                 240       240       </param>
         <param name="motorNominalCurrents">     15000               15000     5000      </param>
         <param name="motorPeakCurrents">        20000               20000     10000     </param>
