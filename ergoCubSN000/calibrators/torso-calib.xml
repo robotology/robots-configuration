@@ -22,7 +22,7 @@
 <param name="calibrationType">                      12                      12                     12                      </param>
                                                                                                                                     <!--
 <param name="calibration1">	                        58233                   8433                   35531                   </param> --> 
-<param name="calibration1">	                        58213                   9527                   35531                   </param>
+<param name="calibration1">	                        38354                   67960                   6551                   </param>
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
                                                                                                    
@@ -39,7 +39,7 @@
 </group>
 
  <!-- check old calibrator for the correct sequence, then ask to Randazz -->
-		<param name="CALIB_ORDER"> (0) (1) (2) </param>
+		<param name="CALIB_ORDER"> (0) (2) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-mc_remapper</param>
