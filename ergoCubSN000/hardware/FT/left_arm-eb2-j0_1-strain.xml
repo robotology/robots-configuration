@@ -3,11 +3,11 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb1-j0_1-strain" type="embObjStrain">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb2-j0_1-strain" type="embObjStrain">
     
         <xi:include href="../../general.xml"/>
 
-        <xi:include href="../../hardware/electronics/left_arm-eb1-j0_1-eln.xml" />
+        <xi:include href="../../hardware/electronics/left_arm-eb2-j0_1-eln.xml" />
     
         <group name="SERVICE">
             
