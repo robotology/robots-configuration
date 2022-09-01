@@ -15,8 +15,8 @@
         <param name="jntPosMin">                -70     -43                 -23                 </param>
         <param name="jntVelMax">                240      240                 240                 </param>
         <param name="motorNominalCurrents">     10000    10000               10000               </param>
-        <param name="motorPeakCurrents">        14000    15000               15000               </param>
-        <param name="motorOverloadCurrents">    19000    30000               30000               </param>
+        <param name="motorPeakCurrents">        15000    15000               15000               </param>
+        <param name="motorOverloadCurrents">    30000    30000               30000               </param>
         <param name="motorPwmLimit">            16000    16000               16000               </param>
     </group>
 
@@ -42,7 +42,7 @@
     <!-- default position PID: begin -->
 
     <group name="POS_PID_DEFAULT">
-	    <param name="controlLaw">           minjerk             </param>
+	<param name="controlLaw">           minjerk             </param>
         <param name="outputType">           pwm                 </param>
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>
@@ -50,7 +50,7 @@
         <param name="kp">                  -5000      -5000               -3000               </param>
         <param name="kd">                  0           0                   0                   </param>
         <param name="ki">                  -1500      -1000               -1000                </param>
-        <param name="maxOutput">          12000        12000               12000                </param>
+        <param name="maxOutput">          10000        12000               12000                </param>
         <param name="maxInt">              2000        1000                1000                </param>
         <param name="stictionUp">          0           0                   0                   </param>
         <param name="stictionDown">        0           0                   0                   </param>
@@ -133,6 +133,19 @@
 
     <group name="OTHER_CONTROL_PARAMETERS">
         <param name="deadZone">           0.0049      0.0049              0.0049              </param>
+    </group>
+    
+    <!-- kalman filter parameters - vel & acc estimation -->
+    <group name="KALMAN_FILTER">
+        <param name="kalmanFilterEnabled">          1              1            1          </param>
+        <param name="x0">                           0              0            0          </param>
+        <param name="x1">                           0              0            0          </param>
+        <param name="x2">                           0              0            0          </param>
+        <param name="Q0">                           0.0001         0.0001       0.0001     </param>
+        <param name="Q1">                           0.01           0.01         0.01       </param>
+        <param name="Q2">                           10             10           10         </param>
+        <param name="R">                            0.001          0.001        0.001      </param>
+        <param name="P0">                           0.000099       0.000099     0.000099   </param>
     </group>
 
 </device>
