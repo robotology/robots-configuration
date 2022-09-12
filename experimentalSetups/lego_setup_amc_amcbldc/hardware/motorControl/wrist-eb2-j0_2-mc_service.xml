@@ -10,11 +10,11 @@
         <group name="PROPERTIES">
 
             <group name="ETHBOARD">
-                <param name="type">                 ems4        </param>
+                <param name="type">                 amc        </param>
             </group>
 
             <group name="CANBOARDS">
-                <param name="type">                 foc         </param>
+                <param name="type">                 amcbldc         </param>
                 <group name="PROTOCOL">
                     <param name="major">            0           </param>
                     <param name="minor">            0           </param>
@@ -35,7 +35,7 @@
 
                 <group name="ENCODER1">
                     <param name="type">             eomc_enc_aea      </param>
-                    <param name="port">             CONN:P6           </param>
+                    <param name="port">             CONN:P1           </param>
                     <param name="position">         eomc_pos_atjoint  </param>
                     <param name="resolution">       4096              </param>
                     <param name="tolerance">        0.4               </param>
