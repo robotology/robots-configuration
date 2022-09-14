@@ -35,7 +35,7 @@
 
                 <group name="ENCODER1">
                     <param name="type">             eomc_enc_aea      </param>
-                    <param name="port">             CONN:P1           </param>
+                    <param name="port">             CONN:J5_X1         </param>
                     <param name="position">         eomc_pos_atjoint  </param>
                     <param name="resolution">       4096              </param>
                     <param name="tolerance">        0.4               </param>
