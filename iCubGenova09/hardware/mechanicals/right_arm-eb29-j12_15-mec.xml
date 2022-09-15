@@ -13,7 +13,7 @@
          <param name="Encoder">                  182.044          182.044             182.044            182.044         </param>   
         <param name="fullscalePWM">             3360              3360                3360             3360              </param>
         <param name="ampsToSensor">             1000.0            1000.0              1000.0           1000.0            </param>
-        <param name="Gearbox_M2J">              1024              256                 256                256             </param>
+        <param name="Gearbox_M2J">              1024              256                 1024                256             </param>
         <param name="Gearbox_E2J">   	           1                1                   1                  1             </param>
         <param name="useMotorSpeedFbk">            0                0                   0                  0             </param>
         <param name="MotorType">                  "DC"             "DC"                "DC"               "DC"           </param>
@@ -23,8 +23,8 @@
     <group name="LIMITS">
         <param name="hardwareJntPosMax">        190                 90                180                 270          </param>
         <param name="hardwareJntPosMin">          0                  0                  0                   0          </param> 
-        <param name="rotorPosMin">           -260000              -5120              -5120               -65000          </param> 
-        <param name="rotorPosMax">             20480              32000              65000                 5120          </param>
+        <param name="rotorPosMin">           -260000              -5120              -20480            -65000          </param> 
+        <param name="rotorPosMax">             20480              32000              260000              5120          </param>
     </group>
 
     <group name="COUPLINGS"> 
