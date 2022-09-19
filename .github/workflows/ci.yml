@@ -47,7 +47,7 @@ jobs:
         git clone https://github.com/robotology/yarp.git --depth 1 --branch master
         cd yarp && mkdir -p build && cd build
         cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-        -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=OFF -DYARP_COMPILE_EXECUTABLES:BOOL=OFF -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF ..
+        -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=OFF -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=OFF -DYARP_COMPILE_EXECUTABLES:BOOL=OFF ..
         cmake --build . --config ${{ matrix.build_type }} --target install 
         # icub-contrib-common
         cd ${GITHUB_WORKSPACE}/..
