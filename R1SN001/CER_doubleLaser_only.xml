@@ -5,14 +5,13 @@
 <devices>
 
     <!-- LASER -->
-    <devices file="hardware/rpLidar/laserA2_hw_back.xml" /> 
-    <devices file="wrappers/rpLidar/laser_back_wrapper.xml" /> 
+    <devices file="hardware/rpLidar/laserA3_hw_back.xml" /> 
+    <devices file="wrappers/rpLidar/laser_back_nws_yarp.xml" /> 
 
-    <devices file="hardware/rpLidar/laserA2_hw_front.xml" /> 
-    <devices file="wrappers/rpLidar/laser_front_wrapper.xml" /> 
-
-    <devices file="hardware/rpLidar/laserA2_hw_double.xml" /> 
-    <devices file="wrappers/rpLidar/laser_double_wrapper.xml" /> 
+    <devices file="hardware/rpLidar/laserA3_hw_front.xml" /> 
+    <devices file="wrappers/rpLidar/laser_front_nws_yarp.xml" /> 
+    <devices file="hardware/rpLidar/laserA3_hw_double.xml" /> 
+    <devices file="wrappers/rpLidar/laser_double_nws_yarp.xml" /> 
 </devices>
 </robot> 
 
