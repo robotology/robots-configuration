@@ -14,7 +14,7 @@
             </group>
 
             <group name="CANBOARDS">
-                <param name="type">                 amcbldc         </param>
+                <param name="type">                 amcbldc     </param>
                 <group name="PROTOCOL">
                     <param name="major">            0           </param>
                     <param name="minor">            0           </param>
@@ -35,17 +35,17 @@
 
                 <group name="ENCODER1">
                     <param name="type">             eomc_enc_aea      </param>
-                    <param name="port">             CONN:J5_X1         </param>
+                    <param name="port">             CONN:J5_X1        </param>
                     <param name="position">         eomc_pos_atjoint  </param>
                     <param name="resolution">       4096              </param>
                     <param name="tolerance">        0.4               </param>
                 </group>
 
                 <group name="ENCODER2">
-                    <param name="type">             roie              </param>
+                    <param name="type">             none              </param>
                     <param name="port">             CAN1:1:0          </param>
                     <param name="position">         atmotor           </param>
-                    <param name="resolution">       16000             </param>
+                    <param name="resolution">        0                </param>
                     <param name="tolerance">         0                </param>
                 </group>
 
