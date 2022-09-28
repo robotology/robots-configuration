@@ -26,9 +26,13 @@
 
 
     <!--  CALIBRATORS -->
-
     <xi:include href="calibrators/head-calib.xml" />
     <xi:include href="calibrators/face-calib.xml" />
+    
+    <!-- INERTIAL SENSOR--> 
+    <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+
 
 
   </devices>
