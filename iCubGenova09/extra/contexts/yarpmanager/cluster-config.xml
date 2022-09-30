@@ -1,7 +1,7 @@
 <cluster name="icub09" user="icub">
 
 <!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
-<nameserver namespace="/icub09" node="10.0.0.165" type="yarpserver"> </nameserver>
+<nameserver namespace="/icub09" node="10.0.0.2" type="yarpserver"> </nameserver>
 
 <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
 this is usually the value of the DISPLAY variable when logged on -->
