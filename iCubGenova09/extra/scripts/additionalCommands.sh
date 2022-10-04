@@ -47,6 +47,8 @@ alias run-yarp-openmct='cd /usr/local/src/robot/yarp-openmct/ && npm start'
 
 alias prepareRetargetingTransforms='bash ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/HumanDynamicsEstimation/conf/iFeelOpenXRCalibration.sh'
 
+alias restart-pulseaudio='systemctl --user restart pulseaudio'
+
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 ## Alias for displaying info messages about the other aliases
@@ -61,7 +63,8 @@ ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}teleoperationFolder${NC} Go to the walking-teleoperation source folder.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
 ${GREEN}run-yarp-openmct${NC} Run yarp-openmct server for online logging visualization.
-${GREEN}prepareRetargetingTransforms${NC} Run a bash script to prepare the transforms for the retargeting."'
+${GREEN}prepareRetargetingTransforms${NC} Run a bash script to prepare the transforms for the retargeting.
+${GREEN}restart-pulseaudio${NC} Restart pulseaudio in case the echo cancelling does not work."'
 
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
