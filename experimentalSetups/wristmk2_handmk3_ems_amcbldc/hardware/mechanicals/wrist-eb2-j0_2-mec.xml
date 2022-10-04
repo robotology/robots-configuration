@@ -14,7 +14,7 @@
         <param name="Gearbox_M2J">     -384.44       -384.44       -384.44           </param>
         <param name="Gearbox_E2J">      1.778         1.778         1.778            </param>
         <param name="useMotorSpeedFbk"> 0             0             0                </param>
-        <param name="MotorType">        "BLL_MOOG"    "BLL_MOOG"    "BLL_MOOG"       </param>
+        <param name="MotorType">        "FAULHABER"   "FAULHABER"   "FAULHABER"      </param>
         <param name="Verbose">      0   </param>
     </group>
 
@@ -25,11 +25,11 @@
         <param name="rotorPosMax">           0             0             0           </param>
     </group>
 
-    <group name="2FOC">
+    <group name="AMCBLDC">
         <param name="HasHallSensor">         1             1             1           </param>
         <param name="HasTempSensor">         0             0             0           </param>
-        <param name="HasRotorEncoder">       1             1             1           </param>
-        <param name="HasRotorEncoderIndex">  1             1             1           </param>
+        <param name="HasRotorEncoder">       0             0             0           </param>
+        <param name="HasRotorEncoderIndex">  0             0             0           </param>
         <param name="HasSpeedEncoder">       0             0             0           </param>
         <param name="RotorIndexOffset">      0             0             0           </param>
         <param name="MotorPoles">            14            14            14          </param>
