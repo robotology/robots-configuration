@@ -22,10 +22,10 @@
 <param name="calibration1">        -4000        3000       3000      -4000    1500     63000    17600     0       0       0       0       0       0       0       0       0       </param>
 <param name="calibration2">	    0           0           0          0        16384     0      0        0       0      9102    9102    9102    9102    9102    9102    10000    </param>
 <param name="calibration3">        0           0           0          0          0       0       0        0       0       -1      1       -1      1       -1      1       1      </param>
-<param name="calibration4">        0           0           0          0          0       0       0       2680    1440    255     510     255     501     255     510     764     </param>
-<param name="calibration5">        0           0           0          0          0       0       0       2780    2300    30      57      0       15      0       35      190     </param>
+<param name="calibration4">        0           0           0          0          0       0       0       2680    1490    255     509     255     501     255     495     764     </param>
+<param name="calibration5">        0           0           0          0          0       0       0       2780    2050    0      78      0       15      0       62      190     </param>
 <param name="calibrationZero">     25       -8.4        -51.3       -5           0       0       0       0       0       0       0       0       0       0       0       0             </param>
-<param name="calibrationDelta">    0          0           0          0          0        0       0      15      0       5       0       0       0       0       0       0       </param>
+<param name="calibrationDelta">    0          0           0          0          0        0       0      15      0       0       0       0       0       0       0       0       </param>
                                                                               
 <param name="startupPosition">     24        50            0         10          -75       0     0       15      45      0       0       0       0       0       0       0       </param>
 <param name="startupVelocity">     10.0       10.0         10.0      10.0        30      30      30      60      100     100     100     100     100     100     100     100     </param>
@@ -47,4 +47,4 @@
 		<action phase="interrupt3" level="1" type="abort" />
 
 	</device>
-
+0
