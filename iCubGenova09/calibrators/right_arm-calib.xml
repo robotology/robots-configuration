@@ -22,8 +22,8 @@
 <param name="calibration1">        -4000        3000       3000      -4000    1500     63000    17600     0       0       0       0       0       0       0       0       0       </param>
 <param name="calibration2">	    0           0           0          0        16384     0      0        0       0      9102    9102    9102    9102    9102    9102    10000    </param>
 <param name="calibration3">        0           0           0          0          0       0       0        0       0       -1      1       -1      1       -1      1       1      </param>
-<param name="calibration4">        0           0           0          0          0       0       0       2680    1490    255     509     255     501     255     495     764     </param>
-<param name="calibration5">        0           0           0          0          0       0       0       2780    2050    0      78      0       15      0       62      190     </param>
+<param name="calibration4">        0           0           0          0          0       0       0       2660    1490    255     475     255     500     255     495     764     </param>
+<param name="calibration5">        0           0           0          0          0       0       0       2780    2436    15      108      0       143      0       62      190     </param>
 <param name="calibrationZero">     25       -8.4        -51.3       -5           0       0       0       0       0       0       0       0       0       0       0       0             </param>
 <param name="calibrationDelta">    0          0           0          0          0        0       0      15      0       0       0       0       0       0       0       0       </param>
                                                                               

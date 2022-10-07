@@ -19,7 +19,7 @@
         <param name="motorNominalCurrents">     700                 700                 700                 700                 </param>
         <param name="motorPeakCurrents">        1500                1500                1500                1500                </param>
     
-        <param name="motorPwmLimit">            3360                3360                3360                3360                </param>
+        <param name="motorPwmLimit">            3360                3360                0                0                </param> <!-- eyes span set to 0 for LA -->
     </group>
    
     <group name="TIMEOUTS">
