@@ -9,13 +9,16 @@
 
     <devices>
   
-
     <!--  SKINS -->
     <xi:include href="wrappers/skin/left_upperarm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/left_upperarm-eb2-skin.xml" />
     <xi:include href="wrappers/skin/right_upperarm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/right_upperarm-eb4-skin.xml" />
 
+    <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/right_arm-eb27-j4_7-skin.xml" />
+    <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
+    <xi:include href="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
   
 
   
