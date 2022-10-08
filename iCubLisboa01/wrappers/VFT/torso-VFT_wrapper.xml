@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-VFTserver" type="virtualAnalogServer">
+    <param name="period">       10                  </param>
+    <paramlist name="networks">
+        <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+        <elem name="FirstSetOfJoints">(  0  2  0  2 )</elem>
+    </paramlist>
+    <param name="channels">       3                 </param>
+    <param name="name"> /icub/joint_vsens/torso:i </param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <!-- The param value must match the device name in the corresponding body_part-ebX-jA_B-mc.xml file -->
+            <elem name="FirstSetOfJoints"> torso-eb5-j0_2-mc </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
