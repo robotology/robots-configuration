@@ -15,9 +15,9 @@
         <param name="jntPosMin">                -45                 -20                 -30                 0                   </param>
         <param name="jntPosMax">                +45                 +20                 +30                 +45                 </param>
         <param name="jntVelMax">                1000                1000                1000                1000                </param>
-        <param name="motorOverloadCurrents">    2000                2000                2500                2500                </param>
-        <param name="motorNominalCurrents">     700                 700                 700                 700                 </param>
-        <param name="motorPeakCurrents">        1500                1500                1500                1500                </param>
+        <param name="motorOverloadCurrents">    3000                2000                2500                2500                </param>
+        <param name="motorNominalCurrents">     1000                 700                 700                 700                 </param>
+        <param name="motorPeakCurrents">        2000                1500                1500                1500                </param>
     
         <param name="motorPwmLimit">            3360                3360                0                0                </param> <!-- eyes span set to 0 for LA -->
     </group>
