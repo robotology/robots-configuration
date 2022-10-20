@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-FT_wrapper" type="multipleanalogsensorsserver">
         <param name="period">      10                           </param>
-        <param name="name">       /icub/left_arm/analog:o       </param>
+        <param name="name">       /ergocub/left_arm/analog:o       </param>
         
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">

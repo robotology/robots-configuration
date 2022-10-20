@@ -48,7 +48,7 @@
             <paramlist name="networks">
                 <!-- motorcontrol and virtual torque sensors -->
 		<elem name="head-j0">head-eb20-j0_1-mc</elem>
-                <elem name="head-j2">head-eb21-j2_5-mc</elem>
+                <elem name="head-j2">head-eb21-j2_3-mc</elem>
                 <elem name="torso">torso-eb5-j0_2-mc</elem>
                 <elem name="left_upper_arm-j0">left_arm-eb1-j0_1-mc</elem>
                 <elem name="left_upper_arm-j2">left_arm-eb2-j2_3-mc</elem>

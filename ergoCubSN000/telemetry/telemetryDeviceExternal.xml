@@ -13,7 +13,7 @@
         <param name="logIAmplifierControl">true</param>
         <param name="saveBufferManagerConfiguration">true</param>
         <param name="experimentName">telemetry_iCub3</param>
-        <param name="path">/home/icub/telemetry_logs/</param>
+        <param name="path">/home/ergocub/telemetry_logs/</param>
         <param name="n_samples">100000</param>
         <param name="save_periodically">true</param>
         <param name="save_period">120.0</param>

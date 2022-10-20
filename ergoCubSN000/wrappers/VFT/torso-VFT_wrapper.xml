@@ -7,7 +7,7 @@
         <elem name="FirstSetOfJoints">(  0  2  0  2 )</elem>
     </paramlist>
     <param name="channels">       3                 </param>
-    <param name="name"> /icub/joint_vsens/torso:i </param>
+    <param name="name"> /ergocub/joint_vsens/torso:i </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <!-- The param value must match the device name in the corresponding body_part-ebX-jA_B-mc.xml file -->

@@ -4,13 +4,13 @@
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-mc_remapper" type="controlboardremapper">
     <paramlist name="networks">
         <elem name="head_joints1">(  0  1  0  1 )</elem>
-        <elem name="head_joints2">(  2  5  0  3 )</elem>
+        <elem name="head_joints2">(  2  3  0  1 )</elem>
     </paramlist>
-    <param name="joints"> 6                   </param>
+    <param name="joints"> 4                   </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="head_joints1">  head-eb20-j0_1-mc </elem>
-            <elem name="head_joints2">  head-eb21-j2_5-mc </elem>
+            <elem name="head_joints2">  head-eb21-j2_3-mc </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />

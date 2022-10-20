@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-cartesian" type="cartesiancontrollerserver">
         <group name="GENERAL">
-            <param name="ControllerName">icub/cartesianController/left_arm</param>
+            <param name="ControllerName">ergocub/cartesianController/left_arm</param>
             <param name="ControllerPeriod">10</param>
             <param name="TaskRefVelPeriodFactor">4</param>
             <param name="SolverNameToConnect">cartesianSolver/left_arm</param>

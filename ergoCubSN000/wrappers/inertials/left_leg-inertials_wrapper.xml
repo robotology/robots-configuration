@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-inertials_wrapper" type="analogServer">
         <param name="period">       10                  </param>
-        <param name="name">     /icub/left_leg/inertialMTB                </param>
+        <param name="name">     /ergocub/left_leg/inertialMTB                </param>
 
         
         <action phase="startup" level="5" type="attach">
