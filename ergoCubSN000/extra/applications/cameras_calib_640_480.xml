@@ -5,7 +5,7 @@
 <module>
   <name>yarpdev</name>
       <parameters> --from camera/ServerGrabberDualDragon640_480.ini --split true</parameters>
-  <node>icub-head</node>
+  <node>ergocub-head</node>
 </module>
 <module>
   <name>camCalib</name>

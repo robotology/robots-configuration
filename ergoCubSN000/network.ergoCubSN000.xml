@@ -38,7 +38,7 @@
 
 <robotnetwork>
 
-    <host name="icub-head" >
+    <host name="ergocub-head" >
         <hasdevice type= "ETH" address="10.0.1.104" />
     </host>
 
@@ -50,26 +50,10 @@
             <connected bus="ETH" prev="10.0.1.104" next="10.0.1.21" />
         </board>
 
-        <board type='mc4plus' name="head-eb21-j2_5">
+        <board type='mc4plus' name="head-eb21-j2_3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.21" />
             <connected bus="ETH" prev="10.0.1.20" next="10.0.1.22" />
-        </board>
-
-    </part>
-
-    <part name="face">
-
-        <board type='mc4plus' name="face-eb22-j0_1">
-            <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.22" />
-			<connected bus="ETH" prev="10.0.1.21" next="10.0.1.23" />
-        </board>
-
-        <board type='mc4plus' name="face-eb23-j2_5">
-            <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.23" />
-            <connected bus="ETH" prev="10.0.1.22" next="10.0.1.1" />
         </board>
 
     </part>

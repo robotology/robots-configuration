@@ -10,36 +10,32 @@
     <devices>
 
     <!-- motor controllers wrappers -->
-    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" /> 
- 
-    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" /> 
-    
-    <xi:include href="wrappers/motorControl/right_shoulder-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
 
- 
-    <xi:include href="wrappers/motorControl/right_shoulder-mc_remapper.xml" /> 
-    
-    <xi:include href="wrappers/motorControl/left_shoulder-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" />
 
- 
-    <xi:include href="wrappers/motorControl/left_shoulder-mc_remapper.xml" /> 
-    
-    
-    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" /> 
- 
+    <xi:include href="wrappers/motorControl/right_shoulder-mc_wrapper.xml" />
 
-    <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" /> 
-    
+    <xi:include href="wrappers/motorControl/right_shoulder-mc_remapper.xml" />
+
+    <xi:include href="wrappers/motorControl/left_shoulder-mc_wrapper.xml" />
+
+    <xi:include href="wrappers/motorControl/left_shoulder-mc_remapper.xml" />
+
+    <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
+
+    <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
+
     <!-- TORSO -->
     <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-    
+
     <!-- LEFT ARM -->
     <xi:include href="hardware/motorControl/left_arm-eb2-j0_1-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb4-j2_3-mc.xml" />
 
-    <!-- RIGHT ARM -->    
+    <!-- RIGHT ARM -->
     <xi:include href="hardware/motorControl/right_arm-eb1-j0_1-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb3-j2_3-mc.xml" />
 
@@ -50,20 +46,20 @@
     <!-- RIGHT LEG -->
     <xi:include href="hardware/motorControl/right_leg-eb6-j0_3-mc.xml" />
     <xi:include href="hardware/motorControl/right_leg-eb7-j4_5-mc.xml" />
- 
+
    <!-- ANALOG SENSORS FT -->
    <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
-   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
+   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
 
    <xi:include href="hardware/FT/left_arm-eb2-j0_1-strain.xml" />
-   <xi:include href="hardware/FT/right_arm-eb1-j0_1-strain.xml" /> 
+   <xi:include href="hardware/FT/right_arm-eb1-j0_1-strain.xml" />
 
 
    <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
-   <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> 
+   <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
 
    <xi:include href="hardware/FT/left_leg-eb9-j4_5-strain.xml" />
-   <xi:include href="hardware/FT/right_leg-eb7-j4_5-strain.xml" /> 
+   <xi:include href="hardware/FT/right_leg-eb7-j4_5-strain.xml" />
 
 
     <!--  CALIBRATORS -->
@@ -72,5 +68,6 @@
     <xi:include href="calibrators/left_shoulder-calib.xml" />
     <xi:include href="calibrators/right_shoulder-calib.xml" />
     <xi:include href="calibrators/torso-calib.xml" />
+    <xi:include href="calibrators/head-calib.xml" />
   </devices>
 </robot>

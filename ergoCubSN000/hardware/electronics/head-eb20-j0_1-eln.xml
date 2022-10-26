@@ -16,25 +16,25 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "head-eb20-j0_1"        </param> 
+            <param name="Name">                     "head-eb20-j0_1"        </param>
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
-                <param name="maxTimeOfDOactivity">      300                 </param>   
-                <param name="maxTimeOfTXactivity">      300                 </param>                
-                <param name="TXrateOfRegularROPs">      5                   </param> 
-            </group>              
-        </group>                 
-        
-        <group name="ETH_BOARD_ACTIONS">
-            <group name="MONITOR_ITS_PRESENCE">
-                <param name="enabled">                  true                </param> 
-                <param name="timeout">                  0.020               </param> 
-                <param name="periodOfMissingReport">    60.0                </param> 
+                <param name="maxTimeOfDOactivity">      300                 </param>
+                <param name="maxTimeOfTXactivity">      300                 </param>
+                <param name="TXrateOfRegularROPs">      5                   </param>
             </group>
         </group>
 
-    </group>   
-    
+        <group name="ETH_BOARD_ACTIONS">
+            <group name="MONITOR_ITS_PRESENCE">
+                <param name="enabled">                  true                </param>
+                <param name="timeout">                  0.020               </param>
+                <param name="periodOfMissingReport">    60.0                </param>
+            </group>
+        </group>
+
+    </group>
+
 </params>
 
