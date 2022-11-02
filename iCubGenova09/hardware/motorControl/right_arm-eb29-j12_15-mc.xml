@@ -12,8 +12,8 @@
     <!-- joint number                           0                   1                   2                   3               -->
     <!-- joint name                             index_distal        middle_proximal     middle_distal       pinky  -->
     <group name="LIMITS">
-        <param name="jntPosMax">                180                 90                  180                 270             </param>
-        <param name="jntPosMin">                0                   0                   0                   0               </param>
+        <param name="jntPosMax">                180                 90                  180                 260             </param>
+        <param name="jntPosMin">                0                   0                   0                   10               </param>
         <param name="jntVelMax">                1000                1000                1000                1000            </param>
         <param name="motorOverloadCurrents">    2000                2000                2000                2000            </param>
         <param name="motorNominalCurrents">     600                 600                 600                 600             </param>
