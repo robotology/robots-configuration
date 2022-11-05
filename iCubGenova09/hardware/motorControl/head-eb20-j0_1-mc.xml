@@ -17,7 +17,7 @@
         <param name="jntVelMax">                1000                1000                </param>
         <param name="motorOverloadCurrents">    10000              10000                </param>
         <param name="motorNominalCurrents">     3000                3000                </param>
-        <param name="motorPeakCurrents">        6000                6000                </param>
+        <param name="motorPeakCurrents">        10000               10000                </param>
         <param name="motorPwmLimit">            3360                3360                </param>
     </group>
 
