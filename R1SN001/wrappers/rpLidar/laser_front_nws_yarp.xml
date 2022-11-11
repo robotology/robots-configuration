@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cerLaserFrontWrapper" type="rangefinder2D_nws_yarp">
+
+      <param name="period"> 0.01 </param>
+      <param name="name">   /cer/laser/front:o       </param>
+
+      <action phase="startup" level="10" type="attach">
+         <paramlist name="networks">
+            <elem name="cer_laser">  cer_laser_front_device </elem>
+         </paramlist>
+      </action>
+
+      <action phase="shutdown" level="15" type="detach" />
+  </device>
+
