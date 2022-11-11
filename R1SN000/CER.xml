@@ -4,52 +4,66 @@
 <robot name="R1SN000" build="1" portprefix="cer" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
 
-    <!-- MOBILE BASE -->
-    <xi:include href="hardware/motorControl/cer_base-ems21-mc.xml" />
-    <xi:include href="wrappers/motorControl/cer_base-mc_wrapper.xml" />
+    <!-- ODOMETRY -->
+    <xi:include href="hardware/odometry/odometry.xml" disabled_by="disable_odometry" />
+    <xi:include href="wrappers/odometry/odometry_nws_yarp.xml" disabled_by="disable_odometry" />
+    <xi:include href="wrappers/odometry/odometry_nws_ros.xml" enabled_by="enable_ros" disabled_by="disable_odometry" />
+    <xi:include href="wrappers/odometry/odometry_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_odometry" />
 
     <!-- LASER -->
-    <xi:include href="hardware/rpLidar/laserA2_hw.xml" /> 
-    <xi:include href="wrappers/rpLidar/laser_wrapper.xml" /> 
-
-    <!-- HEAD -->
-    <xi:include href="hardware/motorControl/cer_head-mcp10-mc.xml" />
-    <xi:include href="wrappers/motorControl/cer_head-mc_wrapper.xml" />
-
-    <!-- LEFT ARM -->
-    <xi:include href="hardware/motorControl/cer_left_upper_arm-ems17-mc.xml" />
-    <xi:include href="hardware/motorControl/cer_left_lower_arm-mcp18-mc.xml" />
-    <xi:include href="wrappers/motorControl/cer_left_arm_no_hand-mc_wrapper.xml" />
-    <xi:include href="wrappers/motorControl/cer_left_wrist_tripod-mc_wrapper.xml" />
-
-    <!-- RIGHT ARM -->
-    <xi:include href="hardware/motorControl/cer_right_upper_arm-ems19-mc.xml" />
-    <xi:include href="hardware/motorControl/cer_right_lower_arm-mcp20-mc.xml" />
-    <xi:include href="wrappers/motorControl/cer_right_arm_no_hand-mc_wrapper.xml" />
-    <xi:include href="wrappers/motorControl/cer_right_wrist_tripod-mc_wrapper.xml" />
-    
-    <!-- LEFT HAND -->
-    <xi:include href="hardware/motorControl/cer_left_hand-mcp7-mc.xml" />
-    <xi:include href="wrappers/motorControl/cer_left_hand-mc_wrapper.xml" />
-    <xi:include href="hardware/MAIS/left_hand-multi_enc.xml" />
-    <xi:include href="wrappers/MAIS/left_hand-mais_wrapper.xml" /> 
-    
-    <!-- RIGHT HAND -->
-    <xi:include href="hardware/motorControl/cer_right_hand-mcp9-mc.xml" />
-    <xi:include href="wrappers/motorControl/cer_right_hand-mc_wrapper.xml" />
-    <xi:include href="hardware/MAIS/right_hand-multi_enc.xml" />
-    <xi:include href="wrappers/MAIS/right_hand-mais_wrapper.xml" /> 
+    <xi:include href="hardware/rpLidar/laserA2_hw.xml" disabled_by="disable_lidar"/> 
+    <xi:include href="wrappers/rpLidar/laser_wrapper.xml" disabled_by="disable_lidar"/> 
+    <!-- BASE -->
+    <xi:include href="hardware/motorControl/cer_base-ems21-mc.xml" disabled_by="disable_base" />
+    <xi:include href="wrappers/motorControl/cer_base-mc_wrapper.xml" disabled_by="disable_base" />
 
     <!-- TORSO -->
-    <xi:include href="hardware/motorControl/cer_torso-ems15-mc.xml" />
-    <xi:include href="wrappers/motorControl/cer_torso_tripod-mc_wrapper.xml" />
+    <xi:include href="hardware/motorControl/cer_torso-ems15-mc.xml" disabled_by="disable_torso"/>
+    <xi:include href="wrappers/motorControl/cer_torso_tripod-mc_wrapper.xml" disabled_by="disable_torso"/>
+
+    <!-- LEFT ARM -->
+    <xi:include href="hardware/motorControl/cer_left_upper_arm-ems17-mc.xml" disabled_by="disable_left_arm"/>
+    <xi:include href="hardware/motorControl/cer_left_lower_arm-mcp18-mc.xml" disabled_by="disable_left_arm"/>
+    <xi:include href="wrappers/motorControl/cer_left_arm_no_hand-mc_wrapper.xml" disabled_by="disable_left_arm"/>
+    <xi:include href="wrappers/motorControl/cer_left_wrist_tripod-mc_wrapper.xml" disabled_by="disable_left_arm"/>
+
+    <!-- LEFT HAND -->
+    <xi:include href="hardware/motorControl/cer_left_hand-mcp7-mc.xml" disabled_by="disable_left_hand"/>
+    <xi:include href="wrappers/motorControl/cer_left_hand-mc_wrapper.xml" disabled_by="disable_left_hand"/>
+    <xi:include href="hardware/MAIS/left_hand-multi_enc.xml" disabled_by="disable_left_hand"/>
+    <xi:include href="wrappers/MAIS/left_hand-mais_wrapper.xml" disabled_by="disable_left_hand"/> 
+
+    <!-- RIGHT ARM -->
+    <xi:include href="hardware/motorControl/cer_right_upper_arm-ems19-mc.xml" disabled_by="disable_right_arm"/>
+    <xi:include href="hardware/motorControl/cer_right_lower_arm-mcp20-mc.xml" disabled_by="disable_right_arm"/>
+    <xi:include href="wrappers/motorControl/cer_right_arm_no_hand-mc_wrapper.xml" disabled_by="disable_right_arm"/>
+    <xi:include href="wrappers/motorControl/cer_right_wrist_tripod-mc_wrapper.xml" disabled_by="disable_right_arm"/>
+
+    <!-- RIGHT HAND -->
+    <xi:include href="hardware/motorControl/cer_right_hand-mcp9-mc.xml" disabled_by="disable_right_hand"/>
+    <xi:include href="wrappers/motorControl/cer_right_hand-mc_wrapper.xml" disabled_by="disable_right_hand"/>
+    <xi:include href="hardware/MAIS/right_hand-multi_enc.xml" disabled_by="disable_right_hand"/>
+    <xi:include href="wrappers/MAIS/right_hand-mais_wrapper.xml" disabled_by="disable_right_hand"/> 
+
+    <!-- HEAD -->
+    <xi:include href="hardware/motorControl/cer_head-mcp10-mc.xml" disabled_by="disable_head"/>
+    <xi:include href="wrappers/motorControl/cer_head-mc_wrapper.xml" disabled_by="disable_head"/>
+
+    <!--  CALIBRATORS -->
+    <xi:include href="calibrators/cer_torso-calib.xml" disabled_by="disable_torso" />
+    <xi:include href="calibrators/cer_left_arm-calib.xml" disabled_by="disable_left_arm"/>
+    <xi:include href="calibrators/cer_right_arm-calib.xml" disabled_by="disable_right_arm"/>
+    <xi:include href="calibrators/cer_head-calib.xml" disabled_by="disable_head"/>
+    <xi:include href="calibrators/cer_base-calib.xml" disabled_by="disable_base" />
+    <xi:include href="calibrators/cer_left_hand-calib.xml" disabled_by="disable_left_hand"/>
+    <xi:include href="calibrators/cer_right_hand-calib.xml" disabled_by="disable_right_hand"/>
 
     <!-- SKIN-->
     <!--
     <xi:include href="hardware/skin/left_hand-mc7-skin.xml" />
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
     -->
-    
+
      <!-- TRIPODS EQUIVALENTS-->
     <xi:include href="hardware/motorControl/cer_torso_equivalent-mc.xml" />
     <xi:include href="hardware/motorControl/cer_left_wrist_equivalent-mc.xml" />
@@ -63,17 +77,6 @@
     <xi:include href="wrappers/FT/cer_right_arm-FT_wrapper.xml" />
 
     <!--  ROS -->
-    <xi:include href="wrappers/motorControl/cer_ros_wrapper.xml" />
-
-    <!--  CALIBRATORS -->
-    <xi:include href="calibrators/cer_base-calib.xml" />
-    <xi:include href="calibrators/cer_left_arm-calib.xml" />
-    <xi:include href="calibrators/cer_right_arm-calib.xml" />
-    <xi:include href="calibrators/cer_left_hand-calib.xml" />
-    <xi:include href="calibrators/cer_right_hand-calib.xml" />
-    <xi:include href="calibrators/cer_torso-calib.xml" />
-    <xi:include href="calibrators/cer_head-calib.xml" />
-
+    <xi:include href="wrappers/motorControl/cer_ros_wrapper.xml" enabled_by="enable_ros" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
 </devices>
-</robot> 
-
+</robot>

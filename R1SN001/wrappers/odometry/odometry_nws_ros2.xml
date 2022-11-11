@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_odometry_nws_ros" type="odometry2D_nws_ros2">
+    <param name="topic_name">   /odometry </param>
+    <param name="node_name">    cer_odometry_nws_ros2 </param>
+    <param name="base_frame">   mobile_base_body_link </param>
+    <param name="odom_frame">   odom </param>
+    
+    <action phase="startup" level="15" type="attach">
+            <param name="device">  cer_odometry </param>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
