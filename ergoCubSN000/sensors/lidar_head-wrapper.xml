@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ergoCubSN000" build="1" portprefix="ergocub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="laser_wrapper_yarp" type="rangefinder2D_nws_yarp">
+        <param name="period">  0.01      </param>
+        <param name="name">    /laser:o  </param>
+        <action phase="startup" level="10" type="attach">
+           <paramlist name="networks">
+              <elem name="laser"> laser_device </elem>
+           </paramlist>
+        </action>
+      <action phase="shutdown" level="15" type="detach"/>
+    </device>
+
+</devices>
+</robot>
+

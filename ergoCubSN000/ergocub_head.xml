@@ -17,6 +17,10 @@
     <xi:include href="hardware/motorControl/head-eb21-j2_3-mc.xml" />
 
     <xi:include href="calibrators/head-calib.xml" />
+
+  <!-- Head sensors-->
+    <xi:include href="rpLidar/lidar_head.xml" />
+
   </devices>
 
 </robot>

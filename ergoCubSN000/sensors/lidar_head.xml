@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ergoCubSN000" build="1" portprefix="ergocub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="laser_device" type="rpLidar4">
+       <group name="GENERAL">
+            <param name="name">                rpLidar4      </param>
+            <param name="serial_baudrate">     1000000       </param>
+            <param name="serial_port">         /dev/ttyUSB0  </param>
+            <param name="sample_buffer_life">  1             </param>
+       </group>
+       <group name="SENSOR">
+            <param name="max_distance">    30.0         </param>
+            <param name="min_distance">    0.1          </param>
+            <param name="max_angle">       360          </param>
+            <param name="min_angle">       0            </param>
+            <param name="resolution">      0.12         </param>
+            <param name="allow_infinity">  1            </param>
+        </group>
+        <group name="RPLIDAR">
+            <param name="scan_mode">  DenseBoost        </param>
+        </group>
+    </device>
+
+</devices>
+</robot>
+
