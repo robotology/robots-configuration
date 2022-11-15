@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb24-inertials_wrapper" type="analogServer">
+        <param name="period">       10                  </param>
+        <param name="name">     /icub/left_hand/inertialMTB                </param>
+
+
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+                <!-- The name of the element can be any string (we use SetOfInertials to better express its nature).
+                     Its value must match the device name in the corresponding body_part-jx_y-inertials.xml file
+                     or in body_part-ebX-inertials.xml -->
+                <elem name="SetOfInertials">  left_arm-eb24-j4_7-inertials </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
