@@ -22,21 +22,21 @@
                 <group name="FIRMWARE">
                     <param name="major">            1           </param>
                     <param name="minor">            0           </param>
-                    <param name="build">            7           </param>
+                    <param name="build">            8           </param>
                 </group>
             </group>
 
             <group name="JOINTMAPPING">
 
                 <group name="ACTUATOR">
-                    <param name="type">             eomc_act_foc        foc                 foc         </param>
+                    <param name="type">             foc                 foc                 foc         </param>
                     <param name="port">             CAN1:1:0            CAN1:2:0            CAN1:3:0    </param>
                 </group>
 
                 <group name="ENCODER1">
-                    <param name="type">             eomc_enc_aea        aea                 aea         </param>
-                    <param name="port">             CONN:J5_X1          CONN:J5_X2          CONN:J5_X3     </param>
-                    <param name="position">         eomc_pos_atjoint    atjoint             atjoint     </param>
+                    <param name="type">             aea                 aea                 aea         </param>
+                    <param name="port">             CONN:J5_X1          CONN:J5_X2          CONN:J5_X3  </param>
+                    <param name="position">         atjoint             atjoint             atjoint     </param>
                     <param name="resolution">       4096                4096                4096        </param>
                     <param name="tolerance">        0.4                 0.4                 0.4         </param>
                 </group>

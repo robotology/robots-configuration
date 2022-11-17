@@ -16,7 +16,7 @@
 </group>
 <group name="CALIBRATION">
 <param name="calibrationType">        12         12         12         12         12       12      12      12       12       12       12       12       12       12      </param>
-<param name="calibration1">           -41179     7782       11224      25717      6865     29533   30289   0        0        0        0        0        0        0      </param>
+<param name="calibration1">           -41179     7782       11224      25717      10816   7369    21632   0        0        0        0        0        0        0      </param>
 <param name="calibration2">	          0           0           0          0           0       0       0       0       0       0        0        0        0        0    </param>
 <param name="calibration3">           0           0           0          0           0       0       0       0       0       0        0        0        0        0     </param>
 <param name="calibration4">           0           0           0          0           0       0       0       0       0       0        0        0        0        0    </param>
@@ -25,7 +25,7 @@
 <param name="calibrationDelta">       0           0           0          0           0       0       0       0       0       0        0        0        0         0      </param>
 
 <param name="startupPosition">        -35        30           0         45         0.0     0.0     0.0        30.0        30.0    30.0    30.0    30.0    30.0    30.0   </param>
-<param name="startupVelocity">        10.0       10.0         10.0      10.0       30.0    30.0    30.0       40.0        40.0    40.0    40.0    40.0    40.0    40.0  </param>
+<param name="startupVelocity">        10.0       10.0         10.0      10.0       10.0    10.0    10.0       40.0        40.0    40.0    40.0    40.0    40.0    40.0  </param>
 <param name="startupMaxPwm">          8000       8000         8000      8000       16000   16000   16000      0           0       0       0       0       0       0      </param>
 <param name="startupPosThreshold">    2          2            2          2         2       2       2          10          10      10      10      10      10      10    </param>
 </group>
