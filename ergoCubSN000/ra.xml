@@ -26,7 +26,7 @@
 
 
     <!--  CALIBRATORS -->
-    <xi:include href="calibrators/right_arm_nohand-calib.xml" />
+    <xi:include href="calibrators/right_arm-calib.xml" />
 
 
   </devices>
