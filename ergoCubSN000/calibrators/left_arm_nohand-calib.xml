@@ -6,7 +6,7 @@
                 <xi:include href="../general.xml" />
 
 		<group name="GENERAL">
-		    <param name="joints">11</param> <!-- the number of joints of the robot part -->
+		    <param name="joints">11]</param> <!-- the number of joints of the robot part -->
 		    <param name="deviceName"> Left_Arm_Calibrator </param>
 		</group>
 
