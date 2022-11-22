@@ -27,7 +27,7 @@
     
     <param name="startupPosition">                    0               5           0            -5          0       0        </param>
     <param name="startupVelocity">                    10.0            10.0        10.0          10         10      10       </param>
-    <param name="startupMaxPwm">                      12000           8000       4000          8000       4000    3000     </param>
+    <param name="startupMaxPwm">                      2000           2000       2000          4000       2000    2000     </param>
     <param name="startupPosThreshold">                2               2           2             2          2       2        </param>
   </group>
 

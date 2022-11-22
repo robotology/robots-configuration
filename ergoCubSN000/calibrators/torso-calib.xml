@@ -39,7 +39,7 @@
 </group>
 
  <!-- check old calibrator for the correct sequence, then ask to Randazz -->
-		<param name="CALIB_ORDER"> (0) (1) (2) </param>
+		<param name="CALIB_ORDER"> (1) (2) </param> <!-- roll disabled demo Rome 22 -->
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-mc_remapper</param>

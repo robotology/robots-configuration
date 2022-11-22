@@ -3,20 +3,20 @@
 
 
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="rightt_arm-eb22-j7_10-mc" type="embObjMotionControl">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb22-j7_10-mc" type="embObjMotionControl">
 
     <xi:include href="../../general.xml" />
-    <xi:include href="../electronics/rightt_arm-eb22-j7_10-eln.xml" />
-    <xi:include href="../mechanicals/rightt_arm-eb22-j7_10-mec.xml" />
-    <xi:include href="../motorControl/rightt_arm-eb22-j7_10-mc_service.xml" />
+    <xi:include href="../electronics/right_arm-eb22-j7_10-eln.xml" />
+    <xi:include href="../mechanicals/right_arm-eb22-j7_10-mec.xml" />
+    <xi:include href="../motorControl/right_arm-eb22-j7_10-mc_service.xml" />
 
     <!-- joint number                           0                   1                   2                   3                   -->
     <!-- joint name                             thumb               index               medium              pinky               -->    
     <group name="LIMITS">
-        <param name="jntPosMin">               +5                  +5                  +5                  +5                  </param>
-        <param name="jntPosMax">               +85                 +85                 +85                 +85                 </param>
+        <param name="jntPosMin">                0                   0                   0                   0                  </param>
+        <param name="jntPosMax">                150                 150                 150                 150                 </param>
         <param name="jntVelMax">                1000                1000                1000                1000                </param>
-        <param name="motorOverloadCurrents">    2000                2000                2500                2500                </param>
+        <param name="motorOverloadCurrents">    4000                4000                4000                4000                </param>
         <param name="motorNominalCurrents">     700                 700                 700                 700                 </param>
         <param name="motorPeakCurrents">        1500                1500                1500                1500                </param>    
         <param name="motorPwmLimit">            3360                3360                3360                3360                </param>
