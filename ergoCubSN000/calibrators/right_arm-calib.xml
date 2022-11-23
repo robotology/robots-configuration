@@ -25,7 +25,7 @@
 <param name="calibrationDelta">       0           0           0          0           0       0       0      0           0       0       0     </param>
 <param name="startupPosition">        -35        30           0         45         0.0     0.0     0.0      10.0        10.0    10.0    10.0    </param>
 <param name="startupVelocity">        10.0       10.0         10.0      10.0       10.0    10.0    10.0     70.0        70.0    70.0    70.0    </param>
-<param name="startupMaxPwm">          2000       2000         2000      2000       16000   16000   16000    0           0       0       0     </param>
+<param name="startupMaxPwm">          4000       4000         2000      2000       16000   16000   16000    0           0       0       0     </param>
 <param name="startupPosThreshold">    2          2            2          2         2       2       2        10          10      10      10      </param>
 </group>
 
