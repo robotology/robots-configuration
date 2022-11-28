@@ -12,7 +12,7 @@
     <!-- joint number                           0                   1                   -->
     <!-- joint name                          shoulder_pitch            shoulder_roll    -->
     <group name="LIMITS">
-        <param name="jntPosMax">                14                  163                </param>
+        <param name="jntPosMax">                14                  130                </param>
         <param name="jntPosMin">                -88                 17                  </param>
         <param name="jntVelMax">                120                 120                 </param>
         <param name="motorNominalCurrents">     5000                5000                </param>

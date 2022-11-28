@@ -13,20 +13,15 @@
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
 
 
-    <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/left_upper_arm-mc_remapper.xml" />
 
 
       <!-- LEFT ARM -->
     <xi:include href="hardware/motorControl/left_arm-eb2-j0_1-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb4-j2_3-mc.xml" />
-    <xi:include href="hardware/motorControl/left_arm-eb31-j4_6-mc.xml" />
-    <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" />
-
-
-
 
     <!--  CALIBRATORS -->
-    <xi:include href="calibrators/left_arm-calib.xml" />
+    <xi:include href="calibrators/left_arm_nohand-calib.xml" />
 
 
   </devices>

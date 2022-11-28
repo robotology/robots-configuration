@@ -3,7 +3,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-inertials_wrapper-deprecated" type="inertial">
-        <param name="name">  /ergocub/inertial  </param>
+        <param name="name">  /ergocubcub/inertial  </param>
 
 
         <action phase="startup" level="5" type="attach">
@@ -16,4 +16,4 @@
         </action>
 
         <action phase="shutdown" level="5" type="detach" />
-    </device>
+    </device> 
