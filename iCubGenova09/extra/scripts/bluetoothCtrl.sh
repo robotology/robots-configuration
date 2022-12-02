@@ -1,16 +1,10 @@
 #!/bin/bash
 
-# Before running, start rfcomm with the command
-# sudo rfcomm -r listen /dev/rfcomm0 1
-# Then, connect the app.
-# Once connected, run
-# sudo chmod a+rw /dev/rfcomm0
-# and then start this script
-
 REQUESTED_FAULT_TIMES=3
 FAULT_TIMEOUT=5
 ROBOT_NAME=icub
 
+CONNECTED=0
 REQUESTED_FAULT_TIMES=$((REQUESTED_FAULT_TIMES-1)) #The counter starts from zero
 DROP_NEXT_LINE=false
 FAULT_TIMES=0
@@ -167,21 +161,45 @@ function parse_line
 
 }
 
-while read -r line ; do
+function serial_blocking_read
+{
+    while read -r line ; do
 
-        echo "Received (raw): ${line}"
+            echo "Received (raw): ${line}"
 
-        if [[ "$DROP_NEXT_LINE" = true ]]; then
-            DROP_NEXT_LINE=false
-    	    continue
+            if [[ "$DROP_NEXT_LINE" = true ]]; then
+                DROP_NEXT_LINE=false
+                continue
+            fi
+
+            parse_line ${line}
+
+            echo ${output_message}
+
+            echo ${output_message} > /dev/rfcomm0
+
+    done < /dev/rfcomm0
+
+}
+
+function connect_bluetooth
+{
+    sudo chmod u+s /usr/bin/rfcomm #to use rfcomm without sudo in ssh down below
+    echo "Closing other instances of rfcomm"
+    sudo killall rfcomm # Close eventual previous connections
+    ssh -tt localhost "rfcomm -r listen /dev/rfcomm0 1" > /tmp/rfcomm_output & # This is a workaround to get rfcomm output to file. Normal redirection does not seem to work
+    while (( CONNECTED == 0 ))
+    do
+        sleep 1
+        echo "Waiting for the bluetooth device to connect to RFCOMM on channel 1"
+        if grep -q "/dev/rfcomm0" /tmp/rfcomm_output; then # If the connection was successfull, /dev/rfcomm0 should be displayed in the output
+            echo "Connection successfull"
+            CONNECTED=1
         fi
+    done
+    sudo chmod a+rw /dev/rfcomm0
+}
 
-        parse_line ${line}
-
-        echo ${output_message}
-
-        echo ${output_message} > /dev/rfcomm0
-
-done < /dev/rfcomm0
-
-
+### Main
+connect_bluetooth
+serial_blocking_read
