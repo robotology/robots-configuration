@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="camera_driver" type="usbCamera">
+    <param name="capabilities"> COLOR </param>
+    <param name="width"> 1280 </param>
+    <param name="height"> 480 </param>
+    <param name="d"> /dev/video0  </param>
+</device>

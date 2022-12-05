@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="camera_left_driver" type="dragonfly2">
+    <param name="period"> 0.033 </param>
+    <param name="width"> 320 </param>
+    <param name="height"> 240 </param>
+    <param name="video_type"> 1  </param>
+    <param name="white_balance"> 0.514 0.610 </param> 
+    <param name="gain"> 0.0  </param>
+    <param name="shutter"> 0.913  </param>
+    <param name="brightness"> 0  </param>
+    <param name="DR2"> 1  </param>
+    <param name="stamp"> 1  </param>
+    <param name="sharpness"> 0.5  </param>
+    <param name="hue"> 0.48  </param>
+    <param name="gamma"> 0.4  </param>
+    <param name="saturation"> 0.420 </param>
+    <param name="framerate"> 30  </param>
+    <param name="guid"> 00b09d01009b56fe </param>
+</device>

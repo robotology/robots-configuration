@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="camera_left_cropper" type="frameGrabber_cropper">
+    <param name="x1"> 0 </param>
+    <param name="y1"> 0 </param>
+    <param name="x2"> 320 </param>
+    <param name="y2"> 240 </param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="subdevice"> camera_driver </elem> 
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
