@@ -10,7 +10,7 @@
 	
     <!-- CARTESIANS --> 
     <xi:include href="cartesian/left_arm-cartesian.xml" />
-    <xi:include href="cartesian/right_arm-cartesian.xml" /> 
+    <xi:include href="cartesian/right_arm-cartesian.xml" />
     
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
@@ -38,6 +38,7 @@
     <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
+    
 
     <!-- LEFT LEG -->
     <xi:include href="hardware/motorControl/left_leg-eb6-j0_3-mc.xml" />
@@ -68,7 +69,7 @@
     <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" /> 
     <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />  
     
-    <!--  SKINS  --> 
+    <!--  SKINS  -->
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
     <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />  
@@ -79,8 +80,9 @@
     <xi:include href="hardware/skin/right_leg-eb11-skin.xml" />
     <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />
     <xi:include href="hardware/skin/torso-eb22-skin.xml" />  
-   
+	    
     <!-- ANALOG SENSOR FT -->
+
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" /> 
@@ -94,13 +96,13 @@
     <xi:include href="hardware/FT/right_leg-eb8-j0_3-strain.xml" /> 
     <xi:include href="hardware/FT/right_leg-eb9-j4_5-strain.xml" /> 
 
-    <!--  VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
+	    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY)-->
     <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
     <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" /> 
     <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />     
     <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" /> 
     <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> 
-    
+
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/left_arm-calib.xml" />
     <xi:include href="calibrators/right_arm-calib.xml" /> 
@@ -111,4 +113,5 @@
     <xi:include href="calibrators/face-calib.xml" />
 
     </devices>
-</robot> 
+</robot>
+
