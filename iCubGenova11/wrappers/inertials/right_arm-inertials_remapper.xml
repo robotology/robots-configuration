@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-inertials_remapper" type="multipleanalogsensorsremapper">
+        <param name="period">       10                  </param>
+        <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
+             defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->
+        <param name="ThreeAxisLinearAccelerometersNames">
+          (r_upper_arm_mtb_acc_2b10  r_upper_arm_mtb_acc_2b11  r_upper_arm_mtb_acc_2b12  r_upper_arm_mtb_acc_2b13
+           r_forearm_mtb_acc_2b7     r_forearm_mtb_acc_2b8     r_forearm_mtb_acc_2b9)
+        </param>
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+                <!-- The name of the element can be any string (we use SetOfInertials to better express its nature).
+                     Its value must match the device name in the corresponding body_part-jx_y-inertials.xml file
+                     or in body_part-ebX-inertials.xml -->
+                <elem name="inertialsOnMc4plus24">  right_arm-eb27-j4_7-inertials </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+

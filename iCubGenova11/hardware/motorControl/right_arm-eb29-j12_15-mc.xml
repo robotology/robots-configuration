@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb29-j12_15-mc" type="embObjMotionControl">
+
+    <xi:include href="../../general.xml" />
+    <xi:include href="../../hardware/electronics/right_arm-eb29-j12_15-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/right_arm-eb29-j12_15-mec.xml" />   
+    <xi:include href="./right_arm-eb29-j12_15-mc_service.xml" />
+
+    <!-- joint number                           0                   1                   2                   3               -->
+    <!-- joint name                             index-distal        middle-proximal     middle-distal       little-fingers  -->     
+    <group name="LIMITS">
+        <param name="jntPosMax">                180                 90                  180                 270             </param>
+        <param name="jntPosMin">                0                   0                   0                   0               </param> 
+        <param name="jntVelMax">                1000                1000                1000                1000            </param>
+        <param name="motorOverloadCurrents">    2000                2000                2000                2000            </param>
+        <param name="motorNominalCurrents">     600                 600                 600                 600             </param>
+        <param name="motorPeakCurrents">        1000                1000                1000                1000            </param>
+        <param name="motorPwmLimit">            3360                3360                3360                3360            </param>
+    </group>
+
+    <group name="TIMEOUTS">
+        <param name="velocity">                 100                 100                 100                 100	                </param>
+    </group>
+
+    <group name="IMPEDANCE">
+        <param name="stiffness">                0.0                 0.0                 0.0                 0.0                 </param>
+        <param name="damping">                  0.0                 0.0                 0.0                 0.0                 </param>
+    </group>
+
+    <group name="CONTROLS">
+        <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param> 
+        <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param> 
+        <param name="mixedControl">             POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param> 
+        <param name="torqueControl">            none                none                none                none                </param> 
+        <param name="currentPid">               none                none                none                none                </param>
+        <param name="speedPid">                 none                none                none                none                </param> 
+    </group>
+
+    <group name="POS_PID_DEFAULT">
+        <param name="controlLaw">             minjerk                   </param>
+        <param name="outputType">             pwm                       </param>
+        <param name="fbkControlUnits">        metric_units              </param> 
+        <param name="outputControlUnits">     machine_units             </param>
+        <param name="kp">                500.0       500.0      -500.0       200.0       </param>
+        <param name="kd">                0.0         0.0         0.0         0.0         </param>
+        <param name="ki">                50.0        50.0       -50.0        20.0        </param>
+        <param name="maxOutput">         3360        3360        3360        3360        </param>
+        <param name="maxInt">            3360        3360        3360        3360        </param>
+        <param name="stictionUp">        0           0           0           0           </param>
+        <param name="stictionDown">      0           0           0           0           </param>
+        <param name="kff">               0           0           0           0           </param>
+    </group>
+
+    <!-- begin of reserved section. this section is reserved for custom PIDs -->
+    
+    <!-- end of reserved section. this section is reserved for custom PIDs -->
+    
+</device> 
+    
+
