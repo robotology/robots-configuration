@@ -9,7 +9,7 @@
 		<action phase="startup" level="5" type="attach">
 		    <paramlist name="networks">
 		<!-- The param value must match the device name in the corresponding emsX file -->
-		        <elem name="FirstStrain">  right_upper_arm_strain </elem>
+		        <elem name="FirstStrain">  cer_right_arm-eb4-strain </elem>
 		    </paramlist>
 		</action>
 
