@@ -24,7 +24,7 @@
         <param name="hardwareJntPosMax">        180                 90                180                 270          </param>
         <param name="hardwareJntPosMin">          0                  0                  0                   0          </param> 
         <param name="rotorPosMin">           -65000              -5120              -5120               -65000          </param> 
-        <param name="rotorPosMax">             5120              32000              65000               5120          </param>
+        <param name="rotorPosMax">             5120              42000              65000               5120          </param>
 
 </group>
 
