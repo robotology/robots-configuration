@@ -2,7 +2,8 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
  <devices>
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="realsense2" type="realsense2">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="realsenseD450" type="realsense2">
         <group name="SETTINGS">
             <param name="depthResolution"> (640 480) </param>
             <param name="rgbResolution">  (640 480) </param>
@@ -24,10 +25,11 @@
         <param name="name">    /ergocub/depthCamera </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
-                <elem name="subdevicergbd"> realsense2 </elem>
+                <elem name="subdevicergbd"> realsenseD450 </elem>
             </paramlist>
         </action>
         <action phase="shutdown" level="5" type="detach" />
     </device>
+
  </devices>
 

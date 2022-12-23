@@ -5,7 +5,7 @@
 
   <devices>
     <xi:include href="sensors/rplidar.xml" />
-    <xi:include href="sensors/realsense2.xml" />
+    <xi:include href="sensors/realsense.xml" />
   </devices>
 
 </robot>

@@ -2,7 +2,7 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <devices>
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="laser_device" type="rpLidar4">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="rpLidarS2" type="rpLidar4">
        <group name="GENERAL">
             <param name="name">                rpLidar4      </param>
             <param name="serial_baudrate">     1000000       </param>
@@ -27,7 +27,7 @@
         <param name="name">    /ergocub/laser:o  </param>
         <action phase="startup" level="10" type="attach">
            <paramlist name="networks">
-              <elem name="laser"> laser_device </elem>
+              <elem name="laser"> rpLidarS2 </elem>
            </paramlist>
         </action>
       <action phase="shutdown" level="15" type="detach"/>

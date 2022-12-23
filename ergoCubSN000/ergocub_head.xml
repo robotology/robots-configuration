@@ -18,8 +18,9 @@
 
     <xi:include href="calibrators/head-calib.xml" />
 
-  <!-- Head sensors-->
-    <xi:include href="rpLidar/lidar_head.xml" />
+    <!-- Head sensors-->
+    <xi:include href="sensors/realsense.xml" />
+    <xi:include href="sensors/rplidar.xml" />
 
   </devices>
 
