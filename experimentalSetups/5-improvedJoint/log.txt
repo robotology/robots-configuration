@@ -1,0 +1,114 @@
+[[01;32mDEBUG[00m] Reading file /root/FIVE_WORKSPACE/robots-configuration/experimentalSetups/5-joint/./5-setup.xml
+[[01;32mDEBUG[00m] yarprobotinterface: using xml parser for DTD v3.x
+[[01;32mDEBUG[00m] Reading file /root/FIVE_WORKSPACE/robots-configuration/experimentalSetups/5-joint/./5-setup.xml
+[[01;32mDEBUG[00m] Preprocessor complete in:  0.000853539 s
+[[01;33mWARNING[00m] *************************************************************************************
+* yarprobotinterface 'portprefix' parameter does not follow convention,  *
+* it MUST start with a leading '/' since it is used as the full prefix port name    *
+*     name:    full port prefix name with leading '/',  e.g.  /robotName      *
+* A temporary automatic fix will be done for you, but please fix your config file   *
+*************************************************************************************
+[[01;34mINFO[00m] |[01;32myarp.os.Port[00m|[32m/icub/yarprobotinterface[00m| Port /icub/yarprobotinterface active at tcp://10.0.1.104:10002/
+[[01;34mINFO[00m] startup phase starting...
+[[01;34mINFO[00m] Opening device 5-setup-mc_nws_yarp with parameters [("PC104" [group] = "(PC104IpAddress 10.0.1.104) (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)"), ("robotName" = "icub"), ("period" = "0.01"), ("name" = "/icub/5-setup")]
+[[01;32mDEBUG[00m] |[01;33myarp.dev.PolyDriver[00m|[35m5-setup-mc_nws_yarp[00m| Parameters are (PC104 (PC104IpAddress "10.0.1.104") (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)) (device controlBoard_nws_yarp) (id "5-setup-mc_nws_yarp") (name "/icub/5-setup") (period 0.0100000000000000002082) (robotName icub)
+[[01;34mINFO[00m] |[01;32myarp.os.Port[00m|[35m/icub/5-setup/rpc:i[00m| Port /icub/5-setup/rpc:i active at tcp://10.0.1.104:10003/
+[[01;34mINFO[00m] |[01;32myarp.os.Port[00m|[34m/icub/5-setup/command:i[00m| Port /icub/5-setup/command:i active at tcp://10.0.1.104:10004/
+[[01;34mINFO[00m] |[01;32myarp.os.Port[00m|[36m/icub/5-setup/state:o[00m| Port /icub/5-setup/state:o active at tcp://10.0.1.104:10005/
+[[01;34mINFO[00m] |[01;32myarp.os.Port[00m|[34m/icub/5-setup/stateExt:o[00m| Port /icub/5-setup/stateExt:o active at tcp://10.0.1.104:10006/
+[[01;34mINFO[00m] |[01;33myarp.dev.PolyDriver[00m|[35m5-setup-mc_nws_yarp[00m| Created wrapper <controlBoard_nws_yarp>. See C++ class ControlBoard_nws_yarp for documentation.
+[[01;34mINFO[00m] Opening device 5-setup-mc_remapper with parameters [("PC104" [group] = "(PC104IpAddress 10.0.1.104) (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)"), ("robotName" = "icub"), ("networks" = "(5-setup_joints)"), ("5-setup_joints" = "( 0 0 0 0 )"), ("joints" = "1")]
+[[01;32mDEBUG[00m] |[01;33myarp.dev.PolyDriver[00m|[32m5-setup-mc_remapper[00m| Parameters are ("5-setup_joints" (0 0 0 0)) (PC104 (PC104IpAddress "10.0.1.104") (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)) (device controlboardremapper) (id "5-setup-mc_remapper") (joints 1) (networks ("5-setup_joints")) (robotName icub)
+[[01;34mINFO[00m] |[01;33myarp.dev.PolyDriver[00m|[32m5-setup-mc_remapper[00m| Created device <controlboardremapper>. See C++ class ControlBoardRemapper for documentation.
+[[01;34mINFO[00m] Opening device 5-setup-mc with parameters [("PC104" [group] = "(PC104IpAddress 10.0.1.104) (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)"), ("robotName" = "icub"), ("GENERAL" [group] = "(skipCalibration true) (useRawEncoderData false) (useLimitedPWM false) (verbose false)"), ("PC104" [group] = "(PC104IpAddress 10.0.1.104) (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)"), ("ETH_BOARD" [group] = "(ETH_BOARD_PROPERTIES (IpAddress 10.0.1.7) (IpPort 12345) (Type ems4) (maxSizeRXpacket 768) (maxSizeROP 384)) (ETH_BOARD_SETTINGS (Name "5-setup") (RUNNINGMODE (period 1000) (maxTimeOfRXactivity 400) (maxTimeOfDOactivity 300) (maxTimeOfTXactivity 300) (TXrateOfRegularROPs 5))) (ETH_BOARD_ACTIONS (MONITOR_ITS_PRESENCE (enabled true) (timeout 0.020) (periodOfMissingReport 60.0)))"), ("GENERAL" [group] = "(MotioncontrolVersion 6) (Joints 1) (AxisMap 0) (AxisName "setup") (AxisType "revolute") (Encoder 182.044) (fullscalePWM 32000) (ampsToSensor 1000.0) (Gearbox_M2J 160) (Gearbox_E2J 1) (useMotorSpeedFbk 1) (MotorType "MOOG_C2900576") (Verbose 0)"), ("LIMITS" [group] = "(hardwareJntPosMax 3600) (hardwareJntPosMin -3600) (rotorPosMin 0) (rotorPosMax 0)"), ("2FOC" [group] = "(Verbose 0) (AutoCalibration 0) (HasHallSensor 0) (HasTempSensor 0) (HasRotorEncoder 1) (HasRotorEncoderIndex 1) (HasSpeedEncoder 0) (RotorIndexOffset 116) (MotorPoles 20)"), ("COUPLINGS" [group] = "(matrixJ2M 1.000 0.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 0.000 1.000) (matrixM2J 1.000 0.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 0.000 1.000 0.000 0.000 0.000 0.000 1.000) (matrixE2J 1.00 0.00 0.00 0.00 0.00 0.00 0.00 1.00 0.00 0.00 0.00 0.00 0.00 0.00 1.00 0.00 0.00 0.00 0.00 0.00 0.00 1.00 0.00 0.00)"), ("JOINTSET_CFG" [group] = "(numberofsets 1) (JOINTSET_0 (listofjoints 0) (constraint none) (param1 0) (param2 0))"), ("SERVICE" [group] = "(type eomn_serv_MC_foc) (PROPERTIES (ETHBOARD (type ems4)) (CANBOARDS (type foc) (PROTOCOL (major 1) (minor 6)) (FIRMWARE (major 0) (minor 0) (build 0))) (JOINTMAPPING (ACTUATOR (type eomc_act_foc) (port CAN1:1:0)) (ENCODER1 (type eomc_enc_aksim2) (port CONN:P6) (position eomc_pos_atjoint) (resolution -524288) (tolerance 0.7)) (ENCODER2 (type roie) (port CAN1:1:0) (position atmotor) (resolution 5200) (tolerance 3.6))))"), ("LIMITS" [group] = "(jntPosMax 3600) (jntPosMin -3600) (jntVelMax 18000) (motorNominalCurrents 5100) (motorPeakCurrents 10000) (motorOverloadCurrents 15000) (motorPwmLimit 32000)"), ("TIMEOUTS" [group] = "(velocity 100)"), ("IMPEDANCE" [group] = "(stiffness 0) (damping 0)"), ("CONTROLS" [group] = "(positionControl POS_PID_DEFAULT) (velocityControl POS_PID_DEFAULT) (mixedControl POS_PID_DEFAULT) (torqueControl TRQ_PID_DEFAULT) (currentPid 2FOC_CUR_CONTROL) (speedPid 2FOC_VEL_CONTROL)"), ("POS_PID_DEFAULT" [group] = "(controlLaw minjerk) (outputType pwm) (fbkControlUnits metric_units) (outputControlUnits machine_units) (kp 500) (kd 0) (ki 100) (maxOutput 12000) (maxInt 3000) (stictionUp 0) (stictionDown 0) (kff 0)"), ("TRQ_PID_DEFAULT" [group] = "(controlLaw torque) (outputType pwm) (fbkControlUnits metric_units) (outputControlUnits dutycycle_percent) (kp 0) (kd 0) (ki 0) (maxOutput 25) (maxInt 1.56) (ko 0) (stictionUp 0) (stictionDown 0) (kff 1) (kbemf 0.0016) (filterType 0) (ktau 0.63) (viscousPos 0.0) (viscousNeg 0.0) (coulombPos 0.0) (coulombNeg 0.0)"), ("2FOC_CUR_CONTROL" [group] = "(controlLaw low_lev_current) (fbkControlUnits machine_units) (outputControlUnits machine_units) (kp 8) (kd 0) (ki 2) (shift 10) (maxOutput 32000) (maxInt 32000) (kff 0)"), ("2FOC_VEL_CONTROL" [group] = "(controlLaw low_lev_speed) (fbkControlUnits machine_units) (outputControlUnits machine_units) (kff 0) (kp 12) (kd 0) (ki 16) (shift 10) (maxOutput 32000) (maxInt 32000)"), ("OTHER_CONTROL_PARAMETERS" [group] = "(deadZone 0.0049)")]
+[[01;32mDEBUG[00m] |[01;33myarp.dev.PolyDriver[00m|[36m5-setup-mc[00m| Parameters are ("2FOC" (Verbose 0) (AutoCalibration 0) (HasHallSensor 0) (HasTempSensor 0) (HasRotorEncoder 1) (HasRotorEncoderIndex 1) (HasSpeedEncoder 0) (RotorIndexOffset 116) (MotorPoles 20)) ("2FOC_CUR_CONTROL" (controlLaw low_lev_current) (fbkControlUnits machine_units) (outputControlUnits machine_units) (kp 8) (kd 0) (ki 2) (shift 10) (maxOutput 32000) (maxInt 32000) (kff 0)) ("2FOC_VEL_CONTROL" (controlLaw low_lev_speed) (fbkControlUnits machine_units) (outputControlUnits machine_units) (kff 0) (kp 12) (kd 0) (ki 16) (shift 10) (maxOutput 32000) (maxInt 32000)) (CONTROLS (positionControl POS_PID_DEFAULT) (velocityControl POS_PID_DEFAULT) (mixedControl POS_PID_DEFAULT) (torqueControl TRQ_PID_DEFAULT) (currentPid "2FOC_CUR_CONTROL") (speedPid "2FOC_VEL_CONTROL")) (COUPLINGS (matrixJ2M 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0) (matrixM2J 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0) (matrixE2J 1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0)) (ETH_BOARD (ETH_BOARD_PROPERTIES (IpAddress "10.0.1.7") (IpPort 12345) (Type ems4) (maxSizeRXpacket 768) (maxSizeROP 384)) (ETH_BOARD_SETTINGS (Name "5-setup") (RUNNINGMODE (period 1000) (maxTimeOfRXactivity 400) (maxTimeOfDOactivity 300) (maxTimeOfTXactivity 300) (TXrateOfRegularROPs 5))) (ETH_BOARD_ACTIONS (MONITOR_ITS_PRESENCE (enabled true) (timeout 0.0200000000000000004163) (periodOfMissingReport 60.0)))) (GENERAL (skipCalibration true) (useRawEncoderData false) (useLimitedPWM false) (verbose false) (MotioncontrolVersion 6) (Joints 1) (AxisMap 0) (AxisName setup) (AxisType revolute) (Encoder 182.044000000000011141) (fullscalePWM 32000) (ampsToSensor 1000.0) (Gearbox_M2J 160) (Gearbox_E2J 1) (useMotorSpeedFbk 1) (MotorType MOOG_C2900576) (Verbose 0)) (IMPEDANCE (stiffness 0) (damping 0)) (JOINTSET_CFG (numberofsets 1) (JOINTSET_0 (listofjoints 0) (constraint none) (param1 0) (param2 0))) (LIMITS (hardwareJntPosMax 3600) (hardwareJntPosMin -3600) (rotorPosMin 0) (rotorPosMax 0) (jntPosMax 3600) (jntPosMin -3600) (jntVelMax 18000) (motorNominalCurrents 5100) (motorPeakCurrents 10000) (motorOverloadCurrents 15000) (motorPwmLimit 32000)) (OTHER_CONTROL_PARAMETERS (deadZone 0.00489999999999999984179)) (PC104 (PC104IpAddress "10.0.1.104") (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5) (PC104IpAddress "10.0.1.104") (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)) (POS_PID_DEFAULT (controlLaw minjerk) (outputType pwm) (fbkControlUnits metric_units) (outputControlUnits machine_units) (kp 500) (kd 0) (ki 100) (maxOutput 12000) (maxInt 3000) (stictionUp 0) (stictionDown 0) (kff 0)) (SERVICE (type eomn_serv_MC_foc) (PROPERTIES (ETHBOARD (type ems4)) (CANBOARDS (type foc) (PROTOCOL (major 1) (minor 6)) (FIRMWARE (major 0) (minor 0) (build 0))) (JOINTMAPPING (ACTUATOR (type eomc_act_foc) (port "CAN1:1:0")) (ENCODER1 (type eomc_enc_aksim2) (port "CONN:P6") (position eomc_pos_atjoint) (resolution -524288) (tolerance 0.699999999999999955591)) (ENCODER2 (type roie) (port "CAN1:1:0") (position atmotor) (resolution 5200) (tolerance 3.60000000000000008882))))) (TIMEOUTS (velocity 100)) (TRQ_PID_DEFAULT (controlLaw torque) (outputType pwm) (fbkControlUnits metric_units) (outputControlUnits dutycycle_percent) (kp 0) (kd 0) (ki 0) (maxOutput 25) (maxInt 1.56000000000000005329) (ko 0) (stictionUp 0) (stictionDown 0) (kff 1) (kbemf 0.00160000000000000007667) (filterType 0) (ktau 0.630000000000000004441) (viscousPos 0.0) (viscousNeg 0.0) (coulombPos 0.0) (coulombNeg 0.0)) (device embObjMotionControl) (id "5-setup-mc") (robotName icub)
+[[01;32mDEBUG[00m] eth::parser::print(pc104Data) for PC104:
+[[01;32mDEBUG[00m] PC104/PC104IpAddress:PC104IpPort =  10.0.1.104:12345
+[[01;32mDEBUG[00m] PC104/PC104TXrate =  1
+[[01;32mDEBUG[00m] PC104/PC104RXrate =  5
+[[01;32mDEBUG[00m] EthSender is a PeriodicThread with txrate = 1 ms
+[[01;32mDEBUG[00m] EthReceiver is a PeriodicThread with rxrate = 5 ms
+[[01;33mWARNING[00m] in EthReceiver::config() the config socket has queue size =  425984 ; you request ETHRECEIVER_BUFFER_SIZE= 
+[[01;32mDEBUG[00m] eth::parser::print(boardData) for BOARD "5-setup"
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_PROPERTIES:
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_PROPERTIES/IpAddress =  10.0.1.7
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_PROPERTIES/IpPort =  12345
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_PROPERTIES/Type =  ems4
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_PROPERTIES/maxSizeRXpacket =  768
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_PROPERTIES/maxSizeROP =  384
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_SETTINGS:
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_SETTINGS/Name =  "5-setup"
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_SETTINGS/RUNNINGMODE/(period, maxTimeOfRXactivity, maxTimeOfDOactivity, maxTimeOfTXactivity, TXrateOfRegularROPs) =  1000 400 300 300 5
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_ACTIONS/MONITOR_ITS_PRESENCE
+[[01;32mDEBUG[00m] ETH_BOARD/ETH_BOARD_ACTIONS/MONITOR_ITS_PRESENCE/(enabled, timeout, periodOfMissingReport) =  true 0.02 60
+[[01;32mDEBUG[00m] eth::EthMonitorPresence::config(): monitoring of presence is ON for BOARD 10.0.1.7 ("5-setup") with timeout = 0.02 sec and period of missing report = 60 sec
+[[01;32mDEBUG[00m] TheEthManager::requestResource2(): has just succesfully created a new EthResource for board of type ems4 with IP =  10.0.1.7
+[[01;33mWARNING[00m] embObjMC BOARD  "5-setup" Missing KALMAN_FILTER group. Kalman Filter will be disabled by default.
+[[01;34mINFO[00m]  from BOARD 10.0.1.7 ("5-setup"), src LOCAL, adr 0, time 193s 104m 504u: (code 0x00000034, par16 0x0001 par64 0x0000000000000008) -> SYS: the board has detected a restart of the remote transceiver because the rx ropframe sequence number is 1. In par64 there is the expected number. + .
+[[01;32mDEBUG[00m] EthResource::verifyBoardPresence() found BOARD "5-setup" with IP 10.0.1.7 after 0.00708604 seconds
+[[01;32mDEBUG[00m] EthResource::verifyBoardTransceiver() has validated the transceiver of BOARD "5-setup" with IP 10.0.1.7
+[[01;31mERROR[00m] theNVmanager::Impl::wait() had a timeout for BOARD "5-setup" IP 10.0.1.7 and nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::command() fails a wait() from IP 10.0.1.7 for nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::wait() had a timeout for BOARD "5-setup" IP 10.0.1.7 and nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::command() fails a wait() from IP 10.0.1.7 for nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::wait() had a timeout for BOARD "5-setup" IP 10.0.1.7 and nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::command() fails a wait() from IP 10.0.1.7 for nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] EthResource::serviceCommand() failed an acked activation request to BOARD "5-setup" with IP 10.0.1.7 after 3 attempts each with waiting timeout of 0.5 seconds
+[[01;31mERROR[00m] EthResource::cleanBoardBehaviour() cannot stop services for BOARD "5-setup" with IP 10.0.1.7 : cannot proceed any further
+[[01;31mERROR[00m] EthResource::verifyEPprotocol() cannot verify BOARD "5-setup" with IP 10.0.1.7 : cannot proceed any further
+[[01;31mERROR[00m] embObjMotionControl: failed verifyEPprotocol. Cannot continue!
+[[01;31mERROR[00m] theNVmanager::Impl::wait() had a timeout for BOARD "5-setup" IP 10.0.1.7 and nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::command() fails a wait() from IP 10.0.1.7 for nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::wait() had a timeout for BOARD "5-setup" IP 10.0.1.7 and nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::command() fails a wait() from IP 10.0.1.7 for nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::wait() had a timeout for BOARD "5-setup" IP 10.0.1.7 and nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] theNVmanager::Impl::command() fails a wait() from IP 10.0.1.7 for nv ID32 = 0x00030001 -> IND = 0, TAG = eoprot_tag_mn_service_status_commandresult
+[[01;31mERROR[00m] EthResource::serviceCommand() failed an acked activation request to BOARD "5-setup" with IP 10.0.1.7 after 3 attempts each with waiting timeout of 0.5 seconds
+[[01;31mERROR[00m] |[01;33myarp.dev.PolyDriver[00m|[36m5-setup-mc[00m| Driver <embObjMotionControl> was found but could not open
+[[01;33mWARNING[00m] Cannot open device 5-setup-mc
+[[01;33mWARNING[00m] Cannot open device 5-setup-mc
+[[01;34mINFO[00m] Opening device 5-setup-calibrator with parameters [("PC104" [group] = "(PC104IpAddress 10.0.1.104) (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)"), ("robotName" = "icub"), ("GENERAL" [group] = "(skipCalibration true) (useRawEncoderData false) (useLimitedPWM false) (verbose false)"), ("GENERAL" [group] = "(joints 1) (deviceName 5-Setup_Calibrator)"), ("HOME" [group] = "(positionHome 0) (velocityHome 10)"), ("CALIBRATION" [group] = "(calibrationType 12) (calibration1 0) (calibration2 0) (calibration3 0) (calibration4 0) (calibration5 0) (calibrationZero 0) (calibrationDelta 0) (startupPosition 0) (startupVelocity 10) (startupMaxPwm 5500) (startupPosThreshold 2)"), ("CALIB_ORDER" = "(0)")]
+[[01;32mDEBUG[00m] |[01;33myarp.dev.PolyDriver[00m|[31m5-setup-calibrator[00m| Parameters are (CALIBRATION (calibrationType 12) (calibration1 0) (calibration2 0) (calibration3 0) (calibration4 0) (calibration5 0) (calibrationZero 0) (calibrationDelta 0) (startupPosition 0) (startupVelocity 10) (startupMaxPwm 5500) (startupPosThreshold 2)) (CALIB_ORDER (0)) (GENERAL (skipCalibration true) (useRawEncoderData false) (useLimitedPWM false) (verbose false) (joints 1) (deviceName "5-Setup_Calibrator")) (HOME (positionHome 0) (velocityHome 10)) (PC104 (PC104IpAddress "10.0.1.104") (PC104IpPort 12345) (PC104TXrate 1) (PC104RXrate 5)) (device parametricCalibratorEth) (id "5-setup-calibrator") (robotName icub)
+[[01;33mWARNING[00m] 5-Setup_Calibrator : skipping calibration!! This option was set in general.xml file.
+[[01;33mWARNING[00m] 5-Setup_Calibrator : BE CAREFUL USING THE ROBOT IN THIS CONFIGURATION! See 'skipCalibration' param in config file
+[[01;34mINFO[00m] |[01;33myarp.dev.PolyDriver[00m|[31m5-setup-calibrator[00m| Created device <parametricCalibratorEth>. See C++ class yarp::dev::parametricCalibratorEth for documentation.
+[[01;33mWARNING[00m] There was some problem opening one or more devices. Please check the log and your configuration
+[[01;31mERROR[00m] One or more devices failed opening... see previous log messages for more info
+[[01;34mINFO[00m] Closing device 5-setup-calibrator
+[[01;34mINFO[00m] Closing device 5-setup-mc
+[[01;34mINFO[00m] Closing device 5-setup-mc_remapper
+[[01;34mINFO[00m] Closing device 5-setup-mc_nws_yarp
+[[01;31mERROR[00m] Error in startup phase... see previous messages for more info
+[[01;33mWARNING[00m] Interrupt # 1 # received.
+[[01;34mINFO[00m] Interrupt received. Stopping all running threads.
+[[01;34mINFO[00m] interrupt1 phase starting...
+[[01;34mINFO[00m] Entering action level 1 of phase interrupt1
+[[01;34mINFO[00m] Executing park action, level 1 on device 5-setup-calibrator with parameters [("target" = "5-setup-mc_remapper")]
+[[01;31mERROR[00m] park device do not exists
+[[01;31mERROR[00m] Cannot run park action on device 5-setup-calibrator
+[[01;34mINFO[00m] All actions for action level 1 of interrupt1 phase started. Waiting for unfinished actions.
+[[01;34mINFO[00m] All actions for action level 1 of interrupt1 phase finished.
+[[01;33mWARNING[00m] There was some problem running actions for interrupt1 phase . Please check the log and your configuration
+[[01;34mINFO[00m] interrupt1 phase finished.
+[[01;31mERROR[00m] Error in interrupt1 phase... see previous messages for more info
+[[01;34mINFO[00m] shutdown phase starting...
+[[01;34mINFO[00m] Entering action level 15 of phase shutdown
+[[01;34mINFO[00m] Executing detach action, level 15 on device 5-setup-mc_nws_yarp with parameters []
+[[01;31mERROR[00m] 5-setup-mc_nws_yarp is neither a wrapper nor a multiplewrapper, therefore it cannot have detach actions
+[[01;31mERROR[00m] Cannot run detach action on device 5-setup-mc_nws_yarp
+[[01;34mINFO[00m] All actions for action level 15 of shutdown phase started. Waiting for unfinished actions.
+[[01;34mINFO[00m] All actions for action level 15 of shutdown phase finished.
+[[01;34mINFO[00m] Entering action level 20 of phase shutdown
+[[01;34mINFO[00m] Executing detach action, level 20 on device 5-setup-mc_remapper with parameters []
+[[01;31mERROR[00m] 5-setup-mc_remapper is neither a wrapper nor a multiplewrapper, therefore it cannot have detach actions
+[[01;31mERROR[00m] Cannot run detach action on device 5-setup-mc_remapper
+[[01;34mINFO[00m] All actions for action level 20 of shutdown phase started. Waiting for unfinished actions.
+[[01;34mINFO[00m] All actions for action level 20 of shutdown phase finished.
+[[01;33mWARNING[00m] There was some problem running actions for shutdown phase . Please check the log and your configuration
+[[01;34mINFO[00m] Closing device 5-setup-calibrator
+[[01;34mINFO[00m] Closing device 5-setup-mc
+[[01;34mINFO[00m] Closing device 5-setup-mc_remapper
+[[01;34mINFO[00m] Closing device 5-setup-mc_nws_yarp
+[[01;34mINFO[00m] shutdown phase finished.
+[[01;31mERROR[00m] Error in shutdown phase... see previous messages for more info
+[[01;34mINFO[00m] |[01;32myarp.os.RFModule[00m| RFModule failed to open.
