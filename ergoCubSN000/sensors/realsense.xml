@@ -21,7 +21,7 @@
     </device>
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperyarp" type="rgbdSensor_nws_yarp">
-        <param name="period"> 0.16 </param>
+        <param name="period"> 0.03 </param>
         <param name="name">    /ergocub/depthCamera </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
