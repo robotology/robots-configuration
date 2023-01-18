@@ -4,19 +4,19 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-j12_15-mc" type="embObjMotionControl">
-    
+
         <xi:include href="../../general.xml" />
         <xi:include href="../../hardware/electronics/left_arm-j12_15-eln.xml" />
         <xi:include href="../../hardware/mechanicals/left_arm-j12_15-mec.xml" />
-        
+
         <xi:include href="hardware/motorControl/left_arm-j12_15-mc-service.xml" />
 
         <!-- joint number in sub-part           0               1               2               3          -->
-        <!-- joint name                    index_distal   middle-proximal   middle-distal   little-fingers -->     
+        <!-- joint name                    index_distal   middle_proximal   middle_distal   pinky -->
         <group name="LIMITS">
             <param name="jntPosMax">              180          90              180             270          </param>
-            <param name="jntPosMin">                0           0                0               0           </param> 
-            <param name="rotorPosMin">         -55040       -5120            -5120           -69120       </param> 
+            <param name="jntPosMin">                0           0                0               0           </param>
+            <param name="rotorPosMin">         -55040       -5120            -5120           -69120       </param>
             <param name="rotorPosMax">           5120       32000            55040             2048       </param>
             <param name="jntVelMax">                1000        1000            1000           1000         </param>
             <param name="motorOverloadCurrents">    2000        2000            2000           2000       </param>
@@ -24,7 +24,7 @@
             <param name="motorPeakCurrents">        1000        1000            1000           1000        </param>
             <param name="motorPwmLimit">            3360        3360            3360            3360       </param>
         </group>
-    
+
 
         <group name="IMPEDANCE">
             <param name="stiffness">            0.0         0.0     0.0         0.0             </param>
@@ -37,27 +37,27 @@
 
 
         <group name="CONTROLS">
-           <param name="positionControl">           JOINT_PID_V1   JOINT_PID_V1    JOINT_PID_V1    JOINT_PID_V1    </param> 
-           <param name="velocityControl">           none           none            none            none            </param> 
-           <param name="torqueControl">             none           none            none            none            </param> 
+           <param name="positionControl">           JOINT_PID_V1   JOINT_PID_V1    JOINT_PID_V1    JOINT_PID_V1    </param>
+           <param name="velocityControl">           none           none            none            none            </param>
+           <param name="torqueControl">             none           none            none            none            </param>
            <param name="currentPid">                none           none            none            none            </param>
         </group>
 
 	    <group name="JOINT_PID_V1">
-	        <param name="controlLaw">    Pid_inPos_outPwm                          </param> 
-            <param name="controlUnits">     metric_units                                        </param> 
+	        <param name="controlLaw">    Pid_inPos_outPwm                          </param>
+            <param name="controlUnits">     metric_units                                        </param>
             <param name="pos_kp">                  -500.00    500.00      500.00     -200.00      </param>
-            <param name="pos_kd">                   0.0         0.0         0.0         0.0         </param>     
-            <param name="pos_ki">                   0.0         0.0         0.0         0.0         </param>       
-            <param name="pos_maxOutput">            1500        3360        3360        3360        </param>  
-            <param name="pos_maxInt">               1500        3360        3360        3360        </param> 
-            <param name="pos_shift">                0           0           0           0           </param>       
-            <param name="pos_ko">                   0           0           0           0           </param>  
-            <param name="pos_stictionUp">           0           0           0           0           </param> 
-            <param name="pos_stictionDwn">          0           0           0           0           </param> 
-            <param name="pos_kff">                  0           0           0           0           </param> 
+            <param name="pos_kd">                   0.0         0.0         0.0         0.0         </param>
+            <param name="pos_ki">                   0.0         0.0         0.0         0.0         </param>
+            <param name="pos_maxOutput">            1500        3360        3360        3360        </param>
+            <param name="pos_maxInt">               1500        3360        3360        3360        </param>
+            <param name="pos_shift">                0           0           0           0           </param>
+            <param name="pos_ko">                   0           0           0           0           </param>
+            <param name="pos_stictionUp">           0           0           0           0           </param>
+            <param name="pos_stictionDwn">          0           0           0           0           </param>
+            <param name="pos_kff">                  0           0           0           0           </param>
         </group>
 
-    </device> 
-    
+    </device>
+
 
