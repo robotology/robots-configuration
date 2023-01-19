@@ -21,9 +21,9 @@
     </group>
     
     <group name="LIMITS">
-        <!--                                 0        1             	2         3   -->
-        <param name="hardwareJntPosMax">     94       120   80.5        6   </param>
-        <param name="hardwareJntPosMin">    -47       -20  -80.5      -80   </param>
+        <!--                                 0        1       	2         3   -->
+        <param name="hardwareJntPosMax">    108.91           110.67      80.5      7.23  </param>
+        <param name="hardwareJntPosMin">   -44.81           -35     -80.5    -105.23  </param>
         <param name="rotorPosMin">            0         0      0      0     </param> 
         <param name="rotorPosMax">            0         0      0      0     </param>
     </group>
