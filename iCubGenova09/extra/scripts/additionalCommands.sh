@@ -49,6 +49,8 @@ alias prepareRetargetingTransforms='bash ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src
 
 alias restart-pulseaudio='systemctl --user restart pulseaudio'
 
+alias ping-console-from-head='ssh 10.0.0.3 "ssh 10.0.2.2 ping 10.0.0.150"'
+
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 ## Alias for displaying info messages about the other aliases
@@ -64,7 +66,8 @@ ${GREEN}teleoperationFolder${NC} Go to the walking-teleoperation source folder.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
 ${GREEN}run-yarp-openmct${NC} Run yarp-openmct server for online logging visualization.
 ${GREEN}prepareRetargetingTransforms${NC} Run a bash script to prepare the transforms for the retargeting.
-${GREEN}restart-pulseaudio${NC} Restart pulseaudio in case the echo cancelling does not work."'
+${GREEN}restart-pulseaudio${NC} Restart pulseaudio in case the echo cancelling does not work.
+${GREEN}ping-console-from-head${NC} Start pinging 10.0.0.150 from icub-head in case of initial network issues."'
 
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
