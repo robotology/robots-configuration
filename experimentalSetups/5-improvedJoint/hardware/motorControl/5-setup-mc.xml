@@ -50,7 +50,7 @@
         <param name="kp">           500              </param>
         <param name="kd">           0                </param>
         <param name="ki">           100              </param>
-        <param name="maxOutput">    12000           </param>
+        <param name="maxOutput">    32000           </param>
         <param name="maxInt">       3000           </param>
         <param name="stictionUp">   0              </param>
         <param name="stictionDown"> 0              </param>
@@ -66,12 +66,12 @@
         <param name="outputType">          current                  </param>
         <param name="fbkControlUnits">     machine_units            </param>
         <param name="outputControlUnits">  machine_units            </param>
-        <param name="kp">              0    </param>
+        <param name="kp">              1.8    </param>
         <param name="kd">              0    </param>
         <param name="ki">              0    </param>
-        <param name="maxOutput">     5000    </param>
+        <param name="maxOutput">     2000    </param>
         <param name="maxInt">        1000    </param>
-        <param name="ko">              0    </param>
+        <param name="ko">              0.55    </param>
         <param name="stictionUp">      0    </param>
         <param name="stictionDown">    0    </param>
         <param name="kff">             0    </param>
