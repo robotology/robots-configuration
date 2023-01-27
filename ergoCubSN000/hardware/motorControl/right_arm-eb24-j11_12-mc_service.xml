@@ -44,7 +44,7 @@
                         <param name="type">             TYPE:decideg     TYPE:decideg          </param>
                         <param name="rotation">         ROT:zero         ROT:zero              </param>
                         <param name="offset">           -200.0           -295.0                </param>
-                        <param name="invertDirection">  false            true                  </param>
+                        <param name="invertDirection">  false            false                 </param>
                     </group>
                 </group>
 

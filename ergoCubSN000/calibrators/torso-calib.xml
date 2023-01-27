@@ -20,9 +20,9 @@
 <group name="CALIBRATION">                                                                         
 <!--                                                roll                    pitch                  yaw                          -->
 <param name="calibrationType">                      12                      12                     12                      </param>
-                                                                                                                                    <!--
-<param name="calibration1">	                        58233                   8433                   35531                   </param> --> 
-<param name="calibration1">	                        38354                   1234                   6551                    </param>
+                                                                                                                                   
+<!--<param name="calibration1">	                        58233                   8433                   35531                   </param>  -->
+<param name="calibration1">	                    38354                   67734                   6013                    </param>
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
                                                                                                    
@@ -39,7 +39,7 @@
 </group>
 
  <!-- check old calibrator for the correct sequence, then ask to Randazz -->
-		<param name="CALIB_ORDER"> (1) (2) </param> <!-- roll disabled demo Rome 22 -->
+		<param name="CALIB_ORDER"> (1) (2) (0) </param> <!-- roll disabled demo Rome 22 -->
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-mc_remapper</param>

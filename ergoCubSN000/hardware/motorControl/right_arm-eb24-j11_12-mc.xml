@@ -13,8 +13,8 @@
     <!-- joint number                           0                        1                           -->
     <!-- joint name                             hand_thumbmetacarpus     hand_indexadduction         -->    
     <group name="LIMITS">
-        <param name="jntPosMin">                0                        0            </param>
-        <param name="jntPosMax">                85                       20           </param>
+        <param name="jntPosMin">                0                        7            </param>
+        <param name="jntPosMax">                85                       18           </param>
         <param name="jntVelMax">                1000                     1000         </param>
         <param name="motorOverloadCurrents">    2000                     2000         </param>
         <param name="motorNominalCurrents">     700                      700          </param>
@@ -48,9 +48,9 @@
         <param name="outputType">               pwm                     </param>
         <param name="fbkControlUnits">          metric_units            </param>
         <param name="outputControlUnits">       machine_units           </param>
-        <param name="kp">                       30         -300          </param>
+        <param name="kp">                       60          60          </param>
         <param name="kd">                       0           0           </param>
-        <param name="ki">                       10         -200          </param>
+        <param name="ki">                       20          20          </param>
         <param name="maxOutput">                3360        3360        </param>
         <param name="maxInt">                   1000        3360        </param>
         <param name="stictionUp">               0           0           </param>
