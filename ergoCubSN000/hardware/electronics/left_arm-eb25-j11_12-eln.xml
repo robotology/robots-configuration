@@ -8,7 +8,7 @@
     <group name="ETH_BOARD">
 
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.22                         </param>
+            <param name="IpAddress">                10.0.1.24                         </param>
             <param name="IpPort">                   12345                             </param>
             <param name="Type">                     mc4plus                           </param>
             <param name="maxSizeRXpacket">          768                               </param>
@@ -16,7 +16,7 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                         "right_arm-eb22-j7_10"        </param>
+            <param name="Name">                         "left_arm-eb25-j11_12"        </param>
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                          </param>
                 <param name="maxTimeOfRXactivity">      400                           </param>

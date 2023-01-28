@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="new_forearm" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN000" build="1">
 
     <xi:include href="./pc104.xml" />
 
     <group name="ETH_BOARD">
 
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.23                </param>
+            <param name="IpAddress">                10.0.1.23               </param>
             <param name="IpPort">                   12345                   </param>
-            <param name="Type">                     mc4plus                    </param>
+            <param name="Type">                     mc4plus                 </param>
             <param name="maxSizeRXpacket">          768                     </param>
             <param name="maxSizeROP">               384                     </param>
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "left_arm-eb23-j7_10"        </param>
+            <param name="Name">                     "left_arm-eb23-j7_10"   </param>
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
