@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="new_forarm" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN000" build="1">
     <group name="GENERAL">
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 4 </param> 
@@ -11,10 +11,10 @@
         <param name="AxisMap">              0                       1                       2                           3                       </param>
         <param name="AxisName">             "l_hand_thumb_proximal" "l_hand_index_proximal" "l_hand_medium_proximal"    "l_hand_pinky_proximal" </param>
         <param name="AxisType">             "revolute"              "revolute"              "revolute"                  "revolute"              </param>
-        <param name="Encoder">              182.044                 36400.044                 36400.044                     182.044                 </param>
+        <param name="Encoder">              182.044                 182.044                 182.044                     182.044                 </param>
         <param name="fullscalePWM">         3360                    3360                    3360                        3360                    </param>
         <param name="ampsToSensor">         1000.0                  1000.0                  1000.0                      1000.0                  </param>
-        <param name="Gearbox_M2J">          159                     1                       1                         159                     </param>
+        <param name="Gearbox_M2J">          159                     159                     159                         159                     </param>
         <param name="Gearbox_E2J">          1                       1                       1                           1                       </param>
         <param name="useMotorSpeedFbk">     0                       0                       0                           0                       </param>
         <param name="MotorType">            "DC"                    "DC"                    "DC"                        "DC"                    </param>
@@ -23,10 +23,10 @@
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">    160             160             160             160         </param>
-        <param name="hardwareJntPosMin">    -10             -10            -10               -10           </param>
-        <param name="rotorPosMin">          0               0               0               0           </param>
-        <param name="rotorPosMax">          0               0               0               0           </param>
+        <param name="hardwareJntPosMax">    90              90              90              90         </param>
+        <param name="hardwareJntPosMin">    0               0               0               0          </param>
+        <param name="rotorPosMin">          0               0               0               0          </param>
+        <param name="rotorPosMax">          0               0               0               0          </param>
     </group>
     
     <group name="COUPLINGS"> 

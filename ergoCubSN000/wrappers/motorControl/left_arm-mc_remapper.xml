@@ -3,18 +3,20 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-mc_remapper" type="controlboardremapper">
     <paramlist name="networks">
-        <elem name="left_arm_joints1">(  0  1 0 1 )</elem>
-        <elem name="left_arm_joints2">(  2  3 0 1 )</elem>
-        <elem name="left_arm_joints3">(  4  6 0 2 )</elem>
-        <elem name="left_arm_joints4">(  7  10 0 3 )</elem>
+        <elem name="left_arm_joints1">(  0  1 0 1 )  </elem>
+        <elem name="left_arm_joints2">(  2  3 0 1 )  </elem>
+        <elem name="left_arm_joints3">(  4  6 0 2 )  </elem>
+        <elem name="left_arm_joints4">(  7  10 0 3 ) </elem>
+        <elem name="left_arm_joints5">(  11 12 0 1 ) </elem>
     </paramlist>
-    <param name="joints"> 11 </param>
+    <param name="joints"> 13 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="left_arm_joints1"> left_arm-eb2-j0_1-mc </elem>
-            <elem name="left_arm_joints2"> left_arm-eb4-j2_3-mc </elem>
-            <elem name="left_arm_joints3"> left_arm-eb31-j4_6-mc </elem>
+            <elem name="left_arm_joints1"> left_arm-eb2-j0_1-mc   </elem>
+            <elem name="left_arm_joints2"> left_arm-eb4-j2_3-mc   </elem>
+            <elem name="left_arm_joints3"> left_arm-eb31-j4_6-mc  </elem>
             <elem name="left_arm_joints4"> left_arm-eb23-j7_10-mc </elem>
+            <elem name="left_arm_joints5"> left_arm-eb25-j11_12-mc </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />
