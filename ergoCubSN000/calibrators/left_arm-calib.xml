@@ -29,7 +29,7 @@
 		<param name="startupPosThreshold">    2          2            2          2         2       2       2        20      20      20      20      20      20     </param>
 	</group>
 
-	<param name="CALIB_ORDER">  (1) (0) (2) (3) (4 5 6) (7 8 9 10) (11 12)</param> <!-- probably joint 7 is still not working (since demo Rome 22). TODO: check -->
+	<param name="CALIB_ORDER">  (1) (0) (2) (3) (4 5 6) (7 8 9 10) (11 12)</param> <!-- motor's encoder of joint 7 can't read -->
 	<action phase="startup" level="10" type="calibrate">
 		<param name="target">left_arm-mc_remapper</param>
 	</action>
