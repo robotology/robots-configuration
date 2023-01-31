@@ -1,77 +1,190 @@
+
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<!--    This file contains details of how the IMU service is configured. Attention: it is supported only from strain board version 2  -->
+<!--
+    This file contains details of how the IMU service is configured. 
+    The IMU service gives access to inertial data published by a IMU chip
+    possibly located in multiple CAN boards, however all connected to the CAN buses of the same ETH board. 
+    The IMU chip so far is the IMU Bosch BNO055, mounted on the CAN boards mtb4, mtb4c, strain2, strain2c and rfe. 
+    It exposes: acceleration, gyroscope, magnetometer, euler angle and the status of the chip.  
+    
+    More details on later tables.
+    
+  -->
 
 
-    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjIMU. -->
+    <!-- 
+        This device name must be the same as specified in the wrapper xml file. 
+        The IMU requires a device of type embObjIMU.
+      -->
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX-imu" type="embObjIMU">
     
-        <!-- Include the file which specifies global configuration -->
+        <!-- 
+            Include the file which specifies global configuration 
+          -->
         <xi:include href="../../general.xml"/>
 
-        <!-- Include the file which specifies which ETH board hosts the service -->
+        <!-- 
+            Include the file which specifies which ETH board hosts the service. The CAN boards used by the service
+            must be attached to this ETH board.
+          -->
         <xi:include href="../../hardware/electronics/filenameOfETHboard-eln.xml" /> 
     
-        <!-- This group defines the service -->
+        <!-- 
+            This group defines the service 
+          -->
         <group name="SERVICE">
             
-            <!-- The type of service expressed as stringised values of eOmn_serv_type_t. For IMU it must be eomn_serv_AS_inertial3 -->
+            <!-- The type of service is expressed as stringised values of eOmn_serv_type_t. 
+                 For embObjIMU it must be eomn_serv_AS_inertial3.
+              -->
             <param name="type"> eomn_serv_AS_inertial3 </param>
         
-            <!-- This group defines the properties of the service -->
-            <group name="PROPERTIES">
-  
-                <!-- This group defines the properties of the CAN boards -->
+
+                <!-- 
+                    The CANBOARDS group defines the properties of the CAN boards used by the service
+                  -->
                 <group name="CANBOARDS">
                 
-                    <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
-                         so far it can be only strain2
+                    <!-- 
+                        The type param tells the type of the CAN boards expressed as stringised 
+                        values of eObrd_type_t also in short version without prefix eobrd_ 
+                        They can be: strain2, strain2c, mtb4, mtb4c, rfe, mtb.
+                        All the boards of the same type must have the same protocol and firmware version
                       -->
-                    <param name="type">                 eobrd_strain2         </param>
+                    <param name="type">         strain2     mtb4        rfe     </param>
 
-                    <!-- This param tells the protocol version required to run the service. Values are in range [0, 255] 
-                         if (0, 0) no check is done, otherwise there must be a CAN board with detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor -->
+                    <!-- 
+                        The PROTOCOL group tells the protocol version required to run the service. Values are 
+                        in range [0, 255]. 
+                        If (0, 0) no check is done, otherwise there must be a CAN board with 
+                        detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor 
+                     -->
                     <group name="PROTOCOL">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param>     
+                        <param name="major">    0           0           0       </param>    
+                        <param name="minor">    0           0           0       </param>     
                     </group> 
                     
-                    <!-- This param tells the firmware version required to run the service. Values are in range [0, 255] 
-                         if (0, 0, 0) no check is done, otherwise there must be a CAN board with detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor -->
+                    <!-- 
+                        The FIRMWARE group tells the firmware version required to run the service. Values are 
+                        in range [0, 255]. 
+                        If (0, 0, 0) no check is done, otherwise there must be a CAN board with 
+                        detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor 
+                      -->
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param> 
-                        <param name="build">            0                   </param>
+                        <param name="major">    0           0           0       </param>    
+                        <param name="minor">    0           0           0       </param> 
+                        <param name="build">    0           0           0       </param>
                     </group>
                     
                 </group>                
                 
-                <!-- This group defines the available sensors. The availbles sensors are:
-                    eoas_imu_acc (accellerometer [m/s^2])  eoas_imu_gyr (gyroscope [degree/second]) eoas_imu_eul (euleros angle[degree]) eoas_imu_mag (magnetometer[tesla])   eoas_imu_status(status of all sensors)  -->
+                <!--
+                    The group SENSORS contains the descriptors of the possible sources of inertial data.
+
+                     In here a brief explanation of the properties of the descriptors.
+                     - id:          is a string identifier for the descriptor. It must be unique inside this xml file.
+                     - sensorName:  is a string with the name of the sensor we want to be published by the relevant 
+                                    interface. As an example, is sensor is of type eoas_imu_gyr the interface is 
+                                    getThreeAxisGyroscopeName(). If the sensorName parameter is not present the parser 
+                                    will get a default sensor name from the above id parameter.                                    
+                     - type:        is a string with the type of inertial data retrieved from the IMU. See table below 
+                                    for possible values.
+                     - boardType:   is a string with the type of CAN board which holds the IMU chip. See table below 
+                                    for possible values.
+                     - location:    is a string with the CAN location of the board in a format such as CAN1:1
+                                    
+                    This group can contained as many descriptors as we want, as long as we activate no more than 32 
+                    of them inside SETTINGS::enabledSensors.
+                    
+
+
+                    | SENSORS::type  | Measure                              | Units      |
+                    | -------------- | ------------------------------------ | ---------- |
+                    | eoas_imu_acc   | accelerometer inside the IMU         | [m/s^2]    |
+                    | eoas_imu_gyr   | gyroscope inside the IMU             | [degree/s] |
+                    | eoas_imu_mag   | magnetometer inside the IMU          | [tesla]    |
+                    | eoas_imu_eul   | euler angle                          |            |
+                    | eoas_imu_state | status of all sensors inside the IMU |            |
+
+                    Table of allowed values for SENSORS::type
+
+
+                    | SENSORS::boardType | Mounted IMU chip | 
+                    | ------------------ | ---------------- | 
+                    | mtb4               | IMU Bosch BNO055 | 
+                    | strain2            | IMU Bosch BNO055 |
+                    | rfe                | IMU Bosch BNO055 | 
+                    | strain2c           | IMU Bosch BNO055 |
+                    | mtb4c              | IMU Bosch BNO055 | 
+
+                    Table of allowed values for SENSORS::boardType
+                     
+                  -->
+                     
                 <group name="SENSORS">
-                    <!-- This param is the id of the sensor. its name should be defined in production -->
-                    <param name="id">       acc1          gyr1          eul1          mag1           st1             </param>
-                    <!-- This param is the type of the sensor. -->
-                    <param name="type">     eoas_imu_acc  eoas_imu_gyr  eoas_imu_eul  eoas_imu_mag   eoas_imu_status </param>
-                    <!-- This param is the type of the board where the sensor is mounted. -->
-                    <param name="boardType"> strain2       strain2      strain2       strain2        strain2         </param>
-                     <!-- This param is the address of the sensor. Its uses the format CANx:addr  -->
-                    <param name="location">  CAN2:13       CAN2:13      CAN2:13       CAN2:13        CAN2:13         </param>
+                    
+                    <!--    
+                        In here we have 9 descriptors for acceleration, gyroscope and status 
+                        which we didactically allocated on three different IMU chips.
+                        The first IMU is on a strain2 board at CAN2:13, the second on an mtb4 at CAN1:3 
+                        and the third on a mtb4 board at CAN1:4. Note that all three CAN boards must stay attached 
+                        to the ETH board described above in filenameOfETHboard-eln.xml
+                        The published names for the sensors will be l_upper_arm_imu_0, l_forearm_imu_0 and l_hand_imu_0
+                            
+                      -->
+
+                    <param name="id">           IDacc1                  IDgyr1              IDstatus1           
+                                                IDacc2                  IDgyr2              IDstatus2 
+                                                IDacc3                  IDgyr3              IDstatus3                                                
+                    </param>
+
+                    <param name="sensorName">   l_upper_arm_imu_0       l_upper_arm_imu_0   l_upper_arm_imu_0         
+                                                l_forearm_imu_0         l_forearm_imu_0     l_forearm_imu_0
+                                                l_hand_imu_0            l_hand_imu_0        l_hand_imu_0            
+                    </param>
+                    
+                    <param name="type">         eoas_imu_acc            eoas_imu_gyr        eoas_imu_status  
+                                                eoas_imu_acc            eoas_imu_gyr        eoas_imu_status
+                                                eoas_imu_acc            eoas_imu_gyr        eoas_imu_status                                                
+                    </param>
+
+                    <param name="boardType">    strain2                 strain2             strain2             
+                                                mtb4                    mtb4                mtb4
+                                                mtb4                    mtb4                mtb4
+                    </param>
+
+                    <param name="location">     CAN2:13                 CAN2:13             CAN2:13             
+                                                CAN1:3                  CAN1:3              CAN1:3
+                                                CAN1:4                  CAN1:4              CAN1:4
+                    </param>
                 </group>
                                             
             </group>
-             <!-- The acquisition rate of all the sensor in ms. values are in range [1, 255]. Use 50 -->
+            
+            <!-- 
+                This group contains the activation of the service.
+-               - acquisitionRate:  is the acquisition period for all the sensors expressed in ms. 
+                                    Values are in range [1, 255].  
+                - enabledSensors:   is the list of all the SENSORS::id which we want to enable. 
+                                    There can be at most 32 string values inside and they must match an existing 
+                                    SENSORS::id                                      
+              -->
             <group name="SETTINGS"> 
-                <param name="acquisitionRate">      50      </param>
-                <!-- The list of the enabled sensors ... there is always one and is the value of PROPERTIES.PROPERTIES.SENSORS.id -->
-                <param name="enabledSensors">   acc1 gyr1  eul1 mag1 st1   </param>                
+                <!--
+                    In here we have values of acceleration and the IMU status from the strain2 at CAN2:13 and from 
+                    the mtb4 at CAN1:3 refreshed with a period of 50 ms. 
+                    The method getNrOfThreeAxisLinearAccelerometers() will return 2. 
+                    The method getThreeAxisLinearAccelerometerName(0, name) will retrieve name = "l_upper_arm_imu_0" 
+                    and getThreeAxisLinearAccelerometerName(1, name) will retrieve name = "l_forearm_imu_0".
+                  -->
+                <param name="acquisitionRate">  50  </param>
+                <param name="enabledSensors">   IDacc1  IDstatus1 IDacc2 IDstatus2 </param>                
             </group>
             
         </group>        
         
     </device>
-    
-
-
