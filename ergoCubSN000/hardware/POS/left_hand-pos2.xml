@@ -12,7 +12,7 @@
         <group name="PROPERTIES">
 
             <group name="CANBOARDS">
-                <param name="type">                 eobrd_mtb4fap           </param>
+                <param name="type">                 eobrd_mtb4fap            </param>
 
                 <group name="PROTOCOL">
                     <param name="major">            2                       </param>    
@@ -42,7 +42,7 @@
                     <param name="type">             TYPE:decideg     TYPE:decideg          </param>
                     <param name="rotation">         ROT:zero         ROT:zero              </param>
                     <param name="offset">           -230.0           -325.0                </param>
-                    <param name="invertDirection">  true             true                  </param>
+                    <param name="invertDirection">  true            true                  </param>
                 </group>
 
             </group>

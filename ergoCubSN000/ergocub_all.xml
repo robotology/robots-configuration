@@ -9,6 +9,18 @@
 
     <devices>
 
+    <!-- POS4 -->
+    <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" /> 
+    <xi:include href="hardware/POS/right_hand-pos4.xml" />
+    <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" /> 
+    <xi:include href="hardware/POS/left_hand-pos4.xml" />
+
+    <!-- POS2 -->
+    <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" /> 
+    <xi:include href="hardware/POS/right_hand-pos2.xml" />
+    <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" /> 
+    <xi:include href="hardware/POS/left_hand-pos2.xml" />
+
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
@@ -21,11 +33,9 @@
     <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
 
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
-
     <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
 
     <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
-
     <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
     
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
@@ -43,12 +53,14 @@
     <xi:include href="hardware/motorControl/left_arm-eb4-j2_3-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb31-j4_6-mc.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb25-j11_12-mc.xml" />
 
     <!-- RIGHT ARM -->
     <xi:include href="hardware/motorControl/right_arm-eb1-j0_1-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb3-j2_3-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb30-j4_6-mc.xml" />
     <xi:include href="hardware/motorControl/right_arm-eb22-j7_10-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb24-j11_12-mc.xml" />
 
     <!-- LEFT LEG -->
     <xi:include href="hardware/motorControl/left_leg-eb8-j0_3-mc.xml" />
@@ -72,6 +84,11 @@
    <xi:include href="hardware/FT/left_leg-eb9-j4_5-strain.xml" />
    <xi:include href="hardware/FT/right_leg-eb7-j4_5-strain.xml" />
 
+    <!-- INERTIAL SENSOR -->
+    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />

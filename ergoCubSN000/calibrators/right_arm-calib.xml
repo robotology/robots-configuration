@@ -23,13 +23,14 @@
 		<param name="calibration5">           0           0           0          0           0       0       0      0       0       0       0       0       0      </param>
 		<param name="calibrationZero">        0           0           0          0           0       0       0      0       0       0       0       0       0      </param>
 		<param name="calibrationDelta">       0           0           0          0           0       0       0      0       0       0       0       0       0      </param>
-		<param name="startupPosition">        -35        30           0         45         0.0     0.0     0.0      20.0    20.0    20.0    20.0    20.0    20.0   </param>
-		<param name="startupVelocity">        10.0       10.0         10.0      10.0       10.0    10.0    10.0     40.0    40.0    40.0    40.0    40.0    40.0   </param>
-		<param name="startupMaxPwm">          4000       4000         2000      2000       16000   16000   16000    0       0       0       0       3360    3360   </param>
-		<param name="startupPosThreshold">    2          2            2          2         2       2       2        20      20      20      20      20      20     </param>
+		<param name="startupPosition">        -35        30           0         45         0.0     0.0     0.0      0.0     0.0     0.0     0.0     0.0     0      </param>
+		<param name="startupVelocity">        10.0       10.0         10.0      10.0       10.0    10.0    10.0     40.0    40.0    40.0    40.0    40.0    40.0    </param>
+		<param name="startupMaxPwm">          4000       4000         2000      2000       16000   16000   16000    0       0       0       0       0       0      </param>
+		<param name="startupPosThreshold">    2          2            2          2         2       2       2        0       0       0       0       0       0      </param>
 	</group>
 
-	<param name="CALIB_ORDER">  (1) (0) (2) (3) (4 5 6) (7 8 9 10) (11 12)</param> 
+	<param name="CALIB_ORDER">  (1) (0) (2) (3) (4 5 6) (7 8 9 10) (11 12) </param> 
+
 	<action phase="startup" level="10" type="calibrate">
 		<param name="target">right_arm-mc_remapper</param>
 	</action>

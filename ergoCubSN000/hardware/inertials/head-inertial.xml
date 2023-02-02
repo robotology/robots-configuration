@@ -23,9 +23,9 @@
                         <param name="minor">            0                   </param>
                     </group>
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>
-                        <param name="minor">            0                   </param>
-                        <param name="build">            0                   </param>
+                        <param name="major">            1                   </param>
+                        <param name="minor">            2                   </param>
+                        <param name="build">            3                   </param>
                     </group>
                 </group>
 
@@ -43,7 +43,7 @@
             </group>
 
             <group name="SETTINGS">
-                <param name="acquisitionRate">      10      </param>
+                <param name="acquisitionRate">      20      </param>
                 <param name="enabledSensors">       rfeimu_acc  rfeimu_gyro  rfeimu_mag  rfeimu_eul  rfeimu_status </param>
             </group>
 
