@@ -20,9 +20,8 @@
 <group name="CALIBRATION">                                                                         
 <!--                                                roll                    pitch                  yaw                          -->
 <param name="calibrationType">                      12                      12                     12                      </param>
-                                                                                                                                    <!--
-<param name="calibration1">	                        58233                   8433                   35531                   </param> --> 
-<param name="calibration1">	                        38354                   1234                   6551                    </param>
+
+<param name="calibration1">	                        38354                   67734                  6013                    </param>
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
                                                                                                    
