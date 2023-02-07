@@ -15,9 +15,9 @@
         <param name="jntPosMax">                36000                   </param>
         <param name="jntPosMin">               -36000                   </param>
         <param name="jntVelMax">                18000               </param>
-        <param name="motorNominalCurrents">     5100                </param>
-        <param name="motorPeakCurrents">        10000               </param>
-        <param name="motorOverloadCurrents">    15000               </param>
+        <param name="motorNominalCurrents">     20000               </param>
+        <param name="motorPeakCurrents">        20000               </param>
+        <param name="motorOverloadCurrents">    20000               </param>
         <param name="motorPwmLimit">            32000               </param>
     </group>
 
@@ -69,7 +69,7 @@
         <param name="kp">              0    </param>
         <param name="kd">              0    </param>
         <param name="ki">              0    </param>
-        <param name="maxOutput">     5000    </param>
+        <param name="maxOutput">     2500    </param>
         <param name="maxInt">        1000    </param>
         <param name="ko">              0    </param>
         <param name="stictionUp">      0    </param>
