@@ -4,12 +4,12 @@
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN000" build="1">
     <group name="GENERAL">
         <param name="MotioncontrolVersion"> 6 </param>
-        <param name="Joints"> 2 </param> 
-        
+        <param name="Joints"> 2 </param>
+
         <!-- joint number in sub-part       0                         1                        -->
-        <!-- joint name                                                                        -->         
+        <!-- joint name                                                                        -->
         <param name="AxisMap">              0                         1                        </param>
-        <param name="AxisName">             "r_hand_thumbmetacarpus"  "r_hand_indexadduction"  </param>
+        <param name="AxisName">             "r_thumb_add"  "r_index_add"  </param>
         <param name="AxisType">             "revolute"                "revolute"               </param>
         <param name="Encoder">              182.044                   182.044                  </param>
         <param name="fullscalePWM">         3360                      3360                     </param>
@@ -18,7 +18,7 @@
         <param name="Gearbox_E2J">          1                         1                        </param>
         <param name="useMotorSpeedFbk">     0                         0                        </param>
         <param name="MotorType">            "DC"                      "DC"                     </param>
-                
+
         <param name="Verbose"> 0 </param>
     </group>
 
@@ -28,46 +28,46 @@
         <param name="rotorPosMin">          0               0       </param>
         <param name="rotorPosMax">          0               0       </param>
     </group>
-    
-    <group name="COUPLINGS"> 
 
-        <param name ="matrixJ2M"> 
+    <group name="COUPLINGS">
+
+        <param name ="matrixJ2M">
             1.000   0.000   0.000   0.000
             0.000   1.000   0.000   0.000
             0.000   0.000   1.000   0.000
-            0.000   0.000   0.000   1.000   
+            0.000   0.000   0.000   1.000
         </param>
-               
-        <param name ="matrixM2J"> 
+
+        <param name ="matrixM2J">
             1.000   0.000   0.000   0.000
             0.000   1.000   0.000   0.000
             0.000   0.000   1.000   0.000
-            0.000   0.000   0.000   1.000   
+            0.000   0.000   0.000   1.000
         </param>
-       
-        <param name ="matrixE2J">  
+
+        <param name ="matrixE2J">
             1.000   0.000   0.000   0.000   0.000   0.000
             0.000   1.000   0.000   0.000   0.000   0.000
             0.000   0.000   1.000   0.000   0.000   0.000
-            0.000   0.000   0.000   1.000   0.000   0.000 
+            0.000   0.000   0.000   1.000   0.000   0.000
         </param>
-                
-    </group>   
 
-    <group name="JOINTSET_CFG"> 
+    </group>
+
+    <group name="JOINTSET_CFG">
         <param name= "numberofsets"> 2 </param>
         <group name="JOINTSET_0">
             <param name="listofjoints">  0             </param>
             <param name="constraint">    none          </param>
             <param name="param1">        0             </param>
             <param name="param2">        0             </param>
-        </group> 
+        </group>
         <group name="JOINTSET_1">
             <param name="listofjoints">  1             </param>
             <param name="constraint">    none          </param>
             <param name="param1">        0             </param>
             <param name="param2">        0             </param>
         </group>
-    </group>                                       
-    
+    </group>
+
 </params>
