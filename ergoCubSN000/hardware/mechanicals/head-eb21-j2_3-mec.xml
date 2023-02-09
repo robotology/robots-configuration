@@ -9,7 +9,7 @@
         <!-- joint number in sub-part           0             1               -->
         <!-- joint name                         neck-yaw       camera-tilt   -->
         <param name="AxisMap">                  0              1              </param>
-        <param name="AxisName">                "neck_yaw"      "cam_tilt"  </param>
+        <param name="AxisName">                "neck_yaw"      "camera_tilt"  </param>
         <param name="AxisType">                "revolute"      "revolute"       </param>
         <param name="Encoder">                  182.044        182.044        </param>
         <param name="fullscalePWM">           3360             3360            </param>
