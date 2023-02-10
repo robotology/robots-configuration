@@ -78,7 +78,6 @@
     <!-- <xi:include href="hardware/FT/left_leg-eb8-j0_3-strain.xml" /> -->
     <!-- <xi:include href="hardware/FT/right_leg-eb6-j0_3-strain.xml" /> -->
 
-
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
@@ -86,7 +85,6 @@
     <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
     <!-- <xi:include href="wrappers/FT/left_leg-FT_wrapper_multipleSens.xml" /> -->
     <!-- <xi:include href="wrappers/FT/right_leg-FT_wrapper_multipleSens.xml" /> -->
-
 
     <!-- INERTIAL SENSOR -->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
@@ -113,5 +111,9 @@
     <xi:include href="calibrators/left_arm-calib.xml" />
     <xi:include href="calibrators/right_arm-calib.xml" />
     <xi:include href="calibrators/head-calib.xml" />
+
+    <!-- estimators -->
+    <xi:include href="estimators/wholebodydynamics.xml" />
+    
   </devices>
 </robot>
