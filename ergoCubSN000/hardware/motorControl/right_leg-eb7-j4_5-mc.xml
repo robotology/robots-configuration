@@ -47,7 +47,7 @@
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>
         <param name="kff">                            0                   0        </param>
-        <param name="kp">                             5000                2310      </param>
+        <param name="kp">                             5000                3000      </param>
         <param name="kd">                             0                   0        </param>
         <param name="ki">                             1000                1000       </param>
         <param name="maxOutput">                     12000               12000         </param>

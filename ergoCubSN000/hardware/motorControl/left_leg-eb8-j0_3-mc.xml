@@ -48,9 +48,9 @@
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>
         <param name="kff">                      0                   0           0        0       </param>
-        <param name="kp">                       -3000               7000        -711     -5000      </param>
+        <param name="kp">                       -5000               7000        -3000     -5000      </param>
         <param name="kd">                       0                   0           0        0       </param>
-        <param name="ki">                       -1500               5000        -7111    -1500       </param>
+        <param name="ki">                       -1500               5000        -200    -1500       </param>
         <param name="maxOutput">               12000               12000       12000    12000       </param>
         <param name="maxInt">                   1500                5000        750      2000      </param>
         <param name="stictionUp">               0                   0           0        0       </param>
