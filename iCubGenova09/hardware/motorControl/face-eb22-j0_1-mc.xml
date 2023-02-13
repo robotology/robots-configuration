@@ -13,7 +13,7 @@
     <!-- joint name                             jaw                 eyelids             -->          
     <group name="LIMITS">
         <param name="jntPosMax">                22                  65                  </param>
-        <param name="jntPosMin">                0                   -5                  </param> 
+        <param name="jntPosMin">                0                   0                  </param> 
         <param name="jntVelMax">                1000                1000                </param>
         <param name="motorNominalCurrents">     700                 700                 </param>
         <param name="motorPeakCurrents">        1000                1000                </param>

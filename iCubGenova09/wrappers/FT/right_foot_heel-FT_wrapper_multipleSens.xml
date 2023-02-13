@@ -3,7 +3,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_foot_heel-FT_wrapper" type="multipleanalogsensorsserver">
-        <param name="period">      10                          </param>
+        <param name="period">      2                          </param>
         <param name="name">       /icub/right_foot_heel     </param>
         
         <action phase="startup" level="5" type="attach">

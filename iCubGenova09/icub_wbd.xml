@@ -120,6 +120,11 @@
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
 
+    <!-- ANALOG SENSOR CANBATTERY -->
+    <xi:include href="wrappers/battery/canBattery.xml" />
+    <xi:include href="hardware/battery/canBattery.xml" />    
+
+
     <!--  CALIBRATORS -->
 
     <xi:include href="calibrators/head-calib.xml" />

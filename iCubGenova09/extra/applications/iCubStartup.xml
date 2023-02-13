@@ -12,6 +12,7 @@
 
         <module>
                 <name>yarprobotinterface</name>
+                <environment>YARP_LOG_PROCESS_LABEL=robotinterface</environment>
                 <node>icub-head</node>
         </module>
 

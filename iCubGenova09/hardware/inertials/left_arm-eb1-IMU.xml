@@ -38,7 +38,7 @@
             </group>
 
             <group name="SETTINGS">
-                <param name="acquisitionRate">      50      </param>
+                <param name="acquisitionRate">      10      </param>
                 <param name="enabledSensors">       l_arm_ft_acc    l_arm_ft_gyro    l_arm_ft_eul    l_arm_ft_mag    l_arm_ft_stat </param>
             </group>
         </group>
