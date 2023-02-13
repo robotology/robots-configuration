@@ -38,7 +38,7 @@
             </group>
 
             <group name="SETTINGS">
-                <param name="acquisitionRate">      50      </param>
+                <param name="acquisitionRate">      10       </param>
                 <param name="enabledSensors">       r_foot_rear_ft_acc    r_foot_rear_ft_gyro    r_foot_rear_ft_eul    r_foot_rear_ft_mag    r_foot_rear_ft_stat r_foot_front_ft_acc    r_foot_front_ft_gyro    r_foot_front_ft_eul    r_foot_front_ft_mag    r_foot_front_ft_stat</param>
             </group>
         </group>
