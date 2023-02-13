@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<portscope rows="2" columns="2" carrier="mcast">
+    <plot gridx="0"
+          gridy="0"
+          hspan="1"
+	  vspan="1"
+          minval="0"
+	  maxval="90"
+          title="Joint position Plot (Deg)"
+          bgcolor="LightSlateGrey">
+      <graph remote="/ergocub/left_arm/stateExt:o/split0:o"
+            index="1"
+            color="Red"
+            title="Joint position l_index_oc"
+            type="lines"
+            size="3" />
+      <graph remote="/ergocub/left_arm/stateExt:o/split0:o"
+            index="2"
+            color="Blue"
+            title="Joint position l_middle_oc"
+            type="lines"
+            size="3" />
+    </plot>
+    <plot gridx="1"
+          gridy="0"
+          hspan="1"
+          vspan="1"
+          title="PWM Duty Cycle"
+          minval="-100"
+          maxval="100"
+          bgcolor="LightSlateGrey">
+      <graph remote="/ergocub/left_arm/stateExt:o/split14:o"
+            index="1"
+            color="Red"
+            title="Torque at l_index_oc"
+            type="lines"
+            size="3"	/>
+      <graph remote="/ergocub/left_arm/stateExt:o/split14:o"
+            index="2"
+            color="Blue"
+            title="Torque at l_middle_oc"
+            type="lines"
+            size="3"	/>
+    </plot>
+    <plot gridx="0"
+          gridy="1"
+          hspan="1"
+          vspan="1"
+          title="Current Plot"
+          minval="-3"
+          maxval="3"
+          bgcolor="LightSlateGrey">
+    <graph remote="/ergocub/left_arm/stateExt:o/split16:o"
+            index="1"
+            color="Red"
+            title="Current for l_index_oc"
+            type="lines"
+            size="3"/>
+      <graph remote="/ergocub/left_arm/stateExt:o/split16:o"
+            index="2"
+            color="Blue"
+            title="Current for l_middle_oc"
+            type="lines"
+            size="3"/>
+    </plot>
+    <plot gridx="1"
+          gridy="1"
+          hspan="1"
+          vspan="1"
+          title="Motor Position Plot"
+          minval="-20000"
+          maxval="1000"
+          bgcolor="LightSlateGrey">
+      <graph remote="/ergocub/left_arm/stateExt:o/split6:o"
+            index="1"
+            color="Red"
+            title="Rotor position for l_index_oc"
+            type="lines"
+            size="3"/>
+      <graph remote="/ergocub/left_arm/stateExt:o/split6:o"
+            index="2"
+            color="Blue"
+            title="Rotor position for l_middle_oc"
+            type="lines"
+            size="3"/>
+    </plot>
+</portscope>

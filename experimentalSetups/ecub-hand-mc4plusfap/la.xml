@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ergoCubSN000" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <params>
+    <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+
+    <devices>
+
+    <!-- POS4 -->
+    <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" /> 
+    <xi:include href="hardware/POS/left_hand-pos4.xml" />
+    
+    <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
+
+    <!-- LEFT ARM -->
+    <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" /> -->
+
+
+    <!--CALIBRATORS -->
+    <xi:include href="calibrators/left_arm-calib.xml" /> 
+
+  </devices>
+</robot>

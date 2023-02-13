@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN000" build="1">
+
+    <group name="SERVICE">
+
+        <param name="type"> eomn_serv_MC_mc4plusfaps </param>
+
+        <group name="PROPERTIES">
+
+            <group name="ETHBOARD">
+                <param name="type">                 mc4plus             </param>
+            </group>
+
+            <group name="CANBOARDS">
+                <param name="type">                 mtb4fap             </param>
+                <group name="PROTOCOL">
+                    <param name="major">            2                   </param>
+                    <param name="minor">            0                   </param>
+                </group>
+                <group name="FIRMWARE">
+                    <param name="major">            1                   </param>
+                    <param name="minor">            1                   </param>
+                    <param name="build">            0                   </param>
+                </group>
+            </group>
+
+            <group name="POS">
+                <param name="location">             CAN1:2      </param>
+
+                <group name="SENSORS">
+
+                    <!-- common to all analog services -->
+                    <param name="id">               id_fapAA              id_fapBB            id_fapCC                    </param>
+                    <param name="type">             eoas_pos_angle        eoas_pos_angle      eoas_pos_angle              </param>
+                    <param name="port">             POS:hand_thumb_oc     POS:hand_index_oc   POS:hand_middle_oc          </param> <!-- According to convention, the full order is: POS:hand_thumb_oc POS:hand_index_oc POS:hand_middle_oc POS:hand_ring_pinky_oc -->
+
+                    <param name="boardType">        mtb4fap               mtb4fap             mtb4fap                     </param>
+                    <param name="connector">        CONN:J3_SDA3          CONN:J3_SDA1        CONN:J3_SDA2                </param> <!-- J2 does not work because of sw bug even if it is compliant with the ser2graphy, keep J3-->
+
+                    <group name="CALIBRATION">
+                        <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
+                        <param name="type">             TYPE:decideg     TYPE:decideg         TYPE:decideg                </param>
+                        <param name="rotation">         ROT:zero         ROT:zero             ROT:plus180                 </param>
+                        <param name="offset">           0               -166.2                -124.7                      </param>
+                        <param name="invertDirection">  false            false                false                       </param> <!-- to let the joint encoder know how to move based on the input given on the UI (if false close if degree increase)-->
+                    </group>
+                </group>
+                
+                <group name="SETTINGS">
+                    <param name="acquisitionRate"> 50 </param>                    <!-- milliseconds -->
+                    <param name="enabledSensors"> id_fapAA id_fapBB id_fapCC </param>
+                </group>
+            </group>
+
+
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">
+                    <param name="type">             pwm                       pwm                   pwm                   </param>
+                    <param name="port">             CONN:P3                   CONN:P2               CONN:P5               </param>
+                </group>
+
+                <group name="ENCODER1">
+                    <param name="type">             pos                       pos                   pos                   </param>
+                    <param name="port">             POS:hand_thumb_oc         POS:hand_index_oc     POS:hand_middle_oc    </param>  <!-- According to convention, the full order is: POS:hand_thumb_oc POS:hand_index_oc POS:hand_middle_oc POS:hand_ring_pinky_oc -->
+                    <param name="position">         atjoint                   atjoint               atjoint               </param>
+                    <param name="resolution">       65535                     65535                 65535                 </param>
+                    <param name="tolerance">        5                         5                     5                     </param>
+                </group>
+
+                <group name="ENCODER2">
+                    <param name="type">             qenc                     qenc                   qenc                  </param>
+                    <param name="port">             CONN:P3                  CONN:P2                CONN:P5               </param>
+                    <param name="position">         atmotor                  atmotor                atmotor               </param>
+                    <param name="resolution">       1600                     1600                   1600                  </param>
+                    <param name="tolerance">        0                        0                      0                     </param>
+                </group>
+            </group>
+
+        </group>
+
+    </group>
+
+
+</params>
+
