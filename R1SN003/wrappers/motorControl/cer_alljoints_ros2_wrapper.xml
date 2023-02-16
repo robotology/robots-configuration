@@ -3,7 +3,7 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cbw_ros2" type="controlBoard_nws_ros2">
     <param name="node_name"> ros2_cb_node </param>
-    <param extern-name="cbw_ros2_msgs_name" name="msgs_name"> "" </param>
+    <param extern-name="cbw_ros2_msgs_name" name="msgs_name"> ros2_cb_msgs </param>
     <param name="topic_name"> /joint_states </param>
     <action phase="startup" level="10" type="attach">
         <param name="device"> cer_all_joints_mc_remapper </param>
