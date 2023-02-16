@@ -117,18 +117,18 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">            -0.0        0.0      -0.0      -0.0       </param>
+        <param name="kp">            -100        150      -0.0      -350       </param>
         <param name="kd">             0          0         0         0         </param>
-        <param name="ki">            -0          0        -0        -0         </param>
+        <param name="ki">            -10         25        -0       -100       </param>
         <param name="maxOutput">      2500       2500      2500      2500      </param>
         <param name="maxInt">         200        200       200       200       </param>
         <param name="ko">             0          0         0         0         </param>
         <param name="stictionUp">     0          0         0         0         </param>
         <param name="stictionDown">   0          0         0         0         </param>
         <param name="kff">            1          1         1         1         </param>
-        <param name="kbemf">         -0.0        0.0      -0.0      -0.0       </param>
+        <param name="kbemf">         -0.0001     0.0001   -0.0005   -0.0003    </param>
         <param name="filterType">     0          0         0         0         </param>
-        <param name="ktau">          -50         50       -50       -50        </param>
+        <param name="ktau">          -40         50       -150      -110       </param>
     </group>
 
     <!-- custom PIDs: end -->
