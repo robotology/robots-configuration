@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="ipit_mc_wrapper" type="controlboardwrapper2">
+    <paramlist name="networks">
+        <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
+        <elem name="lm1">   (  0  3  0  3 )</elem>
+		 <elem name="lm2">  (  4  7  0  3 )</elem>
+		  <elem name="sm3"> (  8 11  0  3 )</elem>
+        <!-- the 4 numbers are: joint-start-user, jonit-end-user, joint-startboard, joint-end-board -->
+    </paramlist>
+    <param name="period"> 10                              </param>
+    <param name="name">   /ipit/ipit-joint          </param>
+    <param name="joints"> 12                               </param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <!-- The param value must match the device name in the corresponding emsX file -->
+            <elem name="lm1">  lm1_mc </elem>
+			<elem name="lm2">  lm2_mc </elem>
+			<elem name="sm">   sm_mc </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="5" type="detach" />
+</device>
