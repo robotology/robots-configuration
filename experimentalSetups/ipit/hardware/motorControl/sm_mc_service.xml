@@ -26,14 +26,14 @@
                 <group name="ENCODER1">  
                     <param name="type">             absanalog            none                none             none         </param>  
                     <param name="port">             CONN:P4              CONN:none           CONN:none        CONN:none    </param>
-                    <param name="position">         atjoint              atmotor             none             none         </param>
+                    <param name="position">         atjoint              none                none             none         </param>
                     <param name="resolution">       65535                0                   0                0            </param> 
                     <param name="tolerance">            0                0.0                 0.0              0.0          </param>  
 
                 </group>        
                 
                 <group name="ENCODER2">
-                    <param name="type">             none                qenc                qenc            qenc          </param>
+                    <param name="type">             none                none                qenc            qenc          </param>
                     <param name="port">             CONN:none           CONN:none           CONN:P3         CONN:P2       </param>
                     <param name="position">         none                none                atmotor         atmotor       </param>
                     <param name="resolution">       0                   0                   400             400           </param> <!-- PA2-100 100x4 (4x interpolation) -->
