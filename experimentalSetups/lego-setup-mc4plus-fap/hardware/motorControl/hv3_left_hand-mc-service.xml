@@ -4,47 +4,47 @@
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="new_forearm" build="1">
 
     <group name="SERVICE">
-        
-        <param name="type"> eomn_serv_MC_mc4plusfaps </param> 
-    
-        <group name="PROPERTIES">
-        
-            <group name="ETHBOARD">
-                <param name="type">                 mc4plus             </param> 
-            </group>          
 
-            <group name="CANBOARDS"> 
-                <param name="type">                 pmc                 </param> 
-                <group name="PROTOCOL">                    
-                    <param name="major">            2                   </param>    
-                    <param name="minor">            0                   </param>     
-                </group>                                   
-                <group name="FIRMWARE">                    
+        <param name="type"> eomn_serv_MC_mc4plusfaps </param>
+
+        <group name="PROPERTIES">
+
+            <group name="ETHBOARD">
+                <param name="type">                 mc4plus             </param>
+            </group>
+
+            <group name="CANBOARDS">
+                <param name="type">                 pmc                 </param>
+                <group name="PROTOCOL">
+                    <param name="major">            2                   </param>
+                    <param name="minor">            0                   </param>
+                </group>
+                <group name="FIRMWARE">
                     <param name="major">            10                  </param>
                     <param name="minor">            0                   </param>
                     <param name="build">            0                   </param>
                 </group>
             </group>
-            
-            <group name="POS"> 
+
+            <group name="POS">
                 <param name="location">             CAN1:1  </param>
 
                 <group name="SENSORS">
-                    
+
                     <!-- common to all analog services -->
                     <param name="id">                   id_fapAA        id_fapBB        id_fapCC                 id_fapDD                 </param>
                     <param name="type">                 eoas_pos_angle  eoas_pos_angle  eoas_pos_angle           eoas_pos_angle           </param>
-                    <param name="port">                 POS:hand_thumb  POS:hand_index  POS:hand_thumbmetacarpus POS:hand_indexadduction  </param>
-     <!--                               
+                    <param name="port">                 POS:hand_thumb_oc  POS:hand_index_oc  POS:hand_thumb_add POS:hand_index_add  </param>
+     <!--
                     <param name="boardType">            mtb4fap         mtb4fap         mtb4fap         mtb4fap         </param>
                     <param name="connector">            CONN:J3_SDA0    CONN:J3_SDA1    CONN:J3_SDA2    CONN:J3_SDA3    </param>
-      -->         
+      -->
                     <param name="boardType">            pmc             pmc             pmc             pmc             </param>
                     <param name="connector">            CONN:J6         CONN:J7         CONN:J4         CONN:J5         </param>
-                
+
                     <group name="CALIBRATION">
-                    <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false 
-                    -->   
+                    <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false
+                    -->
                         <param name="type">             TYPE:decideg    TYPE:decideg     TYPE:decideg    TYPE:decideg    </param>
                         <param name="rotation">         ROT:zero        ROT:zero         ROT:zero        ROT:zero        </param>
                         <param name="offset">           0.0             0.0              0.0             0.0             </param>
@@ -52,41 +52,41 @@
                     </group>
                 </group>
 
-                <group name="SETTINGS">        
+                <group name="SETTINGS">
                     <param name="acquisitionRate"> 50 </param>
                     <param name="enabledSensors"> id_fapAA id_fapBB </param>
                 </group>
             </group>
-            
+
 
             <group name="JOINTMAPPING">
 
-                <group name="ACTUATOR">                 
+                <group name="ACTUATOR">
                     <param name="type">             pwm                 pwm                       </param>
                     <param name="port">             CONN:P4             CONN:P5                   </param>
                 </group>
-                
+
                 <group name="ENCODER1">
                     <param name="type">             pos                 pos                       </param>
-                    <param name="port">             POS:hand_thumb      POS:hand_index            </param>
+                    <param name="port">             POS:hand_thumb_oc      POS:hand_index_oc            </param>
                     <param name="position">         atjoint             atjoint                   </param>
                     <param name="resolution">       65535               65535                     </param>
                     <param name="tolerance">        5                   5                         </param>
-                </group>        
-                
+                </group>
+
                 <group name="ENCODER2">
                     <param name="type">             none                none                      </param>
                     <param name="port">             CONN:P4             CONN:P5                   </param>
                     <param name="position">         atmotor             atmotor                   </param>
                     <param name="resolution">       -1600               1600                      </param>
                     <param name="tolerance">        0                   0                         </param>
-                </group>  
+                </group>
             </group>
-           
+
         </group>
-           
+
     </group>
-    
-  
+
+
 </params>
 
