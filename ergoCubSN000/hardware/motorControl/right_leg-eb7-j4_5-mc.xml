@@ -9,7 +9,7 @@
     <xi:include href="./right_leg-eb7-j4_5-mc_service.xml" />
 
     <!-- joint name                                     ankle_pitch          ankle_roll         -->
-    <!-- joint number                                       0                   1                   -->
+    <!-- joint number                                       0                   1               -->
     <group name="LIMITS">
         <param name="jntPosMax">                  43                  23                  </param>
         <param name="jntPosMin">                 -43                 -23                 </param>
@@ -41,28 +41,6 @@
 
     <!-- default position PID: begin -->
 
-  <!-- custom PIDs: begin -->
-     <group name="TRQ_PID_OUTPUT_CURR">
-        <param name="controlLaw">          torque                       </param>
-        <param name="outputType">          current                      </param>
-        <param name="fbkControlUnits">     metric_units                 </param>
-        <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">              1000       1000      </param>
-        <param name="kd">              0          0      </param>
-        <param name="ki">              500        1000    </param>
-        <param name="maxOutput">        2500       2500        </param>
-        <param name="maxInt">            200        200       </param>
-        <param name="ko">                  0          0     </param>
-        <param name="stictionUp">          0          0     </param>
-        <param name="stictionDown">           0          0     </param>
-        <param name="kff">                    1          1     </param>
-        <param name="kbemf">               0.0009     0.0003    </param>
-        <param name="filterType">            0          0     </param>
-        <param name="ktau">             128.81     227.739     </param>
-    </group>
-    <!-- custom PIDs: end -->
-
-    
     <group name="POS_PID_DEFAULT">
         <param name="controlLaw">           minjerk             </param>
         <param name="outputType">           pwm                 </param>
@@ -138,18 +116,18 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">              40.44      28.27      </param>
-        <param name="kd">               0          0      </param>
-        <param name="ki">               0          0    </param>
-        <param name="maxOutput">     2500       2500        </param>
-        <param name="maxInt">         200        200       </param>
-        <param name="ko">               0          0     </param>
-        <param name="stictionUp">       0          0     </param>
-        <param name="stictionDown">     0          0     </param>
-        <param name="kff">              1          1     </param>
-        <param name="kbemf">            0.0003     0.0004    </param>
-        <param name="filterType">       0          0     </param>
-        <param name="ktau">           181.17     230.00     </param>
+        <param name="kp">              1000       1000      </param>
+        <param name="kd">              0          0      </param>
+        <param name="ki">              500        1000    </param>
+        <param name="maxOutput">        2500       2500        </param>
+        <param name="maxInt">            200        200       </param>
+        <param name="ko">                  0          0     </param>
+        <param name="stictionUp">          0          0     </param>
+        <param name="stictionDown">           0          0     </param>
+        <param name="kff">                    1          1     </param>
+        <param name="kbemf">               0.0009     0.0003    </param>
+        <param name="filterType">            0          0     </param>
+        <param name="ktau">             128.81     227.739     </param>
     </group>
     <!-- custom PIDs: end -->
 
