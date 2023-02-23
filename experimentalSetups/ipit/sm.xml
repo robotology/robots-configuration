@@ -21,7 +21,7 @@
     <xi:include href="wrappers/inertials/ipit-IMU-wrapper.xml" /> 
 -->
     <!-- CALIBRATORS -->
-    <!-- <xi:include href="./calibrators/sm_calib.xml" /> -->
+    <xi:include href="./calibrators/sm_calib.xml" />
     
 </devices>
 </robot> 

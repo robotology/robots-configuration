@@ -24,10 +24,10 @@
                 </group>
                 
                 <group name="ENCODER1">  
-                    <param name="type">             absanalog            none                none             none         </param>  
-                    <param name="port">             CONN:P4              CONN:none           CONN:none        CONN:none    </param>
-                    <param name="position">         atjoint              none                none             none         </param>
-                    <param name="resolution">       65535                0                   0                0            </param> 
+                    <param name="type">             absanalog            none                none             absanalog         </param>  
+                    <param name="port">             CONN:P4              CONN:none           CONN:none        CONN:P2    </param>
+                    <param name="position">         atjoint              none                none             atjoint         </param>
+                    <param name="resolution">       65535                0                   0                65535            </param> 
                     <param name="tolerance">            0                0.0                 0.0              0.0          </param>  
 
                 </group>        
