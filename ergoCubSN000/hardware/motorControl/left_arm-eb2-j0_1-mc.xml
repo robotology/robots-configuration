@@ -33,7 +33,7 @@
         <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="mixedControl">             POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
-        <param name="torqueControl">            TRQ_PID_DEFAULT     TRQ_PID_DEFAULT     </param>
+        <param name="torqueControl">            TRQ_PID_OUTPUT_CURR     TRQ_PID_OUTPUT_CURR     </param>
         <param name="currentPid">               2FOC_CUR_CONTROL    2FOC_CUR_CONTROL    </param>
         <param name="speedPid">                 2FOC_VEL_CONTROL    2FOC_VEL_CONTROL    </param>
     </group>
@@ -112,10 +112,41 @@
 
 
     <!-- custom PIDs: begin -->
+    <group name="TRQ_PID_OUTPUT_CURR">
+        <param name="controlLaw">          torque                       </param>
+        <param name="outputType">          current                      </param>
+        <param name="fbkControlUnits">     metric_units                 </param>
+        <param name="outputControlUnits">  machine_units                </param>
+        <param name="kp">             150        100       </param>
+        <param name="kd">             0          0         </param>
+        <param name="ki">             0          0         </param>
+        <param name="maxOutput">      2500       2500      </param>
+        <param name="maxInt">         200        200       </param>
+        <param name="ko">             0          0         </param>
+        <param name="stictionUp">     0          0         </param>
+        <param name="stictionDown">   0          0         </param>
+        <param name="kff">            1          1         </param>
+        <param name="kbemf">          0.0001     0.0001    </param>
+        <param name="filterType">     0          0         </param>
+        <param name="ktau">           250        200       </param>
+    </group>
     <!-- custom PIDs: end -->
 
     <group name="OTHER_CONTROL_PARAMETERS">
         <param name="deadZone">                 0.0049              0.0049              </param>
+    </group>
+
+    <!-- kalman filter parameters - vel & acc estimation -->
+    <group name="KALMAN_FILTER">
+        <param name="kalmanFilterEnabled">          1              1            </param>
+        <param name="x0">                           0              0            </param>
+        <param name="x1">                           0              0            </param>
+        <param name="x2">                           0              0            </param>
+        <param name="Q0">                           0.0001         0.0001       </param>
+        <param name="Q1">                           0.01           0.01         </param>
+        <param name="Q2">                           10             10           </param>
+        <param name="R">                            0.001          0.001        </param>
+        <param name="P0">                           0.000099       0.000099     </param>
     </group>
 
 </device>
