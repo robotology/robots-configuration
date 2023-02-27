@@ -34,7 +34,7 @@
                     <!-- common to all analog services -->
                     <param name="id">                   id_fapEE                      id_fapFF                  </param>
                     <param name="type">                 eoas_pos_angle                eoas_pos_angle            </param>
-                    <param name="port">                 POS:hand_thumbmetacarpus      POS:hand_indexadduction   </param>
+                    <param name="port">                 POS:hand_thumb_add      POS:hand_index_add   </param>
 
                     <param name="boardType">            mtb4fap                       mtb4fap                   </param>
                     <param name="connector">            CONN:J3_SDA2                  CONN:J3_SDA3              </param>
@@ -64,7 +64,7 @@
 
                 <group name="ENCODER1">
                     <param name="type">             pos                           pos                      </param>
-                    <param name="port">             POS:hand_thumbmetacarpus      POS:hand_indexadduction  </param>
+                    <param name="port">             POS:hand_thumb_add      POS:hand_index_add  </param>
                     <param name="position">         atjoint                       atjoint                  </param>
                     <param name="resolution">       65535                         65535                    </param>
                     <param name="tolerance">        5                             5                        </param>

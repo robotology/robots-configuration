@@ -11,17 +11,17 @@
     <xi:include href="../motorControl/right_arm-eb24-j11_12-mc_service.xml" />
 
     <!-- joint number                           0                        1                           -->
-    <!-- joint name                             hand_thumbmetacarpus     hand_indexadduction         -->    
+    <!-- joint name                             hand_thumb_add     hand_index_add         -->
     <group name="LIMITS">
         <param name="jntPosMin">                0                        7            </param>
         <param name="jntPosMax">                85                       18           </param>
         <param name="jntVelMax">                1000                     1000         </param>
         <param name="motorOverloadCurrents">    2000                     2000         </param>
         <param name="motorNominalCurrents">     700                      700          </param>
-        <param name="motorPeakCurrents">        1500                     1500         </param>    
+        <param name="motorPeakCurrents">        1500                     1500         </param>
         <param name="motorPwmLimit">            3360                     3360         </param>
-    </group>       
-    
+    </group>
+
     <group name="TIMEOUTS">
         <param name="velocity">                 100                 100                 </param>
     </group>
@@ -30,7 +30,7 @@
         <param name="stiffness">                0.0                 0.0                 </param>
         <param name="damping">                  0.0                 0.0                 </param>
     </group>
-    
+
     <group name="CONTROLS">
         <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
@@ -42,7 +42,7 @@
 
 
     <!-- default position PID: begin -->
-    
+
     <group name="POS_PID_DEFAULT">
         <param name="controlLaw">               minjerk                 </param>
         <param name="outputType">               pwm                     </param>
@@ -61,14 +61,14 @@
     <!-- default position PID: end -->
 
 
-    <!-- other default PIDs: begin -->   
+    <!-- other default PIDs: begin -->
     <!-- other default PIDs: end -->
 
 
-    <!-- custom PIDs: begin -->    
+    <!-- custom PIDs: begin -->
     <!-- custom PIDs: end -->
-    
+
 </device>
 
 
-        
+
