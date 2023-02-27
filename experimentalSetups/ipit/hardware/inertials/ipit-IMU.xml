@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="ipit-imu" type="embObjIMU">
+
+        <xi:include href="../../general.xml" />
+
+        <xi:include href="../../hardware/electronics/lm1-mc4plus01-eln.xml" />
+
+        <group name="SERVICE">
+
+            <param name="type"> eomn_serv_AS_inertials3 </param>
+
+            <group name="PROPERTIES">
+
+                <group name="CANBOARDS">
+                    <param name="type">                 mtb4           </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            2                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
+                    <group name="FIRMWARE">
+                        <param name="major">            1                   </param>
+                        <param name="minor">            4                   </param>
+                        <param name="build">            6                   </param>
+                    </group>
+                </group>
+
+                <group name="SENSORS">
+                    <param name="id">       ipit_acc     ipit_gyro    ipit_eul    ipit_mag    ipit_stat                    </param>
+
+                    <param name="type">     eoas_imu_acc             eoas_imu_gyr              eoas_imu_eul             eoas_imu_mag             eoas_imu_status                    </param>
+
+                    <param name="boardType"> mtb4       mtb4      mtb4       mtb4        mtb4                    </param>
+
+                    <param name="location">  CAN1:14       CAN1:14      CAN1:14       CAN1:14        CAN1:14                    </param>
+                </group>
+
+            </group>
+
+            <group name="SETTINGS">
+                <param name="acquisitionRate">      50      </param>
+                <param name="enabledSensors">       ipit_acc    ipit_gyro    ipit_eul    ipit_mag    ipit_stat
+                </param>
+            </group>
+
+        </group>
+
+    </device>
