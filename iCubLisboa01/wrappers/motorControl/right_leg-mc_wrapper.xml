@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-mc_wrapper" type="controlboardwrapper2">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-mc_wrapper" type="controlBoard_nws_yarp">
         <paramlist name="networks">
             <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
             <elem name="FirstSetOfJoints">  (0  3  0  3) </elem>
