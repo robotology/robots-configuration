@@ -16,16 +16,20 @@
     <!-- BASE -->
     <xi:include href="hardware/motorControl/cer_base-ems21-mc.xml" disabled_by="disable_base" />
     <xi:include href="wrappers/motorControl/cer_base-mc_wrapper.xml" disabled_by="disable_base" />
+    <xi:include href="wrappers/motorControl/cer_base-mc_remapper.xml" disabled_by="disable_base" />
 
     <!-- TORSO -->
     <xi:include href="hardware/motorControl/cer_torso-ems15-mc.xml" disabled_by="disable_torso"/>
     <xi:include href="wrappers/motorControl/cer_torso_tripod-mc_wrapper.xml" disabled_by="disable_torso"/>
+    <xi:include href="wrappers/motorControl/cer_torso_tripod-mc_remapper.xml" disabled_by="disable_torso"/>
 
     <!-- LEFT ARM -->
     <xi:include href="hardware/motorControl/cer_left_upper_arm-ems17-mc.xml" disabled_by="disable_left_arm"/>
     <xi:include href="hardware/motorControl/cer_left_lower_arm-mcp18-mc.xml" disabled_by="disable_left_arm"/>
     <xi:include href="wrappers/motorControl/cer_left_arm_no_hand-mc_wrapper.xml" disabled_by="disable_left_arm"/>
     <xi:include href="wrappers/motorControl/cer_left_wrist_tripod-mc_wrapper.xml" disabled_by="disable_left_arm"/>
+    <xi:include href="wrappers/motorControl/cer_left_arm_no_hand-mc_remapper.xml" disabled_by="disable_left_arm"/>
+    <xi:include href="wrappers/motorControl/cer_left_wrist_tripod-mc_remapper.xml" disabled_by="disable_left_arm"/>
 
     <!-- LEFT HAND -->
     <xi:include href="hardware/motorControl/cer_left_hand-mcp7-mc.xml" disabled_by="disable_left_hand"/>
@@ -38,6 +42,8 @@
     <xi:include href="hardware/motorControl/cer_right_lower_arm-mcp20-mc.xml" disabled_by="disable_right_arm"/>
     <xi:include href="wrappers/motorControl/cer_right_arm_no_hand-mc_wrapper.xml" disabled_by="disable_right_arm"/>
     <xi:include href="wrappers/motorControl/cer_right_wrist_tripod-mc_wrapper.xml" disabled_by="disable_right_arm"/>
+    <xi:include href="wrappers/motorControl/cer_right_arm_no_hand-mc_remapper.xml" disabled_by="disable_right_arm"/>
+    <xi:include href="wrappers/motorControl/cer_right_wrist_tripod-mc_remapper.xml" disabled_by="disable_right_arm"/>
 
     <!-- RIGHT HAND -->
     <xi:include href="hardware/motorControl/cer_right_hand-mcp9-mc.xml" disabled_by="disable_right_hand"/>
@@ -48,6 +54,7 @@
     <!-- HEAD -->
     <xi:include href="hardware/motorControl/cer_head-mcp10-mc.xml" disabled_by="disable_head"/>
     <xi:include href="wrappers/motorControl/cer_head-mc_wrapper.xml" disabled_by="disable_head"/>
+    <xi:include href="wrappers/motorControl/cer_head-mc_remapper.xml" disabled_by="disable_head"/>
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/cer_torso-calib.xml" disabled_by="disable_torso" />
