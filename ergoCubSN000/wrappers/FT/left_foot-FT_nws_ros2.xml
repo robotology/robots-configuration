@@ -5,7 +5,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_foot-FT_wrapper_ros2" type="wrenchStamped_nws_ros2">
         <param name="topic_name">      /left_foot_heel_tiptoe_ft </param>
         <param name="node_name">      ergocub_left_foot_heel_tiptoe_ft          </param>
-        <param name="period">      0.01                          </param>
+        <param name="period">      0.002                          </param>
 
         <action phase="startup" level="10" type="attach">
             <paramlist name="networks">

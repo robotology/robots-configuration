@@ -13,7 +13,7 @@
     <!-- joint name -->
     <group name="LIMITS">
         <param name="jntPosMax">                 106                 108       78        5      </param>
-        <param name="jntPosMin">                -42                 2      -78        -103    </param>
+        <param name="jntPosMin">                -42                 -15      -78        -103    </param>
         <param name="jntVelMax">                240                 240       240       240    </param>
         <param name="motorNominalCurrents">     15000               15000     5000      10000  </param>
         <param name="motorPeakCurrents">        20000               20000     10000     15000  </param>
@@ -34,7 +34,7 @@
         <param name="positionControl">       POS_PID_DEFAULT       POS_PID_DEFAULT     POS_PID_DEFAULT   POS_PID_DEFAULT  </param>
         <param name="velocityControl">       POS_PID_DEFAULT       POS_PID_DEFAULT     POS_PID_DEFAULT   POS_PID_DEFAULT  </param>
         <param name="mixedControl">          POS_PID_DEFAULT       POS_PID_DEFAULT     POS_PID_DEFAULT   POS_PID_DEFAULT  </param>
-        <param name="torqueControl">         TRQ_PID_DEFAULT       TRQ_PID_DEFAULT     TRQ_PID_DEFAULT   TRQ_PID_DEFAULT  </param>
+        <param name="torqueControl">         TRQ_PID_OUTPUT_CURR       TRQ_PID_OUTPUT_CURR     TRQ_PID_OUTPUT_CURR   TRQ_PID_OUTPUT_CURR  </param>
         <param name="currentPid">            2FOC_CUR_CONTROL      2FOC_CUR_CONTROL    2FOC_CUR_CONTROL  2FOC_CUR_CONTROL  </param>
         <param name="speedPid">              2FOC_VEL_CONTROL      2FOC_VEL_CONTROL    2FOC_VEL_CONTROL  2FOC_VEL_CONTROL  </param>
     </group>
@@ -48,10 +48,10 @@
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>
         <param name="kff">                      0                   0           0        0       </param>
-        <param name="kp">                       -3000               7000        -711     -5000      </param>
+        <param name="kp">                       -5000               7000        -3000   -10000      </param>
         <param name="kd">                       0                   0           0        0       </param>
-        <param name="ki">                       -1500               5000        -7111    -1500       </param>
-        <param name="maxOutput">               12000               12000       12000    12000       </param>
+        <param name="ki">                       -1500               5000        -200    -1500       </param>
+        <param name="maxOutput">               12000               12000       12000    16000      </param>
         <param name="maxInt">                   1500                5000        750      2000      </param>
         <param name="stictionUp">               0                   0           0        0       </param>
         <param name="stictionDown">             0                   0           0        0       </param>
@@ -117,24 +117,37 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">           -150.00     150.00           -200.00    -150.00        </param>
-        <param name="kd">              0          0                 0          0        </param>
-        <param name="ki">            -80         50               -80        -80.00     </param>
-        <param name="maxOutput">    2500       2500              2500       2500        </param>
-        <param name="maxInt">        200        200               200        200        </param>
-        <param name="ko">              0          0                 0          0        </param>
-        <param name="stictionUp">      0          0                 0          0        </param>
-        <param name="stictionDown">    0          0                 0          0        </param>
-        <param name="kff">             1          1                 1          1        </param>
-        <param name="kbemf">          -0.0003     0.0004        -0.0003     -0.0002       </param>
-        <param name="filterType">      0          0                 0          0        </param>
-        <param name="ktau">         -175.56     177.83           -175.74    -230.10        </param>
+        <param name="kp">            -0.0        0.0      -0.0      -0.0       </param>
+        <param name="kd">             0          0         0         0         </param>
+        <param name="ki">            -0          0        -0        -0         </param>
+        <param name="maxOutput">      2500       2500      2500      2500      </param>
+        <param name="maxInt">         200        200       200       200       </param>
+        <param name="ko">             0          0         0         0         </param>
+        <param name="stictionUp">     0          0         0         0         </param>
+        <param name="stictionDown">   0          0         0         0         </param>
+        <param name="kff">            1          1         1         1         </param>
+        <param name="kbemf">         -0.0        0.0      -0.0      -0.0       </param>
+        <param name="filterType">     0          0         0         0         </param>
+        <param name="ktau">          -50         50       -50       -50        </param>
     </group>
 
     <!-- custom PIDs: end -->
 
     <group name="OTHER_CONTROL_PARAMETERS">
         <param name="deadZone">                 0.0049              0.0049     0.0049    0.011    </param>
+    </group>
+
+    <!-- kalman filter parameters - vel & acc estimation -->
+    <group name="KALMAN_FILTER">
+        <param name="kalmanFilterEnabled">          1              1            1            1          </param>
+        <param name="x0">                           0              0            0            0          </param>
+        <param name="x1">                           0              0            0            0          </param>
+        <param name="x2">                           0              0            0            0          </param>
+        <param name="Q0">                           0.0001         0.0001       0.0001       0.0001     </param>
+        <param name="Q1">                           0.01           0.01         0.01         0.01       </param>
+        <param name="Q2">                           10             10           10           10         </param>
+        <param name="R">                            0.001          0.001        0.001        0.001      </param>
+        <param name="P0">                           0.000099       0.000099     0.000099     0.000099   </param>
     </group>
 
   </device>
