@@ -27,10 +27,10 @@
             <param name="calibrationZero">         0.0      0      0     0 		   </param>
             <param name="calibrationDelta">        0.0      0      0     0 		  </param>
 
-		    <param name="startupPosition">        0.0     0.0    0.0     0.0 	  </param> <!-- target position in deg after high level calib is terminated --> 
-		    <param name="startupVelocity">       20.0    20.0   20.0    20.0     </param> <!-- and its velocity in deg/sec -->
-		    <param name="startupMaxPwm">         500    500   3360    3360     </param> <!-- max pwm used in calib (it is a pid param)-->
-		    <param name="startupPosThreshold">     10      10     10      10        </param> <!-- tolerance of position in deg relative to positionZero param -->  
+		    <param name="startupPosition">        650     0.0    0.0     0.0 	  </param> <!-- target position in deg after high level calib is terminated --> 
+		    <param name="startupVelocity">        0.0    20.0   20.0    20.0     </param> <!-- and its velocity in deg/sec -->
+		    <param name="startupMaxPwm">          10.0    500   3360    3360     </param> <!-- max pwm used in calib (it is a pid param)-->
+		    <param name="startupPosThreshold">    650      10     10      10        </param> <!-- tolerance of position in deg relative to positionZero param -->  
 		    <param name="startupDisablePosCheck">   1       1      1       1        </param>
 		    <param name="calibrationTimeout">     1.0      1.0   1.0     1.0      </param>
 		</group>
