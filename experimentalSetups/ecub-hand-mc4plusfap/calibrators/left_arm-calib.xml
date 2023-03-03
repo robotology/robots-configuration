@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-calibrator" type="parametricCalibratorEth">
+	<xi:include href="../general.xml" />
+
+	<group name="GENERAL">
+		<param name="joints">3</param>		<!-- the number of joints of the robot part -->
+		<param name="deviceName"> Left_Arm_Calibrator </param>
+	</group>
+
+	
+	<group name="HOME">
+		<param name="positionHome">          30.00      30.00    30.00      </param>
+		<param name="velocityHome">          40.00      40.00    40.00      </param>
+	</group>
+	
+	<!-- For calibration type 6 the calibration values define what follows:
+        calibration1: not used - keep at 0
+        calibration2: speed during calibration in icubdeg/s
+        calibration3: 1 or -1 depending if set as target vmax or vmin, respectively
+        calibration4: vmin
+        calibration5: vmax in icubdegree -> icubdeg = deg * (2^16 / 360)
+	 -->
+	<group name="CALIBRATION">
+	     <param name="calibrationType">      6          6        6          </param> 
+		<param name="calibration1">          0          0        0          </param>
+		<param name="calibration2">	         9102       9102     9102       </param>
+		<param name="calibration3">          1          1        1          </param>
+		<param name="calibration4">          0          0        0          </param>
+		<param name="calibration5">          11833      14564    14564      </param>
+		<param name="calibrationZero">       0          0        0          </param>
+		<param name="calibrationDelta">      0          0        0          </param>
+		<param name="startupPosition">       0.0        0.0      0.0        </param>
+		<param name="startupVelocity">       0.0        0.0      0.0        </param>
+		<param name="startupMaxPwm">         0          0        0          </param>
+		<param name="startupPosThreshold">   0          0        0          </param>
+	</group>
+
+	<!-- motor's encoder of joint 7 can't read -->
+	<param name="CALIB_ORDER">  (2) (1) (0)</param> 
+
+	<action phase="startup" level="10" type="calibrate">
+		<param name="target">left_arm-mc_remapper</param>
+	</action>
+
+	<action phase="interrupt1" level="1" type="park">
+		<param name="target">left_arm-mc_remapper</param>
+	</action>
+
+	<action phase="interrupt3" level="1" type="abort" />
+
+</device>
+
+
+
