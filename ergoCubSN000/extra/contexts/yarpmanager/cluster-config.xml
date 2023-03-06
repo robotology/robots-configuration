@@ -1,17 +1,15 @@
-<cluster name="icub09" user="icub">
+<cluster name="ergocub00" user="ergocub">
 
-<!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
-<nameserver namespace="/icub09" node="icub-console" type="yarpserver"> </nameserver>
+  <!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
+  <nameserver namespace="/ergocub00" node="ergocub-torso" type="yarpserver"> </nameserver>
 
-<!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
-this is usually the value of the DISPLAY variable when logged on -->
-<node display=":0" address="10.0.0.158">icub-console</node>
-<node display=":0" address="10.0.10.164">icub-console-gui</node>
-<node address="10.0.10.115" user="pi">pi-ifeel</node>
-<node display=":1">icub-cuda</node>
-<node address="10.0.0.2">icub-head</node>
-<node>icub-virtualizer</node>
-<node display=":1" address="10.0.10.29">icub29</node>
+  <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
+       this is usually the value of the DISPLAY variable when logged on -->
+  <node display=":0" address="10.0.2.1">ergocub-laptop</node>
+  <node address="10.0.2.2">ergocub-torso</node>
+  <node display=":1" address="10.0.2.3">ergocub-head</node>
+  <node display=":0" address="10.0.10.164" user="icub">icub-console-gui</node>
+  <node>icub-virtualizer</node>
 
 </cluster>
 

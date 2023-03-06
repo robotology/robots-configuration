@@ -116,18 +116,18 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">              1000       1000      </param>
-        <param name="kd">              0          0      </param>
-        <param name="ki">              500        1000    </param>
-        <param name="maxOutput">        2500       2500        </param>
-        <param name="maxInt">            200        200       </param>
-        <param name="ko">                  0          0     </param>
-        <param name="stictionUp">          0          0     </param>
-        <param name="stictionDown">           0          0     </param>
-        <param name="kff">                    1          1     </param>
-        <param name="kbemf">               0.0009     0.0003    </param>
-        <param name="filterType">            0          0     </param>
-        <param name="ktau">             128.81     227.739     </param>
+        <param name="kp">                 0          50            </param>
+        <param name="kd">                 0          0            </param>
+        <param name="ki">                 0          0            </param>
+        <param name="maxOutput">          2500       2500         </param>
+        <param name="maxInt">             200        200          </param>
+        <param name="ko">                 0          0            </param>
+        <param name="stictionUp">         0          0            </param>
+        <param name="stictionDown">       0          0            </param>
+        <param name="kff">                1          1            </param>
+        <param name="kbemf">              0.0009     0.0003       </param>
+        <param name="filterType">         0          0            </param>
+        <param name="ktau">               128.81     160          </param>
     </group>
     <!-- custom PIDs: end -->
 
