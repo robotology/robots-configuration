@@ -9,7 +9,7 @@
       <xi:include href="./lm1_mc_service.xml" />
 
     <!-- joint number                           0                   1                   2                   3                   -->
-    <!-- joint name                             "SOL AT-0201"       "AT-0202"           "ATM-0201"          "ATM-0202"     -->
+    <!-- joint name                             "SOL-AT-0201"       "SOL-AT-0202"           "ATM-0201"          "ATM-0202"     -->
     <group name="LIMITS">
         <param name="jntPosMax">                 0                0                  0                 0                  </param>
         <param name="jntPosMin">                 0                0                  0                 0                  </param>

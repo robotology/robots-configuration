@@ -7,13 +7,13 @@
         <param name="Joints"> 4 </param> <!-- the number of joints of the robot part -->
 
         <!-- joint number in sub-part           0                 1              2              3           -->
-        <param name="AxisName">                 "joint1_sol" "joint2_sol" "joint3_sol"  "joint4_mot"  </param> 
+        <param name="AxisName">                 "joint1_sol" "joint2_sol" "joint3_mot"  "joint4_mot"  </param> 
         <param name="AxisType">                 "revolute"       "revolute"      "revolute"     "revolute"      </param>
         <param name="AxisMap">                  0                1               2              3               </param>   <!-- joint as effectively mapped onto the hw of the board -->
-        <param name="Encoder">                  182.044          182.044         182.044        182.044         </param>
+        <param name="Encoder">                  1                1        182.044        182.044         </param>
         <param name="fullscalePWM">            3360            3360             3360            3360            </param>
         <param name="ampsToSensor">            1000.0          1000.0           1000.0          1000.0          </param>
-        <param name="Gearbox_M2J">              1             1                 1            240            </param>  <!-- 240 is the gear ratio -->
+        <param name="Gearbox_M2J">              1             1                 256            256            </param>  
         <param name="Gearbox_E2J">   	          1               1                 1              1            </param>
         <param name="useMotorSpeedFbk">           1               1                 1              1            </param>
         <param name="MotorType">                "DC"             "DC"              "DC"           "DC"          </param>

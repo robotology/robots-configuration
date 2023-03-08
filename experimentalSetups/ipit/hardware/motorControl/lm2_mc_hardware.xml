@@ -2,14 +2,14 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="lm2_mc" type="embObjMotionControl">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="lm1_mc" type="embObjMotionControl">
       <xi:include href="../../general.xml" />
-      <xi:include href="../../hardware/electronics/lm2-mc4plus02-eln.xml" />
-      <xi:include href="../../hardware/mechanicals/lm2-mc4plus02-mec.xml" />
+      <xi:include href="../../hardware/electronics/lm2-mc4plus01-eln.xml" />
+      <xi:include href="../../hardware/mechanicals/lm2-mc4plus01-mec.xml" />
       <xi:include href="./lm2_mc_service.xml" />
 
     <!-- joint number                           0                   1                   2                   3                   -->
-    <!-- joint name                             "joint1"    "joint2"     "joint3"       "joint4"     -->
+    <!-- joint name                             "SOL-AT-0203"       "SOL-AT-0204"           "ATM-0203"          "ATM-0204"     -->
     <group name="LIMITS">
         <param name="jntPosMax">                 0                0                  0                 0                  </param>
         <param name="jntPosMin">                 0                0                  0                 0                  </param>
