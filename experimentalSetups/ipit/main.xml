@@ -7,20 +7,23 @@
     <!-- LM1 -->
     <xi:include href="./hardware/motorControl/lm1_mc_hardware.xml" /> 
     <xi:include href="./wrappers/motorControl/lm1_mc_wrapper.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm1_mc_remapper.xml" /> 
+
 	<!-- LM2 -->
 	<xi:include href="./hardware/motorControl/lm2_mc_hardware.xml" /> 
     <xi:include href="./wrappers/motorControl/lm2_mc_wrapper.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm2_mc_remapper.xml" /> 
+
 	<!-- SM -->
 	<xi:include href="./hardware/motorControl/sm_mc_hardware.xml" /> 
     <xi:include href="./wrappers/motorControl/sm_mc_wrapper.xml" /> 
+    <xi:include href="./wrappers/motorControl/sm_mc_remapper.xml" /> 
 
-    <!-- IMU
-    <xi:include href="hardware/inertials/ipit-IMU.xml" /> 
-    
-    <xi:include href="wrappers/inertials/ipit-IMU-wrapper.xml" /> 
--->
     <!-- CALIBRATORS -->
-    <xi:include href="./calibrators/ipit_calib.xml" />
+    <xi:include href="./calibrators/sm_calib.xml" />
+    <xi:include href="./calibrators/lm1_calib.xml" />
+    <xi:include href="./calibrators/lm2_calib.xml" />
+
     
 </devices>
 </robot> 

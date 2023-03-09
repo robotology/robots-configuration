@@ -4,13 +4,12 @@
 <robot name="ipit" build="1" portprefix="ipit" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
 
-	<!-- SM -->
-	<xi:include href="./hardware/motorControl/sm_mc_hardware.xml" /> 
-    <xi:include href="./wrappers/motorControl/sm-mc_wrapper.xml" /> 
-    <xi:include href="./wrappers/motorControl/sm-mc_remapper.xml" /> 
+	<xi:include href="./hardware/motorControl/lm1_mc_hardware.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm1-mc_wrapper.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm1-mc_remapper.xml" /> 
 
     <!-- CALIBRATORS -->
-    <xi:include href="./calibrators/sm_calib.xml" />
+    <xi:include href="./calibrators/lm1_calib.xml" />
     
 </devices>
 </robot> 

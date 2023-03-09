@@ -8,5 +8,6 @@
         <param name="PC104TXrate">              1               </param> 
         <param name="PC104RXrate">              5               </param>  
   </group>
+
 </params>
 
