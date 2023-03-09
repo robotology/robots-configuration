@@ -9,9 +9,5 @@
         <param name="PC104RXrate">              5               </param>  
   </group>
 
-    <group name="DEBUG">
-        <param name="embBoardsConnected"> 0 </param>
-    </group>  
-
 </params>
 
