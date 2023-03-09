@@ -8,5 +8,10 @@
         <param name="PC104TXrate">              1               </param> 
         <param name="PC104RXrate">              5               </param>  
   </group>
+
+    <group name="DEBUG">
+        <param name="embBoardsConnected"> 0 </param>
+    </group>  
+
 </params>
 
