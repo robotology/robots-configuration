@@ -12,7 +12,7 @@
         <group name="PROPERTIES">
 
             <group name="CANBOARDS">
-                <param name="type">                 eobrd_mtb4              </param>
+                <param name="type">                 eobrd_mtb4c             </param>
 
                 <group name="PROTOCOL">
                     <param name="major">            2                       </param>
