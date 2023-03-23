@@ -14,14 +14,14 @@
             </group>
 
             <group name="CANBOARDS">
-                <param name="type">                 mtb4fap             </param>
+                <param name="type">                 mtb4c               </param>
                 <group name="PROTOCOL">
                     <param name="major">            2                   </param>
                     <param name="minor">            0                   </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            1                   </param>
-                    <param name="minor">            1                   </param>
+                    <param name="major">            2                   </param>
+                    <param name="minor">            0                   </param>
                     <param name="build">            0                   </param>
                 </group>
             </group>
@@ -36,7 +36,7 @@
                     <param name="type">                 eoas_pos_angle  eoas_pos_angle   eoas_pos_angle           eoas_pos_angle        </param>
                     <param name="port">                 POS:hand_thumb_oc  POS:hand_index_oc   POS:hand_middle_oc          POS:hand_ring_pinky_oc        </param>
 
-                    <param name="boardType">            mtb4fap         mtb4fap          mtb4fap                  mtb4fap               </param>
+                    <param name="boardType">            mtb4c           mtb4c            mtb4c                    mtb4c                 </param>
                     <param name="connector">            CONN:J3_SDA3    CONN:J3_SDA0     CONN:J3_SDA1             CONN:J3_SDA2          </param>
 
                     <group name="CALIBRATION">
@@ -64,7 +64,7 @@
 
                 <group name="ENCODER1">
                     <param name="type">             pos                 pos                       pos                       pos                       </param>
-                    <param name="port">             POS:hand_thumb_oc      POS:hand_index_oc            POS:hand_middle_oc           POS:hand_ring_pinky_oc            </param>
+                    <param name="port">             POS:hand_thumb_oc   POS:hand_index_oc         POS:hand_middle_oc        POS:hand_ring_pinky_oc    </param>
                     <param name="position">         atjoint             atjoint                   atjoint                   atjoint                   </param>
                     <param name="resolution">       65535               65535                     65535                     65535                     </param>
                     <param name="tolerance">        5                   5                         5                         5                         </param>
@@ -74,7 +74,7 @@
                     <param name="type">             qenc                qenc                      qenc                      qenc                      </param>
                     <param name="port">             CONN:P5             CONN:P4                   CONN:P3                   CONN:P2                   </param>
                     <param name="position">         atmotor             atmotor                   atmotor                   atmotor                   </param>
-                    <param name="resolution">       1600               1600                      1600                      1600                      </param>
+                    <param name="resolution">       1600                1600                      1600                      1600                      </param>
                     <param name="tolerance">        0                   0                         0                         0                         </param>
                 </group>
             </group>

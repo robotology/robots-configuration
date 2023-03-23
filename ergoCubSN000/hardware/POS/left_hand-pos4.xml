@@ -12,15 +12,15 @@
         <group name="PROPERTIES">
 
             <group name="CANBOARDS">
-                <param name="type">                 eobrd_mtb4fap           </param>
+                <param name="type">                 eobrd_mtb4c             </param>
 
                 <group name="PROTOCOL">
                     <param name="major">            2                       </param>
                     <param name="minor">            0                       </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            1                       </param>
-                    <param name="minor">            1                       </param>
+                    <param name="major">            2                       </param>
+                    <param name="minor">            0                       </param>
                     <param name="build">            0                       </param>
                 </group>
             </group>
@@ -34,7 +34,7 @@
                 <param name="type">                 eoas_pos_angle  eoas_pos_angle   eoas_pos_angle   eoas_pos_angle    </param>
                 <param name="port">                 POS:hand_thumb_oc  POS:hand_index_oc   POS:hand_middle_oc  POS:hand_ring_pinky_oc    </param>
 
-                <param name="boardType">            mtb4fap         mtb4fap          mtb4fap          mtb4fap           </param>
+                <param name="boardType">            mtb4c           mtb4c            mtb4c            mtb4c             </param>
                 <param name="connector">            CONN:J3_SDA3    CONN:J3_SDA0     CONN:J3_SDA1     CONN:J3_SDA2      </param>
 
                 <group name="CALIBRATION">
