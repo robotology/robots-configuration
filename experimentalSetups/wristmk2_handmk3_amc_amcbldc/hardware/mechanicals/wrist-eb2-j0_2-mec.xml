@@ -14,7 +14,7 @@
         <param name="Gearbox_M2J">     -384.44       -384.44       -384.44           </param>
         <param name="Gearbox_E2J">      1.778         1.778         1.778            </param>
         <param name="useMotorSpeedFbk"> 0             0             0                </param>
-        <param name="MotorType">        "FAULHABER"    "FAULHABER"    "FAULHABER"       </param>
+        <param name="MotorType">        "FAULHABER"   "FAULHABER"   "FAULHABER"      </param>
         <param name="Verbose">      0   </param>
     </group>
 
