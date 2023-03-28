@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="new_forarm" build="1">
+    <group name="GENERAL">
+        <param name="MotioncontrolVersion"> 6 </param>
+        <param name="Joints"> 1 </param> 
+        
+        <!-- joint number in sub-part       0                         -->
+        <!-- joint name                                               -->         
+        <param name="AxisMap">              0                         </param>
+        <param name="AxisName">             "l_index_oc"  </param>
+        <param name="AxisType">             "revolute"                </param>
+        <param name="Encoder">              36400.044                     </param>
+        <param name="fullscalePWM">         3360                      </param>
+        <param name="ampsToSensor">         1000.0                    </param>
+        <param name="Gearbox_M2J">          1                       </param>
+        <param name="Gearbox_E2J">          1                         </param>
+        <param name="useMotorSpeedFbk">     0                         </param>
+        <param name="MotorType">            "DC"                      </param>
+                
+        <param name="Verbose"> 0 </param>
+    </group>
+
+    <group name="LIMITS">
+        <param name="hardwareJntPosMax">    160         </param>
+        <param name="hardwareJntPosMin">    -10            </param>
+        <param name="rotorPosMin">          0           </param>
+        <param name="rotorPosMax">          0           </param>
+    </group>
+    
+    <group name="COUPLINGS"> 
+
+        <param name ="matrixJ2M"> 
+            1.000   0.000   0.000   0.000
+            0.000   1.000   0.000   0.000
+            0.000   0.000   1.000   0.000
+            0.000   0.000   0.000   1.000   
+        </param>
+               
+        <param name ="matrixM2J"> 
+            1.000   0.000   0.000   0.000
+            0.000   1.000   0.000   0.000
+            0.000   0.000   1.000   0.000
+            0.000   0.000   0.000   1.000   
+        </param>
+       
+        <param name ="matrixE2J">  
+            1.000   0.000   0.000   0.000   0.000   0.000
+            0.000   1.000   0.000   0.000   0.000   0.000
+            0.000   0.000   1.000   0.000   0.000   0.000
+            0.000   0.000   0.000   1.000   0.000   0.000 
+        </param>
+                
+    </group>   
+
+    <group name="JOINTSET_CFG"> 
+        <param name= "numberofsets"> 1 </param>
+        <group name="JOINTSET_0">
+            <param name="listofjoints">  0             </param>
+            <param name="constraint">    none          </param>
+            <param name="param1">        0             </param>
+            <param name="param2">        0             </param>
+        </group> 
+    </group>                                       
+    
+</params>
