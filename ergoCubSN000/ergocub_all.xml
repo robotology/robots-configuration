@@ -95,15 +95,7 @@
     <xi:include href="hardware/inertials/head-inertial.xml" />
 
     <!-- IMU - MTB4 BOARDS -->
-    <!--
-    <xi:include href="hardware/inertials/left_arm_eb4-j2_3-inertial.xml" />
-    <xi:include href="hardware/inertials/right_arm-eb3-j2_3-inertial.xml" />
-    <xi:include href="wrappers/inertials/left_arm-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/right_arm-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/left_arm-inertials_remapper.xml" />
-    <xi:include href="wrappers/inertials/right_arm-inertials_remapper.xml" />
-    -->
-    <xi:include href="hardware/inertials/left_arm_eb4-j2_3-inertial.xml" />
+    <xi:include href="hardware/inertials/left_arm-eb4-j2_3-inertial.xml" />
     <xi:include href="wrappers/inertials/left_arm-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/right_arm-eb3-j2_3-inertial.xml" />
     <xi:include href="wrappers/inertials/right_arm-inertials_wrapper.xml" />

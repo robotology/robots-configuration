@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm_eb4-j2_3-inertial" type="embObjIMU">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-eb4-j2_3-inertial" type="embObjIMU">
     
         <xi:include href="../../general.xml" />     
 
@@ -23,8 +23,8 @@
                     </group>                    
                     <group name="FIRMWARE">
                         <param name="major">            1                   </param>    
-                        <param name="minor">            20                  </param> 
-                        <param name="build">            0                   </param>
+                        <param name="minor">            4                   </param> 
+                        <param name="build">            7                   </param>
                     </group>
                 </group>
 
