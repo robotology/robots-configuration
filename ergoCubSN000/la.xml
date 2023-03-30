@@ -33,6 +33,9 @@
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/left_arm-calib.xml" />
 
+    <!-- IMU -->
+    <xi:include href="hardware/inertials/left_arm-eb4-j2_3-inertial.xml"/>
+    <xi:include href="wrappers/inertials/left_arm-inertials_wrapper.xml"/>
 
   </devices>
 </robot>
