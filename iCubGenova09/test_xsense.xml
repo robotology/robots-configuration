@@ -6,22 +6,21 @@
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
-    
-    <devices>
-  
 
-    <!-- INERTIAL SENSOR--> 
+    <devices>
+
+
+    <!-- INERTIAL SENSOR-->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
-    
-  
 
-    
+
+
+
 </devices>
-</robot> 
+</robot>
 
 
 

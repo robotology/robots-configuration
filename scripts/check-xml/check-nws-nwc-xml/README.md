@@ -3,7 +3,7 @@ This code has been used to check `xml` files consistency after manual modificati
 The program uses `XSD` schema and `XPATH` to check `XML` files.
 
 ## Usage
-1. Install the `libxml2-utils` package : 
+1. Install the `libxml2-utils` package :
 
 ```sh
 sudo apt install libxml2-utils
@@ -27,13 +27,13 @@ cd <your-robots-configuration-folder>/experimentalSetups/check-nws-nwc-xml/build
 ```
 ## Example
 
-Run : 
+Run :
 
 ```sh
 ./check-nws-nwc-xml /home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01/
 ```
 
-Output : 
+Output :
 
 ```
 1 - test yarprobotinterface.ini presence **************
@@ -95,7 +95,6 @@ found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//hardware/s
 found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//wrappers/inertials/head-imuFilter_wrapper.xml
 found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//wrappers/inertials/head-imuFilter.xml
 found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//wrappers/inertials/head-inertials_wrapper.xml
-found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//wrappers/inertials/head-inertials_wrapper-deprecated.xml
 found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//hardware/inertials/head-inertial.xml
 found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//calibrators/head_calib.xml
 found :/home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01//calibrators/torso_calib.xml

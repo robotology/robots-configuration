@@ -5,22 +5,22 @@
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
-        
+
 <devices>
-    <!-- CARTESIANS --> 
+    <!-- CARTESIANS -->
     <xi:include href="cartesian/left_leg_cartesian.xml" />
     <xi:include href="cartesian/right_leg_cartesian.xml" />
-    
+
     <!-- motor controllers wrappers -->
-    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" /> 
+    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
- 
-    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" /> 
-    <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" /> 
+
+    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
 
-    <!-- TORSO --> 
+    <!-- TORSO -->
     <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
 
    <!-- LEFT LEG -->
@@ -32,39 +32,38 @@
     <xi:include href="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
 
     <!-- ANALOG SENSOR FT -->
-    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> 
+    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
-    <xi:include href="hardware/FT/left_leg-eb6-j0_3-strain.xml" /> 
+    <xi:include href="hardware/FT/left_leg-eb6-j0_3-strain.xml" />
     <xi:include href="hardware/FT/left_leg-eb7-j4_5-strain.xml" />
-    <xi:include href="hardware/FT/right_leg-eb8-j0_3-strain.xml" /> 
-    <xi:include href="hardware/FT/right_leg-eb9-j4_5-strain.xml" />   
-	
+    <xi:include href="hardware/FT/right_leg-eb8-j0_3-strain.xml" />
+    <xi:include href="hardware/FT/right_leg-eb9-j4_5-strain.xml" />
+
     <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
-    <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" /> 
-    <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />     
-    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> 
- 
-    <!-- INERTIAL SENSOR--> 
+    <xi:include href="wrappers/VFT/right_leg-VFT_wrapper.xml" />
+    <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />
+    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
+
+    <!-- INERTIAL SENSOR-->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
-    <xi:include href="hardware/inertials/head-inertial.xml" /> 
-    
+    <xi:include href="hardware/inertials/head-inertial.xml" />
+
     <!--  SKINS -->
     <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" />
     <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />
     <xi:include href="hardware/skin/left_leg-eb10-skin.xml" />
     <xi:include href="hardware/skin/right_leg-eb11-skin.xml" />
-    
+
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
-    <xi:include href="calibrators/torso-calib.xml" /> 
+    <xi:include href="calibrators/torso-calib.xml" />
 </devices>
-</robot> 
+</robot>
 
 
 

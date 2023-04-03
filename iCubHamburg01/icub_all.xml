@@ -5,20 +5,19 @@
 <devices>
      <!-- head motor controller. there are two board/devices: head0 and head1 -->
     <!-- HEAD -->
-    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />  
-    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" /> 
-    <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" /> 
-    <xi:include href="./wrappers/motorControl/head-mc_remapper.xml" /> 
+    <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
+    <xi:include href="./hardware/motorControl/head-eb21-j2_5-mc.xml" />
+    <xi:include href="./wrappers/motorControl/head-mc_wrapper.xml" />
+    <xi:include href="./wrappers/motorControl/head-mc_remapper.xml" />
 
  <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />-->
 
     <!-- head calibrator -->
     <xi:include href="./calibrators/head_calib.xml" />
-    
+
 </devices>
-</robot> 
+</robot>
 
