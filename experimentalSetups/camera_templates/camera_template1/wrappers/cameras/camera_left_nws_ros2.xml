@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="camera_left_nws_yarp" type="frameGrabber_nws_ros2">
+    <param name="period"> 0.033 </param>
+    <param name="topic_name">  /icub/cam/left </param>
+    <param name="node_name">  /node_icub_cam_left </param>
+    <param name="frame_id">  icub_cam_left_frame </param>
+    <action phase="startup" level="10" type="attach">
+        <paramlist name="networks">
+            <elem name="subdevice"> camera_left_driver </elem> 
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="10" type="detach" />
+</device>
