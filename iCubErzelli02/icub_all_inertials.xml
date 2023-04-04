@@ -5,7 +5,7 @@
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
-    
+
     <devices>
     <!-- HEAD -->
     <xi:include href="./hardware/motorControl/head-eb20-j0_1-mc.xml" />
@@ -45,7 +45,6 @@
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
 
     <!-- ANALOG SENSOR MAIS -->

@@ -72,13 +72,12 @@
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
     <!--
-    <xi:include href="wrappers/skin/left_hand_inertial_wrapper.xml" />  
-    <xi:include href="wrappers/skin/right_hand_inertial_wrapper.xml" />  
-    <xi:include href="hardware/skin/left_hand_inertial_mtb.xml" />  
-    <xi:include href="hardware/skin/right_hand_inertial_mtb.xml" />  
+    <xi:include href="wrappers/skin/left_hand_inertial_wrapper.xml" />
+    <xi:include href="wrappers/skin/right_hand_inertial_wrapper.xml" />
+    <xi:include href="hardware/skin/left_hand_inertial_mtb.xml" />
+    <xi:include href="hardware/skin/right_hand_inertial_mtb.xml" />
     -->
 
     <!-- CALIBRATORS -->

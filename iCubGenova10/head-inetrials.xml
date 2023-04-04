@@ -27,7 +27,6 @@
     <xi:include href="wrappers/inertials/waist-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/waist-inertial.xml" />
     <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/waist-eb5-inertials.xml" />
 
 

@@ -6,49 +6,48 @@
     <params>
         <xi:include href="hardware/electronics/pc104.xml" />
     </params>
-        
+
     <devices>
-    
-     
+
+
         <!-- LEFT ARM -->
         <xi:include href="hardware/motorControl/left_arm-eb1-j0_3-mc.xml" />
         <xi:include href="hardware/motorControl/left_arm-eb2-j4_15-mc.xml" />
-        <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" /> 
+        <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
 
-        <!-- TORSO --> 
+        <!-- TORSO -->
         <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
-        <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" /> 
+        <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
 
-            
 
-        <!-- INERTIAL SENSOR--> 
+
+        <!-- INERTIAL SENSOR-->
         <!-- <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
         <xi:include href="wrappers/inertials/head-imuFilter.xml" />
         <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-        <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
         <xi:include href="hardware/inertials/head-inertial.xml" />
         -->
-        
-        <!-- IMU --> 
-        <!-- it is the imu bosch bno055 inside the rfe board         
+
+        <!-- IMU -->
+        <!-- it is the imu bosch bno055 inside the rfe board
         <xi:include href="hardware/inertials/head-imu-rfe.xml" />
         <xi:include href="wrappers/inertials/head-imu-rfe_wrapper.xml" />
         -->
-  
-        <!-- ANALOG SENSOR MAIS -->
-        <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" /> 
-        <xi:include href="hardware/MAIS/left_arm-eb2-j4_15-mais.xml" /> 
 
-        
-   
-          
+        <!-- ANALOG SENSOR MAIS -->
+        <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
+        <xi:include href="hardware/MAIS/left_arm-eb2-j4_15-mais.xml" />
+
+
+
+
         <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
 
 
 
-        <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" /> 
+        <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
         <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
-        
+
         <!--  CALIBRATORS -->
 
         <xi:include href="calibrators/left_arm-calib.xml" />
@@ -57,11 +56,11 @@
         <xi:include href="calibrators/torso-calib.xml" />
 
 
-      
-        <!-- CARTESIANS --> 
+
+        <!-- CARTESIANS -->
 
         <xi:include href="cartesian/left_arm-cartesian.xml" />
-    
+
     </devices>
-    
-</robot> 
+
+</robot>

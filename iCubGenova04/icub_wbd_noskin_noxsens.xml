@@ -45,11 +45,9 @@
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
 <!-- <xi:include href="hardware/inertials/waist-inertial.xml" />
-    <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper-deprecated.xml" /> -->
+    <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper.xml" /> -->
 
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />

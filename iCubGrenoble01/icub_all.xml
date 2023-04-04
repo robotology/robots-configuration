@@ -15,7 +15,7 @@
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/face-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
-    
+
     <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" />
@@ -73,13 +73,12 @@
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/head-inertials_wrapper-deprecated.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
     <!--
-    <xi:include href="wrappers/skin/left_hand_inertial_wrapper.xml" />  
-    <xi:include href="wrappers/skin/right_hand_inertial_wrapper.xml" />  
-    <xi:include href="hardware/skin/left_hand_inertial_mtb.xml" />  
-    <xi:include href="hardware/skin/right_hand_inertial_mtb.xml" />  
+    <xi:include href="wrappers/skin/left_hand_inertial_wrapper.xml" />
+    <xi:include href="wrappers/skin/right_hand_inertial_wrapper.xml" />
+    <xi:include href="hardware/skin/left_hand_inertial_mtb.xml" />
+    <xi:include href="hardware/skin/right_hand_inertial_mtb.xml" />
     -->
 
     <!-- CALIBRATORS -->

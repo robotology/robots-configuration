@@ -1,5 +1,6 @@
 
-	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="inertial" type="inertial">
+	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="inertial" type="multipleanalogsensorsserver">
+	    <param name="period">  10  </param>
 		<param name="name"> /vizzy/inertial </param>
 		<param name="subdevice"> xsensmtx </param>
 		<param name="serial"> /dev/ttyS0 </param>
