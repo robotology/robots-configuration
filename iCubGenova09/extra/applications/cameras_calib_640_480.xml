@@ -4,7 +4,12 @@
 </dependencies> 
 <module>
   <name>yarpdev</name>
-      <parameters> --from camera/ServerGrabberDualDragon640_480.ini --split true</parameters>
+      <parameters> --from camera/dragonfly2_config_left_640_480.ini</parameters>
+  <node>icub-head</node>
+</module>
+<module>
+  <name>yarpdev</name>
+      <parameters> --from camera/dragonfly2_config_right_640_480.ini</parameters>
   <node>icub-head</node>
 </module>
 <module>
