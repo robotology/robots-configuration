@@ -3,7 +3,7 @@
 # CopyPolicy: Released under the terms of the GNU GPL v2.0.
 
 cmake_minimum_required(VERSION 3.5)
-project(robots-configuration VERSION 2.2.0)
+project(robots-configuration VERSION 2.2.1)
 
 find_package(YARP REQUIRED)
 find_package(ICUBcontrib REQUIRED)
