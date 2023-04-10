@@ -13,7 +13,7 @@
 	<xi:include href="./iCubHeidelberg01/icub_all.xml" />
 	<xi:include href="./iCubDarmstadt01/icub_all.xml" />
 	<xi:include href="./iCubErzelli02/icub_all.xml" />
-	<xi:include href="./iCubOsaka01/icub_all.xml" />
+	<xi:include href="./iCubTokyo01/icub_all.xml" />
 	<xi:include href="./iCubSeoul01/icub_all.xml" />
 	<xi:include href="./iCubDijon01/icub_all.xml" />
 	<xi:include href="./iCubEdinburgh01/icub_all.xml" />
