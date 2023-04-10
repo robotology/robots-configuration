@@ -32,7 +32,7 @@ jobs:
       run: |
         sudo apt update
         sudo apt install git build-essential cmake libace-dev libtinyxml-dev coinor-libipopt-dev libeigen3-dev libgsl-dev \
-                         xmlstarlet
+                         libi2c-dev i2c-tools xmlstarlet
 
     - name: Determine Source-based Dependencies required versions
       shell: bash
@@ -71,7 +71,12 @@ jobs:
         git clone https://github.com/robotology/yarp.git --depth 1 --branch v${{ env.yarp_version }}
         cd yarp && mkdir -p build && cd build
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
-        -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=ON -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=OFF -DYARP_COMPILE_EXECUTABLES:BOOL=ON ..
+              -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=ON \
+              -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF \
+              -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=OFF \
+              -DYARP_COMPILE_EXECUTABLES:BOOL=ON \
+              -DENABLE_yarpmod_imuBosch_BNO055:BOOL=ON \
+              -DYARP_USE_I2C:BOOL=ON ..
         cmake --build . --config ${{ matrix.build_type }} --target install
 
         # icub-firmware-shared
