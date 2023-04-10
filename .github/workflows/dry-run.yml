@@ -32,7 +32,7 @@ jobs:
       run: |
         sudo apt update
         sudo apt install git build-essential cmake libace-dev libtinyxml-dev coinor-libipopt-dev libeigen3-dev libgsl-dev \
-                         xmlstarlet zip
+                         xmlstarlet
 
     - name: Determine Source-based Dependencies required versions
       shell: bash
@@ -151,11 +151,11 @@ jobs:
       run: |
         cd build
         ctest --timeout 60 --output-on-failure
-        zip -q dry-run_log.zip dry-run_log_*.txt
 
     - name: Upload Output
+      if: always()
       uses: actions/upload-artifact@main
       with:
-        name: dry-run
-        path: dry-run_log.zip
+        name: dry-run_${{ github.run_id }}
+        path: build/dry-run_log_*.txt
         retention-days: 30
