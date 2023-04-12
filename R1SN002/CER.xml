@@ -5,10 +5,12 @@
 <devices>
 
     <!-- ODOMETRY -->
+    <!--
     <xi:include href="hardware/odometry/odometry.xml" disabled_by="disable_odometry" />
     <xi:include href="wrappers/odometry/odometry_nws_yarp.xml" disabled_by="disable_odometry" />
     <xi:include href="wrappers/odometry/odometry_nws_ros.xml" enabled_by="enable_ros" disabled_by="disable_odometry" />
     <xi:include href="wrappers/odometry/odometry_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_odometry" />
+    -->
 
     <!-- LASER -->
     <xi:include href="hardware/rpLidar/laserA2_hw_back.xml" disabled_by="disable_lidar" />
