@@ -19,8 +19,8 @@
         <!-- joint logical number               0           1           2           3         -->
         <!-- joint name                         neck-pitch  neck-roll   neck-yaw    eyes-tilt -->
         <group name="CALIBRATION">
-            <param name="calibrationType">      12          12         12           12         </param>
-            <param name="calibration1">   	39103	    18095      61615	    52575      </param>
+            <param name="calibrationType">      12          12          12           12         </param>
+            <param name="calibration1">   	27519	    -17823      61615	    52575      </param>
             <param name="calibration2">         0           0           0	    0          </param>
             <param name="calibration3">         0           0           0           0          </param>
 
