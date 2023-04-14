@@ -36,7 +36,6 @@
 	<!-- <xi:include href="./iCubGenova01/icub_all_no_legs.xml" /> -->
 	<!-- <xi:include href="./iCubTemplates" /> -->
 	<xi:include href="./iCubGenova04/icub_all.xml" />
-	<xi:include href="./iRonCub-Mk1/iRonCub_wbd.xml" />
 	<xi:include href="./iCubAnkara01/icub_all.xml" />
 	<xi:include href="./iCubLausanne01/icub_all.xml" />
 	<xi:include href="./iCubRome02/icub_all.xml" />
