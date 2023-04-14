@@ -74,8 +74,8 @@ jobs:
               -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=ON \
               -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=ON \
               -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=ON \
-              -DYARP_COMPILE_EXECUTABLES:BOOL=ON \
-              -DYARP_NO_DEPRECATED:BOOL=ON ..
+              #-DYARP_NO_DEPRECATED:BOOL=ON \
+              -DYARP_COMPILE_EXECUTABLES:BOOL=ON ..
         cmake --build . --config ${{ matrix.build_type }} --target install
 
         ## yarp-device-xsensmt
