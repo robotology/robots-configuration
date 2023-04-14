@@ -32,7 +32,7 @@ jobs:
       run: |
         sudo apt update
         sudo apt install git build-essential cmake libace-dev libtinyxml-dev coinor-libipopt-dev libeigen3-dev libgsl-dev \
-                         libi2c-dev i2c-tools xmlstarlet
+                         libopencv-dev libsdl1.2-dev libi2c-dev i2c-tools xmlstarlet
 
     - name: Determine Source-based Dependencies required versions
       shell: bash
@@ -72,12 +72,28 @@ jobs:
         cd yarp && mkdir -p build && cd build
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
               -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=ON \
-              -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF \
-              -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=OFF \
+              -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=ON \
+              -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=ON \
               -DYARP_COMPILE_EXECUTABLES:BOOL=ON \
-              -DENABLE_yarpmod_imuBosch_BNO055:BOOL=ON \
-              -DYARP_USE_I2C:BOOL=ON ..
+              -DYARP_NO_DEPRECATED:BOOL=ON ..
         cmake --build . --config ${{ matrix.build_type }} --target install
+
+        # yarp-device-xsensmt
+        cd ${GITHUB_WORKSPACE}/..
+        git clone https://github.com/robotology/yarp-device-xsensmt.git
+        cd yarp-device-xsensmt
+        # checkout latest tag
+        git checkout $(git tag | tail -1)
+        mkdir -p build && cd build
+        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
+        cmake --build . --config ${{ matrix.build_type }} --target install
+
+        ## yarp-device-rplidar
+        #cd ${GITHUB_WORKSPACE}/..
+        #git clone https://github.com/robotology/yarp-device-rplidar.git --depth 1 --branch master
+        #cd yarp-device-rplidar && mkdir -p build && cd build
+        #cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
+        #cmake --build . --config ${{ matrix.build_type }} --target install
 
         # icub-firmware-shared
         cd ${GITHUB_WORKSPACE}/..
@@ -92,13 +108,6 @@ jobs:
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
               -DBUILD_SHARED_LIBS:BOOL=OFF \
               -DICUB_USE_icub_firmware_shared:BOOL=ON \
-              -DENABLE_icubmod_skinWrapper:BOOL=ON \
-              -DENABLE_icubmod_sharedcan:BOOL=ON \
-              -DENABLE_icubmod_canmotioncontrol:BOOL=ON \
-              -DENABLE_icubmod_canBusAnalogSensor:BOOL=ON \
-              -DENABLE_icubmod_canBusInertialMTB:BOOL=ON \
-              -DENABLE_icubmod_canBusSkin:BOOL=ON \
-              -DENABLE_icubmod_canBusVirtualAnalogSensor:BOOL=ON \
               -DENABLE_icubmod_embObjFTsensor:BOOL=ON \
               -DENABLE_icubmod_embObjIMU:BOOL=ON \
               -DENABLE_icubmod_embObjInertials:BOOL=ON \
@@ -108,9 +117,27 @@ jobs:
               -DENABLE_icubmod_embObjSkin:BOOL=ON \
               -DENABLE_icubmod_embObjStrain:BOOL=ON \
               -DENABLE_icubmod_embObjMultipleFTsensors:BOOL=ON \
-              -DENABLE_icubmod_parametricCalibrator:BOOL=ON \
-              -DENABLE_icubmod_parametricCalibratorEth:BOOL=ON \
+              -DENABLE_icubmod_embObjPOS:BOOL=ON \
+              -DENABLE_icubmod_embObjPSC:BOOL=ON \
+              -DENABLE_icubmod_embObjBattery:BOOL=ON \
+              -DENABLE_icubmod_xsensmtx:BOOL=ON \
               -DENABLE_icubmod_cartesiancontrollerserver:BOOL=ON ..
+        cmake --build . --config ${{ matrix.build_type }} --target install
+
+        # navigation
+        cd ${GITHUB_WORKSPACE}/..
+        git clone https://github.com/robotology/navigation.git --depth 1 --branch master
+        cd navigation && mkdir -p build && cd build
+        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
+        cmake --build . --config ${{ matrix.build_type }} --target install
+
+        # cer
+        cd ${GITHUB_WORKSPACE}/..
+        git clone https://github.com/robotology/cer.git --depth 1 --branch devel
+        cd cer && mkdir -p build && cd build
+        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
+              -DENABLE_cermod_tripodMotionControl:BOOL=ON \
+              -DENABLE_cermod_cerDoubleLidar:BOOL=ON ..
         cmake --build . --config ${{ matrix.build_type }} --target install
 
         # icub-contrib-common
@@ -124,7 +151,7 @@ jobs:
       shell: bash
       run: |
         echo "${GITHUB_WORKSPACE}/install/bin" >> $GITHUB_PATH
-        echo "YARP_DATA_DIRS=${GITHUB_WORKSPACE}/install/share/yarp:${GITHUB_WORKSPACE}/install/share/iCub:${GITHUB_WORKSPACE}/install/share/ICUBcontrib" >> $GITHUB_ENV
+        echo "YARP_DATA_DIRS=${GITHUB_WORKSPACE}/install/share/yarp:${GITHUB_WORKSPACE}/install/share/iCub:${GITHUB_WORKSPACE}/install/share/CER:${GITHUB_WORKSPACE}/install/share/navigation:${GITHUB_WORKSPACE}/install/share/ICUBcontrib" >> $GITHUB_ENV
 
     # ===================
     # CMAKE-BASED PROJECT
@@ -155,7 +182,7 @@ jobs:
       shell: bash
       run: |
         cd build
-        ctest --timeout 60 --output-on-failure
+        ctest --timeout 60
 
     - name: Upload Output
       if: always()
