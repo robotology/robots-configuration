@@ -18,11 +18,14 @@
     <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
 
     <!-- LEFT ARM -->
-    <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" /> -->
+    <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" />
 
 
     <!--CALIBRATORS -->
-    <xi:include href="calibrators/left_arm-calib.xml" /> 
+    <xi:include href="calibrators/left_arm-calib.xml" />
+
+    <!-- TELEMETRY DEVICE DUMPER-->
+    <!-- <xi:include href= "./telemetryDeviceDumper_sim.xml"/> -->
 
   </devices>
 </robot>
