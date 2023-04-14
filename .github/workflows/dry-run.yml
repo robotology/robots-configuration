@@ -120,6 +120,7 @@ jobs:
               -DENABLE_icubmod_embObjPSC:BOOL=ON \
               -DENABLE_icubmod_embObjBattery:BOOL=ON \
               -DENABLE_icubmod_xsensmtx:BOOL=ON \
+              -DENABLE_icubmod_parametricCalibratorEth:BOOL=ON \
               -DENABLE_icubmod_cartesiancontrollerserver:BOOL=ON ..
         cmake --build . --config ${{ matrix.build_type }} --target install
 
