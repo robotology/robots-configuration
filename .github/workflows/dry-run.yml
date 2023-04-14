@@ -31,8 +31,9 @@ jobs:
     - name: Dependencies
       run: |
         sudo apt update
-        sudo apt install git build-essential cmake libace-dev libtinyxml-dev coinor-libipopt-dev libeigen3-dev libgsl-dev \
-                         libopencv-dev libsdl1.2-dev libi2c-dev i2c-tools xmlstarlet
+        sudo apt install git build-essential cmake libace-dev libtinyxml-dev libtinyxml2-dev libxml2-dev \
+                         coinor-libipopt-dev libeigen3-dev libgsl-dev libopencv-dev libsdl1.2-dev \
+                         libi2c-dev i2c-tools xmlstarlet
 
     - name: Determine Source-based Dependencies required versions
       shell: bash
