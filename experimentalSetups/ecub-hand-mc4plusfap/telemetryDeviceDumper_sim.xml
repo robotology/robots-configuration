@@ -1,0 +1,32 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="telemetryDeviceDumper" type="telemetryDeviceDumper">
+    <param name="axesNames">(l_thumb_oc, l_index_oc, l_middle_oc)</param>
+    <param name="logIEncoders">true</param>
+    <param name="logITorqueControl">true</param>
+    <param name="logIMotorEncoders">true</param>
+    <param name="logIControlMode">true</param>
+    <param name="logIAmplifierControl">true</param>
+    <param name="localizationRemoteName">/localizationServer</param>
+    <param name="saveBufferManagerConfiguration">true</param>
+    <param name="experimentName">test_telemetry_001</param>
+    <param name="path">./test_telemetry_001/test_001/</param>
+    <param name="n_samples">100000</param>
+    <param name="save_periodically">true</param>
+    <param name="save_period">120.0</param>
+    <param name="data_threshold">300</param>
+    <param name="auto_save">true</param>
+
+    <action phase="startup" level="15" type="attach">
+        <paramlist name="networks">
+            <!-- motorcontrol -->
+            <elem name="left_arm_joints1"> left_arm-eb23-j7_10-mc   </elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="2" type="detach" />
+
+</device>
