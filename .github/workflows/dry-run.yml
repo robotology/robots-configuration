@@ -182,7 +182,8 @@ jobs:
       shell: bash
       run: |
         cd build
-        ctest --timeout 60
+        ctest --timeout 60 --tests-regex xml
+        ctest --timeout 60 --tests-regex dev
 
     - name: Upload Output
       if: always()
