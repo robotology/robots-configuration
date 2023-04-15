@@ -1,18 +1,11 @@
 name: Dry-Run
 
 on:
-  schedule:
-    - cron:  '0 0 * * MON'
   workflow_dispatch:
 
 jobs:
-  build:
-    name: '[${{ matrix.os }}@${{ matrix.build_type }}]'
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        build_type: [Release]
-        os: [ubuntu-latest]
+  dry-run:
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@main
@@ -65,7 +58,7 @@ jobs:
         git clone https://github.com/robotology/ycm.git --depth 1 --branch v${{ env.ycm_version }}
         cd ycm && mkdir -p build && cd build
         cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --config Release --target install
 
         # yarp
         cd ${GITHUB_WORKSPACE}/..
@@ -76,7 +69,7 @@ jobs:
               -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=ON \
               -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=ON \
               -DYARP_COMPILE_EXECUTABLES:BOOL=ON ..
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --config Release --target install
 
         ## yarp-device-xsensmt
         #cd ${GITHUB_WORKSPACE}/..
@@ -86,21 +79,21 @@ jobs:
         #git checkout $(git tag | tail -1)
         #mkdir -p build && cd build
         #cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        #cmake --build . --config ${{ matrix.build_type }} --target install
+        #cmake --build . --config Release --target install
 
         ## yarp-device-rplidar
         #cd ${GITHUB_WORKSPACE}/..
         #git clone https://github.com/robotology/yarp-device-rplidar.git --depth 1 --branch master
         #cd yarp-device-rplidar && mkdir -p build && cd build
         #cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        #cmake --build . --config ${{ matrix.build_type }} --target install
+        #cmake --build . --config Release --target install
 
         # icub-firmware-shared
         cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/icub-firmware-shared.git --depth 1 --branch ${{ env.icub_firmware_shared_branch }}
         cd icub-firmware-shared && mkdir -p build && cd build
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --config Release --target install
 
         # icub-main
         cd ${GITHUB_WORKSPACE}/..
@@ -124,14 +117,14 @@ jobs:
               -DENABLE_icubmod_skinWrapper:BOOL=ON \
               -DENABLE_icubmod_parametricCalibratorEth:BOOL=ON \
               -DENABLE_icubmod_cartesiancontrollerserver:BOOL=ON ..
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --config Release --target install
 
         # navigation
         cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/navigation.git --depth 1 --branch master
         cd navigation && mkdir -p build && cd build
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --config Release --target install
 
         # cer
         cd ${GITHUB_WORKSPACE}/..
@@ -140,14 +133,14 @@ jobs:
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
               -DENABLE_cermod_tripodMotionControl:BOOL=ON \
               -DENABLE_cermod_cerDoubleLidar:BOOL=ON ..
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --config Release --target install
 
         # icub-contrib-common
         cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/icub-contrib-common.git --depth 1
         cd icub-contrib-common && mkdir -p build && cd build
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --config ${{ matrix.build_type }} --target install 
+        cmake --build . --target install 
 
     - name: Extend Path
       shell: bash
@@ -168,17 +161,11 @@ jobs:
               -DBUILD_TESTING:BOOL=ON \
               -DINSTALL_ALL_ROBOTS:BOOL=ON ..
 
-    - name: Build
-      shell: bash
-      run: |
-        cd build
-        cmake --build . --config ${{ matrix.build_type }}
-        
     - name: Install
       shell: bash
       run: |
         cd build
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --target install
 
     - name: Test
       shell: bash
