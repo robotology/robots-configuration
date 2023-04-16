@@ -3,161 +3,30 @@ name: Dry-Run
 on:
   workflow_dispatch:
 
+env:
+  DEPENDENCIES_DIR: ${{ vars.DEPENDENCIES_DIR }}
+
 jobs:
   dry-run:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/robotology/robots-configuration:latest
 
     steps:
     - uses: actions/checkout@main
-      with:
-        ref: devel
-        
-    # Remove apt repos that are known to break from time to time
-    # See https://github.com/actions/virtual-environments/issues/323
-    - name: Remove broken apt repos
-      run: |
-        for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
 
-    # ============
-    # DEPENDENCIES
-    # ============
-    - name: Dependencies
-      run: |
-        sudo apt update
-        sudo apt install git build-essential cmake libace-dev libtinyxml-dev libtinyxml2-dev libxml2-dev \
-                         coinor-libipopt-dev libeigen3-dev libgsl-dev libopencv-dev libsdl1.2-dev \
-                         libi2c-dev i2c-tools xmlstarlet
-
-    - name: Determine Source-based Dependencies required versions
+    - name: Extend environment
       shell: bash
       run: |
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/icub-main.git --depth 1 --branch devel
-        cd icub-main
+        echo "${DEPENDENCIES_DIR}/install/bin" >> $GITHUB_PATH
+        echo "YARP_DATA_DIRS=${DEPENDENCIES_DIR}/install/share/yarp:${DEPENDENCIES_DIR}/install/share/iCub:${DEPENDENCIES_DIR}/install/share/CER:${DEPENDENCIES_DIR}/install/share/navigation:${DEPENDENCIES_DIR}/install/share/ICUBcontrib" >> $GITHUB_ENV
 
-        grep -m 1 YCM_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" > YCM_VERSION.txt
-        grep -m 1 YARP_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" > YARP_VERSION.txt
-        echo "ycm_version=$(cat YCM_VERSION.txt)" >> $GITHUB_ENV
-        echo "yarp_version=$(cat YARP_VERSION.txt)" >> $GITHUB_ENV
-
-        grep -m 1 icub_firmware_shared_VERSION conf/iCubFindDependencies.cmake | sed "s/[^0-9.]//g" > icub_firmware_shared_VERSION.txt
-        gh --repo robotology/icub-firmware-shared release list > icub_firmware_shared_RELEASES.txt
-        if grep -q $(cat icub_firmware_shared_VERSION.txt) icub_firmware_shared_RELEASES.txt; then
-          echo "icub_firmware_shared_branch=v$(cat icub_firmware_shared_VERSION.txt)" >> $GITHUB_ENV
-        else
-          echo "icub_firmware_shared_branch=devel" >> $GITHUB_ENV
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Source-based Dependencies
-      shell: bash
-      run: |
-        # ycm
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/ycm.git --depth 1 --branch v${{ env.ycm_version }}
-        cd ycm && mkdir -p build && cd build
-        cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --config Release --target install
-
-        # yarp
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/yarp.git --depth 1 --branch v${{ env.yarp_version }}
-        cd yarp && mkdir -p build && cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
-              -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=ON \
-              -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=ON \
-              -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=ON \
-              -DYARP_COMPILE_EXECUTABLES:BOOL=ON ..
-        cmake --build . --config Release --target install
-
-        ## yarp-device-xsensmt
-        #cd ${GITHUB_WORKSPACE}/..
-        #git clone https://github.com/robotology/yarp-device-xsensmt.git
-        #cd yarp-device-xsensmt
-        # checkout latest tag
-        #git checkout $(git tag | tail -1)
-        #mkdir -p build && cd build
-        #cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        #cmake --build . --config Release --target install
-
-        ## yarp-device-rplidar
-        #cd ${GITHUB_WORKSPACE}/..
-        #git clone https://github.com/robotology/yarp-device-rplidar.git --depth 1 --branch master
-        #cd yarp-device-rplidar && mkdir -p build && cd build
-        #cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        #cmake --build . --config Release --target install
-
-        # icub-firmware-shared
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/icub-firmware-shared.git --depth 1 --branch ${{ env.icub_firmware_shared_branch }}
-        cd icub-firmware-shared && mkdir -p build && cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --config Release --target install
-
-        # icub-main
-        cd ${GITHUB_WORKSPACE}/..
-        cd icub-main && mkdir -p build && cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
-              -DBUILD_SHARED_LIBS:BOOL=OFF \
-              -DICUB_USE_icub_firmware_shared:BOOL=ON \
-              -DENABLE_icubmod_embObjFTsensor:BOOL=ON \
-              -DENABLE_icubmod_embObjIMU:BOOL=ON \
-              -DENABLE_icubmod_embObjInertials:BOOL=ON \
-              -DENABLE_icubmod_embObjMais:BOOL=ON \
-              -DENABLE_icubmod_embObjMotionControl:BOOL=ON \
-              -DENABLE_icubmod_embObjBattery:BOOL=ON \
-              -DENABLE_icubmod_embObjSkin:BOOL=ON \
-              -DENABLE_icubmod_embObjStrain:BOOL=ON \
-              -DENABLE_icubmod_embObjMultipleFTsensors:BOOL=ON \
-              -DENABLE_icubmod_embObjPOS:BOOL=ON \
-              -DENABLE_icubmod_embObjPSC:BOOL=ON \
-              -DENABLE_icubmod_embObjBattery:BOOL=ON \
-              -DENABLE_icubmod_xsensmtx:BOOL=ON \
-              -DENABLE_icubmod_skinWrapper:BOOL=ON \
-              -DENABLE_icubmod_parametricCalibratorEth:BOOL=ON \
-              -DENABLE_icubmod_cartesiancontrollerserver:BOOL=ON ..
-        cmake --build . --config Release --target install
-
-        # navigation
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/navigation.git --depth 1 --branch master
-        cd navigation && mkdir -p build && cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --config Release --target install
-
-        # cer
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/cer.git --depth 1 --branch devel
-        cd cer && mkdir -p build && cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
-              -DENABLE_cermod_tripodMotionControl:BOOL=ON \
-              -DENABLE_cermod_cerDoubleLidar:BOOL=ON ..
-        cmake --build . --config Release --target install
-
-        # icub-contrib-common
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/icub-contrib-common.git --depth 1
-        cd icub-contrib-common && mkdir -p build && cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        cmake --build . --target install 
-
-    - name: Extend Path
-      shell: bash
-      run: |
-        echo "${GITHUB_WORKSPACE}/install/bin" >> $GITHUB_PATH
-        echo "YARP_DATA_DIRS=${GITHUB_WORKSPACE}/install/share/yarp:${GITHUB_WORKSPACE}/install/share/iCub:${GITHUB_WORKSPACE}/install/share/CER:${GITHUB_WORKSPACE}/install/share/navigation:${GITHUB_WORKSPACE}/install/share/ICUBcontrib" >> $GITHUB_ENV
-
-    # ===================
-    # CMAKE-BASED PROJECT
-    # ===================
     - name: Configure
       shell: bash
       run: |
-        mkdir -p build
-        cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install \
-              -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
+        mkdir -p build && cd build
+        cmake -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
+              -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install \
               -DBUILD_TESTING:BOOL=ON \
               -DINSTALL_ALL_ROBOTS:BOOL=ON ..
 

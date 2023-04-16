@@ -15,7 +15,7 @@ RUN  apt update && \
                   libi2c-dev i2c-tools xmlstarlet magic-wormhole
 
 # Select options
-ARG DEPENDENCIES_DIR=/dependencies
+ARG DEPENDENCIES_DIR
 
 # Do preparations
 RUN locale-gen en_US.UTF-8 && \
