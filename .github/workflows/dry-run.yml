@@ -35,13 +35,13 @@ jobs:
         git clone https://github.com/robotology/icub-main.git --depth 1 --branch devel
         cd icub-main
 
-        grep -m 1 YCM_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" >> YCM_VERSION.txt
-        grep -m 1 YARP_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" >> YARP_VERSION.txt
+        grep -m 1 YCM_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" > YCM_VERSION.txt
+        grep -m 1 YARP_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" > YARP_VERSION.txt
         echo "ycm_version=$(cat YCM_VERSION.txt)" >> $GITHUB_ENV
         echo "yarp_version=$(cat YARP_VERSION.txt)" >> $GITHUB_ENV
 
-        grep -m 1 icub_firmware_shared_VERSION conf/iCubFindDependencies.cmake | sed "s/[^0-9.]//g" >> icub_firmware_shared_VERSION.txt
-        gh --repo robotology/icub-firmware-shared release list >> icub_firmware_shared_RELEASES.txt
+        grep -m 1 icub_firmware_shared_VERSION conf/iCubFindDependencies.cmake | sed "s/[^0-9.]//g" > icub_firmware_shared_VERSION.txt
+        gh --repo robotology/icub-firmware-shared release list > icub_firmware_shared_RELEASES.txt
         if grep -q $(cat icub_firmware_shared_VERSION.txt) icub_firmware_shared_RELEASES.txt; then
           echo "icub_firmware_shared_branch=v$(cat icub_firmware_shared_VERSION.txt)" >> $GITHUB_ENV
         else

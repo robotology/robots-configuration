@@ -1,0 +1,18 @@
+name: Publish Docker Image
+
+on:
+  workflow_dispatch:
+        
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      with:
+        name: robotology/robots-configuration
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        workdir: scripts/dockerfiles
+        registry: ghcr.io
