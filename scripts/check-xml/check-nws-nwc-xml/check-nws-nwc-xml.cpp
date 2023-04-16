@@ -1,3 +1,10 @@
+/******************************************************************************
+ *                                                                            *
+ * Copyright (C) 2023 Fondazione Istituto Italiano di Tecnologia (IIT)        *
+ * All Rights Reserved.                                                       *
+ *                                                                            *
+ ******************************************************************************/
+
 #include "pugixml.hpp"
 #include <iostream>
 #include <fstream>
