@@ -19,7 +19,7 @@ cleanup() {
 # check if yarprobotinterface is running
 # see https://askubuntu.com/a/988986
 check_yri_runs() {
-  if ps -o comm= -C "yarprobotinterface" 2>/dev/null | grep "yarprobot" >/dev/null 2>&1; then
+  if ps -o comm= -C "yarprobotinterface" 2>/dev/null | grep -x "yarprobotinterf" >/dev/null 2>&1; then
     return 0
   else
     echo "yarprobotinterface quit unexpectedly"
