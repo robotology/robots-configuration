@@ -12,11 +12,8 @@
 # clean up hanging resources
 cleanup() {
   echo "Cleaning up..."
-  declare -a modules=("yarprobotinterface" \
-                      "yarpserver")
-  for module in ${modules[@]}; do
-    killall -9 ${module}
-  done
+  killall -9 yarprobotinterface
+  killall -9 yarpserver
 }
 
 # check if yarprobotinterface is running

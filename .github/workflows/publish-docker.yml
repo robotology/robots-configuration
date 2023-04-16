@@ -10,9 +10,12 @@ jobs:
     - uses: actions/checkout@main
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v5
+      env:
+        DEPENDENCIES_DIR: ${{ vars.DEPENDENCIES_DIR }}
       with:
         name: robotology/robots-configuration
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         workdir: scripts/dockerfiles
+        buildargs: DEPENDENCIES_DIR
         registry: ghcr.io
