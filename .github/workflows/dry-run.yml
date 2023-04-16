@@ -40,7 +40,7 @@ jobs:
       shell: bash
       run: |
         cd build
-        ctest --timeout 60
+        ctest --timeout 60 --output-on-failure
 
     - name: Upload Output
       if: always()
