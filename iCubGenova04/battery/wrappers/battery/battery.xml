@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="icubBattery" type="batteryWrapper">
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="icubBattery" type="battery_nws_yarp">
 
-      <param name="period">           0.1        </param>
+      <param name="period">           1.0        </param>
       <param name="name">         /icub/battery  </param>
       <param name="enable_log">        0         </param>
       <param name="enable_shutdown">   0         </param>
