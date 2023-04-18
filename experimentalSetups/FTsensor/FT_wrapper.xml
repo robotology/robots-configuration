@@ -2,10 +2,10 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="FT1_wrapper" type="analogServer">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="FT1_wrapper" type="multipleanalogsensorsserver">
         <param name="period">   10  	</param>
-        <param name="name">     /FT_sensor_1/analog:o </param>
-		
+        <param name="name">     /FT_sensor_1/ </param>
+
 	<action phase="startup" level="5" type="attach">
 	    <paramlist name="networks">
 	        <elem name="FirstStrain">  FT_sensor_1 </elem>
@@ -19,7 +19,7 @@
          <param name ="frame_id"> /FT_sensor_1_frame  </param>
          <param name ="ROS_msgType"> geometry_msgs/WrenchStamped </param>
     </group>
-      
+
 	<action phase="shutdown" level="5" type="detach" />
 </device>
 
