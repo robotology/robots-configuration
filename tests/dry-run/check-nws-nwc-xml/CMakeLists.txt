@@ -9,7 +9,6 @@ cmake_minimum_required(VERSION 3.12)
 project(check-nws-nwc-xml)
 
 include(FetchContent)
-
 FetchContent_Declare(
 	pugixml
 	GIT_REPOSITORY https://github.com/zeux/pugixml.git
@@ -17,10 +16,10 @@ FetchContent_Declare(
 )
 
 FetchContent_GetProperties(pugixml)
-  if(NOT pugixml)
-	  FetchContent_Populate(pugixml)
-	  add_subdirectory(${pugixml_SOURCE_DIR} ${pugixml_BINARY_DIR})
-  endif()
+if(NOT pugixml)
+	FetchContent_Populate(pugixml)
+	add_subdirectory(${pugixml_SOURCE_DIR} ${pugixml_BINARY_DIR})
+endif()
 
 add_executable(${PROJECT_NAME})
 target_sources(${PROJECT_NAME} PRIVATE check-nws-nwc-xml.cpp)

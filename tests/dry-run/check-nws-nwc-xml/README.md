@@ -1,6 +1,11 @@
-# check-nws-nwc-xml
-This code has been used to check `xml` files consistency after manual modification due to the new `NWS/NWC` layers implemented in `YARP-3.5`.
-The program uses `XSD` schema and `XPATH` to check `XML` files.
+`check-nws-nwc-xml`
+===================
+
+This tool has been developed due to the need to check `xml` files consistency for `CAN` based robots after manual modification due to the new `NWS/NWC` layers implemented in `YARP-3.5`.
+
+in fact, while for ethernet based robots, we have the possibility to run `yarprobotinterface` in dry-run mode (without having the phisical robot connected), as for now this is not possible on `CAN` based robots.
+
+Considering the effort to update the parser in order to allow the dry-run mode also for `CAN` based robots, we opted to proceed writing a dedicated program using both `XSD` and `XPATH` technologies.
 
 ## Usage
 1. Install the `libxml2-utils` package :
@@ -12,30 +17,27 @@ sudo apt install libxml2-utils
 2. Build the code :
 
 ```sh
-cd <your-robots-configuration-folder>/experimentalSetups/check-nws-nwc-xml
-mkdir build
-cd build
-ccmake ..
-make
+cd <your-robots-configuration-folder>/tests/dry-run/check-nws-nwc-xml
+mkdir build && cd build
+cmake ..
+make install
 ```
 
 3. Run the program :
 
 ```sh
-cd <your-robots-configuration-folder>/experimentalSetups/check-nws-nwc-xml/build
-./check-nws-nwc-xml <robot-folder-absolute-path>
+check-nws-nwc-xml <robot-folder-absolute-path>
 ```
-## Example
 
-Run :
+Example:
 
 ```sh
-./check-nws-nwc-xml /home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01/
+check-nws-nwc-xml /home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01/
 ```
 
 Output :
 
-```
+```console
 1 - test yarprobotinterface.ini presence **************
 
 yarprobotinterface.ini FOUND! PASS
@@ -195,5 +197,4 @@ Remappers XSD check passed!
 ***************************************************
 
 ALL TESTS PASSED!!
-
 ```

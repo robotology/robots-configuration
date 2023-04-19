@@ -2,6 +2,8 @@ name: Publish Docker Image
 
 on:
   workflow_dispatch:
+  release:
+    types: [created]
         
 jobs:
   publish:
@@ -19,3 +21,9 @@ jobs:
         workdir: scripts/dockerfiles
         buildargs: DEPENDENCIES_DIR
         registry: ghcr.io
+    - uses: actions/delete-package-versions@v4.1.1
+      with: 
+        package-name: 'robots-configuration'
+        package-type: 'container'
+        num-old-versions-to-delete: 10
+        delete-only-untagged-versions: "true"

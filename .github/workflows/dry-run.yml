@@ -34,7 +34,7 @@ jobs:
       shell: bash
       run: |
         cd build
-        cmake --build . --target install
+        cmake --build . --config Release --target install
 
     - name: Test
       shell: bash
