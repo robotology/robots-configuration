@@ -11,7 +11,7 @@
         <param name="Encoder">              182.044             182.044          182.044             </param>
         <param name="fullscalePWM">         32000               32000            32000               </param>
         <param name="ampsToSensor">         1000.0              1000.0           1000.0              </param>
-        <param name="Gearbox_M2J">          100.0              100.0            -100.0              </param>
+        <param name="Gearbox_M2J">          100.0               160.0            -100.0              </param>
         <param name="Gearbox_E2J">          1                   1                1                   </param>
         <param name="useMotorSpeedFbk">     1                   1                1                   </param> 
         <param name="MotorType">            "MOOG_C2900576"     "MOOG_C2900576"   "MOOG_C2900576"     </param>
@@ -27,13 +27,13 @@
                                                                     
     <group name="2FOC">                                             
 		<param name="Verbose">              0                   0                0                  </param>
-        <param name="AutoCalibration">      0                   0               0                  </param>
+        <param name="AutoCalibration">      0                   0                0                  </param>
         <param name="HasHallSensor">        0                   0                0                  </param>
         <param name="HasTempSensor">        0                   0                0                  </param>
         <param name="HasRotorEncoder">      1                   1                1                  </param>
         <param name="HasRotorEncoderIndex"> 1                   1                1                  </param>
         <param name="HasSpeedEncoder">      0                   0                0                  </param>
-        <param name="RotorIndexOffset">     66                  131               228                </param>
+        <param name="RotorIndexOffset">     66                  85               228                </param>
         <param name="MotorPoles">           8                   8                8                  </param>
    </group>
 
