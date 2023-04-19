@@ -5,14 +5,16 @@
  *                                                                            *
  ******************************************************************************/
 
-#include "pugixml.hpp"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 #include <regex>
 
- 
+#include <pugixml.hpp>
+#include <yarp/os/ResourceFinder.h>
+
+
 std::string ltrim(const std::string &s) {
     return std::regex_replace(s, std::regex("^\\s+"), std::string(""));
 }
@@ -25,7 +27,7 @@ std::string trim(const std::string &s) {
     return ltrim(rtrim(s));
 }
 
-bool loadIni(std::string robot_dir, std::string & inifile){
+bool loadIni(const std::string& robot_dir, std::string & inifile){
 
     inifile = robot_dir + inifile;
 
@@ -63,7 +65,7 @@ inline bool fileExists (const std::string& name) {
     return f.good();
 }
 
-bool checkIncludedFiles(std::string robot_dir, std::vector<std::string>& vectorAllFiles, std::string& filename, pugi::xml_document& doc ){
+bool checkIncludedFiles(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, std::string& filename, pugi::xml_document& doc ){
 
     int tot,notfound,found;
 
@@ -107,7 +109,7 @@ bool checkIncludedFiles(std::string robot_dir, std::vector<std::string>& vectorA
        
 }
 
-bool loadXmlFile(std::string robot_dir, std::string& filename, pugi::xml_document& doc){
+bool loadXmlFile(const std::string& robot_dir, std::string& filename, pugi::xml_document& doc){
     // std::string fn;
     // fn = robot_dir + filename;
     pugi::xml_parse_result result = doc.load_file(filename.c_str());
@@ -124,7 +126,7 @@ bool loadXmlFile(std::string robot_dir, std::string& filename, pugi::xml_documen
 }
 
 
-bool checkWrappersRemappers(std::string robot_dir, std::vector<std::string> & vectorAllFiles, std::string part, std::string target, bool & pass){
+bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::string> & vectorAllFiles, std::string part, std::string target, bool & pass){
     bool found = false;
     pugi::xml_document doc_wrapper, doc_remapper;
     std::string device;
@@ -160,7 +162,7 @@ bool checkWrappersRemappers(std::string robot_dir, std::vector<std::string> & ve
     else return false;
 }
 
-bool checkCartesian(std::string robot_dir, std::vector<std::string> & vectorAllFiles, std::string part, std::string target, bool & pass){
+bool checkCartesian(const std::string& robot_dir, std::vector<std::string> & vectorAllFiles, std::string part, std::string target, bool & pass){
     bool found = false;
     pugi::xml_document doc_cartesian;
     std::string torso, arm;
@@ -185,7 +187,7 @@ bool checkCartesian(std::string robot_dir, std::vector<std::string> & vectorAllF
     return true;
 }
 
-bool checkCalibratorsWrappersRemappers(std::string robot_dir, std::vector<std::string> & vectorAllFiles, bool & pass){
+bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector<std::string> & vectorAllFiles, bool & pass){
     for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
@@ -236,9 +238,12 @@ int main(int argc, char *argv[])
     bool found = false;
     std::string robot_dir,xsd_cmd;
     int ret;
-    
 
-    robot_dir = argv[1];
+    yarp::os::ResourceFinder rf;
+    rf.setDefaultContext("check-nws-nwc-xml");
+    rf.configure(argc, argv);
+
+    robot_dir = rf.find("robot-dir").asString();
     robot_dir = robot_dir + "/";
     
     // loads the XML file contained in yarprobotinterface.ini
@@ -267,7 +272,8 @@ int main(int argc, char *argv[])
         if(ele.find("calibrators") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ../calibrators.xsd " +  ele + " --noout";
+            auto calibrators = rf.findFile("calibrators.xsd");
+            xsd_cmd = "xmllint --schema " + calibrators + " " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
@@ -293,7 +299,8 @@ int main(int argc, char *argv[])
         if(ele.find("cartesian") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ../cartesian.xsd " +  ele + " --noout";
+            auto cartesian = rf.findFile("cartesian.xsd");
+            xsd_cmd = "xmllint --schema " + cartesian + " " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
@@ -319,7 +326,8 @@ int main(int argc, char *argv[])
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_wrapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ../wrapper.xsd " +  ele + " --noout";
+            auto wrapper = rf.findFile("wrapper.xsd");
+            xsd_cmd = "xmllint --schema " + wrapper + " " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
@@ -345,7 +353,8 @@ int main(int argc, char *argv[])
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_remapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ../remapper.xsd " +  ele + " --noout";
+            auto remapper = rf.findFile("remapper.xsd");
+            xsd_cmd = "xmllint --schema " + remapper + " " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
@@ -364,10 +373,5 @@ int main(int argc, char *argv[])
     std::cout << std::endl << "***************************************************" << std::endl;
     if(ALL_PASSED) std::cout << std::endl << "ALL TESTS PASSED!!" << std::endl;
     else std::cout << std::endl << "SOME TESTS FAILED!!" << std::endl;
-
-
-
 }
-
-
 
