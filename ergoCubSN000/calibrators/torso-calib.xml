@@ -37,8 +37,8 @@
 <param name="startupPosThreshold">                  2                       2                      2                       </param>
 </group>
 
- <!-- check old calibrator for the correct sequence, then ask to Randazz -->
-		<param name="CALIB_ORDER">(0) (1) (2) </param>
+ <!-- Joint 1 has been removed from the calibration order for motor safety -->
+		<param name="CALIB_ORDER">(0) (2) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-mc_remapper</param>
