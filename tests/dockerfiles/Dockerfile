@@ -60,14 +60,14 @@ RUN cd ${DEPENDENCIES_DIR} && \
     cmake --build . --config Release --target install
 
 # yarp-device-xsensmt
-#RUN cd ${DEPENDENCIES_DIR} && \
-#    git clone https://github.com/robotology/yarp-device-xsensmt.git && \
-#    cd yarp-device-xsensmt && mkdir -p build && cd build && \
-#    git checkout $(git tag | tail -1) && \
-#    cmake .. \
-#          -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
-#          -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
-#    cmake --build . --config Release --target install
+RUN cd ${DEPENDENCIES_DIR} && \
+    git clone https://github.com/robotology/yarp-device-xsensmt.git && \
+    cd yarp-device-xsensmt && mkdir -p build && cd build && \
+    git checkout $(git tag | tail -1) && \
+    cmake .. \
+          -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
+          -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
+    cmake --build . --config Release --target install
 
 # yarp-device-rplidar
 #RUN cd ${DEPENDENCIES_DIR} && \
