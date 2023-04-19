@@ -267,7 +267,7 @@ int main(int argc, char *argv[])
         if(ele.find("calibrators") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ..\/calibrators.xsd " +  ele + " --noout";
+            xsd_cmd = "xmllint --schema ../calibrators.xsd " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
@@ -293,7 +293,7 @@ int main(int argc, char *argv[])
         if(ele.find("cartesian") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ..\/cartesian.xsd " +  ele + " --noout";
+            xsd_cmd = "xmllint --schema ../cartesian.xsd " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
@@ -319,7 +319,7 @@ int main(int argc, char *argv[])
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_wrapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ..\/wrapper.xsd " +  ele + " --noout";
+            xsd_cmd = "xmllint --schema ../wrapper.xsd " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
@@ -345,7 +345,7 @@ int main(int argc, char *argv[])
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_remapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            xsd_cmd = "xmllint --schema ..\/remapper.xsd " +  ele + " --noout";
+            xsd_cmd = "xmllint --schema ../remapper.xsd " +  ele + " --noout";
             ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;

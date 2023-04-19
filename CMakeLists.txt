@@ -2,16 +2,14 @@
 # Authors: Ugo Pattacini
 # CopyPolicy: Released under the terms of the GNU GPL v2.0.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12)
 project(robots-configuration VERSION 2.2.1)
 
+find_package(YCM REQUIRED)
 find_package(YARP REQUIRED)
 find_package(ICUBcontrib REQUIRED)
 
-list(APPEND CMAKE_MODULE_PATH ${YARP_MODULE_PATH})
 list(APPEND CMAKE_MODULE_PATH ${ICUBCONTRIB_MODULE_PATH})
-
-include(YarpInstallationHelpers)
 include(ICUBcontribOptions)
 include(ICUBcontribHelpers)
 
@@ -25,6 +23,9 @@ if(UNIX)
     find_program(BASH_PROGRAM bash)
     include(CTest)
     enable_testing()
+    if(BUILD_TESTING)
+        add_subdirectory(tests/dry-run/check-nws-nwc-xml)
+    endif()
 endif()
 
 if(INSTALL_ALL_ROBOTS)
@@ -49,7 +50,7 @@ if(INSTALL_ALL_ROBOTS)
         if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${dir}/CMakeLists.txt)
             message(STATUS "Exists")
             add_subdirectory(${dir})
-            if(BASH_PROGRAM)
+            if(BUILD_TESTING AND BASH_PROGRAM)
                 set(test_dryrun_xml_name "dry-run_${dir}_xml")
                 add_test(NAME ${test_dryrun_xml_name} COMMAND ${BASH_PROGRAM} ${CMAKE_CURRENT_SOURCE_DIR}/tests/dry-run/dry-run_xml.sh ${dir})
                 message(STATUS "Also added test ${test_dryrun_xml_name}")
