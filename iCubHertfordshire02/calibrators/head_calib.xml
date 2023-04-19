@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
      
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_calibrator" type="parametricCalibrator">        
-<xi:include href="../general.xml" />    
+    <xi:include href="../general.xml"/>           
 
         <group name="GENERAL">             
             <param name="joints"> 6 </param>             
