@@ -18,7 +18,7 @@ jobs:
         name: robotology/robots-configuration
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-        workdir: scripts/dockerfiles
+        workdir: tests/dockerfiles
         buildargs: DEPENDENCIES_DIR
         registry: ghcr.io
     - uses: actions/delete-package-versions@v4.1.1
