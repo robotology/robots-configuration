@@ -26,13 +26,13 @@ make install
 3. Run the program :
 
 ```sh
-check-nws-nwc-xml <robot-folder-absolute-path>
+check-nws-nwc-xml --robot-dir <robot-folder-absolute-path>
 ```
 
 Example:
 
 ```sh
-check-nws-nwc-xml /home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01/
+check-nws-nwc-xml --robot-dir /home/tumme/icub-tech-iit/robots-configuration/iCubLausanne01/
 ```
 
 Output :
