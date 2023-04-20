@@ -5,6 +5,7 @@
  *                                                                            *
  ******************************************************************************/
 
+#include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -248,21 +249,20 @@ int main(int argc, char *argv[])
     
     // loads the XML file contained in yarprobotinterface.ini
     std::cout << std::endl << "1 - test yarprobotinterface.ini presence **************" << std::endl << std::endl;
-    if(!loadIni(robot_dir, filename)) return 0;
+    if(!loadIni(robot_dir, filename)) return EXIT_FAILURE;
 
     // loads the above XML file i.e. icub_all.xml
-    if(!loadXmlFile(robot_dir, filename, doc)) return 0;
+    if(!loadXmlFile(robot_dir, filename, doc)) return EXIT_FAILURE;
 
     // checks if all files included in the XML exist
     std::cout << std::endl << "2 - test included xml files presence **************" << std::endl << std::endl;
 
-    if(!checkIncludedFiles(robot_dir, vectorAllFiles, filename, doc)) return 0;
+    if(!checkIncludedFiles(robot_dir, vectorAllFiles, filename, doc)) return EXIT_FAILURE;
    
     // checks calibrators/wrappers/remappers/cartesian xml files consistency
     std::cout << std::endl << "3 - test calibrators/wrappers/remappers/cartesian xml files consistency **************" << std::endl << std::endl;
 
-    if(!checkCalibratorsWrappersRemappers(robot_dir, vectorAllFiles, ALL_PASSED)) return 0;
-
+    if(!checkCalibratorsWrappersRemappers(robot_dir, vectorAllFiles, ALL_PASSED)) return EXIT_FAILURE;
 
     // checks calibrators xml files w/ XSD schema
     std::cout << std::endl << "4 - test calibrators consistency with XSD schema **************" << std::endl << std::endl;
@@ -279,7 +279,6 @@ int main(int argc, char *argv[])
                 ALL_PASSED = false;
                 XSD_PASSED = false;
             }
-            
         }
     }
     if(!found){
@@ -347,7 +346,7 @@ int main(int argc, char *argv[])
     XSD_PASSED = true;
     found = false;
     std::cout << std::endl << "7 - test remappers consistency with XSD schema **************" << std::endl << std::endl;
-        for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_remapper") != std::string::npos) {
@@ -360,7 +359,6 @@ int main(int argc, char *argv[])
                 ALL_PASSED = false;
                 XSD_PASSED = false;
             }
-            
         }
     }
     if(!found){
@@ -373,5 +371,7 @@ int main(int argc, char *argv[])
     std::cout << std::endl << "***************************************************" << std::endl;
     if(ALL_PASSED) std::cout << std::endl << "ALL TESTS PASSED!!" << std::endl;
     else std::cout << std::endl << "SOME TESTS FAILED!!" << std::endl;
+
+    return (ALL_PASSED ? EXIT_SUCCESS : EXIT_FAILURE);
 }
 
