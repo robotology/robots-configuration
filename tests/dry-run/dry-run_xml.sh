@@ -32,6 +32,23 @@ check_yri_runs() {
 
 cleanup
 
+# search for paths
+echo "Searching for required resources..."
+file_yri=$(YARP_ROBOT_NAME=$1 yarp resource --context yarprobotinterface --from yarprobotinterface.ini | tail -1 | sed 's/\"//g')
+dir_robot=$(dirname ${file_yri})
+file_launch=${dir_robot}/$(head -1 ${file_yri} | awk '{print $2}')
+
+# handle missing files
+if [[ ! -f "${file_yri}" ]]; then
+  echo "Unable to locate \"${file_yri}\" → skipped!"
+  exit 0
+fi
+
+if [[ ! -f "${file_launch}" ]]; then
+  echo "Unable to locate \"${file_launch}\" → error!"
+  exit 1
+fi
+
 # perform dry-run
 echo "Starting yarpserver..."
 yarpserver --write --silent &

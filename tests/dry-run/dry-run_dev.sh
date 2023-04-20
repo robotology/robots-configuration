@@ -40,9 +40,19 @@ file_launch=${dir_robot}/$(head -1 ${file_yri} | awk '{print $2}')
 file_general=$(find ${dir_robot} -name "general.xml")
 file_pc104=$(find ${dir_robot} -name "pc104.xml")
 
-# skip if not enough info
-if [[ ! -f "${file_yri}" || ! -f "${file_launch}" || ! -f "${file_general}" || ! -f "${file_pc104}" ]]; then
-  echo "$1 robot doesn't contain the info required for performing dry-run → skipped!"
+# handle missing files
+if [[ ! -f "${file_yri}" ]]; then
+  echo "Unable to locate \"${file_yri}\" → skipped!"
+  exit 0
+fi
+
+if [[ ! -f "${file_launch}" ]]; then
+  echo "Unable to locate \"${file_launch}\" → error!"
+  exit 1
+fi
+
+if [[ ! -f "${file_general}" || ! -f "${file_pc104}" ]]; then
+  echo "Missing info required for performing dry-run → skipped!"
   exit 0
 fi
 
