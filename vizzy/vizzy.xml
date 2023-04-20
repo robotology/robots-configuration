@@ -2,6 +2,7 @@
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 <robot name="vizzy" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
+
 <!-- motor controllers wrappers -->
 <xi:include href="wrappers/left_shoulder_arm_mc_wrapper.xml" />
 <xi:include href="wrappers/right_shoulder_arm_mc_wrapper.xml" />
