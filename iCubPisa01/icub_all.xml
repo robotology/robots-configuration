@@ -3,10 +3,6 @@
 <robot name="iCubPisa01" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <devices>
-
-        <!-- cartesian --> 
-    <xi:include href="cartesian/left_arm_cartesian.xml" />
-    <xi:include href="cartesian/right_arm_cartesian.xml" />
     
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
