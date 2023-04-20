@@ -36,11 +36,11 @@
         <param name="CALIB_ORDER">(0 1 3 5) (2 4 6 7) </param>         
                
         <action phase="startup" level="10" type="calibrate">           
-            <param name="target">right_hand-mc</param>   
+            <param name="target">right_hand_mc</param>   
         </action>            
  
         <action phase="interrupt1" level="1" type="park">              
-            <param name="target">right_hand-mc</param>   
+            <param name="target">right_hand_mc</param>   
         </action>            
  
         <action phase="interrupt3" level="1" type="abort" />           

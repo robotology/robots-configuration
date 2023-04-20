@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="lidarWrapR" type="rangefinder2D_nws_ros2">
+    <param name="period"> 0.01 </param>
+    <param name="node_name">    rangefinder_ros2_node    </param>
+    <param name="topic_name">   /laser   </param>
+    <param name="frame_id">    mobile_base_double_lidar   </param>
+    <action phase="startup" level="10" type="attach">
+        <paramlist name="networks">
+            <elem name="cer_laser"> cer_double_laser_device  </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="15" type="detach" />
+</device>
