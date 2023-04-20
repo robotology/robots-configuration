@@ -83,8 +83,8 @@
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/left_leg-FT_wrapper_multipleSens.xml" />
-    <xi:include href="wrappers/FT/right_leg-FT_wrapper_multipleSens.xml" />
+    <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
 
     <!-- INERTIAL SENSOR -->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
@@ -114,6 +114,6 @@
 
     <!-- estimators -->
     <xi:include href="estimators/wholebodydynamics.xml" />
-    
+
   </devices>
 </robot>
