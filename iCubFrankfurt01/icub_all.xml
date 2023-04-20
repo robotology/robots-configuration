@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<robot name="iCubFrankfurt01" portprefix="icub" build="1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
+<robot name="iCubFrankfurt01" portprefix="icub" build="1" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
