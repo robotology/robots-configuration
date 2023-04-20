@@ -5,77 +5,63 @@ on:
     branches:
     - 'master'
     - 'devel'
+    paths-ignore:
+      - 'experimentalSetups/**'
+      - 'iCubTemplates/**'
+      - 'tests/**'
+      - '.github/**'
   pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths-ignore:
+      - 'experimentalSetups/**'
+      - 'iCubTemplates/**'
+      - 'tests/**'
+      - '.github/**'
   workflow_dispatch:
-    
+
+env:
+  DEPENDENCIES_DIR: ${{ vars.DEPENDENCIES_DIR }}
+
 jobs:
-  build:
-    name: '[${{ matrix.os }}@${{ matrix.build_type }}]'
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        build_type: [Release]
-        os: [ubuntu-latest]
+  dry-run:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/robotology/robots-configuration:latest
 
     steps:
     - uses: actions/checkout@main
-        
-    # Remove apt repos that are known to break from time to time
-    # See https://github.com/actions/virtual-environments/issues/323
-    - name: Remove broken apt repos
-      run: |
-        for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
 
-    # ============
-    # DEPENDENCIES
-    # ============
-    - name: Dependencies
-      run: |
-        sudo apt update
-        sudo apt install git build-essential pkg-config zip unzip zlib1g-dev cmake libace-dev libeigen3-dev libtinyxml-dev libgsl-dev
-
-    - name: Source-based Dependencies
+    - name: Extend environment
       shell: bash
       run: |
-        # ycm
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/ycm.git --depth 1 --branch master
-        cd ycm && mkdir -p build && cd build
-        cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
-        cmake --build . --config ${{ matrix.build_type }} --target install 
-        # yarp
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/yarp.git --depth 1 --branch master
-        cd yarp && mkdir -p build && cd build
-        cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-        -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=OFF -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF -DYARP_COMPILE_PORTMONITOR_PLUGINS:BOOL=OFF -DYARP_COMPILE_EXECUTABLES:BOOL=OFF ..
-        cmake --build . --config ${{ matrix.build_type }} --target install 
-        # icub-contrib-common
-        cd ${GITHUB_WORKSPACE}/..
-        git clone https://github.com/robotology/icub-contrib-common.git --depth 1
-        cd icub-contrib-common && mkdir -p build && cd build
-        cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
-        cmake --build . --config ${{ matrix.build_type }} --target install 
+        echo "${DEPENDENCIES_DIR}/install/bin" >> $GITHUB_PATH
+        echo "YARP_DATA_DIRS=${DEPENDENCIES_DIR}/install/share/yarp:${DEPENDENCIES_DIR}/install/share/iCub:${DEPENDENCIES_DIR}/install/share/CER:${DEPENDENCIES_DIR}/install/share/navigation:${DEPENDENCIES_DIR}/install/share/ICUBcontrib" >> $GITHUB_ENV
 
-    # ===================
-    # CMAKE-BASED PROJECT
-    # ===================
     - name: Configure
       shell: bash
       run: |
-        mkdir -p build
-        cd build
-        cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-              -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DINSTALL_ALL_ROBOTS:BOOL=ON ..
+        mkdir -p build && cd build
+        cmake -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
+              -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install \
+              -DBUILD_TESTING:BOOL=ON \
+              -DINSTALL_ALL_ROBOTS:BOOL=ON ..
 
-    - name: Build
-      shell: bash
-      run: |
-        cd build
-        cmake --build . --config ${{ matrix.build_type }}
-        
     - name: Install
       shell: bash
       run: |
         cd build
-        cmake --build . --config ${{ matrix.build_type }} --target install
+        cmake --build . --config Release --target install
+
+    - name: Test
+      shell: bash
+      run: |
+        cd build
+        ctest --timeout 60 --output-on-failure
+
+    - name: Upload Output
+      if: always()
+      uses: actions/upload-artifact@main
+      with:
+        name: dry-run_${{ github.run_id }}
+        path: build/dry-run_log_*.txt
+        retention-days: 30
