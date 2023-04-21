@@ -16,8 +16,8 @@
 </group>                                                                        
                                                                                 
 <group name="CALIBRATION">                                                      
-<param name="calibrationType">        10          10          10         10          5       12      12      7       7       6       6       6       6       6       6       6       </param> <!-- 
-<param name="calibration1">           -54795      22399       44679      53215    -1500     -8335   10671    0       0       0       0       0       0       0       0       0       </param> -->
+<param name="calibrationType">        10          10          10         10          5       12      12      7       7       6       6       6       6       6       6       6       </param>
+<!-- <param name="calibration1">           -54795      22399       44679      53215    -1500     -8335   10671    0       0       0       0       0       0       0       0       0       </param> -->
 <param name="calibration1">           4000        -3000       -3000      4000    -1500     63200   64047     0       0       0       0       0       0       0       0       0       </param>
 <param name="calibration2">	       0           0           0          0        16384      0       0        0       0       9102    9102    9102    9102    9102    9102    10000    </param>
 <param name="calibration3">           0           0           0          0           0       0       0       0       0      -1        1       -1      1      -1       1       1      </param>
@@ -32,9 +32,9 @@
 <param name="startupPosThreshold">    2          2            2          2           90      90      90      90      90      90      90      90      90      90      90      180      </param>
 </group>
 
-<param name="CALIB_ORDER"> (2) (4) (0) (1) (3) (5 6) (7) (8 9) (11) (13) (10) (12) (14) (15) </param> <!-- removed joint 14 -->
+<param name="CALIB_ORDER"> (2) (4) (0) (1) (3) (5 6) (7) (8 9) (11) (13) (10) (12) (14) (15) </param>
 
-<!-- <param name="CALIB_ORDER"> (1) (0) (2) (3) (4) (5 6) (7) (8 9) (11) (13) (10) (12) (14) (15) </param> <!-- removed joint 14 -->
+<!-- <param name="CALIB_ORDER"> (1) (0) (2) (3) (4) (5 6) (7) (8 9) (11) (13) (10) (12) (14) (15) </param> -->
 <!-- <param name="CALIB_ORDER">(1) (0) (2) (3) (4) (5 6) (7) (8 9) (11 13) (10 12 14 15) </param> -->
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">left_arm-mc_remapper</param>
