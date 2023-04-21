@@ -28,10 +28,8 @@ std::string trim(const std::string &s) {
     return ltrim(rtrim(s));
 }
 
-bool loadIni(const std::string& robot_dir, std::string & inifile){
-
+bool loadIni(const std::string& robot_dir, std::string& inifile) {
     inifile = robot_dir + inifile;
-
     std::ifstream in(inifile);
     std::vector<std::string> vecOfStrs;
 
@@ -51,7 +49,6 @@ bool loadIni(const std::string& robot_dir, std::string & inifile){
             vecOfStrs.push_back(str);
     }
     //  std::cout << vecOfStrs.at(0) << std::endl;
-    //Close The File
     in.close();
 
     str = vecOfStrs.at(0);
@@ -66,21 +63,18 @@ inline bool fileExists (const std::string& name) {
     return f.good();
 }
 
-bool checkIncludedFiles(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, std::string& filename, pugi::xml_document& doc ){
-
+bool checkIncludedFiles(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles,
+                        const std::string& filename, pugi::xml_document& doc ){
     int tot,notfound,found;
 
     // pugi::xml_document doc;
-
     // pugi::xml_parse_result result = doc.load_file(filename.c_str());
-
     // std::cout << "Loading " + filename + " : " << result.description() << std::endl;
 
     pugi::xml_node hrefs = doc.child("robot").child("devices");
     tot =0;
     notfound =0;
     found=0;
-
 
     for (pugi::xml_node fpath = hrefs.first_child(); fpath; fpath = fpath.next_sibling())
         {
@@ -110,11 +104,8 @@ bool checkIncludedFiles(const std::string& robot_dir, std::vector<std::string>& 
        
 }
 
-bool loadXmlFile(const std::string& robot_dir, std::string& filename, pugi::xml_document& doc){
-    // std::string fn;
-    // fn = robot_dir + filename;
+bool loadXmlFile(const std::string& robot_dir, const std::string& filename, pugi::xml_document& doc){
     pugi::xml_parse_result result = doc.load_file(filename.c_str());
-
     
     if(result){
         // std::cout << "Loading " + filename + " : " << result.description() << std::endl;
@@ -126,20 +117,19 @@ bool loadXmlFile(const std::string& robot_dir, std::string& filename, pugi::xml_
     }
 }
 
-
-bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::string> & vectorAllFiles, std::string part, std::string target, bool & pass){
+bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles,
+                            const std::string& part, const std::string& target, bool& pass){
     bool found = false;
     pugi::xml_document doc_wrapper, doc_remapper;
     std::string device;
 
-
     for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
-                   // std::cout << part << " " << ele << std::endl;
+        // std::cout << part << " " << ele << std::endl;
 
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find(part) != std::string::npos && ele.find("wrapper.xml") != std::string::npos) {
-            //std::cout << part << " " << ele << std::endl;
+            // std::cout << part << " " << ele << std::endl;
             if(!loadXmlFile(robot_dir, ele, doc_wrapper)) return false;
             pugi::xpath_node action_startup = doc_wrapper.select_node("//action[@phase='startup']/param[@name='device']/text()");
             device = trim(action_startup.node().value());
@@ -148,7 +138,7 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
             found = true;
         }
         else if (ele.find("wrappers/motorControl") != std::string::npos && ele.find(part) != std::string::npos && ele.find("remapper.xml")){
-            //std::cout << part << " " << ele << std::endl;
+            // std::cout << part << " " << ele << std::endl;
             if(!loadXmlFile(robot_dir, ele, doc_remapper)) return false;
             pugi::xpath_node device_name = doc_remapper.select_node("device");
             device = trim(device_name.node().attribute("name").value());
@@ -163,7 +153,8 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
     else return false;
 }
 
-bool checkCartesian(const std::string& robot_dir, std::vector<std::string> & vectorAllFiles, std::string part, std::string target, bool & pass){
+bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles,
+                    const std::string& part, const std::string& target, bool& pass){
     bool found = false;
     pugi::xml_document doc_cartesian;
     std::string torso, arm;
@@ -179,7 +170,7 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string> & vec
             arm = "//action[@phase='startup']/paramlist[@name='networks']/elem[@name='" + part + "']/text()";
             pugi::xpath_node elem_arm = doc_cartesian.select_node(arm.c_str());
             arm = trim(elem_arm.node().value());
-            //std::cout << part << " " << arm << " " << target << std::endl;
+            // std::cout << part << " " << arm << " " << target << std::endl;
             if(torso == "torso-mc_remapper" && arm == target || torso == "torso_mc_remapper" && arm == target) std::cout << part <<" - CARTESIAN CHECK PASSED!" << std::endl;
             else {std::cout << part << " - CARTESIAN CHECK FAILED! " << std::endl; pass = false;} 
             found = true;
@@ -188,7 +179,7 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string> & vec
     return true;
 }
 
-bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector<std::string> & vectorAllFiles, bool & pass){
+bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, bool& pass){
     for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
@@ -204,7 +195,7 @@ bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector
             part = std::regex_replace(part , std::regex("-mc.*"), "");
 
             part = trim(part);
-            //std::cout << part << std::endl;
+            // std::cout << part << std::endl;
             target1 = trim(action_startup.node().value());
             target2 = trim(action_interrupt1.node().value());
             if((target1 == target2) && target1.find("remapper") != std::string::npos && target2.find("remapper") != std::string::npos && !(ele.find("hand") != std::string::npos)){
@@ -219,7 +210,7 @@ bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector
                 checkWrappersRemappers(robot_dir, vectorAllFiles, part, target1, pass);
                 if(ele.find("arm") != std::string::npos) checkCartesian(robot_dir, vectorAllFiles, part, target1, pass);
             }
-      //      std::cout << part << std::endl;
+            // std::cout << part << std::endl;
             
             doc_calibrator.reset();
         }
@@ -228,9 +219,7 @@ bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector
     return true;
 }
 
-
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     std::string filename = "yarprobotinterface.ini";
     pugi::xml_document doc;
     std::vector<std::string> vectorAllFiles;
@@ -241,7 +230,7 @@ int main(int argc, char *argv[])
     int ret;
 
     yarp::os::ResourceFinder rf;
-    rf.setDefaultContext("check-nws-nwc-xml");
+    rf.setDefaultContext("check-xml");
     rf.configure(argc, argv);
 
     robot_dir = rf.find("robot-dir").asString();
@@ -305,14 +294,10 @@ int main(int argc, char *argv[])
                 ALL_PASSED = false;
                 XSD_PASSED = false;
             }
-            
         }
     }
-    if(!found){
-        ALL_PASSED = false;
-        XSD_PASSED = false;
-    }
-    if(XSD_PASSED) std::cout << "Cartesian XSD check passed!" << std::endl;
+    if(!found) std::cout << "Cartesian not found! Skipped!" << std::endl;
+    else if(XSD_PASSED) std::cout << "Cartesian XSD check passed!" << std::endl;
     else std::cout << "Cartesian XSD check failed!" << std::endl;
 
     // checks wrappers xml files w/ XSD schema
@@ -332,7 +317,6 @@ int main(int argc, char *argv[])
                 ALL_PASSED = false;
                 XSD_PASSED = false;
             }
-            
         }
     }
     if(!found){

@@ -61,6 +61,7 @@
 <xs:simpleType name="name-values">
   <xs:restriction base="xs:string">
     <xs:enumeration value="name" />
+    <xs:enumeration value="period" />
     <xs:enumeration value="nodeName" />
     <xs:enumeration value="topicName" />
   </xs:restriction>
@@ -70,6 +71,7 @@
   <xs:restriction base="xs:string">
     <xs:enumeration value="controlBoard_nws_yarp" />
     <xs:enumeration value="controlBoard_nws_ros" />
+    <xs:enumeration value="controlBoard_nws_ros2" />
   </xs:restriction>
 </xs:simpleType>
 
