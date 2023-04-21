@@ -94,13 +94,15 @@ xmlstarlet edit --inplace --subnode "/params/group[@name='DEBUG']" --type elem -
                 --insert '$new_node' --type attr --name "name" --value 'embBoardsConnected' ${file_pc104}
 xmlstarlet edit --inplace --update "/params/group[@name='DEBUG']/param" --value '0' ${file_pc104}
 
+# specify the log filename
+log_file=dry-run_log_$1_dev.txt
+
 # perform dry-run
 echo "Starting yarpserver..."
 yarpserver --write --silent &
 yarp wait /root
 
 echo "Starting yarprobotinterface..."
-log_file=dry-run_log_$1_dev.txt
 YARP_ROBOT_NAME=$1 yarprobotinterface > ${log_file} 2>&1 &
 
 exit_code=0

@@ -24,7 +24,7 @@ if(UNIX)
     include(CTest)
     enable_testing()
     if(BUILD_TESTING)
-        add_subdirectory(tests/dry-run/check-nws-nwc-xml)
+        add_subdirectory(tests/dry-run/check-xml)
     endif()
 endif()
 

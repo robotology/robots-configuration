@@ -6,7 +6,7 @@
 ################################################################################
 
 cmake_minimum_required(VERSION 3.12)
-project(check-nws-nwc-xml)
+project(check-xml)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -29,7 +29,7 @@ include(ICUBcontribHelpers)
 icubcontrib_set_default_prefix()
 
 add_executable(${PROJECT_NAME})
-target_sources(${PROJECT_NAME} PRIVATE check-nws-nwc-xml.cpp)
+target_sources(${PROJECT_NAME} PRIVATE src/check-xml.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE YARP::YARP_os pugixml::pugixml)
 
 # install
