@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 env:
-  DEPENDENCIES_DIR: ${{ vars.INSTALL_DIR }}
+  DEPENDENCIES_DIR: ${{ vars.DEPENDENCIES_DIR }}
 
 jobs:
   dry-run:
