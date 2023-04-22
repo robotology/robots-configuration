@@ -3,6 +3,7 @@ Robots Configuration
 
 [![ZenHub](https://img.shields.io/badge/Shipping_faster_with-ZenHub-435198.svg)](https://zenhub.com)
 [![Community](https://img.shields.io/badge/Join-Robotology_Community-blue?style=plastic&logo=github)](https://github.com/robotology/community)
+[![Continuous Integration](https://github.com/robotology/robots-configuration/actions/workflows/ci.yml/badge.svg)](https://github.com/robotology/robots-configuration/actions/workflows/ci.yml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Maintainers
