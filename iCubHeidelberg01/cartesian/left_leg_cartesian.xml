@@ -23,6 +23,13 @@
         <group name="PLANT_MODEL">
             <param name="plant_compensator">off</param>
             <param name="smith_predictor">off</param>
+
+            <param name="joint_0">((Kp 0.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+            <param name="joint_1">((Kp 0.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+            <param name="joint_2">((Kp 0.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+            <param name="joint_3">((Kp 0.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+            <param name="joint_4">((Kp 0.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
+            <param name="joint_5">((Kp 0.000) (Tz 0.000) (Tw 0.000) (Zeta 0.000) (Td 0.000))</param>
         </group>
 
         <action phase="startup" level="15" type="attach">
