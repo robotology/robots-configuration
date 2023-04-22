@@ -7,23 +7,26 @@
             <param name="deviceName"> Left_Leg_Calibrator </param>     
         </group>             
  
+<group name="HOME">          
+<param name="positionHome"> 0             15             0             0             0             0             </param>       
+<param name="velocityHome"> 10            10            10            10            10            10            </param>       
+</group>       
+
 <group name="CALIBRATION">   
- 
 <param name="calibrationType">            3             3             3             3             3             3             </param>       
 <param name="calibration1">               2047.5        2047.5        2047.5        2047.5        2047.5        2047.5        </param>       
 <param name="calibration2">               10            10            10            10            10            10            </param>       
 <param name="calibration3">               2704.5        3319.5        541.5         2592.5        610.5         1683.5        </param>       
+<param name="calibration4">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibration5">                       0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibrationZero">                    0.00       0.00    0.00    0.00       0.00      0.00         </param>
+<param name="calibrationDelta">                   0.00       0.00    0.00    0.00       0.00      0.00         </param>
 <param name="startupPosition">               0             1.7             0             0             0             0             </param>       
 <param name="startupVelocity">               10            10            10            10            10            10            </param>       
 <param name="startupMaxPwm">                     120           120           120           120           120           120           </param>       
 <param name="startupPosThreshold">           2             2             2             2             2             2             </param>       
 </group>       
- 
-<group name="HOME">          
-<param name="positionHome"> 0             15             0             0             0             0             </param>       
-<param name="velocityHome"> 10            10            10            10            10            10            </param>       
-</group>       
- 
+  
         <param name="CALIB_ORDER">(0 1 2 3 4 5) </param>               
                
         <action phase="startup" level="10" type="calibrate">           

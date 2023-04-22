@@ -180,7 +180,7 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vect
 }
 
 bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, bool& pass){
-    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         std::string part, target1, target2;
