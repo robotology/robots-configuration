@@ -181,8 +181,8 @@
                     </xs:complexType>
                 </xs:element>
 
-                <!-- ACTION CALIBRATE-->
-                <xs:element minOccurs="1" maxOccurs="1" name="action">
+                <!-- ACTIONS -->
+                <xs:element minOccurs="1" maxOccurs="unbounded" name="action">
                     <xs:complexType>
                         <xs:sequence minOccurs="0">
                             <xs:element name="param">
@@ -195,49 +195,9 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="phase" type="xs:string" use="required" fixed="startup"/>
+                        <xs:attribute name="phase" type="phase-values" use="required"/>
                         <xs:attribute name="level" type="xs:unsignedByte" use="required" />
-                        <xs:attribute name="type" type="xs:string" use="required" fixed="calibrate"/>
-                    </xs:complexType>
-                </xs:element>
-
-                <!-- ACTION PARK-->
-                <xs:element minOccurs="1" maxOccurs="1" name="action">
-                    <xs:complexType>
-                        <xs:sequence minOccurs="0">
-                            <xs:element name="param">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute name="name" type="xs:string" use="required" />
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                        <xs:attribute name="phase" type="xs:string" use="required" fixed="interrupt1"/>
-                        <xs:attribute name="level" type="xs:unsignedByte" use="required" />
-                        <xs:attribute name="type" type="xs:string" use="required" fixed="park"/>
-                    </xs:complexType>
-                </xs:element>
-
-                <!-- ACTION ABORT-->
-                <xs:element minOccurs="1" maxOccurs="1" name="action">
-                    <xs:complexType>
-                        <xs:sequence minOccurs="0">
-                            <xs:element name="param">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute name="name" type="xs:string" use="required" />
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                        <xs:attribute name="phase" type="xs:string" use="required" fixed="interrupt3"/>
-                        <xs:attribute name="level" type="xs:unsignedByte" use="required" />
-                        <xs:attribute name="type" type="xs:string" use="required" fixed="abort"/>
+                        <xs:attribute name="type" type="type-values" use="required"/>
                     </xs:complexType>
                 </xs:element>
 
@@ -251,6 +211,23 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="HOME" />
             <xs:enumeration value="PARKING_SEQUENCE" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="phase-values">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="startup" />
+            <xs:enumeration value="interrupt1" />
+            <xs:enumeration value="interrupt2" />
+            <xs:enumeration value="interrupt3" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="type-values">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="calibrate" />
+            <xs:enumeration value="park" />
+            <xs:enumeration value="abort" />
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>

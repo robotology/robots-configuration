@@ -49,14 +49,23 @@ if [[ ! -f "${file_launch}" ]]; then
   exit 1
 fi
 
+# specify the log filename
+log_file=dry-run_log_$1_xml.txt
+
+# check xml schemas
+echo "Checking the XML syntax..."
+if ! check-xml --robot-dir ${dir_robot} > ${log_file} 2>&1; then
+  echo "Found errors!"
+  exit 1
+fi
+
 # perform dry-run
 echo "Starting yarpserver..."
 yarpserver --write --silent &
 yarp wait /root
 
 echo "Starting yarprobotinterface..."
-log_file=dry-run_log_$1_xml.txt
-YARP_ROBOT_NAME=$1 yarprobotinterface --dryrun > ${log_file} 2>&1 &
+YARP_ROBOT_NAME=$1 yarprobotinterface --dryrun >> ${log_file} 2>&1 &
 
 exit_code=0
 
