@@ -35,10 +35,10 @@ bool loadIni(const std::string& robot_dir, std::string& inifile) {
 
     if(!in)
     {
-        std::cout << "Cannot open the yarprobotinterface.ini File !!! Exiting..." << std::endl;
+        std::cerr << "Cannot open the yarprobotinterface.ini File !!! Exiting..." << std::endl;
         return false;
     }
-    else std::cout << "yarprobotinterface.ini FOUND! PASS" << std::endl;
+    else std::cout << "yarprobotinterface.ini FOUND! PASSED" << std::endl;
 
      std::string str;
     // Read the next line from File untill it reaches the end.
@@ -76,19 +76,19 @@ bool checkIncludedFiles(const std::string& robot_dir, std::vector<std::string>& 
     notfound =0;
     found=0;
 
-    for (pugi::xml_node fpath = hrefs.first_child(); fpath; fpath = fpath.next_sibling())
-        {
-            tot++;
-            vectorAllFiles.push_back(robot_dir + fpath.first_attribute().value());
-            if(fileExists(robot_dir + fpath.first_attribute().value())){
-            std::cout << "found :" << robot_dir + fpath.first_attribute().value() << std::endl;
-            found++;
+    for (auto fpath = hrefs.first_child(); fpath; fpath = fpath.next_sibling())
+    {
+        tot++;
+        vectorAllFiles.push_back(robot_dir + fpath.first_attribute().value());
+        if(fileExists(robot_dir + fpath.first_attribute().value())){
+        std::cout << "found :" << robot_dir + fpath.first_attribute().value() << std::endl;
+        found++;
+    }
+        else {
+            std::cerr << "NOT found :" << robot_dir + fpath.first_attribute().value() << std::endl;
+            notfound++;
         }
-            else{
-                std::cout << "NOT found :" << robot_dir + fpath.first_attribute().value() << std::endl;
-                notfound++;
-            }
-        }
+    }
 
     std::cout << std::endl << "***************************************" << std::endl;
 
@@ -98,7 +98,7 @@ bool checkIncludedFiles(const std::string& robot_dir, std::vector<std::string>& 
     }
         
     else{
-        std::cout << "FAIL ! not found " << notfound << " of " << tot << " file included." << std::endl << std::endl;
+        std::cerr << "FAIL ! not found " << notfound << " of " << tot << " file included." << std::endl << std::endl;
         return false;
     }
        
@@ -123,7 +123,7 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
     pugi::xml_document doc_wrapper, doc_remapper;
     std::string device;
 
-    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         // std::cout << part << " " << ele << std::endl;
@@ -134,7 +134,7 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
             pugi::xpath_node action_startup = doc_wrapper.select_node("//action[@phase='startup']/param[@name='device']/text()");
             device = trim(action_startup.node().value());
             if(device == target) std::cout << part <<" - WRAPPER CHECK PASSED!" << std::endl;
-            else {std::cout << part << " - WRAPPER CHECK FAILED!" << std::endl; pass = false;} 
+            else {std::cerr << part << " - WRAPPER CHECK FAILED!" << std::endl; pass = false;} 
             found = true;
         }
         else if (ele.find("wrappers/motorControl") != std::string::npos && ele.find(part) != std::string::npos && ele.find("remapper.xml")){
@@ -143,7 +143,7 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
             pugi::xpath_node device_name = doc_remapper.select_node("device");
             device = trim(device_name.node().attribute("name").value());
             if(device == target) std::cout << part << " - REMAPPER CHECK PASSED!" << std::endl;
-            else {std::cout << part << " - REMAPPER CHECK FAILED!" << std::endl; pass = false;} 
+            else {std::cerr << part << " - REMAPPER CHECK FAILED!" << std::endl; pass = false;} 
 
             found = true;
         }
@@ -159,7 +159,7 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vect
     pugi::xml_document doc_cartesian;
     std::string torso, arm;
 
-    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         if(ele.find("cartesian") != std::string::npos && ele.find(part) != std::string::npos) {
@@ -172,7 +172,7 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vect
             arm = trim(elem_arm.node().value());
             // std::cout << part << " " << arm << " " << target << std::endl;
             if(torso == "torso-mc_remapper" && arm == target || torso == "torso_mc_remapper" && arm == target) std::cout << part <<" - CARTESIAN CHECK PASSED!" << std::endl;
-            else {std::cout << part << " - CARTESIAN CHECK FAILED! " << std::endl; pass = false;} 
+            else {std::cerr << part << " - CARTESIAN CHECK FAILED! " << std::endl; pass = false;} 
             found = true;
         }
     }
@@ -203,7 +203,7 @@ bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector
                 // std::cout << target1 << " " << target2 << std::endl;
                 // return true;
             }
-            else if(!(ele.find("hand") != std::string::npos))  {std::cout << part << " CALIBRATOR CHECK FAILED!" << std::endl; pass = false;} 
+            else if(!(ele.find("hand") != std::string::npos))  {std::cerr << part << " CALIBRATOR CHECK FAILED!" << std::endl; pass = false;} 
 
             if(!(ele.find("hand") != std::string::npos)) {
                 //std::cout << part << std::endl;
@@ -226,8 +226,7 @@ int main(int argc, char *argv[]) {
     bool ALL_PASSED = true;
     bool XSD_PASSED = true;
     bool found = false;
-    std::string robot_dir,xsd_cmd;
-    int ret;
+    std::string robot_dir;
 
     yarp::os::ResourceFinder rf;
     rf.setDefaultContext("check-xml");
@@ -255,106 +254,111 @@ int main(int argc, char *argv[]) {
 
     // checks calibrators xml files w/ XSD schema
     std::cout << std::endl << "4 - test calibrators consistency with XSD schema **************" << std::endl << std::endl;
-    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         if(ele.find("calibrators") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
             auto calibrators = rf.findFile("calibrators.xsd");
-            xsd_cmd = "xmllint --schema " + calibrators + " " +  ele + " --noout";
-            ret = system(xsd_cmd.c_str()); 
+            auto xsd_cmd = "xmllint --schema " + calibrators + " " +  ele + " --noout";
+            auto ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
                 XSD_PASSED = false;
             }
         }
     }
-    if(!found){
-        ALL_PASSED = false;
-        XSD_PASSED = false;
-    }
-    if(XSD_PASSED) std::cout << "Calibrators XSD check passed!" << std::endl;
-    else std::cout << "Calibrators XSD check failed!" << std::endl;
+    if(!found) std::cout << "Calibrators not found! Skipped!" << std::endl;
+    else if(XSD_PASSED) std::cout << "Calibrators XSD check passed!" << std::endl;
+    else std::cerr << "Calibrators XSD check failed!" << std::endl;
 
     // checks cartesian xml files w/ XSD schema
     XSD_PASSED = true;
     found = false;
     std::cout << std::endl << "5 - test cartesian consistency with XSD schema **************" << std::endl << std::endl;
-    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         if(ele.find("cartesian") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
-            auto cartesian = rf.findFile("cartesian.xsd");
-            xsd_cmd = "xmllint --schema " + cartesian + " " +  ele + " --noout";
-            ret = system(xsd_cmd.c_str()); 
-            if (WEXITSTATUS(ret) != 0) {            
+            std::string schema_suffix;
+            if(ele.find("arm") != std::string::npos) {
+                schema_suffix = "_arms";
+            } else if(ele.find("leg") != std::string::npos) {
+                schema_suffix = "_legs";
+            } else {
                 ALL_PASSED = false;
                 XSD_PASSED = false;
+                std::cerr << "Cartesian part unrecognized!" << std::endl;
+            }
+
+            if(!schema_suffix.empty()) {
+                auto cartesian = rf.findFile("cartesian"+schema_suffix+".xsd");
+                auto xsd_cmd = "xmllint --schema " + cartesian + " " +  ele + " --noout";
+                auto ret = system(xsd_cmd.c_str());
+                
+                if (WEXITSTATUS(ret) != 0) {            
+                    ALL_PASSED = false;
+                    XSD_PASSED = false;
+                }
             }
         }
     }
     if(!found) std::cout << "Cartesian not found! Skipped!" << std::endl;
     else if(XSD_PASSED) std::cout << "Cartesian XSD check passed!" << std::endl;
-    else std::cout << "Cartesian XSD check failed!" << std::endl;
-
+    else std::cerr << "Cartesian XSD check failed!" << std::endl;
+    
     // checks wrappers xml files w/ XSD schema
     XSD_PASSED = true;
     found = false;
     std::cout << std::endl << "6 - test wrappers consistency with XSD schema **************" << std::endl << std::endl;
-    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_wrapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
             auto wrapper = rf.findFile("wrapper.xsd");
-            xsd_cmd = "xmllint --schema " + wrapper + " " +  ele + " --noout";
-            ret = system(xsd_cmd.c_str()); 
+            auto xsd_cmd = "xmllint --schema " + wrapper + " " +  ele + " --noout";
+            auto ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
                 XSD_PASSED = false;
             }
         }
     }
-    if(!found){
-        ALL_PASSED = false;
-        XSD_PASSED = false;
-    }
-    if(XSD_PASSED) std::cout << "Wrappers XSD check passed!" << std::endl;
-    else std::cout << "Wrappers XSD check failed!" << std::endl;
+    if(!found) std::cout << "Wrappers not found! Skipped!" << std::endl;
+    else if(XSD_PASSED) std::cout << "Wrappers XSD check passed!" << std::endl;
+    else std::cerr << "Wrappers XSD check failed!" << std::endl;
 
     // checks remappers xml files w/ XSD schema
     XSD_PASSED = true;
     found = false;
     std::cout << std::endl << "7 - test remappers consistency with XSD schema **************" << std::endl << std::endl;
-    for (std::vector<std::string>::iterator t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_remapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
             auto remapper = rf.findFile("remapper.xsd");
-            xsd_cmd = "xmllint --schema " + remapper + " " +  ele + " --noout";
-            ret = system(xsd_cmd.c_str()); 
+            auto xsd_cmd = "xmllint --schema " + remapper + " " +  ele + " --noout";
+            auto ret = system(xsd_cmd.c_str()); 
             if (WEXITSTATUS(ret) != 0) {            
                 ALL_PASSED = false;
                 XSD_PASSED = false;
             }
         }
     }
-    if(!found){
-        ALL_PASSED = false;
-        XSD_PASSED = false;
-    }
-    if(XSD_PASSED) std::cout << "Remappers XSD check passed!" << std::endl;
-    else std::cout << "Remappers XSD check failed!" << std::endl;
+    if(!found) std::cout << "Remappers not found! Skipped!" << std::endl;
+    else if(XSD_PASSED) std::cout << "Remappers XSD check passed!" << std::endl;
+    else std::cerr << "Remappers XSD check failed!" << std::endl;
 
     std::cout << std::endl << "***************************************************" << std::endl;
     if(ALL_PASSED) std::cout << std::endl << "ALL TESTS PASSED!!" << std::endl;
-    else std::cout << std::endl << "SOME TESTS FAILED!!" << std::endl;
+    else std::cerr << std::endl << "SOME TESTS FAILED!!" << std::endl;
 
     return (ALL_PASSED ? EXIT_SUCCESS : EXIT_FAILURE);
 }

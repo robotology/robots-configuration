@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:xi="http://www.w3.org/2001/XInclude" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="device">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="group">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="ControllerName"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+    
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="ControllerPeriod"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="TaskRefVelPeriodFactor"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="SolverNameToConnect"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="KinematicPart"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="KinematicType"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="PositionControl"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="NumberOfDrivers"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required" fixed="GENERAL" />
+                    </xs:complexType>
+                </xs:element>
+
+
+                <xs:element minOccurs="1" maxOccurs="1" name="group">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="Key"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+    
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="JointsOrder"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="MinAbsVels"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required" fixed="DRIVER_0" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element minOccurs="1" maxOccurs="1" name="group">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="plant_compensator"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+    
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="smith_predictor"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="joint_0"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="joint_1"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="joint_2"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="joint_3"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="joint_4"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="param">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="name" type="xs:string" use="required" fixed="joint_5"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required" fixed="PLANT_MODEL" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="action">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="paramlist">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element maxOccurs="unbounded" name="elem">
+                                <xs:complexType>
+                                  <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                      <xs:attribute name="name" type="action-values" use="required"/>
+                                    </xs:extension>
+                                  </xs:simpleContent>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="name" type="xs:string" use="required" fixed="networks" />
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attribute name="phase" type="xs:string" use="required" fixed="startup"/>
+                      <xs:attribute name="level" type="xs:unsignedByte" use="required" />
+                      <xs:attribute name="type" type="xs:string" use="required" fixed="attach"/>
+                    </xs:complexType>
+                  </xs:element>
+
+
+                    <xs:element name="action">
+                        <xs:complexType>
+                        <xs:attribute name="phase" type="xs:string" use="required" fixed="shutdown" />
+                        <xs:attribute name="level" type="xs:unsignedByte" use="required"  />
+                        <xs:attribute name="type" type="xs:string" use="required" fixed="detach" />
+                        </xs:complexType>
+                    </xs:element>
+                
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="type" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:simpleType name="action-values">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="left_leg" />
+      <xs:enumeration value="right_leg" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
