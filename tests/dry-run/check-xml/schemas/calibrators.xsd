@@ -38,33 +38,15 @@
                     </xs:complexType>
                 </xs:element>
 
-                <!-- ******* -->
-                <!-- HOME -->
-                <!-- ******* -->
-                <xs:element minOccurs="1" maxOccurs="1" name="group">
+                <!-- *********************** -->
+                <!-- HOME / PARKING_SEQUENCE -->
+                <!-- *********************** -->
+                <xs:element name = "group">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element minOccurs="1" maxOccurs="1" name="param">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute name="name" type="xs:string" use="required" fixed="positionHome"/>
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                            <xs:element minOccurs="1" maxOccurs="1" name="param">
-                                <xs:complexType>
-                                    <xs:simpleContent>
-                                        <xs:extension base="xs:string">
-                                            <xs:attribute name="name" type="xs:string" use="required" fixed="velocityHome"/>
-                                        </xs:extension>
-                                    </xs:simpleContent>
-                                </xs:complexType>
-                            </xs:element>
-                            <xs:any minOccurs = "0" maxOccurs = "unbounded" processContents = "lax"/>
+                            <xs:any minOccurs = "1" maxOccurs = "unbounded" processContents = "lax"/>
                         </xs:sequence>
-                        <xs:attribute name="name" type="xs:string" use="required" fixed="HOME" />
+                        <xs:attribute name="name" type="home-parking" use="required" />
                     </xs:complexType>
                 </xs:element>
 
@@ -264,4 +246,11 @@
             <xs:attribute name="type" type="xs:string" use="required" />
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="home-parking">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="HOME" />
+            <xs:enumeration value="PARKING_SEQUENCE" />
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
