@@ -53,7 +53,7 @@ bool loadIni(const std::string& robot_dir, std::string& inifile) {
 
     str = vecOfStrs.at(0);
     str = std::regex_replace(str, std::regex("config ./"), ""); 
-    inifile = robot_dir + str;
+    inifile = trim(robot_dir + str);
     
     return true;
 }
@@ -239,7 +239,7 @@ int main(int argc, char *argv[]) {
     std::cout << std::endl << "1 - test yarprobotinterface.ini presence **************" << std::endl << std::endl;
     if(!loadIni(robot_dir, filename)) return EXIT_FAILURE;
 
-    // loads the above XML file i.e. icub_all.xml
+    // loads the above XML file, e.g. icub_all.xml
     if(!loadXmlFile(robot_dir, filename, doc)) return EXIT_FAILURE;
 
     // checks if all files included in the XML exist
