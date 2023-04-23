@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_all_joints_mc_remapper" type="controlboardremapper">
-    <param name="joints"> 28 </param>
     <paramlist name="networks">
         <elem name="head">(            0  1   0  1 )</elem>
         <elem name="torso">(           2  4   0  2 )</elem>
@@ -12,6 +11,7 @@
         <elem name="left_hand">(       24 25  0  1 )</elem>
         <elem name="base">(            26 27  0  1 )</elem>
     </paramlist>
+    <param name="joints"> 28 </param>
     <action phase="startup" level="6" type="attach">
         <paramlist name="networks">
             <elem name="head">            cer_head_mc               </elem>

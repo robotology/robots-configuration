@@ -61,7 +61,7 @@
               </xs:element>
             </xs:sequence>
             <xs:attribute name="phase" type="phase-values" use="required" />
-            <xs:attribute name="level" type="level-values" use="required" />
+            <xs:attribute name="level" type="xs:integer" use="required" />
             <xs:attribute name="type" type="type-values" use="required" />
           </xs:complexType>
         </xs:element>
@@ -75,13 +75,6 @@
   <xs:restriction base="xs:string">
     <xs:enumeration value="startup" />
     <xs:enumeration value="shutdown" />
-  </xs:restriction>
-</xs:simpleType>
-
-<xs:simpleType name="level-values">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="20" />
-    <xs:enumeration value="5" />
   </xs:restriction>
 </xs:simpleType>
 

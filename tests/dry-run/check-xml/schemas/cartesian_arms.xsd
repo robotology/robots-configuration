@@ -316,7 +316,6 @@
     </xs:complexType>
   </xs:element>
 
-
   <xs:simpleType name="action-values">
     <xs:restriction base="xs:string">
       <xs:enumeration value="torso" />

@@ -36,9 +36,9 @@
 
 <param name="startupPosition">                    0.12            0.0         0.0       0.0           </param>
 <param name="startupVelocity">                    0.01            10          10        10.0          </param>
-<param name="startupTimeout">                     30              30          30        20            </param>
 <param name="startupMaxPwm">                      20000           20000       20000     5000          </param>
 <param name="startupPosThreshold">                0.005           2           2         2             </param>
+<param name="startupTimeout">                     30              30          30        20            </param>
 </group>
 
 		<param name="CALIB_ORDER">(0 1 2 3) </param>
