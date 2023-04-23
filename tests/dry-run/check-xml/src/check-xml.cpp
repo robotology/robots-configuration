@@ -186,35 +186,35 @@ bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector
         std::string part, target1, target2;
 
         if(ele.find("calibrators") != std::string::npos) {
-            // std::cout << ele << std::endl;
             pugi::xml_document doc_calibrator;
             loadXmlFile(robot_dir, ele, doc_calibrator);
             pugi::xpath_node action_startup = doc_calibrator.select_node("//action[@phase='startup']/param[@name='target']/text()");
             pugi::xpath_node action_interrupt1 = doc_calibrator.select_node("//action[@phase='interrupt1']/param[@name='target']/text()");
-            part = std::regex_replace(action_startup.node().value() , std::regex("_mc.*"), "");
-            part = std::regex_replace(part , std::regex("-mc.*"), "");
 
+            part = std::regex_replace(action_startup.node().value(), std::regex("_mc.*"), "");
+            part = std::regex_replace(part, std::regex("-mc.*"), "");
             part = trim(part);
-            // std::cout << part << std::endl;
+
             target1 = trim(action_startup.node().value());
             target2 = trim(action_interrupt1.node().value());
-            if((target1 == target2) && target1.find("remapper") != std::string::npos && target2.find("remapper") != std::string::npos && !(ele.find("hand") != std::string::npos)){
-                std::cout << part << " - CALIBRATOR CHECK PASSED!" << std::endl;
-                // std::cout << target1 << " " << target2 << std::endl;
-                // return true;
-            }
-            else if(!(ele.find("hand") != std::string::npos))  {std::cerr << part << " CALIBRATOR CHECK FAILED!" << std::endl; pass = false;} 
 
-            if(!(ele.find("hand") != std::string::npos)) {
-                //std::cout << part << std::endl;
+            if(ele.find("hand") == std::string::npos){
+                if(target1 == target2){
+                    std::cout << part << " - CALIBRATOR CHECK PASSED!" << std::endl;
+                }
+                else{
+                    std::cerr << part << " CALIBRATOR CHECK FAILED!" << std::endl;
+                    pass = false;
+                }
+
                 checkWrappersRemappers(robot_dir, vectorAllFiles, part, target1, pass);
-                if(ele.find("arm") != std::string::npos) checkCartesian(robot_dir, vectorAllFiles, part, target1, pass);
+                if(ele.find("arm") != std::string::npos){
+                    checkCartesian(robot_dir, vectorAllFiles, part, target1, pass);
+                }
             }
-            // std::cout << part << std::endl;
             
             doc_calibrator.reset();
         }
-        
     }
     return true;
 }
