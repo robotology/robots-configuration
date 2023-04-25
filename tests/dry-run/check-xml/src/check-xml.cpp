@@ -48,7 +48,6 @@ bool loadIni(const std::string& robot_dir, std::string& inifile) {
         if(str.size() > 0)
             vecOfStrs.push_back(str);
     }
-    //  std::cout << vecOfStrs.at(0) << std::endl;
     in.close();
 
     str = vecOfStrs.at(0);
@@ -66,11 +65,6 @@ inline bool fileExists (const std::string& name) {
 bool checkIncludedFiles(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles,
                         const std::string& filename, pugi::xml_document& doc ){
     int tot,notfound,found;
-
-    // pugi::xml_document doc;
-    // pugi::xml_parse_result result = doc.load_file(filename.c_str());
-    // std::cout << "Loading " + filename + " : " << result.description() << std::endl;
-
     pugi::xml_node hrefs = doc.child("robot").child("devices");
     tot =0;
     notfound =0;
@@ -108,7 +102,6 @@ bool loadXmlFile(const std::string& robot_dir, const std::string& filename, pugi
     pugi::xml_parse_result result = doc.load_file(filename.c_str());
     
     if(result){
-        // std::cout << "Loading " + filename + " : " << result.description() << std::endl;
         return true;
     }
     else{
@@ -126,31 +119,45 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
     for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
     {
         std::string ele = *t;
-        // std::cout << part << " " << ele << std::endl;
-
-        if(ele.find("wrappers/motorControl") != std::string::npos && ele.find(part) != std::string::npos && ele.find("wrapper.xml") != std::string::npos) {
-            // std::cout << part << " " << ele << std::endl;
-            if(!loadXmlFile(robot_dir, ele, doc_wrapper)) return false;
-            pugi::xpath_node action_startup = doc_wrapper.select_node("//action[@phase='startup']/param[@name='device']/text()");
-            device = trim(action_startup.node().value());
-            if(device == target) std::cout << part <<" - WRAPPER CHECK PASSED!" << std::endl;
-            else {std::cerr << part << " - WRAPPER CHECK FAILED!" << std::endl; pass = false;} 
-            found = true;
+        if(ele.find(part) == std::string::npos) {
+            continue;
         }
-        else if (ele.find("wrappers/motorControl") != std::string::npos && ele.find(part) != std::string::npos && ele.find("remapper.xml")){
-            // std::cout << part << " " << ele << std::endl;
-            if(!loadXmlFile(robot_dir, ele, doc_remapper)) return false;
-            pugi::xpath_node device_name = doc_remapper.select_node("device");
-            device = trim(device_name.node().attribute("name").value());
-            if(device == target) std::cout << part << " - REMAPPER CHECK PASSED!" << std::endl;
-            else {std::cerr << part << " - REMAPPER CHECK FAILED!" << std::endl; pass = false;} 
 
-            found = true;
+        auto base_filename = ele.substr(ele.find_last_of("/\\") + 1);
+        auto part_ = std::regex_replace(base_filename, std::regex("_mc.*"), "");
+        part_ = std::regex_replace(part_, std::regex("-mc.*"), "");
+        part_ = trim(part_);
+        if(part != part_) {
+            continue;
         }
-        
+
+        if(ele.find("wrappers/motorControl") != std::string::npos){
+            if(ele.find("wrapper.xml") != std::string::npos) {
+                if(!loadXmlFile(robot_dir, ele, doc_wrapper)) return false;
+                pugi::xpath_node action_startup = doc_wrapper.select_node("//action[@phase='startup']/param[@name='device']/text()");
+                device = trim(action_startup.node().value());
+                if(device == target) std::cout << part <<" - WRAPPER CHECK PASSED!" << std::endl;
+                else {
+                    std::cerr << part << " - WRAPPER CHECK FAILED!" << std::endl;
+                    pass = false;
+                }
+                found = true;
+            }
+            else if (ele.find("remapper.xml")){
+                if(!loadXmlFile(robot_dir, ele, doc_remapper)) return false;
+                pugi::xpath_node device_name = doc_remapper.select_node("device");
+                device = trim(device_name.node().attribute("name").value());
+                if(device == target) std::cout << part << " - REMAPPER CHECK PASSED!" << std::endl;
+                else {
+                    std::cerr << part << " - REMAPPER CHECK FAILED!" << std::endl;
+                    pass = false;
+                }
+                found = true;
+            }
+        }
     }
-    if(found) return true;
-    else return false;
+
+    return found;
 }
 
 bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles,
@@ -163,14 +170,12 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vect
     {
         std::string ele = *t;
         if(ele.find("cartesian") != std::string::npos && ele.find(part) != std::string::npos) {
-            // std::cout << part << " " << ele << std::endl;
             if(!loadXmlFile(robot_dir, ele, doc_cartesian)) return false;
             pugi::xpath_node elem_torso = doc_cartesian.select_node("//action[@phase='startup']/paramlist[@name='networks']/elem[@name='torso']/text()");
             torso = trim(elem_torso.node().value());
             arm = "//action[@phase='startup']/paramlist[@name='networks']/elem[@name='" + part + "']/text()";
             pugi::xpath_node elem_arm = doc_cartesian.select_node(arm.c_str());
             arm = trim(elem_arm.node().value());
-            // std::cout << part << " " << arm << " " << target << std::endl;
             if(torso == "torso-mc_remapper" && arm == target || torso == "torso_mc_remapper" && arm == target) std::cout << part <<" - CARTESIAN CHECK PASSED!" << std::endl;
             else {std::cerr << part << " - CARTESIAN CHECK FAILED! " << std::endl; pass = false;} 
             found = true;

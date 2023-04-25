@@ -61,7 +61,7 @@
               </xs:element>
             </xs:sequence>
             <xs:attribute name="phase" type="phase-values" use="required" />
-            <xs:attribute name="level" type="xs:integer" use="required" />
+            <xs:attribute name="level" type="xs:unsignedByte" use="required" />
             <xs:attribute name="type" type="type-values" use="required" />
           </xs:complexType>
         </xs:element>

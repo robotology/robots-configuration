@@ -9,6 +9,7 @@
             <xs:simpleContent>
               <xs:extension base="xs:string">
                 <xs:attribute name="name" type="name-values" use="required"/>
+                <xs:attribute name="extern-name" type="extern-name-values"/>
               </xs:extension>
             </xs:simpleContent>
           </xs:complexType>
@@ -27,7 +28,7 @@
               </xs:element>
             </xs:sequence>
             <xs:attribute name="phase" type="phase-values" use="required" />
-            <xs:attribute name="level" type="xs:integer" use="required" />
+            <xs:attribute name="level" type="xs:unsignedByte" use="required" />
             <xs:attribute name="type" type="type-values" use="required" />
           </xs:complexType>
         </xs:element>
@@ -57,6 +58,15 @@
     <xs:enumeration value="period" />
     <xs:enumeration value="nodeName" />
     <xs:enumeration value="topicName" />
+    <xs:enumeration value="node_name" />
+    <xs:enumeration value="topic_name" />
+    <xs:enumeration value="msgs_name" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="extern-name-values">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="cbw_ros2_msgs_name" />
   </xs:restriction>
 </xs:simpleType>
 
