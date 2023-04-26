@@ -16,6 +16,7 @@ include(ICUBcontribHelpers)
 option(INSTALL_ALL_ROBOTS "Enable installation of all robots" OFF)
 set(ROBOT_NAME "$ENV{YARP_ROBOT_NAME}" CACHE PATH "Name of your robot")
 set(ROBOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${ROBOT_NAME}")
+option(BUILD_TESTING "If ON compile tests" OFF)
 
 icubcontrib_set_default_prefix()
 
