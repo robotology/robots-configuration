@@ -116,9 +116,8 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
     pugi::xml_document doc_wrapper, doc_remapper;
     std::string device;
 
-    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto ele : vectorAllFiles)
     {
-        std::string ele = *t;
         if(ele.find(part) == std::string::npos) {
             continue;
         }
@@ -166,9 +165,8 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vect
     pugi::xml_document doc_cartesian;
     std::string torso, arm;
 
-    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto ele : vectorAllFiles)
     {
-        std::string ele = *t;
         if(ele.find("cartesian") != std::string::npos && ele.find(part) != std::string::npos) {
             if(!loadXmlFile(robot_dir, ele, doc_cartesian)) return false;
             pugi::xpath_node elem_torso = doc_cartesian.select_node("//action[@phase='startup']/paramlist[@name='networks']/elem[@name='torso']/text()");
@@ -185,9 +183,8 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vect
 }
 
 bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, bool& pass){
-    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto ele : vectorAllFiles)
     {
-        std::string ele = *t;
         std::string part, target1, target2;
 
         if(ele.find("calibrators") != std::string::npos) {
@@ -259,9 +256,8 @@ int main(int argc, char *argv[]) {
 
     // checks calibrators xml files w/ XSD schema
     std::cout << std::endl << "4 - test calibrators consistency with XSD schema **************" << std::endl << std::endl;
-    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto ele : vectorAllFiles)
     {
-        std::string ele = *t;
         if(ele.find("calibrators") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
@@ -282,9 +278,8 @@ int main(int argc, char *argv[]) {
     XSD_PASSED = true;
     found = false;
     std::cout << std::endl << "5 - test cartesian consistency with XSD schema **************" << std::endl << std::endl;
-    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto ele : vectorAllFiles)
     {
-        std::string ele = *t;
         if(ele.find("cartesian") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
@@ -319,9 +314,8 @@ int main(int argc, char *argv[]) {
     XSD_PASSED = true;
     found = false;
     std::cout << std::endl << "6 - test wrappers consistency with XSD schema **************" << std::endl << std::endl;
-    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto ele : vectorAllFiles)
     {
-        std::string ele = *t;
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_wrapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
@@ -342,9 +336,8 @@ int main(int argc, char *argv[]) {
     XSD_PASSED = true;
     found = false;
     std::cout << std::endl << "7 - test remappers consistency with XSD schema **************" << std::endl << std::endl;
-    for (auto t=vectorAllFiles.begin(); t!=vectorAllFiles.end(); ++t) 
+    for (auto ele : vectorAllFiles)
     {
-        std::string ele = *t;
         if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("_remapper") != std::string::npos) {
             found = true;
             std::cout << ele << std::endl;
