@@ -45,6 +45,9 @@ if(INSTALL_ALL_ROBOTS)
     # Get list of models
     subdirlist(subdirs ${CMAKE_CURRENT_SOURCE_DIR})
 
+    # Get list of skipped tests
+    file(READ tests/skip_tests.txt TEST_SKIPPED)
+
     # Install each model
     foreach (dir ${subdirs})
         message(STATUS "Checking if ${dir}/CMakeLists.txt exists")
@@ -61,11 +64,19 @@ if(INSTALL_ALL_ROBOTS)
                 message(STATUS "Also added test ${test_dryrun_dev_name}")
 
                 set_tests_properties(${test_dryrun_xml_name} ${test_dryrun_dev_name} PROPERTIES LABELS "all")
-                if(NOT "${dir}" STREQUAL "ergoCubSN000" AND NOT "${dir}" STREQUAL "iCubGenova09")
-                    set_tests_properties(${test_dryrun_xml_name} ${test_dryrun_dev_name} PROPERTIES LABELS "gold")
+
+                string(FIND "${TEST_SKIPPED}" "${test_dryrun_xml_name}" TEST_SKIPPED_RES_XML)
+                if(${TEST_SKIPPED_RES_XML} EQUAL -1)
+                    set_tests_properties(${test_dryrun_xml_name} PROPERTIES LABELS "run")
                 else()
-                    set_tests_properties(${test_dryrun_xml_name} PROPERTIES LABELS "gold")
-                    set_tests_properties(${test_dryrun_dev_name} PROPERTIES LABELS "failing")
+                    set_tests_properties(${test_dryrun_xml_name} PROPERTIES LABELS "skip")
+                endif()
+
+                string(FIND "${TEST_SKIPPED}" "${test_dryrun_dev_name}" TEST_SKIPPED_RES_DEV)
+                if(${TEST_SKIPPED_RES_DEV} EQUAL -1)
+                    set_tests_properties(${test_dryrun_dev_name} PROPERTIES LABELS "run")
+                else()
+                    set_tests_properties(${test_dryrun_dev_name} PROPERTIES LABELS "skip")
                 endif()
             endif()
         else()
