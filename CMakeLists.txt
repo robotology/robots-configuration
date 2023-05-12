@@ -46,7 +46,7 @@ if(INSTALL_ALL_ROBOTS)
     subdirlist(subdirs ${CMAKE_CURRENT_SOURCE_DIR})
 
     # Get list of skipped tests
-    file(READ tests/skip_tests.txt TEST_SKIPPED)
+    file(READ tests/dry-run/skip_tests.txt TEST_SKIPPED)
 
     # Install each model
     foreach (dir ${subdirs})
