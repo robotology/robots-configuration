@@ -12,7 +12,7 @@
     <!-- ANALOG SENSORS FT -->
 
 
-   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" /> 
    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
 
    <xi:include href="hardware/FT/left_arm-eb2-j0_1-strain.xml" />
