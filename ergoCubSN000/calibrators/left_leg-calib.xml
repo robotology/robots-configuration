@@ -27,7 +27,7 @@
     <param name="startupMaxPwm">                      8000           8000         8000          8000       8000    8000      </param>
     <param name="startupPosThreshold">                2              2            2             2          2       2        </param>
   </group>
-
+<!-- <param name="CALIB_ORDER"> (2) (4) (5) (3) (0) (1)  </param> --> <!-- Don't remove this line -->
   <param name="CALIB_ORDER"> (2) (4) (5) (3) (0) (1)  </param>
  
   <action phase="startup" level="10" type="calibrate">
