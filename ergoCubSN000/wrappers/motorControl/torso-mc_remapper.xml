@@ -2,13 +2,13 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-mc_remapper" type="controlboardremapper">
-    <!--
-    These are the regular parameters 
+    
+  <!--  These are the regular parameters --> 
     <param name="axesNames">(torso_roll,torso_pitch,torso_yaw)</param>    
-    -->
-    <!-- This are the parametes with torso_pitch not exposed outside of the yarprobotinterface -->
-    <param name="axesNames">(torso_roll,torso_yaw)</param>
-    <param name="joints"> 2 </param>
+    
+    <!-- This are the parametes with torso_pitch not exposed outside of the yarprobotinterface 
+    <param name="axesNames">(torso_roll,torso_yaw)</param> -->
+    <param name="joints"> 3 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="torso_joints">  torso-eb5-j0_2-mc </elem>
