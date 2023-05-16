@@ -42,11 +42,11 @@
 		<param name="CALIB_ORDER">(0) (2) </param>
 
 		<action phase="startup" level="10" type="calibrate">
-		    <param name="target">torso-mc_remapper</param>
+		    <param name="target">torso-eb5-j0_2-mc</param>
 		</action>
 
 		<action phase="interrupt1" level="1" type="park">
-		    <param name="target">torso-mc_remapper</param>
+		    <param name="target">torso-eb5-j0_2-mc</param>
 		</action>
 
 		<action phase="interrupt3" level="1" type="abort" />
