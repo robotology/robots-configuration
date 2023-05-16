@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_foot-imu_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
-        <param name="name">     /ergocub/right_foot/imu </param>
+        <param name="name">     /ergocub/right_foot_heel_tiptoe/imu </param>
 
 
         <action phase="startup" level="5" type="attach">
