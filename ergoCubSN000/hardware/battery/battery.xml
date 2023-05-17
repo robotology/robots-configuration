@@ -4,6 +4,7 @@
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="canbattery" type="embObjBattery">
 
     <xi:include href="../../general.xml" />
+    <xi:include href="../electronics/left_arm-eb2-j0_1-eln.xml" />
 
     <group name="SERVICE">
 
