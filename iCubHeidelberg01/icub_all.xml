@@ -34,8 +34,8 @@
     <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
     <xi:include href="hardware/FT/left_leg-eb6-j0_3-strain.xml" />
     <xi:include href="hardware/FT/left_leg-eb7-j4_5-strain.xml" />
     <xi:include href="hardware/FT/right_leg-eb8-j0_3-strain.xml" />

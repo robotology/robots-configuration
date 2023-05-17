@@ -7,15 +7,13 @@
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
 
- 
+
     <devices>
 
 	    <!-- ANALOG SENSOR FT -->
 
-	    <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper.xml" /> 
-
 	    <xi:include href="hardware/FT/torso-eb5-j0_2-strain.xml" />
 
     </devices>
-</robot> 
- 
+</robot>
+

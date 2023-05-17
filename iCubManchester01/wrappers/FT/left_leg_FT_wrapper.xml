@@ -2,14 +2,14 @@
 
 	<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg_as_wrapper" type="multipleanalogsensorsserver">
 		<param name="period">       10  				</param>
-        <param name="name">       /icub/left_leg/FT       </param>
+<param name="name">       /icub/left_leg/FT       </param>
 
-		<action phase="startup" level="5" type="attach">
+		<action phase="startup" level="10" type="attach">
 		    <paramlist name="networks">
-		        <elem name="FirstStrain">  left_leg_strain </elem>
+		        <elem name="FirstStrain">  left_leg-FT_remapper </elem>
 		    </paramlist>
 		</action>
 
-		<action phase="shutdown" level="5" type="detach" />
+		<action phase="shutdown" level="15" type="detach" />
 	</device>
 

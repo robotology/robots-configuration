@@ -9,26 +9,27 @@
 
     <devices>
 
-    <!-- ANALOG SENSORS FT -->
-
-   <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
-   <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" /> 
-
-   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
-   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> 
-    
-   <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper.xml" /> 
-   <xi:include href="wrappers/FT/left_leg_hip-FT_wrapper.xml" /> 
-
+   <!-- ANALOG SENSORS FT -->
 
    <xi:include href="hardware/FT/left_leg-eb7-j0_2-strain.xml" />
-   <xi:include href="hardware/FT/right_leg-eb11-j0_2-strain.xml" /> 
+   <xi:include href="hardware/FT/right_leg-eb11-j0_2-strain.xml" />
    <xi:include href="hardware/FT/left_leg-eb8-j3_5-strain.xml" />
    <xi:include href="hardware/FT/right_leg-eb12-j3_5-strain.xml" />
 
    <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
-   <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" /> 
-    
+   <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
+
+   <!-- FT SENSORS - REMAPPERS -->
+   <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
+   <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
+
+   <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
+   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
+
+
 
   </devices>
 </robot>
