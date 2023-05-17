@@ -12,7 +12,7 @@
 
 	<group name="HOME">
 	<!--                                shoulder-pitch    shoulder-roll    shoulder-yaw    elbow    wrist-yaw    wrist-roll    wrist-pitch    thumb_add    thumb_oc    index_add    index_oc    middle_oc    ring_pinky_oc -->
-		<param name="positionHome">            5                 30              0           10         0            0             0             30.00        0.00        0.00         0.00        0.00           0.00    </param>
+		<param name="positionHome">            5                 30              0           10         0            0             0             0.00         0.00        0.00         0.00        0.00           0.00    </param>
 		<param name="velocityHome">            10                10              10          10         10           10            10            40.00        40.00       40.00        40.00       40.00          40.00    </param>
 	</group>
 	<group name="CALIBRATION">
