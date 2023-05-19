@@ -97,6 +97,11 @@
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
 
+    
+    <!-- BATTERY-->
+    <xi:include href="hardware/battery/battery.xml" />
+    <xi:include href="wrappers/battery/battery.xml" />
+
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
