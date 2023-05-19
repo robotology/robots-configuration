@@ -3,7 +3,7 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_left_arm-eb5-strain" type="embObjStrain">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="cer_left_arm-eb5-strain" type="embObjFTsensor">
 
       <xi:include href="../../general.xml" />
       <xi:include href="../electronics/cer_left_shoulder-ems5-eln.xml" />
