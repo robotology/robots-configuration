@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<robot name="iCubGenova01" portprefix="icub" build="0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+    <!-- cartesian --> 
+    <xi:include href="hardware/skin/skin.xml" />">
+    <!-- SKIN -->
+    <xi:include href="wrappers/skin/left_arm_skin_wrapper.xml" />
+</devices>
+</robot> 
+
