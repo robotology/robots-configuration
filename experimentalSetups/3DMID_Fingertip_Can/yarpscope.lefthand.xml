@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<portscope rows="8" columns="5" carrier="mcast">
+
+    <plot gridx="2"
+          gridy="0"
+          hspan="1"
+          vspan="2"
+          title="taxel7"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="7"
+               color="Violet"
+               title="Tax 7"
+               type="lines"
+               size="3" />
+    </plot>               
+    <plot gridx="2"
+          gridy="2"
+          hspan="1"
+          vspan="2"
+          title="taxel5"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="5"
+               color="Blue"
+               title="Tax 5"
+               type="lines"
+               size="3" />
+    </plot>               
+    <plot gridx="2"
+          gridy="4"
+          hspan="1"
+          vspan="2"
+          title="taxel2"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="2"
+               color="Orange"
+               title="Tax 2"
+               type="lines"
+               size="3" />
+    </plot>               
+    <plot gridx="2"
+          gridy="6"
+          hspan="1"
+          vspan="2"
+          title="taxel0"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="0"
+               color="Black"
+               title="Tax 0"
+               type="lines"
+               size="3" />
+    </plot>               
+    <plot gridx="0"
+          gridy="2"
+          hspan="1"
+          vspan="2"
+          title="taxel4"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="4"
+               color="Red"
+               title="Tax 4"
+               type="lines"
+               size="3" />
+    </plot>               
+    <plot gridx="1"
+          gridy="1"
+          hspan="1"
+          vspan="2"
+          title="taxel6"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="6"
+               color="Black"
+               title="Tax 6"
+               type="lines"
+               size="3" />
+    </plot>
+    <plot gridx="1"
+          gridy="3"
+          hspan="1"
+          vspan="2"
+          title="taxel3"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="3"
+               color="Red"
+               title="Tax 3"
+               type="lines"
+               size="3" />
+    </plot>
+    <plot gridx="1"
+          gridy="5"
+          hspan="1"
+          vspan="2"
+          title="taxel1"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="1"
+               color="Orange"
+               title="Tax 1"
+               type="lines"
+               size="3" />
+    </plot>
+    <plot gridx="3"
+          gridy="1"
+          hspan="1"
+          vspan="2"
+          title="taxel8"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="8"
+               color="Green"
+               title="Tax 6"
+               type="lines"
+               size="3" />
+    </plot>
+    <plot gridx="3"
+          gridy="3"
+          hspan="1"
+          vspan="2"
+          title="taxel10"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="10"
+               color="Orange"
+               title="Tax 6"
+               type="lines"
+               size="3" />
+    </plot>
+    <plot gridx="3"
+          gridy="5"
+          hspan="1"
+          vspan="2"
+          title="taxel11"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="11"
+               color="Purple"
+               title="Tax 6"
+               type="lines"
+               size="3" />
+    </plot>
+    <plot gridx="4"
+          gridy="2"
+          hspan="1"
+          vspan="2"
+          title="taxel9"
+          size="100"
+          minval="000"
+          maxval="300"
+          bgcolor="White">
+        <graph remote="/icub/skin/left_hand"
+               index="9"
+               color="Orange"
+               title="Tax 9"
+               type="lines"
+               size="3" />
+    </plot>
+    
+          
+</portscope>
+

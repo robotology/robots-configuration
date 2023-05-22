@@ -1,0 +1,18 @@
+**aprire piu' tabs:**
+
+tab 1-   yarpserver
+tab 2-   cd ~/robotology-superbuild/robots-configuration/experimentalSetups/3DMID_Fingertip_Can/
+  - inzializza il can:
+     sudo ip link set can0 type can bitrate 1000000
+     sudo ip link set up can0
+  -lancia YARP:
+     yarprobotinterface --config icub.xml
+tab 3: yarpscope --xml yarpscope.fingertip.xml
+  - se i dati sono fissi a 0 le porte dati non sono connesse alle porte yarpscope: connetterle con yarp connect /icub/skin/left_hand /tmp/port/<i> (i da 1 a n)
+
+se il valore si pianta, si possono mandare i comandi CAN:
+cansend can0 20a#4d0132f0  -- f0 e' il valore noLoad
+cansend can0 20a#50000302010000  -- 50 = comando; 00:primo triangolo 03: ultimo triangolo; 02: bitshift; 01: enable; 0000: CDC Offset
+cansend can0 20a#0700  -- start TX
+
+
