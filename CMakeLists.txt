@@ -45,6 +45,9 @@ if(INSTALL_ALL_ROBOTS)
     # Get list of models
     subdirlist(subdirs ${CMAKE_CURRENT_SOURCE_DIR})
 
+    # Get list of skipped tests
+    file(READ tests/dry-run/skip_tests.txt TEST_SKIPPED)
+
     # Install each model
     foreach (dir ${subdirs})
         message(STATUS "Checking if ${dir}/CMakeLists.txt exists")
@@ -59,6 +62,22 @@ if(INSTALL_ALL_ROBOTS)
                 set(test_dryrun_dev_name "dry-run_${dir}_dev")
                 add_test(NAME ${test_dryrun_dev_name} COMMAND ${BASH_PROGRAM} ${CMAKE_CURRENT_SOURCE_DIR}/tests/dry-run/dry-run_dev.sh ${dir})
                 message(STATUS "Also added test ${test_dryrun_dev_name}")
+
+                set_tests_properties(${test_dryrun_xml_name} ${test_dryrun_dev_name} PROPERTIES LABELS "all")
+
+                string(FIND "${TEST_SKIPPED}" "${test_dryrun_xml_name}" TEST_SKIPPED_RES_XML)
+                if(${TEST_SKIPPED_RES_XML} EQUAL -1)
+                    set_tests_properties(${test_dryrun_xml_name} PROPERTIES LABELS "run")
+                else()
+                    set_tests_properties(${test_dryrun_xml_name} PROPERTIES LABELS "skip")
+                endif()
+
+                string(FIND "${TEST_SKIPPED}" "${test_dryrun_dev_name}" TEST_SKIPPED_RES_DEV)
+                if(${TEST_SKIPPED_RES_DEV} EQUAL -1)
+                    set_tests_properties(${test_dryrun_dev_name} PROPERTIES LABELS "run")
+                else()
+                    set_tests_properties(${test_dryrun_dev_name} PROPERTIES LABELS "skip")
+                endif()
             endif()
         else()
             message(STATUS "Does not")

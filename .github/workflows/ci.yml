@@ -56,7 +56,7 @@ jobs:
       shell: bash
       run: |
         cd build
-        ctest --timeout 60 --output-on-failure
+        ctest --timeout 60 --output-on-failure -L run
 
     - name: Upload Output
       if: always()
