@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<!--    This file contains details of how the mais service is configured. 
+<!--    This file contains details of how the mais service is configured.
   -->
 
 
-    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjStrain. -->
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX" type="embObjStrain">
-    
+    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjFTsensor. -->
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part-ebX" type="embObjFTsensor">
+
         <!-- Include the file which specifies global configuration -->
         <xi:include href="../../general.xml"/>
 
         <!-- Include the file which specifies which ETH board hosts the service -->
-        <xi:include href="../../hardware/electronics/filenameOfETHboard-eln.xml" /> 
-    
+        <xi:include href="../../hardware/electronics/filenameOfETHboard-eln.xml" />
+
         <!-- This group defines the service -->
         <group name="SERVICE">
-            
+
             <!-- The type of service expressed as stringised values of eOmn_serv_type_t. For strain it must be eomn_serv_AS_strain -->
             <param name="type"> eomn_serv_AS_strain </param>
-        
+
             <!-- This group defines the properties of the service -->
             <group name="PROPERTIES">
-  
+
                 <!-- This group defines the properties of the CAN boards -->
                 <group name="CANBOARDS">
-                
-                    <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
+
+                    <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_)
                          so far it can be strain or strain2
                       -->
                     <param name="type">                 eobrd_strain         </param>
 
-                    <!-- This param tells the protocol version required to run the service. Values are in range [0, 255] 
+                    <!-- This param tells the protocol version required to run the service. Values are in range [0, 255]
                          if (0, 0) no check is done, otherwise there must be a CAN board with detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor -->
                     <group name="PROTOCOL">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param>     
-                    </group> 
-                    
-                    <!-- This param tells the firmware version required to run the service. Values are in range [0, 255] 
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
+
+                    <!-- This param tells the firmware version required to run the service. Values are in range [0, 255]
                          if (0, 0, 0) no check is done, otherwise there must be a CAN board with detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor -->
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param> 
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
                         <param name="build">            0                   </param>
                     </group>
-                    
+
                 </group>
-                
+
                 <!-- This group defines the available sensors. They are those defined by production. In strain there is only one sensor -->
                 <group name="SENSORS">
-                
+
                     <!-- This param is the id of the sensor. its name should be defined in production -->
                     <param name="id">                   id_l_arm_strain      </param>
                     <!-- This param is the type of the sensor. it must be eoas_strain  -->
                     <param name="type">                 eoas_strain          </param>
                     <!-- This param is the address of the sensor. Its uses the format CANx:addr  -->
                     <param name="location">             CAN2:7             </param>
-                    
-                </group>              
-            
+
+                </group>
+
             </group>
-            
-            
+
+
             <!-- This group defines the settings which can be applied to the available sensor. -->
-            <group name="SETTINGS"> 
-            
+            <group name="SETTINGS">
+
                 <!-- The acquisition rate of all the sensor in ms. values are in range [1, 255]. Use 10 -->
                 <param name="acquisitionRate">          10                  </param>
                 <!-- The list of the enabled sensors ... there is always one and is the value of PROPERTIES.PROPERTIES.SENSORS.id -->
                 <param name="enabledSensors">           id_l_arm_strain      </param>
-                
-            </group>            
-            
+
+            </group>
+
             <!-- This group defines the settings which apply to the strain only. -->
-            <group name="STRAIN_SETTINGS"> 
-            
-                <!-- tells if the strain uses calivation or not. Values are true / false. -->            
-                <param name="useCalibration">           true                    </param>     
-                
-            </group>            
-            
+            <group name="STRAIN_SETTINGS">
+
+                <!-- tells if the strain uses calivation or not. Values are true / false. -->
+                <param name="useCalibration">           true                    </param>
+
+            </group>
+
         </group>
-    
+
   </device>
-  
+
 
 
 

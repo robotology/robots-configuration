@@ -3,7 +3,7 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb9-j4_5-strain" type="embObjStrain">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb9-j4_5-strain" type="embObjFTsensor">
 
         <xi:include href="../../general.xml"/>
 
