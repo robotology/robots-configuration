@@ -7,22 +7,26 @@
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
 
- 
+
     <devices>
 
 	    <!-- ANALOG SENSOR FT -->
 
-	    <xi:include href="wrappers/FT/left_foot_tiptoe-FT_wrapper.xml" />
-	    <xi:include href="wrappers/FT/left_foot_heel-FT_wrapper.xml" />
-	    <xi:include href="wrappers/FT/right_foot_tiptoe-FT_wrapper.xml" />
-	    <xi:include href="wrappers/FT/right_foot_heel-FT_wrapper.xml" /> 
+        <!-- FT SENSORS - REMAPPERS -->
+		<xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
+		<xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
 
-	    <xi:include href="hardware/FT/left_leg-eb8-j4_5-strain.xml" />  
+		<!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
+		<xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
+		<xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
+
+
+	    <xi:include href="hardware/FT/left_leg-eb8-j4_5-strain.xml" />
 	    <xi:include href="hardware/FT/left_leg-eb9-skin-strain.xml" />
 
 	    <xi:include href="hardware/FT/right_leg-eb12-j4_5-strain.xml" />
 	    <xi:include href="hardware/FT/right_leg-eb13-skin-strain.xml" />
 
     </devices>
-</robot> 
- 
+</robot>
+

@@ -30,7 +30,7 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">                   id_r_lower_leg_strain   </param>
+                    <param name="id">                   r_foot_ft_sensor   </param>
                     <param name="framename">            r_foot_ft                </param>
                     <param name="type">                 eoas_strain             </param>
                     <param name="location">             CAN2:13                 </param>
@@ -40,7 +40,7 @@
 
             <group name="SETTINGS">
                 <param name="acquisitionRate">          10                      </param>
-                <param name="enabledSensors">           id_r_lower_leg_strain   </param>
+                <param name="enabledSensors">           r_foot_ft_sensor   </param>
 				 <param name="temperature-acquisitionRate"> 1000                  </param> <!-- 1 seconds -->
             </group>
 

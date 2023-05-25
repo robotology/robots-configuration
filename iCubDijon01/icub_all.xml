@@ -45,12 +45,16 @@
     <xi:include href="wrappers/FT/left_leg_FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm_FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_leg_FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
     <xi:include href="wrappers/MAIS/left_hand_mais_wrapper.xml" />
     <xi:include href="wrappers/MAIS/right_hand_mais_wrapper.xml" />
     <xi:include href="hardware/FT/left_arm_strain.xml" />
     <xi:include href="hardware/FT/left_leg_strain.xml" />
+    <xi:include href="hardware/FT/left_foot_strain.xml" />
     <xi:include href="hardware/FT/right_arm_strain.xml" />
     <xi:include href="hardware/FT/right_leg_strain.xml" />
+    <xi:include href="hardware/FT/right_foot_strain.xml" />
     <xi:include href="hardware/MAIS/left_hand_mais.xml" />
     <xi:include href="hardware/MAIS/right_hand_mais.xml" />
 
