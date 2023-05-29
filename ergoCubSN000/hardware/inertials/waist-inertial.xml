@@ -6,5 +6,5 @@
       <param name="period">       10                  </param>
       <param name="name">  /ergocub/waist/inertials  </param>
       <param name="subdevice">  xsensmt  </param>
-      <param name="serial">  /dev/ttyXsens   </param>
+      <param name="serial">  /dev/ttyS0   </param>
 </device>

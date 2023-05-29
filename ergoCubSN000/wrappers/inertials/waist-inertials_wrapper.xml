@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="waist-inertials_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
-        <param name="name">     /ergocub/waist/inertials       </param>
+        <param name="name">     /waist/inertials       </param>
 
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
