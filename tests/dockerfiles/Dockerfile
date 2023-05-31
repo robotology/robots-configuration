@@ -104,11 +104,11 @@ RUN cd ${DEPENDENCIES_DIR} && \
           -DENABLE_icubmod_embObjMotionControl:BOOL=ON \
           -DENABLE_icubmod_embObjBattery:BOOL=ON \
           -DENABLE_icubmod_embObjSkin:BOOL=ON \
-          -DENABLE_icubmod_embObjStrain:BOOL=ON \
           -DENABLE_icubmod_embObjMultipleFTsensors:BOOL=ON \
           -DENABLE_icubmod_embObjPOS:BOOL=ON \
           -DENABLE_icubmod_embObjPSC:BOOL=ON \
           -DENABLE_icubmod_embObjBattery:BOOL=ON \
+          -DENABLE_icubmod_canBusFtSensor:BOOL=ON \
           -DENABLE_icubmod_xsensmtx:BOOL=ON \
           -DENABLE_icubmod_skinWrapper:BOOL=ON \
           -DENABLE_icubmod_parametricCalibratorEth:BOOL=ON \
