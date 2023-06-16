@@ -34,7 +34,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
     cd ${DEPENDENCIES_DIR}/icub-firmware-shared && \
     git tag > ${DEPENDENCIES_DIR}/icub_firmware_shared_RELEASES.txt && \
     if grep -q $(cat ${DEPENDENCIES_DIR}/icub_firmware_shared_VERSION.txt) ${DEPENDENCIES_DIR}/icub_firmware_shared_RELEASES.txt; then \
-      git checkout $(cat ${DEPENDENCIES_DIR}/icub_firmware_shared_VERSION.txt); \
+      git checkout v$(cat ${DEPENDENCIES_DIR}/icub_firmware_shared_VERSION.txt); \
     else \
       git checkout devel; \
     fi
