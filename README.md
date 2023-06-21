@@ -26,24 +26,22 @@ Make sure you have available the following resources:
 Unless you aim to install the configurations of all robots, you have to specify
 the name of your own robot by means of the environment variable **`YARP_ROBOT_NAME`**.
 Example:
-```sh
+```console
 export YARP_ROBOT_NAME=iCubGenova01
 ```
 
 ### Build
 From the repository root level do:
-```sh
-$ mkdir build
-$ cd build
-$ cmake ../
-$ make install
+```console
+cmake -S . -B build
+cmake --build build/ --target install
 ```
 As result, the configurations files of your own robot should be placed in `$ICUBcontrib_DIR/share/ICUBcontrib/robots/$YARP_ROBOT_NAME`.
 
 From this location you may want to tune/modify certain parameters by first copying
 out the installed files into user local directories. To this end, rely on the command below:
-```sh
-$ yarp-config robot --import $YARP_ROBOT_NAME
+```console
+yarp-config robot --import $YARP_ROBOT_NAME
 ```
 
 You should end up finding the local copies under `~/.local/share/yarp/robots/$YARP_ROBOT_NAME`.
