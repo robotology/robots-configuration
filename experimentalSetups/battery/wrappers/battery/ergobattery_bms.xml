@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="ergocub_battery-nws_yarp" type="battery_nws_yarp">
+
+      <param name="period">           1.0        </param>
+      <param name="name">        /ergocub/battery/bms </param>
+      <param name="enable_log">        0         </param>
+      <param name="enable_shutdown">   0         </param>
+
+      <action phase="startup" level="5" type="attach">
+         <paramlist name="networks">
+            <elem name="ergocub_battery_bms">  ergocub_battery_bms </elem>
+         </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach" />
+  </device>
+

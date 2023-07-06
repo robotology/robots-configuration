@@ -1,0 +1,10 @@
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN000" build="1">
+  
+  <group name="GENERAL">
+      <param name="skipCalibration">    false  </param>
+      <param name="useRawEncoderData">  false  </param>
+      <param name="useLimitedPWM">      false  </param>
+      <param name="verbose">            false  </param>
+  </group>
+</params>
