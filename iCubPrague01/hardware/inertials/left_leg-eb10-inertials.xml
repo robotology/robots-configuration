@@ -3,7 +3,7 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb10-inertials" type="embObjInertials">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb10-inertials" type="embObjIMU">
 
         <xi:include href="../../general.xml" />
 
@@ -11,7 +11,7 @@
 
         <group name="SERVICE">
 
-            <param name="type"> eomn_serv_AS_inertials </param>
+            <param name="type"> eomn_serv_AS_inertials3 </param>
 
             <group name="PROPERTIES">
 
@@ -41,6 +41,12 @@
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                    </param>
+
+                    <param name="boardType"> ems4 ems4 mtb
+                                             mtb  mtb  mtb  mtb
+                                             mtb  mtb  mtb  mtb
+                                             mtb  mtb  mtb  mtb
                     </param>
 
                     <param name="location"> ETH:0                   ETH:1                   CAN1:1
