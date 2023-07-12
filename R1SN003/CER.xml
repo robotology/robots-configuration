@@ -100,5 +100,10 @@
     <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" enabled_by="enable_ros enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
     <xi:include href="wrappers/motorControl/cer_alljoints_ros_wrapper.xml" enabled_by="enable_ros" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
     <xi:include href="wrappers/motorControl/cer_alljoints_ros2_wrapper.xml" enabled_by="enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
+    
+    <!-- BATTERY -->
+    <xi:include href="wrappers/battery/r1battery.xml" /> 
+    <xi:include href="hardware/battery/r1battery.xml" /> 
+
 </devices>
 </robot>
