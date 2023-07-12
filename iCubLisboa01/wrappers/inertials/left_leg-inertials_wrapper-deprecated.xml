@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb10-inertials_wrapper" type="analogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb10-inertials_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
         <param name="name">     /icub/left_leg/inertialMTB                </param>
 
@@ -19,7 +19,7 @@
         <action phase="shutdown" level="5" type="detach" />
     </device>
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb6-inertials_wrapper" type="analogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb6-inertials_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
         <param name="name">     /icub/left_leg/inertialEMS6                </param>
 
@@ -36,7 +36,7 @@
         <action phase="shutdown" level="5" type="detach" />
     </device>
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb7-inertials_wrapper" type="analogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb7-inertials_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
         <param name="name">     /icub/left_leg/inertialEMS7                </param>
 
