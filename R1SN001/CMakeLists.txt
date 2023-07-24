@@ -1,6 +1,6 @@
 set(appname R1SN001)
 
-set(scripts CER.xml yarprobotinterface.ini general.xml yarpmotorgui.ini firmwareupdater.ini)
+set(scripts CER.xml CER_noPSC.xml yarprobotinterface.ini general.xml yarpmotorgui.ini firmwareupdater.ini)
 
 yarp_install(FILES ${scripts} DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
 yarp_install(DIRECTORY calibrators DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
