@@ -14,7 +14,7 @@
     <!-- joint name                             thumb               index               medium              pinky               -->    
     <group name="LIMITS">
         <param name="jntPosMin">                4                   4                   4                   4                  </param>
-        <param name="jntPosMax">                70                  63                  85                  85                 </param>
+        <param name="jntPosMax">                70                  85                  85                  85                 </param>
         <param name="jntVelMax">                1000                1000                1000                1000               </param>
         <param name="motorOverloadCurrents">    2000                2000                2000                2000               </param>
         <param name="motorNominalCurrents">     1100                1100                1100                1100                </param>
