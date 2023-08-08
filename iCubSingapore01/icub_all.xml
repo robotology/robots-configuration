@@ -50,10 +50,10 @@
     <xi:include href="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
 
     <!-- INERTIAL SENSOR-->
-    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <!--<xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />-->
 
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
