@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-    <robot name="iCubSingapore01" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <robot name="iCubSingapore01" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
@@ -50,10 +50,10 @@
     <xi:include href="hardware/motorControl/right_leg-eb9-j4_5-mc.xml" />
 
     <!-- INERTIAL SENSOR-->
-    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <!--<xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
-    <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />-->
 
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
@@ -93,15 +93,15 @@
     <xi:include href="wrappers/VFT/left_leg-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" />
-
+ 
     <!--  CALIBRATORS -->
+    <xi:include href="calibrators/head-calib.xml" />
+    <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/left_arm-calib.xml" />
     <xi:include href="calibrators/right_arm-calib.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
-    <xi:include href="calibrators/torso-calib.xml" />
-    <xi:include href="calibrators/head-calib.xml" />
-
+    
     <!-- CARTESIANS -->
     <xi:include href="cartesian/left_arm-cartesian.xml" />
     <xi:include href="cartesian/right_arm-cartesian.xml" />
