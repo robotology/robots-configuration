@@ -20,7 +20,7 @@
         <!-- joint name                         neck-pitch  neck-roll   -->
         <group name="CALIBRATION">
             <param name="calibrationType">      12          12          </param>
-            <param name="calibration1">   	    38000      -44687       </param>
+            <param name="calibration1">   	    63247      -44687       </param>
             <param name="calibration2">         0           0           </param>
             <param name="calibration3">         0           0           </param>
 
