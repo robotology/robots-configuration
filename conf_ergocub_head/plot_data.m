@@ -1,7 +1,6 @@
 % First of all you have to double click on the .mat file to load the
 % ergocub_head variable
 
-close all
 
 % set defaults so plots look nice
 set(groot,'defaultLineLineWidth',1.3);

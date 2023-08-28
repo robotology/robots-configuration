@@ -9,7 +9,7 @@
     </device>
  
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="telemetryDeviceDumper" type="telemetryDeviceDumper">
-        <param name="axesNames">(neck-pitch,neck-roll)</param>
+        <param name="axesNames">(neck_pitch,neck_roll)</param>
         <param name="logIEncoders">true</param>
         <param name="logITorqueControl">false</param>
         <param name="logIMotorEncoders">true</param>

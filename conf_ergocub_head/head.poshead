@@ -2,8 +2,8 @@
 <Sequence_poshead TotPositions="7" ReferencePart="head">
     <Position Index="0" Timing="2.00">
         <JointPositions Count="2">
-            <PosValue>22.30</PosValue>
-            <PosValue>-0.44</PosValue>
+            <PosValue>22.00</PosValue>
+            <PosValue>0.00</PosValue>
         </JointPositions>
         <JointVelocities Count="2">
             <SpeedValue>25.00</SpeedValue>
@@ -12,8 +12,8 @@
     </Position>
     <Position Index="1" Timing="2.00">
         <JointPositions Count="2">
-            <PosValue>-41.09</PosValue>
-            <PosValue>0.86</PosValue>
+            <PosValue>-40.00</PosValue>
+            <PosValue>0.00</PosValue>
         </JointPositions>
         <JointVelocities Count="2">
             <SpeedValue>25.00</SpeedValue>
@@ -22,8 +22,8 @@
     </Position>
     <Position Index="2" Timing="2.00">
         <JointPositions Count="2">
-            <PosValue>1.88</PosValue>
-            <PosValue>-0.33</PosValue>
+            <PosValue>0.00</PosValue>
+            <PosValue>0.00</PosValue>
         </JointPositions>
         <JointVelocities Count="2">
             <SpeedValue>25.00</SpeedValue>
@@ -32,8 +32,8 @@
     </Position>
     <Position Index="3" Timing="2.00">
         <JointPositions Count="2">
-            <PosValue>-0.23</PosValue>
-            <PosValue>18.96</PosValue>
+            <PosValue>0.00</PosValue>
+            <PosValue>20.00</PosValue>
         </JointPositions>
         <JointVelocities Count="2">
             <SpeedValue>25.00</SpeedValue>
@@ -42,8 +42,8 @@
     </Position>
     <Position Index="4" Timing="2.00">
         <JointPositions Count="2">
-            <PosValue>1.82</PosValue>
-            <PosValue>-19.89</PosValue>
+            <PosValue>0.00</PosValue>
+            <PosValue>-20.00</PosValue>
         </JointPositions>
         <JointVelocities Count="2">
             <SpeedValue>25.00</SpeedValue>
@@ -52,8 +52,8 @@
     </Position>
     <Position Index="5" Timing="2.00">
         <JointPositions Count="2">
-            <PosValue>-1.10</PosValue>
-            <PosValue>0.04</PosValue>
+            <PosValue>0.00</PosValue>
+            <PosValue>0.00</PosValue>
         </JointPositions>
         <JointVelocities Count="2">
             <SpeedValue>25.00</SpeedValue>
