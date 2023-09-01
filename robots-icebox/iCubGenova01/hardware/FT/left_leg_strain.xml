@@ -3,7 +3,7 @@
 
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" type="canBusFtSensor" name="left_leg_strain">
-    <param name="sensorName"> l_leg_ft_sensor </param>
+    <param name="sensorName"> l_leg_ft </param>
     <param name="frameName"> l_leg_ft </param>
 	<param name="canbusDevice"> "sharedcan" </param>
 	<param name="physDevice"> "cfw2can" </param>

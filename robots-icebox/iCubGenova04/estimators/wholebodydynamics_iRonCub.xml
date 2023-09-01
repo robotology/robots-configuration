@@ -46,7 +46,7 @@
         </group>
 
         <!-- <group name="FT_SECONDARY_CALIBRATION">
-            <param name="l_leg_ft_sensor">
+            <param name="l_leg_ft">
                    (7.425024e-01,5.604686e-02,-4.408041e-02,3.727271e-01,6.718566e-01,2.605184e-01
                     ,2.376318e-02,4.601413e-01,9.920935e-03,-8.951425e-01,-1.167558e-01,1.971860e+00
                     ,-7.972684e-02,-2.326263e-01,9.977213e-01,-1.405751e+00,3.249553e-01,-1.666625e+00
@@ -55,7 +55,7 @@
                     ,1.979480e-03,1.733975e-04,-3.815689e-05,-1.993212e-02,-1.673455e-02,9.158948e-01)
 	    </param>
 
-            <param name="r_leg_ft_sensor">
+            <param name="r_leg_ft">
                     (9.308601e-01,7.328130e-03,-1.211788e-02,-1.123839e-01,-2.977943e-01,-1.954805e-02
                     ,-8.177519e-02,7.160387e-01,-4.158542e-02,1.077732e+00,4.997348e-01,2.431916e+00
                     ,-4.174433e-02,-1.784640e-01,9.661752e-01,-1.386611e+00,1.538259e-01,-5.603641e-01
@@ -95,12 +95,12 @@
                 <!-- imu_waist -->
 <!--            <elem name="imu">xsensmt-inertial</elem> -->
                 <!-- ft -->
-                <elem name="l_arm_ft_sensor">left_arm-eb1-j0_3-strain</elem>
-                <elem name="r_arm_ft_sensor">right_arm-eb3-j0_3-strain</elem>
-                <elem name="l_leg_ft_sensor">left_leg-eb6-j0_3-strain</elem>
-                <elem name="r_leg_ft_sensor">right_leg-eb8-j0_3-strain</elem>
-                <elem name="l_foot_ft_sensor">left_leg-eb7-j4_5-strain</elem>
-                <elem name="r_foot_ft_sensor">right_leg-eb9-j4_5-strain</elem>
+                <elem name="l_arm_ft">left_arm-eb1-j0_3-strain</elem>
+                <elem name="r_arm_ft">right_arm-eb3-j0_3-strain</elem>
+                <elem name="l_leg_ft">left_leg-eb6-j0_3-strain</elem>
+                <elem name="r_leg_ft">right_leg-eb8-j0_3-strain</elem>
+                <elem name="l_foot_ft">left_leg-eb7-j4_5-strain</elem>
+                <elem name="r_foot_ft">right_leg-eb9-j4_5-strain</elem>
             </paramlist>
         </action>
 

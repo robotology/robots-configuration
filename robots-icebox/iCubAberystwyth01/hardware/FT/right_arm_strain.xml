@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" type="canBusFtSensor" name="right_arm_strain">
-    <param name="sensorName"> r_arm_ft_sensor </param>
+    <param name="sensorName"> r_arm_ft </param>
     <param name="frameName"> r_arm_ft </param>
 	<param name="canbusDevice"> "sharedcan" </param>
 	<param name="physDevice"> "cfw2can" </param>

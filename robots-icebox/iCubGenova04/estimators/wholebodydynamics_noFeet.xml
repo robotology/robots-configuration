@@ -43,7 +43,7 @@
         </group>
        
         <group name="FT_SECONDARY_CALIBRATION">
-             <param name="l_leg_ft_sensor"> 
+             <param name="l_leg_ft"> 
                    (5.969361e-01,2.428213e-02,-5.463457e-02,4.254463e-01,1.123516e+00,-1.303151e-01 
                     ,-2.818578e-02,6.863783e-01,2.028274e-02,6.585433e-01,1.573658e-01,1.544577e+00 
                     ,-3.915223e-02,3.971615e-02,9.679746e-01,-3.150958e-03,3.718397e-01,-8.653098e-02 
@@ -51,7 +51,7 @@
                     ,5.671831e-03,6.968371e-03,4.892937e-03,5.396529e-02,9.499420e-01,-1.575216e-01 
                     ,3.469447e-18,0,-7.993503e-20,0,0,1.000000e+00)</param>     
 
-             <param name="r_leg_ft_sensor">
+             <param name="r_leg_ft">
                    (7.619710e-01,-9.833019e-02,-5.603709e-02,-7.503703e-01,4.654638e-01,-2.100801e+00 
                    ,2.708629e-02,8.108288e-01,-3.377881e-03,8.122805e-01,4.181660e-02,8.531041e-01 
                    ,-7.067404e-02,-3.179978e-02,9.888732e-01,-4.080758e-02,5.046211e-01,-5.754858e-01 
@@ -88,12 +88,12 @@
                 <!-- imu -->
                 <elem name="imu">inertial</elem>
                 <!-- ft -->
-                <elem name="l_arm_ft_sensor">left_arm-eb1-j0_3-strain</elem>
-                <elem name="r_arm_ft_sensor">right_arm-eb3-j0_3-strain</elem>
-                <elem name="l_leg_ft_sensor">left_leg-eb6-j0_3-strain</elem>
-                <elem name="r_leg_ft_sensor">right_leg-eb8-j0_3-strain</elem>
-<!--                <elem name="l_foot_ft_sensor">left_leg-eb7-j4_5-strain</elem>-->
-  <!--              <elem name="r_foot_ft_sensor">right_leg-eb9-j4_5-strain</elem>-->
+                <elem name="l_arm_ft">left_arm-eb1-j0_3-strain</elem>
+                <elem name="r_arm_ft">right_arm-eb3-j0_3-strain</elem>
+                <elem name="l_leg_ft">left_leg-eb6-j0_3-strain</elem>
+                <elem name="r_leg_ft">right_leg-eb8-j0_3-strain</elem>
+<!--                <elem name="l_foot_ft">left_leg-eb7-j4_5-strain</elem>-->
+  <!--              <elem name="r_foot_ft">right_leg-eb9-j4_5-strain</elem>-->
             </paramlist>
         </action>
 
