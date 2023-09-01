@@ -61,12 +61,12 @@
                 <!-- imu -->
                 <elem name="imu">head-inertial</elem>
                 <!-- ft -->
-                <elem name="l_arm_ft_sensor">left_arm-eb1-j0_3-strain</elem>
-                <elem name="r_arm_ft_sensor">right_arm-eb3-j0_3-strain</elem>
-                <elem name="l_leg_ft_sensor">left_leg-eb6-j0_3-strain</elem>
-                <elem name="r_leg_ft_sensor">right_leg-eb8-j0_3-strain</elem>
-                <elem name="l_foot_ft_sensor">left_leg-eb7-j4_5-strain</elem>
-                <elem name="r_foot_ft_sensor">right_leg-eb9-j4_5-strain</elem>
+                <elem name="l_arm_ft">left_arm-eb1-j0_3-strain</elem>
+                <elem name="r_arm_ft">right_arm-eb3-j0_3-strain</elem>
+                <elem name="l_leg_ft">left_leg-eb6-j0_3-strain</elem>
+                <elem name="r_leg_ft">right_leg-eb8-j0_3-strain</elem>
+                <elem name="l_foot_ft">left_leg-eb7-j4_5-strain</elem>
+                <elem name="r_foot_ft">right_leg-eb9-j4_5-strain</elem>
             </paramlist>
         </action>
 
