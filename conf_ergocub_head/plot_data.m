@@ -1,8 +1,9 @@
 % First of all you have to double click on the .mat file to load the
 % ergocub_head variable
 
+close all
 
-% set defaults so plots look nice
+% set defaults so plots look nice`
 set(groot,'defaultLineLineWidth',1.3);
 set(groot,'defaultAxesFontSize',12);
 set(groot,'defaultAxesMinorGridAlpha', 1);
