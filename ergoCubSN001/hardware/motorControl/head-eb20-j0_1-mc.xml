@@ -9,8 +9,8 @@
     <xi:include href="../../hardware/mechanicals/head-eb20-j0_1-mec.xml" />
     <xi:include href="./head-eb20-j0_1-mc_service.xml" />
 
-    <!-- joint number                           0                -->
-    <!-- joint name                             neck-yaw         -->         <!-- j2 is right-eye, j3 is left-eye -->
+    <!-- joint number                           0                   1                   -->
+    <!-- joint name                             neck-pitch          neck-roll           -->
     <group name="LIMITS">
         <param name="jntPosMin">                -40                 -20                 </param>
         <param name="jntPosMax">                +22                 +20                 </param>
