@@ -93,6 +93,8 @@
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="hardware/inertials/waist-inertial.xml" />
+    <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" />
 
     <!-- FT SENSORS - IMU -->
     <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" />
@@ -109,6 +111,10 @@
     <xi:include href="wrappers/inertials/right_leg-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" />
+    
+    <!-- BATTERY-->
+    <xi:include href="hardware/battery/battery.xml" />
+    <xi:include href="wrappers/battery/battery.xml" />
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />

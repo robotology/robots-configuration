@@ -38,7 +38,7 @@
             </group>
 
             <group name="SETTINGS">
-                <param name="enabledSensors">       l_leg_ft               </param>
+                <param name="enabledSensors">       l_leg_ft              </param>
                 <param name="ftPeriod">             2         		                    </param>
                 <param name="temperaturePeriod">    1000      		                   </param>
                 <param name="useCalibration">       true      		              </param>
