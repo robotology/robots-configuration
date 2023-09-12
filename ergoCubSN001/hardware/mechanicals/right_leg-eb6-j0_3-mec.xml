@@ -36,8 +36,8 @@
         <param name="HasRotorEncoder">       1             1        1   1  </param>
         <param name="HasRotorEncoderIndex">  1             1        1   1  </param>
         <param name="HasSpeedEncoder">       0             0        0   0  </param>
-        <param name="RotorIndexOffset">      203           286      48  184   </param>
-        <param name="MotorPoles">            12            8        8   12  </param>
+        <param name="RotorIndexOffset">      170           350      62  89 </param>
+        <param name="MotorPoles">            12            8        8   12 </param>
    </group>
 
     <group name="COUPLINGS"> 
