@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE device PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="canbattery" type="embObjBattery">
+
+    <xi:include href="../../general.xml" />
+    <xi:include href="../electronics/left_arm-eb2-j0_1-eln.xml" />
+
+    <group name="SERVICE">
+
+        <param name="type"> eomn_serv_AS_battery </param>
+
+        <group name="PROPERTIES">
+
+            <group name="CANBOARDS">
+                <param name="type">                 bms             </param>
+
+                <group name="PROTOCOL">
+                    <param name="major">            0                   </param>
+                    <param name="minor">            0                   </param>
+                </group>
+                <group name="FIRMWARE">
+                    <param name="major">            1                   </param>
+                    <param name="minor">            2                   </param>
+                    <param name="build">            0                   </param>
+                </group>
+            </group>
+
+            <group name="SENSORS">
+                <param name="id">                   battery1        </param>
+                <param name="board">                bms             </param>
+                <param name="location">             CAN1:1          </param>
+            </group>
+
+        </group>
+
+
+        <group name="SETTINGS">
+            <param name="enabledSensors">            battery1        </param>
+            <param name="acquisitionRate">           1000            </param>   <!-- msec -->
+        </group>
+
+
+    </group>
+
+</device>
+

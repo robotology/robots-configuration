@@ -25,13 +25,13 @@
                     </group>                    
                     <group name="FIRMWARE">
                         <param name="major">            2                       </param>    
-                        <param name="minor">            2                       </param> 
+                        <param name="minor">            2                       </param>
                         <param name="build">            0                       </param>
                     </group>
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   r_arm_ft  </param>
+                    <param name="id">                   r_arm_ft   </param>
                     <param name="board">                 strain2             </param>
                     <param name="location">             CAN2:13                 </param>
                 </group>                
