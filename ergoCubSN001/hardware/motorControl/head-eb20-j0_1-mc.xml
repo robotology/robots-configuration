@@ -15,56 +15,61 @@
         <param name="jntPosMin">                -40                 -20                 </param>
         <param name="jntPosMax">                +22                 +20                 </param>
         <param name="jntVelMax">                1000                1000                </param>
-        <param name="motorOverloadCurrents">    5000                5000                </param>
-        <param name="motorNominalCurrents">     2000                2000                </param>
-        <param name="motorPeakCurrents">        3000                3000                </param>
+        <param name="motorOverloadCurrents">    10000               10000               </param>
+        <param name="motorNominalCurrents">     4000                4000                </param>
+        <param name="motorPeakCurrents">        6000                6000                </param>
         <param name="motorPwmLimit">            3360                3360                </param>
     </group>
-
+   
     <group name="TIMEOUTS">
-        <param name="velocity">                 100                 100                 </param>
+        <param name="velocity">                 100         100     </param>
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                0.0                 0.0                 </param>
-        <param name="damping">                  0.0                 0.0                 </param>
+        <param name="stiffness">                0.0        0.0      </param>
+        <param name="damping">                  0.0        0.0      </param>
     </group>
     
     <group name="CONTROLS">
-        <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
-        <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
-        <param name="mixedControl">             POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
-        <param name="torqueControl">            none                none                </param>
-        <param name="currentPid">               none                none                </param>
-        <param name="speedPid">                 none                none                </param>
+        <param name="positionControl">          POS_PID_DEFAULT        POS_PID_DEFAULT  </param>
+        <param name="velocityControl">          POS_PID_DEFAULT        POS_PID_DEFAULT  </param>
+        <param name="mixedControl">             POS_PID_DEFAULT        POS_PID_DEFAULT  </param>
+        <param name="torqueControl">            none        none             </param>
+        <param name="currentPid">               none        none             </param>
+        <param name="speedPid">                 none        none             </param>
     </group>
 
 
     <!-- default position PID: begin -->
-
+    
     <group name="POS_PID_DEFAULT">
         <param name="controlLaw">               minjerk         </param>
         <param name="outputType">               pwm             </param>
         <param name="fbkControlUnits">          metric_units    </param>
         <param name="outputControlUnits">       machine_units   </param>
-        <param name="kp">                       -180        +178        </param>
-        <param name="kd">                       -5.39       +4.64       </param>
-        <param name="ki">                       -507        +514        </param>
+        <param name="kp">                       -209        +190        </param>
+        <param name="kd">                       -5.6       +4.54       </param>
+        <param name="ki">                       -492        +509        </param>
         <param name="maxOutput">                3360        3360        </param>
         <param name="maxInt">                   3360        3360        </param>
         <param name="stictionUp">               0           0           </param>
         <param name="stictionDown">             0           0           </param>
         <param name="kff">                      0           0           </param>
     </group>
-    
+
     <!-- default position PID: end -->
 
 
     <!-- other default PIDs: begin -->   
     <!-- other default PIDs: end -->
 
-
+ 
     <!-- custom PIDs: begin -->    
     <!-- custom PIDs: end -->
-
+    
+    
+    <group name="OTHER_CONTROL_PARAMETERS">    
+        <param name="deadZone">                 0.0495    0.0495  </param>
+    </group>    
+    
 </device>
