@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_hand_as_wrapperMais" type="analogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_hand_as_wrapperMais" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
-        <param name="name">     /cer/right_hand/analog:o          </param>
+        <param name="name">     /cer/right_hand/MAIS          </param>
 
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
