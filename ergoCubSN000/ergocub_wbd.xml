@@ -116,6 +116,9 @@
     <xi:include href="hardware/battery/battery.xml" />
     <xi:include href="wrappers/battery/battery.xml" />
 
+    <xi:include href="hardware/battery/battery_bat.xml" />
+    <xi:include href="wrappers/battery/battery_bat.xml" />
+
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
