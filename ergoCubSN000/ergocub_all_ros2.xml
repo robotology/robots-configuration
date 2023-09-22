@@ -100,9 +100,13 @@
     <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" />
 
     
-    <!-- BATTERY-->
-    <xi:include href="hardware/battery/battery.xml" />
-    <xi:include href="wrappers/battery/battery.xml" />
+    <!-- battery BAT -->
+    <xi:include href="wrappers/battery/ergobattery_bat.xml" /> 
+    <xi:include href="hardware/battery/ergocubbattery_bat.xml" /> 
+    
+    <!-- battery BMS -->
+    <xi:include href="wrappers/battery/ergobattery_bms.xml" /> 
+    <xi:include href="hardware/battery/ergocubbattery_bms.xml" /> 
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />

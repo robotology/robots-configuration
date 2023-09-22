@@ -4,8 +4,13 @@
 <robot name="ergoCubSN000" build="1" portprefix="/ergocub" xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <devices>
-    <xi:include href="hardware/battery/battery.xml" />
-    <xi:include href="wrappers/battery/battery.xml" />
+    <!-- battery BAT -->
+    <xi:include href="wrappers/battery/ergobattery_bat.xml" /> 
+    <xi:include href="hardware/battery/ergocubbattery_bat.xml" /> 
+    
+    <!-- battery BMS -->
+    <xi:include href="wrappers/battery/ergobattery_bms.xml" /> 
+    <xi:include href="hardware/battery/ergocubbattery_bms.xml" /> 
   </devices>
 
 </robot>
