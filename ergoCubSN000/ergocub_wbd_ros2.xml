@@ -111,12 +111,12 @@
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" />
     
     <!-- battery BAT -->
-    <xi:include href="wrappers/battery/ergobattery_bat.xml" /> 
-    <xi:include href="hardware/battery/ergocubbattery_bat.xml" /> 
+    <xi:include href="wrappers/battery/battery_bat.xml" /> 
+    <xi:include href="hardware/battery/battery_bat.xml" /> 
     
     <!-- battery BMS -->
-    <xi:include href="wrappers/battery/ergobattery_bms.xml" /> 
-    <xi:include href="hardware/battery/ergocubbattery_bms.xml" /> 
+    <xi:include href="wrappers/battery/battery_bms.xml" /> 
+    <xi:include href="hardware/battery/battery_bms.xml" /> 
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />
