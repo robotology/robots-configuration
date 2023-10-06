@@ -11,7 +11,7 @@
 		</group>
 
 <group name="HOME">
-<param name="positionHome">                         0                       -20                    0                       </param>
+<param name="positionHome">                         0                       -20                     0                       </param>
 <param name="velocityHome">                         10                      10                     10                      </param>
 </group>                                                                                           
                                                                                                    
@@ -19,18 +19,19 @@
                                                                                                    
 <group name="CALIBRATION">                                                                         
 <!--                                                roll                    pitch                  yaw                          -->
-<param name="calibrationType">                      10                      10                     10                      </param>
+<!-- <param name="calibrationType">                      12                      12                     12                      </param> -->
+<!-- <param name="calibration1">                         38354                   67734                  6013                    </param> -->
 
-<param name="calibration1">	                        6500                    -6500                  2500                    </param>
+<param name="calibrationType">                      10                      10                     10                      </param>
+<param name="calibration1">	                    6500                  -6500                   2500                     </param>
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
-                                                                                                   
-                                                                                                   
 <param name="calibration4">                         0                       0                      0                       </param>
 <param name="calibration5">                         0                       0                      0                       </param>
-<param name="calibrationZero">                      24.903                  -21.847                -46.606                 </param>
-<param name="calibrationDelta">                     0                       0                      0                       </param>
-
+<param name="calibrationZero">                      24.903                 -21.847                -46.066                  </param>
+<param name="calibrationDelta">                     0                       0                      0                       </param> 
+<!-- <param name="calibrationZero">                      0                       0                      0                       </param> -->
+<!-- <param name="calibrationDelta">                    -0.939                   2.917                  0                       </param> -->
                                                                                                    
 <param name="startupPosition">                      0                       0                      0                       </param>
 <param name="startupVelocity">                      10                      10                     10                      </param>
@@ -38,8 +39,9 @@
 <param name="startupPosThreshold">                  2                       2                      2                       </param>
 </group>
 
- 
- <!-- <param name="CALIB_ORDER">(2) (1) (0) </param> --> <!-- Don't remove this line -->
+
+ <!-- Joint 1 has been removed from the calibration order for motor safety -->
+ <!-- <param name="CALIB_ORDER">(0) (1) (2) </param> --> <!-- Don't remove this line -->
 		<param name="CALIB_ORDER">(2) (1) (0) </param>
 
 		<action phase="startup" level="10" type="calibrate">
