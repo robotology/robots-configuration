@@ -76,9 +76,12 @@
         <param name= "numberofsets"> 2 </param> <!-- total number of sets -->
         <group name="JOINTSET_0">
             <param name="listofjoints">    0     </param> <!-- xxx -->
-            <param name="constraint">      none  </param> <!-- Some hawdare configurations need particular constraint. Values of this param are: cerhand, trifig and none -->
-            <param name="param1">          0     </param> <!-- Special value related to a specific constraint. It should be e double. If contraint is none, this paran isn't taken into account. -->
-            <param name="param2">          0     </param> <!-- Special value related to a specific constraint. (Currently not used). -->
+            <param name="constraint">      none  </param> <!-- Some hawdare configurations need particular constraint. Values of this param are: cerhand, trifig, ergocubwrist and none -->
+            <param name="param1">          0     </param> <!-- Special value related to a specific constraint. It is a double.
+                                                               If the constraint is none, this param isn't taken into account.
+                                                               If the constraint is ergocubwrist, parm1 is the MK version: 20 is MK2.0 and 21 is MK2.1 -->
+            <param name="param2">          0     </param> <!-- Special value related to a specific constraint. It is a double.
+                                                               If the constraint is ergocubwrist, parm2 identify teh arm left (param2=0) or right(param2=1):  -->
         </group> 
         <group name="JOINTSET_1">
             <param name="listofjoints">   3             </param>
