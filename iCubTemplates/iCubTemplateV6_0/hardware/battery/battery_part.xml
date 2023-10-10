@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE device PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<!-- value for name should be the same as the one defined in the wrapper file. Type is embObjBattery-->
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="battery_device_name_as_in_wrapper" type="embObjBattery">
+
+    <xi:include href="../../general.xml" />
+    <!-- Here you should include the body part, which the battery electronic device (bat or bms) is attached to. It should be the body part represented by the ems board connected to bat or bms-->
+    <xi:include href="../electronics/body_part-ebX-jA_B-eln.xml" />
+
+    <group name="SERVICE">
+
+        <param name="type"> eomn_serv_AS_battery </param>
+
+        <group name="PROPERTIES">
+
+            <group name="CANBOARDS">
+                <!-- Type is bat for the BAT board and bms for the BMS board-->
+                <param name="type">                 bat             </param>
+
+                <group name="PROTOCOL">
+                    <param name="major">            0                   </param>
+                    <param name="minor">            0                   </param>
+                </group>
+                <!-- versions as defined in the FW of BAT - for BMS you should use 1.2.0 or leave all zeros if have any problems in matching the versions -->
+                <group name="FIRMWARE">
+                    <param name="major">            1                   </param>
+                    <param name="minor">            3                   </param>
+                    <param name="build">            0                   </param>
+                </group>
+            </group>
+
+            <group name="SENSORS">
+                <param name="id">                   battery1        </param>
+                <!-- same as the type above-->
+                <param name="board">                bat             </param>
+                <param name="location">             CAN2:1          </param> <!-- this is the CAN location. It should be on CAN2 since on CAN1 we have the FT sensors-->
+            </group>
+
+        </group>
+
+
+        <group name="SETTINGS">
+            <param name="enabledSensors">            battery1        </param>
+            <param name="acquisitionRate">           1000            </param>   <!-- msec -->
+        </group>
+
+
+    </group>
+
+</device>
