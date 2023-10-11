@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="new_forearm" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="setup" build="1">
 
     <group name="SERVICE">
 
@@ -14,15 +14,15 @@
             </group>
 
             <group name="CANBOARDS">
-                <param name="type">                 amcbldc     </param>
+                <param name="type">                 amcbldc     </param> <!--This is AMC2C--> 
                 <group name="PROTOCOL">
                     <param name="major">            2           </param>
                     <param name="minor">            0           </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            2           </param>
-                    <param name="minor">            0           </param>
-                    <param name="build">            4           </param>
+                    <param name="major">            100           </param>
+                    <param name="minor">            100           </param>
+                    <param name="build">            0           </param>
                 </group>
             </group>
 
@@ -43,7 +43,7 @@
 
                 <group name="ENCODER2">
                     <param name="type">             none              </param>
-                    <param name="port">             CAN1:1:0          </param>
+                    <param name="port">             CAN2:3:0          </param>
                     <param name="position">         atmotor           </param>
                     <param name="resolution">        0                </param>
                     <param name="tolerance">         0                </param>
