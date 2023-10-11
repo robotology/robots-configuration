@@ -21,7 +21,7 @@
 <!--                                                roll                    pitch                  yaw                          -->
 <param name="calibrationType">                      12                      12                     12                      </param>
 
-<param name="calibration1">	                        38354                   67734                  6013                    </param>
+<param name="calibration1">	                        48756                   22272                  26900                    </param>
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
                                                                                                    
@@ -52,4 +52,3 @@
 		<action phase="interrupt3" level="1" type="abort" />
 
 	</device>
-
