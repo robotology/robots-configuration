@@ -20,9 +20,9 @@
                     <param name="minor">            0           </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            1           </param>
-                    <param name="minor">            2           </param>
-                    <param name="build">            12           </param>
+                    <param name="major">            2           </param>
+                    <param name="minor">            0           </param>
+                    <param name="build">            4           </param>
                 </group>
             </group>
 
@@ -42,10 +42,10 @@
                 </group>
 
                 <group name="ENCODER2">
-                    <param name="type">             roie              </param>
+                    <param name="type">             none              </param>
                     <param name="port">             CAN1:1:0          </param>
                     <param name="position">         atmotor           </param>
-                    <param name="resolution">       16000             </param>
+                    <param name="resolution">        0                </param>
                     <param name="tolerance">         0                </param>
                 </group>
 
