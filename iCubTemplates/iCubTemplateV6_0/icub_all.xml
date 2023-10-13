@@ -98,6 +98,14 @@
     <!-- CARTESIANS --> 
     <xi:include href="cartesian/left_arm-cartesian.xml" />
     <xi:include href="cartesian/right_arm-cartesian.xml" /> 
+
+    <!-- battery BAT -->
+    <xi:include href="wrappers/battery/battery_bat.xml" /> 
+    <xi:include href="hardware/battery/battery_bat.xml" /> 
+    
+    <!-- battery BMS -->
+    <xi:include href="wrappers/battery/battery_bms.xml" /> 
+    <xi:include href="hardware/battery/battery_bms.xml" /> 
     
     </devices>
 </robot> 
