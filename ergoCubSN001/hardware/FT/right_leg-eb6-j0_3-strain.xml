@@ -16,7 +16,7 @@
             <group name="PROPERTIES">
 
                 <group name="CANBOARDS">
-                    <param name="type">                 strain2            </param>
+                    <param name="type">                 strain2c            </param>
 
                     <group name="PROTOCOL">
                         <param name="major">            2                       </param>
@@ -24,7 +24,7 @@
                     </group>
                     <group name="FIRMWARE">
                         <param name="major">            2                       </param>
-                        <param name="minor">            2                       </param>
+                        <param name="minor">            3                       </param>
                         <param name="build">            0                       </param>
                     </group>
                 </group>
@@ -54,8 +54,3 @@
 
 
   </device>
-
-
-
-
-
