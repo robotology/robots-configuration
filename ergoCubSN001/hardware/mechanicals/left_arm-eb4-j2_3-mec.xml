@@ -30,11 +30,11 @@
 		<param name="Verbose">          0                   0                   </param>
         <param name="AutoCalibration">          0                   0                   </param>
         <param name="HasHallSensor">            0                   0                   </param>
-        <param name="HasTempSensor">            0                   0                   </param> <!-- pero' ha il sensore di temp, quindi ... metti 1 -->
+        <param name="HasTempSensor">            0                   0                   </param> 
         <param name="HasRotorEncoder">          1                   1                   </param>
         <param name="HasRotorEncoderIndex">     1                   1                   </param>
         <param name="HasSpeedEncoder">          0                   0                   </param>
-        <param name="RotorIndexOffset">         252                 17                   </param>
+        <param name="RotorIndexOffset">         1                   96                  </param>
         <param name="MotorPoles">               8                   8                   </param>
     </group>
 
