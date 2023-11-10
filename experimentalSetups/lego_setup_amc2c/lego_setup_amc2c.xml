@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+    <robot name="setup" build="1" portprefix="/lego" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <params>
+            <xi:include href="hardware/electronics/pc104.xml" />
+        </params>
+
+        <devices>
+    
+            <!-- LEGO SETUP MC -->
+            <xi:include href="hardware/motorControl/setup-eb2-j0_2-mc.xml" />
+            <xi:include href="wrappers/motorControl/setup-mc_wrapper.xml"  />
+            <xi:include href="wrappers/motorControl/setup-mc_remapper.xml" />
+    
+            <!--  CALIBRATORS -->
+            <xi:include href="calibrators/setup-calib.xml" />
+        
+    </devices>
+</robot>
