@@ -20,9 +20,9 @@
                     <param name="minor">            0           </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            100           </param>
-                    <param name="minor">            100           </param>
-                    <param name="build">            0           </param>
+                    <param name="major">            2           </param>
+                    <param name="minor">            0           </param>
+                    <param name="build">            4           </param>
                 </group>
             </group>
 
@@ -30,7 +30,7 @@
 
                 <group name="ACTUATOR">
                     <param name="type">             eomc_act_foc      </param>
-                    <param name="port">             CAN1:1:0          </param>
+                    <param name="port">             CAN1:3            </param>
                 </group>
 
                 <group name="ENCODER1">
