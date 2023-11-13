@@ -120,13 +120,14 @@
     <xi:include href="wrappers/battery/battery_bms.xml" /> 
     <xi:include href="hardware/battery/battery_bms.xml" /> 
 
+
     <!--  CALIBRATORS -->
+    <xi:include href="calibrators/head-calib.xml" /> 
     <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
     <xi:include href="calibrators/left_arm-calib.xml" />
     <xi:include href="calibrators/right_arm-calib.xml" />
-    <xi:include href="calibrators/head-calib.xml" />
 
     <!-- estimators -->
     <xi:include href="estimators/wholebodydynamics.xml" />
