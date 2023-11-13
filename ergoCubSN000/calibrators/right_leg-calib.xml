@@ -34,7 +34,6 @@
   <!-- <param name="CALIB_ORDER">   (4) (5) (2) (3) (0) (1)  </param> -->   <!-- Don't remove this line -->
   <param name="CALIB_ORDER">   (4) (5) (2) (3) (0) (1)  </param>
 
-
   <action phase="startup" level="10" type="calibrate">
     <param name="target">right_leg-mc_remapper</param>
   </action>

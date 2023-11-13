@@ -23,7 +23,13 @@
 <!-- <param name="calibration1">                         38354                   67734                  6013                    </param> -->
 
 <param name="calibrationType">                      10                      10                     10                      </param>
-<param name="calibration1">	                    6500                  -6500                   2500                     </param>
+<!-- HANGED -->
+<param name="calibration1">	                    6500                  -6500                   2500                    </param>
+<!-- IMPALED
+<param name="calibration1">	                    2500                  -2500                   2500                    </param> -->
+
+
+>>>>>>> c6b37272f (Change calibrators legs, torso, head)
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
 <param name="calibration4">                         0                       0                      0                       </param>
@@ -42,7 +48,7 @@
 
  <!-- Joint 1 has been removed from the calibration order for motor safety -->
  <!-- <param name="CALIB_ORDER">(0) (1) (2) </param> --> <!-- Don't remove this line -->
-		<param name="CALIB_ORDER">(2) (1) (0) </param>
+		<param name="CALIB_ORDER"> (2) (1) (0) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-eb5-j0_2-mc</param>
