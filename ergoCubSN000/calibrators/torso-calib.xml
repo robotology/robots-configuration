@@ -23,13 +23,12 @@
 <!-- <param name="calibration1">                         38354                   67734                  6013                    </param> -->
 
 <param name="calibrationType">                      10                      10                     10                      </param>
+
 <!-- HANGED -->
 <param name="calibration1">	                    6500                  -6500                   2500                    </param>
 <!-- IMPALED
 <param name="calibration1">	                    2500                  -2500                   2500                    </param> -->
 
-
->>>>>>> c6b37272f (Change calibrators legs, torso, head)
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
 <param name="calibration4">                         0                       0                      0                       </param>
