@@ -18,6 +18,8 @@
       <param name="depth_quant"> 2 </param>
     </group>
     <param name="rotateImage180"> false </param>
+    <param name="usePreset"> true </param>
+    <param name="presetName">high_accuracy</param>
   </device>
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperyarp" type="rgbdSensor_nws_yarp">
