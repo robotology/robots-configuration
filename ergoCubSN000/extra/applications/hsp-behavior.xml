@@ -1,0 +1,10 @@
+<application>
+    <name>hsp-behavior</name>
+    <dependencies>
+    </dependencies>
+    <module>
+        <name>/usr/local/src/robot/ergocub-behavior/start.sh -i 10.0.2.4</name>
+        <parameters></parameters>
+        <node>ergocub000-lap</node>
+    </module>
+</application>

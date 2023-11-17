@@ -1,0 +1,10 @@
+<application>
+    <name>hsp-perception</name>
+    <dependencies>
+    </dependencies>
+    <module>
+        <name>gnome-terminal -- /usr/local/src/robot/ergocub-perception/start.sh</name>
+        <parameters></parameters>
+        <node>ergocub000-lap</node>
+    </module>
+</application>
