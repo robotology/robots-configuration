@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
@@ -112,21 +113,18 @@
     <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" />
     
-    <!-- battery BAT -->
-    <!-- <xi:include href="wrappers/battery/battery_bat.xml" />  -->
-    <!-- <xi:include href="hardware/battery/battery_bat.xml" />  -->
-    
-    <!-- battery BMS -->
-    <xi:include href="wrappers/battery/battery_bms.xml" /> 
-    <xi:include href="hardware/battery/battery_bms.xml" />
+    <!-- BATTERY-->
+    <xi:include href="hardware/battery/battery.xml" />
+    <xi:include href="wrappers/battery/battery.xml" />
+
 
     <!--  CALIBRATORS -->
-    <xi:include href="calibrators/head-calib.xml" /> 
     <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
     <xi:include href="calibrators/left_arm-calib.xml" />
     <xi:include href="calibrators/right_arm-calib.xml" />
+    <xi:include href="calibrators/head-calib.xml" />
 
     <!-- estimators -->
     <xi:include href="estimators/wholebodydynamics.xml" />

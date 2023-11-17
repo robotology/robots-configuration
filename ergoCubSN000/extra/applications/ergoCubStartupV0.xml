@@ -1,0 +1,26 @@
+<application>
+    <name>2-ergoCubStartup</name>
+
+    <dependencies>
+    </dependencies>
+
+    <module>
+        <name>yarplogger</name>
+        <parameters>--start</parameters>
+        <node>ergocub000-lap</node>
+    </module>
+
+
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters>--config ergocub_all.xml</parameters>
+        <node>ergocub-torso</node>
+    </module>
+
+    <module>
+        <name>yarpmotorgui</name>
+        <parameters>--robot ergocub --parts "(head torso left_arm right_arm left_leg right_leg)"</parameters>
+        <node>ergocub000-lap</node>
+    </module>
+
+</application>

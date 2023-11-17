@@ -1,0 +1,17 @@
+<application>
+    <name>manipulation</name>
+    <dependencies>
+    </dependencies>
+    <module>
+        <name>/usr/local/src/robot/ergocub-bimanual/build/command_server</name>
+        <parameters>/Components/Manipulation /ergocub /usr/local/src/robot/ergocub-software/build/install/share/ergoCub/robots/ergoCubSN000/model.urdf /usr/local/src/robot/ergocub-bimanual/config/ergocub_real.ini
+        </parameters>
+        <node>ergocub-torso</node>
+    </module>
+    <module>
+        <name>/usr/local/src/robot/ergocub-bimanual/build/command_prompt</name>
+        <parameters>/Components/Manipulation /usr/local/src/robot/ergocub-bimanual/config/ergocub_real.ini
+        </parameters>
+        <node>ergocub-torso</node>
+    </module>
+</application>
