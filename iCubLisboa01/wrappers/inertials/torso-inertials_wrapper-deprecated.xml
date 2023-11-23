@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb22-inertials_wrapper" type="analogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb22-inertials_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
         <param name="name">     /icub/torso/inertialMTB                </param>
 
@@ -17,7 +17,7 @@
         <action phase="shutdown" level="5" type="detach" />
     </device>
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb1-inertials_wrapper" type="analogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb1-inertials_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                              </param>
         <param name="name">         /icub/torso/inertialEMS1        </param>
 
@@ -32,7 +32,7 @@
         <action phase="shutdown" level="5" type="detach" />
     </device>
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb3-inertials_wrapper" type="analogServer">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb3-inertials_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                              </param>
         <param name="name">         /icub/torso/inertialEMS3        </param>
 

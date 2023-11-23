@@ -5,11 +5,11 @@
 
     on 24 mar 2016 i had a chat with silvio.traversaro and other users of the inertial analog sensors and we defined a desired behaviour for the device.
 
-    the discussion originated the xml file for embObjInertials but also those (much simpler) for embObjMais and embObjFTsensor.
+    the discussion originated the xml file for embObjIMU but also those (much simpler) for embObjMais and embObjFTsensor.
 
 
     the configuration should be general enough to allow future extensions and at the same time easy enough for managing code in three environment:
-    1. the C++ code inside the device embObjInertials.cpp ... parsing xml, build relevant data structures, publishing data in streaming, in rpc etc.
+    1. the C++ code inside the device embObjIMU.cpp ... parsing xml, build relevant data structures, publishing data in streaming, in rpc etc.
     2. the code of those using the published data ... reading xyz plus timestamp, to be able to associate them to a given sensor ID which can be directly linked to the CAD.
     3. the C code in the ETH board ... we need compact messaging from icub-main to the board, such as a list of can sensors, a list of sensors directly managed by the board
        plus their properties, etc ...
@@ -28,7 +28,7 @@
 
     (01)    the place of this xml file could be in ... i would say: iCubGenova02/hardware/inertials
 
-    (02)    the device is called embObjInertials and manages N xyz sensors all associated to a given ETH board. The name of device can be changed.
+    (02)    the device is called embObjIMU and manages N xyz sensors all associated to a given ETH board. The name of device can be changed.
 
     (04)    The idea is that the device publishes data related to the N sensors in three formats:
 
@@ -48,10 +48,10 @@
 
     (05)    We need to put careful attention to make (x, y, z) consistent with (t).
 
-            The device receives (x, y, z) and (t) one at a time at reception of a UDP packet, hence the vectors are refreshed by function embObjInertials::update() in a given
-            position pos. The device publishes the vectors with a different function embObjInertials::read() which is called asynchronously with respect to embObjInertials::update().
+            The device receives (x, y, z) and (t) one at a time at reception of a UDP packet, hence the vectors are refreshed by function embObjIMU::update() in a given
+            position pos. The device publishes the vectors with a different function embObjIMU::read() which is called asynchronously with respect to embObjIMU::update().
             In order to maintain consistency, we must use one mutex which gives mutual exclusion to update() and read().
-            Moreover, the function read() must have two arguments and be embObjInertials::read(vector<t>& v1, vector<xyz>& v2), where vector v1 will be put in metadata, vector v2 in data.
+            Moreover, the function read() must have two arguments and be embObjIMU::read(vector<t>& v1, vector<xyz>& v2), where vector v1 will be put in metadata, vector v2 in data.
 
  -->
 

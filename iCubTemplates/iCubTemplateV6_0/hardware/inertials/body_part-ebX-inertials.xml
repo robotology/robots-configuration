@@ -1,88 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<!--    This file contains details of how the inertials service is configured. 
+<!--    This file contains details of how the inertials service is configured.
   -->
 
-   
-    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjInertials. -->
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_inertials" type="embObjInertials">
-    
+
+    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjIMU. -->
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_inertials" type="embObjIMU">
+
         <!-- Include the file which specifies global configuration -->
-        <xi:include href="../../general.xml" />     
+        <xi:include href="../../general.xml" />
 
         <!-- Include the file which specifies which ETH board hosts the service -->
         <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
-        
+
         <!-- this group defines the service -->
         <group name="SERVICE">
-        
-            <!-- the type of service expressed as stringised values of eOmn_serv_type_t. For inertials it must be eomn_serv_AS_inertials -->
-            <param name="type"> eomn_serv_AS_inertials </param>                
-        
+
+            <!-- the type of service expressed as stringised values of eOmn_serv_type_t. For inertials it must be eomn_serv_AS_inertials3 -->
+            <param name="type"> eomn_serv_AS_inertials3 </param>
+
             <!-- this group defines the properties of the service -->
             <group name="PROPERTIES">
-            
+
                 <!-- this group defines the properties of the can boards -->
                 <group name="CANBOARDS">
-                
-                    <!-- this param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
+
+                    <!-- this param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_)
                          so far it can be only mtb
                       -->
                     <param name="type">                 eobrd_mtb           </param>
 
-                    <!-- this param tells the protocol version required to run the service. Values are in range [0, 255] 
+                    <!-- this param tells the protocol version required to run the service. Values are in range [0, 255]
                          if (0, 0) no check is done, otherwise there must be a CAN board with detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor -->
                     <group name="PROTOCOL">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param>     
-                    </group> 
-                    
-                    <!-- this param tells the firmware version required to run the service. Values are in range [0, 255] 
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
+
+                    <!-- this param tells the firmware version required to run the service. Values are in range [0, 255]
                          if (0, 0, 0) no check is done, otherwise there must be a CAN board with detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor -->
                     <group name="FIRMWARE">
-                        <param name="major">            0                   </param>    
-                        <param name="minor">            0                   </param> 
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
                         <param name="build">            0                   </param>
                     </group>
-                    
+
                 </group>
 
                 <!-- this group defines the available sensors. They are those defined by production -->
                 <group name="SENSORS">
-                
+
                     <!-- this param is a list of the allowed N sensors, each expressed in a free string format which however should be defined in production -->
-                    <param name="id">       on_eb2_accel            on_eb2_gyros               
-                                            l_upper_arm_4           l_upper_arm_1           l_upper_arm_3           l_upper_arm_2 
+                    <param name="id">       on_eb2_gyros
+                                            l_upper_arm_4           l_upper_arm_1           l_upper_arm_3           l_upper_arm_2
                                             l_forearm_1             l_forearm_2             l_hand                  l_hand_gyro
                     </param>
 
                     <!-- this param is a list of the type of the N sensors. they are the stringised values of eOas_sensor_t (so far only in full version)  -->
-                    <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d       
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int   
-                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_gyros_mtb_ext        
+                    <param name="type">     eoas_gyros_st_l3g4200d
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                                            eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_gyros_mtb_ext
+                    </param>
+
+                    <param name="boardType"> ems4
+                                             mtb  mtb  mtb  mtb
                     </param>
 
                     <!-- this param is a list of the addresses of the N sensors. For CAN-based sensors is used the format CANx:addr, for for the ones on ETH board the format ETH:0  -->
-                    <param name="location"> ETH:0                   ETH:0                     
-                                            CAN2:8                  CAN2:9                  CAN2:10                 CAN2:11              
+                    <param name="location"> ETH:0
+                                            CAN2:8                  CAN2:9                  CAN2:10                 CAN2:11
                                             CAN2:12                 CAN2:13                 CAN2:14                 CAN2:14
-                    </param> 
-                    
+                    </param>
+
                 </group>
-                                            
+
             </group>
-            
+
             <!-- this group defines the settings which can be applied to the available sensors. -->
-            <group name="SETTINGS"> 
-            
+            <group name="SETTINGS">
+
                 <!-- the acquisition rate of all the sensors in ms. values are in range [5, 200]. If out they are clipped to the nearest limit -->
                 <param name="acquisitionRate">      50      </param>
-                
-                <!-- the list of the enabled sensors, expressed with the same strings inside PROPERTIES.SENSORS.id 
+
+                <!-- the list of the enabled sensors, expressed with the same strings inside PROPERTIES.SENSORS.id
                      the device will publish values with this order.
                   -->
-                <param name="enabledSensors">       l_hand l_forearm_1 l_forearm_2 l_hand_gyro </param>   
+                <param name="enabledSensors">       l_hand l_forearm_1 l_forearm_2 l_hand_gyro </param>
                 <!-- the full scale of each enabled sensor:
                         * inertial sensors embedded on the MTB boards: the only configurable full scale is ±2g;
                         * accelerometers on the EMS boards: sensors not supported by the firmware.
@@ -91,13 +95,13 @@
                     This parameter is not mandatory. If it there isn't, the default values are used.
                 -->
                 <param name="fullscale">            19.62   19.62    19.62   500</param> <!-- 19.62=2g-->
-                
+
             </group>
-            
-        </group>        
-        
+
+        </group>
+
     </device>
-    
+
 
 
 

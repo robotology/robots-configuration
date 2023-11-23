@@ -3,7 +3,7 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_inertialMTB" type="embObjInertials">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso_inertialMTB" type="embObjIMU">
 
         <xi:include href="../../general.xml" />
 
@@ -11,7 +11,7 @@
 
         <group name="SERVICE">
 
-            <param name="type"> eomn_serv_AS_inertials </param>
+            <param name="type"> eomn_serv_AS_inertials3 </param>
 
             <group name="PROPERTIES">
 
@@ -34,6 +34,9 @@
                     </param>
 
                     <param name="type">     eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
+                    </param>
+
+                    <param name="boardType"> mtb  mtb  mtb  mtb
                     </param>
 
                     <param name="location"> CAN1:7                  CAN1:8                  CAN1:9                  CAN1:10
