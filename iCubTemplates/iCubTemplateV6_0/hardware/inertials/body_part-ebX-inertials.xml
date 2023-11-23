@@ -52,23 +52,23 @@
                 <group name="SENSORS">
 
                     <!-- this param is a list of the allowed N sensors, each expressed in a free string format which however should be defined in production -->
-                    <param name="id">       on_eb2_accel            on_eb2_gyros
+                    <param name="id">       on_eb2_gyros
                                             l_upper_arm_4           l_upper_arm_1           l_upper_arm_3           l_upper_arm_2
                                             l_forearm_1             l_forearm_2             l_hand                  l_hand_gyro
                     </param>
 
                     <!-- this param is a list of the type of the N sensors. they are the stringised values of eOas_sensor_t (so far only in full version)  -->
-                    <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d
+                    <param name="type">     eoas_gyros_st_l3g4200d
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_gyros_mtb_ext
                     </param>
 
-                    <param name="boardType"> ems4 ems4
+                    <param name="boardType"> ems4
                                              mtb  mtb  mtb  mtb
                     </param>
 
                     <!-- this param is a list of the addresses of the N sensors. For CAN-based sensors is used the format CANx:addr, for for the ones on ETH board the format ETH:0  -->
-                    <param name="location"> ETH:0                   ETH:0
+                    <param name="location"> ETH:0
                                             CAN2:8                  CAN2:9                  CAN2:10                 CAN2:11
                                             CAN2:12                 CAN2:13                 CAN2:14                 CAN2:14
                     </param>

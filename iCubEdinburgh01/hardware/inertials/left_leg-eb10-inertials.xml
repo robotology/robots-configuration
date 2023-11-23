@@ -30,19 +30,19 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       on_ems10_accel          on_ems10_gyros          l_upper_leg_1_10B1
+                    <param name="id">       on_ems10_gyros          l_upper_leg_1_10B1
                                             l_upper_leg_2_10B2      l_upper_leg_3_10B3      l_upper_leg_4_10B4      l_upper_leg_5_10B5
                                             l_upper_leg_6_10B6      l_upper_leg_7_10B7      l_lower_leg_1_10B8      l_lower_leg_2_10B9
                                             l_lower_leg_3_10B10     l_lower_leg_4_10B11     l_foot_1_10B12          l_foot_2_10B13
                     </param>
 
-                    <param name="type">     eoas_accel_st_lis3x     eoas_gyros_st_l3g4200d  eoas_accel_mtb_int
+                    <param name="type">     eoas_gyros_st_l3g4200d  eoas_accel_mtb_int
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
                                             eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int      eoas_accel_mtb_int
                     </param>
 
-                    <param name="boardType"> ems4 ems4 mtb
+                    <param name="boardType"> ems4 mtb
                                              mtb  mtb  mtb  mtb
                                              mtb  mtb  mtb  mtb
                                              mtb  mtb  mtb  mtb
