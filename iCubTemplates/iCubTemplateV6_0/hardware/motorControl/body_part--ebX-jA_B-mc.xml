@@ -17,6 +17,16 @@
                                                                  use this value for the integration of I2T. It is expressed in [mA]. In datasheet it is found under the name "peak stall current".      -->
         <param name="motorOverloadCurrents">  100  </param> <!-- It is the current which instantaneously damages the motor. It is expressed in [mA]. 
                                                                  However, this value is not used by 2FOC FW. Keep it fixed at 21000.  -->
+
+        <param name="hardwareTemperatureLimits"> 110 </param> <!-- It is the max temperature that the motor linked to this joint can reach. It should be defined from Datasheet
+                                                                  The motor should never overcome this temperature. The 2FOC board would use this value to generate a overHeating error if it is overcome
+                                                                  It is expressed here in Celsius Degree [℃] and the max suggested value is 110-->
+        <param name="warningTemperatureLimits">  90 </param> <!-- It is the warning temperature that the motor linked to this joint can reach. It should be defined from the user depending on the use case
+                                                                  The motor could reach this temperature but it is suggested to have working conditions far fromm it.
+                                                                  It MUST be set lower than the 85% of the hardwareTemperatureLimit otherwise the embObjMotionControl will raise an error.
+                                                                  If overcome the embObjMotionControl will send a warning suggesting to modify working conditions such as reducing the PWM and thus the Currents fed to the motor
+                                                                  It is expressed here in Celsius Degree [℃] -->
+
         <param name="motorPwmLimit">          100  </param> <!-- Limit of max PWM which can be applied to the motor. Max value is 32000. This threshold is used after decoupling.  -->
     </group>
 
