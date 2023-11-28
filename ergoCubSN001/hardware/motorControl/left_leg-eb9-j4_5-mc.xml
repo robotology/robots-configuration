@@ -76,6 +76,7 @@
         <param name="stictionDown">          0          0             </param>
         <param name="kff">                   1          1             </param>
         <param name="kbemf">                 0          0             </param>
+        <param name="velocityThres">         0          0             </param>
         <param name="filterType">            0          0             </param>
         <param name="ktau">                  -0.65      -0.50           </param>
     </group>
@@ -128,6 +129,7 @@
         <param name="stictionDown">        0           0            </param>
         <param name="kff">                 1           1            </param>
         <param name="kbemf">              -0.0009     -0.0003       </param>
+        <param name="velocityThres">       0           0            </param>
         <param name="filterType">          0           0            </param>
         <param name="ktau">               -128.81     -160          </param>
     </group>
