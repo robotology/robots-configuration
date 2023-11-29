@@ -20,7 +20,7 @@
                 </group>
                 <group name="FIRMWARE">
                     <param name="major">            2                       </param>
-                    <param name="minor">            0                       </param>
+                    <param name="minor">            2                       </param>
                     <param name="build">            0                       </param>
                 </group>
             </group>
@@ -39,10 +39,10 @@
 
                 <group name="CALIBRATION">
                     <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
-                    <param name="type">             TYPE:decideg    TYPE:decideg     TYPE:decideg     TYPE:decideg      </param>
-                    <param name="rotation">         ROT:plus180     ROT:zero         ROT:zero         ROT:zero          </param>
-                    <param name="offset">           -184.0          -294             -247             -65             </param>
-                    <param name="invertDirection">  true            true             false            false             </param>
+                    <param name="type">             TYPE:decideg    TYPE:decideg     TYPE:decideg     TYPE:decideg     </param>
+                    <param name="rotation">         ROT:zero        ROT:zero         ROT:zero         ROT:zero         </param>
+                    <param name="offset">           -125.0          0.0              -177.0            0                </param>
+                    <param name="invertDirection">  false           true             false             false            </param>
                 </group>
 
             </group>
