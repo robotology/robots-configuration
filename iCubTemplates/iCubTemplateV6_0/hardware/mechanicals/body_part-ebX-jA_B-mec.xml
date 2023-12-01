@@ -28,15 +28,21 @@
 
 
     <group name="2FOC"> <!-- this group must be present only if the service of controlled is eomn_serv_MC_foc -->
-        <param name="Verbose">               0  </param> <!-- If 1, it enables debug prints of 2FOC boards. It is optional and its default value is 1. -->
-        <param name="AutoCalibration">       0  </param> <!-- If 1, it enables AutoCalibration procedure of optical encoder. It is optional and its default value is 0. -->
-        <param name="HasHallSensor">         0  </param> <!-- Indicates if hall sensors are connected to 2FOC board -->
-        <param name="HasTempSensor">         0  </param> <!-- Indicates if temperature ensor  are connected to 2FOC board -->
-        <param name="HasRotorEncoder">       0  </param> <!-- Indicates if rotor has encoder   -->
-        <param name="HasRotorEncoderIndex">  0  </param> <!-- Indicates if the rotor encoder has index -->
-        <param name="HasSpeedEncoder">       0  </param> <!-- It is as an alternative to rotorEncoder. It is not used for FOC controller. -->
-        <param name="RotorIndexOffset">      0  </param> <!-- Rotor index offset between first electric sector and encoder index [degree] -->
-        <param name="MotorPoles">            1  </param> <!--  Number of poles of motor -->
+        <param name="Verbose">               0    </param> <!-- If 1, it enables debug prints of 2FOC boards. It is optional and its default value is 1. -->
+        <param name="AutoCalibration">       0    </param> <!-- If 1, it enables AutoCalibration procedure of optical encoder. It is optional and its default value is 0. -->
+        <param name="HasHallSensor">         0    </param> <!-- Indicates if hall sensors are connected to 2FOC board -->
+        <param name="HasTempSensor">         0    </param> <!-- Indicates if the temperature sensors are connected to 2FOC board.
+                                                                It will be soon DEPRECATED in favour of TemperatureSensorType. 
+                                                                If you want to configure the temperature sensor you have to use the TemperatureSensorType instead of set this to 1. -->
+        <param name="TemperatureSensorType"> NONE </param> <!-- Indicates the type of temperature sensor mounted on this motor.
+                                                                It is going to SUBSTITUTE the param HasTempSensor, which is going to be deprecated.
+                                                                Currently the availbale values are PT100, PT1000, NONE (used if motor is equipped with no sensors)
+                                                                If set, the user MUST also set the hardwareTemperatureLimit and the warningTemperatureLimit in motorControl configuration file.-->
+        <param name="HasRotorEncoder">       0    </param> <!-- Indicates if rotor has encoder   -->
+        <param name="HasRotorEncoderIndex">  0    </param> <!-- Indicates if the rotor encoder has index -->
+        <param name="HasSpeedEncoder">       0    </param> <!-- It is as an alternative to rotorEncoder. It is not used for FOC controller. -->
+        <param name="RotorIndexOffset">      0    </param> <!-- Rotor index offset between first electric sector and encoder index [degree] -->
+        <param name="MotorPoles">            1    </param> <!--  Number of poles of motor -->
     </group>
 
 
