@@ -40,9 +40,9 @@
                 <group name="CALIBRATION">
                     <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
                     <param name="type">             TYPE:decideg    TYPE:decideg     TYPE:decideg     TYPE:decideg      </param>
-                    <param name="rotation">         ROT:zero        ROT:plus180      ROT:zero         ROT:zero          </param>
-                    <param name="offset">           -39             -86                -207             -306              </param>
-                    <param name="invertDirection">  false           false            false            true              </param>
+                    <param name="rotation">         ROT:zero        ROT:zero         ROT:zero         ROT:zero          </param>
+                    <param name="offset">           0               0                0                0                 </param>
+                    <param name="invertDirection">  false           false            false            false             </param>
                 </group>
             </group>
 

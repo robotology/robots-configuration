@@ -27,7 +27,7 @@
   </group>
 
   <group name="multipleAnalogSensorsNames">
-    <param name="SixAxisForceTorqueSensorsNames">(l_arm_ft, r_arm_ft, l_leg_ft, l_foot_front_ft, l_foot_rear_ft, r_leg_ft, r_foot_front_ft, r_foot_rear_ft)</param>
+    <param name="SixAxisForceTorqueSensorsNames">(l_leg_ft, l_foot_front_ft, l_foot_rear_ft, r_leg_ft, r_foot_front_ft, r_foot_rear_ft)</param>
   </group>
 
 
@@ -57,10 +57,10 @@
       <elem name="torso">torso-eb5-j0_2-mc</elem>
       <elem name="left_upper_arm-j0">left_arm-eb2-j0_1-mc</elem>
       <elem name="left_upper_arm-j2">left_arm-eb4-j2_3-mc</elem>
-      <!-- <elem name="left_lower_arm">left_arm-eb31-j4_6-mc</elem> -->
+      <elem name="left_lower_arm">left_arm-eb31-j4_6-mc</elem>
       <elem name="right_upper_arm-j0">right_arm-eb1-j0_1-mc</elem>
       <elem name="right_upper_arm-j2">right_arm-eb3-j2_3-mc</elem>
-      <!-- <elem name="right_lower_arm">right_arm-eb30-j4_6-mc</elem> -->
+      <elem name="right_lower_arm">right_arm-eb30-j4_6-mc</elem>
       <elem name="left_upper_leg-j0">left_leg-eb8-j0_3-mc</elem>
       <elem name="left_lower_leg-j2">left_leg-eb9-j4_5-mc</elem>
       <elem name="right_upper_leg-j0">right_leg-eb6-j0_3-mc</elem>
@@ -73,8 +73,6 @@
       <!-- ft -->
       <elem name="l_leg_ft_sensors">left_leg-FT_remapper</elem>
       <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem>
-      <elem name="l_arm_ft_sensors">left_arm-eb2-j0_1-strain</elem>
-      <elem name="r_arm_ft_sensors">right_arm-eb1-j0_1-strain</elem>
     </paramlist>
   </action>
 
