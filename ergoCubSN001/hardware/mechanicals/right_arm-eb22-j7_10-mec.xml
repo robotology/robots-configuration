@@ -26,8 +26,8 @@
         <!-- After run 1st round of calibration check best rotorPosMin and rotorPosMin on motor position in the yarpmotorgui and set them (just do that one time)-->
         <param name="hardwareJntPosMax">    90              90              90              90         </param>
         <param name="hardwareJntPosMin">    0               0               0               0          </param>
-        <param name="rotorPosMin">          -26000          -26000          -26000          -26000     </param>
-        <param name="rotorPosMax">          -100           -100            -100            -100       </param>
+        <param name="rotorPosMin">          -26500         -26500          -26500          -26500      </param>
+        <param name="rotorPosMax">          -100           -100            -100            -100        </param>
     </group>
 
     <group name="COUPLINGS">
