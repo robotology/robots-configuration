@@ -21,7 +21,7 @@
                 </group>
                 <group name="FIRMWARE">
                     <param name="major">            2                   </param>
-                    <param name="minor">            0                   </param>
+                    <param name="minor">            2                   </param>
                     <param name="build">            0                   </param>
                 </group>
             </group>
@@ -64,7 +64,7 @@
 
                 <group name="ENCODER1">
                     <param name="type">             pos                 pos                       pos                       pos                       </param>
-                    <param name="port">             POS:hand_thumb_oc      POS:hand_index_oc            POS:hand_middle_oc            POS:hand_ring_pinky_oc            </param>
+                    <param name="port">             POS:hand_thumb_oc   POS:hand_index_oc         POS:hand_middle_oc        POS:hand_ring_pinky_oc    </param>
                     <param name="position">         atjoint             atjoint                   atjoint                   atjoint                   </param>
                     <param name="resolution">       65535               65535                     65535                     65535                     </param>
                     <param name="tolerance">        5                   5                         5                         5                         </param>

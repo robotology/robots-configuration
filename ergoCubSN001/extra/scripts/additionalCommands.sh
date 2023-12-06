@@ -22,7 +22,7 @@ export ROBOTS_CONFIGURATION_DIR=${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/robots-c
 alias gotoRobotsConfigurationFolder='cd $ROBOTS_CONFIGURATION_DIR'
 
 #Automatic Joypad configuration
-alias connectToJoypad='sudo expect ${ADDITIONAL_COMMANDS_DIR}/bluetoothConnect.sh 28:9A:4B:08:E1:1B'
+alias connectToJoypad='sudo expect ${ADDITIONAL_COMMANDS_DIR}/bluetoothConnect.sh 28:9A:4B:0A:5F:6D'
 
 # Go to DCM folder
 alias dcmFolder='cd ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/walking-controllers/src/WalkingModule/app/robots/${YARP_ROBOT_NAME}'

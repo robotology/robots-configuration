@@ -15,15 +15,15 @@
             <group name="PROPERTIES">
             
                 <group name="CANBOARDS">
-                    <param name="type">                 mtb4                </param>
+                    <param name="type">                 mtb4c                </param>
 
                     <group name="PROTOCOL">
                         <param name="major">            2                   </param>    
                         <param name="minor">            0                   </param>     
                     </group>                    
                     <group name="FIRMWARE">
-                        <param name="major">            1                   </param>    
-                        <param name="minor">            21                   </param> 
+                        <param name="major">            2                   </param>    
+                        <param name="minor">            2                   </param> 
                         <param name="build">            0                   </param>
                     </group>
                 </group>
