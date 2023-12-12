@@ -101,10 +101,14 @@
         <param name="trq_ko">            Openloop output [expressed in PWM raw units] </param>       
         <param name="trq_stictionUp">    Not used at present.                      </param>       
         <param name="trq_stictionDwn">   Not used at present.                      </param>    
-        <param name="trq_kff">           Feed forward torque part [expressed in pwm_raw/Nm]</param>  
-        <param name="trq_kbemf">         Friction compensation [expressed in pwm_raw/(degrees/sec)]    </param>    
+        <param name="trq_kff">           Feed forward torque part [expressed in pwm_raw/Nm]</param>
+        <param name="velocityThres">0   </param>   <!-- Velocity threshold for friction compensation [expressed in icubdegrees/sec] -->
+        <param name="viscousPos">   0   </param>   <!-- Viscous constant used for friction (positive direction )                    -->
+        <param name="viscousNeg">   0   </param>   <!-- Viscous constant used for friction (negative direction )                    -->
+        <param name="coulombPos">   0   </param>   <!-- Coulomb constant used for friction (positive direction )                    -->
+        <param name="coulombNeg">   0   </param>   <!-- Coulomb constant used for friction (negative direction )                    -->
         <param name="trq_filterType">    Low pass filter on output 0=no filter 1=3 HZ 2=1.1 Hz 3=0.8 Hz 4=0.5 Hz </param>    
-        <param name="trq_ktau">          Gain on Kff and Kbemf parts (usually 1) [adimensional] </param>             
+        <param name="trq_ktau">          Gain on Kff part [adimensional] </param>             
     </group>
     
     
@@ -122,8 +126,11 @@
         <param name="trq_stictionUp">    Not used.      </param>       
         <param name="trq_stictionDwn">   Not used.      </param>    
         <param name="trq_kff">           Not used.      </param>  
-        <param name="trq_kbemf">         Not used.      </param>    
-        <param name="trq_filterType">    Not used.      </param>    
+        <param name="velocityThres">0   </param>   <!-- Velocity threshold for friction compensation [expressed in icubdegrees/sec] -->
+        <param name="viscousPos">   0   </param>   <!-- Viscous constant used for friction (positive direction )                    -->
+        <param name="viscousNeg">   0   </param>   <!-- Viscous constant used for friction (negative direction )                    -->
+        <param name="coulombPos">   0   </param>   <!-- Coulomb constant used for friction (positive direction )                    -->
+        <param name="coulombNeg">   0   </param>   <!-- Coulomb constant used for friction (negative direction )                    -->        <param name="trq_filterType">    Not used.      </param>    
         <param name="trq_ktau">          Not used.      </param>  
         <param name="vel_kp">            Velocity inner loop proportional part constant [expressed in pwm_raw/(icubdegrees/msec)]   </param>       
         <param name="vel_kd">            Velocity inner loop derivative part constant [expressed in pwm_raw/(icubdegrees/msec^2)]   </param>       
