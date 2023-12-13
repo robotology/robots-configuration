@@ -70,7 +70,11 @@
         <param name="stictionUp">0 0</param>       
         <param name="stictionDown">0 0</param>   
         <param name="kff">          1            1              </param>         
-        <param name="kbemf">0 0</param>      
+        <param name="viscousPos">   0            0              </param>
+        <param name="viscousNeg">   0            0              </param>
+        <param name="coulombPos">   0            0              </param>
+        <param name="coulombNeg">   0            0              </param>
+        <param name="velocityThres">0            0              </param>
         <param name="filterType">   0            0              </param>                 
         <param name="ktau">0 0</param>          
     </group>
