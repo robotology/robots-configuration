@@ -34,7 +34,7 @@
                 <param name="id">                   battery1        </param>
                 <!-- same as the type above-->
                 <param name="board">                bat             </param>
-                <param name="location">             CAN2:1          </param> <!-- this is the CAN location. It should be on CAN2 since on CAN1 we have the FT sensors-->
+                <param name="location">             CAN2:2          </param> <!-- this is the CAN location. It should be on CAN2 since on CAN1 we have the FT sensors-->
             </group>
 
         </group>

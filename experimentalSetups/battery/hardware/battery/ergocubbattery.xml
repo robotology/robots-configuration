@@ -29,7 +29,7 @@
             <group name="SENSORS">
                 <param name="id">                   battery1        </param>
                 <param name="board">                bat             </param>
-                <param name="location">             CAN1:1          </param>
+                <param name="location">             CAN2:2          </param>
             </group>
 
         </group>
