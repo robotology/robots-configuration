@@ -19,23 +19,23 @@
 	      -->
 	    <param name="numOfSets"> 1 </param> 
 	    <!--                            patch       adr start   adr end     period      type    no_load     -->            
-	    <param name="boardSetCfg1">     1           14          14          50          1       0xf0        </param> 
+	    <param name="boardSetCfg1">     1           14          14          50          1       0xc8        </param> 
 		                  
 	</group>
         
         
        <group name="defaultCfgTriangle">
             <param name="enabled">         false  </param> 
-            <param name="shift">           2  </param>
-            <param name="cdcOffset">       0x2200  </param>
+            <param name="shift">           1  </param>
+            <param name="cdcOffset">       0x0000  </param>
         </group>
  
         <group name="specialCfgTriangles">
-            <param name="numOfSets">         2  </param>
-            <param name="triangleSetCfg1">     1            14        0             6             1              0            0x2000      </param>
-           <param name="triangleSetCfg2">      1            14        8             11             1              2           0x2200       </param>
-           
-
+            <param name="numOfSets">         4  </param>
+            <param name="triangleSetCfgThumb">     1            14        0             0              1              1           0x0000      </param>
+            <param name="triangleSetCfgIndex">     1            14        4             4              1              1           0x0000      </param>
+            <param name="triangleSetCfgMiddle">    1            14        8             8              1              1           0x0000      </param>
+            <param name="triangleSetCfgRing">      1            14        12            12             1              1           0x0000      </param>
         </group>
 
         
