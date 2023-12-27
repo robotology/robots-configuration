@@ -7,7 +7,7 @@
  
         <xi:include href="../../hardware/electronics/left_arm-eb24-j4_7-eln.xml" />
         <group name="patches">
-            <param name="skinCanAddrsPatch1"> 14 13 12 11 10 9 8 </param> 
+            <param name="skinCanAddrsPatch1"> 14 </param> 
         </group>
         <xi:include href="./left_arm-eb24-j4_7-skinSpec.xml" />
     </device>
