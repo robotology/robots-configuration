@@ -16,10 +16,11 @@
 	    <!-- it tells some boards to be special. 
 		 we can configure only: tx period, skinType, noLoad value. 
 		 rule #1 -> CAN1:14 has: period = 50 ms, skinType = 1 (palm and fingertips skin), noLoad = 0xf0
-	      -->
+	     rule #3  -> the CAN BUS is identified by the patch number!!!!!!!
+        -->
 	    <param name="numOfSets"> 1 </param> 
-	    <!--                            patch       adr start   adr end     period      type    no_load     -->            
-	    <param name="boardSetCfg1">     1           14          14          50          1       0xc8        </param> 
+	    <!--                            CAN BUS = patch       adr start   adr end     period      type    no_load     -->            
+	    <param name="boardSetCfg1">     2          2          2          50          1       0xc8        </param> 
 		                  
 	</group>
         
@@ -29,13 +30,13 @@
             <param name="shift">           1  </param>
             <param name="cdcOffset">       0x0000  </param>
         </group>
- 
+ <!--  for now (jan 2024) we put a unique set of parameters activating all 16 I2C addr -->
         <group name="specialCfgTriangles">
-            <param name="numOfSets">         4  </param>
-            <param name="triangleSetCfgThumb">     1            14        0             0              1              1           0x0000      </param>
-            <param name="triangleSetCfgIndex">     1            14        4             4              1              1           0x0000      </param>
-            <param name="triangleSetCfgMiddle">    1            14        8             8              1              1           0x0000      </param>
-            <param name="triangleSetCfgRing">      1            14        12            12             1              1           0x0000      </param>
+            <param name="numOfSets">         1  </param>
+            <param name="triangleSetCfg1">     2        2        0         15        1         1        0x0000      </param>
+            <param name="triangleSetCfg2">     2        2        0         15        1         1        0x0000      </param>
+            <param name="triangleSetCfg3">     2        2        8         8         1         1        0x0000      </param>
+            <param name="triangleSetCfg4">     2        2        12        12        1         1        0x0000      </param>
         </group>
 
         
