@@ -65,7 +65,7 @@
         <group name="JOINTSET_0">
             <param name="listofjoints">  0 1 2         </param>
             <param name="constraint">    ergocubwrist  </param> <!-- none for calibration -->
-            <param name="param1">        20            </param>
+            <param name="param1">        21            </param>
             <param name="param2">        0             </param>
         </group>
     </group>
