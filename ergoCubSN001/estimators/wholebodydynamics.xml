@@ -27,7 +27,7 @@
   </group>
 
   <group name="multipleAnalogSensorsNames">
-    <param name="SixAxisForceTorqueSensorsNames">(l_leg_ft, l_foot_front_ft, l_foot_rear_ft, r_leg_ft, r_foot_front_ft, r_foot_rear_ft)</param>
+    <param name="SixAxisForceTorqueSensorsNames">(l_leg_ft, l_foot_front_ft, l_foot_rear_ft, r_leg_ft, r_foot_front_ft, r_foot_rear_ft, r_arm_ft, l_arm_ft)</param>
   </group>
 
 
@@ -68,11 +68,11 @@
 
       <!-- imu -->
       <elem name="imu">waist-inertial</elem>
-      <!-- imu_waist -->
-      <!--            <elem name="imu">xsensmt-inertial</elem> -->
       <!-- ft -->
       <elem name="l_leg_ft_sensors">left_leg-FT_remapper</elem>
       <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem>
+      <elem name="l_arm_ft_sensors">left_arm-eb2-j0_1-strain</elem>
+      <elem name="r_arm_ft_sensors">right_arm-eb1-j0_1-strain</elem>
     </paramlist>
   </action>
 
