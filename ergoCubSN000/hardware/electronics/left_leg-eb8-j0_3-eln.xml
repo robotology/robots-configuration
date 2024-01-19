@@ -19,9 +19,9 @@
             <param name="Name">                     "left_leg-eb8-j0_3"     </param> 
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
-                <param name="maxTimeOfRXactivity">      400                 </param>
-                <param name="maxTimeOfDOactivity">      300                 </param>   
-                <param name="maxTimeOfTXactivity">      300                 </param>                
+                <param name="maxTimeOfRXactivity">      300                 </param>
+                <param name="maxTimeOfDOactivity">      350                 </param>   
+                <param name="maxTimeOfTXactivity">      350                 </param>                
                 <param name="TXrateOfRegularROPs">      2                   </param> 
             </group>              
         </group>                 
