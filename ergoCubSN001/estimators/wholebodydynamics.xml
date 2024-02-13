@@ -7,7 +7,7 @@
   <param name="modelFile">model.urdf</param>
   <param name="fixedFrameGravity">(0,0,-9.81)</param>
   <param name="defaultContactFrames">(l_hand_palm,r_hand_palm,root_link,l_foot_front,l_foot_rear,r_foot_front,r_foot_rear,l_upper_leg,r_upper_leg)</param>
-  <param name="imuFrameName">head_imu_0</param>
+  <param name="imuFrameName">waist_imu_0</param>
   <param name="publishOnROS">true</param>
   <param name="forceTorqueEstimateConfidence">2</param>
   <param name="useJointVelocity">true</param>
@@ -22,8 +22,8 @@
   <param name="publishNetExternalWrenches">true</param>
   <!--<param name="assume_fixed">root_link</param>-->
   <group name="HW_USE_MAS_IMU">
-    <param name="accelerometer">sensor_imu_xsensmt</param>
-    <param name="gyroscope">sensor_imu_xsensmt</param>
+    <param name="accelerometer">waist_imu_0</param>
+    <param name="gyroscope">waist_imu_0</param>
   </group>
 
   <group name="multipleAnalogSensorsNames">

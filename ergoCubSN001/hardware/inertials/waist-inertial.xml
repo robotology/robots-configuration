@@ -7,4 +7,5 @@
     <param name="xsensmt_gyro_period">0.005</param>
     <param name="xsensmt_acc_period">0.005</param>
     <param name="xsensmt_mag_period">0.01</param>
+    <param name="sensor_name">waist_imu_0</param>
   </device>

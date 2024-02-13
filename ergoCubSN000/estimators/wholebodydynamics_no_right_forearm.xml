@@ -22,8 +22,8 @@
         <param name="publishNetExternalWrenches">true</param>
 	<!--<param name="assume_fixed">root_link</param>-->
 	<group name="HW_USE_MAS_IMU">
-	    <param name="accelerometer">sensor_imu_xsensmt</param>
-	    <param name="gyroscope">sensor_imu_xsensmt</param>
+	    <param name="accelerometer">waist_imu_0</param>
+	    <param name="gyroscope">waist_imu_0</param>
 	</group>
 
         <group name="multipleAnalogSensorsNames">
