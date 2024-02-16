@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN002" build="1">
+
+        <group name="defaultCfgBoard">
+            <param name="period">        50  </param> 
+            <param name="skinType">      0  </param>     <!-- 0 ==> new skin
+                                                              1 ==> palm and fingertips skin
+                                                              2 ==> old skin without temperature compensation -->
+            <param name="noLoad">         0xf0  </param>
+            <param name="diagnostic">    false  </param>     <!-- used to config high level -->
+        </group>
+
+	<group name="specialCfgBoards">           
+	    <!-- it tells some boards to be special. 
+		 we can configure only: tx period, skinType, noLoad value. 
+		 rule #1 -> CAN1:2 has: period = 50 ms, skinType = 1 (palm and fingertips skin), noLoad = 0xf0
+	      -->
+	    <param name="numOfSets"> 1 </param> 
+	    <!--                            CAN BUS = patch       adr start   adr end     period      type    no_load     -->            
+	    <param name="boardSetCfg1">     2           2          2          50          1       0xc8        </param> 
+		                  
+	</group>
+        
+        
+       <group name="defaultCfgTriangle">
+            <param name="enabled">         false  </param> 
+            <param name="shift">           1  </param>
+            <param name="cdcOffset">       0x0000  </param>
+        </group>
+ 
+        <group name="specialCfgTriangles">
+            <param name="numOfSets">         1  </param>
+            <param name="triangleSetCfg1">     2        2        0         15        1         1        0x0000      </param>
+            <param name="triangleSetCfg2">     2        2        0         15        1         1        0x0000      </param>
+            <param name="triangleSetCfg3">     2        2        8         8         1         1        0x0000      </param>
+            <param name="triangleSetCfg4">     2        2        12        12        1         1        0x0000      </param>
+        </group>
+
+        
+</params>
