@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN002" build="1">
+
+    <group name="SERVICE">
+
+        <param name="type"> eomn_serv_MC_mc4plusfaps </param>
+
+        <group name="PROPERTIES">
+
+            <group name="ETHBOARD">
+                <param name="type">                 mc4plus             </param>
+            </group>
+
+            <group name="CANBOARDS">
+                <param name="type">                 mtb4c               </param>
+                <group name="PROTOCOL">
+                    <param name="major">            2                   </param>
+                    <param name="minor">            0                   </param>
+                </group>
+                <group name="FIRMWARE">
+                    <param name="major">            2                   </param>
+                    <param name="minor">            2                   </param>
+                    <param name="build">            0                   </param>
+                </group>
+            </group>
+
+            <group name="POS">
+                <param name="location">             CAN1:1  </param>
+
+                <group name="SENSORS">
+
+                    <!-- common to all analog services -->
+                    <param name="id">                   id_fapAA        id_fapBB         id_fapCC                 id_fapDD              </param>
+                    <param name="type">                 eoas_pos_angle  eoas_pos_angle   eoas_pos_angle           eoas_pos_angle        </param>
+                    <param name="port">                 POS:hand_thumb_oc  POS:hand_index_oc   POS:hand_middle_oc          POS:hand_ring_pinky_oc        </param>
+
+                    <param name="boardType">            mtb4c           mtb4c            mtb4c                    mtb4c                 </param>
+                    <param name="connector">            CONN:J3_SDA3    CONN:J3_SDA0     CONN:J3_SDA1             CONN:J3_SDA2          </param>
+
+                    <group name="CALIBRATION">
+                        <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
+                        <param name="type">             TYPE:decideg    TYPE:decideg     TYPE:decideg    TYPE:decideg                   </param>
+                        <param name="rotation">         ROT:plus180     ROT:zero         ROT:zero        ROT:zero                       </param>
+                        <param name="offset">           -273            -305.0           -230.0          -55.0                          </param>
+                        <param name="invertDirection">  true            true             false           false                          </param>
+                    </group>
+                </group>
+
+                <group name="SETTINGS">
+                    <param name="acquisitionRate"> 50 </param>                    <!-- milliseconds -->
+                    <param name="enabledSensors"> id_fapAA id_fapBB id_fapCC id_fapDD</param>
+                </group>
+            </group>
+
+
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">
+                    <param name="type">             pwm                 pwm                       pwm                       pwm                       </param>
+                    <param name="port">             CONN:P5             CONN:P4                   CONN:P3                   CONN:P2                   </param>
+                </group>
+
+                <group name="ENCODER1">
+                    <param name="type">             pos                 pos                       pos                       pos                       </param>
+                    <param name="port">             POS:hand_thumb_oc   POS:hand_index_oc         POS:hand_middle_oc        POS:hand_ring_pinky_oc    </param>
+                    <param name="position">         atjoint             atjoint                   atjoint                   atjoint                   </param>
+                    <param name="resolution">       65535               65535                     65535                     65535                     </param>
+                    <param name="tolerance">        5                   5                         5                         5                         </param>
+                </group>
+
+                <group name="ENCODER2">
+                    <param name="type">             qenc                qenc                      qenc                      qenc                      </param>
+                    <param name="port">             CONN:P5             CONN:P4                   CONN:P3                   CONN:P2                   </param>
+                    <param name="position">         atmotor             atmotor                   atmotor                   atmotor                   </param>
+                    <param name="resolution">       1600                1600                      1600                      1600                      </param>
+                    <param name="tolerance">        0                   0                         0                         0                         </param>
+                </group>
+            </group>
+
+        </group>
+
+    </group>
+
+
+</params>
+

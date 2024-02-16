@@ -1,0 +1,10 @@
+<application>
+    <name>ergoCubGazeControl</name>
+    <dependencies>
+    </dependencies>
+    <module>
+        <name>ergocub-gaze-control</name>
+        <parameters>/usr/local/src/robot/ergocub-gaze-control/ecub_fixed_config.ini</parameters>
+        <node>ergocub-torso</node>
+    </module>
+</application>
