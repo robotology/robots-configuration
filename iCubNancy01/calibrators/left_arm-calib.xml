@@ -19,8 +19,8 @@
 <param name="calibration1">                       38229.2     51882.5    32767    24575.9    500.0       750.0      750.0      1600      2850       0.0        0.0        0.0        0.0        0.0        0.0        0.0        </param>
 <param name="calibration2">                       10.0       10.0       10.0       10.0      20.0       -10.0      -10.0       50       10.0       10.0       30.0       10.0       10.0       10.0       10.0       10.0       </param>
 <param name="calibration3">                       34722.9   10159.0     0360.1    35150.1     0        -332       -6000        0.0        0.0        -1         1          -1         1         -1          1         -1          </param>
-<param name="calibration4">                       0          0          0          0          0          0          0          1420      720         255        460        230       430        220        425         670        </param>
-<param name="calibration5">                       0          0          0          0          0          0          0          1334      2327         35         45          10        16         25          0          110        </param>                
+<param name="calibration4">                       0          0          0          0          0          0          0          1400      720         255        460        230       430        210        450         760        </param>
+<param name="calibration5">                       0          0          0          0          0          0          0          1500      2327         35         45          10        16         0         0          250        </param>                
 <param name="calibrationZero">                    -180.00    -315.00    -180.00    -180.00    90.00      -10      -30.00       0.0        0          20         0.0        0.0        0.0        0.0        0.0        0.0        </param>
 <param name="calibrationDelta">                   18           -6         -70          -2       -4          0.0       -5        0.0        0          0.0       0.0        0.0        0.0        0.0        0.0        0.0        </param>
 

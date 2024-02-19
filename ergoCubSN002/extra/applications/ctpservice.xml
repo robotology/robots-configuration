@@ -1,0 +1,35 @@
+<application>
+    <name>4-ctpService</name>
+    <dependencies>
+    </dependencies>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot ergocub --part head</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot ergocub --part left_arm</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot ergocub --part right_arm</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot ergocub --part torso</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot ergocub --part left_leg</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+    <module>
+        <name>ctpService</name>
+        <parameters>--robot ergocub --part right_leg</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+</application>
