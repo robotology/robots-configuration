@@ -2,11 +2,11 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="wrist-eb2-j0_2-inertial" type="embObjIMU">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="wrist-eb3-j3_6-inertial" type="embObjIMU">
     
         <xi:include href="../../general.xml" />     
 
-        <xi:include href="../../hardware/electronics/wrist-eb2-j0_2-eln.xml" />
+        <xi:include href="../../hardware/electronics/wrist-eb3-j3_6-eln.xml" />
         
         <group name="SERVICE">
         
