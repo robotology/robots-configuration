@@ -4,6 +4,67 @@
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="setup" build="1">
 
     <group name="SERVICE">
+    
+        <group name="templates">
+        
+        <!--
+            the group templates is not parsed by icub-main and contains xml snapshots that help to compose the MC service
+            
+            we can test two MC service types (advfoc and foc) with a number of actuator boards (amcbldc and amc2c). 
+            the controlling ETH board shall be:
+            - amc for both the advfoc and foc MC service types;
+            - ems for the single case of foc MC service type
+           
+            so, you need to:
+            1. pick up a type (either eomn_serv_MC_advfoc or eomn_serv_MC_foc)
+            2. for the given type pick up the wanted ACTUATOR:
+               - advfoc.ACTUATOR-01-amc2c-icc: the amc uses ICC to communicate w/ its second core
+               - advfoc.ACTUATOR-02-amc2c-can: the amc uses CAN to communicate w/ its second core
+               - advfoc.ACTUATOR-03-amcbldc-can: the amc uses CAN to communicate w/ an amcbldc
+               - foc.ACTUATOR-01-amcbldc: the amc uses CAN to communicate w/ an amcbldc w/ legacy foc mode
+                 note: this mode is also available if we use an ems instead of the amc                      
+        
+         -->
+        
+            <group name="advfoc">
+            
+                <param name="type"> eomn_serv_MC_advfoc </param>
+
+                <group name="ACTUATOR-01-amc2c-icc">
+                    <param name="type">             eomc_act_advfoc     </param>
+                    <param name="onboard">          amc2c               </param>
+                    <param name="port">             ICC1:3              </param>                               
+                </group>    
+
+                <group name="ACTUATOR-02-amc2c-can">
+                    <param name="type">             eomc_act_advfoc     </param>
+                    <param name="onboard">          amc2c               </param>
+                    <param name="port">             CAN1:3              </param>                               
+                </group>                    
+
+                <group name="ACTUATOR-03-amcbldc-can">
+                    <param name="type">             eomc_act_advfoc     </param>
+                    <param name="onboard">          amcbldc             </param>
+                    <param name="port">             CAN1:1              </param>                               
+                </group> 
+                
+            </group>
+        
+
+            <group name="foc">
+            
+                <param name="type"> eomn_serv_MC_foc </param>  
+                
+                <group name="ACTUATOR-01-amcbldc">
+                    <param name="type">             eomc_act_foc        </param>
+                    <param name="onboard">          amcbldc             </param>
+                    <param name="port">             CAN1:1              </param>                               
+                </group>  
+                
+            </group>
+            
+        </group>
+        
 
         <param name="type"> eomn_serv_MC_advfoc </param>
 
@@ -25,25 +86,7 @@
                     <param name="build">            0       9           </param>
                 </group>
             </group>
-
-            <group name="actuator-can-amcbldc">
-                    <param name="type">             eomc_act_advfoc     </param>
-                    <param name="onboardcan">       amcbldc             </param>
-                    <param name="portcan">          CAN1:3              </param>                               
-            </group>
-
-            <group name="actuator-can-amc2c">
-                    <param name="type">             eomc_act_advfoc     </param>
-                    <param name="onboardcan">       amc2c             </param>
-                    <param name="portcan">          CAN1:3              </param>                               
-            </group>
-            
-            <group name="actuator-icc-amc2c">
-                    <param name="type">             eomc_act_advfoc     </param>
-                    <param name="onboardcan">       amc2c             </param>
-                    <param name="portcan">          ICC1:3              </param>                               
-            </group>
-            
+           
                         
             <group name="JOINTMAPPING">
 
