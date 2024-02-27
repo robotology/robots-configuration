@@ -23,8 +23,8 @@
                     </group>                    
                     <group name="FIRMWARE">
                         <param name="major">            1                   </param>    
-                        <param name="minor">            4                   </param> 
-                        <param name="build">            7                   </param>
+                        <param name="minor">            22                   </param> 
+                        <param name="build">            0                   </param>
                     </group>
                 </group>
 
@@ -42,7 +42,7 @@
                     <param name="boardType">        mtb4                    mtb4        
                     </param>
 
-                    <param name="location">         CAN2:10                  CAN2:10
+                    <param name="location">         CAN1:10                  CAN1:10
                     </param>            
                 </group>
                                             
