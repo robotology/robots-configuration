@@ -4,10 +4,11 @@
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="setup" build="1">
 
     <group name="SERVICE">
-    
-        <group name="templates">
+
         
         <!--
+            templates: description
+
             the group templates is not parsed by icub-main and contains xml snapshots that help to compose the MC service
             
             we can test two MC service types (advfoc and foc) with a number of actuator boards (amcbldc and amc2c). 
@@ -22,10 +23,29 @@
                - advfoc.ACTUATOR-02-amc2c-can: the amc uses CAN to communicate w/ its second core
                - advfoc.ACTUATOR-03-amcbldc-can: the amc uses CAN to communicate w/ an amcbldc
                - foc.ACTUATOR-01-amcbldc: the amc uses CAN to communicate w/ an amcbldc w/ legacy foc mode
-                 note: this mode is also available if we use an ems instead of the amc                      
+                 note: this mode is also available if we use an ems instead of the amc
+            3. for the eomn_serv_MC_foc w/ amcbldc also put the amcbldc in first position as in the following
+            
+                <group name="CANBOARDS">
+                    <param name="type">                 amcbldc amc2c       </param> 
+                    <group name="PROTOCOL">
+                        <param name="major">            2       2           </param>
+                        <param name="minor">            0       0           </param>
+                    </group>
+                    <group name="FIRMWARE">
+                        <param name="major">            2       3           </param>
+                        <param name="minor">            0       0           </param>
+                        <param name="build">            9       0           </param>
+                    </group>
+                </group>                   
         
          -->
-        
+ 
+        <!-- 
+            templates: code snippets
+
+        <group name="templates">
+      
             <group name="advfoc">
             
                 <param name="type"> eomn_serv_MC_advfoc </param>
@@ -64,7 +84,9 @@
             </group>
             
         </group>
-        
+
+         -->    
+    
 
         <param name="type"> eomn_serv_MC_advfoc </param>
 
