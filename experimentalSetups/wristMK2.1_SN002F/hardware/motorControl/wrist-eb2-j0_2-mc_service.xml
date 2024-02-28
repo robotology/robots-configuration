@@ -6,6 +6,7 @@
     <group name="SERVICE">
     
     <!--
+        migration to inter-core-communication (ICC) 
     
         the legacy foc MC service type with CAN communciation uses the following
         - SERVICE.type = eomn_serv_MC_foc
@@ -22,7 +23,7 @@
           - .onboard =  amcbldc     amcbldc     amc2c
           - .port =     CAN1:1      CAN1:2      ICC1:3          
           
-        to enable the advfoc MC service type and CAN communciation vs amc2c, do the following
+        to enable the advfoc MC service type and CAN communication vs amc2c, do the following
         - change the SERVICE.type to be: 
           - SERVICE.type = eomn_serv_MC_advfoc
         - change the SERVICE.PROPERTIES.JOINTMAPPING.ACTUATOR to be:
@@ -33,15 +34,18 @@
      -->
 
         <param name="type"> eomn_serv_MC_foc </param>
+        <!-- icc: use this one
+        <param name="type"> eomn_serv_MC_advfoc </param>
+         -->
 
         <group name="PROPERTIES">
 
             <group name="ETHBOARD">
-                <param name="type">                 amc        </param>
+                <param name="type"> amc </param>
             </group>
 
             <!-- NOTE: 
-                 keep amcbldc fist if you use the eomn_serv_MC_foc, because the service gets the board from here 
+                 keep amcbldc first in the column if you use the eomn_serv_MC_foc, because the service gets first board the boar
              -->
             <group name="CANBOARDS">
                 <param name="type">                 amcbldc amc2c       </param> 
@@ -63,7 +67,14 @@
                     <param name="onboard">          amcbldc             amcbldc             amcbldc     </param>
                     <param name="port">             CAN1:1              CAN1:2              CAN1:3      </param>
                 </group>
-
+                
+                <!-- icc: use this one
+                <group name="ACTUATOR">
+                    <param name="type">             advfoc              advfoc              advfoc      </param>
+                    <param name="onboard">          amcbldc             amcbldc             amc2c       </param>
+                    <param name="port">             CAN1:1              CAN1:2              ICC1:3      </param>
+                </group>
+                -->
                 <group name="ENCODER1">
                     <param name="type">             aea3                aea3                aea3        </param>
                     <param name="port">             CONN:J5_X1          CONN:J5_X2          CONN:J5_X3  </param>
