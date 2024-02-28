@@ -3,7 +3,7 @@
 # CopyPolicy: Released under the terms of the GNU GPL v2.0.
 
 cmake_minimum_required(VERSION 3.12)
-project(robots-configuration VERSION 2.5.2)
+project(robots-configuration VERSION 2.6.0)
 
 find_package(YCM REQUIRED)
 find_package(YARP REQUIRED)
