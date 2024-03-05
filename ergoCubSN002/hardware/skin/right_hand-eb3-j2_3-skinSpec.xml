@@ -5,7 +5,7 @@
 
         <group name="defaultCfgBoard">
             <param name="period">        50  </param> 
-            <param name="skinType">      0  </param>     <!-- 0 ==> new skin
+            <param name="skinType">      2  </param>     <!-- 0 ==> new skin
                                                               1 ==> palm and fingertips skin
                                                               2 ==> old skin without temperature compensation -->
             <param name="noLoad">         0xf0  </param>
@@ -20,7 +20,7 @@
         -->
 	    <param name="numOfSets"> 1 </param> 
 	    <!--                            CAN BUS = patch       adr start   adr end     period      type    no_load     -->            
-	    <param name="boardSetCfg1">     2          2          2          50          1       0xc8        </param> 
+	    <param name="boardSetCfg1">     2          2          2          50          1       0xf0        </param> 
 		                  
 	</group>
         
