@@ -19,7 +19,7 @@
         <param name="calibrationType">                  12      12      12      </param>
 
         <!--param name="calibration1">                     729     15429   11211   </param-->
-        <param name="calibration1">               11443.0 11188.0 23850.0   </param>
+        <param name="calibration1">                     4653    12480   8225    </param>
         <!--param name="calibration1">               -21434.0 -21264.0 -8858.0   </param-->
         <param name="calibration2">                     0       0       0       </param>
         <param name="calibration3">                     0       0       0       </param>
