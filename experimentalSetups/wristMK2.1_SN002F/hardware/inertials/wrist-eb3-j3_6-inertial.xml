@@ -26,23 +26,34 @@
                         <param name="minor">            22                   </param> 
                         <param name="build">            0                   </param>
                     </group>
+                    <param name="type">                 mtb4                </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            2                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group>                    
+                    <group name="FIRMWARE">
+                        <param name="major">            1                   </param>    
+                        <param name="minor">            22                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
                 </group>
 
                 <group name="SENSORS">
 
-                    <param name="id">               IDacc                   IDgyr
+                    <param name="id">               IDacc                   IDgyr			RefAcc       	RefGyr  
                     </param>
 
-                    <param name="sensorName">       l_hand_acc              l_hand_gyro
+                    <param name="sensorName">       l_hand_acc              l_hand_gyro            	l_arm_acc  	l_arm_gyro    
                     </param>
 
-                    <param name="type">             eoas_imu_acc            eoas_imu_gyr        
+                    <param name="type">             eoas_imu_acc            eoas_imu_gyr        	eoas_imu_acc   eoas_imu_gyr        
                     </param>
 
-                    <param name="boardType">        mtb4                    mtb4        
+                    <param name="boardType">        mtb4                    mtb4    		mtb4           mtb4        
                     </param>
 
-                    <param name="location">         CAN1:10                  CAN1:10
+                    <param name="location">         CAN1:11                  CAN1:11                CAN1:10                  CAN1:10
                     </param>            
                 </group>
                                             
@@ -50,7 +61,7 @@
             
             <group name="SETTINGS"> 
                 <param name="acquisitionRate"> 50 </param>
-                <param name="enabledSensors">  IDacc IDgyr </param>                
+                <param name="enabledSensors">  IDacc IDgyr RefAcc RefGyr </param>                
             </group>
             
         </group>        

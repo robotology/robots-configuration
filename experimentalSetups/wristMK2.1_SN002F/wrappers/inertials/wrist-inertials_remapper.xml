@@ -7,7 +7,7 @@
         <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
              defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->
         <param name="ThreeAxisLinearAccelerometersNames">
-          (l_hand  l_hand_gyro)
+          (l_hand  l_hand_gyro  l_arm l_arm_gyro)
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
