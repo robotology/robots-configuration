@@ -34,7 +34,7 @@
  
        <param name="CALIB_ORDER">(0 1 2 3) (4 6 7) (5)</param>         
                
-        <action phase="startup" level="15" type="calibrate">           
+        <action phase="startup" level="10" type="calibrate">           
             <param name="target">right_arm_mc_remapper</param>    
         </action>            
  
