@@ -40,6 +40,7 @@
 
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/head-mc-slow_wrapper.xml" />
 
     <!-- HEAD -->
     <xi:include href="hardware/motorControl/head-eb20-j0_1-mc.xml" />
@@ -118,14 +119,14 @@
     <xi:include href="wrappers/inertials/right_leg-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" />
-    
+
     <!-- BATTERY BAT -->
-    <xi:include href="wrappers/battery/battery_bat.xml" /> 
-    <xi:include href="hardware/battery/battery_bat.xml" /> 
-    
+    <xi:include href="wrappers/battery/battery_bat.xml" />
+    <xi:include href="hardware/battery/battery_bat.xml" />
+
     <!-- BATTERY BMS -->
-    <xi:include href="wrappers/battery/battery_bms.xml" /> 
-    <xi:include href="hardware/battery/battery_bms.xml" /> 
+    <xi:include href="wrappers/battery/battery_bms.xml" />
+    <xi:include href="hardware/battery/battery_bms.xml" />
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />

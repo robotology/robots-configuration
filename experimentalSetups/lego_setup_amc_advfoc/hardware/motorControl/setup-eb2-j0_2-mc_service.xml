@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="setup" build="1">
+
+    <group name="SERVICE">
+
+        
+        <!--
+            templates: description
+
+            the group templates is not parsed by icub-main and contains xml snapshots that help to compose the MC service
+            
+            we can test two MC service types (advfoc and foc) with a number of actuator boards (amcbldc and amc2c). 
+            the controlling ETH board shall be:
+            - amc for both the advfoc and foc MC service types;
+            - ems for the single case of foc MC service type
+           
+            so, you need to:
+            1. pick up a type (either eomn_serv_MC_advfoc or eomn_serv_MC_foc)
+            2. for the given type pick up the wanted ACTUATOR:
+               - advfoc.ACTUATOR-01-amc2c-icc: the amc uses ICC to communicate w/ its second core
+               - advfoc.ACTUATOR-02-amc2c-can: the amc uses CAN to communicate w/ its second core
+               - advfoc.ACTUATOR-03-amcbldc-can: the amc uses CAN to communicate w/ an amcbldc
+               - foc.ACTUATOR-01-amcbldc: the amc uses CAN to communicate w/ an amcbldc w/ legacy foc mode
+                 note: this mode is also available if we use an ems instead of the amc
+            3. for the eomn_serv_MC_foc w/ amcbldc also put the amcbldc in first position as in the following
+            
+                <group name="CANBOARDS">
+                    <param name="type">                 amcbldc amc2c       </param> 
+                    <group name="PROTOCOL">
+                        <param name="major">            2       2           </param>
+                        <param name="minor">            0       0           </param>
+                    </group>
+                    <group name="FIRMWARE">
+                        <param name="major">            2       3           </param>
+                        <param name="minor">            0       0           </param>
+                        <param name="build">            9       0           </param>
+                    </group>
+                </group>                   
+        
+         -->
+ 
+        <!-- 
+            templates: code snippets
+
+        <group name="templates">
+      
+            <group name="advfoc">
+            
+                <param name="type"> eomn_serv_MC_advfoc </param>
+
+                <group name="ACTUATOR-01-amc2c-icc">
+                    <param name="type">             eomc_act_advfoc     </param>
+                    <param name="onboard">          amc2c               </param>
+                    <param name="port">             ICC1:3              </param>                               
+                </group>    
+
+                <group name="ACTUATOR-02-amc2c-can">
+                    <param name="type">             eomc_act_advfoc     </param>
+                    <param name="onboard">          amc2c               </param>
+                    <param name="port">             CAN1:3              </param>                               
+                </group>                    
+
+                <group name="ACTUATOR-03-amcbldc-can">
+                    <param name="type">             eomc_act_advfoc     </param>
+                    <param name="onboard">          amcbldc             </param>
+                    <param name="port">             CAN1:1              </param>                               
+                </group> 
+                
+            </group>
+        
+
+            <group name="foc">
+            
+                <param name="type"> eomn_serv_MC_foc </param>  
+                
+                <group name="ACTUATOR-01-amcbldc">
+                    <param name="type">             eomc_act_foc        </param>
+                    <param name="onboard">          amcbldc             </param>
+                    <param name="port">             CAN1:1              </param>                               
+                </group>  
+                
+            </group>
+            
+        </group>
+
+         -->    
+    
+
+        <param name="type"> eomn_serv_MC_advfoc </param>
+
+        <group name="PROPERTIES">
+
+            <group name="ETHBOARD">
+                <param name="type">                 amc        </param>
+            </group>
+
+            <group name="CANBOARDS">
+                <param name="type">                 amc2c   amcbldc     </param> 
+                <group name="PROTOCOL">
+                    <param name="major">            2       2           </param>
+                    <param name="minor">            0       0           </param>
+                </group>
+                <group name="FIRMWARE">
+                    <param name="major">            3       2           </param>
+                    <param name="minor">            0       0           </param>
+                    <param name="build">            0       10          </param>
+                </group>
+            </group>
+           
+                        
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">
+                    <param name="type">             eomc_act_advfoc     </param>
+                    <param name="onboard">          amc2c               </param>
+                    <param name="port">             ICC1:3              </param>
+                </group>
+
+                <group name="ENCODER1">
+                    <param name="type">             aea3                </param>
+                    <param name="port">             CONN:J5_X1          </param>
+                    <param name="position">         eomc_pos_atjoint    </param>
+                    <param name="resolution">       16384               </param>
+                    <param name="tolerance">        0.4                 </param>
+                </group>
+
+                <group name="ENCODER2">
+                    <param name="type">             none                </param>
+                    <param name="port">             CAN2:3:0            </param>
+                    <param name="position">         atmotor             </param>
+                    <param name="resolution">       0                   </param>
+                    <param name="tolerance">        0                   </param>
+                </group>
+
+            </group>
+
+        </group>
+
+    </group>
+
+</params>

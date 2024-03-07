@@ -4,40 +4,72 @@
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="nfa" build="1">
 
     <group name="SERVICE">
+    
+    <!--
+        migration to inter-core-communication (ICC) 
+    
+        the legacy foc MC service type with CAN communciation uses the following
+        - SERVICE.type = eomn_serv_MC_foc
+        - SERVICE.PROPERTIES.JOINTMAPPING.ACTUATOR:
+          - .type =     foc         foc         foc
+          - .onboard =  any-string  any-string  any-string -> it uses the first board on PROPERTIES.CANBOARDS
+          - .port =     CAN1:1      CAN1:2      CAN1:3   
+          
+        to enable the advfoc MC service type and inter-core-communication vs amc2c, do the following
+        - change the SERVICE.type to be: 
+          - SERVICE.type = eomn_serv_MC_advfoc
+        - change the SERVICE.PROPERTIES.JOINTMAPPING.ACTUATOR to be:
+          - .type =     advfoc      advfoc      advfoc
+          - .onboard =  amcbldc     amcbldc     amc2c
+          - .port =     CAN1:1      CAN1:2      ICC1:3          
+          
+        to enable the advfoc MC service type and CAN communication vs amc2c, do the following
+        - change the SERVICE.type to be: 
+          - SERVICE.type = eomn_serv_MC_advfoc
+        - change the SERVICE.PROPERTIES.JOINTMAPPING.ACTUATOR to be:
+          - .type =     advfoc      advfoc      advfoc
+          - .onboard =  amcbldc     amcbldc     amc2c
+          - .port =     CAN1:1      CAN1:2      CAN1:3                  
+    
+     -->
 
-        <param name="type"> eomn_serv_MC_foc </param>
+        <param name="type"> eomn_serv_MC_advfoc </param>
 
         <group name="PROPERTIES">
 
             <group name="ETHBOARD">
-                <param name="type">                 amc        </param>
+                <param name="type"> amc </param>
             </group>
 
+            <!-- NOTE: 
+                 keep amcbldc first in the column if you use the eomn_serv_MC_foc, because the service gets first board the boar
+             -->
             <group name="CANBOARDS">
-                <param name="type">                 amcbldc     </param>
+                <param name="type">                 amcbldc amc2c       </param> 
                 <group name="PROTOCOL">
-                    <param name="major">            2           </param>
-                    <param name="minor">            0           </param>
+                    <param name="major">            2       2           </param>
+                    <param name="minor">            0       0           </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            2           </param>
-                    <param name="minor">            0           </param>
-                    <param name="build">            4          </param>
+                    <param name="major">            2       3           </param>
+                    <param name="minor">            0       0           </param>
+                    <param name="build">            10      0           </param>
                 </group>
             </group>
 
             <group name="JOINTMAPPING">
 
                 <group name="ACTUATOR">
-                    <param name="type">             foc                 foc                 foc         </param>
-                    <param name="port">             CAN1:1:0            CAN1:2:0            CAN1:3:0    </param>
+                    <param name="type">             advfoc              advfoc              advfoc      </param>
+                    <param name="onboard">          amcbldc             amcbldc             amc2c       </param>
+                    <param name="port">             CAN1:1              CAN1:2              ICC1:3      </param>
                 </group>
 
                 <group name="ENCODER1">
-                    <param name="type">             aea3                aea3                aea3         </param>
+                    <param name="type">             aea3                aea3                aea3        </param>
                     <param name="port">             CONN:J5_X1          CONN:J5_X2          CONN:J5_X3  </param>
                     <param name="position">         atjoint             atjoint             atjoint     </param>
-                    <param name="resolution">       16384               16384               16384        </param>
+                    <param name="resolution">       16384               16384               16384       </param>
                     <param name="tolerance">        0.4                 0.4                 0.4         </param>
                 </group>
 
