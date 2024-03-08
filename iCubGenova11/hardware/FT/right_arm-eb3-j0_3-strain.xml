@@ -24,7 +24,7 @@
                     </group>
                     <group name="FIRMWARE">
                         <param name="major">            2                       </param>
-                        <param name="minor">            2                       </param>
+                        <param name="minor">            3                       </param>
                         <param name="build">            0                       </param>
                     </group>
                 </group>
@@ -51,9 +51,3 @@
         </group>
 
   </device>
-
-
-
-
-
-
