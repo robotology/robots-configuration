@@ -19,8 +19,8 @@
         <param name="motorPeakCurrents">        12000               12000               </param>
         <param name="motorOverloadCurrents">    15000               15000               </param>
         <param name="motorPwmLimit">            8000                8000                </param>
-        <!-- <param name="hardwareTemperatureLimits"> 110                110                 </param>
-        <param name="warningTemperatureLimits">  90                 90                  </param> keep commented until TemperatureSensorType is not ENABLE by setting it different from NONE-->
+        <param name="hardwareTemperatureLimits"> 110                110                 </param>
+        <param name="warningTemperatureLimits">  90                 90                  </param> <!-- keep commented until TemperatureSensorType is not ENABLE by setting it different from NONE-->
     </group>
 
     <group name="TIMEOUTS">
@@ -162,6 +162,3 @@
     </group>
 
   </device>
-
-
-
