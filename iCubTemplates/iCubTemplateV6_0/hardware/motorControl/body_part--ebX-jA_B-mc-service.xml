@@ -7,16 +7,17 @@
         
         <param name="type"> eomn_serv_MC_foc </param> <!-- This param describe the type of motion control service. Possible values are:
                                                           * eomn_serv_MC_foc : ems with 2foc
+                                                          * eomn_serv_MC_advfoc : as eomn_serv_MC_foc but also with mixed actuator boards. See ADVFOC tag for description.
                                                           * eomn_serv_MC_mc4: ems with mc4 can boards.
                                                           * eomn_serv_MC_mc4plus : mc4plus
                                                           * eomn_serv_MC_mc4plusmais : mc4plus board connected to mais board (used for hands) -->
         <group name="PROPERTIES">
             <group name="ETHBOARD">
-                <param name="type">  ems4    </param> <!-- specifies type of ethernet board: it ca be  ems4  or mc4plus or mc2plus -->
+                <param name="type">  ems4    </param> <!-- specifies type of ethernet board: it ca be  ems4  or mc4plus or mc2plus or amc -->
             </group>          
 
-            <group name="CANBOARDS"> <!-- This group is present only if there is at least one can board (both motor control board or sensor board) -->
-                <param name="type">        foc       </param> <!-- tyepe of can board:   foc, mc4 and mais-->
+            <group name="CANBOARDS"> <!-- This group contains the properties of the used CAN boards. For ADVFOC we can have more than one type, e.g., amcbldc and amc2c -->
+                <param name="type">        foc       </param> <!-- type of can board: foc, mc4, amcbldc, amc2c -->
                 <group name="PROTOCOL"> <!-- can protol version of : if its values are 0.0 then no check on can protocol compatibility is performed -->
                     <param name="major">   1          </param>  <!--  allowed values are in range[0, 255] -->
                     <param name="minor">   1          </param>  <!--  allowed values are in range[0, 255] -->
@@ -33,27 +34,33 @@
                 <group name="ACTUATOR">                
                     <param name="type"> foc      </param> <!-- Its values are: 
                                                            * foc: if the motor is connected to the foc
+                                                           * advfoc: if the type is eomn_serv_MC_advfoc 
                                                            * mc4: if the motor is connected to the mc4 (can board)  
-                                                           * pwm: if the motor is directly connected to the ethernet board, like in case on mc4plus and mc2plus -->
+                                                           * pwm: if the motor is directly connected to the ethernet board, like in case on mc4plus and mc2plus 
+                                                           -->
                                          
-                                         
+                    <param name="onboard">  amc2c </param> <!-- It is used only if the type is eomn_serv_MC_advfoc and tells on which board type is the actuator       
+                                                            -->                    
                                          
                     <param name="port">  1:1:1  </param>   <!-- The value of this param depend on type (previous parameter):
-                                                            *if type=foc than port is a can port, where the syntax is : CANX:ADDR:INDEX, 
+                                                            * if type=foc the port is a can port, where the syntax is : CANX:ADDR:INDEX, 
                                                                                                                             * CANX is the can port of ethernet board (CAN1 or CAN2)
                                                                                                                             * ADDR: the address of can board [1, 14]
                                                                                                                             * index: indicates if the motor is the first or second for the can board [0, 1]
-                                                                                                                            
-                                                            * if type=mc4  than port is a can port, where the syntax is : CANX:ADDR:INDEX, 
+                                                            * if type=advfoc the port can be either a can or an icc port, where the syntax is  CANX:ADDR or ICCx:ADDR, where: 
+                                                                                                                            * CANX is the can port of ethernet board (CAN1 or CAN2)
+                                                                                                                            * ICCx is the ICC channel of dual core ETH boards (amc, amcfoc, etc.) and can be ICC1 or ICC2
+                                                                                                                            * ADDR: the address of can board [1, 14]                                                           
+                                                            * if type=mc4 the port is a can port, where the syntax is : CANX:ADDR:INDEX, 
                                                                                                                             * CANX is the can port of ethernet board (CAN1 or CAN2)
                                                                                                                             * ADDR: the address of can board [1, 14]
                                                                                                                             * index: indicates if the motor is the first or second for the can board [0, 1]
-                                                            * if type=pwm than port is CONN:Px, wherre Px in the conector on ethernet board. -->
+                                                            * if type=pwm the port is CONN:Px, wherre Px in the conector on ethernet board. -->
                 </group>
                 
                 <!-- the ENCODER1 and ENCODER2 are equivalent, so their parameter are the same meaning -->
                 <group name="ENCODER1">
-                    <param name="type">   aea     </param>  <!-- type of encoder. It can be: aea, roie, absanalog, mais, qenc, hallmotor, spichainof2, spichainof3, none (if no encoder is present) -->
+                    <param name="type">   aea     </param>  <!-- type of encoder. It can be: aea3, aea, roie, absanalog, mais, qenc, hallmotor, spichainof2, spichainof3, none (if no encoder is present) -->
                     <param name="port">   </param>          <!-- This param has the same meaning of ACTUATOR.port.
                                                                  The value of this param depend where the encoder is connected, if to ethenert board or can board
                                                                   *if it is connected to a can board than port is a can port, where the syntax is : CANX:ADDR:INDEX, 
@@ -61,7 +68,7 @@
                                                                                                                                   * ADDR: the address of can board [1, 14]
                                                                                                                                   * index: indicates if the motor is the first or second for the can board [0, 1]
                                                                                                                                   
-                                                                  * if it is connected to ethernet board than port is CONN:Px, wherre Px in the conector on ethernet board.  (SPI port or PWM port)
+                                                                  * if it is connected to ethernet board then port is CONN:Px, wherre Px in the connector on ethernet board.  (SPI port or PWM port)
                                                                   
                                                                   * if the enoder type is a mais, the possible values of port param is: MAIS:thumbproximal  MAIS:thumbdistal MAIS:indexproximal   MAIS:indexdistal    MAIS:mediumproximal MAIS:mediumdistal   MAIS:littlefingers -->
                     <param name="position">   0 </param> <!-- it can value  atjoint, at motor or none. -->
