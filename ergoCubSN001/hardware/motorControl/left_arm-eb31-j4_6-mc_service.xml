@@ -30,7 +30,7 @@
 
                 <group name="ACTUATOR">
                     <param name="type">             foc                 foc                 foc         </param>
-                    <param name="onboard">          amcbldc             amcbldc             amc2c       </param>
+                    <param name="onboard">          amcbldc             amcbldc             amcbldc     </param>
                     <param name="port">             CAN1:1              CAN1:2              CAN1:3      </param>
                 </group>
 
