@@ -25,7 +25,7 @@
         <param name="rotorPosMax">           0             0             0           </param>
     </group>
 
-    <group name="AMCBLDC">
+    <group name="ADVFOC">
         <param name="HasHallSensor">         1             1             1           </param>
         <param name="HasTempSensor">         0             0             0           </param>
         <param name="HasRotorEncoder">       0             0             0           </param>
