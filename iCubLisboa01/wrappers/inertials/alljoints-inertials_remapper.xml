@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="alljoints-inertials_remapper" type="multipleanalogsensorsremapper">
+        <param name="OrientationSensorsNames">
+            (head_imu_0 l_leg_ft l_foot_ft r_leg_ft r_foot_ft)
+        </param>
+        <action phase="startup" level="10" type="attach">
+            <paramlist name="networks">
+                <elem name="head_imu">  head-inertial </elem>
+                <elem name="l_upper_leg_imu"> left_leg-eb6-imu </elem>
+                <elem name="l_lower_leg_imu"> left_leg-eb7-imu </elem>
+                <elem name="r_upper_leg_imu"> right_leg-eb8-imu </elem>
+                <elem name="r_lower_leg_imu"> right_leg-eb9-imu </elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="20" type="detach" />
+    </device>
