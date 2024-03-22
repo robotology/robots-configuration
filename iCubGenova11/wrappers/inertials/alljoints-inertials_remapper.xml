@@ -6,7 +6,7 @@
         <param name="OrientationSensorsNames">
             (l_arm_ft r_arm_ft head_imu_0)
         </param>
-        <action phase="startup" level="10" type="attach">
+        <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <elem name="head_imu">  head-inertial </elem>
                 <elem name="left_arm_imu">  left_arm-eb1-imu </elem>
