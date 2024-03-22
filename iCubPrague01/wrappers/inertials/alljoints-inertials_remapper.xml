@@ -4,13 +4,15 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="alljoints-inertials_remapper" type="multipleanalogsensorsremapper">
         <param name="OrientationSensorsNames">
-            (l_arm_ft r_arm_ft head_imu_0)
+            (head_imu_0 l_leg_ft l_foot_ft r_leg_ft r_foot_ft)
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <elem name="head_imu">  head-inertial </elem>
-                <elem name="left_arm_imu">  left_arm-eb1-imu </elem>
-                <elem name="right_arm_imu">  right_arm-eb3-imu </elem>
+                <elem name="l_upper_leg_imu"> left_leg-eb6-imu </elem>
+                <elem name="l_lower_leg_imu"> left_leg-eb7-imu </elem>
+                <elem name="r_upper_leg_imu"> right_leg-eb8-imu </elem>
+                <elem name="r_lower_leg_imu"> right_leg-eb9-imu </elem>
             </paramlist>
         </action>
 
