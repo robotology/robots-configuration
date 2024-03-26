@@ -20,8 +20,8 @@
             <xi:include href="hardware/multienc/wrist-eb2-j0_2-multienc.xml" />
             <xi:include href="wrappers/multienc/wrist-multienc_wrapper.xml" />  
             
-            <!--IMERTIALS>
-            <xi:include href="hardware/inertials/wrist-eb2-j0_2-inertial.xml" />
+            <!--IMERTIALS-->
+            <xi:include href="hardware/inertials/wrist-eb3-j3_6-inertial.xml" />
             <xi:include href="wrappers/inertials/wrist-imu_wrapper.xml" />
      -->   
         
