@@ -29,10 +29,11 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       r_foot_rear_ft_acc    r_foot_rear_ft_gyro    r_foot_rear_ft_eul    r_foot_rear_ft_mag    r_foot_rear_ft_stat   r_foot_front_ft_acc    r_foot_front_ft_gyro    r_foot_front_ft_eul    r_foot_front_ft_mag    r_foot_front_ft_stat</param>
-                    <param name="type">     eoas_imu_acc             eoas_imu_gyr              eoas_imu_eul             eoas_imu_mag             eoas_imu_status   eoas_imu_acc             eoas_imu_gyr              eoas_imu_eul             eoas_imu_mag             eoas_imu_status</param>
-                    <param name="boardType">  strain2       strain2      strain2       strain2        strain2   strain2       strain2      strain2       strain2        strain2</param>
-                    <param name="location">  CAN2:13       CAN2:13      CAN2:13       CAN2:13        CAN2:13    CAN2:14       CAN2:14      CAN2:14       CAN2:14        CAN2:14</param>
+                    <param name="id">         r_foot_rear_ft_acc    r_foot_rear_ft_gyro    r_foot_rear_ft_eul    r_foot_rear_ft_mag    r_foot_rear_ft_stat   r_foot_front_ft_acc    r_foot_front_ft_gyro    r_foot_front_ft_eul    r_foot_front_ft_mag    r_foot_front_ft_stat  </param>
+                    <param name="sensorName"> r_foot_rear_ft_imu    r_foot_rear_ft_imu     r_foot_rear_ft_imu    r_foot_rear_ft_imu    r_foot_rear_ft_imu    r_foot_front_ft_imu    r_foot_front_ft_imu     r_foot_front_ft_imu    r_foot_front_ft_imu    r_foot_front_ft_imu   </param>
+                    <param name="type">       eoas_imu_acc          eoas_imu_gyr           eoas_imu_eul          eoas_imu_mag          eoas_imu_status       eoas_imu_acc           eoas_imu_gyr            eoas_imu_eul           eoas_imu_mag           eoas_imu_status       </param>
+                    <param name="boardType">  strain2               strain2                strain2               strain2               strain2               strain2                strain2                 strain2                strain2                strain2               </param>
+                    <param name="location">   CAN2:13               CAN2:13                CAN2:13               CAN2:13               CAN2:13               CAN2:14                CAN2:14                 CAN2:14                CAN2:14                CAN2:14               </param>
                 </group>
 
             </group>

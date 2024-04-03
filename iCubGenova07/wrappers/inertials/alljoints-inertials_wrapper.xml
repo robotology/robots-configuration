@@ -5,7 +5,7 @@
     <param name="period">      10                           </param>
     <param name="name"> /${portprefix}/alljoints/inertials   </param>
 
-    <action phase="startup" level="15" type="attach">
+    <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
             <elem name="FirstStrain"> alljoints-inertials_remapper </elem>
         </paramlist>

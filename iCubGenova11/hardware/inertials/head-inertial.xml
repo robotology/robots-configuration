@@ -30,15 +30,11 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">           rfeimu_acc      rfeimu_gyro     rfeimu_mag      rfeimu_eul      rfeimu_status
-                    </param>
-                    <param name="sensorName">   head_imu_0      head_imu_0      head_imu_0      head_imu_0      head_imu_0</param>
-                    <param name="type">         eoas_imu_acc    eoas_imu_gyr    eoas_imu_mag    eoas_imu_eul     eoas_imu_status
-                    </param>
-                    <param name="boardType">    rfe             rfe             rfe             rfe             rfe
-                    </param>
-                    <param name="location">     CAN1:1          CAN1:1          CAN1:1          CAN1:1          CAN1:1
-                    </param>
+                    <param name="id">           rfeimu_acc      rfeimu_gyro     rfeimu_mag      rfeimu_eul      rfeimu_status    </param>
+                    <param name="sensorName">   head_imu_0      head_imu_0      head_imu_0      head_imu_0      head_imu_0       </param>
+                    <param name="type">         eoas_imu_acc    eoas_imu_gyr    eoas_imu_mag    eoas_imu_eul    eoas_imu_status  </param>
+                    <param name="boardType">    rfe             rfe             rfe             rfe             rfe              </param>
+                    <param name="location">     CAN1:1          CAN1:1          CAN1:1          CAN1:1          CAN1:1           </param>
                 </group>
 
             </group>
