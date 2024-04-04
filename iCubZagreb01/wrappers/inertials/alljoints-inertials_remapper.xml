@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="alljoints-inertials_remapper" type="multipleanalogsensorsremapper">
         <param name="OrientationSensorsNames">
-            (head_imu_0 l_leg_ft l_foot_ft r_leg_ft r_foot_ft)
+            (head_imu_0 l_leg_ft_imu l_foot_ft_imu r_leg_ft_imu r_foot_ft_imu)
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
