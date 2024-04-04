@@ -30,15 +30,11 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">          r_arm_ft_acc    r_arm_ft_gyro   r_arm_ft_eul    r_arm_ft_mag    r_arm_ft_stat </param>
-
-                    <param name="sensorName">  r_arm_ft        r_arm_ft        r_arm_ft        r_arm_ft        r_arm_ft </param>
-
+                    <param name="id">          r_arm_ft_acc    r_arm_ft_gyro   r_arm_ft_eul    r_arm_ft_mag    r_arm_ft_stat   </param>
+                    <param name="sensorName">  r_arm_ft_imu    r_arm_ft_imu    r_arm_ft_imu    r_arm_ft_imu    r_arm_ft_imu    </param>
                     <param name="type">        eoas_imu_acc    eoas_imu_gyr    eoas_imu_mag    eoas_imu_eul    eoas_imu_status </param>
-
-                    <param name="boardType">   strain2         strain2         strain2         strain2         strain2  </param>
-
-                    <param name="location">    CAN2:13         CAN2:13         CAN2:13         CAN2:13         CAN2:13 </param>
+                    <param name="boardType">   strain2         strain2         strain2         strain2         strain2         </param>
+                    <param name="location">    CAN2:13         CAN2:13         CAN2:13         CAN2:13         CAN2:13         </param>
                 </group>
 
             </group>
