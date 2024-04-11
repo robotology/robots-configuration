@@ -104,6 +104,8 @@
     <xi:include href="wrappers/inertials/right_leg-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
 
     <!-- battery BAT -->
     <!-- <xi:include href="wrappers/battery/battery_bat.xml" />  -->

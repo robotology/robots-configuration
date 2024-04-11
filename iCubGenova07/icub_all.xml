@@ -64,6 +64,8 @@
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
 
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
