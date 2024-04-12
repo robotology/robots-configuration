@@ -71,6 +71,14 @@
     <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/waist-inertial.xml" />
     <xi:include href="hardware/inertials/waist-eb5-inertials.xml" /> -->
+    
+    <!-- FT SENSORS - IMU -->
+    <xi:include href="hardware/inertials/left_leg-eb6-IMU.xml" />
+    <xi:include href="hardware/inertials/left_leg-eb7-IMU.xml" />
+    <xi:include href="hardware/inertials/right_leg-eb8-IMU.xml" />
+    <xi:include href="hardware/inertials/right_leg-eb9-IMU.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
 
 
     <!-- ANALOG SENSOR MAIS -->

@@ -76,7 +76,6 @@
 
     <xi:include href="hardware/inertials/waist-inertial.xml" />
 
-
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
     <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" />
@@ -139,4 +138,3 @@
 
     </devices>
 </robot>
-
