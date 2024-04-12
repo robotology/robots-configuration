@@ -61,9 +61,6 @@
     <xi:include href="wrappers/inertials/waist-xsensmt-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/waist-eb5-inertials.xml" />
 
-    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
-
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
     <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" />

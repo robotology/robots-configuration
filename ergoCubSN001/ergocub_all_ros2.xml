@@ -98,8 +98,6 @@
     <xi:include href="hardware/inertials/head-inertial.xml" />
     <xi:include href="hardware/inertials/waist-inertial.xml" />
     <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
-    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
     
     <!-- BATTERY BAT -->
     <xi:include href="wrappers/battery/battery_bat.xml" /> 
