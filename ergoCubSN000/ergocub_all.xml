@@ -106,7 +106,9 @@
     <!-- FT SENSORS - IMU -->
     <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" />
     <xi:include href="hardware/inertials/right_arm-eb1-j0_1-inertial.xml" />
+    <xi:include href="hardware/inertials/left_leg-eb8-j0_3-inertial.xml" />
     <xi:include href="hardware/inertials/left_leg-eb9-j4_5-inertial.xml" />
+    <xi:include href="hardware/inertials/right_leg-eb6-j0_3-inertial.xml" />
     <xi:include href="hardware/inertials/right_leg-eb7-j4_5-inertial.xml" />
 
     <!-- FT SENSORS - IMU - MULTIPLE ANALOG SENSOR SERVERS -->
@@ -114,6 +116,8 @@
     <xi:include href="wrappers/inertials/right_arm-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
     
     <!-- battery BAT -->
     <xi:include href="wrappers/battery/battery_bat.xml" /> 
