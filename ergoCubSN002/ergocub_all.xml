@@ -121,13 +121,13 @@
     <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
     <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
     
-    <!-- BATTERY BAT 
+    <!-- BATTERY BAT -->
     <xi:include href="wrappers/battery/battery_bat.xml" /> 
-    <xi:include href="hardware/battery/battery_bat.xml" />  -->
+    <xi:include href="hardware/battery/battery_bat.xml" />  
     
-    <!-- BATTERY BMS 
+    <!-- BATTERY BMS -->
     <xi:include href="wrappers/battery/battery_bms.xml" /> 
-    <xi:include href="hardware/battery/battery_bms.xml" /> -->
+    <xi:include href="hardware/battery/battery_bms.xml" /> 
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" />
