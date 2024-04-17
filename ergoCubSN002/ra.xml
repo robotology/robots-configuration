@@ -11,11 +11,11 @@
 
     <!-- POS4 -->
     <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" /> 
-    <xi:include href="hardware/POS/right_hand-pos4.xml" />
+    <xi:include href="hardware/POS/right_hand-pos4.xml" /> 
 
-    <!-- POS2 -->
+    <!-- POS2 --> 
     <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" /> 
-    <xi:include href="hardware/POS/right_hand-pos2.xml" />
+    <xi:include href="hardware/POS/right_hand-pos2.xml" /> 
 
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />

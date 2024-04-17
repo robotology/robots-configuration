@@ -29,11 +29,11 @@
 		<param name="Verbose">              0                   0                0                  </param>
         <param name="AutoCalibration">      0                   0                0                  </param>
         <param name="HasHallSensor">        0                   0                0                  </param>
-        <param name="TemperatureSensorType">    NONE         NONE             NONE                  </param> <!-- if using set it to PT100. HasTempSensor is gonna be deprecated -->
+        <param name="TemperatureSensorType"> NONE              PT100             NONE               </param> <!-- if using set it to PT100. HasTempSensor is gonna be deprecated -->
         <param name="HasRotorEncoder">      1                   1                1                  </param>
         <param name="HasRotorEncoderIndex"> 1                   1                1                  </param>
         <param name="HasSpeedEncoder">      0                   0                0                  </param>
-        <param name="RotorIndexOffset">     155                 134              328                </param>
+        <param name="RotorIndexOffset">     188                 333              260                </param>
         <param name="MotorPoles">           8                   8                8                  </param>
    </group>
 
