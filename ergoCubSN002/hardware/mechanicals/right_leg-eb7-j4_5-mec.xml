@@ -17,10 +17,9 @@
         <param name="MotorType">                 "MOOG_C2900580"      "MOOG_C2900575"  </param>
         <param name="Verbose">   0   </param>
     </group>
-
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">          45.94         25.786   </param>
-        <param name="hardwareJntPosMin">         -45.94        -25.786   </param>
+        <param name="hardwareJntPosMax">          45.94         24.803   </param>
+        <param name="hardwareJntPosMin">         -46.012        -25.786   </param>
         <param name="rotorPosMin">            0             0     </param> 
         <param name="rotorPosMax">            0             0     </param>
     </group>
