@@ -17,7 +17,7 @@
   <param name="forceTorqueFilterCutoffInHz">3.0</param>
   <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
   <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
-  <param name="devicePeriodInSeconds">0.002</param>
+  <param name="devicePeriodInSeconds">0.001</param>
   <param name="useSkinForContacts">false</param>
   <param name="publishNetExternalWrenches">true</param>
   <!--<param name="assume_fixed">root_link</param>-->
