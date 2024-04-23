@@ -146,7 +146,7 @@
     <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" />
 
     <!-- ESTIMATORS -->
-    <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics" />
+    <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
 
   </devices>
 </robot>
