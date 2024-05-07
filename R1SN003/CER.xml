@@ -103,6 +103,7 @@
     
     <!-- BATTERY -->
     <xi:include href="wrappers/battery/r1battery.xml" /> 
+    <xi:include href="wrappers/battery/r1battery_nws_ros2.xml" />
     <xi:include href="hardware/battery/r1battery.xml" /> 
 
 </devices>
