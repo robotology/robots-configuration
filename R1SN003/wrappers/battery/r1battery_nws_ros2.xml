@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="r1_battery-nws_ros2" type="battery_nws_ros2">
+
+       <param name="period"> 1.0 </param>
+      <param name="node_name"> cer_battery_node_ros2 </param>
+      <param name="topic_name"> /battery_status </param>
+
+      <action phase="startup" level="5" type="attach">
+         <paramlist name="networks">
+            <elem name="r1battery"> r1battery </elem>
+         </paramlist>
+      </action>
+
+      <action phase="shutdown" level="5" type="detach" />
+  </device>
+
