@@ -127,4 +127,16 @@
         <param name="deadZone">             0.0049      0.0049      0.0049  </param>
     </group>
 
+    <group name="KALMAN_FILTER">
+        <!--   torso_roll torso_pitch torso_yaw  -->
+        <param name="kalmanFilterEnabled">          1 1 1             </param>
+        <param name="x0">                           0 0 0             </param>
+        <param name="x1">                           0 0 0             </param>
+        <param name="x2">                           0 0 0             </param>
+        <param name="Q0">                           0.0002531597161334673 0.0007201042934751647 0.00024269663493518243             </param>
+        <param name="Q1">                           0.022162080623563264 0.008036781145026697 0.006910957225514555             </param>
+        <param name="Q2">                           23.988142473281066 24.78174797120868 24.400697067208775             </param>
+        <param name="R">                            0.0007037200315177511 0.003027567532311685 0.013873538944015959             </param>
+        <param name="P0">                           0.021233364199551377 0.0017943885448779256 0.31787791884813843             </param>
+    </group>
 </device>
