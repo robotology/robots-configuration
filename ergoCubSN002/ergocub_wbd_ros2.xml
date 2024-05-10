@@ -93,7 +93,8 @@
     <xi:include href="wrappers/inertials/head-imuFilter.xml" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
-
+    <xi:include href="hardware/inertials/waist-inertial.xml" />
+    <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" />
     <!-- FT SENSORS - IMU -->
     <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" />
     <xi:include href="hardware/inertials/right_arm-eb1-j0_1-inertial.xml" />
