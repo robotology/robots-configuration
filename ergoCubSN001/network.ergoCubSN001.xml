@@ -336,7 +336,7 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='foc' name="foc.7`.2">
+        <board type='foc' name="foc.7.2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.7" canbus="1" canadr="2"  />
             <connected bus="CAN" />
@@ -400,27 +400,27 @@
 			<connected bus="ETH" prev="10.0.1.8"/>
         </board>
 
-        <board type='foc' name="foc.7.1">
+        <board type='foc' name="foc.9.1">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.7" canbus="1" canadr="1"  />
+            <ataddress ip="10.0.1.9" canbus="1" canadr="1"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='foc' name="foc.7`.2">
+        <board type='foc' name="foc.9.2">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.7" canbus="1" canadr="2"  />
+            <ataddress ip="10.0.1.9" canbus="1" canadr="2"  />
             <connected bus="CAN" />
         </board>
 
         <board type='strain2' name="strain2.13">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.7" canbus="2" canadr="13"  />
+            <ataddress ip="10.0.1.9" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
         <board type='strain2' name="strain2.14">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.7" canbus="2" canadr="14"  />
+            <ataddress ip="10.0.1.9" canbus="2" canadr="14"  />
             <connected bus="CAN" />
         </board>
 
