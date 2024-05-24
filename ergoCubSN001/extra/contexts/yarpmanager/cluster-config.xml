@@ -10,5 +10,6 @@
   <node display=":0" address="10.0.2.3">ergocub-head</node>
   <node display=":0" address="10.0.10.164" user="icub">icub-console-gui</node>
   <node>icub-virtualizer</node>
+  <node>ally</node>
 
 </cluster>
