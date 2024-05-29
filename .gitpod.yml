@@ -1,13 +1,4 @@
 image: ghcr.io/robotology/robots-configuration:latest
-github:
-  prebuilds:
-    master: false
-    branches: false
-    pullRequests: false
-    pullRequestsFromForks: false
-    addCheck: false
-    addComment: false
-    addBadge: false
 tasks:
 - name: Install
   command: |
