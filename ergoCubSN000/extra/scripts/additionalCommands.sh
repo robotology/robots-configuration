@@ -35,6 +35,9 @@ alias configurationSourceInstallDiff='bash ${ADDITIONAL_COMMANDS_DIR}/checkConfi
 
 alias test-speaker='speaker-test -t wav -c 1'
 
+# Alias for running whole-body-dynamics
+alias runYarpRobotInterface='YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface --config ergocub_wbd.xml'
+
 # Test if the microphone is working
 test-microphone() {
     arecord -vvv -f dat /dev/null
@@ -51,7 +54,8 @@ ${GREEN}connectToJoypad${NC} To reconnect the bluetooth connection of the robot 
 ${GREEN}test-speaker${NC} Test if the speaker is working.
 ${GREEN}test-microphone${NC} Test if the micorphone is working.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
-${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
+${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
+${GREEN}runYarpRobotInterface${NC} Run yarprobotinterface with whole-body-dynamics."'
 
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
