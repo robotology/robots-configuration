@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-# Get author and committer details
-AUTHOR_NAME=$(git log -1 --format="%an")
-AUTHOR_EMAIL=$(git log -1 --format="%ae")
-COMMITTER_NAME=$(git config user.name)
-COMMITTER_EMAIL=$(git config user.email)
+echo "Pre-commit hook running..."
+AUTHOR_IDENT=$(git var GIT_AUTHOR_IDENT | sed -r 's/( [^ ]+){2}$//')
+COMMITTER_IDENT=$(git var GIT_COMMITTER_IDENT | sed -r 's/( [^ ]+){2}$//')
 
-# Check for identity match
-if [ "$AUTHOR_NAME" = "$COMMITTER_NAME" ] || [ "$AUTHOR_EMAIL" = "$COMMITTER_EMAIL" ]; then
-  echo "Error: author information is missing."
+echo "Author identity: ${AUTHOR_IDENT}"
+echo "Committer identity: ${COMMITTER_IDENT}"
+
+if [ "${AUTHOR_IDENT}" == "${COMMITTER_IDENT}" ]; then
+  echo "Error! Author matched committer: this is not allowed."
   echo "Please, use the option --author=\"Name Surnaname <user@email.com>\" to specify your identity."
   exit 1  # Prevent the commit
 fi
