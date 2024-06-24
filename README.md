@@ -46,10 +46,7 @@ yarp-config robot --import $YARP_ROBOT_NAME
 
 You should end up finding the local copies under `~/.local/share/yarp/robots/$YARP_ROBOT_NAME`.
 
-## Contributing
-We accept contributions via [forks and pull-requests](https://guides.github.com/activities/forking).
-
-**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
+## [Contributing](./.github/CONTRIBUTING.md)
 
 ## License
 Material included here is Copyright of _iCub Facility - Istituto Italiano di
