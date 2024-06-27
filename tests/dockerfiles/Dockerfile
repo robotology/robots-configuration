@@ -106,7 +106,6 @@ RUN cd ${DEPENDENCIES_DIR} && \
           -DENABLE_icubmod_embObjSkin:BOOL=ON \
           -DENABLE_icubmod_embObjMultipleFTsensors:BOOL=ON \
           -DENABLE_icubmod_embObjPOS:BOOL=ON \
-          -DENABLE_icubmod_embObjPSC:BOOL=ON \
           -DENABLE_icubmod_embObjBattery:BOOL=ON \
           -DENABLE_icubmod_canBusFtSensor:BOOL=ON \
           -DENABLE_icubmod_xsensmtx:BOOL=ON \
@@ -145,7 +144,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
     cmake .. \
           -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
-    cmake --build . --target install 
+    cmake --build . --target install
 
 # Create user gitpod
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod && \
