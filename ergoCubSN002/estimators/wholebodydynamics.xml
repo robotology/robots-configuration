@@ -39,10 +39,10 @@
 
 
   <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
-    <!-- <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand_palm,l_hand_palm,root_link)</param> -->
-    <!-- <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand_palm,r_hand_palm,root_link)</param> -->
-    <!-- <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param> -->
-    <!-- <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param> -->
+    <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand_palm,l_hand_palm,root_link)</param>
+    <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand_palm,r_hand_palm,root_link)</param>
+    <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param>
+    <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param>
     <param name="/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front,l_sole,l_sole)</param>
     <param name="/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o">(l_foot_rear,l_sole,l_sole)</param>
     <param name="/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o">(r_foot_front,r_sole,r_sole)</param>
