@@ -1,13 +1,20 @@
 Technicalities underlying the fast-pace local workflow
 ======================================================
 
+## 🔲 Clone the fork locally
+- Clone the ``icub-tech-iit`` fork
+  ```console
+  git remote add icub-tech https://github.com/icub-tech-iit/robots-configuration.git
+  ```
+- Switch to the branch corresponding to the robot.
+
 ## 🔲 Set the default committer
 - Fine-grained PAT can be scoped to work on a specified organization and only on a specified repository.
 - To store credentials locally, one needs to issue the following, once the fork is cloned locally:
   ```console
   git config --local user.name "icub-tech-iit-bot"
   git config --local user.email "icub-tech@iit.it"
-  git config --local credential.https://github.com/icub-tech-iit/robots-configuration.helper store
+  git config --local credential.https://github.com/icub-tech-iit/robots-configuration.git.helper store
   ```
   ⚠️ Note the use of the option `--local` to avoid impacting Git globally on the system.
 - In order to push without password, the PAT needs to be provided. The credentials will be stored plainly under `~/.git-credentials` (the format is: `https://icub-tech-iit-bot:<PAT>@github`). No worries though, as this PAT has a very narrowed use and impacts a fork that is backed up anyhow by the upstream repository.
@@ -18,7 +25,7 @@ Technicalities underlying the fast-pace local workflow
 
 ## 🔲 Ensure that the author information is specified explicitly at commit time
 - We do rely on [Git hoooks](../.githooks).
-- After cloning the fork locally, issue:
+- Run the following command  from the `robots-configuration` root folder:
   ```console
   git config --local core.hooksPath .githooks/
   ```
