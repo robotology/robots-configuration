@@ -8,8 +8,8 @@
     <xi:include href="../../hardware/mechanicals/right_leg-eb7-j4_5-mec.xml" />
     <xi:include href="./right_leg-eb7-j4_5-mc_service.xml" />
 
-    <!-- joint name                                     ankle_pitch          ankle_roll         -->
-    <!-- joint number                                       0                   1               -->
+    <!-- joint name                            ankle_pitch          ankle_roll             -->
+    <!-- joint number                              0                   1                   -->
     <group name="LIMITS">
         <param name="jntPosMax">                  43                  23                   </param>
         <param name="jntPosMin">                 -43                 -23                   </param>
@@ -18,6 +18,13 @@
         <param name="motorPeakCurrents">           15000               15000               </param>
         <param name="motorOverloadCurrents">       30000               30000               </param>
         <param name="motorPwmLimit">               16000               16000               </param>
+<!-- Below are safe limits for the anke roll in case no temperature sensor is used. -->
+<!--
+        <param name="motorNominalCurrents">        10000               5000                </param>
+        <param name="motorPeakCurrents">           15000               10000               </param>
+        <param name="motorOverloadCurrents">       30000               15000               </param>
+        <param name="motorPwmLimit">               16000               18000               </param>
+-->
         <param name="hardwareTemperatureLimits">     110                110                </param>
         <param name="warningTemperatureLimits">      90                 90                 </param> <!-- keep commented until TemperatureSensorType is not ENABLE by setting it different from NONE-->
     </group>
