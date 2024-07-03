@@ -13,7 +13,7 @@
 
     <module>
         <name>yarprobotinterface</name>
-        <parameters>--config ergocub_wbd.xml</parameters>
+        <parameters></parameters>
         <node>ergocub-torso</node>
     </module>
 
