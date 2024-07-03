@@ -5,9 +5,9 @@
 
   <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
        this is usually the value of the DISPLAY variable when logged on -->
-  <node display=":1" address="10.0.2.4">ergocub001-lap</node>
-  <node address="10.0.2.2">ergocub-torso</node>
-  <node display=":0" address="10.0.2.3">ergocub-head</node>
+  <node display=":1" address="10.0.2.14">ergocub001-lap</node>
+  <node address="10.0.2.12">ergocub-torso</node>
+  <node display=":0" address="10.0.2.13">ergocub-head</node>
   <node display=":0" address="10.0.10.164" user="icub">icub-console-gui</node>
   <node>icub-virtualizer</node>
   <node>ally</node>
