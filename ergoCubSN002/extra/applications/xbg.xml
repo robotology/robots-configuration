@@ -23,13 +23,13 @@
     <connection>
         <output>/xbg/joints</output>
         <input>/walking-coordinator/humanState:i</input>
-        <protocol>tcp</protocol>
+        <protocol>fast_tcp</protocol>
     </connection>
 
     <connection>
         <output>/xbg/joypad</output>
         <input>/walking-coordinator/goal:i</input>
-        <protocol>tcp</protocol>
+        <protocol>fast_tcp</protocol>
     </connection>
 
 </application>
