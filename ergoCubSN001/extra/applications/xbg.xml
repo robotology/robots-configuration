@@ -20,13 +20,6 @@
 	<node>ergocub001-lap</node>
     </module>
 
-    <module>
-    	<workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/src/simulation/</workdir>
-        <name>python3 </name>
-        <parameters>demo.py -p XBGdv2_2 -m uvwoypt8 -s epoch7 -w 0.1</parameters>
-	    <node>ergocub002-lap</node>
-    </module>
-
     <connection>
         <output>/xbg/joints</output>
         <input>/walking-coordinator/humanState:i</input>
