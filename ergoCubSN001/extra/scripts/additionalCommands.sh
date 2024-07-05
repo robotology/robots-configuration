@@ -35,6 +35,8 @@ alias configurationSourceInstallDiff='bash ${ADDITIONAL_COMMANDS_DIR}/checkConfi
 
 alias test-speaker='speaker-test -t wav -c 1'
 
+alias rotate-screen='xrandr --display :0 -o inverted'
+
 # Test if the microphone is working
 test-microphone() {
     arecord -vvv -f dat /dev/null
@@ -49,6 +51,7 @@ ${GREEN}gotoRobotsConfigurationFolder${NC} Go to the source folder of the robot 
 ${GREEN}configurationSourceInstallDiff${NC} Performs a diff between the source and install configuration files. If there is no difference, it prints nothing.
 ${GREEN}connectToJoypad${NC} To reconnect the bluetooth connection of the robot joypad.
 ${GREEN}test-speaker${NC} Test if the speaker is working.
+${GREEN}rotate-screen${NC} Rotate the screen of the ergocub-head.
 ${GREEN}test-microphone${NC} Test if the micorphone is working.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
