@@ -20,9 +20,9 @@
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      300                 </param>
-                <param name="maxTimeOfDOactivity">      350                 </param>   
-                <param name="maxTimeOfTXactivity">      350                 </param>                
-                <param name="TXrateOfRegularROPs">      1                   </param> 
+                <param name="maxTimeOfDOactivity">      500                 </param>
+                <param name="maxTimeOfTXactivity">      200                 </param>
+                <param name="TXrateOfRegularROPs">      1                   </param>
             </group>              
         </group>                 
         
