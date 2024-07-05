@@ -4,26 +4,22 @@
 <robot name="iCubExpArmV3" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
     <!-- LEFT ARM-V3 -->
-    
-    <!-- MOTOR CONTROLLERS -->  
+
+    <!-- MOTOR CONTROLLERS -->
     <xi:include href="./hardware/motorControl/left_lower_arm-j4_7-mc.xml" />
-    <!--<xi:include href="./hardware/motorControl/left_lower_arm-j8_11-mc.xml" /> 
+    <!--<xi:include href="./hardware/motorControl/left_lower_arm-j8_11-mc.xml" />
     <xi:include href="./hardware/motorControl/left_lower_arm-j12_15-mc.xml" /> -->
 
-    <xi:include href="./wrappers/motorControl/left_arm-mc_wrapper_only_24.xml" /> 
+    <xi:include href="./wrappers/motorControl/left_arm-mc_wrapper_only_24.xml" />
 
     <!-- ANALOG SENSOR MAIS -->
-    <xi:include href="wrappers/MAIS/left_hand-mais_wrapper.xml" />  
-    <xi:include href="hardware/MAIS/left_hand-mais.xml" /> 
+    <xi:include href="wrappers/MAIS/left_hand-mais_wrapper.xml" />
+    <xi:include href="hardware/MAIS/left_hand-mais.xml" />
 
-    <!-- MULTIPLE ENCODERS 
-    <xi:include href="wrappers/multipleEncoders/left_hand-multi_enc_wrapper.xml" />  
-    <xi:include href="hardware/multipleEncoders/left_hand-multi_enc.xml" />  -->
-    
-    <!-- CALIBRATORS --> 
+    <!-- CALIBRATORS -->
     <!-- left-arm calibrator
     <xi:include href="./calibrators/left_arm-calib.xml" /> -->
-    
+
 </devices>
-</robot> 
+</robot>
 
