@@ -7,23 +7,19 @@
         </params>
 
         <devices>
-    
+
             <!-- WRIST MC -->
             <xi:include href="hardware/motorControl/wrist-eb2-j0_2-mc.xml" />
-            <xi:include href="wrappers/motorControl/wrist-mc_wrapper.xml" />  
-            <xi:include href="wrappers/motorControl/wrist-mc_remapper.xml" />  
-    
-            <!--  CALIBRATORS -->  
+            <xi:include href="wrappers/motorControl/wrist-mc_wrapper.xml" />
+            <xi:include href="wrappers/motorControl/wrist-mc_remapper.xml" />
+
+            <!--  CALIBRATORS -->
             <xi:include href="calibrators/wrist-calib.xml" />
-            
-            <!-- multienc  >
-            <xi:include href="hardware/multienc/wrist-eb2-j0_2-multienc.xml" />
-            <xi:include href="wrappers/multienc/wrist-multienc_wrapper.xml" />  
-            
+
             <!--IMERTIALS>
             <xi:include href="hardware/inertials/wrist-eb2-j0_2-inertial.xml" />
             <xi:include href="wrappers/inertials/wrist-imu_wrapper.xml" />
-     -->   
-        
+     -->
+
     </devices>
 </robot>
