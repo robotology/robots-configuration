@@ -34,7 +34,7 @@ Technicalities underlying the fast-pace local workflow
 > [!tip]
 > Instead of relying on the credential helper, one can resort to a simpler method:
 > ```console
-> git remote set-url origin https://x-access-token:${PAT}@github.com/icub-tech-iit/robots-configuration.git
+> git remote set-url icub-tech https://x-access-token:${PAT}@github.com/icub-tech-iit/robots-configuration.git
 > ```
 
 ## 🔲 Ensure that the author information is specified explicitly at commit time
