@@ -32,7 +32,7 @@
         <param name="AutoCalibration">       0             0        0   0  </param>
         <param name="Verbose">               0             0        0   0  </param>
         <param name="HasHallSensor">         0             0        0   0  </param>
-        <param name="HasTempSensor">         0             0        0   0  </param>
+        <param name="TemperatureSensorType"> NONE          NONE     NONE NONE   </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the hip roll. -->
         <param name="HasRotorEncoder">       1             1        1   1  </param>
         <param name="HasRotorEncoderIndex">  1             1        1   1  </param>
         <param name="HasSpeedEncoder">       0             0        0   0  </param>
