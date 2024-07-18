@@ -7,8 +7,8 @@ echo "Post-commit hook running..."
 
 # Check if the environment variable is set
 if [ -z "$ENV_VAR_VALUE" ]; then
-  echo "Environment variable YARP_ROBOT_NAME is not set. Exiting post-commit hook."
-  exit 1
+  echo "Environment variable YARP_ROBOT_NAME is not set. Skipping post-commit hook."
+  exit 0
 fi
 
 # Get the current commit message
