@@ -3,7 +3,7 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="alljoints-inertials_wrapper" type="multipleanalogsensorsserver">
     <param name="period">      10                           </param>
-    <param name="name"> /${portprefix}/alljoints/inertials   </param>
+    <param name="name"> /icub/alljoints/inertials   </param>
 
     <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
