@@ -25,7 +25,7 @@ COMMIT_MSG_FILE=$(mktemp)
 echo "[$ENV_VAR_VALUE] $CURRENT_COMMIT_MSG" > "$COMMIT_MSG_FILE"
 
 # Amend the commit with the new message
-git commit --amend -F "$COMMIT_MSG_FILE"
+git -c core.hooksPath=/dev/null commit --amend -F "$COMMIT_MSG_FILE"
 
 # Clean up
 rm "$COMMIT_MSG_FILE"
