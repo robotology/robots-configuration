@@ -33,6 +33,7 @@
         <param name="Verbose">               0             0        0       0  </param>
         <param name="HasHallSensor">         0             0        0       0  </param>
         <param name="TemperatureSensorType"> PT100       PT100    PT100  PT100 </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the hip roll. -->
+<!--        <param name="TemperatureSensorType"> NONE         NONE    NONE    NONE </param> -->
         <param name="HasRotorEncoder">       1             1        1       1  </param>
         <param name="HasRotorEncoderIndex">  1             1        1       1  </param>
         <param name="HasSpeedEncoder">       0             0        0       0  </param>

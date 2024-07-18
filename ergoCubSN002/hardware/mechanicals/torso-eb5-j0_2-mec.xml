@@ -30,6 +30,7 @@
         <param name="AutoCalibration">      0                   0                0                  </param>
         <param name="HasHallSensor">        0                   0                0                  </param>
         <param name="TemperatureSensorType"> NONE              PT100             NONE               </param> <!-- if using set it to PT100. HasTempSensor is gonna be deprecated -->
+<!--        <param name="TemperatureSensorType"> NONE              NONE              NONE               </param> -->
         <param name="HasRotorEncoder">      1                   1                1                  </param>
         <param name="HasRotorEncoderIndex"> 1                   1                1                  </param>
         <param name="HasSpeedEncoder">      0                   0                0                  </param>
