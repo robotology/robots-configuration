@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Retrieve the value of the environment variable
+ENV_VAR_VALUE=$(printenv YARP_ROBOT_NAME)
+
+echo "Post-commit hook running..."
+
+# Check if the environment variable is set
+if [ -z "$ENV_VAR_VALUE" ]; then
+  echo "Environment variable YARP_ROBOT_NAME is not set. Exiting post-commit hook."
+  exit 1
+fi
+
+# Get the current commit message
+CURRENT_COMMIT_MSG=$(git log -1 --pretty=%B)
+
+# Check if the commit message already starts with a [
+if [[ "$CURRENT_COMMIT_MSG" =~ ^\[ ]]; then
+  echo "Commit message already starts with '[', not modifying the commit message."
+  exit 0
+fi
+
+# Prepend the environment variable value to the commit message
+COMMIT_MSG_FILE=$(mktemp)
+echo "[$ENV_VAR_VALUE] $CURRENT_COMMIT_MSG" > "$COMMIT_MSG_FILE"
+
+# Amend the commit with the new message
+git commit --amend -F "$COMMIT_MSG_FILE"
+
+# Clean up
+rm "$COMMIT_MSG_FILE"
