@@ -42,6 +42,8 @@ test-microphone() {
     arecord -vvv -f dat /dev/null
 }
 
+alias trigger-click='DISPLAY=:0 xdotool click 1'
+
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 ## Alias for displaying info messages about the other aliases
@@ -53,6 +55,7 @@ ${GREEN}connectToJoypad${NC} To reconnect the bluetooth connection of the robot 
 ${GREEN}test-speaker${NC} Test if the speaker is working.
 ${GREEN}rotate-screen${NC} Rotate the screen of the ergocub-head.
 ${GREEN}test-microphone${NC} Test if the micorphone is working.
+${GREEN}trigger-click${NC} Emulates a mouse click to make banners disappear on the ergoCub screen.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
 
