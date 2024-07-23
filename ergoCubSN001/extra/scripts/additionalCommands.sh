@@ -44,6 +44,10 @@ test-microphone() {
 
 alias trigger-click='DISPLAY=:0 xdotool click 1'
 
+alias list-windows='DISPLAY=:0 wmctrl -lp'
+
+alias close-window='DISPLAY=:0 wmctrl -c'
+
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 ## Alias for displaying info messages about the other aliases
@@ -56,6 +60,8 @@ ${GREEN}test-speaker${NC} Test if the speaker is working.
 ${GREEN}rotate-screen${NC} Rotate the screen of the ergocub-head.
 ${GREEN}test-microphone${NC} Test if the micorphone is working.
 ${GREEN}trigger-click${NC} Emulates a mouse click to make banners disappear on the ergoCub screen.
+${GREEN}list-windows${NC} List the open windows. The first output is the window ID. The third value is the ID of the process owning the window.
+${GREEN}close-window${NC} Close a window given the Window ID.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
 
