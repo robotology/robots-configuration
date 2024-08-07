@@ -85,10 +85,10 @@
 -->
 
     <!--  FT -->
-    <xi:include href="hardware/FT/cer_left_shoulder-ems5-strain.xml" />
-    <xi:include href="hardware/FT/cer_right_shoulder-ems4-strain.xml" />
-    <xi:include href="wrappers/FT/cer_left_arm-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/cer_right_arm-FT_wrapper.xml" />
+    <xi:include href="hardware/FT/cer_left_shoulder-ems5-strain.xml" disabled_by="disable_ft"/>
+    <xi:include href="hardware/FT/cer_right_shoulder-ems4-strain.xml" disabled_by="disable_ft"/>
+    <xi:include href="wrappers/FT/cer_left_arm-FT_wrapper.xml" disabled_by="disable_ft"/>
+    <xi:include href="wrappers/FT/cer_right_arm-FT_wrapper.xml" disabled_by="disable_ft"/>
 
     <!--  ROS -->
     <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" enabled_by="enable_ros enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
