@@ -156,15 +156,16 @@
 
     <!-- kalman filter parameters - vel & acc estimation -->
     <group name="KALMAN_FILTER">
-        <param name="kalmanFilterEnabled">          1              1            1            1          </param>
-        <param name="x0">                           0              0            0            0          </param>
-        <param name="x1">                           0              0            0            0          </param>
-        <param name="x2">                           0              0            0            0          </param>
-        <param name="Q0">                           0.0001         0.0001       0.0001       0.0001     </param>
-        <param name="Q1">                           0.01           0.01         0.01         0.01       </param>
-        <param name="Q2">                           10             10           10           10         </param>
-        <param name="R">                            0.001          0.001        0.001        0.001      </param>
-        <param name="P0">                           0.000099       0.000099     0.000099     0.000099   </param>
+        <!--   r_hip_pitch r_hip_roll r_hip_yaw r_knee  -->
+        <param name="kalmanFilterEnabled">          1 1 1 1             </param>
+        <param name="x0">                           0 0 0 0             </param>
+        <param name="x1">                           0 0 0 0             </param>
+        <param name="x2">                           0 0 0 0             </param>
+        <param name="Q0">     8.694943028700485e-06   0.02299342017313577     5.975309759890053e-05      0.002794584633576471        </param>
+        <param name="Q1">     0.03153414073716983     0.01315420400220786     0.003715031081672895       18.189126215815822          </param>
+        <param name="Q2">     24.825700767466543      23.923499006956707      23.41797219027951          23.91783157509112           </param>
+        <param name="R">      1.0808050166041467e-05  0.0002582883448288      0.0007343297845812892      0.0010151704179573824       </param>
+        <param name="P0">     24.777097627155744      0.0003600638495648639   0.27246072693310697        24.964497730011175          </param>
     </group>
 
   </device>

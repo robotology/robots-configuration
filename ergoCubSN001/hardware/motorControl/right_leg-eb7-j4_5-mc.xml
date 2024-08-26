@@ -153,15 +153,16 @@
     </group>
 
   <group name="KALMAN_FILTER">
-        <param name="kalmanFilterEnabled">        1            1          </param>
-        <param name="x0">                         0            0          </param>
-        <param name="x1">                         0            0          </param>
-        <param name="x2">                         0            0          </param>
-        <param name="Q0">                         0.0001       0.0001     </param>
-        <param name="Q1">                         0.01         0.01       </param>
-        <param name="Q2">                         10           10         </param>
-        <param name="R">                          0.001        0.001      </param>
-        <param name="P0">                         0.000099     0.000099   </param>
+        <!--   r_ankle_pitch r_ankle_roll  -->
+        <param name="kalmanFilterEnabled">          1 1             </param>
+        <param name="x0">                           0 0             </param>
+        <param name="x1">                           0 0             </param>
+        <param name="x2">                           0 0             </param>
+        <param name="Q0">     5.131500755615346e-06   0.00016486542874413732   </param>
+        <param name="Q1">     0.0002394581180587153   5.9446836582113574e-05   </param>
+        <param name="Q2">     24.800150622078803      24.471668575822928       </param>
+        <param name="R">      2.0531857814388692e-05  0.003329749020748807     </param>
+        <param name="P0">     0.003343795067559131    0.38134537532629503      </param>
     </group>
     
 </device>
