@@ -21,7 +21,7 @@
 		<param name="calibration2">	          0                  0               0           0         0            0             0             0            0           0            0           0              0       </param>
 		<param name="calibration3">           0                  0               0           0         0            0             0             0            0           0            0           0              1       </param>
 		<param name="calibration4">           0                  0               0           0         0            0             0             0            0           0            32768       0              0       </param>
-		<param name="calibration5">           0                  0               0           0         0            0             0             0            6850        0            48450       37450          56800   </param>
+		<param name="calibration5">           0                  0               0           0         0            0             0             0            9100        0            48450       37450          56800   </param>
 		<param name="calibrationZero">        35                -15             -52          -5        0            0             0             0            0           0            0           0              0       </param>
 		<param name="calibrationDelta">       0                  0               0           0         0            0             0             0            0           0            0           0              0       </param>
 		<param name="startupPosition">        34                 50              -10         90        0.0          0.0           0.0           0.0          15.0        5.0          5.0         5.0            5.0     </param>
@@ -31,7 +31,7 @@
 	</group>
 
 <!--	<param name="CALIB_ORDER"> (4 5 6) (3) (2) (0) (1) (7 8) (9) (10 11 12) </param> --> <!-- Don't remove this line -->
-	<param name="CALIB_ORDER">  (4 5 6) (3) (2) (0) (1) (7 8) (9) (10 11 12) </param> 
+	<param name="CALIB_ORDER">  (4 5 6) (3) (2) (0) (1) (7 8) (10 11 12) </param> 
 
 	<action phase="startup" level="10" type="calibrate">
 		<param name="target">left_arm-mc_remapper</param>
