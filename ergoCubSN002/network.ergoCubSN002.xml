@@ -102,9 +102,9 @@
             <connected bus="CAN" />
         </board>
 
-	    <board type='mtb4' name="mtb4.1">
+	    <board type='mtb4c' name="mtb4.1">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.4" canbus="2" canadr="1"  />
+            <ataddress ip="10.0.1.4" canbus="2" canadr="2"  />
             <connected bus="CAN" />
         </board>
 
@@ -120,13 +120,13 @@
 			<connected bus="ETH" prev="10.0.1.23" next="10.0.1.31" />
         </board>
 
-        <board type='mtb4' name="mtb4.1">
+        <board type='mtb4c' name="mtb4.1">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.25" canbus="1" canadr="1"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb4' name="mtb4.2">
+        <board type='mtb4c' name="mtb4.2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.25" canbus="1" canadr="2"  />
             <connected bus="CAN" />
@@ -202,9 +202,9 @@
             <connected bus="CAN" />
         </board>
 
-	    <board type='mtb4' name="mtb4.1">
+	    <board type='mtb4c' name="mtb4.1">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.3" canbus="2" canadr="1"  />
+            <ataddress ip="10.0.1.3" canbus="2" canadr="2"  />
             <connected bus="CAN" />
         </board>
 
@@ -220,13 +220,13 @@
 			<connected bus="ETH" prev="10.0.1.22" next="10.0.1.30" />
         </board>
 
-        <board type='mtb4' name="mtb4.1">
+        <board type='mtb4c' name="mtb4.1">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="1"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb4' name="mtb4.2">
+        <board type='mtb4c' name="mtb4.2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="2"  />
             <connected bus="CAN" />
