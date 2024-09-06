@@ -20,6 +20,7 @@
         <param name="devicePeriodInSeconds">0.002</param>
         <param name="useSkinForContacts">false</param>
         <param name="publishNetExternalWrenches">true</param>
+        <param name="estimateJointVelocityAcceleration">false</param>  <!-- if true a kf will estimate the joint velocities and accelerations -->
 	<!--<param name="assume_fixed">root_link</param>-->
 	<group name="HW_USE_MAS_IMU">
 	    <param name="accelerometer">waist_imu_0</param>
