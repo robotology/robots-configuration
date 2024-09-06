@@ -1,6 +1,5 @@
 # Copyright: (C) 2016 iCub Facility - Istituto Italiano di Tecnologia
 # Authors: Ugo Pattacini
-# CopyPolicy: Released under the terms of the GNU GPL v2.0.
 
 cmake_minimum_required(VERSION 3.12)
 project(robots-configuration VERSION 2.6.3)
