@@ -20,10 +20,10 @@
     </module>
 
     <module>
-    	<workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/</workdir>
-        <name>bash</name>
-        <parameters>xbg.sh </parameters>
-	<node>ergocub001-lap</node>
+    	<workdir>C:\element_llm-task-planner\src\experiment_gui</workdir>
+        <name>python</name>
+        <parameters>experiment_gui.py</parameters>
+	<node>icub-virtualizer</node>
     </module>
 
     <module>
