@@ -14,7 +14,7 @@
         <param name="Gearbox_M2J">                  100.0               160.0         </param>
         <param name="Gearbox_E2J">                  64                       32         </param>
         <param name="useMotorSpeedFbk">              1                        1            </param>
-        <param name="MotorType">                 "MOOG_C2900580"      "MOOG_C2900575"  </param>
+        <param name="MotorType">                 "MOOG_C2900580"      "MOOG_C2900576"  </param>
         <param name="Verbose">   0   </param>
     </group>
     <group name="LIMITS">
