@@ -30,7 +30,7 @@
                 </group>
             
                 <group name="SENSORS">
-                    <param name="id">                   id_l_hand_mais      </param>
+                    <param name="id">                   l_hand_mais         </param>
                     <param name="type">                 eoas_mais           </param>
                     <param name="location">             CAN1:14             </param>
                 </group>
@@ -39,7 +39,7 @@
             
             <group name="SETTINGS"> 
                 <param name="acquisitionRate">          10                  </param>
-                <param name="enabledSensors">           id_l_hand_mais      </param>
+                <param name="enabledSensors">           l_hand_mais         </param>
             </group>
             
         </group>

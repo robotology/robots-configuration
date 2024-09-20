@@ -52,7 +52,7 @@
                 <group name="SENSORS">
                 
                     <!-- This param is the id of the sensor. its name should be defined in production -->
-                    <param name="id">                   id_l_hand_mais      </param>
+                    <param name="id">                   l_hand_mais         </param>
                     <!-- This param is the type of the sensor. it must be eoas_mais  -->
                     <param name="type">                 eoas_mais           </param>
                     <!-- This param is the address of the sensor. Its uses the format CANx:addr  -->
@@ -68,7 +68,7 @@
                 <!-- The acquisition rate of all the sensor in ms. values are in range [1, 255]. Use 10 -->
                 <param name="acquisitionRate">          10                  </param>
                 <!-- The list of the enabled sensors ... there is always one and is the value of PROPERTIES.PROPERTIES.SENSORS.id -->
-                <param name="enabledSensors">           id_l_hand_mais      </param>
+                <param name="enabledSensors">           l_hand_mais         </param>
                 
             </group>
             
