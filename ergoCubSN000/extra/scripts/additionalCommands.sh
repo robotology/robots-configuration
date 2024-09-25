@@ -36,7 +36,7 @@ alias configurationSourceInstallDiff='bash ${ADDITIONAL_COMMANDS_DIR}/checkConfi
 alias test-speaker='speaker-test -t wav -c 1'
 
 # Alias for running whole-body-dynamics
-alias runYarpRobotInterface='YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface --config ergocub_wbd.xml'
+alias runYarpRobotInterface='YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface'
 
 # Test if the microphone is working
 test-microphone() {
