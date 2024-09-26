@@ -20,10 +20,10 @@
     </module>
 
     <module>
-    	<workdir>C:\element_llm-task-planner\src\experiment_gui</workdir>
+        <workdir>C:\element_llm-task-planner\src\talkingllm</workdir>
         <name>python</name>
-        <parameters>experiment_gui.py</parameters>
-	<node>icub-virtualizer</node>
+        <parameters>llmGUI.py</parameters>
+	<node>llm-node</node>
     </module>
 
     <module>
@@ -32,7 +32,6 @@
         <parameters>xbg.sh </parameters>
 	<node>ergocub001-lap</node>
     </module>
-        
 
 
     <connection>
