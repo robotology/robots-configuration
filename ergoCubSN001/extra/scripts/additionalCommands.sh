@@ -48,6 +48,37 @@ alias list-windows='DISPLAY=:0 wmctrl -lp'
 
 alias close-window='DISPLAY=:0 wmctrl -c'
 
+function set-blf-webcam() {
+    # Check if the camera number is provided
+    if [ "$#" -ne 1 ]; then
+        echo "Usage: set-blf-webcam <camera_number>"
+        return 1
+    fi
+
+    CAMERA_NUMBER="$1"
+
+    # Construct the path to the XML file
+    XML_FILE="${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/bipedal-locomotion-framework/devices/YarpRobotLog\
+gerDevice/app/robots/${YARP_ROBOT_NAME}/blf-yarp-robot-logger-interfaces/webcams.xml"
+
+    # Check if the XML file exists
+    if [ ! -f "$XML_FILE" ]; then
+        echo "Error: File $XML_FILE does not exist."
+        return 1
+    fi
+
+    # Modify the camera number in the XML file
+    sed -i 's|\(<param name="camera">\)[^<]*\(</param>\)|\1'"$CAMERA_NUMBER"'\2|' "$XML_FILE"
+
+    echo "Camera number in $XML_FILE has been set to $CAMERA_NUMBER."
+
+    cd ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/build/src/bipedal-locomotion-framework
+    cmake . && cmake --build . --target install
+    cd -
+}
+
+
+
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 ## Alias for displaying info messages about the other aliases
@@ -63,9 +94,9 @@ ${GREEN}trigger-click${NC} Emulates a mouse click to make banners disappear on t
 ${GREEN}list-windows${NC} List the open windows. The first output is the window ID. The third value is the ID of the process owning the window.
 ${GREEN}close-window${NC} Close a window given the Window ID.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
-${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild."'
+${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
+${GREEN}set-blf-webcam${NC} Bash script that can be used to set the number of the blf webcam in the logger. IT WILL RECOMPILE AND INSTALL BLF."'
 
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
 fi
-
