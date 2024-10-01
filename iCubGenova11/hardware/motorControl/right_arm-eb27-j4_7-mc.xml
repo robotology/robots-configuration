@@ -12,8 +12,8 @@
     <!-- joint number                           0                   1                   2                   3                   -->
     <!-- joint name                             "r_wrist_prosup"    "r_wrist_pitch"     "r_wrist_yaw"       "r_hand_finger"     -->
     <group name="LIMITS">
-        <param name="jntPosMax">                 60                 25                  35                  60                  </param>
-        <param name="jntPosMin">                -60                 -70                 -15                 10                  </param>
+        <param name="jntPosMax">                 85                 25                  35                  60                  </param>
+        <param name="jntPosMin">                -85                 -70                 -15                 10                  </param>
         <param name="jntVelMax">                1000                1000                1000                1000                </param>
         <param name="motorOverloadCurrents">    10000               2000                2000                2000                </param>
         <param name="motorNominalCurrents">     5000                1000                1000                600                 </param>
@@ -92,5 +92,3 @@
     <!-- custom PIDs: end -->
 
 </device>
-
-
