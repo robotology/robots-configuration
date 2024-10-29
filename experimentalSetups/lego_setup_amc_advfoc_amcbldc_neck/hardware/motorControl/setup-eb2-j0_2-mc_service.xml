@@ -93,7 +93,7 @@
         <group name="PROPERTIES">
 
             <group name="ETHBOARD">
-                <param name="type">                 amc        </param>
+                <param name="type">                 amc                 </param>
             </group>
 
             <group name="CANBOARDS">
@@ -104,8 +104,8 @@
                 </group>
                 <group name="FIRMWARE">
                     <param name="major">            3       2           </param>
-                    <param name="minor">            1       0           </param>
-                    <param name="build">            0       10          </param>
+                    <param name="minor">            1       1           </param>
+                    <param name="build">            0       0          </param>
                 </group>
             </group>
            
@@ -113,9 +113,9 @@
             <group name="JOINTMAPPING">
 
                 <group name="ACTUATOR">
-                    <param name="type">             advfoc     </param>
-                    <param name="onboard">          amc2c               </param>
-                    <param name="port">             ICC1:3              </param>
+                    <param name="type">             advfoc              </param>
+                    <param name="onboard">          amcbldc               </param>
+                    <param name="port">             CAN1:1              </param>
                 </group>
 
                 <group name="ENCODER1">
