@@ -2,14 +2,14 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="setup-eb2-j0_2-mc" type="embObjMotionControl">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="setup-2motors_amc_amcbldc-mc" type="embObjMotionControl">
 
     <xi:include href="../../general.xml" />
-    <xi:include href="../../hardware/electronics/setup-eb2-j0_2-eln.xml" />
-    <xi:include href="../../hardware/mechanicals/setup-eb2-j0_2-mec.xml" />
-    <xi:include href="./setup-eb2-j0_2-mc_service.xml" />
+    <xi:include href="../../hardware/electronics/setup-2motors_amc_amcbldc-eln.xml" />
+    <xi:include href="../../hardware/mechanicals/setup-2motors_amc_amcbldc-mec.xml" />
+    <xi:include href="./setup-2motors_amc_amcbldc-mc_service.xml" />
 
-    <!-- joint number                           0                   -->
+    <!-- joint number                           0        1         -->
     <!-- joint name -->
     <group name="LIMITS">
         <param name="jntPosMax">                180     180                 </param>
@@ -45,18 +45,18 @@
     <!-- default position PID: begin -->
 
     <group name="POS_PID_DEFAULT">
-        <param name="controlLaw">             minjerk                </param>
-        <param name="outputType">             current                </param>
-        <param name="fbkControlUnits">        metric_units           </param>
-        <param name="outputControlUnits">     machine_units          </param>
-        <param name="kp">                    -30        -30           </param>
-        <param name="kd">                    -10        -10           </param>
-        <param name="ki">                    -100       -100          </param>
-        <param name="maxOutput">              500       500           </param>
-        <param name="maxInt">                 200       200           </param>
-        <param name="stictionUp">             0         0             </param>
-        <param name="stictionDown">           0         0             </param>
-        <param name="kff">                    0         0             </param>
+        <param name="controlLaw">             minjerk               </param>
+        <param name="outputType">             current               </param>
+        <param name="fbkControlUnits">        metric_units          </param>
+        <param name="outputControlUnits">     machine_units         </param>
+        <param name="kp">                    -30        -30         </param>
+        <param name="kd">                    -10        -10         </param>
+        <param name="ki">                    -100       -100        </param>
+        <param name="maxOutput">              500       500         </param>
+        <param name="maxInt">                 200       200         </param>
+        <param name="stictionUp">             0         0           </param>
+        <param name="stictionDown">           0         0           </param>
+        <param name="kff">                    0         0           </param>
     </group>
 
     <!-- default position PID: end -->
@@ -81,13 +81,13 @@
         <param name="controlLaw">           low_lev_speed            </param>
         <param name="fbkControlUnits">      machine_units            </param>
         <param name="outputControlUnits">   machine_units            </param>
-        <param name="kff">                  0       0                  </param>
-        <param name="kp">                   12      12                 </param>
-        <param name="kd">                   0       0                  </param>
-        <param name="ki">                   16      16                 </param>
-        <param name="shift">                10      10                 </param>
-        <param name="maxOutput">            32000   32000              </param>
-        <param name="maxInt">               32000   32000              </param>
+        <param name="kff">                  0       0                </param>
+        <param name="kp">                   12      12               </param>
+        <param name="kd">                   0       0                </param>
+        <param name="ki">                   16      16               </param>
+        <param name="shift">                10      10               </param>
+        <param name="maxOutput">            32000   32000            </param>
+        <param name="maxInt">               32000   32000            </param>
     </group>
 
     <!-- other default PIDs: end -->

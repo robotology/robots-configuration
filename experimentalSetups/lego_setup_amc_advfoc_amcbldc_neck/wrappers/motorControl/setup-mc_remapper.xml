@@ -8,7 +8,7 @@
     <param name="joints"> 2 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="FirstSetOfJoints">  setup-eb2-j0_2-mc    </elem>
+            <elem name="FirstSetOfJoints">  setup-2motors_amc_amcbldc-mc    </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />

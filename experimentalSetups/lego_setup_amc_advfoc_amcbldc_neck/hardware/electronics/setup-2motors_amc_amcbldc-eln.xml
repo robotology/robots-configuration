@@ -16,7 +16,7 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "setup-eb2-j0_2"        </param>
+            <param name="Name">                     "setup-2motors_amc_amcbldc"        </param>
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>

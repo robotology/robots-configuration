@@ -9,7 +9,7 @@
         <devices>
     
             <!-- LEGO SETUP MC -->
-            <xi:include href="hardware/motorControl/setup-eb2-j0_2-mc.xml" />
+            <xi:include href="hardware/motorControl/setup-2motors_amc_amcbldc-mc.xml" />
             <xi:include href="wrappers/motorControl/setup-mc_wrapper.xml"  />
             <xi:include href="wrappers/motorControl/setup-mc_remapper.xml" />
     
