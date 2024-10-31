@@ -1,5 +1,5 @@
-# Readme
-
+2-Motors Lego Setup
+===================
 This lego setup is built to command two motors using `yarprobotinterface` and `yarpmotorgui`.   
 One motor is controlled by an `amc` board and the other by an `amcbldc` board.
 
@@ -23,26 +23,25 @@ This setup works with motors that have a `Gearbox_M2J` of 196.
 All the parameters cited above can be changed in the configuration files.   
 This setup is configured to be used with `yarprobotinterface` and `yarpmotorgui`.
 
-# Assets 
-You can see pictures in `assets` for additional help to build the setup.
-![My Image](assets/Lego_setup_view.jpg)          
-**Figure 1** Setup view.
-
+# Build the setup 
+|  |
+| :---: |
+| ![](assets/Lego_setup_view.jpg) |
+| **Figure 1** Setup view |
+ 
 ## `Amc`
-![My Image](assets/Lego_setup_aea3_amc.jpg)          
-**Figure 2** Cable connection for `aea3` of the `amc`.
-
-![My Image](assets/Lego_setup_amc_motor.jpg)             
-**Figure 3** Cable connection for the motor of the `amc`.
-
-![My Image](assets/Lego_setup_amc_fault.jpg)             
-**Figure 4** Cable connection for the fault of the `amc`.
-
-
-
+|  |
+| :---: |
+| ![](assets/Lego_setup_aea3_amc.jpg) |
+| **Figure 2** Cable connection for `aea3` of the `amc` |
+| ![](assets/Lego_setup_amc_motor.jpg) |
+| **Figure 3** Cable connection for the motor of the `amc` |
+| ![](assets/Lego_setup_amc_fault.jpg) |
+| **Figure 4** Cable connection for the fault of the `amc` |
 ## `Amcbldc`
-![My Image](assets/Lego_setup_aea3_amcbldc.jpg)          
-**Figure 5** Cable connection for `aea3` of the `amcbldc`.
-
-![My Image](assets/Lego_setup_amcbldc_fault.jpg)             
-**Figure 6** Cable connection for the fault of the `amcbldc`.
+|  |
+| :---: |
+| ![](assets/Lego_setup_aea3_amcbldc.jpg) |
+| **Figure 5** Cable connection for `aea3` of the `amcbldc` |
+| ![](assets/Lego_setup_amcbldc_fault.jpg) |
+| **Figure 6** Cable connection for the fault of the `amcbldc` | 
