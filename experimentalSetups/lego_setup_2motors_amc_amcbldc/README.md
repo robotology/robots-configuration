@@ -25,24 +25,24 @@ This setup is configured to be used with `yarprobotinterface` and `yarpmotorgui`
 
 # Assets 
 You can see pictures in `assets` for additional help to build the setup.
-![My Image](assets/Lego_setup_view.jpg)
+![My Image](assets/Lego_setup_view.jpg) 
 **Figure 1** Setup view.
 
 ## `Amc`
-![My Image](assets/Lego_setup_aea3_amc.jpg)
+![My Image](assets/Lego_setup_aea3_amc.jpg) 
 **Figure 2** Cable connection for `aea3` of the `amc`.
 
-![My Image](assets/Lego_setup_amc_motor.jpg)
+![My Image](assets/Lego_setup_amc_motor.jpg) 
 **Figure 3** Cable connection for the motor of the `amc`.
 
-![My Image](assets/Lego_setup_amc_fault.jpg)
+![My Image](assets/Lego_setup_amc_fault.jpg) 
 **Figure 4** Cable connection for the fault of the `amc`.
 
 
 
 ## `Amcbldc`
-![My Image](assets/Lego_setup_aea3_amcbldc.jpg)
+![My Image](assets/Lego_setup_aea3_amcbldc.jpg) 
 **Figure 5** Cable connection for `aea3` of the `amcbldc`.
 
-![My Image](assets/Lego_setup_amcbldc_fault.jpg)
+![My Image](assets/Lego_setup_amcbldc_fault.jpg) 
 **Figure 6** Cable connection for the fault of the `amcbldc`.
