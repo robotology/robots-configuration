@@ -1,4 +1,5 @@
-# Readme
+2-Motors Lego Setup
+===================
 
 This lego setup is built to command two motors using `yarprobotinterface` and `yarpmotorgui`.   
 One motor is controlled by an `amc` board and the other by an `amcbldc` board.
