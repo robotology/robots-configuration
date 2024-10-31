@@ -1,7 +1,7 @@
-<cluster name="ergocub00" user="ergocub">
+<cluster name="ergocub000" user="ergocub">
 
   <!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
-  <nameserver namespace="/ergocub00" node="ergocub000-lap" type="yarpserver"> </nameserver>
+  <nameserver namespace="/ergocub000" node="ergocub000-lap" type="yarpserver"> </nameserver>
 
   <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
        this is usually the value of the DISPLAY variable when logged on -->
