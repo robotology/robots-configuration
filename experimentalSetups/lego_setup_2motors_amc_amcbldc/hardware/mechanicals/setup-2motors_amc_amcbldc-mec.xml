@@ -6,7 +6,7 @@
         <param name="MotioncontrolVersion">  6                          </param>
         <param name="Joints">                2                          </param>
         <param name="AxisMap">               0          1               </param>
-        <param name="AxisName">         "setup_yaw"     "setup_roll"    </param>
+        <param name="AxisName">         "setup_amcbldc"  "setup_amc"    </param>
         <param name="AxisType">         "revolute"      "revolute"      </param>
         <param name="Encoder">          182.044         182.044         </param>
         <param name="fullscalePWM">     32000           32000           </param>
