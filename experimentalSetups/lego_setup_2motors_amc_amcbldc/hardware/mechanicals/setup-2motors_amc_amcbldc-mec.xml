@@ -14,7 +14,7 @@
         <param name="Gearbox_M2J">     -196             -196            </param>    <!-- motor to joint -->
         <param name="Gearbox_E2J">      1               1               </param>    <!-- encoder to joint -->
         <param name="useMotorSpeedFbk"> 0               0               </param>
-        <param name="MotorType">        "BLL_MOOG"      "BBLL_MOOG"     </param>
+        <param name="MotorType">        "FAULHABER"      "FAULHABER"    </param>
         <param name="Verbose">          0               0               </param>
     </group>
 
