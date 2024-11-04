@@ -9,27 +9,27 @@
     <xi:include href="../../hardware/mechanicals/setup-2motors_amc_amcbldc-mec.xml" />
     <xi:include href="./setup-2motors_amc_amcbldc-mc_service.xml" />
 
-    <!-- joint number                           0        1         -->
-    <!-- joint name -->
+    <!-- joint number                           0                   1                   -->
+    <!-- joint name                             amcbldc             amc                 -->
     <group name="LIMITS">
-        <param name="jntPosMax">                180     180                 </param>
-        <param name="jntPosMin">                -180    -180                </param>
-        <param name="jntVelMax">                90      90                  </param>
-        <param name="motorNominalCurrents">     1000    1000                </param>
-        <param name="motorPeakCurrents">        1500    1500                </param>
-        <param name="motorOverloadCurrents">    2000    2000                </param>
-        <param name="hardwareTemperatureLimits"> 100    100                 </param>
-        <param name="warningTemperatureLimits">  85     85                  </param>
-        <param name="motorPwmLimit">            16000   16000               </param>
+        <param name="jntPosMax">                180                 180                 </param>
+        <param name="jntPosMin">                -180                -180                </param>
+        <param name="jntVelMax">                90                  90                  </param>
+        <param name="motorNominalCurrents">     1000                1000                </param>
+        <param name="motorPeakCurrents">        1500                1500                </param>
+        <param name="motorOverloadCurrents">    2000                2000                </param>
+        <param name="hardwareTemperatureLimits"> 100                100                 </param>
+        <param name="warningTemperatureLimits">  85                 85                  </param>
+        <param name="motorPwmLimit">            16000               16000               </param>
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity">                 100     100                 </param>
+        <param name="velocity">                 100                 100                 </param>
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                0       0                   </param>
-        <param name="damping">                  0       0                   </param>
+        <param name="stiffness">                0                   0                   </param>
+        <param name="damping">                  0                   0                   </param>
     </group>
 
     <group name="CONTROLS">
