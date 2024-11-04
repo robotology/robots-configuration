@@ -93,19 +93,19 @@
         <group name="PROPERTIES">
 
             <group name="ETHBOARD">
-                <param name="type">                 amc                 </param>
+                <param name="type">                 amc                     </param>
             </group>
 
             <group name="CANBOARDS">
-                <param name="type">                 amc2c   amcbldc     </param> 
+                <param name="type">                 amc2c       amcbldc     </param> 
                 <group name="PROTOCOL">
-                    <param name="major">            2       2           </param>
-                    <param name="minor">            0       0           </param>
+                    <param name="major">            2           2           </param>
+                    <param name="minor">            0           0           </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            3       2           </param>
-                    <param name="minor">            1       1           </param>
-                    <param name="build">            0       0           </param>
+                    <param name="major">            3           2           </param>
+                    <param name="minor">            1           1           </param>
+                    <param name="build">            0           0           </param>
                 </group>
             </group>
            
