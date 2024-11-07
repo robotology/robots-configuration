@@ -25,6 +25,14 @@
         <parameters>llmGUI.py</parameters>
 	<node>llm-node</node>
     </module>
+    
+    <module>
+    	<workdir>/usr/local/src/robot/ami/element_llm-task-planner/src/talkingllm</workdir>
+        <name>conda</name>
+        <parameters>run -n guienv python allyGUI.py</parameters>
+        <environment>PYTHONPATH=</environment>
+	<node>ergocub000-lap</node>
+    </module>
 
     <module>
     	<workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/</workdir>
