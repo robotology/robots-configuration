@@ -17,7 +17,7 @@
                     <param name="type">             eobrd_strain2           </param>
 
                     <group name="PROTOCOL">
-                        <param name="major">            2                   </param>
+                        <param name="major">            0                   </param>
                         <param name="minor">            0                   </param>
                     </group>
 
