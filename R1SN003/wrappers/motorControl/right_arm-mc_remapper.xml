@@ -6,8 +6,8 @@
     <param name="joints"> 13 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="right_arm_joints1"> right_arm-eb1-j0_1-mc    </elem>
-            <elem name="right_arm_joints2"> right_arm-eb3-j2_3-mc    </elem>        
+            <elem name="right_arm_joints1"> right_arm-eb5-j0_1-mc    </elem>
+            <elem name="right_arm_joints2"> right_arm-eb7-j2_3-mc    </elem>        
             <elem name="right_arm_joints3"> right_arm-eb30-j4_6-mc   </elem>
             <elem name="right_arm_joints4"> right_arm-eb22-j7_10-mc  </elem>
             <elem name="right_arm_joints5"> right_arm-eb24-j11_12-mc </elem> 

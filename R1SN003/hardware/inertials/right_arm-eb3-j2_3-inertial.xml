@@ -3,11 +3,11 @@
 
 
    
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb3-j2_3-inertial" type="embObjIMU">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb7-j2_3-inertial" type="embObjIMU">
     
         <xi:include href="../../general.xml" />     
 
-        <xi:include href="../../hardware/electronics/right_arm-eb3-j2_3-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb7-j2_3-eln.xml" />
         
         <group name="SERVICE">
         

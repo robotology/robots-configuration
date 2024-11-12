@@ -12,7 +12,7 @@
                 <!-- The name of the element can be any string (we use SetOfInertials to better express its nature).
                      Its value must match the device name in the corresponding body_part-jx_y-inertials.xml file
                      or in body_part-ebX-inertials.xml -->
-                <elem name="SetOfInertials">  right_arm-eb3-j2_3-inertial </elem>
+                <elem name="SetOfInertials">  right_arm-eb7-j2_3-inertial </elem>
             </paramlist>
         </action>
 

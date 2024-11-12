@@ -2,13 +2,13 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb3-j2_3-skin" type="embObjSkin">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb7-j2_3-skin" type="embObjSkin">
         <xi:include href="../../general.xml" />
  
-        <xi:include href="../../hardware/electronics/right_arm-eb3-j2_3-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb7-j2_3-eln.xml" />
         <group name="patches"><!--the PATCH number is actually the number of the CAN BUS used -->
             <param name="skinCanAddrsPatch2"> 2 </param> 
         </group>_
-        <xi:include href="./right_arm-eb3-j2_3-skinSpec.xml" /> 
+        <xi:include href="./right_arm-eb7-j2_3-skinSpec.xml" /> 
     </device>  
 

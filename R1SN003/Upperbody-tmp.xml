@@ -31,8 +31,8 @@
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" disabled_by="disable_right_arm" />
 
-    <xi:include href="hardware/motorControl/right_arm-eb1-j0_1-mc.xml" disabled_by="disable_right_arm" />
-    <xi:include href="hardware/motorControl/right_arm-eb3-j2_3-mc.xml" disabled_by="disable_right_arm" />
+    <xi:include href="hardware/motorControl/right_arm-eb5-j0_1-mc.xml" disabled_by="disable_right_arm" />
+    <xi:include href="hardware/motorControl/right_arm-eb7-j2_3-mc.xml" disabled_by="disable_right_arm" />
     <xi:include href="hardware/motorControl/right_arm-eb30-j4_6-mc.xml" disabled_by="disable_right_arm" />
     <xi:include href="hardware/motorControl/right_arm-eb22-j7_10-mc.xml" disabled_by="disable_right_arm" />
     <xi:include href="hardware/motorControl/right_arm-eb24-j11_12-mc.xml" disabled_by="disable_right_arm" />
@@ -44,7 +44,7 @@
 
     <!-- SKIN-->
 <!--<xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />
-    <xi:include href="hardware/skin/right_arm-eb3-j2_3-skin.xml" />
+    <xi:include href="hardware/skin/right_arm-eb7-j2_3-skin.xml" />
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/left_arm-eb4-j2_3-skin.xml" />
 -->
@@ -52,18 +52,18 @@
 <!-- IMU - MTB4 BOARDS
     <xi:include href="hardware/inertials/left_arm-eb4-j2_3-inertial.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/inertials/left_arm-inertials_wrapper.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/inertials/right_arm-eb3-j2_3-inertial.xml" disabled_by="disable_right_arm" />
+    <xi:include href="hardware/inertials/right_arm-eb7-j2_3-inertial.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/inertials/right_arm-inertials_wrapper.xml" disabled_by="disable_right_arm" /> -->
     
     <!--  FT -->
     <xi:include href="hardware/FT/left_arm-eb2-j0_1-strain.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/FT/right_arm-eb1-j0_1-strain.xml" disabled_by="disable_right_arm" />
+    <xi:include href="hardware/FT/right_arm-eb5-j0_1-strain.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" disabled_by="disable_right_arm" />
 
     <!-- FT SENSORS - IMU -->
     <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/inertials/right_arm-eb1-j0_1-inertial.xml" disabled_by="disable_right_arm" />
+    <xi:include href="hardware/inertials/right_arm-eb5-j0_1-inertial.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/inertials/left_arm-imu_wrapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/inertials/right_arm-imu_wrapper.xml" disabled_by="disable_right_arm" />
 

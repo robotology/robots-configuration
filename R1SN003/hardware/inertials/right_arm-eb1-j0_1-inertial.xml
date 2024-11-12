@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb1-j0_1-inertial" type="embObjIMU">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb5-j0_1-inertial" type="embObjIMU">
 
         <xi:include href="../../general.xml" />
 
-        <xi:include href="../../hardware/electronics/right_arm-eb1-j0_1-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb5-j0_1-eln.xml" />
 
         <group name="SERVICE">
 

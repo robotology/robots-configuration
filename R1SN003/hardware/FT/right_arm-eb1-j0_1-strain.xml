@@ -4,11 +4,11 @@
 
 
 
-    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb1-j0_1-strain" type="embObjMultipleFTsensors">
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb5-j0_1-strain" type="embObjMultipleFTsensors">
     
         <xi:include href="../../general.xml"/>
 
-        <xi:include href="../../hardware/electronics/right_arm-eb1-j0_1-eln.xml" />
+        <xi:include href="../../hardware/electronics/right_arm-eb5-j0_1-eln.xml" />
     
         <group name="SERVICE">
             
