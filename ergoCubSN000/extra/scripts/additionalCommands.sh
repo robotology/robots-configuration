@@ -59,8 +59,8 @@ ${GREEN}runYarpRobotInterface${NC} Run yarprobotinterface with whole-body-dynami
 
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
+  
+  # automatic terminator title
+  trap 'echo -ne "\033]2;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
 fi
-
-# automatic terminator title
-trap 'echo -ne "\033]2;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
 
