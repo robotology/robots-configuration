@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN002" build="1">
+
+    <group name="SERVICE">
+
+        <param name="type"> eomn_serv_MC_advfoc </param>
+
+        <group name="PROPERTIES">
+
+            <group name="ETHBOARD">
+                <param name="type">                 amc        </param>
+            </group>
+
+            <group name="CANBOARDS">
+                <param name="type">                 amcbldc     amc2c   </param>
+                <group name="PROTOCOL">
+                    <param name="major">            2           2       </param>
+                    <param name="minor">            0           0       </param>
+                </group>
+                <group name="FIRMWARE">
+                    <param name="major">            2           3       </param>
+                    <param name="minor">            1           1       </param>
+                    <param name="build">            0          0       </param>
+                </group>
+            </group>
+
+            <group name="JOINTMAPPING">
+
+                <group name="ACTUATOR">
+                    <param name="type">             advfoc              advfoc              advfoc      </param>
+                    <param name="onboard">          amcbldc             amcbldc             amc2c       </param>
+                    <param name="port">             CAN1:1              CAN1:2              CAN1:3      </param>
+                </group>
+
+                <group name="ENCODER1">
+                    <param name="type">             aea3                aea3                aea3        </param>
+                    <param name="port">             CONN:J5_X1          CONN:J5_X2          CONN:J5_X3  </param>
+                    <param name="position">         atjoint             atjoint             atjoint     </param>
+                    <param name="resolution">       16384               16384               16384       </param>
+                    <param name="tolerance">        0.4                 0.4                 0.4         </param>
+                </group>
+
+                <group name="ENCODER2">
+                    <param name="type">             none                none                none       </param>
+                    <param name="port">             CAN1:1              CAN1:2              CAN1:3     </param>
+                    <param name="position">         atmotor             atmotor             atmotor    </param>
+                    <param name="resolution">       0                   0                   0          </param>
+                    <param name="tolerance">        0                   0                   0          </param>
+                </group>
+
+            </group>
+
+        </group>
+
+    </group>
+
+</params>

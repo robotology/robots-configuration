@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb1-j0_1-inertial" type="embObjIMU">
+
+        <xi:include href="../../general.xml" />
+
+        <xi:include href="../../hardware/electronics/right_arm-eb1-j0_1-eln.xml" />
+
+        <group name="SERVICE">
+
+            <param name="type"> eomn_serv_AS_inertials3 </param>
+
+            <group name="PROPERTIES">
+
+                <group name="CANBOARDS">
+                    <param name="type">             eobrd_strain2           </param>
+
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                    </group>
+
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>
+                        <param name="minor">            0                   </param>
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+
+                <group name="SENSORS">
+                    <param name="id">         r_arm_ft_acc   r_arm_ft_gyro   r_arm_ft_eul   r_arm_ft_mag   r_arm_ft_stat    </param>
+                    <param name="sensorName"> r_arm_ft_imu   r_arm_ft_imu    r_arm_ft_imu   r_arm_ft_imu   r_arm_ft_imu     </param>
+                    <param name="type">       eoas_imu_acc   eoas_imu_gyr    eoas_imu_eul   eoas_imu_mag   eoas_imu_status  </param>
+                    <param name="boardType">  strain2        strain2         strain2        strain2        strain2          </param>
+                    <param name="location">   CAN2:13        CAN2:13         CAN2:13        CAN2:13        CAN2:13          </param>
+                </group>
+
+            </group>
+
+            <group name="SETTINGS">
+                <param name="acquisitionRate">      10      </param>
+                <param name="enabledSensors">       r_arm_ft_acc    r_arm_ft_gyro    r_arm_ft_eul    r_arm_ft_mag    r_arm_ft_stat </param>
+            </group>
+        </group>
+
+    </device>
