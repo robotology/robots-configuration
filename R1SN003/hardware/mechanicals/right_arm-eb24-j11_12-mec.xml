@@ -12,7 +12,7 @@
         <param name="AxisName">             "r_thumb_add"  "r_index_add"  </param>
         <param name="AxisType">             "revolute"                "revolute"               </param>
         <param name="Encoder">              182.044                   182.044                  </param>
-        <param name="fullscalePWM">         3360                      3360                     </param>
+        <param name="fullscalePWM">         1680                      1680                     </param>
         <param name="ampsToSensor">         1000.0                    1000.0                   </param>
         <param name="Gearbox_M2J">          159                       159                      </param>
         <param name="Gearbox_E2J">          1                         1                        </param>
