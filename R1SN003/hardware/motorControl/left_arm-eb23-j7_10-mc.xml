@@ -19,7 +19,7 @@
         <param name="motorOverloadCurrents">    2000                2000                2000                2000               </param>
         <param name="motorNominalCurrents">     1100                1100                1100                1100                </param>
         <param name="motorPeakCurrents">        1500                1500                1500                1500               </param>    
-        <param name="motorPwmLimit">            3360                3360                3360                3360               </param>
+        <param name="motorPwmLimit">            1680                1680                1680                1680               </param>
     </group>       
     
     <group name="TIMEOUTS">
@@ -51,7 +51,7 @@
         <param name="kp">                       -246        -246        -246        -246    </param>
         <param name="kd">                       0           0           0           0       </param>
         <param name="ki">                       -33         -33         -33         -33     </param>
-        <param name="maxOutput">                2700        2700        2700        2700    </param>
+        <param name="maxOutput">                1350        1350        1350        1350    </param>
         <param name="maxInt">                   1000        1000        1000        1000    </param>
         <param name="stictionUp">               0           0           0           0       </param>
         <param name="stictionDown">             0           0           0           0       </param>
