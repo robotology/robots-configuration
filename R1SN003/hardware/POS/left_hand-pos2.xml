@@ -12,7 +12,7 @@
         <group name="PROPERTIES">
 
             <group name="CANBOARDS">
-                <param name="type">                 eobrd_mtb4c           </param>
+                <param name="type">                 eobrd_mtb4c             </param>
 
                 <group name="PROTOCOL">
                     <param name="major">            2                       </param>
@@ -41,8 +41,8 @@
                     <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
                     <param name="type">             TYPE:decideg     TYPE:decideg          </param>
                     <param name="rotation">         ROT:zero         ROT:zero              </param>
-                    <param name="offset">           -98.0            -111.0                </param>
-                    <param name="invertDirection">  true            true                  </param>
+                    <param name="offset">           0                0                     </param>
+                    <param name="invertDirection">  false            false                 </param>
                 </group>
 
             </group>
