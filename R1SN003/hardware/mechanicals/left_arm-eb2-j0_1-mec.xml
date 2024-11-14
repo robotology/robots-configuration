@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN002" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="R1SN003" build="1">
     <group name="GENERAL">
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 2 </param> 
@@ -11,7 +11,7 @@
         <param name="Encoder">                  182.044             182.044             </param>
         <param name="fullscalePWM">             32000               32000               </param>
         <param name="ampsToSensor">             1000.0              1000.0              </param>
-        <param name="Gearbox_M2J">              100.00              100.00              </param>
+        <param name="Gearbox_M2J">              160.00              100.00              </param>
         <param name="Gearbox_E2J">              64                  64                  </param>
         <param name="useMotorSpeedFbk">         1                   1                   </param>
         <param name="MotorType">                "MOOG-BL-C2900576"  "MOOG-BL-C2900576"  </param>
@@ -30,11 +30,11 @@
 	<param name="Verbose">                      0                   0                   </param>
         <param name="AutoCalibration">          0                   0                   </param>
         <param name="HasHallSensor">            0                   0                   </param>
-        <param name="TemperatureSensorType">    PT100               PT100               </param> <!-- if using set it to PT100. HasTempSensor is gonna be deprecated -->
+        <param name="TemperatureSensorType">    NONE                NONE                </param> <!-- if using set it to PT100. HasTempSensor is gonna be deprecated -->
         <param name="HasRotorEncoder">          1                   1                   </param>
         <param name="HasRotorEncoderIndex">     1                   1                   </param>
         <param name="HasSpeedEncoder">          0                   0                   </param>
-        <param name="RotorIndexOffset">         0                   0                   </param>
+        <param name="RotorIndexOffset">         252                 318                 </param>
         <param name="MotorPoles">               8                   8                   </param>
     </group>
 

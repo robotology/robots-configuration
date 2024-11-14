@@ -3,7 +3,7 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-mc_nws_yarp" type="controlBoard_nws_yarp">
     <param name="period"> 0.001  </param>
-    <param name="name"> /ergocub/left_arm </param>
+    <param name="name"> /r1/left_arm </param>
     <action phase="startup" level="10" type="attach">
         <param name="device"> left_arm-mc_remapper </param>
     </action>

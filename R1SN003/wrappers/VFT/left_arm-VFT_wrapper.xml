@@ -13,7 +13,7 @@
          </paramlist>
 
         <param name="channels">       7                 </param>
-        <param name="name"> /ergocub/joint_vsens/left_arm:i </param>
+        <param name="name"> /r1/joint_vsens/left_arm:i </param>
 
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
@@ -26,6 +26,3 @@
 
         <action phase="shutdown" level="5" type="detach" />
     </device>
-
-
-

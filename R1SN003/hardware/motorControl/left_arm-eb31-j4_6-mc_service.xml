@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN002" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="R1SN003" build="1">
 
     <group name="SERVICE">
 

@@ -18,12 +18,12 @@
 
                <group name="ACTUATOR">                 
                     <param name="type">             pwm                 pwm                 </param>
-                    <param name="port">             CONN:P5             CONN:P2             </param>
+                    <param name="port">             CONN:P4P            CONN:P3P            </param>
                 </group>
                 
                 <!-- <group name="ENCODER1">  
                     <param name="type">             eomc_enc_aea        qenc                </param>  
-                    <param name="port">             CONN:P11            CONN:P2             </param>
+                    <param name="port">             CONN:P11            CONN:P3             </param>
                     <param name="position">         eomc_pos_atjoint    atmotor             </param> 
                     <param name="resolution">       4096                1000                </param>
                     <param name="numofnoisebits">   3                   0                   </param> 

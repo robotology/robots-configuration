@@ -5,20 +5,20 @@
 <devices>
 
     <!-- ODOMETRY -->
-    <xi:include href="hardware/odometry/odometry.xml" disabled_by="disable_odometry" />
+  <!--  <xi:include href="hardware/odometry/odometry.xml" disabled_by="disable_odometry" />
     <xi:include href="wrappers/odometry/odometry_nws_yarp.xml" disabled_by="disable_odometry" />
     <xi:include href="wrappers/odometry/odometry_nws_ros.xml" enabled_by="enable_ros" disabled_by="disable_odometry" />
-    <xi:include href="wrappers/odometry/odometry_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_odometry" />
+    <xi:include href="wrappers/odometry/odometry_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_odometry" /> -->
 
     <!-- LASER -->
-    <xi:include href="hardware/rpLidar/laserA3_hw_back.xml" disabled_by="disable_lidar" />
+ <!--   <xi:include href="hardware/rpLidar/laserA3_hw_back.xml" disabled_by="disable_lidar" />
     <xi:include href="wrappers/rpLidar/laser_back_nws_yarp.xml" disabled_by="disable_lidar" />
     <xi:include href="hardware/rpLidar/laserA3_hw_front.xml" disabled_by="disable_lidar" />
     <xi:include href="wrappers/rpLidar/laser_front_nws_yarp.xml" disabled_by="disable_lidar" />
     <xi:include href="hardware/rpLidar/laserA3_hw_double.xml" disabled_by="disable_lidar" />
     <xi:include href="wrappers/rpLidar/laser_double_nws_yarp.xml" disabled_by="disable_lidar" />
     <xi:include href="wrappers/rpLidar/laser_double_nws_ros.xml" enabled_by="enable_ros" disabled_by="disable_lidar" />
-    <xi:include href="wrappers/rpLidar/laser_double_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_lidar" />
+    <xi:include href="wrappers/rpLidar/laser_double_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_lidar" /> -->
 
     <!-- BASE -->
     <xi:include href="hardware/motorControl/cer_base-ems1-mc.xml" disabled_by="disable_base" />
@@ -91,30 +91,30 @@
     <xi:include href="wrappers/inertials/right_arm-inertials_wrapper.xml" disabled_by="disable_right_arm" /> -->
     
     <!--  FT -->
-    <xi:include href="hardware/FT/left_arm-eb2-j0_1-strain.xml" disabled_by="disable_left_arm" />
+   <!-- <xi:include href="hardware/FT/left_arm-eb2-j0_1-strain.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/FT/right_arm-eb5-j0_1-strain.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" disabled_by="disable_left_arm" />
-    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" disabled_by="disable_right_arm" />
+    <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" disabled_by="disable_right_arm" /> -->
 
     <!-- FT SENSORS - IMU -->
-    <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" disabled_by="disable_left_arm" />
+  <!--  <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/inertials/right_arm-eb5-j0_1-inertial.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/inertials/left_arm-imu_wrapper.xml" disabled_by="disable_left_arm" />
-    <xi:include href="wrappers/inertials/right_arm-imu_wrapper.xml" disabled_by="disable_right_arm" />
+    <xi:include href="wrappers/inertials/right_arm-imu_wrapper.xml" disabled_by="disable_right_arm" /> -->
 
     <!-- ROS2 Wrappers -->
    <!-- <xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" />
     <xi:include href="wrappers/FT/right_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_arm" /> -->
 
     <!--  ROS -->
-    <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" enabled_by="enable_ros enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
+   <!-- <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" enabled_by="enable_ros enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
     <xi:include href="wrappers/motorControl/cer_alljoints_ros_wrapper.xml" enabled_by="enable_ros" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
-    <xi:include href="wrappers/motorControl/cer_alljoints_ros2_wrapper.xml" enabled_by="enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
+    <xi:include href="wrappers/motorControl/cer_alljoints_ros2_wrapper.xml" enabled_by="enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/> -->
 
     <!-- BATTERY -->
-    <xi:include href="wrappers/battery/r1battery.xml" />
+ <!--   <xi:include href="wrappers/battery/r1battery.xml" />
     <xi:include href="wrappers/battery/r1battery_nws_ros2.xml" />
-    <xi:include href="hardware/battery/r1battery.xml" />
+    <xi:include href="hardware/battery/r1battery.xml" /> -->
 
 </devices>
 </robot>

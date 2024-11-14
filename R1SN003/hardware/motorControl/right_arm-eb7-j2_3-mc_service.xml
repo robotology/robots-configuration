@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN002" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="R1SN003" build="1">
 
     <group name="SERVICE">
         
@@ -37,7 +37,7 @@
                 
                 <group name="ENCODER1">  
                     <param name="type">             amo                 amo                 </param>  
-                    <param name="port">             CONN:P6             CONN:P8             </param>
+                    <param name="port">             CONN:P10            CONN:P8             </param>
                     <param name="position">         atjoint             atjoint             </param> 
                     <param name="resolution">      -16384              -16384               </param>
                     <param name="tolerance">        0.703               0.703               </param>  
