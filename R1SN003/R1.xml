@@ -25,25 +25,25 @@
     <xi:include href="wrappers/motorControl/cer_base-mc_remapper.xml" disabled_by="disable_base" />
     <xi:include href="wrappers/motorControl/cer_base-mc_wrapper.xml" disabled_by="disable_base" />
 
-    <!-- TORSO -->
+    <!-- TORSO 
     <xi:include href="hardware/motorControl/cer_torso-ems3-mc.xml" disabled_by="disable_torso" />
     <xi:include href="wrappers/motorControl/cer_torso_tripod-mc_remapper.xml" disabled_by="disable_torso" />
     <xi:include href="wrappers/motorControl/cer_torso_tripod-mc_wrapper.xml" disabled_by="disable_torso" />
     <xi:include href="hardware/motorControl/cer_torso_equivalent-mc.xml" disabled_by="disable_torso" />
     <xi:include href="wrappers/motorControl/cer_torso-mc_remapper.xml" disabled_by="disable_torso" />
-    <xi:include href="wrappers/motorControl/cer_torso-mc_wrapper.xml" disabled_by="disable_torso" />
+    <xi:include href="wrappers/motorControl/cer_torso-mc_wrapper.xml" disabled_by="disable_torso" /> -->
 
     <!-- POS4 -->
-    <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
+   <!-- <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
     <xi:include href="hardware/POS/right_hand-pos4.xml" disabled_by="disable_right_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" disabled_by="disable_left_hand" />
-    <xi:include href="hardware/POS/left_hand-pos4.xml" disabled_by="disable_left_hand" />
+    <xi:include href="hardware/POS/left_hand-pos4.xml" disabled_by="disable_left_hand" /> -->
 
     <!-- POS2 -->
-    <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" />
+    <!-- <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" />
     <xi:include href="hardware/POS/right_hand-pos2.xml" disabled_by="disable_right_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" disabled_by="disable_left_hand" />
-    <xi:include href="hardware/POS/left_hand-pos2.xml" disabled_by="disable_left_hand" />
+    <xi:include href="hardware/POS/left_hand-pos2.xml" disabled_by="disable_left_hand" /> -->
 
     <!-- LEFT ARM -->
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" disabled_by="disable_left_arm" />
@@ -51,9 +51,9 @@
 
     <xi:include href="hardware/motorControl/left_arm-eb2-j0_1-mc.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/motorControl/left_arm-eb4-j2_3-mc.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/motorControl/left_arm-eb31-j4_6-mc.xml" disabled_by="disable_left_arm" />
+   <!-- <xi:include href="hardware/motorControl/left_arm-eb31-j4_6-mc.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/motorControl/left_arm-eb25-j11_12-mc.xml" disabled_by="disable_left_arm" />
+    <xi:include href="hardware/motorControl/left_arm-eb25-j11_12-mc.xml" disabled_by="disable_left_arm" /> -->
 
     <!-- RIGHT ARM -->
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" disabled_by="disable_right_arm" />
@@ -61,9 +61,9 @@
 
     <xi:include href="hardware/motorControl/right_arm-eb5-j0_1-mc.xml" disabled_by="disable_right_arm" />
     <xi:include href="hardware/motorControl/right_arm-eb7-j2_3-mc.xml" disabled_by="disable_right_arm" />
-    <xi:include href="hardware/motorControl/right_arm-eb30-j4_6-mc.xml" disabled_by="disable_right_arm" />
+    <!-- <xi:include href="hardware/motorControl/right_arm-eb30-j4_6-mc.xml" disabled_by="disable_right_arm" />
     <xi:include href="hardware/motorControl/right_arm-eb22-j7_10-mc.xml" disabled_by="disable_right_arm" />
-    <xi:include href="hardware/motorControl/right_arm-eb24-j11_12-mc.xml" disabled_by="disable_right_arm" />
+    <xi:include href="hardware/motorControl/right_arm-eb24-j11_12-mc.xml" disabled_by="disable_right_arm" /> -->
 
     <!-- HEAD -->
     <xi:include href="hardware/motorControl/cer_head-mcp10-mc.xml" disabled_by="disable_head"/>
@@ -71,7 +71,7 @@
     <xi:include href="wrappers/motorControl/cer_head-mc_wrapper.xml" disabled_by="disable_head"/>
 
     <!--  CALIBRATORS -->
-    <xi:include href="calibrators/cer_torso-calib.xml" disabled_by="disable_torso"/>
+    <!-- <xi:include href="calibrators/cer_torso-calib.xml" disabled_by="disable_torso"/> -->
     <xi:include href="calibrators/cer_head-calib.xml" disabled_by="disable_head"/>
     <xi:include href="calibrators/cer_base-calib.xml" disabled_by="disable_base"/>
     <xi:include href="calibrators/left_arm-calib.xml" disabled_by="disable_left_arm" />
