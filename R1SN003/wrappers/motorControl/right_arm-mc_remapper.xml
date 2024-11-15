@@ -2,12 +2,15 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-mc_remapper" type="controlboardremapper">
-    <param name="axesNames">(r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow)</param>
-    <param name="joints"> 4 </param>
+    <param name="axesNames">(r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,r_wrist_yaw,r_wrist_roll,r_wrist_pitch,r_thumb_add,r_thumb_oc,r_index_add,r_index_oc,r_middle_oc,r_ring_pinky_oc)</param>
+    <param name="joints"> 13 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="right_arm_joints1"> right_arm-eb5-j0_1-mc    </elem>
             <elem name="right_arm_joints2"> right_arm-eb7-j2_3-mc    </elem>        
+            <elem name="right_arm_joints3"> right_arm-eb30-j4_6-mc   </elem>
+            <elem name="right_arm_joints4"> right_arm-eb22-j7_10-mc  </elem>
+            <elem name="right_arm_joints5"> right_arm-eb24-j11_12-mc </elem> 
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />
