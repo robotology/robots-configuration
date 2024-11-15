@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-imu_wrapper" type="multipleanalogsensorsserver">
         <param name="period">       10                  </param>
-        <param name="name">     /r1/right_arm/imu  </param>
+        <param name="name">     /cer/right_arm/imu  </param>
 
 
         <action phase="startup" level="5" type="attach">

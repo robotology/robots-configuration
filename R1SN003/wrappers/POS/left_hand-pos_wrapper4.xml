@@ -3,7 +3,7 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_as_wrapper4" type="analogServer">
     <param name="period">   10  				         </param>
-    <param name="name">     /r1/left_hand/POS4:o    </param>
+    <param name="name">     /cer/left_hand/POS4:o    </param>
 
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
