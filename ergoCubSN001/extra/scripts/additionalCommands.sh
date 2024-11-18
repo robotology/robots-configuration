@@ -48,6 +48,10 @@ alias list-windows='DISPLAY=:0 wmctrl -lp'
 
 alias close-window='DISPLAY=:0 wmctrl -c'
 
+_WIFI_INTERFACE=`iw dev | awk '$1=="Interface"{print $2}'`
+alias disable-wifi-powersave="sudo iw dev ${_WIFI_INTERFACE} set power_save off"
+unset _WIFI_INTERFACE
+
 function set-blf-webcam() {
     # Check if the camera number is provided
     if [ "$#" -ne 1 ]; then
@@ -78,7 +82,6 @@ gerDevice/app/robots/${YARP_ROBOT_NAME}/blf-yarp-robot-logger-interfaces/webcams
 }
 
 
-
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 ## Alias for displaying info messages about the other aliases
@@ -95,6 +98,7 @@ ${GREEN}list-windows${NC} List the open windows. The first output is the window 
 ${GREEN}close-window${NC} Close a window given the Window ID.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
+${GREEN}disable-wifi-powersave${NC} Disable the WiFi powersave.
 ${GREEN}set-blf-webcam${NC} Bash script that can be used to set the number of the blf webcam in the logger. IT WILL RECOMPILE AND INSTALL BLF."'
 
 if [ "$PS1" ]; then
