@@ -12,13 +12,13 @@
     <!-- joint number                           0                   1                   -->
     <!-- joint name                             neck-pitch          neck-roll           -->
     <group name="LIMITS">
-        <param name="jntPosMax">                +20                 +18                 </param><!-- using mechanical limits -2 -->
+        <param name="jntPosMax">                +20                 +18                 </param> <!-- using mechanical limits -2 -->
         <param name="jntPosMin">                -28                 -18                 </param>
         <param name="jntVelMax">                50                  50                  </param>
         <param name="motorNominalCurrents">     1000                1000                </param>
         <param name="motorPeakCurrents">        2000                2000                </param>
         <param name="motorOverloadCurrents">    2100                2100                </param>
-        <param name="motorPwmLimit">            16000               16000               </param> <!-- using test value -->
+        <param name="motorPwmLimit">            16000               16000               </param> 
     </group>
 
     <group name="TIMEOUTS">
