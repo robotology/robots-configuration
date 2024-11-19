@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="neck-mc_wrapper" type="controlBoard_nws_yarp">
         <param name="period"> 0.01  </param>
-        <param name="name"> /nfa/neck_mc </param>
+        <param name="name"> /setup/neck_mc </param>
         <action phase="startup" level="10" type="attach">
             <param name="device"> neck-mc_remapper </param>
         </action>
