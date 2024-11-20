@@ -5,7 +5,7 @@ It consists of two motors and can be actuated using `yarprobotinterface` and `ya
 One motor is controlled by an `amc` board and the other by an `amcbldc` board.
 All the parameters to move the setup are in the configuration files.   
 
-### Photo of the setup 
+### Picture of the setup 
 
 |  |
 | :---: |
