@@ -38,19 +38,20 @@
         <param name="stiffness">                0.1  0.1                 0.1       0.1       </param>
         <param name="damping">                  0.05 0.05                0.05      0.05      </param>
     </group>
-	
-	<group name="LUGRE">
-		<param name="Km">         -1     -1     -1     -1       </param>
-		<!-- <param name="Km">     4.3    4.3    4.3    4.3     </param> -->
-		<param name="Kw">          0.045  0.045  0.045  0.045   </param>
-		<param name="S0">          2.5    2.5    2.5    2.5     </param>
-		<param name="S1">          0      0      0      0       </param>
-		<param name="Vth">         5      5      5      5       </param>
-		<param name="Fc_pos">      3.3    3.3    3.3    3.3     </param>
-		<param name="Fc_neg">      3.3    3.3    3.3    3.3     </param>
-		<param name="Fs_pos">      7      7      7      7       </param>
-		<param name="Fs_neg">      7      7      7      7       </param>
-	</group>
+    
+    <!--
+    <group name="LUGRE">
+        <param name="Km">          4.3    4.3    4.3    4.3     </param>
+        <param name="Kw">          0.045  0.045  0.045  0.045   </param>
+        <param name="S0">          2.5    2.5    2.5    2.5     </param>
+        <param name="S1">          0      0      0      0       </param>
+        <param name="Vth">         5      5      5      5       </param>
+        <param name="Fc_pos">      3.3    3.3    3.3    3.3     </param>
+        <param name="Fc_neg">      3.3    3.3    3.3    3.3     </param>
+        <param name="Fs_pos">      7      7      7      7       </param>
+        <param name="Fs_neg">      7      7      7      7       </param>
+    </group>
+    -->
 
     <group name="CONTROLS">
         <param name="positionControl">       POS_PID_DEFAULT       POS_PID_DEFAULT       POS_PID_DEFAULT       POS_PID_DEFAULT     </param>
@@ -65,7 +66,7 @@
     <!-- default position PID: begin -->
 
     <group name="POS_PID_DEFAULT">
-	    <param name="controlLaw">           minjerk             </param>
+        <param name="controlLaw">           minjerk             </param>
         <param name="outputType">           pwm                 </param>
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>

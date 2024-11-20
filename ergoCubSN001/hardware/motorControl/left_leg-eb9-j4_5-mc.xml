@@ -38,6 +38,20 @@
         <param name="damping">                  0.05    0.05                               </param>
     </group>
 
+    <!--
+    <group name="LUGRE">
+        <param name="Km">          4.3    4.3    </param> 
+        <param name="Kw">          0.045  0.045  </param>
+        <param name="S0">          2.5    2.5    </param>
+        <param name="S1">          0      0      </param>
+        <param name="Vth">         5      5      </param>
+        <param name="Fc_pos">      3.3    3.3    </param>
+        <param name="Fc_neg">      3.3    3.3    </param>
+        <param name="Fs_pos">      7      7      </param>
+        <param name="Fs_neg">      7      7      </param>
+    </group>
+    -->
+
 	<group name="LUGRE">
 		<param name="Km">         -1     -1      </param>
 		<!-- <param name="Km">     4.3    4.3    </param> -->
