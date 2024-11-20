@@ -1,5 +1,6 @@
 2 Joints Neck Setup
 ===================
+
 This setup is a prototype of the neck that will be mounted on `iCub` and `ergoCub`.          
 It consists of two motors and can be actuated using `yarprobotinterface` and `yarpmotorgui`.   
 One motor is controlled by an `amc` board and the other by an `amcbldc` board.
