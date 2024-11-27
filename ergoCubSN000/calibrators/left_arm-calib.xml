@@ -17,7 +17,7 @@
 	</group>
 	<group name="CALIBRATION">
 		<param name="calibrationType">        10                 10              10          10         12           12            12            12           14          12           14          14             14       </param>
-		<param name="calibration1">           4000               -3000           -3000       4000       17565        8161          21461         0            300         0            300         300            300      </param>
+		<param name="calibration1">           4000               -3000           -3000       4000       1127         24927         7183         0            300         0            300         300            300      </param>
 		<param name="calibration2">	          0                  0               0           0          0            0             0             0            0           0            0           0              0        </param>
 		<param name="calibration3">           0                  0               0           0          0            0             0             0            1           0            0           0              1        </param>
 		<param name="calibration4">           0                  0               0           0          0            0             0             0            32768       0            0           0              0        </param>
@@ -31,7 +31,7 @@
 	</group>
 
 <!--	<param name="CALIB_ORDER"> (4 5 6) (3) (2) (0) (1) (7 8) (9) (10 11 12) </param> --> <!-- Don't remove this line -->
-	<param name="CALIB_ORDER"> (3) (2) (0) (1) (7 8) (10 11 12) </param> 
+	<param name="CALIB_ORDER"> (4 5 6) (3) (2) (0) (1) (7 8) (10 11 12) </param> 
 
 	<action phase="startup" level="10" type="calibrate">
 		<param name="target">left_arm-mc_remapper</param>
