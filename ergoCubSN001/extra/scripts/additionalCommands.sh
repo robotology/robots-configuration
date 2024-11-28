@@ -35,6 +35,9 @@ alias configurationSourceInstallDiff='bash ${ADDITIONAL_COMMANDS_DIR}/checkConfi
 
 alias test-speaker='speaker-test -t wav -c 1'
 
+# Alias for running whole-body-dynamics
+alias runYarpRobotInterface='YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface'
+
 alias rotate-screen='xrandr --display :0 -o inverted'
 
 # Test if the microphone is working
@@ -99,8 +102,12 @@ ${GREEN}close-window${NC} Close a window given the Window ID.
 ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
 ${GREEN}disable-wifi-powersave${NC} Disable the WiFi powersave.
-${GREEN}set-blf-webcam${NC} Bash script that can be used to set the number of the blf webcam in the logger. IT WILL RECOMPILE AND INSTALL BLF."'
+${GREEN}set-blf-webcam${NC} Bash script that can be used to set the number of the blf webcam in the logger. IT WILL RECOMPILE AND INSTALL BLF.
+${GREEN}runYarpRobotInterface${NC} Run yarprobotinterface with whole-body-dynamics."'
 
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
+
+  # automatic terminator title
+  trap 'echo -ne "\033]2;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
 fi
