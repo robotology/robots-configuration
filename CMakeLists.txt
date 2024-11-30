@@ -2,7 +2,7 @@
 # Authors: Ugo Pattacini
 
 cmake_minimum_required(VERSION 3.12)
-project(robots-configuration VERSION 2.6.3)
+project(robots-configuration VERSION 2.7.0)
 
 find_package(YCM REQUIRED)
 find_package(YARP REQUIRED)
