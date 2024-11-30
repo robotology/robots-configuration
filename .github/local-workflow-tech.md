@@ -7,7 +7,7 @@ Technicalities underlying the fast-pace local workflow
   - Restricts updates.
   - Restricts deletions.
   - Blocks force pushes.
-- Disable the option `Automatically delete head branches `.
+- Disable the option `Automatically delete head branches`.
 
 ## 🔲 Clone the fork locally
 - Clone the `icub-tech-iit` fork:
@@ -42,8 +42,3 @@ Technicalities underlying the fast-pace local workflow
   ```console
   git config --local core.hooksPath .githooks/
   ```
-
-## 🔲 Detect conflicts at push time and notify PIC
-
-> [!note]
-> To be still developed.
