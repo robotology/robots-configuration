@@ -41,8 +41,8 @@
                     <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
                     <param name="type">             TYPE:decideg     TYPE:decideg          </param>
                     <param name="rotation">         ROT:zero         ROT:zero              </param>
-                    <param name="offset">           0                0                     </param>
-                    <param name="invertDirection">  false            false                 </param>
+                    <param name="offset">           -170             -30                   </param>
+                    <param name="invertDirection">  true             true                  </param>
                 </group>
 
             </group>
