@@ -1,0 +1,50 @@
+<application>
+    <name>xbgTwoRobots</name>
+       
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters>--config realsense2.xml</parameters>
+	    <node>ergocub001-head</node>
+    </module>
+    <module>
+    	<name>ergoCubEmotions</name>
+    	<parameters>--context ergoCubEmotions --from config.ini --portprefix /ergocub001</parameters>
+    	<node>ergocub001-head</node>
+    </module>
+    <module>
+        <name>WalkingModule</name>
+        <parameters>--from dcm_walking_autonomous.ini</parameters>
+	    <node>ergocub001-torso</node>
+    </module>   
+    <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
+        <name>python</name>
+        <parameters>allyGUI.py </parameters>
+	    <node>llm-node</node>
+    </module>
+     <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
+        <name>python</name>
+        <parameters>llmGUI.py</parameters>
+	    <node>llm-node</node>
+    </module>
+    <module>
+    	<workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/</workdir>
+        <name>bash</name>
+        <parameters>xbgTwoRobots.sh </parameters>
+	    <node>localhost</node>
+    </module>
+
+    <connection>
+        <output>/xbg001/joypad</output>
+        <input>/walking-coordinator-001/goal:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>    
+    <connection>
+        <output>/xbg001/joints</output>
+        <input>/walking-coordinator-001/humanState:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+  
+
+</application>
