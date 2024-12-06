@@ -113,7 +113,7 @@
         <param name="outputControlUnits">  machine_units </param> <!-- dutycycle_percent  or machine_units(raw values). Recommended value: dutycycle_percent -->
         <param name="kp">           0   </param>   <!-- Proportional part of the PID control loop [expressed in pwm_raw/Nm]                                  -->
         <param name="kd">           0   </param>   <!-- Derivative part of the PID control loop [expressed in pwm_raw/(Nm/sec)]                              -->
-        <param name="ki">           0   </param>   <!-- Integral part of the PID control loop [expressed in pwm_raw/(Nm*sec)]                                -->
+        <param name="ki">           0   </param>   <!-- Integral part of the PID control loop [expressed in   pwm_raw/(Nm*sec)]                                -->
         <param name="maxOutput">    0   </param>   <!-- Limit on PID output [expressed in PWM raw units]                                                     -->
         <param name="maxInt">       0   </param>   <!-- Anti-windup limit on PID integral part [expressed in PWM raw units]                                  -->
         <param name="ko">           0   </param>   <!-- Openloop output [expressed in PWM raw units]                                -->
@@ -132,6 +132,18 @@
     <group name="IMPEDANCE">
         <param name="stiffness">   1   </param> <!-- stiffness values. If torque control pid has metric_units, measurament units is [Nm/degree]  else raw value  -->
         <param name="damping">     1   </param> <!-- damping values. If torque control pid has metric_units, measurament units is [Nm/(degree/sec)]  else raw value -->
+    </group>
+    
+    <group name="LUGRE">
+        <param name="Km">       0 </param> <!-- motor torque constant [Nm/A]                        --> 
+        <param name="Kw">       0 </param> <!-- joint viscous friction coefficient [Nm/(rad/s)]     -->
+        <param name="S0">       0 </param> <!-- LuGre model hysteresis stiffness [Nm/rad]           -->
+        <param name="S1">       0 </param> <!-- LuGre model hysteresis damping [Nm/(rad/s)]         -->
+        <param name="Vth">      0 </param> <!-- Stribeck friction velocity threshold [rad/s]        -->
+        <param name="Fc_pos">   0 </param> <!-- Coulomb friction constant (positive rotation) [Nm]  --> 
+        <param name="Fc_neg">   0 </param> <!-- Coulomb friction constant (negative rotation) [Nm]  -->
+        <param name="Fs_pos">   0 </param> <!-- Stribeck friction constant (positive rotation) [Nm] --> 
+        <param name="Fs_neg">   0 </param> <!-- Stribeck friction constant (negative rotation) [Nm] --> 
     </group>
 
     <!--MY_CUR_CONTROL and MY_SPEED_CONTROL control groups have to be used only with 2FOC boards -->
