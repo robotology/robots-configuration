@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="ankle-setup-rawval_nws_yarp" type="rawValuesPublisherServer">
+    <param name="name"> /ankleSetupTelemetry/raw_data </param>
+    <param name="period"> 2 </param>
+    <action phase="startup" level="10" type="attach">
+        <paramlist name="networks">
+            <elem name="device"> ankle-setup-mc </elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="15" type="detach" />
+</device>
