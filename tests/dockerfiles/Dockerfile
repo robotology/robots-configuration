@@ -92,26 +92,11 @@ RUN cd ${DEPENDENCIES_DIR} && \
 # icub-main
 RUN cd ${DEPENDENCIES_DIR} && \
     cd icub-main && mkdir -p build && cd build && \
-    cmake .. \
+    cmake --preset robot .. \
           -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install \
           -DBUILD_SHARED_LIBS:BOOL=OFF \
-          -DICUB_USE_icub_firmware_shared:BOOL=ON \
-          -DENABLE_icubmod_embObjFTsensor:BOOL=ON \
-          -DENABLE_icubmod_embObjIMU:BOOL=ON \
-          -DENABLE_icubmod_embObjInertials:BOOL=ON \
-          -DENABLE_icubmod_embObjMais:BOOL=ON \
-          -DENABLE_icubmod_embObjMotionControl:BOOL=ON \
-          -DENABLE_icubmod_embObjBattery:BOOL=ON \
-          -DENABLE_icubmod_embObjSkin:BOOL=ON \
-          -DENABLE_icubmod_embObjMultipleFTsensors:BOOL=ON \
-          -DENABLE_icubmod_embObjPOS:BOOL=ON \
-          -DENABLE_icubmod_embObjBattery:BOOL=ON \
-          -DENABLE_icubmod_canBusFtSensor:BOOL=ON \
-          -DENABLE_icubmod_xsensmtx:BOOL=ON \
-          -DENABLE_icubmod_skinWrapper:BOOL=ON \
-          -DENABLE_icubmod_parametricCalibratorEth:BOOL=ON \
-          -DENABLE_icubmod_cartesiancontrollerserver:BOOL=ON && \
+          -DENABLE_icubmod_xsensmtx:BOOL=ON && \
     cmake --build . --config Release --target install
 
 # navigation
