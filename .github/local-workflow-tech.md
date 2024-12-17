@@ -51,7 +51,7 @@ but rather a separate `robots-configuration` available at `/usr/local/src/robot/
 * To permit to clone a fresh new robotology-superbuild, without the need to manually perform the local repository configuration as described in the previous section,
 * To permit to easily share the used `robots-configuration` to other `robotology-superbuild`, that for example are part of a different environment or a different container.
 
-The steps necessary to swithc to use an external robots-configuration given an existing robotology-superbuild setup are the following:
+The steps necessary to switch to use an external robots-configuration given an existing robotology-superbuild setup are the following:
 
 ## 🔲 Disable robots-configuration from the superbuild
 
