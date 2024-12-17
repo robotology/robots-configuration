@@ -42,3 +42,56 @@ Technicalities underlying the fast-pace local workflow
   ```console
   git config --local core.hooksPath .githooks/
   ```
+
+Use an external robots-configuration separately from the robotology-superbuild
+==================================================================
+
+In some `ergoCubSN???` setups, the `robots-configuration` used by the robot is not the one downloaded by the robotology-superbuild (that would be found at `/usr/local/src/robot/robotology-superbuild/src/robots-configuration`),
+but rather a separate `robots-configuration` available at `/usr/local/src/robot/robots-configuration`. This is done for two reasons:
+* To permit to clone a fresh new robotology-superbuild, without the need to manually perform the local repository configuration as described in the previous section,
+* To permit to easily share the used `robots-configuration` to other `robotology-superbuild`, that for example are part of a different environment or a different container.
+
+The steps necessary to switch to use an external robots-configuration given an existing robotology-superbuild setup are the following:
+
+## 🔲 Disable robots-configuration from the superbuild
+
+First of all, pass the [`-ROBOTOLOGY_SKIP_ROBOTS_CONFIGURATION:BOOL=ON`](https://github.com/robotology/robotology-superbuild/pull/1775) CMake option to all the robotology-superbuild that should use the external `robots-configuration`.
+
+If the `robotology-superbuild` was already built once, remember to first uninstall and then delete the existing robots-configuration repository to avoid confusion.
+
+In particular uninstall with:
+
+~~~
+cd /usr/local/src/robot/robotology-superbuild/build/src/robots-configuration
+make uninstall
+~~~
+
+and delete any `robots-configuration` folder with:
+
+~~~
+cd /usr/local/src/robot/robotology-superbuild
+rm -rf /usr/local/src/robot/robotology-superbuild/src/robots-configuration
+rm -rf /usr/local/src/robot/robotology-superbuild/build/src/robots-configuration
+~~~
+
+## 🔲 Clone, install and ensure that external robots-configuration is visible
+
+
+~~~
+cd /usr/local/src/robot
+git clone  https://github.com/robots-configuration/robots-configuration.git
+cd robots-configuration
+~~~
+
+At this point, follow the configuration steps documented in the earlier section. Then, install the repo without dependencies, using the `nodeps` CMake preset:
+
+~~~
+cmake --preset nodeps
+cmake --install build
+~~~
+
+After you did all of this, to ensure that the installed files are found by YARP, add the following line to the `.bashrc_iCub` of the robot:
+
+~~~
+export YARP_DATA_DIRS=$YARP_DATA_DIRS:/usr/local/src/robot/robots-configuration/build/install/share/ICUBcontrib
+~~~
