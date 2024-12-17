@@ -27,4 +27,4 @@ jobs:
     - name: Install
       run: |
         cd build
-        cmake --install ./build
+        cmake --install .
