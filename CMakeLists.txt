@@ -4,20 +4,40 @@
 cmake_minimum_required(VERSION 3.12)
 project(robots-configuration VERSION 2.7.0)
 
-find_package(YCM REQUIRED)
-find_package(YARP REQUIRED)
-find_package(ICUBcontrib REQUIRED)
-
-list(APPEND CMAKE_MODULE_PATH ${ICUBCONTRIB_MODULE_PATH})
-include(ICUBcontribOptions)
-include(ICUBcontribHelpers)
-
+option(BUILD_WITHOUT_DEPENDENCIES "If enabled, permit to install robots-configuration without any dependency on YCM, YARP or ICUBcontrib" OFF)
 option(INSTALL_ALL_ROBOTS "Enable installation of all robots" OFF)
 set(ROBOT_NAME "$ENV{YARP_ROBOT_NAME}" CACHE PATH "Name of your robot")
 set(ROBOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${ROBOT_NAME}")
 option(BUILD_TESTING "If ON compile tests" OFF)
 
-icubcontrib_set_default_prefix()
+
+if(NOT BUILD_WITHOUT_DEPENDENCIES)
+    find_package(YCM REQUIRED)
+    find_package(YARP REQUIRED)
+    find_package(ICUBcontrib REQUIRED)
+
+    list(APPEND CMAKE_MODULE_PATH ${ICUBCONTRIB_MODULE_PATH})
+    include(ICUBcontribOptions)
+    include(ICUBcontribHelpers)
+    icubcontrib_set_default_prefix()
+else()
+    if(BUILD_TESTING)
+        message(FATAL_ERROR "BUILD_TESTING=ON requires BUILD_WITHOUT_DEPENDENCIES=OFF")
+    endif()
+
+    # If we do not have dependencies, we just need to define yarp_install as a simple redirect
+    # to CMake's builtin install
+    function(yarp_install)
+        install(${ARGN})
+    endfunction()
+
+    # The only use of ICUBContrib beside setting the default install prefix is to
+    # set ICUBCONTRIB_ROBOTS_INSTALL_DIR
+    include(GNUInstallDirs)
+    # CMAKE_INSTALL_DATAROOTDIR is just a fancy (and platform independent) way to refer to share,
+    # see https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html
+    set(ICUBCONTRIB_ROBOTS_INSTALL_DIR "${CMAKE_INSTALL_DATAROOTDIR}/ICUBcontrib/robots")
+endif()
 
 if(UNIX)
     find_program(BASH_PROGRAM bash)
@@ -111,4 +131,6 @@ else()
     endif()
 endif()
 
-icubcontrib_add_uninstall_target()
+if(NOT BUILD_WITHOUT_DEPENDENCIES)
+    icubcontrib_add_uninstall_target()
+endif()
