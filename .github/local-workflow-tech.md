@@ -46,7 +46,7 @@ Technicalities underlying the fast-pace local workflow
 Use an external robots-configuration separately from the robotology-superbuild
 ==================================================================
 
-In some `ergoCubSN???` setups, the `robots-configuration` configured used by the robot is not the one downloaded by the robotology-superbuild and that can be found at `/usr/local/src/robot/robotology-superbuild/src/robots-configuration`,
+In some `ergoCubSN???` setups, the `robots-configuration` used by the robot is not the one downloaded by the robotology-superbuild (that would be found at `/usr/local/src/robot/robotology-superbuild/src/robots-configuration`),
 but rather a separate `robots-configuration` available at `/usr/local/src/robot/robots-configuration`. This is done for two reasons:
 * To permit to clone a fresh new robotology-superbuild, without the need to manually perform the local repository configuration as described in the previous section,
 * To permit to easily share the used `robots-configuration` to other `robotology-superbuild`, that for example are part of a different environment or a different container.
