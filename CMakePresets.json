@@ -1,0 +1,38 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 22,
+      "patch": 1
+    },
+    "configurePresets": [
+      {
+        "name": "default",
+        "displayName": "Default Configuration",
+        "binaryDir": "${sourceDir}/build",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Release"
+        }
+      },
+      {
+        "name": "nodeps",
+        "inherits": "default",
+        "displayName": "Configuration that does not depend on YARP, ICUBContrib or YCM",
+        "installDir": "${sourceDir}/build/install",
+        "cacheVariables": {
+          "INSTALL_ALL_ROBOTS": "ON",
+          "BUILD_WITHOUT_DEPENDENCIES": "ON"
+        }
+      }
+    ],
+    "buildPresets": [
+      {
+        "name": "default",
+        "configurePreset": "default"
+      },
+      {
+        "name": "nodeps",
+        "configurePreset": "nodeps"
+      }
+    ]
+}
