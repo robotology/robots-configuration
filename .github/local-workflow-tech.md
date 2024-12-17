@@ -57,10 +57,21 @@ The steps necessary to swithc to use an external robots-configuration given an e
 
 First of all, pass the [`-ROBOTOLOGY_SKIP_ROBOTS_CONFIGURATION:BOOL=ON`](https://github.com/robotology/robotology-superbuild/pull/1775) CMake option to all the robotology-superbuild that should use the external `robots-configuration`.
 
-If the `robotology-superbuild` was already built once, remember to remove the existing robots-configuration repository to avoid confusion:
+If the `robotology-superbuild` was already built once, remember to first uninstall and then delete the existing robots-configuration repository to avoid confusion.
+
+In particular uninstall with:
 
 ~~~
+cd /usr/local/src/robot/robotology-superbuild/build/src/robots-configuration
+make uninstall
+~~~
+
+and delete any `robots-configuration` folder with:
+
+~~~
+cd /usr/local/src/robot/robotology-superbuild
 rm -rf /usr/local/src/robot/robotology-superbuild/src/robots-configuration
+rm -rf /usr/local/src/robot/robotology-superbuild/build/src/robots-configuration
 ~~~
 
 ## 🔲 Clone, install and ensure that external robots-configuration is visible
