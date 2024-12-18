@@ -113,7 +113,7 @@
             <group name="JOINTMAPPING">
 
                 <group name="ACTUATOR">
-                    <param name="type">             advfoc     </param>
+                    <param name="type">             advfoc              </param>
                     <param name="onboard">          amc2c               </param>
                     <param name="port">             ICC1:3              </param>
                 </group>
