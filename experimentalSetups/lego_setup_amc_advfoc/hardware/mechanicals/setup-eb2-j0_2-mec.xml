@@ -11,8 +11,8 @@
         <param name="Encoder">          182.044         </param>
         <param name="fullscalePWM">     32000           </param>
         <param name="ampsToSensor">     1000.0          </param>
-        <param name="Gearbox_M2J">     -384.44          </param>
-        <param name="Gearbox_E2J">      1.778           </param>
+        <param name="Gearbox_M2J">     -196          </param>
+        <param name="Gearbox_E2J">      1           </param>
         <param name="useMotorSpeedFbk"> 0               </param>
         <param name="MotorType">        "BLL_MOOG"      </param>
         <param name="Verbose">          0               </param>
