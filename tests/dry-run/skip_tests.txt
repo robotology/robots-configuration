@@ -1,3 +1,1 @@
-dry-run_R1SN001_dev
 dry-run_R1SN002_dev
-dry-run_R1SN003_dev
