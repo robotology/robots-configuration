@@ -73,6 +73,9 @@ cp ${file_pc104}   ${file_pc104}_bkp
 # disable inertial devices
 xmlstarlet edit --inplace --delete "/robot/devices/xi:include[contains(@href,'inertials')]" ${file_launch}
 
+# disable rpLidar devices
+xmlstarlet edit --inplace --delete "/robot/devices/xi:include[contains(@href,'rpLidar')]" ${file_launch}
+
 # disable wholebodydynamics
 xmlstarlet edit --inplace --delete "/robot/devices/xi:include[contains(@href,'wholebodydynamics')]" ${file_launch}
 
