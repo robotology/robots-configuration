@@ -20,9 +20,9 @@ ctest -R test_name
 ctest -R "test.*"
 ```
 
-#### Run tests associated to specific labels
+#### Run tests associated with specific labels
 ```console
-ctest -L "label_1;label_2"
+ctest -L "all;run;skip"
 ```
 
 #### Run all available tests
@@ -30,5 +30,5 @@ ctest -L "label_1;label_2"
 ctest
 ```
 
-### Tests skipped
-Tests that have to be excluded are listed in `skip_tests.txt` file.
+### Skipped tests
+Tests that have to be ignored are listed in the `skip_tests.txt` file.
