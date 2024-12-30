@@ -1,0 +1,17 @@
+{
+  "name": "CDE for robots-configuration",
+  "image": "ghcr.io/robotology/robots-configuration:latest",
+  "remoteUser": "gitpod",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+  "postAttachCommand": [
+    "mkdir -p build && cd build",
+    "cmake .. -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install -DBUILD_TESTING:BOOL=ON -DINSTALL_ALL_ROBOTS:BOOL=ON", 
+    "cmake --build . --config Release --target install"
+  ]
+}
