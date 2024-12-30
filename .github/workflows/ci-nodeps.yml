@@ -2,7 +2,21 @@ name: CI Workflow with nodeps CMake preset
 
 on:
   push:
+    branches:
+    - 'master'
+    - 'devel'
+    paths-ignore:
+      - 'experimentalSetups/**'
+      - 'iCubTemplates/**'
+      - 'tests/**'
+      - '.github/**'
   pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths-ignore:
+      - 'experimentalSetups/**'
+      - 'iCubTemplates/**'
+      - 'tests/**'
+      - '.github/**'
   workflow_dispatch:
 
 jobs:
