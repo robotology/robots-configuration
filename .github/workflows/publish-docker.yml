@@ -21,8 +21,9 @@ jobs:
         workdir: tests/dockerfiles
         buildargs: DEPENDENCIES_DIR
         registry: ghcr.io
+        tags: "latest"
     - name: Clean up Registry from untagged images
-      uses: actions/delete-package-versions@v4.1.1
+      uses: actions/delete-package-versions@v5
       with: 
         package-name: 'robots-configuration'
         package-type: 'container'

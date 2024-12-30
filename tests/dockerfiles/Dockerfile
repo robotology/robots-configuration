@@ -72,14 +72,14 @@ RUN cd ${DEPENDENCIES_DIR} && \
     cmake --build . --config Release --target install
 
 # yarp-device-rplidar
-#RUN cd ${DEPENDENCIES_DIR} && \
-#    git clone https://github.com/robotology/yarp-device-rplidar.git && \
-#    cd yarp-device-rplidar && mkdir -p build && cd build && \
-#    git checkout master && \
-#    cmake .. \
-#          -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
-#          -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
-#    cmake --build . --config Release --target install
+RUN cd ${DEPENDENCIES_DIR} && \
+    git clone https://github.com/robotology/yarp-device-rplidar.git && \
+    cd yarp-device-rplidar && mkdir -p build && cd build && \
+    git checkout master && \
+    cmake .. \
+          -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
+          -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
+    cmake --build . --config Release --target install
 
 # icub-firmware-shared
 RUN cd ${DEPENDENCIES_DIR} && \
@@ -131,19 +131,19 @@ RUN cd ${DEPENDENCIES_DIR} && \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
     cmake --build . --target install
 
-# Create user gitpod
-RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod && \
+# Create user codespace
+RUN useradd -l -u 33333 -G sudo -md /home/codespace -s /bin/bash -p codespace codespace && \
     # passwordless sudo for users in the 'sudo' group
     sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
 
-# Switch to gitpod user
-USER gitpod
+# Switch to codespace user
+USER codespace
 
 # Install informative git for bash
 RUN git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 
 # Set up .bashrc
-WORKDIR /home/gitpod
+WORKDIR /home/codespace
 RUN echo "GIT_PROMPT_ONLY_IN_REPO=1" >> ~/.bashrc && \
     echo "source \${HOME}/.bash-git-prompt/gitprompt.sh" >> ~/.bashrc && \
     echo "export DEPENDENCIES_DIR=${DEPENDENCIES_DIR}" >> ~/.bashrc && \
@@ -153,8 +153,8 @@ RUN echo "GIT_PROMPT_ONLY_IN_REPO=1" >> ~/.bashrc && \
 # Switch back to root
 USER root
 
-# Make sure specific dirs are owned by gitpod user
-RUN chown -R gitpod.gitpod ${DEPENDENCIES_DIR}
+# Make sure specific dirs are owned by codespace user
+RUN chown -R codespace.codespace ${DEPENDENCIES_DIR}
 
 RUN rm -Rf /var/lib/apt/lists/*
 
