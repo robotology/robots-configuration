@@ -72,14 +72,14 @@ RUN cd ${DEPENDENCIES_DIR} && \
     cmake --build . --config Release --target install
 
 # yarp-device-rplidar
-#RUN cd ${DEPENDENCIES_DIR} && \
-#    git clone https://github.com/robotology/yarp-device-rplidar.git && \
-#    cd yarp-device-rplidar && mkdir -p build && cd build && \
-#    git checkout master && \
-#    cmake .. \
-#          -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
-#          -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
-#    cmake --build . --config Release --target install
+RUN cd ${DEPENDENCIES_DIR} && \
+    git clone https://github.com/robotology/yarp-device-rplidar.git && \
+    cd yarp-device-rplidar && mkdir -p build && cd build && \
+    git checkout master && \
+    cmake .. \
+          -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
+          -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
+    cmake --build . --config Release --target install
 
 # icub-firmware-shared
 RUN cd ${DEPENDENCIES_DIR} && \
