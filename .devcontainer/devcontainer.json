@@ -1,6 +1,5 @@
 {
   "name": "CDE for robots-configuration",
   "image": "ghcr.io/robotology/robots-configuration:latest",
-  "remoteUser": "gitpod",
-  "postAttachCommand": "./tests/dry-run/configure.sh"
+  "remoteUser": "codespace"
 }

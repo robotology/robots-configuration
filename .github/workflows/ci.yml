@@ -40,18 +40,19 @@ jobs:
     - name: Configure
       shell: bash
       run: |
-        ./tests/dry-run/configure.sh
+        cd ./tests/dry-run/
+        ./configure.sh
 
     - name: Install
       shell: bash
       run: |
-        cd build
+        cd ./tests/dry-run/build
         cmake --build . --config Release --target install
 
     - name: Test
       shell: bash
       run: |
-        cd build
+        cd ./tests/dry-run/build
         ctest --timeout 60 --output-on-failure -L run
 
     - name: Upload Output
@@ -59,5 +60,5 @@ jobs:
       uses: actions/upload-artifact@main
       with:
         name: dry-run_${{ github.run_id }}
-        path: build/dry-run_log_*.txt
+        path: tests/dry-run/build/dry-run_log_*.txt
         retention-days: 30

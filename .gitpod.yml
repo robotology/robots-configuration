@@ -1,3 +1,0 @@
-image: ghcr.io/robotology/robots-configuration:latest
-tasks:
-- command: ./tests/dry-run/configure.sh
