@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ankle-setup" build="1" portprefix="ankleSetup" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <devices>
+    <params>
+    <xi:include href="hardware/electronics/pc104.xml" />
+    </params>
+
+    <!-- motor controllers wrappers -->
+    <xi:include href="wrappers/motorControl/ankle-setup-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/ankle-setup-mc_remapper.xml" />
+ 
+
+    <!-- ankle -->
+    <xi:include href="hardware/motorControl/ankle-setup-mc.xml" />
+
+    <!--  CALIBRATORS  -->
+    <xi:include href="calibrators/ankle-setup-calib.xml" /> 
+
+    <!-- ROBOMETRY -->
+    <xi:include href="telemetry/telemetry.xml" />
+    <!-- nws wrapper -->
+    <xi:include href="wrappers/motorControl/ankle-setup-rawval-nws_wrapper.xml" />
+
+  </devices>
+</robot>
