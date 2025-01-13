@@ -94,4 +94,8 @@
 
     <!-- custom PIDs: end -->
 
+    <group name="OTHER_CONTROL_PARAMETERS">
+        <param name="deadZone">             0.0495                   </param>  
+    </group>
+
 </device>
