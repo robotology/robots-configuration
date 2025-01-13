@@ -103,7 +103,7 @@
                     <param name="minor">            0                 </param>
                 </group>
                 <group name="FIRMWARE">
-                    <param name="major">            1                 </param>
+                    <param name="major">            0                 </param>   <!--put correct version number -->
                     <param name="minor">            0                 </param>
                     <param name="build">            0                 </param>
                 </group>
@@ -115,7 +115,7 @@
                 <group name="ACTUATOR">
                     <param name="type">             advfoc              </param>
                     <param name="onboard">          amcfoc2c            </param>
-                    <param name="port">             ICC1:3              </param>
+                    <param name="port">             ICC1:1              </param>
                 </group>
 
                 <group name="ENCODER1">
