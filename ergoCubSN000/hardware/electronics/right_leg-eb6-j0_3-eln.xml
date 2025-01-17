@@ -22,7 +22,7 @@
                 <param name="maxTimeOfRXactivity">      300                 </param>
                 <param name="maxTimeOfDOactivity">      350                 </param>   
                 <param name="maxTimeOfTXactivity">      350                 </param>                
-                <param name="TXrateOfRegularROPs">      2                   </param> 
+                <param name="TXrateOfRegularROPs">      1                   </param> 
             </group>              
         </group>                 
         
