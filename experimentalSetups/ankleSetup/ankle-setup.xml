@@ -19,10 +19,10 @@
     <!--  CALIBRATORS  -->
     <xi:include href="calibrators/ankle-setup-calib.xml" /> 
 
-    <!-- ROBOMETRY -->
-    <xi:include href="telemetry/telemetry.xml" />
-    <!-- nws wrapper -->
-    <xi:include href="wrappers/motorControl/ankle-setup-rawval-nws_wrapper.xml" />
+    <!-- ROBOMETRY 
+    <xi:include href="telemetry/telemetry.xml" /> -->
+    <!-- nws wrapper 
+    <xi:include href="wrappers/motorControl/ankle-setup-rawval-nws_wrapper.xml" /> -->
 
   </devices>
 </robot>

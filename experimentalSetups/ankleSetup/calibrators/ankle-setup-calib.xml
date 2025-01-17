@@ -19,9 +19,9 @@
                                                                       
 <group name="CALIBRATION">                                            
 <!--                                                small                          -->
-<param name="calibrationType">                      5                       </param>
-<param name="calibration1">                         1600                   </param> <!-- 20934 amo (12) -4200 (10)  63820 aksim2-->
-<param name="calibration2">                         17816                        </param> 
+<param name="calibrationType">                      5                        </param>
+<param name="calibration1">                         1600                     </param> <!-- 20934 amo (12) -4200 (10)  63820 aksim2-->
+<param name="calibration2">                         0                     </param> 
 <param name="calibration3">                         0                        </param> 
                                                                       
                                                                       

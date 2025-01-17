@@ -38,11 +38,11 @@
                     
                 <!-- Aksim2 Encoder-->
                  <group name="ENCODER1">                            
-                    <param name="type">             none              </param>  
-                    <param name="port">             CONN:P8             </param>
-                    <param name="position">         atjoint             </param>
-                    <param name="resolution">       -524288             </param> 
-                    <param name="tolerance">        0.703               </param>  
+                    <param name="type">             none                 </param>  
+                    <param name="port">             none             </param>
+                    <param name="position">         none              </param>
+                    <param name="resolution">       none                 </param> 
+                    <param name="tolerance">        none                  </param>  
                 </group>
 
                 <!-- MECAPION_APM-SA01ACN-8 Encoder-->
