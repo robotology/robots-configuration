@@ -40,7 +40,7 @@
 
             <group name="SETTINGS">        
                 <param name="enabledSensors">       l_arm_ft               </param>
-                <param name="ftPeriod">             2         		                    </param>
+                <param name="ftPeriod">             1         		                    </param>
                 <param name="temperaturePeriod">    1000      		                   </param>
                 <param name="useCalibration">       true      		              </param>           
             </group>       
