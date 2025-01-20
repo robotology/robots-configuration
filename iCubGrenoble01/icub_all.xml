@@ -7,18 +7,18 @@
     <xi:include href="cartesian/left_arm_cartesian.xml" />
     <xi:include href="cartesian/right_arm_cartesian.xml" />
 
-    <!-- motor controllers wrappers -->
+    <!-- LEFT ARM -->
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
-    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
-
-
     <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb1-j0_3-mc.xml" /> 
+
+
+    <!-- RIGHT ARM -->
+    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb3-j0_3-mc.xml" />
 
 
-    <xi:include href="hardware/motorControl/icub_left_arm.xml" />
-
-    <xi:include href="hardware/motorControl/icub_right_arm.xml" />
 
 
 
@@ -35,8 +35,8 @@
 
 
     <!-- CALIBRATORS -->
-    <xi:include href="calibrators/left_shoulder_calib.xml" />
-    <xi:include href="calibrators/right_shoulder_calib.xml" />
+    <xi:include href="calibrators/left_arm_calib.xml" />
+    <xi:include href="calibrators/right_arm_calib.xml" />
 
 </devices>
 </robot>

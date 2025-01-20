@@ -18,17 +18,46 @@
     <xi:include href="./hardware/motorControl/face-eb22-j0-mc.xml" /> 
     <xi:include href="./wrappers/motorControl/face-mc_wrapper.xml" /> --> 
 
+    <!-- cartesian -->
+    <xi:include href="cartesian/left_arm_cartesian.xml" />
+    <xi:include href="cartesian/right_arm_cartesian.xml" />
+
     <!-- LEFT ARM -->
+    <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
     <xi:include href="hardware/motorControl/left_arm-eb1-j0_3-mc.xml" /> 
-     <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb24-j4_7-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb25-j8_11-mc.xml" />
+    <xi:include href="hardware/motorControl/left_arm-eb26-j12_15-mc.xml" />
+
 
     <!-- RIGHT ARM -->
-    <xi:include href="hardware/motorControl/right_arm-eb3-j0_3-mc.xml" />
+    <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" />
-    
-    <!--  CALIBRATORS -->
-    <xi:include href="calibrators/left_shoulder-calib.xml" />
-    <xi:include href="calibrators/right_shoulder-calib.xml" /> 
+    <xi:include href="hardware/motorControl/right_arm-eb3-j0_3-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb27-j4_7-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc.xml" />
+    <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" />
+
+
+
+
+
+
+    <!-- REAL ANALOG SENSORS 
+    <xi:include href="wrappers/FT/left_arm_FT_wrapper.xml" />
+
+    <xi:include href="wrappers/FT/right_arm_FT_wrapper.xml" />
+
+    <xi:include href="hardware/FT/left_arm_strain.xml" />
+
+    <xi:include href="hardware/FT/right_arm_strain.xml" /> -->
+
+
+
+    <!-- CALIBRATORS -->
+    <xi:include href="calibrators/left_arm_calib.xml" />
+    <xi:include href="calibrators/right_arm_calib.xml" />
    <!-- <xi:include href="calibrators/head-calib.xml" />
     <xi:include href="calibrators/face-calib.xml" /> -->
 
