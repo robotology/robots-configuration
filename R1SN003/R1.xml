@@ -4,6 +4,18 @@
 <robot name="R1SN003" build="1" portprefix="cer" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
 
+    <!-- POS4 -->
+    <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
+    <xi:include href="hardware/POS/right_hand-pos4.xml" disabled_by="disable_right_hand" />
+    <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" disabled_by="disable_left_hand" />
+    <xi:include href="hardware/POS/left_hand-pos4.xml" disabled_by="disable_left_hand" /> 
+
+    <!-- POS2 -->
+    <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" />
+    <xi:include href="hardware/POS/right_hand-pos2.xml" disabled_by="disable_right_hand" />
+    <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" disabled_by="disable_left_hand" />
+    <xi:include href="hardware/POS/left_hand-pos2.xml" disabled_by="disable_left_hand" /> 
+
     <!-- ODOMETRY -->
     <xi:include href="hardware/odometry/odometry.xml" disabled_by="disable_odometry" />
     <xi:include href="wrappers/odometry/odometry_nws_yarp.xml" disabled_by="disable_odometry" />
@@ -33,18 +45,6 @@
     <xi:include href="wrappers/motorControl/cer_torso-mc_remapper.xml" disabled_by="disable_torso" />
     <xi:include href="wrappers/motorControl/cer_torso-mc_wrapper.xml" disabled_by="disable_torso" /> 
 
-    <!-- POS4 -->
-    <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
-    <xi:include href="hardware/POS/right_hand-pos4.xml" disabled_by="disable_right_hand" />
-    <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" disabled_by="disable_left_hand" />
-    <xi:include href="hardware/POS/left_hand-pos4.xml" disabled_by="disable_left_hand" /> 
-
-    <!-- POS2 -->
-    <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" />
-    <xi:include href="hardware/POS/right_hand-pos2.xml" disabled_by="disable_right_hand" />
-    <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" disabled_by="disable_left_hand" />
-    <xi:include href="hardware/POS/left_hand-pos2.xml" disabled_by="disable_left_hand" /> 
-
     <!-- LEFT ARM -->
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" disabled_by="disable_left_arm disable_left_hand" />
@@ -72,19 +72,11 @@
     <xi:include href="wrappers/motorControl/cer_head-mc_remapper.xml" disabled_by="disable_head"/>
     <xi:include href="wrappers/motorControl/cer_head-mc_wrapper.xml" disabled_by="disable_head"/>
 
-    <!--  CALIBRATORS -->
-    <xi:include href="calibrators/cer_torso-calib.xml" disabled_by="disable_torso"/> 
-    <xi:include href="calibrators/cer_head-calib.xml" disabled_by="disable_head"/>
-    <xi:include href="calibrators/cer_base-calib.xml" disabled_by="disable_base"/>
-    <xi:include href="calibrators/left_arm-calib.xml" disabled_by="disable_left_arm" />
-    <xi:include href="calibrators/right_arm-calib.xml" disabled_by="disable_right_arm" />
-
     <!-- SKIN-->
 <!--<xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/right_arm-eb7-j2_3-skin.xml" />
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
-    <xi:include href="hardware/skin/left_arm-eb4-j2_3-skin.xml" />
--->
+    <xi:include href="hardware/skin/left_arm-eb4-j2_3-skin.xml" /> -->
 
 <!-- IMU - MTB4 BOARDS
     <xi:include href="hardware/inertials/left_arm-eb4-j2_3-inertial.xml" disabled_by="disable_left_arm" />
@@ -111,6 +103,13 @@
     <!--  ROS -->
     <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" enabled_by="enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
     <xi:include href="wrappers/motorControl/cer_alljoints_ros2_wrapper.xml" enabled_by="enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
+
+    <!--  CALIBRATORS -->
+    <xi:include href="calibrators/cer_torso-calib.xml" disabled_by="disable_torso"/> 
+    <xi:include href="calibrators/cer_head-calib.xml" disabled_by="disable_head"/>
+    <xi:include href="calibrators/cer_base-calib.xml" disabled_by="disable_base"/>
+    <xi:include href="calibrators/left_arm-calib.xml" disabled_by="disable_left_arm" />
+    <xi:include href="calibrators/right_arm-calib.xml" disabled_by="disable_right_arm" />
 
     <!-- BATTERY -->
     <xi:include href="wrappers/battery/r1battery.xml" enabled_by="enable_battery" disabled_by="disable_battery" />
