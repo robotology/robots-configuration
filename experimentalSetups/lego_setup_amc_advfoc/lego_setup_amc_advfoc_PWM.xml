@@ -14,7 +14,7 @@
             <xi:include href="wrappers/motorControl/setup-mc_remapper.xml" />
     
             <!--  CALIBRATORS -->
-            <xi:include href="calibrators/setup-calib.xml" />
+            <xi:include href="calibrators/setup-calib_PWM.xml" />
         
     </devices>
 </robot>
