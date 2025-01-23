@@ -3,7 +3,7 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="ankle-setup-mc_nws_yarp" type="controlBoard_nws_yarp">
     <param name="period"> 0.002  </param>
-    <param name="name"> /ankleSetup/ankle-setup </param>
+    <param name="name"> /ankleSetup/ankle_setup_control_board </param>
     <action phase="startup" level="10" type="attach">
         <param name="device"> ankle-setup-mc_remapper </param>
     </action>

@@ -11,16 +11,16 @@
         <param name="Encoder">              182.044                   </param>
         <param name="fullscalePWM">         32000                     </param>
         <param name="ampsToSensor">         1000.0                    </param>
-        <param name="Gearbox_M2J">          1                         </param>
-        <param name="Gearbox_E2J">          1                         </param> <!--64 when using AMO  1 when using aksim (is the number of sectors)-->
+        <param name="Gearbox_M2J">          72                        </param>
+        <param name="Gearbox_E2J">          1                         </param>
         <param name="useMotorSpeedFbk">     1                         </param> 
         <param name="MotorType">            "MECAPION_APM-SA01ACN-8"  </param>
-        <param name="Verbose"> 0 </param>                    
+        <param name="Verbose">              0                         </param>                    
     </group>                                                 
                                                              
     <group name="LIMITS">                                    
-        <param name="hardwareJntPosMax">    0                  </param>
-        <param name="hardwareJntPosMin">    0                  </param>
+        <param name="hardwareJntPosMax">    0                 </param>
+        <param name="hardwareJntPosMin">    -100                  </param>
         <param name="rotorPosMin">          0                    </param> 
         <param name="rotorPosMax">          0                    </param>
     </group>                                                 
@@ -34,7 +34,7 @@
         <param name="HasRotorEncoderIndex"> 1                    </param>
         <param name="HasSpeedEncoder">      0                    </param>
         <param name="RotorIndexOffset">     105                  </param>
-        <param name="MotorPoles">           8                   </param>
+        <param name="MotorPoles">           8                    </param>
    </group>
 
     <group name="COUPLINGS"> 
@@ -61,7 +61,8 @@
     </group>                
     
     <group name="JOINTSET_CFG"> 
-        <param name= "numberofsets"> 1 </param>
+        <param name= "numberofsets">     1             </param>
+
         <group name="JOINTSET_0">
             <param name="listofjoints">  0             </param>
             <param name="constraint">    none          </param>

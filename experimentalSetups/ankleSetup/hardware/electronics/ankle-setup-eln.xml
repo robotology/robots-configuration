@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ankle-setup" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ankle_setup_control_board" build="1">
 
     <xi:include href="./pc104.xml" />
     
@@ -16,7 +16,7 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "ankle-setup"        </param> 
+            <param name="Name">                     "ankle_setup_control_board"        </param> 
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>

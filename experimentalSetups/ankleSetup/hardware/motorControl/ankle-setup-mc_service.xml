@@ -2,82 +2,45 @@
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ankle-setup" build="1">
-
     <group name="SERVICE">
-        
         <param name="type"> eomn_serv_MC_foc </param> 
-    
         <group name="PROPERTIES">
-        
-            <group name="ETHBOARD">
-                <param name="type">                 ems4        </param> 
+            <group name="ETHBOARD">                
+                <param name="type">                 ems4        </param>
             </group>          
-
-            <group name="CANBOARDS"> 
-                <param name="type">                 foc         </param> 
+            <group name="CANBOARDS">             
+                <param name="type">                 foc         </param>
                 <group name="PROTOCOL">
-                    <param name="major">            1           </param>    
-                    <param name="minor">            6           </param>     
-                </group>                    
+                    <param name="major">            1           </param>
+                    <param name="minor">            6           </param>
+                </group>
                 <group name="FIRMWARE">
                     <param name="major">            0           </param>    
-                    <param name="minor">            0           </param> 
+                    <param name="minor">            0          </param> 
                     <param name="build">            0           </param>
                 </group>
             </group>
-            
-            
-
             <group name="JOINTMAPPING">
-
                 <group name="ACTUATOR">
-                    <!--                            setup                     -->
-                    <param name="type">             foc        </param>
-                    <param name="port">             CAN1:1:0            </param>
-                </group>                                           
-                    
-                <!-- Aksim2 Encoder-->
-                 <group name="ENCODER1">                            
-                    <param name="type">             none                 </param>  
-                    <param name="port">             none             </param>
-                    <param name="position">         none              </param>
-                    <param name="resolution">       none                 </param> 
-                    <param name="tolerance">        none                  </param>  
+                    <!--                            setup      -->
+                    <param name="type">             foc         </param>
+                    <param name="port">             CAN1:1:0    </param>
+                </group>            
+                 <group name="ENCODER1"> <!-- There's no joint encoder-->
+                    <param name="type">             none        </param>
+                    <param name="port">             none        </param>
+                    <param name="position">         none        </param>
+                    <param name="resolution">       none        </param>
+                    <param name="tolerance">        none        </param>
                 </group>
-
-                <!-- MECAPION_APM-SA01ACN-8 Encoder-->
-                <group name="ENCODER2">                            
-                    <param name="type">             mrie              </param>  <!-- SA01ACN ???-->
-                    <param name="port">             CAN1:1:0          </param>
-                    <param name="position">         atmotor           </param>
-                    <param name="resolution">       8192             </param> 
-                    <param name="tolerance">        3.6               </param>  
+                <group name="ENCODER2"> <!--Set as MRIE to declare the encoder as incremental-->
+                    <param name="type">             mrie        </param>
+                    <param name="port">             CAN1:1:0    </param>
+                    <param name="position">         atmotor     </param>
+                    <param name="resolution">       8192        </param>
+                    <param name="tolerance">        0.2         </param>
                 </group> 
-                
-                <!-- AMO Encoder 16384 if using calib12 or 10 (x64 is defined in mech file at E2J)-->
-	            <!-- group name="ENCODER1">                            
-                    <param name="type">             amo           </param>  
-                    <param name="port">             CONN:P6       </param>
-                    <param name="position">         atjoint       </param>
-                    <param name="resolution">       -1048576      </param> 
-                    <param name="tolerance">        0.703         </param>  
-                </group-->     
-	                                                  
-                <!-- group name="ENCODER2">                            
-                    <param name="type">             mrie                </param>
-                    <param name="port">             CAN1:1:0            </param>
-                    <param name="position">         atmotor             </param>
-                    <param name="resolution">       -15040               </param>
-                    <param name="tolerance">        3.6                 </param>  
-                </group--> 
- 
-            </group>    
-            
-           
-            
+            </group>   
         </group>
-           
     </group>
-    
-  
 </params>
