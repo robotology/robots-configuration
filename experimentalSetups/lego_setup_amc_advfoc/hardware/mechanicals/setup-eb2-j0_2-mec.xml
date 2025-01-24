@@ -3,16 +3,16 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="setup" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion"> 6 </param>
-        <param name="Joints"> 1 </param>
+        <param name="MotioncontrolVersion">  6          </param>
+        <param name="Joints">                1          </param>
         <param name="AxisMap">               0          </param>
         <param name="AxisName">         "setup_yaw"     </param>
         <param name="AxisType">         "revolute"      </param>
         <param name="Encoder">          182.044         </param>
         <param name="fullscalePWM">     32000           </param>
         <param name="ampsToSensor">     1000.0          </param>
-        <param name="Gearbox_M2J">     -196          </param>
-        <param name="Gearbox_E2J">      1           </param>
+        <param name="Gearbox_M2J">     -196             </param>
+        <param name="Gearbox_E2J">      1               </param>
         <param name="useMotorSpeedFbk"> 0               </param>
         <param name="MotorType">        "BLL_MOOG"      </param>
         <param name="Verbose">          0               </param>
@@ -71,7 +71,7 @@
     </group>
 
     <group name="JOINTSET_CFG">
-        <param name= "numberofsets"> 1 </param>
+        <param name= "numberofsets">     1         </param>
         <group name="JOINTSET_0">
             <param name="listofjoints">  0         </param>
             <param name="constraint">    none      </param>
