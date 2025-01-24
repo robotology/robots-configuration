@@ -14,7 +14,7 @@
     </Position>
     <Position Index="1" Timing="2.00">
         <JointPositions Count="3">
-            <PosValue>-26.00</PosValue>
+            <PosValue>-22.00</PosValue>
             <PosValue>0.00</PosValue>
             <PosValue>0.00</PosValue>
         </JointPositions>
