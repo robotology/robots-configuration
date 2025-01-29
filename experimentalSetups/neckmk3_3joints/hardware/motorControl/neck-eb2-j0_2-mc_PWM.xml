@@ -61,7 +61,7 @@
 
 
     <!-- other default PIDs: begin -->
-                                                                        <!-- wrong èid values for yaw -->
+                                                                        <!-- wrong pid values for yaw -->
     <group name="2FOC_CUR_CONTROL">
         <param name="controlLaw">           low_lev_current                                     </param>
         <param name="fbkControlUnits">      machine_units                                       </param>
