@@ -8,7 +8,7 @@
     <param name="joints"> 3 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="FirstSetOfJoints">  neck-eb2-j0_1-mc    </elem>
+            <elem name="FirstSetOfJoints">  neck-eb2-j0_2-mc    </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />

@@ -9,7 +9,7 @@
         <devices>
     
             <!-- NECK MC -->
-            <xi:include href="hardware/motorControl/neck-eb2-j0_1-mc.xml" />
+            <xi:include href="hardware/motorControl/neck-eb2-j0_2-mc.xml" />
             <xi:include href="wrappers/motorControl/neck-mc_wrapper.xml" />  
             <xi:include href="wrappers/motorControl/neck-mc_remapper.xml" />  
     
