@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+    <robot name="new_neck" build="1" portprefix="/setup" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <params>
+            <xi:include href="hardware/electronics/pc104.xml" />
+        </params>
+
+        <devices>
+    
+            <!-- NECK MC -->
+            <xi:include href="hardware/motorControl/neck-eb2-j0_2-mc_PWM.xml" />
+            <xi:include href="wrappers/motorControl/neck-mc_wrapper.xml" />  
+            <xi:include href="wrappers/motorControl/neck-mc_remapper.xml" />  
+    
+            <!--  CALIBRATORS -->  
+            <xi:include href="calibrators/neck-calib_PWM.xml" />
+        
+    </devices>
+</robot>
