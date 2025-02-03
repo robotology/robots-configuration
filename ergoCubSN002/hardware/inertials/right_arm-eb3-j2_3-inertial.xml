@@ -16,7 +16,7 @@
             <group name="PROPERTIES">
             
                 <group name="CANBOARDS">
-                    <param name="type">                 mtb4c                </param>
+                    <param name="type">                 mtb4                </param>
 
                     <group name="PROTOCOL">
                         <param name="major">            2                   </param>    
