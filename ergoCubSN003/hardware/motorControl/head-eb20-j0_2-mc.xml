@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-eb20-j0_1-mc" type="embObjMotionControl">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-eb20-j0_2-mc" type="embObjMotionControl">
 
     <xi:include href="../../general.xml" />
     <xi:include href="../../hardware/electronics/head-eb20-j0_2-eln.xml" />
