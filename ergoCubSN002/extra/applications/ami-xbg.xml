@@ -24,7 +24,7 @@
     </module>
     <module>
         <name>yarpdev</name>
-        <parameters>--device deviceBundler --wrapper_device AudioRecorderWrapper --attached_device portaudioRecorder --name /icub/microphone --min_samples_over_network 150 --max_samples_over_network 1000 --AUDIO_BASE::rate 16000 --AUDIO_BASE::samples 4000 --AUDIO_BASE::channels 1 --start</parameters>
+        <parameters>--device deviceBundler --wrapper_device AudioRecorderWrapper --attached_device portaudioRecorder --name /ergocub/microphone --min_samples_over_network 150 --max_samples_over_network 1000 --AUDIO_BASE::rate 16000 --AUDIO_BASE::samples 4000 --AUDIO_BASE::channels 1 --start</parameters>
         <node>ergocub-torso</node>
    </module>
    <module>
@@ -74,7 +74,12 @@
     <connection>
         <output>/talking_ergocub/FrameTransform/data:o</output>
         <input>/talking_ergocub/FrameTransform/data:i</input>
-        <protocol>tcp</protocol>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/ergocub/microphone/audio:o</output>
+        <input>/talking_ergocub/asr/audio:i</input>
+        <protocol>fast_tcp</protocol>
     </connection>
     <connection>
         <output>/xbg/joypad</output>
