@@ -1,0 +1,26 @@
+<application>
+    <name>1-ami-ergoCubStartup</name>
+
+    <dependencies>
+    </dependencies>
+
+    <module>
+        <name>yarplogger</name>
+        <parameters>--start</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+
+
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters></parameters>
+        <node>ergocub-torso</node>
+    </module>
+
+    <module>
+        <name>yarpmotorgui</name>
+        <parameters>--from custom_positions.ini</parameters>
+        <node>ergocub002-lap</node>
+    </module>
+
+</application>

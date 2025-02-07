@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<devices>
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="realsenseD450" type="realsense2">
+        <group name="SETTINGS">
+            <param name="depthResolution"> (640 480) </param>
+            <param name="rgbResolution">  (640 480) </param>
+            <param name="framerate">    30  </param>
+            <param name="enableEmitter"> true </param>
+            <param name="alignmentFrame"> RGB </param>
+        </group>
+        <group name="HW_DESCRIPTION">
+            <param name="clipPlanes"> (0.2 10.0) </param>
+        </group>
+        <group name="QUANT_PARAM">
+            <param name="depth_quant"> 2 </param>
+        </group>
+        <param name="rotateImage180"> false </param>
+    </device>
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperyarp" type="rgbdSensor_nws_yarp">
+        <param name="period"> 0.03 </param>
+        <param name="name">    /depthCamera </param>
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+                <elem name="subdevicergbd"> realsenseD450 </elem>
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude"  name="depthWrapR" type="rgbdSensor_nws_ros2">
+        <param name="period">0.033</param>
+        <param name="node_name">rgbdsensor_ros2_node</param>
+        <param name="color_topic_name">/camera_rgbd/color/image_rect_color</param>
+        <param name="depth_topic_name">/camera_rgbd/depth/image_rect</param>
+        <param name="color_frame_id">realsense_rgb_frame</param>
+        <param name="depth_frame_id">realsense_rgb_frame</param>
+        <action phase="startup" level="5" type="attach">
+            <paramlist name="networks">
+            <elem name="the_device"> realsenseD450 </elem>
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
+</devices>

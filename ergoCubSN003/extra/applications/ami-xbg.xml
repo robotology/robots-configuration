@@ -1,0 +1,61 @@
+<application>
+    <name>ami-xbg</name>
+    
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters>--config realsense2.xml</parameters>
+	    <node>ergocub-head</node>
+    </module>    
+    <module>
+    	<name>ergoCubEmotions</name>
+    	<parameters>--context ergoCubEmotions --from config.ini </parameters>
+    	<node>ergocub-head</node>
+    </module>    
+    <module>
+        <name>WalkingModule</name>
+        <parameters>--from dcm_walking_autonomous.ini</parameters>
+	    <node>ergocub-torso</node>
+    </module>      
+    <!-- <module>
+    	<workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/src/simulation/</workdir>
+        <name>python3 </name>
+        <parameters>demo.py -p XBGdv2_2 -m uvwoypt8 -s epoch7 -w 0.15</parameters>
+        <node>ergocub002-lap</node>
+    </module> -->    
+    <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
+        <name>python</name>
+        <parameters>allyGUI.py </parameters>
+	    <node>llm-node</node>
+    </module>
+    <module>
+    	<name>AudioRecorderWrapper</name>
+    	<parameters>--subdevice portaudioRecorder --name /icub/microphone --min_samples_over_network 150 --max_samples_over_network 1000 --AUDIO_BASE::rate 16000 --AUDIO_BASE::samples 4000 --AUDIO_BASE::channels 1 --start</parameters>
+   	<deployer>yarpdev</deployer>
+    	<node>ergocub-torso</node>
+   </module>
+   <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
+        <name>python</name>
+        <parameters>llmGUI.py</parameters>
+	    <node>llm-node</node>
+    </module>
+    <module>
+    	<workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/src/inference/</workdir>
+        <name>conda</name>
+        <parameters>run -n autonomousenv python inference.py</parameters>
+	    <node>localhost</node>
+    </module>
+
+    <connection>
+        <output>/xbg/joints</output>
+        <input>/walking-coordinator/humanState:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>    
+      <connection>
+        <output>/xbg/joypad</output>
+        <input>/walking-coordinator/goal:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection> 
+
+</application>

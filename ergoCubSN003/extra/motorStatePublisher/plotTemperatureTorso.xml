@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<portscope rows="1" columns="1" carrier="mcast">
+    <plot gridx="0"
+          gridy="0"
+          hspan="1"
+	  vspan="1"
+          minval="0"
+	  maxval="60"
+          title="Torso Temperature"
+          bgcolor="LightSlateGrey">
+    <graph remote="/torso/motor_temperatures:o"
+               index="1"
+               color="red"
+               title="torso_roll"
+               type="lines"
+               size="3" />
+    <graph remote="/torso/motor_temperatures:o"
+               index="3"
+               color="blue"
+               title="torso_pitch"
+               type="lines"
+               size="3" />
+    <graph remote="/torso/motor_temperatures:o"
+               index="5"
+               color="purple"
+               title="torso_yaw"
+               type="lines"
+               size="3" />
+    </plot>
+
+
+</portscope>

@@ -1,0 +1,25 @@
+<!-- Copyright (C) 2023 Fondazione Istituto Italiano di Tecnologia (IIT) -->
+<!-- All Rights Reserved. -->
+
+<application>
+
+  <name>ami-autonomous</name>
+  <description>Application to run module related to autonomous behaviour.</description>
+  <version>1.0</version>
+  <authors>
+    <author email="carlos.cardenas@iit.it">Carlos Cardenas</author>
+  </authors>
+
+  <application>
+    <name> ami-xbg</name>
+  </application>
+
+  <!-- <application>
+    <name> llm</name>
+  </application> -->
+
+  <application>
+    <name> xbgTwoRobots</name>
+  </application>
+
+</application>
