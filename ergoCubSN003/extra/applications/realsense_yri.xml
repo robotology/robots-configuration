@@ -21,7 +21,7 @@
 
     <module>
         <name>ergocub-rs-pose</name>
-        <parameters> ergocub /usr/local/src/robot/ergocub-software/build/install/share/ergoCub/robots/ergoCubSN000/model.urdf</parameters>
+        <parameters> ergocub /usr/local/src/robot/ergocub-software/build/install/share/ergoCub/robots/ergoCubSN003/model.urdf</parameters>
         <node>ergocub-torso</node>
     </module>
 

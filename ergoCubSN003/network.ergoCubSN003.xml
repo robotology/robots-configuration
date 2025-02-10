@@ -44,13 +44,31 @@
 
     <part name="head">
 
-        <board type='mc4plus' name="head-eb20-j0_1">
+        <board type='amc' name="head-eb20-j0_2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.20" />
             <connected bus="ETH" prev="10.0.1.104" next="10.0.1.21" />
         </board>
 
-        <board type='mc4plus' name="head-eb21-j2_3">
+        <board type='amc2c' name="head-eb20-j0_2">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.20" />
+            <connected bus="ETH" prev="10.0.1.104" next="10.0.1.21" />
+        </board>
+
+        <board type='amcbldc' name="amcbldc.1">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.20" canbus="1" canadr="1"  />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='amcbldc' name="amcbldc.2">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.20" canbus="1" canadr="2"  />
+            <connected bus="CAN" />
+        </board>
+
+        <board type='mc4plus' name="head-eb21-j3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.21" />
             <connected bus="ETH" prev="10.0.1.20" />
