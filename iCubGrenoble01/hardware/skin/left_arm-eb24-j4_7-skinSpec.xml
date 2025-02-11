@@ -36,16 +36,16 @@
            <param name="triangleSetCfg9">      1            11        1              4             1              2          0x2200       </param>
            <param name="triangleSetCfg10">     1            11        8             13             1              2          0x2200       </param>
           
-           <param name="triangleSetCfg11">     1            10        0              1             1              2          0x2200       </param>
-           <param name="triangleSetCfg12">     1            10        6              6             1              2          0x2200       </param>
-           <param name="triangleSetCfg13">     1            10        8             15             1              2          0x2200       </param>
+           <param name="triangleSetCfg11">     1            9        0              1             1              2          0x2200       </param>
+           <param name="triangleSetCfg12">     1            9        6              6             1              2          0x2200       </param>
+           <param name="triangleSetCfg13">     1            9        8             15             1              2          0x2200       </param>
            
-           <param name="triangleSetCfg14">     1            9        0               8             1              2          0x2200       </param>     
-           <param name="triangleSetCfg15">     1            9       12              13             1              2          0x2200       </param>
+           <param name="triangleSetCfg14">     1            10        0               8             1              2          0x2200       </param>     
+           <param name="triangleSetCfg15">     1            10       12              13             1              2          0x2200       </param>
            
            <param name="triangleSetCfg16">     1            8        0              0             1              2           0x2200       </param>
-           <param name="triangleSetCfg17">     1            8        8              9             1              2           0x2200       </param>
-           <param name="triangleSetCfg18">     1            8        10             11            1              2           0x2200       </param>
+           <param name="triangleSetCfg17">     1            8        5              5             1              2           0x2200       </param>
+           <param name="triangleSetCfg18">     1            8        8             13            1              2           0x2200       </param>
            <param name="triangleSetCfg19">     1            8        13             13            1             2           0x2200       </param>
            <param name="triangleSetCfg20">     1            8        15             15            1             2           0x2200       </param>
         </group>

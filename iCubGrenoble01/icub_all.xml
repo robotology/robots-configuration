@@ -38,37 +38,39 @@
     <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" />
     <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
 
-    <!-- CARTESIANS 
+    <!-- CARTESIANS -->
     <xi:include href="cartesian/left_arm-cartesian.xml" />
-    <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
+    <xi:include href="cartesian/right_arm-cartesian.xml" /> 
 
     <!-- TORSO --> 
     <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
-    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" />
+    <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" /> 
 
-    <!-- INERTIAL SENSOR 
-    <xi:include href="hardware/inertials/waist-inertial.xml" disabled_by="disable_torso" />
-    <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" disabled_by="disable_torso" /> -->
+    <!-- INERTIAL SENSOR -->
+    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
+    <xi:include href="wrappers/inertials/head-imuFilter.xml" />
+    <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
+    <xi:include href="hardware/inertials/head-inertial.xml" />
 
-    <!-- ANALOG SENSOR FT 
+    <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
-    <xi:include href="hardware/FT/left_arm-eb1-j0_3-strain.xml" />
-    <xi:include href="hardware/FT/right_arm-eb3-j0_3-strain.xml" /> -->
+    <xi:include href="hardware/FT/left_arm-eb1-j0_3-strain.xml" /> 
+    <xi:include href="hardware/FT/right_arm-eb3-j0_3-strain.xml" /> 
 
-    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) 
+    <!-- VIRTUAL ANALOG SENSORS (WRAPPER ONLY) -->
     <xi:include href="wrappers/VFT/left_arm-VFT_wrapper.xml" />
     <xi:include href="wrappers/VFT/right_arm-VFT_wrapper.xml" />
-    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> -->
+    <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> 
 
-    <!--  SKINS  
+    <!--  SKINS  -->
     <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
     <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/right_arm-eb27-j4_7-skin.xml" />
     <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />
-    <xi:include href="hardware/skin/torso-eb22-skin.xml" /> -->
+    <xi:include href="hardware/skin/torso-eb22-skin.xml" /> 
 
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/left_arm-calib.xml" />
