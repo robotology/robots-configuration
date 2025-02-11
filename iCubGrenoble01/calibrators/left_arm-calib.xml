@@ -20,10 +20,10 @@
 			<param name="calibration1">           48751   	 33471      16799      38511       -1500   65391  53199  0     0     0     0     0     0      0      0     0     </param>
 			<param name="calibration2">	          0          0          0          0	        16384  0      0      0     0     9102  9102  9102  9102   9102   9102  10000 </param>
 			<param name="calibration3">           0          0          0          0	        0      0      0      0     0    -1     1    -1     1     -1      1     1     </param>
-			<param name="calibration4">           0          0          0          0            0      0      0      0     2000  245   510   255   502    255    510   766   </param>
-			<param name="calibration5">           0          0          0          0            0      0      0      0     3350  0     0     0     0      0      0     80    </param>
+			<param name="calibration4">           0          0          0          0            0      0      0      2160  2000  245   510   255   502    255    510   766   </param>
+			<param name="calibration5">           0          0          0          0            0      0      0      2450  3350  0     0     0     0      0      30    140   </param>
 			<param name="calibrationZero">        0          0          0          0            0      0      0      0     0     0     0     0     0      0      0     0     </param>
-			<param name="calibrationDelta">       0          0          0          0            0      0      0      0     0     0     0     0     0      0      0     0     </param>
+			<param name="calibrationDelta">       2         -1.7       -15.2      -5.6          0      0      0      0     0     0     0     0     0      0      0     0     </param>
 						                                                        
 			<param name="startupPosition">       -35         30         0          50           0      0      0      15    30    0     0     0     0      0      0     0     </param>
 			<param name="startupVelocity">        10         10         10         10           30     30     30     100   100   100   100   100   100    100    100   100   </param>

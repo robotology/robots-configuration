@@ -24,7 +24,7 @@
 	<param name="calibration4">          0         0        0         0      0      0      0     2550  1580  255   504   250   490    230    510   750     </param>
 	<param name="calibration5">          0         0        0         0      0      0      0     2850  2550  30    35    10    3      5      35    110     </param>
 	<param name="calibrationZero">       0         0        0         0      0      0      0     0     0     0     0     0     0      0      0     0       </param>
-	<param name="calibrationDelta">      0         0        0         0      0      0      0     0     0     0     0     0     0      0      0     0       </param>
+	<param name="calibrationDelta">      2.9      -6.6     -20       -18.5   0      0      0     0     0     0     0     0     0      0      0     0       </param>
 
 	<param name="startupPosition">      -35        30       0         50     0      0      0     25    30    0     0     0     0      0      0     0    </param>
 	<param name="startupVelocity">       10        10       10        10     30     30     30    60    100   100   100   100   100    100    100   100  </param>
@@ -33,7 +33,7 @@
 </group>
 
  
-	<param name="CALIB_ORDER"> (0 1 2 3) (4) (5 6) (4) (5 6 7) (8 9 11 13) (10 12 14 15) </param>
+	<param name="CALIB_ORDER"> (0 1 2 3) (4) (5 6 7) (8 9 11 13) (10 12 14 15) </param>
 					<!-- (4) (5 6 7) (8 9 11 13) (10 12 14 15) -->
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">right_arm-mc_remapper</param>
