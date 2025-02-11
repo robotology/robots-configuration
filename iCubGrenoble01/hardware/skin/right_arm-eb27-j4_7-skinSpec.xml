@@ -24,7 +24,7 @@
         <group name="specialCfgTriangles">
             <param name="numOfSets">         20  </param>
             <param name="triangleSetCfg1">     1            14        0             6             1              0            0x2000      </param>
-           <param name="triangleSetCfg2">      1            14        8             11             1              2           0x2200       </param>
+           <param name="triangleSetCfg2">      1            14        7             15             1              2           0x0000       </param>
            
            <param name="triangleSetCfg3">      1            13        0             15             1              2           0x2200       </param>
            

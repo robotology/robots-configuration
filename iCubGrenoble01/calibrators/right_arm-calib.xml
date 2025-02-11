@@ -9,7 +9,7 @@
 		    <param name="joints">16</param> <!-- the number of joints of the robot part -->
 		    <param name="deviceName"> Right_Arm_Calibrator </param>
 		</group>
-<!-- joint logical number                 0         1        2         3      4      5      6     7     8     9    10    11    12     13     14    15 -->
+<!-- joint logical number                    0         1        2         3      4      5      6     7     8     9    10    11    12     13     14    15 -->
 <group name="HOME">
 	<param name="positionHome">         -30        30        0        45      0      0     0     35    65     0     0     0     0      0      0     0     </param>
 	<param name="velocityHome">          10        10        10       10     30     30     30    60    30    30    30    30    30     30     30    30     </param>
@@ -19,12 +19,12 @@
 <group name="CALIBRATION">
 	<param name="calibrationType">       12        12       12        12     5      12     12    7     7     6     6     6     6      6      6     6       </param>
 	<param name="calibration1">          54175     49183    57855     15631  1500   1000   21100 0     0     0     0     0     0      0      0     0       </param>
-	<param name="calibration2">	         0         0        0         0      16384  0      0     0     0     9102  9102  9102  9102   9102   9102  10000   </param>
-	<param name="calibration3">	         0         0        0	      0	     0	    0      0     0     0    -1     1    -1     1     -1      1     1       </param>
+	<param name="calibration2">	     0         0        0         0      16384  0      0     0     0     9102  9102  9102  9102   9102   9102  10000   </param>
+	<param name="calibration3">	     0         0        0	  0      0      0      0     0     0    -1     1    -1     1     -1      1     1       </param>
 	<param name="calibration4">          0         0        0         0      0      0      0     2550  1580  255   504   250   490    230    510   750     </param>
 	<param name="calibration5">          0         0        0         0      0      0      0     2850  2550  30    35    10    3      5      35    110     </param>
 	<param name="calibrationZero">       0         0        0         0      0      0      0     0     0     0     0     0     0      0      0     0       </param>
-	<param name="calibrationDelta">      2.9      -6.6     -20       -18.5   0      0      0     0     0     0     0     0     0      0      0     0       </param>
+	<param name="calibrationDelta">      2.9       -5     -20       -18.5   0      0      0     0     0     0     0     0     0      0      0     0       </param>
 
 	<param name="startupPosition">      -35        30       0         50     0      0      0     25    30    0     0     0     0      0      0     0    </param>
 	<param name="startupVelocity">       10        10       10        10     30     30     30    60    100   100   100   100   100    100    100   100  </param>
