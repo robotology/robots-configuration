@@ -102,7 +102,8 @@ ${GREEN}set-blf-webcam${NC} Bash script that can be used to set the number of th
 ${GREEN}runYarpRobotInterface${NC} Run yarprobotinterface with whole-body-dynamics."'
 
 
-if [ "$PS1" ]; then
+if [[ $- == *i* ]]
+then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
 
   # automatic terminator title
