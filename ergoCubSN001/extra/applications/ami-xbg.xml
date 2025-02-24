@@ -1,0 +1,90 @@
+<application>
+    <name>ami-xbg</name>
+
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters>--config realsense2.xml</parameters>
+        <node>ergocub-head</node>
+    </module>
+    <module>
+        <name>ergoCubEmotions</name>
+        <parameters>--context ergoCubEmotions --from config.ini </parameters>
+        <node>ergocub-head</node>
+    </module>
+    <module>
+        <name>WalkingModule</name>
+        <parameters>--from dcm_walking_autonomous.ini</parameters>
+        <node>ergocub-torso</node>
+    </module>
+    <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
+        <name>python</name>
+        <parameters>allyGUI.py </parameters>
+        <node>llm-node</node>
+    </module>
+    <module>
+        <name>yarpdev</name>
+        <parameters>--device deviceBundler --wrapper_device AudioRecorderWrapper --attached_device portaudioRecorder --name /ergocub/microphone --min_samples_over_network 150 --max_samples_over_network 1000 --AUDIO_BASE::rate 16000 --AUDIO_BASE::samples 4000 --AUDIO_BASE::channels 1 --start</parameters>
+        <node>ergocub-torso</node>
+   </module>
+   <module>
+        <name>ffplay</name>
+        <parameters>-protocol_whitelist "file,udp,rtp" -nodisp audio_ffmpeg_llm.sdp</parameters>
+    <node>ergocub-head</node>
+   </module>
+   <module>
+        <name>ffmpeg</name>
+        <parameters>-f dshow -i audio="Stereo Mix (Realtek(R) Audio)" -acodec libopus -f rtp rtp://10.0.2.23:5000 -sdp_file C:/Users/ergocub/Documents/audio_ffmpeg_llm.sdp </parameters>
+    <node>llm-node</node>
+   </module>
+    <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm\config\walking_chat</workdir>
+        <name>yarprobotinterface</name>
+        <parameters>--config iframetransform_to_iwear_walking.xml</parameters>
+        <node>llm-node</node>
+   </module>
+   <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
+        <name>python</name>
+        <parameters>llmGUI.py</parameters>
+        <node>llm-node</node>
+    </module>
+    <module>
+        <workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/src/</workdir>
+        <name>conda</name>
+        <parameters>run -n autonomousenv python -m inference.inference</parameters>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <output>/xbg/joints</output>
+        <input>/walking-coordinator/humanState:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/xbg/joypad</output>
+        <input>/talking_ergocub/joypad/xbg_joypad:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/talking_ergocub/joypad/joypad:o</output>
+        <input>/walking-coordinator/goal:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/talking_ergocub/FrameTransform/data:o</output>
+        <input>/talking_ergocub/FrameTransform/data:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/ergocub/microphone/audio:o</output>
+        <input>/talking_ergocub/asr/audio:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/xbg/joypad</output>
+        <input>/walking-coordinator/goal:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+
+</application>
