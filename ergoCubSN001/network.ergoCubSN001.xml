@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 
-<!--    description 
+<!--    description
 
         this file contains the boards mounted on the robot grouped by body parts.
 
         there is only one group called host which contains name and as many rows as the supported
-        devices. each one is tagged <hasdevice> and contains a type (ETH or CFW) and an address 
+        devices. each one is tagged <hasdevice> and contains a type (ETH or CFW) and an address
         (in ip format or just a number for the case of CFW).
-        
-        then there are many groups called part. each one may contain many groups called boards: 
+
+        then there are many groups called part. each one may contain many groups called boards:
         one per physical board on the robot on that part.
-        
-        every <board> has two compulsory properties: type, name. it may also have an 
-        every <board> has two compulsory properties: type, name. it may also have an 
+
+        every <board> has two compulsory properties: type, name. it may also have an
+        every <board> has two compulsory properties: type, name. it may also have an
         additional property: required. so far the only value of required is "version".
-        each <board> contains three compulsory fields: ondevice, ataddress, connected. 
+        each <board> contains three compulsory fields: ondevice, ataddress, connected.
         and it may have an additional field: version (if there is the required="version" property).
         here is description of each of the previous:
-        -   type: must have a valid board name in short format: ems4, mc4plus, foc, strain, 
+        -   type: must have a valid board name in short format: ems4, mc4plus, foc, strain,
             strain2, mtb, mtb4, mais, mc4, etc.
         -   name: can be any string.
         -   required: if present can be only ="version". it tells that that board MUST match
-            a given version of firmware. it is used to identify amongst the many versions of mc4 
+            a given version of firmware. it is used to identify amongst the many versions of mc4
             boards.
         -   ondevice: tells on which device the board is located. it can be ETH (for ETH robots)
-            or CFW for first generation CAN robots. 
+            or CFW for first generation CAN robots.
         -   ataddress: contains the network address under device. if device is ETH there is
             ip="10.0.1.x" and if the board is a CAN board there is also canbus="c" canadr="a".
             if the device is CFW, then there is only canbus="c" canadr="a".
@@ -32,7 +32,7 @@
             which are the previous and the next ip addresses (they both must be present). the last
             board must have next="none". if bus is CAN there are no extra fields.
         -   version: contains the required version. typically only major and minor values are specified.
-         
+
         the aim of this files is to be parsed by the python program robotFWmanager.py
   -->
 
@@ -77,8 +77,8 @@
             <ataddress ip="10.0.1.2" canbus="1" canadr="2"  />
             <connected bus="CAN" />
         </board>
-		
-        <board type='strain2' name="strain2.13">
+
+        <board type='strain2c' name="strain2.13">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.2" canbus="2" canadr="13"  />
             <connected bus="CAN" />
@@ -88,7 +88,7 @@
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.4" />
 			<connected bus="ETH" prev="10.0.1.2" next="10.0.1.23" />
-        </board>       
+        </board>
 
         <board type='foc' name="foc.2.1">
             <ondevice>ETH</ondevice>
@@ -102,7 +102,7 @@
             <connected bus="CAN" />
         </board>
 
-	    <board type='mtb4' name="mtb4.1">
+	    <board type='mtb4c' name="mtb4.1">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.4" canbus="2" canadr="1"  />
             <connected bus="CAN" />
@@ -177,8 +177,8 @@
             <ataddress ip="10.0.1.1" canbus="1" canadr="2"  />
             <connected bus="CAN" />
         </board>
-		
-        <board type='strain2' name="strain2.13">
+
+        <board type='strain2c' name="strain2.13">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.1" canbus="2" canadr="13"  />
             <connected bus="CAN" />
@@ -188,7 +188,7 @@
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.3" />
 			<connected bus="ETH" prev="10.0.1.1" next="10.0.1.22" />
-        </board>       
+        </board>
 
         <board type='foc' name="foc.2.1">
             <ondevice>ETH</ondevice>
@@ -272,6 +272,12 @@
             <connected bus="CAN" />
         </board>
 
+        <board type='foc' name="foc.5.2">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.5" canbus="1" canadr="2"  />
+            <connected bus="CAN" />
+        </board>
+
         <board type='foc' name="foc.5.3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.5" canbus="1" canadr="3"  />
@@ -280,7 +286,7 @@
 
         <board type='foc' name="foc.5.4">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.5" canbus="1" canadr="4"  />
+            <ataddress ip="10.0.1.5:24" canbus="1" canadr="4"  />
             <connected bus="CAN" />
         </board>
 
@@ -412,13 +418,13 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain2' name="strain2.13">
+        <board type='strain2c' name="strain2.13">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.9" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='strain2' name="strain2.14">
+        <board type='strain2c' name="strain2.14">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.9" canbus="2" canadr="14"  />
             <connected bus="CAN" />
@@ -427,7 +433,7 @@
     </part>
 
     <part name="custom">
- 
+
     </part>
 
 
@@ -437,5 +443,3 @@
 
 
 </robotnetwork>
-
-
