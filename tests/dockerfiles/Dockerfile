@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
     apt install -y sudo apt-utils apt-transport-https software-properties-common build-essential psmisc procps gdb gdebi autoconf locales \
                   git gitk cmake libace-dev libtinyxml-dev libtinyxml2-dev libxml2-dev libxml2-utils \
-                  coinor-libipopt-dev libeigen3-dev libgsl-dev libopencv-dev libsdl1.2-dev \
+                  coinor-libipopt-dev libeigen3-dev libgsl-dev libopencv-dev libsdl1.2-dev libsqlite3-dev \
                   libi2c-dev i2c-tools xmlstarlet magic-wormhole
 
 # Select options
