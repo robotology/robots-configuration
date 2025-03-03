@@ -113,7 +113,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
 RUN cd ${DEPENDENCIES_DIR} && \
     git clone https://github.com/robotology/cer.git && \
     cd cer && mkdir -p build && cd build && \
-    git checkout devel && \
+    git checkout $(git tag | tail -1) && \
     cmake .. \
           -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install \
