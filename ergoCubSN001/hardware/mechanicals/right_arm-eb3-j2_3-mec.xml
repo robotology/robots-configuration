@@ -30,7 +30,7 @@
         <param name="AutoCalibration">          0                   0                   </param>
         <param name="Verbose">                  0                   0                   </param>
         <param name="HasHallSensor">            0                   0                   </param>
-        <param name="TemperatureSensorType">    PT100               PT100               </param> <!-- Supported values: PT100 or NONE -->
+        <param name="TemperatureSensorType">    NONE               PT100               </param> <!-- Supported values: PT100 or NONE -->
    <!--     <param name="TemperatureSensorType">    NONE                NONE                </param> --> 
         <param name="HasRotorEncoder">          1                   1                   </param>
         <param name="HasRotorEncoderIndex">     1                   1                   </param>
