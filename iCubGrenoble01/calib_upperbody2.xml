@@ -18,9 +18,9 @@
     <xi:include href="./hardware/motorControl/face-eb22-j0-mc.xml" /> 
     <xi:include href="./wrappers/motorControl/face-mc_wrapper.xml" /> --> 
 
-    <!-- cartesian -->
+    <!-- cartesian 
     <xi:include href="cartesian/left_arm_cartesian.xml" />
-    <xi:include href="cartesian/right_arm_cartesian.xml" />
+    <xi:include href="cartesian/right_arm_cartesian.xml" /> -->
 
     <!-- LEFT ARM -->
     <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" />
@@ -56,8 +56,8 @@
 
 
     <!-- CALIBRATORS -->
-    <xi:include href="calibrators/left_arm_calib.xml" />
-    <xi:include href="calibrators/right_arm_calib.xml" />
+    <xi:include href="calibrators/left_arm-calib.xml" />
+    <xi:include href="calibrators/right_arm-calib.xml" />
    <!-- <xi:include href="calibrators/head-calib.xml" />
     <xi:include href="calibrators/face-calib.xml" /> -->
 

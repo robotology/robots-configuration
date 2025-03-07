@@ -18,7 +18,7 @@
 
 <group name="CALIBRATION">
 	<param name="calibrationType">       12        12       12        12     5      12     12    7     7     6     6     6     6      6      6     6       </param>
-	<param name="calibration1">          54175     49183    57855     15631  1500   27119  21439 0     0     0     0     0     0      0      0     0       </param>
+	<param name="calibration1">          54175     49183    57855     15631  1500   1057   20655 0     0     0     0     0     0      0      0     0       </param>
 	<param name="calibration2">	         0         0        0         0      16384  0      0     0     0     9102  9102  9102  9102   9102   9102  10000   </param>
 	<param name="calibration3">	         0         0        0	      0	     0	    0      0     0     0    -1     1    -1     1     -1      1     1       </param>
 	<param name="calibration4">          0         0        0         0      0      0      0     1375  180   255   495   241   488    250    465   749     </param>
@@ -33,7 +33,7 @@
 </group>
 
  
-	<param name="CALIB_ORDER"> (0 1 2 3) (4) (5 6 7) (8 9 11 13) (10 12 14 15) </param>
+	<param name="CALIB_ORDER"> (0 1 2 3) (4) (5 6) (4) (5 6 7) (8 9 11 13) (10 12 14 15) </param>
 					<!-- (4) (5 6 7) (8 9 11 13) (10 12 14 15) -->
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">right_arm-mc_remapper</param>
@@ -46,4 +46,3 @@
 		<action phase="interrupt3" level="1" type="abort" />
 
 	</device>
-

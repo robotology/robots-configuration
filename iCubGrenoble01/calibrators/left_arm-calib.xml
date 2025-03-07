@@ -17,11 +17,11 @@
 				                                                                
 		<group name="CALIBRATION">                                                      
 			<param name="calibrationType">        12         12         12         12           5      12     12     7     7     6     6     6     6      6      6     6     </param>
-			<param name="calibration1">           48751   	 33471      16799      38511       -1500   37087  45583  0     0     0     0     0     0      0      0     0     </param>
+			<param name="calibration1">           48751   	 33471      16799      38511       -1500   65391  53199  0     0     0     0     0     0      0      0     0     </param>
 			<param name="calibration2">	          0          0          0          0	        16384  0      0      0     0     9102  9102  9102  9102   9102   9102  10000 </param>
 			<param name="calibration3">           0          0          0          0	        0      0      0      0     0    -1     1    -1     1     -1      1     1     </param>
-			<param name="calibration4">           0          0          0          0            0      0      0      2500  670   251   474   236   486    255    464   748   </param>
-			<param name="calibration5">           0          0          0          0            0      0      0      2860  4312  0     0     0     37     9      2     90    </param>
+			<param name="calibration4">           0          0          0          0            0      0      0      0     2000  245   510   255   502    255    510   766   </param>
+			<param name="calibration5">           0          0          0          0            0      0      0      0     3350  0     0     0     0      0      0     80    </param>
 			<param name="calibrationZero">        0          0          0          0            0      0      0      0     0     0     0     0     0      0      0     0     </param>
 			<param name="calibrationDelta">       0          0          0          0            0      0      0      0     0     0     0     0     0      0      0     0     </param>
 						                                                        
