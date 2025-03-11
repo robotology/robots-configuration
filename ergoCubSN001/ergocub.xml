@@ -10,16 +10,16 @@
     <devices>
 
     <!-- POS4 -->
-    <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
-    <xi:include href="hardware/POS/right_hand-pos4.xml" disabled_by="disable_right_hand" />
-    <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" disabled_by="disable_left_hand" />
-    <xi:include href="hardware/POS/left_hand-pos4.xml" disabled_by="disable_left_hand" />
+    <!-- <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" /> -->
+    <!-- <xi:include href="hardware/POS/right_hand-pos4.xml" disabled_by="disable_right_hand" /> -->
+    <!-- <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" disabled_by="disable_left_hand" /> -->
+    <!-- <xi:include href="hardware/POS/left_hand-pos4.xml" disabled_by="disable_left_hand" /> -->
 
     <!-- POS2 -->
-    <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" />
-    <xi:include href="hardware/POS/right_hand-pos2.xml" disabled_by="disable_right_hand" />
-    <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" disabled_by="disable_left_hand" />
-    <xi:include href="hardware/POS/left_hand-pos2.xml" disabled_by="disable_left_hand" />
+    <!-- <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" /> -->
+    <!-- <xi:include href="hardware/POS/right_hand-pos2.xml" disabled_by="disable_right_hand" /> -->
+    <!-- <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" disabled_by="disable_left_hand" /> -->
+    <!-- <xi:include href="hardware/POS/left_hand-pos2.xml" disabled_by="disable_left_hand" /> -->
 
     <!-- motor controllers wrappers -->
     <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" disabled_by="disable_left_leg" />
@@ -51,16 +51,16 @@
     <!-- LEFT ARM -->
     <xi:include href="hardware/motorControl/left_arm-eb2-j0_1-mc.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/motorControl/left_arm-eb4-j2_3-mc.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/motorControl/left_arm-eb31-j4_6-mc.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" disabled_by="disable_left_arm" />
-    <xi:include href="hardware/motorControl/left_arm-eb25-j11_12-mc.xml" disabled_by="disable_left_arm" />
+    <!-- <xi:include href="hardware/motorControl/left_arm-eb31-j4_6-mc.xml" disabled_by="disable_left_arm" /> -->
+    <!-- <xi:include href="hardware/motorControl/left_arm-eb23-j7_10-mc.xml" disabled_by="disable_left_arm" /> -->
+    <!-- <xi:include href="hardware/motorControl/left_arm-eb25-j11_12-mc.xml" disabled_by="disable_left_arm" /> -->
 
     <!-- RIGHT ARM -->
     <xi:include href="hardware/motorControl/right_arm-eb1-j0_1-mc.xml" disabled_by="disable_right_arm" />
     <xi:include href="hardware/motorControl/right_arm-eb3-j2_3-mc.xml" disabled_by="disable_right_arm" />
-    <xi:include href="hardware/motorControl/right_arm-eb30-j4_6-mc.xml" disabled_by="disable_right_arm" />
-    <xi:include href="hardware/motorControl/right_arm-eb22-j7_10-mc.xml" disabled_by="disable_right_arm" />
-    <xi:include href="hardware/motorControl/right_arm-eb24-j11_12-mc.xml" disabled_by="disable_right_arm" />
+    <!-- <xi:include href="hardware/motorControl/right_arm-eb30-j4_6-mc.xml" disabled_by="disable_right_arm" /> -->
+    <!-- <xi:include href="hardware/motorControl/right_arm-eb22-j7_10-mc.xml" disabled_by="disable_right_arm" /> -->
+    <!-- <xi:include href="hardware/motorControl/right_arm-eb24-j11_12-mc.xml" disabled_by="disable_right_arm" /> -->
 
     <!-- LEFT LEG -->
     <xi:include href="hardware/motorControl/left_leg-eb8-j0_3-mc.xml" disabled_by="disable_left_leg" />
@@ -137,7 +137,7 @@
     <xi:include href="calibrators/head-calib.xml" disabled_by="disable_head" />
 
     <!-- ROS2 Wrappers -->
-  <!--  <xi:include href="wrappers/inertials/imu_ros2.xml" /> --> 
+  <!--  <xi:include href="wrappers/inertials/imu_ros2.xml" /> -->
     <xi:include href="wrappers/motorControl/alljoints-mc_remapper.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
     <xi:include href="wrappers/motorControl/alljoints-mc_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
     <xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" />
