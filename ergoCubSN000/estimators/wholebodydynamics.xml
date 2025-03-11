@@ -29,7 +29,7 @@
 	</group>
 
         <group name="multipleAnalogSensorsNames">
-            <param name="SixAxisForceTorqueSensorsNames">(l_arm_ft, r_arm_ft, l_leg_ft, l_foot_front_ft, l_foot_rear_ft, r_leg_ft, r_foot_front_ft, r_foot_rear_ft)</param>
+            <param name="SixAxisForceTorqueSensorsNames">(l_arm_ft, r_arm_ft, l_foot_front_ft, l_foot_rear_ft, r_foot_front_ft, r_foot_rear_ft)</param>
         </group>
 
 
