@@ -6,14 +6,14 @@
         <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
              defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->
         <param name="SixAxisForceTorqueSensorsNames">
-          (r_leg_ft r_foot_rear_ft r_foot_front_ft)
+          (r_foot_rear_ft r_foot_front_ft)
         </param>
         <param name="TemperatureSensorsNames">
-          (r_leg_ft r_foot_rear_ft r_foot_front_ft)
+          (r_foot_rear_ft r_foot_front_ft)
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
-                <elem name="right_leg-eb6-j0_3-strain">  right_leg-eb6-j0_3-strain </elem>
+                <!-- <elem name="right_leg-eb6-j0_3-strain">  right_leg-eb6-j0_3-strain </elem> -->
                 <elem name="right_leg-eb7-j4_5-strain">  right_leg-eb7-j4_5-strain </elem>
             </paramlist>
         </action>

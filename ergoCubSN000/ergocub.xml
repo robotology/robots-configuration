@@ -79,13 +79,13 @@
 
     <!-- FT SENSORS - REMAPPERS -->
     <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" disabled_by="disable_left_leg" />
-    <!-- <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" disabled_by="disable_right_leg" /> -->
+    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" disabled_by="disable_right_leg" />
 
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" disabled_by="disable_left_leg" />
-    <!-- <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" disabled_by="disable_right_leg" /> -->
+    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" disabled_by="disable_right_leg" />
 
     <!-- INERTIAL SENSOR -->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" disabled_by="disable_head" />
@@ -151,7 +151,7 @@
     <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" />
 
     <!-- ESTIMATORS -->
-    <!-- <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" /> -->
+    <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
 
   </devices>
 </robot>
