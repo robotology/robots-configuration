@@ -11,8 +11,10 @@
   <node display=":0" address="10.0.10.164" user="icub">icub-console-gui</node>
   <node>icub-virtualizer</node>
   <node>ally</node>
+  <node>llm-node</node>
   <node display=":1" address="10.0.2.14">ergocub001-lap</node>
   <node address="10.0.2.12">ergocub001-torso</node>
   <node display=":0" address="10.0.2.13">ergocub001-head</node>
+  <node>llm-node-001</node>
 
 </cluster>
