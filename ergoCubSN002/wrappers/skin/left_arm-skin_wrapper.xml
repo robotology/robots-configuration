@@ -4,11 +4,11 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-skin_wrapper" type="skinWrapper">
         <param name="period">       20                  </param>
-        <param name="total_taxels"> 192                </param>
+        <param name="total_taxels"> 120                </param>
         <param name="device">       skinWrapper             </param>
         
         <paramlist name="ports">
-          <elem name="left_hand">   0   191  0 191</elem>
+          <elem name="left_hand">   0   119  0 119</elem>
           <!-- elem name="left_forearm">    192 575  0 383</elem>
           <elem name="left_arm">    576 1343 0 767</elem-->
         </paramlist>
