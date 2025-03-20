@@ -2,7 +2,7 @@
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova10" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova11" build="1">
 
     <group name="GENERAL">
         <param name="MotioncontrolVersion"> 6 </param>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova10" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubEdinburgh01" build="1">
 
     <xi:include href="./pc104.xml" />
 
@@ -16,7 +16,7 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "face-eb22-j0"        </param> 
+            <param name="Name">                     "face-eb22-j0_1"        </param> 
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>

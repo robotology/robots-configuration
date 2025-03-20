@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova10" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="iCubGenova11" build="1">
     <group name="GENERAL">
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 4 </param> <!-- the number of joints of the robot part -->
 
         <!-- joint number in sub-part           0             1               2               3           -->
         <!-- joint name                         neck-yaw       eyes-tilt       eyes-vers       eyes-verg   -->     <!-- j2 is right-eye, j3 is left-eye -->
-        <param name="AxisMap">                  0              1               2               3                   </param> 
+        <param name="AxisMap">                  0              1               2               3                   </param>
         <param name="AxisName">                "neck_yaw"      "eyes_tilt"     "eyes_version"   "eyes_vergence"           </param>
         <param name="AxisType">                "revolute"    "revolute"         "revolute"    "revolute"           </param>
         <param name="Encoder">                  182.044        182.044         182.044         182.044             </param>   
