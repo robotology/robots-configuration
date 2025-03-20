@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ergoCubSN000" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_imu_recev" type="multipleanalogsensorsclient">
+        <param name="period"> 0.010 </param>
+        <param name="local">   /head_imu_client:i </param>
+        <param name="remote">  /ergocub/head/inertials  </param>
+        <!--<param name="carrier">  fast_tcp+send.portmonitor+file.bottle_compression_zlib+recv.portmonitor+file.bottle_compression_zlib+type.dll  </param>-->
+        <!--<param name="timeout">  10.0  </param>-->
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head_imu_sender" type="imu_nws_ros2">  <!--imu_nwc_ros2-->
+        <param name="period"> 0.01 </param>
+    
+        <action phase="startup" level="6" type="attach">
+           <paramlist name="networks">
+              <elem name="SetOfIMUs"> head_imu_recev </elem>
+           </paramlist>
+        </action>
+     
+        <param name ="node_name"> filtered_head_imu_local </param>
+        <param name ="topic_name"> /head_imu</param>
+        <param name ="sensor_name"> head_imu </param>
+     
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+</devices>
+</robot>

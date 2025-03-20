@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ergoCubSN000" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="recev" type="rangefinder2D_nwc_yarp">
+        <param name="period"> 0.010 </param>
+        <param name="local">   /laser_client_repeater:i </param>
+        <param name="remote">  /ergocub/laser:o  </param>
+        <param name="carrier">  fast_tcp+send.portmonitor+file.bottle_compression_zlib+recv.portmonitor+file.bottle_compression_zlib+type.dll  </param>
+
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="sender" type="rangefinder2D_nws_ros2">
+        <param name="period"> 0.01 </param>
+     
+        <action phase="startup" level="6" type="attach">
+           <paramlist name="networks">
+              <elem name="ergocub_laser"> recev </elem>
+           </paramlist>
+        </action>
+    
+        <param name ="node_name"> ergocub_laser_local </param>
+        <param name ="topic_name"> /scan_local</param>
+        <param name ="frame_id"> head_laser_frame </param>
+     
+        <action phase="shutdown" level="5" type="detach" />
+    </device>
+</devices>
+</robot>
