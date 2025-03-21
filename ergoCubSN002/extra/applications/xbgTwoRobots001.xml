@@ -44,10 +44,10 @@
 	    <node>llm-node-001</node>
     </module>
     <module>
-        <workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation/src/</workdir>
-        <name>conda</name>
-        <parameters>run -n autonomousenv python -m inference.inference</parameters>
-        <node>localhost</node>
+        <workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation</workdir>
+        <name>bash</name>
+        <parameters>xbg001.sh</parameters>
+        <node>ergocub001-lap</node>
     </module>
 
     <connection>
@@ -98,3 +98,4 @@
   
 
 </application>
+
