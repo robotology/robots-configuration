@@ -1,0 +1,101 @@
+<application>
+    <name>xbgTwoRobots001</name>
+       
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters>--config realsense2.xml</parameters>
+	    <node>ergocub001-head</node>
+    </module>
+    <module>
+    	<name>ergoCubEmotions</name>
+    	<parameters>--context ergoCubEmotions --from config.ini --portprefix /ergocub001</parameters>
+    	<node>ergocub001-head</node>
+    </module>
+    <module>
+        <name>WalkingModule</name>
+        <parameters>--from dcm_walking_autonomous.ini</parameters>
+	    <node>ergocub001-torso</node>
+    </module>
+    <module>
+        <name>yarpdev</name>
+        <parameters>--device deviceBundler --wrapper_device AudioRecorderWrapper --attached_device portaudioRecorder --name /ergocub001/microphone --min_samples_over_network 150 --max_samples_over_network 1000 --AUDIO_BASE::rate 16000 --AUDIO_BASE::samples 4000 --AUDIO_BASE::channels 1 --start</parameters>
+        <node>ergocub001-torso</node>
+    </module>
+    <module>
+        <name>ffplay</name>
+        <parameters>-protocol_whitelist "file,udp,rtp" -nodisp audio_ffmpeg_llm_001.sdp</parameters>
+        <node>ergocub001-head</node>
+    </module>
+    <module>
+        <name>ffmpeg</name>
+        <parameters>-f dshow -i audio="Stereo Mix (Realtek(R) Audio)" -acodec libopus -f rtp rtp://10.0.2.13:5000 -sdp_file C:/Users/icub/Documents/audio_ffmpeg_llm_001.sdp </parameters>
+        <node>llm-node-001</node>
+    </module>
+    <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm\config\walking_chat</workdir>
+        <name>yarprobotinterface</name>
+        <parameters>--config iframetransform_to_iwear_walking_two_robots_001.xml</parameters>
+        <node>llm-node-001</node>
+    </module>
+    <module>
+        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
+        <name>python</name>
+        <parameters>llmGUI.py wake_word=ergocub1 llm=gemini action_handler=xbgda+ rgbd_camera=realsense_sn001 port_prefix=/talking_ergocub001 ++audio_source.yarp_audio_source=/ergocub001/microphone/audio:o ++rgbd_camera.remote_image_port=/depthCamera001/rgbImage:o ++rgbd_camera.remote_depth_port=/depthCamera001/depthImage:o ++emotion_handler.yarp_remote=/ergocub001/ergoCubEmotions/rpc</parameters>
+	    <node>llm-node-001</node>
+    </module>
+    <module>
+        <workdir>/usr/local/src/robot/ami/element_exteroceptive-behaviour-generation</workdir>
+        <name>bash</name>
+        <parameters>xbg001.sh</parameters>
+        <node>ergocub001-lap</node>
+    </module>
+
+    <connection>
+        <output>/xbg001/joints</output>
+        <input>/walking-coordinator-001/humanState:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/xbg001/joypad</output>
+        <input>/talking_ergocub001/joypad/xbg_joypad:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/talking_ergocub001/joypad/joypad:o</output>
+        <input>/walking-coordinator-001/goal:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/talking_ergocub001/FrameTransform/data:o</output>
+        <input>/talking_ergocub001/FrameTransform/data:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/ergocub001/microphone/audio:o</output>
+        <input>/talking_ergocub001/asr/audio:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+    <connection>
+        <output>/depthCamera001/rgbImage:o</output>
+        <input>/talking_ergocub001/depthCamera/rgbImage:i</input>
+        <protocol>mjpeg</protocol>
+    </connection>
+    <connection>
+        <output>/depthCamera001/depthImage:o</output>
+        <input>/talking_ergocub001/depthCamera/depthImage:i</input>
+        <protocol>fast_tcp+send.portmonitor+file.depthimage_compression_zlib+recv.portmonitor+file.depthimage_compression_zlib+type.dll</protocol>
+    </connection>
+        <connection>
+        <output>/talking_ergocub001/emotion_handler/rpc</output>
+        <input>/ergocub001/ergoCubEmotions/rpc</input>
+        <protocol>tcp</protocol>
+    </connection>
+    <connection>
+        <output>/xbg001/joypad</output>
+        <input>/walking-coordinator-001/goal:i</input>
+        <protocol>fast_tcp</protocol>
+    </connection>
+  
+
+</application>
+

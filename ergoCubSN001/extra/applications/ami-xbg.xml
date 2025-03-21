@@ -46,7 +46,7 @@
    <module>
         <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
         <name>python</name>
-        <parameters>llmGUI.py</parameters>
+        <parameters>llmGUI.py wake_word=ergocub2 llm=gemini action_handler=xbgda+</parameters>
         <node>llm-node</node>
     </module>
     <module>
@@ -82,9 +82,25 @@
         <protocol>fast_tcp</protocol>
     </connection>
     <connection>
+        <output>/depthCamera/rgbImage:o</output>
+        <input>/talking_ergocub/depthCamera/rgbImage:i</input>
+        <protocol>mjpeg</protocol>
+    </connection>
+    <connection>
+        <output>/depthCamera/depthImage:o</output>
+        <input>/talking_ergocub/depthCamera/depthImage:i</input>
+        <protocol>fast_tcp+send.portmonitor+file.depthimage_compression_zlib+recv.portmonitor+file.depthimage_compression_zlib+type.dll</protocol>
+    </connection>
+    <connection>
+        <output>/talking_ergocub/emotion_handler/rpc</output>
+        <input>/ergoCubEmotions/rpc</input>
+        <protocol>tcp</protocol>
+    </connection>
+    <connection>
         <output>/xbg/joypad</output>
         <input>/walking-coordinator/goal:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
 
 </application>
+
