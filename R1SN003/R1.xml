@@ -100,8 +100,9 @@
    <!-- <xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" />
     <xi:include href="wrappers/FT/right_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_arm" /> -->
 
-    <!--  ROS -->
-    <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" enabled_by="enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
+    <!--  ALL JOINTS YARP/ROS -->
+    <xi:include href="wrappers/motorControl/cer_alljoints_remapper.xml" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
+    <xi:include href="wrappers/motorControl/cer_alljoints_wrapper.xml" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
     <xi:include href="wrappers/motorControl/cer_alljoints_ros2_wrapper.xml" enabled_by="enable_ros2" disabled_by="disable_base disable_head disable_left_arm disable_left_hand disable_right_arm disable_right_hand disable_torso"/>
 
     <!--  CALIBRATORS -->
