@@ -37,6 +37,7 @@ alias test-speaker='speaker-test -t wav -c 1'
 
 # Alias for running whole-body-dynamics
 alias runYarpRobotInterface='YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface'
+alias runYarpRobotInterfaceTwoRobots='YARP_PORT_PREFIX=/ergocub001 YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface'
 
 alias rotate-screen='xrandr --display :0 -o inverted'
 
