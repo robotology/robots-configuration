@@ -15,6 +15,9 @@
   <node display=":1" address="10.0.2.14">ergocub001-lap</node>
   <node address="10.0.2.12">ergocub001-torso</node>
   <node display=":0" address="10.0.2.13">ergocub001-head</node>
+  <node display=":1" address="10.0.2.4">ergocub000-lap</node>
+  <node address="10.0.2.2">ergocub000-torso</node>
+  <node display=":0" address="10.0.2.3">ergocub000-head</node>
   <node>llm-node-001</node>
 
 </cluster>
