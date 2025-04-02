@@ -22,7 +22,7 @@
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperyarp" type="rgbdSensor_nws_yarp">
     <param name="period"> 0.03 </param>
-    <param name="name">    /depthCamera </param>
+    <param extern-name="name" name="name">    /depthCamera </param>
     <action phase="startup" level="10" type="attach">
       <paramlist name="networks">
         <elem name="subdevicergbd"> realsenseD450 </elem>
