@@ -15,9 +15,9 @@
         <param name="jntPosMax">                 102                 108       78        5      </param>
         <param name="jntPosMin">                -42                 -15      -78        -103    </param>
         <param name="jntVelMax">                240                 240       240      240    </param>
-        <param name="motorNominalCurrents">     15000               15000     5000     10000  </param>
-        <param name="motorPeakCurrents">        20000               20000     10000    15000  </param>
-        <param name="motorOverloadCurrents">    30000               30000     15000    20000  </param>
+        <param name="motorNominalCurrents">     15000               15000     8000     15000  </param>
+        <param name="motorPeakCurrents">        20000               20000     10000    20000  </param>
+        <param name="motorOverloadCurrents">    30000               30000     15000    30000  </param>
         <param name="motorPwmLimit">            16000               16000     16000    16000  </param>
 <!-- Below are safe limits for the hip roll in case no temperature sensor is used. -->
 <!--
