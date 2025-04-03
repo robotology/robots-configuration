@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb5-j0_2-jtcvc" type="JointTorqueControlDevice">
+    <param name="remote">  /hijackingTrqCrl/torso  </param>
+    <param name="joint_list"> (  "torso_roll", "torso_pitch", "torso_yaw"  )</param>
+
+    <group name="TORQUE_CURRENT_PARAMS">
+        <param name="kt">(   0.047,  0.047,  0.047   )</param>
+        <param name="kfc">(  0.0, 0.0, 0.0  )</param>
+        <!-- <param name="kp">(  1.5, 1.5, 3.0  )</param> -->
+        <param name="kp">(  0.0, 0.0, 0.0  )</param>
+        <!-- <param name="kp">(  0.0, 0.0, 0.0  )</param> -->
+        <param name="ki">(  0.0, 0.0, 0.0  )</param>
+        <param name="max_curr">(  15.0, 15.0, 15.0  )</param>
+        <param name="friction_model"> ( "", "", "" ) </param>
+        <param name="bwfilter_cutoff_freq"> 0.0 </param>
+        <param name="bwfilter_order"> 0 </param>
+        <param name="bwfilter_enabled"> false </param>
+        <param name="max_output_friction">(  0.0, 0.0, 0.0  )</param>
+    </group>
+
+    <group name="FRICTION_PINN">
+        <param name="model"> ( "", "", "" ) </param>
+        <param name="thread_number"> 1 </param>
+    </group>
+
+    <group name="KF_JOINT">
+        <param name="Q0">(   0.0002531597161334673   0.0007201042934751647    0.00024269663493518243      )</param>
+        <param name="Q1">(   0.022162080623563264    0.008036781145026697     0.006910957225514555       )  </param>
+        <param name="Q2">(   23.988142473281066      24.78174797120868        24.400697067208775            ) </param>
+        <param name="R">(    0.0007037200315177511   0.003027567532311685     0.013873538944015959     )</param>
+        <param name="P0"> (  0.021233364199551377    0.0017943885448779256    0.31787791884813843          )</param>
+    </group>
+
+    <!-- <group name="KF_MOTOR">
+        <param name="Q0"> (  0.0002531597161334673   0.0007201042934751647    0.00024269663493518243  )  </param>
+        <param name="Q1"> (  0.022162080623563264    0.008036781145026697     0.006910957225514555   ) </param>
+        <param name="Q2"> (  23.988142473281066      24.78174797120868        24.400697067208775      )  </param>
+        <param name="R"> (   0.0007037200315177511   0.003027567532311685     0.013873538944015959  ) </param>
+        <param name="P0"> (  0.021233364199551377    0.0017943885448779256    0.31787791884813843    ) </param>
+    </group> -->
+
+
+    <!-- Warning, still in milliseconds -->
+    <param name="period"> 1 </param>
+
+    <action phase="startup" level="4" type="attach">
+        <paramlist name="networks">
+            <elem name="torso_joints">  torso-eb5-j0_2-mc </elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="18" type="detach" />
+</device>
