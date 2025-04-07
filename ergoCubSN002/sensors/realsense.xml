@@ -34,7 +34,7 @@
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="IRCamerasWrapperyarp" type="frameGrabber_nws_yarp">
     <param name="period"> 0.03 </param>
-    <param name="name">    /depthCameraIR </param>
+    <param extern-name="ir_name" name="name">  /depthCamera/ir:o </param>
     <param name="capabilities">    RAW </param>
     <action phase="startup" level="10" type="attach">
       <paramlist name="networks">
