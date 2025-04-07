@@ -15,10 +15,10 @@
         <param name="Encoder">                  182.044        182.044          182.044          182.044        </param>
         <param name="fullscalePWM">             3360            3360            3360             3360           </param>
         <param name="ampsToSensor">             1000.0          1000.0          1000.0           1000.0         </param>
-        <param name="Gearbox_M2J">               -66            66              66               -66            </param> 
+        <param name="Gearbox_M2J">               -30            66              30               -30             </param> 
         <param name="Gearbox_E2J">                1             1               1                1              </param>
         <param name="useMotorSpeedFbk">           1             1               1                1              </param>
-        <param name="MotorType">                 "DC"         "DC"               "DC"           "DC"               </param>
+        <param name="MotorType">                 "DC"         "DC"             "DC"           "DC"            </param>
 
        <param name="Verbose">     0  </param>
     </group>

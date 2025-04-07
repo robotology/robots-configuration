@@ -21,9 +21,9 @@
         <!-- joint name                         jaw         eyelids     lip-left    lip-high    lip-right   lip-bottom  -->        
         <group name="CALIBRATION">
             <param name="calibrationType">      3           12           5           5            5          5         </param>
-            <param name="calibration1">         666         0          -1000         1000         1000       1000      </param> 
+            <param name="calibration1">         666         24140      -1000         1000         1000       1000      </param> 
             <param name="calibration2">         999         0           6371         0            6371       0         </param> 
-            <param name="calibration3">         50799       0            0           0            0          0         </param>
+            <param name="calibration3">         11882       0            0           0            0          0         </param>
             <param name="calibration4">         0           0            0           0            0          0         </param>
             <param name="calibration5">         8           0            0           0            0          0         </param>
             <param name="calibrationZero">      180         0           35.0         0.0          35.0       0.0       </param>
@@ -53,4 +53,3 @@
         <action phase="interrupt3" level="1" type="abort" />
 
     </device>
-
