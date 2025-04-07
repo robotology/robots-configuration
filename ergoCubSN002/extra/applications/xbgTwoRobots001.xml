@@ -3,7 +3,7 @@
        
     <module>
         <name>yarprobotinterface</name>
-        <parameters>--config realsense2.xml</parameters>
+        <parameters>--config realsense2.xml --portprefix /ergocub001/depthCamera --name /ergocub001/depthCamera</parameters>
 	    <node>ergocub001-head</node>
     </module>
     <module>
@@ -13,7 +13,7 @@
     </module>
     <module>
         <name>WalkingModule</name>
-        <parameters>--from dcm_walking_autonomous.ini</parameters>
+        <parameters>--from dcm_walking_autonomous.ini --GENERAL::name ergocub001/walking-coordinator --ROBOT_CONTROL::robot ergocub001/ergocub --TRANSFORM_HELPER::ft_server_prefix ergocub001/ftsRobot --TRANSFORM_HELPER::SERVER::ft_server_prefix ergocub001/ftsRobot --TRANSFORM_HELPER::SERVER::local_rpc ergocub001/ftsRobot/rpc --FT_SENSORS::left_foot_wrench_output_port_name "(/ergocub001/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o, /ergocub001/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o)" --FT_SENSORS::right_foot_wrench_output_port_name "(/ergocub001/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o, /ergocub001/wholeBodyDynamics/right_foot_rear/cartesianEndEffectorWrench:o)"</parameters>
 	    <node>ergocub001-torso</node>
     </module>
     <module>
@@ -32,15 +32,14 @@
         <node>llm-node-001</node>
     </module>
     <module>
-        <workdir>D:\element_llm-task-planner\src\talkingllm\config\walking_chat</workdir>
+        <workdir>D:\element_llm-task-planner\scripts\talkingllm\config\transform_client</workdir>
         <name>yarprobotinterface</name>
         <parameters>--config iframetransform_to_iwear_walking_two_robots_001.xml</parameters>
         <node>llm-node-001</node>
     </module>
     <module>
-        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
         <name>python</name>
-        <parameters>llmGUI.py wake_word=ergocub1 llm=gemini action_handler=xbgda+ rgbd_camera=realsense_sn001 port_prefix=/talking_ergocub001 ++audio_source.yarp_audio_source=/ergocub001/microphone/audio:o ++rgbd_camera.remote_image_port=/depthCamera001/rgbImage:o ++rgbd_camera.remote_depth_port=/depthCamera001/depthImage:o ++emotion_handler.yarp_remote=/ergocub001/ergoCubEmotions/rpc</parameters>
+        <parameters>element_llm-task-planner/scripts/talkingllm/llmGUI.py wake_word=ergocub1 llm=gemini action_handler=xbgda+ rgbd_camera=realsense_sn001 port_prefix=/ergocub001/talking_ergocub ++audio_source.yarp_audio_source=/ergocub001/microphone/audio:o ++rgbd_camera.remote_image_port=/ergocub001/depthCamera/rgbImage:o ++rgbd_camera.remote_depth_port=/ergocub001/depthCamera/depthImage:o ++emotion_handler.yarp_remote=/ergocub001/ergoCubEmotions/rpc</parameters>
 	    <node>llm-node-001</node>
     </module>
     <module>
@@ -51,48 +50,48 @@
     </module>
 
     <connection>
-        <output>/xbg001/joints</output>
-        <input>/walking-coordinator-001/humanState:i</input>
+        <output>/ergocub001/xbg/joints</output>
+        <input>/ergocub001/walking-coordinator/humanState:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
     <connection>
-        <output>/xbg001/joypad</output>
-        <input>/talking_ergocub001/joypad/xbg_joypad:i</input>
+        <output>/ergocub001/xbg/joypad</output>
+        <input>/ergocub001/talking_ergocub/joypad/xbg_joypad:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
     <connection>
-        <output>/talking_ergocub001/joypad/joypad:o</output>
-        <input>/walking-coordinator-001/goal:i</input>
+        <output>/ergocub001/talking_ergocub/joypad/joypad:o</output>
+        <input>/ergocub001/walking-coordinator/goal:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
     <connection>
-        <output>/talking_ergocub001/FrameTransform/data:o</output>
-        <input>/talking_ergocub001/FrameTransform/data:i</input>
+        <output>/ergocub001/talking_ergocub/FrameTransform/data:o</output>
+        <input>/ergocub001/talking_ergocub/FrameTransform/data:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
     <connection>
         <output>/ergocub001/microphone/audio:o</output>
-        <input>/talking_ergocub001/asr/audio:i</input>
+        <input>/ergocub001/talking_ergocub/asr/audio:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
     <connection>
-        <output>/depthCamera001/rgbImage:o</output>
-        <input>/talking_ergocub001/depthCamera/rgbImage:i</input>
+        <output>/ergocub001/depthCamera/rgbImage:o</output>
+        <input>/ergocub001/talking_ergocub/depthCamera/rgbImage:i</input>
         <protocol>mjpeg</protocol>
     </connection>
     <connection>
-        <output>/depthCamera001/depthImage:o</output>
-        <input>/talking_ergocub001/depthCamera/depthImage:i</input>
+        <output>/ergocub001/depthCamera/depthImage:o</output>
+        <input>/ergocub001/talking_ergocub/depthCamera/depthImage:i</input>
         <protocol>fast_tcp+send.portmonitor+file.depthimage_compression_zlib+recv.portmonitor+file.depthimage_compression_zlib+type.dll</protocol>
     </connection>
         <connection>
-        <output>/talking_ergocub001/emotion_handler/rpc</output>
+        <output>/ergocub001/talking_ergocub/emotion_handler/rpc</output>
         <input>/ergocub001/ergoCubEmotions/rpc</input>
         <protocol>tcp</protocol>
     </connection>
     <connection>
-        <output>/xbg001/joypad</output>
-        <input>/walking-coordinator-001/goal:i</input>
+        <output>/ergocub001/xbg/joypad</output>
+        <input>/ergocub001/walking-coordinator/goal:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
   

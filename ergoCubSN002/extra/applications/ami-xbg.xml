@@ -17,9 +17,8 @@
         <node>ergocub-torso</node>
     </module>
     <module>
-        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
         <name>python</name>
-        <parameters>allyGUI.py </parameters>
+        <parameters>element_llm-task-planner/scripts/talkingllm/allyGUI.py </parameters>
         <node>llm-node</node>
     </module>
     <module>
@@ -38,15 +37,14 @@
     <node>llm-node</node>
    </module>
     <module>
-        <workdir>D:\element_llm-task-planner\src\talkingllm\config\walking_chat</workdir>
+        <workdir>D:\element_llm-task-planner\scripts\talkingllm\config\transform_client</workdir>
         <name>yarprobotinterface</name>
         <parameters>--config iframetransform_to_iwear_walking.xml</parameters>
         <node>llm-node</node>
    </module>
    <module>
-        <workdir>D:\element_llm-task-planner\src\talkingllm</workdir>
         <name>python</name>
-        <parameters>llmGUI.py wake_word=ergocub2 llm=gemini action_handler=xbgda+</parameters>
+        <parameters>element_llm-task-planner/scripts/talkingllm/llmGUI.py wake_word=ergocub2 llm=gemini action_handler=xbgda+</parameters>
         <node>llm-node</node>
     </module>
     <module>
