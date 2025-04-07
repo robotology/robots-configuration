@@ -3,7 +3,7 @@
        
     <module>
         <name>yarprobotinterface</name>
-        <parameters>--config realsense2.xml --portprefix /ergocub001/depthCamera --name /ergocub001/depthCamera</parameters>
+        <parameters>--config realsense2.xml --portprefix /ergocub001/depthCamera --name /ergocub001/depthCamera --ir_name /ergocub001/depthCamera/ir:o</parameters>
 	    <node>ergocub001-head</node>
     </module>
     <module>
@@ -13,7 +13,7 @@
     </module>
     <module>
         <name>WalkingModule</name>
-        <parameters>--from dcm_walking_autonomous.ini --GENERAL::name ergocub001/walking-coordinator --ROBOT_CONTROL::robot ergocub001/ergocub --TRANSFORM_HELPER::ft_server_prefix ergocub001/ftsRobot --TRANSFORM_HELPER::SERVER::ft_server_prefix ergocub001/ftsRobot --TRANSFORM_HELPER::SERVER::local_rpc ergocub001/ftsRobot/rpc --FT_SENSORS::left_foot_wrench_output_port_name "(/ergocub001/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o, /ergocub001/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o)" --FT_SENSORS::right_foot_wrench_output_port_name "(/ergocub001/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o, /ergocub001/wholeBodyDynamics/right_foot_rear/cartesianEndEffectorWrench:o)"</parameters>
+        <parameters>--from dcm_walking_autonomous.ini --GENERAL::name ergocub001/walking-coordinator --ROBOT_CONTROL::robot ergocub001/ergocub --TRANSFORM_HELPER::ft_server_prefix ergocub001/ftsRobot --TRANSFORM_HELPER::SERVER::ft_server_prefix ergocub001/ftsRobot --TRANSFORM_HELPER::SERVER::local_rpc /ergocub001/ftsRobot/rpc --FT_SENSORS::left_foot_wrench_output_port_name "(/ergocub001/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o, /ergocub001/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o)" --FT_SENSORS::right_foot_wrench_output_port_name "(/ergocub001/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o, /ergocub001/wholeBodyDynamics/right_foot_rear/cartesianEndEffectorWrench:o)"</parameters>
 	    <node>ergocub001-torso</node>
     </module>
     <module>
