@@ -44,7 +44,7 @@ test-microphone() {
     arecord -vvv -f dat /dev/null
 }
 
-alias trigger-click='DISPLAY=:0 xdotool click 1'
+alias trigger-click='DISPLAY=:0 xdotool mousemove 1440 720 click 1'
 
 alias list-windows='DISPLAY=:0 wmctrl -lp'
 
