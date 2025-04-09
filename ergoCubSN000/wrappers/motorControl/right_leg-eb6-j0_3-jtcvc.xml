@@ -6,14 +6,14 @@
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.047,  0.047,  0.111   )</param>
-        <!-- <param name="kfc">(  0.8, 0.5, 0.85, 0.9  )</param> -->
-        <param name="kfc">( 0.0, 0.0, 0.0, 0.0  )</param>
+        <param name="kfc">(  0.8, 0.5, 0.85, 0.9  )</param>
+        <!-- <param name="kfc">( 0.0, 0.0, 0.0, 0.0  )</param> -->
         <!-- <param name="kp">(  1.8, 1.0, 1.5, 1.5  )</param> -->
         <param name="kp">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="ki">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="max_curr">(  15.0, 15.0, 10.0, 15.0   )</param>
-        <!-- <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN") </param> -->
-        <param name="friction_model"> ("", "", "", "") </param>
+        <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN") </param>
+        <!-- <param name="friction_model"> ("", "", "", "") </param> -->
         <param name="bwfilter_cutoff_freq"> 1.0 </param>
         <param name="bwfilter_order"> 2 </param>
         <param name="bwfilter_enabled"> true </param>
