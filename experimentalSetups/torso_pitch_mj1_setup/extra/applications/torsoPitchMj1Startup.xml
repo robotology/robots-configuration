@@ -23,6 +23,12 @@
     </module>
 
     <module>
+        <name>yarp split</name>
+        <parameters>/torsoPitchMj1/torso-pitch-mj1-setup/stateExt:o</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
         <name>yarpscope</name>
         <parameters>--xml yarpScopeFile.xml</parameters>
         <node>localhost</node>
