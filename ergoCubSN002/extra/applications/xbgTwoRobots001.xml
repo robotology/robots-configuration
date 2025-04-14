@@ -38,8 +38,8 @@
         <node>llm-node-001</node>
     </module>
     <module>
-        <name>python</name>
-        <parameters>element_llm-task-planner/scripts/talkingllm/llmGUI.py wake_word=ergocub1 llm=gemini action_handler=xbgda+ rgbd_camera=realsense_sn001 port_prefix=/ergocub001/talking_ergocub ++audio_source.yarp_audio_source=/ergocub001/microphone/audio:o ++rgbd_camera.remote_image_port=/ergocub001/depthCamera/rgbImage:o ++rgbd_camera.remote_depth_port=/ergocub001/depthCamera/depthImage:o ++emotion_handler.yarp_remote=/ergocub001/ergoCubEmotions/rpc</parameters>
+        <name>llmGUI</name>
+        <parameters>wake_word=ergocub1 llm=gemini action_handler=xbgda+ rgbd_camera=realsense_sn001 port_prefix=/ergocub001/talking_ergocub ++audio_source.yarp_audio_source=/ergocub001/microphone/audio:o ++rgbd_camera.remote_image_port=/ergocub001/depthCamera/rgbImage:o ++rgbd_camera.remote_depth_port=/ergocub001/depthCamera/depthImage:o ++emotion_handler.yarp_remote=/ergocub001/ergoCubEmotions/rpc</parameters>
 	    <node>llm-node-001</node>
     </module>
     <module>
