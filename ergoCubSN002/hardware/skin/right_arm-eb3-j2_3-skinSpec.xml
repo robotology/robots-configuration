@@ -19,7 +19,7 @@
        </group>
  <!--  for now (jan 2024) we put a unique set of parameters activating all 16 I2C addr -->
        <group name="specialCfgTriangles">
-            <param name="numOfSets">         2  </param>
+            <param name="numOfSets">         3  </param>
             <param name="triangleSetCfg1">     2        2        0         4        1         3        0x0000      </param>
             <param name="triangleSetCfg2">     2        2        5         9        1         0        0x1000      </param>
             <param name="triangleSetCfg3">     2        2        5         9        1         0        0x0000      </param>
