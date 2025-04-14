@@ -9,4 +9,9 @@
       <param name="useLimitedPWM">      false  </param>
       <param name="verbose">            false  </param>
   </group>
+
+
+  <group name="MAINTENANCE">
+    <param name="skipRecalibration"> true </param>
+  </group>
 </params>

@@ -3,7 +3,7 @@
 
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="telemetryDeviceDumper" type="telemetryDeviceDumper">
-        <param name="axesNames">(torso_pitch_mj1)</param> <!--shoulder_pitch, shoulder_roll, shoulder_yaw, elbow-->
+        <param name="axesNames">(torso_pitch_mj1_real_aksim2, torso_pitch_mj1_fake_amo)</param> <!--shoulder_pitch, shoulder_roll, shoulder_yaw, elbow-->
         <param name="logIEncoders">true</param>
         <param name="logITorqueControl">false</param>
         <param name="logIMotorEncoders">true</param>
@@ -11,9 +11,10 @@
         <param name="logIInteractionMode">false</param>
         <param name="logIPidControl">false</param>
         <param name="logIAmplifierControl">true</param>
+        <param name="logIMotorTemperatures">true</param>
         <param name="logIRawValuesPublisher">true</param>
         <param name="saveBufferManagerConfiguration">true</param>
-        <param name="experimentName">torso_pitch_mj1_test</param>
+        <param name="experimentName">torso_pitch_mj1_amo_aksim_vel</param>
         <param name="path">./torso_pitch_mj1_telemetry_data/</param>
         <param name="n_samples">800000</param>
         <param name="save_periodically">false</param>

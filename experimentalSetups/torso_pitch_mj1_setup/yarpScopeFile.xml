@@ -8,7 +8,7 @@
 	    maxval="10000"
           title="Joint Position"
           bgcolor="LightSlateGrey">
-          <graph remote="/threeEncoders/three-encoders-setup/stateExt:o/split0:o"
+          <graph remote="/torsoPitchMj1/torso-pitch-mj1-setup/stateExt:o/split0:o"
                 index="0"
                 color="Red"
                 title="Joint position"
@@ -23,7 +23,7 @@
           minval="-500000"
           maxval="500000"
           bgcolor="LightSlateGrey">
-          <graph remote="/threeEncoders/three-encoders-setup/stateExt:o/split6:o"
+          <graph remote="/torsoPitchMj1/torso-pitch-mj1-setup/stateExt:o/split6:o"
                 index="0"
                 color="Magenta"
                 title="Motor position"
@@ -38,7 +38,7 @@
           minval="-20"
           maxval="20"
           bgcolor="LightSlateGrey">
-          <graph remote="/threeEncoders/three-encoders-setup/stateExt:o/split16:o"
+          <graph remote="/torsoPitchMj1/torso-pitch-mj1-setup/stateExt:o/split16:o"
                index="0"
                color="Cyan"
 	         title="Current"
@@ -53,7 +53,7 @@
           minval="-100"
           maxval="100"
           bgcolor="LightSlateGrey">
-          <graph remote="/threeEncoders/three-encoders-setup/stateExt:o/split2:o"
+          <graph remote="/torsoPitchMj1/torso-pitch-mj1-setup/stateExt:o/split2:o"
                index="0"
                color="Green"
                title="Joint Velocity"

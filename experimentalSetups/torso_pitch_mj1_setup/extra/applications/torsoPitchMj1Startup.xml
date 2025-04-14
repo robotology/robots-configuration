@@ -1,0 +1,31 @@
+<application>
+    <name>torsoPitchMj1Startup</name>
+
+    <dependencies>
+    </dependencies>
+
+    <module>
+        <name>yarplogger</name>
+        <parameters>--start</parameters>
+        <node>localhost</node>
+    </module>
+
+
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters>--config torso-pitch-mj1-setup.xml</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>yarpmotorgui</name>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--xml yarpScopeFile.xml</parameters>
+        <node>localhost</node>
+    </module>
+
+</application>

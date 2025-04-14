@@ -32,25 +32,25 @@
 
                 <group name="ACTUATOR">
                     <!--                            setup                     -->
-                    <param name="type">             foc        </param>
-                    <param name="port">             CAN1:2:0            </param>
+                    <param name="type">             foc              foc                </param>
+                    <param name="port">             CAN1:2:0         CAN1:1:0           </param>
                 </group>                                           
                     
                 <!-- Aksim2 Encoder-->
                 <group name="ENCODER1">                            
-                    <param name="type">             aksim2              </param>  
-                    <param name="port">             CONN:P6             </param>
-                    <param name="position">         atjoint             </param>
-                    <param name="resolution">       -524288             </param> 
-                    <param name="tolerance">        0.703               </param>  
+                    <param name="type">            amo              aksim2        </param>  
+                    <param name="port">            CONN:P9          CONN:P6       </param>
+                    <param name="position">        atjoint          atjoint       </param>
+                    <param name="resolution">      -1048576         -524288           </param> <!---->
+                    <param name="tolerance">       0.703            0.703         </param>  
                 </group>     
 	                                                  
                 <group name="ENCODER2">                            
-                    <param name="type">             mrie                </param>
-                    <param name="port">             CAN1:2:0            </param>
-                    <param name="position">         atmotor             </param>
-                    <param name="resolution">       -20800               </param>
-                    <param name="tolerance">        3.6                 </param>  
+                    <param name="type">             mrie              none              </param>
+                    <param name="port">             CAN1:2:0          none              </param>
+                    <param name="position">         atmotor           none              </param>
+                    <param name="resolution">       -20800            none            </param>
+                    <param name="tolerance">        3.6               3.6               </param>  
                 </group> 
  
             </group>    
