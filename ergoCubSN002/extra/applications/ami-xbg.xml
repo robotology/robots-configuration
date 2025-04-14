@@ -43,8 +43,8 @@
         <node>llm-node</node>
    </module>
    <module>
-        <name>python</name>
-        <parameters>element_llm-task-planner/scripts/talkingllm/llmGUI.py wake_word=ergocub2 llm=gemini action_handler=xbgda+</parameters>
+        <name>llmGUI</name>
+        <parameters>wake_word=ergocub2 llm=gemini action_handler=xbgda+</parameters>
         <node>llm-node</node>
     </module>
     <module>
