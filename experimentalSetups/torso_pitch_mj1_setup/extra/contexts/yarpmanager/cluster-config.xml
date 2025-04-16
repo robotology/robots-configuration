@@ -1,0 +1,10 @@
+<cluster name="torsopitchmj1" user="icub">
+
+  <!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
+  <nameserver namespace="/root" node="torsopitchmj1" type="yarpserver"> </nameserver>
+
+  <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
+       this is usually the value of the DISPLAY variable when logged on -->
+  <node display=":0.0" address="10.0.1.104">torsopitchmj1</node>
+
+</cluster>

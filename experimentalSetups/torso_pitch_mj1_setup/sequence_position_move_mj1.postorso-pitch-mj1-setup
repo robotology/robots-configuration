@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sequence_postorso-pitch-mj1-setup TotPositions="5" ReferencePart="torso-pitch-mj1-setup">
+    <Position Index="0" Timing="5.00">
+        <JointPositions Count="2">
+            <PosValue>-175.00</PosValue>
+            <PosValue>-175.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="2">
+            <SpeedValue>60.00</SpeedValue>
+            <SpeedValue>60.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="1" Timing="5.00">
+        <JointPositions Count="2">
+            <PosValue>175.00</PosValue>
+            <PosValue>175.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="2">
+            <SpeedValue>60.00</SpeedValue>
+            <SpeedValue>60.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="2" Timing="5.00">
+        <JointPositions Count="2">
+            <PosValue>-112.36</PosValue>
+            <PosValue>-112.37</PosValue>
+        </JointPositions>
+        <JointVelocities Count="2">
+            <SpeedValue>60.00</SpeedValue>
+            <SpeedValue>60.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="3" Timing="5.00">
+        <JointPositions Count="2">
+            <PosValue>105.38</PosValue>
+            <PosValue>105.33</PosValue>
+        </JointPositions>
+        <JointVelocities Count="2">
+            <SpeedValue>60.00</SpeedValue>
+            <SpeedValue>60.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+    <Position Index="4" Timing="5.00">
+        <JointPositions Count="2">
+            <PosValue>0.00</PosValue>
+            <PosValue>0.00</PosValue>
+        </JointPositions>
+        <JointVelocities Count="2">
+            <SpeedValue>60.00</SpeedValue>
+            <SpeedValue>60.00</SpeedValue>
+        </JointVelocities>
+    </Position>
+</Sequence_postorso-pitch-mj1-setup>
