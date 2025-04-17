@@ -17,7 +17,8 @@
         <param name="bwfilter_cutoff_freq"> 1.0 </param>
         <param name="bwfilter_order"> 2 </param>
         <param name="bwfilter_enabled"> true </param>
-        <param name="max_output_friction">(  25.0, 30.0, 6.0, 25.0  )</param>
+        <param name="max_output_friction">(  25.0, 30.0, 10.0, 25.0  )</param>
+        <param name="jointVelThreshold">(  3.0, 3.0, 2.0, 3.0  )</param>
     </group>
 
     <group name="FRICTION_PINN">
