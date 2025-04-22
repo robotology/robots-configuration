@@ -18,6 +18,7 @@
       <param name="depth_quant"> 2 </param>
     </group>
     <param name="rotateImage180"> false </param>
+    <param name="stereoMode"> true </param>
     <param name="usePreset"> true </param>
     <param name="presetName">high_accuracy</param>
   </device>
@@ -25,6 +26,18 @@
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="RGBDWrapperyarp" type="rgbdSensor_nws_yarp">
     <param name="period"> 0.03 </param>
     <param extern-name="name" name="name">    /depthCamera </param>
+    <action phase="startup" level="10" type="attach">
+      <paramlist name="networks">
+        <elem name="subdevicergbd"> realsenseD450 </elem>
+      </paramlist>
+    </action>
+    <action phase="shutdown" level="15" type="detach" />
+  </device>
+
+  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="IRCamerasWrapperyarp" type="frameGrabber_nws_yarp">
+    <param name="period"> 0.03 </param>
+    <param extern-name="ir_name" name="name">  /depthCamera/ir:o </param>
+    <param name="capabilities">    RAW </param>
     <action phase="startup" level="10" type="attach">
       <paramlist name="networks">
         <elem name="subdevicergbd"> realsenseD450 </elem>
