@@ -5,8 +5,8 @@
 
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="realsenseD450" type="realsense2">
     <group name="SETTINGS">
-      <param name="depthResolution"> (640 480) </param>
-      <param name="rgbResolution">  (640 480) </param>
+      <param extern-name= "depthResolution" name="depthResolution"> (640 480) </param>
+      <param extern-name= "rgbResolution" name="rgbResolution">  (640 480) </param>
       <param name="framerate">    30  </param>
       <param extern-name="enableEmitter" name="enableEmitter"> true </param>
       <param name="alignmentFrame"> RGB </param>
