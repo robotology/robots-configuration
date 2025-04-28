@@ -8,7 +8,7 @@
       <param name="depthResolution"> (640 480) </param>
       <param name="rgbResolution">  (640 480) </param>
       <param name="framerate">    30  </param>
-      <param name="enableEmitter"> true </param>
+      <param extern-name="enableEmitter" name="enableEmitter"> true </param>
       <param name="alignmentFrame"> RGB </param>
     </group>
     <group name="HW_DESCRIPTION">
