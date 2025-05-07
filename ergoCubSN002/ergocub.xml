@@ -46,8 +46,8 @@
     <xi:include href="wrappers/motorControl/head-mc-slow_wrapper.xml" disabled_by="disable_head" />
 
     <!-- HEAD -->
-    <xi:include href="hardware/motorControl/head-eb20-j0_1-mc.xml" disabled_by="disable_head" />
-    <xi:include href="hardware/motorControl/head-eb21-j2_3-mc.xml" disabled_by="disable_head" />
+    <xi:include href="hardware/motorControl/head-eb20-j0_2-mc.xml" disabled_by="disable_head" />
+    <xi:include href="hardware/motorControl/head-eb21-j3-mc.xml" disabled_by="disable_head" />
 
     <!-- TORSO -->
     <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" disabled_by="disable_torso" />
