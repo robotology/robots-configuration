@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude"  robot="iCubGenova11" build="1">
+
+        <group name="defaultCfgBoard">
+            <param name="period">        50  </param> 
+            <param name="skinType">      8  </param> <!-- 0 ==> new skin
+                                                              1 ==> palm and fingertips skin
+                                                              2 ==> old skin without temperature compensation 
+                                                              8 ==> rugged skin with temperature compensation (4535.C) -->
+            <param name="noLoad">         0xf0  </param>
+            <param name="diagnostic">    false  </param>     <!-- used to config high level -->
+        </group>
+        
+        
+       <group name="defaultCfgTriangle">
+            <param name="enabled">         false  </param> 
+            <param name="shift">           2  </param>
+            <param name="cdcOffset">       0x2200  </param>
+        </group>
+
+        <group name="specialCfgTriangles">
+        
+     
+           <param name="numOfSets">         7   </param> 
+           
+            <!-- triangleSetCfgX contains the X-th configuration set. It is formed by 7 values.
+                - patch_number:             it is 1 or 2. The value is referred to skinCanAddrsPatch1 or skinCanAddrsPatch2. 
+                - board_address:            it is the address of the MTB board.
+                - start_triangle:           it is the ID of the first triangle which will receive the settings. Its values are [0, 15]
+                - end_triangle:             it is the ID of the last triangle which will receive the settings. Its values are [start_triangle, 15]
+                - enabled                   [1 / 0]. tells if the triangles are enabled or disabled
+                - shift:                    the shift value to apply to the triangles. see defaultCfgTriangle::shift.
+                - cdcOffset:                the cdc offset to apply to the triangles. see defaultCfgTriangle::cdcOffset.
+                In following, all triangles from 0 to 7 of MTB board in CAN2:14 must be enabled with  shift = 2 and cdc offset = 0x2000
+              -->
+            <!--                             patch       address        start       end          enabled        shift    cdcoffset      -->                             
+           <param name="triangleSetCfg1">   1           7             5           11            1              2        0x2200      </param> 
+           <param name="triangleSetCfg2">   1           8             1           3             1              2        0x2200      </param> 
+           <param name="triangleSetCfg3">   1           8             6           13            1              2        0x2200      </param> 
+           <param name="triangleSetCfg4">   1           11            1           2             1              2        0x2200      </param> 
+           <param name="triangleSetCfg5">   1           11            4           4             1              2        0x2200      </param> 
+           <param name="triangleSetCfg6">   1           11            8           14            1              2        0x2200      </param> 
+           <param name="triangleSetCfg7">   1           10            0           15            1              2        0x2200      </param> 
+                                                                                                     
+           
+        </group>
+
+
+</params>
