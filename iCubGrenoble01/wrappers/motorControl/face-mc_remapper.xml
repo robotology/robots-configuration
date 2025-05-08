@@ -3,12 +3,14 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="face-mc_remapper" type="controlboardremapper">
     <paramlist name="networks">
-        <elem name="face_joints">(  0  5  0  5 )</elem>
+        <elem name="face_joints1">(  0  1 0  1 )</elem>
+        <elem name="face_joints2">(  2  5 0  3 )</elem>
     </paramlist>
     <param name="joints"> 6                   </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="face_joints">  face_mc </elem>
+            <elem name="face_joints1">  face-eb22-j0_1-mc </elem>
+            <elem name="face_joints2">  face-eb23-j2_5-mc </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />
