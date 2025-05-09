@@ -2,7 +2,7 @@
 # Authors: Ugo Pattacini
 
 cmake_minimum_required(VERSION 3.12)
-project(robots-configuration VERSION 2.8.0)
+project(robots-configuration VERSION 2.9.0)
 
 option(BUILD_WITHOUT_DEPENDENCIES "If enabled, permit to install robots-configuration without any dependency on YCM, YARP or ICUBcontrib" OFF)
 option(INSTALL_ALL_ROBOTS "Enable installation of all robots" OFF)
