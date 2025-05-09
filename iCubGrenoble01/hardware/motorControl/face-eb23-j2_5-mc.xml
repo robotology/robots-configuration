@@ -14,8 +14,8 @@
         <!-- joint number in sub-part           0           1           2           3            -->
         <!-- joint name                         lip-right   lip-high    lip-left   lip-bottom   -->   
         <group name="LIMITS">
-            <param name="jntPosMin">              -35         -45         -35         0         </param> 
-            <param name="jntPosMax">              +35          +0         +35         +28       </param>
+            <param name="jntPosMin">              -35         -45         -35         -28       </param> 
+            <param name="jntPosMax">              +35          +0         +35          0        </param>
             <param name="motorOverloadCurrents"> 2000        2000        2000        2000       </param>
             <param name="motorNominalCurrents">   700         700         700         700       </param>
             <param name="motorPeakCurrents">     1000        1000        1000        1000       </param>
