@@ -47,9 +47,9 @@
         <param name="outputType">               pwm                                                         </param>
         <param name="fbkControlUnits">          metric_units                                                </param>
         <param name="outputControlUnits">       machine_units                                               </param>
-        <param name="kp">                       +1000               +1000               +1600               </param>
-        <param name="kd">                       +30                 +0                  +0                  </param>
-        <param name="ki">                       +150                +150                +667               </param>
+        <param name="kp">                       +387                +387                +1600               </param>
+        <param name="kd">                       +20                 +0                  +0                  </param>
+        <param name="ki">                       +67                 +67                 +667               </param>
         <param name="maxOutput">                16000               16000               16000               </param>
         <param name="maxInt">                   16000               16000               16000               </param>
         <param name="stictionUp">               0                   0                   0                   </param>
