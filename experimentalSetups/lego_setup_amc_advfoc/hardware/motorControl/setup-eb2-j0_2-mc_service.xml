@@ -104,7 +104,7 @@
                 </group>
                 <group name="FIRMWARE">
                     <param name="major">            3       2           </param>
-                    <param name="minor">            1       0           </param>
+                    <param name="minor">            6       0           </param>
                     <param name="build">            0       10          </param>
                 </group>
             </group>
