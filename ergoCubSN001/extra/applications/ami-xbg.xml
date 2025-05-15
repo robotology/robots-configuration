@@ -28,13 +28,13 @@
    </module>
    <module>
         <name>ffplay</name>
-        <parameters>-protocol_whitelist "file,udp,rtp" -nodisp audio_ffmpeg_llm.sdp</parameters>
-    <node>ergocub-head</node>
+        <parameters>-protocol_whitelist "file,udp,rtp" -nodisp audio_ffmpeg_llm_001.sdp</parameters>
+        <node>ergocub-head</node>
    </module>
    <module>
         <name>ffmpeg</name>
-        <parameters>-f dshow -i audio="Stereo Mix (Realtek(R) Audio)" -acodec libopus -f rtp rtp://10.0.2.23:5000 -sdp_file C:/Users/ergocub/Documents/audio_ffmpeg_llm.sdp </parameters>
-    <node>llm-node</node>
+        <parameters>-f dshow -i audio="Stereo Mix (Realtek(R) Audio)" -acodec libopus -f rtp rtp://10.0.2.13:5000 -sdp_file C:/Users/icub/Documents/audio_ffmpeg_llm_001.sdp </parameters>
+        <node>llm-node</node>
    </module>
     <module>
         <workdir>D:\element_llm-task-planner\scripts\talkingllm\config\transform_client</workdir>
@@ -44,7 +44,7 @@
    </module>
    <module>
         <name>llmGUI</name>
-        <parameters>wake_word=ergocub2 llm=gemini action_handler=xbgda+</parameters>
+        <parameters>wake_word=ergocub1 llm=gemini action_handler=xbgda+</parameters>
         <node>llm-node</node>
     </module>
     <module>
