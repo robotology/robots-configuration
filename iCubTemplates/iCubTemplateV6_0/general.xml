@@ -12,4 +12,13 @@
       <param name="useLimitedPWM">      Deprecated  </param>
       <param name="verbose">            Enable some more debug prints </param>
   </group>
+
+  <group name="MAINTENANCE">
+      <param extern-name="skipRecalibration" name="skipRecalibration">    If true, the calibration procedure is not performed at the yarprobotinterface restart
+                                                                          if the boards are not power cycled; this means that the joints are set to IDLE mode at restart.
+                                                                          Note: this is a feature for expert users only. Even if set to true, at first run the calibration procedure is performed.
+                                                                          Usually this parameter is false.
+                                                                          Since it is defined with extern-name it can be overwritten from the command line when running the yarprobotinterface
+                                                                          More info at: https://icub-tech-iit.github.io/documentation/icub_robot_configuration/calibrator_configuration/calibrator_configuration/#maintenance-features </param>
+  </group>
 </params>
