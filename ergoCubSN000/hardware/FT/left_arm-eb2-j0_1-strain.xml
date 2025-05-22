@@ -17,7 +17,7 @@
            <group name="PROPERTIES">
   
                  <group name="CANBOARDS">
-                    <param name="type">                 strain2                 </param>
+                    <param name="type">                 strain2c                 </param>
 
                     <group name="PROTOCOL">
                         <param name="major">            2                       </param>    
