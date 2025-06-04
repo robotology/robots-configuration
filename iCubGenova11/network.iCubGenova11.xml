@@ -56,17 +56,23 @@
             <ataddress ip="10.0.1.21" />
             <connected bus="ETH" prev="10.0.1.20" next="10.0.1.22" />
         </board>
+        
+        <board type='mc4plus' name="head-eb22">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.22" />
+            <connected bus="ETH" prev="10.0.1.21" next="10.0.1.1" />
+        </board>        
+        
+        <board type='rfe' name="rfe.head">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.21" canbus="1" canadr="1"  />
+            <connected bus="CAN" />
+        </board>       
 
     </part>
 
 
     <part name="face">
-
-        <board type='mc4plus' name="face-eb22-j0">
-            <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.22" />
-            <connected bus="ETH" prev="10.0.1.21" next="10.0.1.1" />
-        </board>
 
     </part>
 
@@ -103,12 +109,11 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.left_arm">
+        <board type='strain2' name="strain2.left_arm">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.1" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
-
 
         <board type='mc4plus' name="left_arm-eb24-j4_7">
             <ondevice>ETH</ondevice>
@@ -128,53 +133,61 @@
 			<connected bus="ETH" prev="10.0.1.25" next="10.0.1.27" />
         </board>
 
+        <!-- note
+             the mais of left hand is attached to two eth board, the 10.0.1.25 and the 10.0.1.26
+             so, the gui shows it twice. BUT it is only one board.
+             for teh sake of update, we just connect it to one eth board only
+          -->
+          
         <board type='mais' name="mais.left_hand">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.26" canbus="1" canadr="14"  />
+            <ataddress ip="10.0.1.25" canbus="1" canadr="14"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_arm.CAN1:8">
+        <!--consistency issue in the discovery using gui, skipping for automatic firmware update process-->
+
+        <!-- <board type='mtb4' name="mtb4.left_arm.CAN1:8">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="8"  />
 			<connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_arm.CAN1:9">
+        <board type='mtb4' name="mtb4.left_arm.CAN1:9">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="9"  />
             <connected bus="CAN" />
-        </board>
+        </board> 
 
-        <board type='mtb' name="mtb.left_arm.CAN1:10">
+        <board type='mtb4' name="mtb4.left_arm.CAN1:10">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="10"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_arm.CAN1:11">
+        <board type='mtb4' name="mtb4.left_arm.CAN1:11">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="11"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_arm.CAN1:12">
+        <board type='mtb4' name="mtb4.left_arm.CAN1:12">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="12"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_arm.CAN1:13">
+        <board type='mtb4' name="mtb4.left_arm.CAN1:13">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_arm.CAN1:14">
+        <board type='mtb4' name="mtb4.left_arm.CAN1:14">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="14"  />
             <connected bus="CAN" />
-        </board>
+        </board> -->
 
     </part>
 
@@ -211,7 +224,7 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.right_arm">
+        <board type='strain2' name="strain2.right_arm">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.3" canbus="2" canadr="13"  />
             <connected bus="CAN" />
@@ -235,53 +248,60 @@
 			<connected bus="ETH" prev="10.0.1.28" next="10.0.1.5" />
         </board>
 
+        <!-- note
+             the mais of right hand is attached to two eth board, the 10.0.1.28 and the 10.0.1.29
+             so, the gui shows it twice. BUT it is only one board.
+             for teh sake of update, we just connect it to one eth board only
+          -->
         <board type='mais' name="mais.right_hand">
             <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.26" canbus="1" canadr="14"  />
+            <ataddress ip="10.0.1.28" canbus="1" canadr="14"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_arm.CAN1:8">
+        <!--consistency issue in the discovery using gui, skipping for automatic firmware update process-->
+
+        <!--<board type='mtb4' name="mtb4.right_arm.CAN1:8">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="8"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_arm.CAN1:9">
+        <board type='mtb4' name="mtb4.right_arm.CAN1:9">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="9"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_arm.CAN1:10">
+        <board type='mtb4' name="mtb4.right_arm.CAN1:10">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="10"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_arm.CAN1:11">
+        <board type='mtb4' name="mtb4.right_arm.CAN1:11">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="11"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_arm.CAN1:12">
+        <board type='mtb4' name="mtb4.right_arm.CAN1:12">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="12"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_arm.CAN1:13">
+        <board type='mtb4' name="mtb4.right_arm.CAN1:13">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_arm.CAN1:14">
+        <board type='mtb4' name="mtb4.right_arm.CAN1:14">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="14"  />
             <connected bus="CAN" />
-        </board>
+        </board> -->
 
     </part>
 
@@ -300,6 +320,12 @@
             <connected bus="CAN" />
         </board>
 
+        <board type='foc' name="foc.5.1">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.5" canbus="1" canadr="2"  />
+            <connected bus="CAN" />
+        </board>
+
         <board type='foc' name="foc.5.3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.5" canbus="1" canadr="3"  />
@@ -311,34 +337,38 @@
             <ataddress ip="10.0.1.5" canbus="1" canadr="4"  />
             <connected bus="CAN" />
         </board>
-
-        <board type='mtb' name="mtb.torso.CAN1:7">
+        
+        
+        <!--
+                the torso hosts the skin read via mtb4 boards.
+                but the mtb4 boards are attached to board 10.0.1.22 that is located in the head
+                so, we put the mtb4 in here 
+          -->
+          
+        <!--consistency issue with the following boards at the discovery using the GUI-->
+        
+        <!-- <board type='mtb4' name="mtb4.torso.CAN1:7">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.22" canbus="1" canadr="7"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.torso.CAN1:8">
+        <board type='mtb4' name="mtb4.torso.CAN1:8">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.22" canbus="1" canadr="8"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.torso.CAN1:9">
+        <board type='mtb4' name="mtb4.torso.CAN1:9">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.22" canbus="1" canadr="9"  />
             <connected bus="CAN" />
-        </board>
-
-        <board type='mtb' name="mtb.torso.CAN1:10">
-            <ondevice>ETH</ondevice>
-            <ataddress ip="10.0.1.22" canbus="1" canadr="10"  />
-            <connected bus="CAN" />
-        </board>
+        </board> -->
 
     </part>
 
 
+    
     <part name="left_leg">
 
         <board type='ems4' name="left_leg-eb6-j0_3">
@@ -395,97 +425,104 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.left_leg">
+        <board type='strain2' name="strain2.left_leg">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.6" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.left_foot">
+        <board type='strain2' name="strain2.left_foot">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.7" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN1:1">
+<!-- removing mtb4 on leg
+
+        <board type='mtb4' name="mtb4.left_leg.CAN1:1">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="1" canadr="1"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN1:2">
+        <board type='mtb4' name="mtb4.left_leg.CAN1:2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="1" canadr="2"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN1:3">
+        <board type='mtb4' name="mtb4.left_leg.CAN1:3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="1" canadr="3"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN1:4">
+        <board type='mtb4' name="mtb4.left_leg.CAN1:4">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="1" canadr="4"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN1:5">
+        <board type='mtb4' name="mtb4.left_leg.CAN1:5">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="1" canadr="5"  />
             <connected bus="CAN" />
         </board>
-
-        <board type='mtb' name="mtb.left_leg.CAN1:6">
+        
+        <board type='mtb4' name="mtb4.left_leg.CAN1:6">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="1" canadr="6"  />
             <connected bus="CAN" />
         </board>
-
-        <board type='mtb' name="mtb.left_leg.CAN1:7">
+  
+        <board type='mtb4' name="mtb4.left_leg.CAN1:7">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="1" canadr="7"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN2:8">
+        <board type='mtb4' name="mtb4.left_leg.CAN2:8">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="2" canadr="8"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN2:9">
+        <board type='mtb4' name="mtb4.left_leg.CAN2:9">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="2" canadr="9"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN2:10">
+        <board type='mtb4' name="mtb4.left_leg.CAN2:10">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="2" canadr="10"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN2:11">
+        <board type='mtb4' name="mtb4.left_leg.CAN2:11">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="2" canadr="11"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.left_leg.CAN2:12">
+        <board type='mtb4' name="mtb4.left_leg.CAN2:12">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="2" canadr="12"  />
             <connected bus="CAN" />
         </board>        
     
-        <board type='mtb' name="mtb.left_leg.CAN2:13">
+        <board type='mtb4' name="mtb4.left_leg.CAN2:13">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.10" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
+   removing mtb4 on leg
+   -->
+   
     </part>
+
+
 
 
     <part name="right_leg">
@@ -544,105 +581,114 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.right_leg">
+        <board type='strain2' name="strain2.right_leg">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.8" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.right_foot">
+        <board type='strain2' name="strain2.right_foot">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.9" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN1:1">
+<!-- removing mtb4 on leg
+
+        <board type='mtb4' name="mtb4.right_leg.CAN1:1">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="1" canadr="1"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN1:2">
+        <board type='mtb4' name="mtb4.right_leg.CAN1:2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="1" canadr="2"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN1:3">
+        <board type='mtb4' name="mtb4.right_leg.CAN1:3">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="1" canadr="3"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN1:4">
+        <board type='mtb4' name="mtb4.right_leg.CAN1:4">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="1" canadr="4"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN1:5">
+        <board type='mtb4' name="mtb4.right_leg.CAN1:5">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="1" canadr="5"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN1:6">
+        <board type='mtb4' name="mtb4.right_leg.CAN1:6">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="1" canadr="6"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN1:7">
+        <board type='mtb4' name="mtb4.right_leg.CAN1:7">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="1" canadr="7"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN2:8">
+        <board type='mtb4' name="mtb4.right_leg.CAN2:8">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="2" canadr="8"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN2:9">
+        <board type='mtb4' name="mtb4.right_leg.CAN2:9">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="2" canadr="9"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN2:10">
+        <board type='mtb4' name="mtb4.right_leg.CAN2:10">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="2" canadr="10"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN2:11">
+        <board type='mtb4' name="mtb4.right_leg.CAN2:11">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="2" canadr="11"  />
             <connected bus="CAN" />
         </board>
 
-        <board type='mtb' name="mtb.right_leg.CAN2:12">
+        <board type='mtb4' name="mtb4.right_leg.CAN2:12">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="2" canadr="12"  />
             <connected bus="CAN" />
         </board>        
     
-        <board type='mtb' name="mtb.right_leg.CAN2:13">
+        <board type='mtb4' name="mtb4.right_leg.CAN2:13">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.11" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
 
+   removing mtb4 on leg
+   -->
+   
     </part>
+
+
 
     <part name="custom">
     </part>
 
 
     <part name="test">
-    </part>
+    </part> 
+    
+ 
 
 
-</robotnetwork>
+</robotnetwork> 
 
