@@ -320,7 +320,7 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='foc' name="foc.5.1">
+        <board type='foc' name="foc.5.2">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.5" canbus="1" canadr="2"  />
             <connected bus="CAN" />
