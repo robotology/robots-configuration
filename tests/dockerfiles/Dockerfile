@@ -30,6 +30,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
     grep -m 1 YARP_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" > ${DEPENDENCIES_DIR}/YARP_VERSION.txt && \
     cat ${DEPENDENCIES_DIR}/YARP_VERSION.txt | awk -F '.' '{ print $1 }' > ${DEPENDENCIES_DIR}/YARP_VERSION_MAJOR.txt && \
     cat ${DEPENDENCIES_DIR}/YARP_VERSION.txt | awk -F '.' '{ print $2 }' > ${DEPENDENCIES_DIR}/YARP_VERSION_MINOR.txt && \
+    cat ${DEPENDENCIES_DIR}/YARP_VERSION.txt | awk -F '.' '{ print $3 }' > ${DEPENDENCIES_DIR}/YARP_VERSION_PATCH.txt && \
     grep -m 1 icub_firmware_shared_VERSION conf/iCubFindDependencies.cmake | sed "s/[^0-9.]//g" > ${DEPENDENCIES_DIR}/icub_firmware_shared_VERSION.txt && \
     cd ${DEPENDENCIES_DIR}/icub-firmware-shared && \
     git tag > ${DEPENDENCIES_DIR}/icub_firmware_shared_RELEASES.txt && \
@@ -51,7 +52,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
 RUN cd ${DEPENDENCIES_DIR} && \
     git clone https://github.com/robotology/yarp.git && \
     cd yarp && mkdir -p build && cd build && \
-    git checkout yarp-$(cat ${DEPENDENCIES_DIR}/YARP_VERSION_MAJOR.txt).$(cat ${DEPENDENCIES_DIR}/YARP_VERSION_MINOR.txt) && \
+    git checkout v$(cat ${DEPENDENCIES_DIR}/YARP_VERSION_MAJOR.txt).$(cat ${DEPENDENCIES_DIR}/YARP_VERSION_MINOR.txt).$(cat ${DEPENDENCIES_DIR}/YARP_VERSION_PATCH.txt) && \
     cmake .. \
           -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install \
@@ -75,7 +76,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
 RUN cd ${DEPENDENCIES_DIR} && \
     git clone https://github.com/robotology/yarp-device-rplidar.git && \
     cd yarp-device-rplidar && mkdir -p build && cd build && \
-    git checkout $(git tag | tail -1) && \
+    git checkout v1.0 && \
     cmake .. \
           -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
