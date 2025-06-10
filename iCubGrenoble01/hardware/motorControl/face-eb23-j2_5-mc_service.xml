@@ -25,8 +25,8 @@
                     <param name="type">             qenc                qenc                qenc                qenc             </param>  
                     <param name="port">             CONN:P3             CONN:P2             CONN:P4             CONN:P5          </param>
                     <param name="position">         atmotor             atmotor             atmotor             atmotor          </param> 
-                    <param name="resolution">       1600                1600                1600                1600             </param>
-                    <param name="tolerance">        0                   0                  0                   0                 </param>  
+                    <param name="resolution">       1600                1600                1600                -1600            </param>
+                    <param name="tolerance">        0                   0                   0                   0                </param>  
                 </group>        
                 
                 <group name="ENCODER2">
