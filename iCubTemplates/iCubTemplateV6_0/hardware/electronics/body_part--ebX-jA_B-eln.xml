@@ -72,6 +72,28 @@
                   -->              
                 <param name="TXrateOfRegularROPs">      5                   </param> 
 
+                <!-- Contains enabling / disabling of logging that must be emitted immediately as soon as the condition appears --> 
+                <group name="LOGGING">
+                    <group name="IMMEDIATE">
+
+                        <!-- Enable / disable the emission of diagnostics related to the measured execution time of RX higher than the configured
+                            maxTimeOfRXactivity and similarly for DO and TX. It's true by default if the LOGGING group is not present. -->
+                        <param name="emitRXDOTXoverflow">       true        </param>
+                    </group>
+                    
+                    <!-- Contains enabling / disabling of logging that must be emitted periodically -->
+                    <group name="PERIODIC">
+                    
+                        <!-- The period expressed in seconds in the interval [1.0, 600.0] -->
+                        <param name="period">                   10          </param>
+                        
+                        <!-- Enable / disable the periodic emission of diagnostics about to the statistics of the execution time of the RX, DO and TX phase
+                            in the form of minimum, average and maximum values. It's false by default if the LOGGING group is not present. -->                        
+                        <param name="emitRXDOTXstatistics">     false        </param>
+                    </group>
+
+                </group>
+
             </group>              
                         
         </group>
