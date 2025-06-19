@@ -37,13 +37,14 @@ alias test-speaker='speaker-test -t wav -c 1'
 
 # Alias for running whole-body-dynamics
 alias runYarpRobotInterface='YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface'
+alias runYarpRobotInterfaceTwoRobots='YARP_PORT_PREFIX=/ergocub002 YARP_FORWARD_LOG_ENABLE=1 yarprobotinterface'
 
 # Test if the microphone is working
 test-microphone() {
     arecord -vvv -f dat /dev/null
 }
 
-alias trigger-click='DISPLAY=:0 xdotool click 1'
+alias trigger-click='DISPLAY=:0 xdotool mousemove 1440 720 click 1 mousemove 0 0'
 
 alias list-windows='DISPLAY=:0 wmctrl -lp'
 

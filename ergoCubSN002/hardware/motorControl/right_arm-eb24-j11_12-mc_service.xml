@@ -37,7 +37,7 @@
                     <param name="port">                 POS:hand_thumb_add            POS:hand_index_add        </param>
 
                     <param name="boardType">            mtb4c                         mtb4c                     </param>
-                    <param name="connector">            CONN:J3_SDA2                  CONN:J3_SDA3              </param>
+                    <param name="connector">            CONN:J3_SDA3                  CONN:J3_SDA0              </param>
 
                     <group name="CALIBRATION">
                         <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->

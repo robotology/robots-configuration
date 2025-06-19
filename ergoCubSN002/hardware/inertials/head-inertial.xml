@@ -7,7 +7,7 @@
 
         <xi:include href="../../general.xml" />
 
-        <xi:include href="../../hardware/electronics/head-eb21-j2_3-eln.xml" />
+        <xi:include href="../../hardware/electronics/head-eb21-j3-eln.xml" />
 
         <group name="SERVICE">
 

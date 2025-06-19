@@ -14,12 +14,8 @@
     <name> ami-xbg</name>
   </application>
 
-  <!-- <application>
-    <name> llm</name>
-  </application> -->
-
   <application>
-    <name> xbgTwoRobots</name>
+    <name> xbgTwoRobots001</name>
   </application>
 
 </application>

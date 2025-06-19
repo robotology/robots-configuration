@@ -8,15 +8,15 @@
     <group name="ETH_BOARD">
 
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.21               </param>
+            <param name="IpAddress">                10.0.1.20               </param>
             <param name="IpPort">                   12345                   </param>
-            <param name="Type">                     mc4plus                 </param>
+            <param name="Type">                     amc                     </param>
             <param name="maxSizeRXpacket">          768                     </param>
             <param name="maxSizeROP">               384                     </param>
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "head-eb21-j2_3"        </param>
+            <param name="Name">                     "head-eb20-j0_2"        </param>
             <group name="RUNNINGMODE">
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
