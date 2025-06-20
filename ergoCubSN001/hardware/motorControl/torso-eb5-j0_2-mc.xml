@@ -13,8 +13,8 @@
     <!-- joint number                           0                   1                   2               -->
     <!-- joint name -->
     <group name="LIMITS">
-        <param name="jntPosMax">                23                  45                  43                  </param>
-        <param name="jntPosMin">                -23                 -18                 -43                 </param>
+        <param name="jntPosMax">                23                  45                  30                  </param>
+        <param name="jntPosMin">                -23                 -18                 -30                 </param>
         <param name="jntVelMax">                120                 120                 120                 </param>
         <param name="motorNominalCurrents">     3770                16000                5000               </param>
         <param name="motorPeakCurrents">        14000               17000               10000               </param>

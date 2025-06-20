@@ -22,22 +22,22 @@
     
     <group name="LIMITS">
         <!--                                 0        1       	2         3   -->
-        <param name="hardwareJntPosMax">    110.15           111.463     79.199      7.75  </param>
-        <param name="hardwareJntPosMin">   -44.81           -35     -79.199    -105.23  </param>
-        <param name="rotorPosMin">            0         0      0      0     </param> 
-        <param name="rotorPosMax">            0         0      0      0     </param>
+        <param name="hardwareJntPosMax">     110.15  111.463   79.199    7.75    </param>
+        <param name="hardwareJntPosMin">    -44.81  -35       -79.199   -105.23  </param>
+        <param name="rotorPosMin">           0       0         0         0       </param> 
+        <param name="rotorPosMax">           0       0         0         0       </param>
     </group>
 
     <group name="2FOC">
         <param name="AutoCalibration">       0             0        0   0  </param>
         <param name="Verbose">               0             0        0   0  </param>
         <param name="HasHallSensor">         0             0        0   0  </param>
-        <param name="TemperatureSensorType"> PT100     PT100     PT100  PT100   </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the hip roll. -->
+        <param name="TemperatureSensorType"> NONE     PT100     NONE  PT100   </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the hip roll. -->
 <!--        <param name="TemperatureSensorType"> NONE       NONE     NONE NONE </param> -->
         <param name="HasRotorEncoder">       1             1        1   1  </param>
         <param name="HasRotorEncoderIndex">  1             1        1   1  </param>
         <param name="HasSpeedEncoder">       0             0        0   0  </param>
-        <param name="RotorIndexOffset">      170          12        62  89 </param>
+        <param name="RotorIndexOffset">      170           9        62  89 </param>
         <param name="MotorPoles">            12            8        8   12 </param>
    </group>
 

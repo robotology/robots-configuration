@@ -37,14 +37,6 @@
                 <param name="boardType">            mtb4c           mtb4c            mtb4c            mtb4c            </param>
                 <param name="connector">            CONN:J3_SDA3    CONN:J3_SDA0     CONN:J3_SDA1     CONN:J3_SDA2      </param>
 
-                <group name="CALIBRATION">
-                    <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
-                    <param name="type">             TYPE:decideg    TYPE:decideg     TYPE:decideg     TYPE:decideg     </param>
-                    <param name="rotation">         ROT:zero        ROT:zero         ROT:zero         ROT:zero         </param>
-                    <param name="offset">           0.0             0.0              0.0              0.0                </param>
-                    <param name="invertDirection">  false           false            false            false            </param>
-                </group>
-
             </group>
 
         </group>

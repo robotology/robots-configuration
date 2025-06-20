@@ -13,8 +13,8 @@
     <!-- joint number                           0                        1                           -->
     <!-- joint name                             hand_thumb_add     hand_index_add         -->
     <group name="LIMITS">
-        <param name="jntPosMin">                0                        0            </param>
-        <param name="jntPosMax">                90                       15           </param>
+        <param name="jntPosMin">                2                        0            </param>
+        <param name="jntPosMax">                87                       15           </param>
         <param name="jntVelMax">                1000                     1000         </param>
         <param name="motorOverloadCurrents">    2000                     2000         </param>
         <param name="motorNominalCurrents">     700                      700          </param>
