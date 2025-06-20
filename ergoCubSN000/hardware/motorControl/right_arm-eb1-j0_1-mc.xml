@@ -150,15 +150,16 @@
 
     <!-- kalman filter parameters - vel & acc estimation -->
     <group name="KALMAN_FILTER">
-        <param name="kalmanFilterEnabled">          1              1            </param>
-        <param name="x0">                           0              0            </param>
-        <param name="x1">                           0              0            </param>
-        <param name="x2">                           0              0            </param>
-        <param name="Q0">                           0.0001         0.0001       </param>
-        <param name="Q1">                           0.01           0.01         </param>
-        <param name="Q2">                           10             10           </param>
-        <param name="R">                            0.001          0.001        </param>
-        <param name="P0">                           0.000099       0.000099     </param>
+        <!--   r_shoulder_pitch r_shoulder_roll  -->
+        <param name="kalmanFilterEnabled">          1 1             </param>
+        <param name="x0">                           0 0             </param>
+        <param name="x1">                           0 0             </param>
+        <param name="x2">                           0 0             </param>
+        <param name="Q0">                           0.13833218659752797 0.02496498679008257             </param>
+        <param name="Q1">                           0.0005609958935385298 0.0006741162031216767             </param>
+        <param name="Q2">                           24.751618945684292 7.089049176661524             </param>
+        <param name="R">                            0.16073791920934014 0.191050883655292             </param>
+        <param name="P0">                           0.001149718101396471 0.00459807602310151             </param>
     </group>
 
   </device>

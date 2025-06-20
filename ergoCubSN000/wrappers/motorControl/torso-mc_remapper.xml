@@ -11,7 +11,8 @@
     <param name="joints"> 3 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="torso_joints">  torso-eb5-j0_2-mc </elem>
+            <!-- <elem name="torso_joints">  torso-eb5-j0_2-mc </elem> -->
+            <elem name="torso_joints">  torso-eb5-j0_2-jtcvc  </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />

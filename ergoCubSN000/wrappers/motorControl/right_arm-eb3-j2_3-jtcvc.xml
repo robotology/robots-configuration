@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-eb3-j2_3-jtcvc" type="JointTorqueControlDevice">
+    <param name="remote">  /hijackingTrqCrl/r_lower_arm  </param>
+    <param name="joint_list"> (  "r_shoulder_yaw", "r_elbow"  )</param>
+
+    <group name="TORQUE_CURRENT_PARAMS">
+        <param name="kt">(   0.025,  0.025  )</param>
+        <param name="kfc">(  0.0, 0.0   )</param>
+        <param name="kp">(  0.0, 0.0  )</param>
+        <param name="ki">(  0.0, 0.0   )</param>
+        <param name="max_curr">(  10.0, 10.0  )</param>
+        <param name="friction_model"> ("", "") </param>
+        <param name="bwfilter_cutoff_freq"> 1.0 </param>
+        <param name="bwfilter_order"> 2 </param>
+        <param name="bwfilter_enabled"> true </param>
+        <param name="max_output_friction">(  0.0, 0.0  )</param>
+    </group>
+
+    <group name="FRICTION_PINN">
+        <param name="model"> ( "", "" ) </param>
+        <param name="thread_number"> 1 </param>
+        <param name="model_type"> 2 </param>
+    </group>
+
+    <!-- Warning, still in milliseconds -->
+    <param name="period"> 1 </param>
+
+    <action phase="startup" level="4" type="attach">
+        <paramlist name="networks">
+            <elem name="right_arm_joints2">  right_arm-eb3-j2_3-mc </elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="18" type="detach" />
+</device>
