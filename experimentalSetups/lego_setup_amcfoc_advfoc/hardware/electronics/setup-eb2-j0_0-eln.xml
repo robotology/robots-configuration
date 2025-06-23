@@ -23,6 +23,15 @@
                 <param name="maxTimeOfDOactivity">      300                 </param>
                 <param name="maxTimeOfTXactivity">      300                 </param>
                 <param name="TXrateOfRegularROPs">      5                   </param>
+                <group name="LOGGING">
+                    <group name="IMMEDIATE">
+                        <param name="emitRXDOTXoverflow">       true        </param>
+                    </group>
+                    <group name="PERIODIC">
+                        <param name="period">                   10          </param>                   
+                        <param name="emitRXDOTXstatistics">     false        </param>
+                    </group>
+                </group>
             </group>
         </group>
 
