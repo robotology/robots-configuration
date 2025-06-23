@@ -103,7 +103,7 @@ yarpserver --write --silent &
 yarp wait /root
 
 echo "Starting yarprobotinterface..."
-YARP_ROBOT_NAME=$1 yarprobotinterface > ${log_file} 2>&1 &
+YARP_ROBOT_NAME=$1 yarprobotinterface --enable_tags "(remapper_no_jtcvc)" --disable_tags "(disable_jtcvc)" > ${log_file} 2>&1 &
 
 exit_code=0
 
