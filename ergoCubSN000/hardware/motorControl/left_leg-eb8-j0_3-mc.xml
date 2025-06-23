@@ -156,7 +156,7 @@
 
     <!-- kalman filter parameters - vel & acc estimation -->
     <group name="KALMAN_FILTER">
-        <!--   r_hip_pitch r_hip_roll r_hip_yaw r_knee  -->
+        <!--   l_hip_pitch l_hip_roll l_hip_yaw l_knee  -->
         <param name="kalmanFilterEnabled">          1 1 1 1             </param>
         <param name="x0">                           0 0 0 0             </param>
         <param name="x1">                           0 0 0 0             </param>
