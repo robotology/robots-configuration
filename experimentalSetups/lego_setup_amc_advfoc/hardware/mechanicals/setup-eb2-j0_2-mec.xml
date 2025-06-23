@@ -6,7 +6,7 @@
         <param name="MotioncontrolVersion">  6          </param>
         <param name="Joints">                1          </param>
         <param name="AxisMap">               0          </param>
-        <param name="AxisName">         "setup_yaw"     </param>
+        <param name="AxisName">         "lego_setup"    </param>
         <param name="AxisType">         "revolute"      </param>
         <param name="Encoder">          182.044         </param>
         <param name="fullscalePWM">     32000           </param>
@@ -14,7 +14,7 @@
         <param name="Gearbox_M2J">     -196             </param>
         <param name="Gearbox_E2J">      1               </param>
         <param name="useMotorSpeedFbk"> 0               </param>
-        <param name="MotorType">        "BLL_MOOG"      </param>
+        <param name="MotorType">        "FAULHABER2214" </param>
         <param name="Verbose">          0               </param>
     </group>
 
@@ -36,8 +36,10 @@
    </group>
    
     <group name="ADVFOC">
+        <param name="Verbose">               0          </param>
+        <param name="AutoCalibration">       0          </param>
         <param name="HasHallSensor">         1          </param>
-        <param name="HasTempSensor">         0          </param>
+        <param name="TemperatureSensorType"> NONE       </param>
         <param name="HasRotorEncoder">       0          </param>
         <param name="HasRotorEncoderIndex">  0          </param>
         <param name="HasSpeedEncoder">       0          </param>

@@ -93,7 +93,7 @@
         <group name="PROPERTIES">
 
             <group name="ETHBOARD">
-                <param name="type">                 amc        </param>
+                <param name="type">                 amc                 </param>
             </group>
 
             <group name="CANBOARDS">
@@ -104,8 +104,8 @@
                 </group>
                 <group name="FIRMWARE">
                     <param name="major">            3       2           </param>
-                    <param name="minor">            6       0           </param>
-                    <param name="build">            0       10          </param>
+                    <param name="minor">            9       2           </param>
+                    <param name="build">            0       0           </param>
                 </group>
             </group>
            
