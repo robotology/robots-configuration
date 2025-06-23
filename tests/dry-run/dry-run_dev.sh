@@ -83,6 +83,9 @@ xmlstarlet edit --inplace --delete "/robot/devices/xi:include[contains(@href,'wh
 xmlstarlet edit --inplace --delete "/robot/devices/xi:include[contains(@href,'_ros')]" ${file_launch}
 xmlstarlet edit --inplace --delete "/robot/devices/xi:include[contains(@href,'_ros2')]" ${file_launch}
 
+# disable jtcvc wrappers
+xmlstarlet edit --inplace --delete "/robot/devices/xi:include[contains(@href,'-jtcvc')]" ${file_launch}
+
 # disable calibration
 xmlstarlet edit --inplace --update "/params/group/param[@name='skipCalibration']" --value 'true' ${file_general}
 
@@ -103,7 +106,7 @@ yarpserver --write --silent &
 yarp wait /root
 
 echo "Starting yarprobotinterface..."
-YARP_ROBOT_NAME=$1 yarprobotinterface --enable_tags "(remapper_no_jtcvc)" --disable_tags "(disable_jtcvc)" > ${log_file} 2>&1 &
+YARP_ROBOT_NAME=$1 yarprobotinterface --enable_tags "(remapper_no_jtcvc)" > ${log_file} 2>&1 &
 
 exit_code=0
 
