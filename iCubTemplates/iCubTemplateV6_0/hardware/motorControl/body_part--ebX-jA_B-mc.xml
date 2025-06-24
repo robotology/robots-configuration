@@ -31,10 +31,11 @@
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity"> 100 </param> <!-- timeout on reception of velocity setpoint by firmware. [expressed in millisec] -->
-        <param name="torque">   100 </param> <!-- timeout on reception of torque setpoint by firmware. [expressed in millisec] -->
-        <param name="pwm">      100 </param> <!-- timeout on reception of pwm setpoint by firmware. [expressed in millisec] -->
-        <param name="current">  100 </param> <!-- timeout on reception of current setpoint by firmware. [expressed in millisec] -->
+        <!-- The special value of 0 can be used to disable the watchdog managing the following timeouts -->
+        <param name="velocity">       100 </param> <!-- timeout on reception of velocity setpoint by firmware. [expressed in millisec] -->
+        <param name="torque">         100 </param> <!-- timeout on reception of torque setpoint by firmware. [expressed in millisec] -->
+        <param name="pwm">            100 </param> <!-- timeout on reception of pwm setpoint by firmware. [expressed in millisec] -->
+        <param name="current">        100 </param> <!-- timeout on reception of current setpoint by firmware. [expressed in millisec] -->
         <param name="torque_measure"> 100 </param> <!-- timeout on reception of torque measure by firmware. [expressed in millisec] -->
     </group>
 
