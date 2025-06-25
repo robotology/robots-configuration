@@ -38,19 +38,6 @@
             <param name="triangleSetCfg3">     2        2        5         9         1         1        0x0000      </param>
             <param name="triangleSetCfg4">     2        2        5         9         1         1        0x0000      </param>
        </group>
-        
-        
-        
-       <group name="defaultCfgTriangle">
-            <param name="enabled">         false  </param> 
-            <param name="shift">           1  </param>
-            <param name="cdcOffset">       0x0000  </param>
-       </group>
- 
-       <group name="specialCfgTriangles">
-            <param name="numOfSets">         1  </param>
-            <param name="triangleSetCfg1">     2        2        0         15        1         1        0x0000      </param>
-       </group>
 
         
 </params>
