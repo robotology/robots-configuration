@@ -17,7 +17,7 @@ Technicalities underlying the fast-pace local workflow
 - Switch to the branch corresponding to the robot (e.g., `devel-ergoCubSN???`).
 
 ## 🔲 Set the default committer
-- In order to push to the ``icub-tech`` fork without password, it is necessary to get a PAT from the maintainer. Then, issue the following commands:
+- In order to push to the `icub-tech` fork without password, it is necessary to get a PAT from the maintainer. Then, issue the following commands:
   ```console
   git config --local user.name "icub-tech-iit-bot"
   git config --local user.email "icub-tech@iit.it"
