@@ -21,8 +21,7 @@ Technicalities underlying the fast-pace local workflow
   ```console
   git config --local user.name "icub-tech-iit-bot"
   git config --local user.email "icub-tech@iit.it"
-  PAT=<insert the PAT here>
-  git remote set-url icub-tech https://x-access-token:${PAT}@github.com/icub-tech-iit/robots-configuration.git
+  PAT=<insert the PAT here> git remote set-url icub-tech https://x-access-token:${PAT}@github.com/icub-tech-iit/robots-configuration.git
   ```
   ⚠️ Note the use of the option `--local` to avoid impacting Git globally on the system.
 - The PAT is set to have no expiration. However, it can be revoked at any time by the maintainer.
