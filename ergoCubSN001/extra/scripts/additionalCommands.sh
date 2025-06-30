@@ -52,9 +52,18 @@ alias list-windows='DISPLAY=:0 wmctrl -lp'
 
 alias close-window='DISPLAY=:0 wmctrl -c'
 
+check-interface-powersave() {
+    if [ "$#" -ne 1 ]; then
+        echo "Usage: check-interface-powersave <interface_name>"
+        return 1
+    fi
+
+    echo "$1: $(iw $1 get power_save)"
+}
+
 _WIFI_INTERFACE=`iw dev | awk '$1=="Interface"{print $2}'`
 alias disable-wifi-powersave="sudo iw dev ${_WIFI_INTERFACE} set power_save off"
-alias check-wifi-powersave="echo ${_WIFI_INTERFACE}: $(iw ${_WIFI_INTERFACE} get power_save)"
+alias check-wifi-powersave="check-interface-powersave ${_WIFI_INTERFACE}"
 unset _WIFI_INTERFACE
 
 function set-blf-webcam() {
