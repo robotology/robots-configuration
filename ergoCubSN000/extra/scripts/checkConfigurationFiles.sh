@@ -1,6 +1,6 @@
 #!/bin/bash
 
-diff -r --exclude="CMakeLists.txt" $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/src/robots-configuration/$YARP_ROBOT_NAME $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/build/install/share/ICUBcontrib/robots/$YARP_ROBOT_NAME | grep -ve dcm_walking -ve extra > /tmp/diff_out 2>&1
+diff -r --exclude="CMakeLists.txt" --exclude="*.onnx" $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/src/robots-configuration/$YARP_ROBOT_NAME $ROBOTOLOGY_SUPERBUILD_SOURCE_DIR/build/install/share/ICUBcontrib/robots/$YARP_ROBOT_NAME | grep -ve dcm_walking -ve extra > /tmp/diff_out 2>&1
 
 GREEN='\033[0;32m'
 RED='\033[0;31m'
