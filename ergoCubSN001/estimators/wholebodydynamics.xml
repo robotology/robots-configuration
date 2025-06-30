@@ -73,7 +73,7 @@
       <elem name="l_leg_ft_sensors">left_leg-FT_remapper</elem>
       <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem>
       <elem name="l_arm_ft_sensors">left_arm-eb2-j0_1-strain</elem>
-      <elem name="r_arm_ft_sensors">right_arm-eb1-j0_1-strain</elem>
+<!--      <elem name="r_arm_ft_sensors">right_arm-eb1-j0_1-strain</elem> -->
     </paramlist>
   </action>
 
