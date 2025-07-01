@@ -49,9 +49,9 @@
                       
                        In such a mode each phase RX, DO, TX executes inside exact time slots that are
                        [0, maxTimeOfRXactivity), [maxTimeOfRXactivity, maxTimeOfRXactivity+maxTimeOfDOactivity) and [maxTimeOfRXactivity+maxTimeOfDOactivity, period)
-                       If any phase seldom overflows outside its time slot, the mode insures re synchronization to the slots by means of immediate execution
+                       If any phase seldom overflows outside its time slot, the mode ensures re synchronization to the slots by means of immediate execution
                        of late phases.                       
-                       You should use this mode if you want synchonous execution so that some actuations to motors do not drift inside the period 
+                       You should use this mode if you want synchronous execution so that some actuations to motors do not drift inside the period 
 
                           -------               ----------                   ----------
                          | RX    |             | DO       |                 | TX       |
@@ -81,7 +81,7 @@
                      - besteffort 
                      
                        In such a mode the activation is done exactly at start of the period and then phases RX, DO and TX executes as fast as they can.
-                       If the three of them seldom overflow outside the period, the mode insures re synchronization to the start of period by means of 
+                       If the three of them seldom overflow outside the period, the mode ensures re synchronization to the start of period by means of 
                        immediate execution of a new burst.                       
                        You should use this mode if you have difficulties to determine correct slots for the synchronized execution mode and you can accept
                        some drifts of execution inside the period.
@@ -102,7 +102,7 @@
                           -----------------------  ----------  ----------  -------  -------  ----------
                          |-----------------------------------------|-----------------------------------------|
                          | period n                                | period n+1                              |
-                         Figure. Typical best effort execution w/ overflow to next period (shorted for sake of displaying)
+                         Figure. Typical best effort execution w/ overflow to next period (shortened for sake of displaying)
 
                        In section LOGGING.IMMEDIATE, the param emitRXDOTXoverflow enables or disables warnings emitted by the board when any phase 
                        overflows beyond its max time of activity.
@@ -148,7 +148,7 @@
                   -->
                 <param name="maxTimeOfTXactivity">      300                 </param>  
                 
-                <!-- Amount of time [in us] of the execution cycle that should be left availaale for system processing.
+                <!-- Amount of time [in us] of the execution cycle that should be left available for system processing.
                      It is used just for diagnostics purposes and it does not count in triggering of activities. 
                      For instance if LOGGING.IMMEDIATE.emitPERIODoverflow is true and the execution time is > (period-safetygap) a warning message is emitted
                      It's 0 by default if the param is not specified.
@@ -200,7 +200,7 @@
                           -->
                         <param name="period">                   10.0          </param>
  
-                        <!-- enables / disables the periodic emission of info diagnostics about to the statistics of the execution time of the RX, DO and TX phase
+                        <!-- enables / disables the periodic emission of info diagnostics about the statistics of the execution time of the RX, DO and TX phase
                              in the form of minimum, average and maximum values. 
                              The legacy param emitRXDOTXstatistics is just an alias. When both are present, emitRXDOTXminavgmax wins.
                              It's false by default if the param is not specified.
@@ -212,13 +212,13 @@
                           -->                        
                         <param name="emitRXDOTXstatistics">     true        </param>
                     
-                        <!-- enables / disables the periodic emission of info diagnostics about to the statistics of the execution time of the complete period (RX, DO, TX)
+                        <!-- enables / disables the periodic emission of info diagnostics about the statistics of the execution time of the complete period (RX, DO, TX)
                              in the form of minimum, average and maximum values.
                              It's false by default if the LOGGING group is not present or if the param is not specified.
                           -->                        
                         <param name="emitPERIODminavgmax">      true        </param>
 
-                        <!-- enables / disables the periodic emission of info diagnostics about to the statistics of the execution time of the complete period (RX, DO, TX)
+                        <!-- enables / disables the periodic emission of info diagnostics about the statistics of the execution time of the complete period (RX, DO, TX)
                              in the form of a probability density function in 8 bins of period/4 us each. 
                              For period = 1000: [0, 250), [250, 500), [500, 750), [750, 1000), [1000, 1250), [1250, 1500), [1500, 1750), [1750, +oo)
                              So, just for example, if over PERIODIC.period seconds the RX-DO-TX cycles lasts 70% of the times exactly 400 us, 20% of the times exactly 600 us 
