@@ -17,22 +17,42 @@
 
         <group name="ETH_BOARD_SETTINGS">
             <param name="Name">                     "setup-eb2-j0_2"        </param>
+
             <group name="RUNNINGMODE">
+
+                <!-- execution can be [synchronized, besteffort]. 
+                 -->  
+                <param name="execution">                synchronized        </param>                
                 <param name="period">                   1000                </param>
+                <param name="safetygap">                150                 </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>
                 <param name="maxTimeOfTXactivity">      300                 </param>
                 <param name="TXrateOfRegularROPs">      5                   </param>
+
+
                 <group name="LOGGING">
+
                     <group name="IMMEDIATE">
-                        <param name="emitRXDOTXoverflow">       true        </param>
+
+                        <param name="emitRXDOTXoverflow">       false </param>
+                        <param name="emitPERIODoverflow">       true  </param>
+
                     </group>
+
                     <group name="PERIODIC">
-                        <param name="period">                   10          </param>                   
-                        <param name="emitRXDOTXstatistics">     false        </param>
+
+                        <param name="period">                  10.0        </param>                     
+                        <param name="emitRXDOTXstatistics">    true        </param>                   
+                        <param name="emitPERIODminavgmax">     true        </param>                   
+                        <param name="emitPERIODhistogram">     true        </param>
+
                     </group>
+
                 </group>
+
             </group>
+            
         </group>
 
         <group name="ETH_BOARD_ACTIONS">
