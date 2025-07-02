@@ -8,7 +8,7 @@
         <param name="AxisMap">          0    </param> <!-- Map joint number from  user to firmware.  -->
         <param name="AxisName">         "Joint0"   </param>  <!-- String wich describes name of joint. see http://wiki.icub.org/wiki/ICub_joints for name convention.  -->
         <param name="AxisType">         "revolute" </param> <!-- It can be "revolute" or "prismatic"  -->
-        <param name="Encoder">          1    </param> <!-- this value let you to transform debgree in firmware measurament units. -->
+        <param name="Encoder">          1    </param> <!-- this value lets you transform degrees in firmware measurament units. -->
         <param name="fullscalePWM">     100  </param> <!-- Value of fullscale pwm. This values is equal for all joints, becuse it depend on type of board, ems, mc4plus, etc. -->
         <param name="ampsToSensor">     1    </param> <!-- Scale value for the ampsToSensor conversion factor  -->
         <param name="Gearbox_M2J">      1    </param> <!-- This is the total reduction factor between joint and encoder.   -->
