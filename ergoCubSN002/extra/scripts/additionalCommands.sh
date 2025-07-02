@@ -63,6 +63,7 @@ _WIFI_INTERFACE=`iw dev | awk '$1=="Interface"{print $2}'`
 alias disable-wifi-powersave="sudo iw dev ${_WIFI_INTERFACE} set power_save off"
 alias check-wifi-powersave="check-interface-powersave ${_WIFI_INTERFACE}"
 unset _WIFI_INTERFACE
+alias restart-wifi="sudo nmcli radio wifi off && sleep 5 && sudo nmcli radio wifi on"
 
 function set-blf-webcam() {
     # Check if the camera number is provided
@@ -110,6 +111,7 @@ ${GREEN}dcmFolder${NC} Go to the robot walking configuration files.
 ${GREEN}goToBuildSuperbuild${NC} Go to the corresponding build folder of the robotology superbuild.
 ${GREEN}disable-wifi-powersave${NC} Disable the WiFi powersave.
 ${GREEN}check-wifi-powersave${NC} Checks the WiFi powersave.
+${GREEN}restart-wifi${NC} Restart the WiFi radio.
 ${GREEN}set-blf-webcam${NC} Bash script that can be used to set the number of the blf webcam in the logger. IT WILL RECOMPILE AND INSTALL BLF.
 ${GREEN}runYarpRobotInterface${NC} Run yarprobotinterface with whole-body-dynamics."'
 
