@@ -53,20 +53,25 @@
                        of late phases.                       
                        You should use this mode if you want synchronous execution so that some actuations to motors do not drift inside the period 
 
-                          -------               ----------                   ----------
-                         | RX    |             | DO       |                 | TX       |
-                          -------               ----------                   ----------
-                         |---------------------|----------------------------|------------------------------------|
-                         | maxTimeOfRXactivity | maxTimeOfDOactivity        | maxTimeOfTXactivity                | 
-                           slot for RX           slot for DO                  slot for TX  
-                         Figure. Typical synchronized execution w/out overflow
+                          -------     --------          ------      --------   ---------         ------       --
+                         | RX    |   | DO     |        | TX   |    | RX      | | DO      |       | TX   |    | RX
+                          -------     --------          ------      ---------   ---------         ------      ---
+                         ^           ^                 ^           ^           ^                 ^           ^ 
+                         o-----------d-----------------t-----------o-----------d-----------------t-----------o----------
+                         | period n                                | period n+1                              | period n+2
+                         |-rx budget-|-do budget-------|-tx budget-|-rx budget-|-do budget-------|-tx budget-| ... 
+ 
+                         Figure. Typical synchronized execution w/out overflow. Note that teh values of rx/do/tx budget are onfigurable w/ parameters
+                                 maxTimeOfRXactivity, maxTimeOfDoactivity and maxTimeOfTXactivity                        
 
-                          -----------------------  ----------                ----------
-                         | RX                    || DO       |              | TX       |
-                          -----------------------  ----------                ----------
-                         |---------------------|----------------------------|------------------------------------|
-                         | maxTimeOfRXactivity | maxTimeOfDOactivity        | maxTimeOfTXactivity                | 
-                           slot for RX           slot for DO                  slot for TX  
+                          --------------  --------      ------      --------   ---------         ------       --
+                         | RX           || DO     |    | TX   |    | RX      | | DO      |       | TX   |    | RX
+                          --------------  --------      ------      ---------   ---------         ------      ---
+                         ^           ^^^^^             ^           ^           ^                 ^           ^ 
+                         o-----------d-----------------t-----------o-----------d-----------------t-----------o----------
+                         | period n                                | period n+1                              | period n+2
+                         |-rx budget-|-do budget-------|-tx budget-|-rx budget-|-do budget-------|-tx budget-| ...  
+                           
                          Figure. Typical synchronized execution w/ overflow of RX
 
                        In section LOGGING.IMMEDIATE, the param emitRXDOTXoverflow enables or disables warnings emitted by the board when any phase 
@@ -86,22 +91,22 @@
                        You should use this mode if you have difficulties to determine correct slots for the synchronized execution mode and you can accept
                        some drifts of execution inside the period.
 
-                          -------  ----------  ----------
-                         | RX    || DO       || TX       |
-                          -------  ----------  ----------
-                          -----------------------  ----------  ----------
-                         | RX                    || DO       || TX       |
-                          -----------------------  ----------  ---------- 
-                         |---------------------------------------------------------------------------------------|
-                         | period                                                                                | 
+                          -------  --------  ------                 ------------------  ---------  ------     --
+                         | RX    || DO     || TX   |               | RX               || DO      || TX   |   | RX
+                          -------  --------  ------                 ------------------  ---------  ------     ---
+                         ^                                         ^                                         ^
+                         o-----------------------------------------o-----------------------------------------o----------
+                         | period n                                | period n+1                              | period n+2                                                                             | 
 
                          Figure. Typical best effort execution w/out overflow
 
-                          -----------------------  ----------  ----------  -------  -------  ----------
-                         | RX                    || DO       || TX       || RX    || DO    || TX       |      
-                          -----------------------  ----------  ----------  -------  -------  ----------
-                         |-----------------------------------------|-----------------------------------------|
-                         | period n                                | period n+1                              |
+                          -----------------------------  -------------  ------  -------  ------  ------       --
+                         | RX                          || DO          || TX   || RX    || DO   || TX   |     | RX
+                          -----------------------------  -------------  ------  -------  ------  ------       ---
+                         ^                                         ^^^^^^^^^^^^^ (activation remains valid)  ^
+                         o-----------------------------------------o-----------------------------------------o----------
+                         | period n                                | period n+1                              | period n+2   
+                         
                          Figure. Typical best effort execution w/ overflow to next period (shortened for sake of displaying)
 
                        In section LOGGING.IMMEDIATE, the param emitRXDOTXoverflow enables or disables warnings emitted by the board when any phase 
