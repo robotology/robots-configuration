@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb9-j4_5-jtcvc" type="JointTorqueControlDevice">
+    <param name="remote">  /hijackingTrqCrl/l_lower_leg  </param>
+    <param name="joint_list"> (  "l_ankle_pitch", "l_ankle_roll"  )</param>
+
+    <group name="TORQUE_CURRENT_PARAMS">
+        <param name="kt">(   0.111,  0.047   )</param>
+        <param name="kfc">(  0.75, 0.7  )</param>
+        <!-- <param name="kfc">(  0.0, 0.0  )</param> -->
+        <!-- <param name="kp">(  2.0, 1.5 )</param> -->
+        <param name="kp">(  0.0, 0.0 )</param>
+        <param name="ki">(  0.0, 0.0 )</param>
+        <param name="max_curr">(  6.0, 3.0  )</param>
+        <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN") </param>
+        <!-- <param name="friction_model"> ("", "") </param> -->
+        <param name="bwfilter_cutoff_freq"> 1.0 </param>
+        <param name="bwfilter_order"> 2 </param>
+        <param name="bwfilter_enabled"> true </param>
+        <param name="max_output_friction">(  19.0, 8.0  )</param>
+        <param name="jointVelThreshold">(  3.0, 3.0  )</param>
+    </group>
+
+    <group name="FRICTION_PINN">
+        <param name="model"> ("2_lap_b4788_h9.onnx", "2_lar_b4832_h14.onnx") </param>
+        <param name="thread_number"> 1 </param>
+    </group>
+
+    <group name="KF_JOINT">
+        <param name="Q0"> (    5.131500755615346e-06   0.00016486542874413732 )  </param>
+        <param name="Q1"> (    0.0002394581180587153   5.9446836582113574e-05  ) </param>
+        <param name="Q2"> (    24.800150622078803      24.471668575822928     )  </param>
+        <param name="R">  (    2.0531857814388692e-05  0.003329749020748807   )  </param>
+        <param name="P0"> (    0.003343795067559131    0.38134537532629503    )  </param>
+    </group>
+
+    <!-- <group name="KF_MOTOR">
+        <param name="Q0">  (   5.131500755615346e-06   0.00016486542874413732  ) </param>
+        <param name="Q1"> (    0.0002394581180587153   5.9446836582113574e-05  ) </param>
+        <param name="Q2"> (    240.800150622078803      240.471668575822928    )  </param>
+        <param name="R">  (    2.0531857814388692e-05  0.003329749020748807   )  </param>
+        <param name="P0">  (   0.003343795067559131    0.38134537532629503     ) </param>
+    </group> -->
+
+    <!-- Warning, still in milliseconds -->
+    <param name="period"> 1 </param>
+
+    <action phase="startup" level="4" type="attach">
+        <paramlist name="networks">
+            <elem name="left_leg_joints2">  left_leg-eb9-j4_5-mc </elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="18" type="detach" />
+</device>
