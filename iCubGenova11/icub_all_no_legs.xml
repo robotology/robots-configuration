@@ -95,5 +95,7 @@
     <xi:include href="calibrators/head-calib.xml" />
     <xi:include href="calibrators/face-calib.xml" />
 
+    <xi:include href="wrappers/motorControl/right_arm-mc-rawval-nws_wrapper.xml" />
+    <xi:include href="checker/fineCalibrationCheckerConfig.xml" />
     </devices>
 </robot>
