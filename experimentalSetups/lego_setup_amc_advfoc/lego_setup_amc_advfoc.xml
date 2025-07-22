@@ -12,9 +12,13 @@
             <xi:include href="hardware/motorControl/setup-eb2-j0_2-mc.xml" />
             <xi:include href="wrappers/motorControl/setup-mc_wrapper.xml"  />
             <xi:include href="wrappers/motorControl/setup-mc_remapper.xml" />
+            <xi:include href="wrappers/motorControl/setup-rawval-nws_wrapper.xml" />
     
             <!--  CALIBRATORS -->
             <xi:include href="calibrators/setup-calib.xml" />
+
+            <!-- FINE CALIBRATION CHECKER -->
+            <xi:include href="checker/fineCalibrationCheckerConfig.xml" />
         
     </devices>
 </robot>

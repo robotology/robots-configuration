@@ -9,4 +9,8 @@
       <param name="useLimitedPWM">      false  </param>
       <param name="verbose">            false  </param>
   </group>
+
+  <group name="DEBUG">
+    <param name="embBoardsConnected"> 0 </param>
+  </group>
 </params>
