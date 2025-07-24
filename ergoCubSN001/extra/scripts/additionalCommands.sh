@@ -96,6 +96,30 @@ gerDevice/app/robots/${YARP_ROBOT_NAME}/blf-yarp-robot-logger-interfaces/webcams
     cd -
 }
 
+alias list-webcams="v4l2-ctl --list-devices"
+
+set-yarp-namespace() {
+    local namespace="$1"
+    local hosts=("10.0.2.14" "ergocub-torso" "ergocub-head")
+
+    if [[ -z "$namespace" ]]; then
+        echo "Usage: set_namespace <namespace>"
+        return 1
+    fi
+
+    for host in "${hosts[@]}"; do
+        echo "------------------------------"
+        echo "Setting namespace on $host..."
+        ssh "$host" "yarp namespace $namespace"
+
+        if [[ $? -eq 0 ]]; then
+            echo "[$host] Namespace set successfully."
+        else
+            echo "[$host] ERROR: Failed to set namespace."
+        fi
+    done
+}
+
 
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
@@ -117,6 +141,8 @@ ${GREEN}disable-wifi-powersave${NC} Disable the WiFi powersave.
 ${GREEN}check-wifi-powersave${NC} Checks the WiFi powersave.
 ${GREEN}restart-wifi${NC} Restart the WiFi radio.
 ${GREEN}set-blf-webcam${NC} Bash script that can be used to set the number of the blf webcam in the logger. IT WILL RECOMPILE AND INSTALL BLF.
+${GREEN}list-webcams${NC} List the available webcams.
+${GREEN}set-yarp-namespace${NC} Set the yarp namespace on the laptop, ergocub-torso, and ergocub-head.
 ${GREEN}runYarpRobotInterface${NC} Run yarprobotinterface with whole-body-dynamics."'
 
 if [ "$PS1" ]; then
