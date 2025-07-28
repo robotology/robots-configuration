@@ -104,13 +104,8 @@
                 </group>
                 <group name="FIRMWARE">
                     <param name="major">            3       2           </param>
-<<<<<<< Updated upstream
                     <param name="minor">            9       2           </param>
                     <param name="build">            0       0           </param>
-=======
-                    <param name="minor">            9       0           </param>
-                    <param name="build">            0       0          </param>
->>>>>>> Stashed changes
                 </group>
             </group>
            
