@@ -5,9 +5,7 @@
     <param name="name"> /right_arm/raw_data </param>
     <param name="period"> 2 </param>
     <action phase="startup" level="10" type="attach">
-        <paramlist name="networks">
-            <elem name="device"> right_arm-eb3-j0_3-mc </elem>
-        </paramlist>
+        <param name="device"> right_arm-eb3-j0_3-mc </elem>
     </action>
     <action phase="shutdown" level="15" type="detach" />
 </device>
