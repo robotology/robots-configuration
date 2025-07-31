@@ -100,7 +100,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
           -DENABLE_icubmod_xsensmtx:BOOL=ON && \
           -DENABLE_icubmod_rawValuesPublisherClient:BOOL=ON && \
           -DENABLE_icubmod_rawValuesPublisherServer:BOOL=ON && \
-          -DENABLE_icubmod_fakeRawValuesPublisher:BOOL=ON && \
+          -DENABLE_icubmod_fineCalibrationChecker:BOOL=ON && \
     cmake --build . --config Release --target install
 
 # navigation
