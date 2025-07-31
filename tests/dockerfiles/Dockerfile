@@ -98,9 +98,6 @@ RUN cd ${DEPENDENCIES_DIR} && \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install \
           -DBUILD_SHARED_LIBS:BOOL=OFF \
           -DENABLE_icubmod_xsensmtx:BOOL=ON && \
-          -DENABLE_icubmod_rawValuesPublisherClient:BOOL=ON && \
-          -DENABLE_icubmod_rawValuesPublisherServer:BOOL=ON && \
-          -DENABLE_icubmod_fineCalibrationChecker:BOOL=ON && \
     cmake --build . --config Release --target install
 
 # navigation
