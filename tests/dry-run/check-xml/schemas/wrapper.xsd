@@ -75,6 +75,7 @@
     <xs:enumeration value="controlBoard_nws_yarp" />
     <xs:enumeration value="controlBoard_nws_ros" />
     <xs:enumeration value="controlBoard_nws_ros2" />
+    <xs:enumeration value="rawValuesPublisherServer"/>
   </xs:restriction>
 </xs:simpleType>
 
