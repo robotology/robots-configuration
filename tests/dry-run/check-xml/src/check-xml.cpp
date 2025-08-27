@@ -233,7 +233,7 @@ bool checkCartesian(const std::string& robot_dir, std::vector<std::string>& vect
 }
 
 bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, bool& pass){
-     // save first list of unremapped devices to skip the check for wrappers/remappers
+    // save first list of unremapped devices to skip the check for wrappers/remappers
     // we cannot check the single element inside the for loop by passing ele to method
     // since we first need to fill the list of targets by looking in hardware/motorControl directory
     // while the unramapped devices are inside wrappers/motorControl directory 
