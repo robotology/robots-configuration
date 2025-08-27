@@ -177,14 +177,14 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
         if(ele.find("wrappers/motorControl") != std::string::npos){
             if(ele.find("wrapper.xml") != std::string::npos) {
                 if(!loadXmlFile(robot_dir, ele, doc_wrapper)) return false;
+                pugi::xpath_node action_startup = doc_wrapper.select_node("//action[@phase='startup']/param[@name='device']/text()");
+                device = trim(action_startup.node().value());
                 if (std::find(vectorUnremapped.begin(), vectorUnremapped.end(), ele) != vectorUnremapped.end())
                 {
-                    std::cout << part << " - SKIPPED SINCE UNREMAPPED!" << std::endl;
+                    std::cout << part << " - SKIPPED DEVICE " << device << " SINCE UNREMAPPED!" << std::endl;
                     found = true;
                     continue;
                 }
-                pugi::xpath_node action_startup = doc_wrapper.select_node("//action[@phase='startup']/param[@name='device']/text()");
-                device = trim(action_startup.node().value());
                 if(device == target) std::cout << part <<" - WRAPPER CHECK PASSED!" << std::endl;
                 else {
                     std::cerr << part << " - WRAPPER CHECK FAILED!" << std::endl;
