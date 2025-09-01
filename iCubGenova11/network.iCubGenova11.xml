@@ -145,9 +145,7 @@
             <connected bus="CAN" />
         </board>
 
-        <!--consistency issue in the discovery using gui, skipping for automatic firmware update process-->
-
-        <!-- <board type='mtb4' name="mtb4.left_arm.CAN1:8">
+        <board type='mtb4' name="mtb4.left_arm.CAN1:8">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="8"  />
 			<connected bus="CAN" />
@@ -187,7 +185,7 @@
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.24" canbus="1" canadr="14"  />
             <connected bus="CAN" />
-        </board> -->
+        </board>
 
     </part>
 
@@ -259,9 +257,7 @@
             <connected bus="CAN" />
         </board>
 
-        <!--consistency issue in the discovery using gui, skipping for automatic firmware update process-->
-
-        <!--<board type='mtb4' name="mtb4.right_arm.CAN1:8">
+        <board type='mtb4' name="mtb4.right_arm.CAN1:8">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="8"  />
             <connected bus="CAN" />
@@ -301,7 +297,7 @@
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.27" canbus="1" canadr="14"  />
             <connected bus="CAN" />
-        </board> -->
+        </board>
 
     </part>
 
@@ -337,17 +333,8 @@
             <ataddress ip="10.0.1.5" canbus="1" canadr="4"  />
             <connected bus="CAN" />
         </board>
-        
-        
-        <!--
-                the torso hosts the skin read via mtb4 boards.
-                but the mtb4 boards are attached to board 10.0.1.22 that is located in the head
-                so, we put the mtb4 in here 
-          -->
-          
-        <!--consistency issue with the following boards at the discovery using the GUI-->
-        
-        <!-- <board type='mtb4' name="mtb4.torso.CAN1:7">
+
+        <board type='mtb4' name="mtb4.torso.CAN1:7">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.22" canbus="1" canadr="7"  />
             <connected bus="CAN" />
@@ -363,8 +350,14 @@
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.22" canbus="1" canadr="9"  />
             <connected bus="CAN" />
-        </board> -->
+        </board>
 
+        <board type='mtb4' name="mtb4.torso.CAN1:10">
+            <ondevice>ETH</ondevice>
+            <ataddress ip="10.0.1.22" canbus="1" canadr="10"  />
+            <connected bus="CAN" />
+        </board>
+        
     </part>
 
 
@@ -436,8 +429,6 @@
             <ataddress ip="10.0.1.7" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
-
-<!-- removing mtb4 on leg
 
         <board type='mtb4' name="mtb4.left_leg.CAN1:1">
             <ondevice>ETH</ondevice>
@@ -516,9 +507,6 @@
             <ataddress ip="10.0.1.10" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
-
-   removing mtb4 on leg
-   -->
    
     </part>
 
@@ -592,8 +580,6 @@
             <ataddress ip="10.0.1.9" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
-
-<!-- removing mtb4 on leg
 
         <board type='mtb4' name="mtb4.right_leg.CAN1:1">
             <ondevice>ETH</ondevice>
@@ -672,9 +658,6 @@
             <ataddress ip="10.0.1.11" canbus="2" canadr="13"  />
             <connected bus="CAN" />
         </board>
-
-   removing mtb4 on leg
-   -->
    
     </part>
 
