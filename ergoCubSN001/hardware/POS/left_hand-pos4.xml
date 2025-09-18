@@ -30,7 +30,8 @@
                 <param name="location">             CAN1:1         CAN1:1            CAN1:1           CAN1:1            </param>
 
                 <!-- common to all analog services -->
-                <param name="id">                   id_fapAA        id_fapBB         id_fapCC         id_fapDD          </param>
+                <param name="id">                   l_id_fapAA      l_id_fapBB       l_id_fapCC       l_id_fapDD          </param>
+                <param name="sensorName">           l_hand_pos4     l_hand_pos4      l_hand_pos4      l_hand_pos4       </param>
                 <param name="type">                 eoas_pos_angle  eoas_pos_angle   eoas_pos_angle   eoas_pos_angle    </param>
                 <param name="port">                 POS:hand_thumb_oc  POS:hand_index_oc   POS:hand_middle_oc  POS:hand_ring_pinky_oc    </param>
 
@@ -42,7 +43,7 @@
 
         <group name="SETTINGS">
             <param name="acquisitionRate"> 50 </param>                    <!-- milliseconds -->
-            <param name="enabledSensors"> id_fapAA id_fapBB id_fapCC id_fapDD</param>
+            <param name="enabledSensors"> l_id_fapAA l_id_fapBB l_id_fapCC l_id_fapDD</param>
         </group>
 
     </group>
