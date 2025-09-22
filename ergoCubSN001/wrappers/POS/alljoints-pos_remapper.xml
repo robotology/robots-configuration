@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="alljoints-pos_remapper" type="multipleanalogsensorsremapper">
         <param name="EncoderArraysNames">
-            (l_hand_pos2 r_hand_pos2 l_hand_pos4 r_hand_pos4)
+            (l_hand_pos2 l_hand_pos4 r_hand_pos2 r_hand_pos4)
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
