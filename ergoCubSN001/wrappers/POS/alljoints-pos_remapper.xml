@@ -8,10 +8,10 @@
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
-                <elem name="l_hand_pos2"> left_hand-pos2  </elem>
-                <elem name="l_hand_pos4"> left_hand-pos4  </elem>
-                <elem name="r_hand_pos2"> right_hand-pos2 </elem>
-                <elem name="r_hand_pos4"> right_hand-pos4 </elem>
+                <elem name="l_hand_pos2">left_hand-pos2</elem>
+                <elem name="l_hand_pos4">left_hand-pos4</elem>
+                <elem name="r_hand_pos2">right_hand-pos2</elem>
+                <elem name="r_hand_pos4">right_hand-pos4</elem>
             </paramlist>
         </action>
 
