@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_as_wrapper4" type="analogServer">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_hand_mas_wrapper4" type="multipleanalogsensorsserver">
     <param name="period">   10  				         </param>
     <param name="name">     /ergocub/left_hand/POS4:o    </param>
 
-    <action phase="startup" level="5" type="attach">
+    <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
             <!-- The param value must match the device name in the file describing the service -->
-            <elem name="posLeftHand4">  left_hand-pos4 </elem>
+            <elem name="posLeftHand4">  left_hand-pos4_remapper </elem>
         </paramlist>
     </action>
 
-    <action phase="shutdown" level="5" type="detach" />
+    <action phase="shutdown" level="15" type="detach" />
 </device>
 
