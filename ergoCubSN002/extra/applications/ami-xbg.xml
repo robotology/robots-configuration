@@ -22,8 +22,8 @@
         <node>llm-node</node>
     </module>
     <module>
-        <name>yarpdev</name>
-        <parameters>--device deviceBundler --wrapper_device AudioRecorderWrapper --attached_device portaudioRecorder --name /ergocub/microphone --min_samples_over_network 150 --max_samples_over_network 1000 --AUDIO_BASE::rate 16000 --AUDIO_BASE::samples 4000 --AUDIO_BASE::channels 1 --start</parameters>
+        <name>conda</name>
+        <parameters>run -n ffmpeg_env --no-capture-output ffmpeg -f pulse -i default -ac 1 -acodec libopus -f rtp rtp://10.0.2.25:5000 -sdp_file audio_ffmpeg_robot.sdp</parameters>
         <node>ergocub-torso</node>
    </module>
    <module>
@@ -44,7 +44,7 @@
    </module>
    <module>
         <name>llmGUI</name>
-        <parameters>wake_word=ergocub2 llm=gemini action_handler=xbgda+</parameters>
+        <parameters>wake_word=ergocub2 llm=gemini action_handler=xbgda+ audio_source=ffmpeg</parameters>
         <node>llm-node</node>
     </module>
     <module>
@@ -72,11 +72,6 @@
     <connection>
         <output>/talking_ergocub/FrameTransform/data:o</output>
         <input>/talking_ergocub/FrameTransform/data:i</input>
-        <protocol>fast_tcp</protocol>
-    </connection>
-    <connection>
-        <output>/ergocub/microphone/audio:o</output>
-        <input>/talking_ergocub/asr/audio:i</input>
         <protocol>fast_tcp</protocol>
     </connection>
     <connection>
