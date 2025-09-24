@@ -1,0 +1,28 @@
+<!-- Copyright (C) 2025 Istituto Italiano di Tecnologia (IIT). All rights reserved.
+This software may be modified and distributed under the terms of the
+BSD-3-Clause license. -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="all_joints-mc" type="CiA402MotionControl">
+
+    <param name="ifname">"eth0"</param>
+    <param name="num_axes">12</param>
+    <param name="period">0.001</param>
+    <param name="pdo_timeout_us">5000</param>
+    <param name="enable_dc">true</param>
+    <!-- Joint Names:                               l_ankle_roll  l_ankle_pitch  l_knee  l_hip_yaw  l_hip_roll  l_hip_pitch  r_hip_pitch  r_hip_roll  r_hip_yaw  r_knee  r_ankle_pitch  r_ankle_roll -->
+    <param name="axes_names">                      ("l_ankle_roll", "l_ankle_pitch", "l_knee", "l_hip_yaw", "l_hip_roll", "l_hip_pitch", "r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
+    <param name="inverted_motion_sense_direction"> (        false,          false,   false,      false,       false,        false,        false,       false,      false,   false,          false,        false)</param>
+
+    <param name="pos_limit_min_deg">               (        -25.0,          -25.0,   -25.0,      -25.0,       -25.0,        -25.0,        -25.0,       -25.0,      -25.0,   -25.0,          -25.0,        -25.0)</param>
+    <param name="pos_limit_max_deg">               (         25.0,           25.0,    25.0,       25.0,        25.0,         25.0,         25.0,        25.0,       25.0,    25.0,           25.0,         25.0)</param>
+    <param name="use_position_limits_from_config"> (         true,           true,    true,       true,        true,         true,         true,        true,       true,    true,           true,         true)</param>
+
+    <param name="enc1_mount">                      (      "motor",        "motor", "motor",    "motor",     "motor",      "motor",      "motor",     "motor",    "motor", "motor",        "motor",      "motor")</param>
+    <param name="enc2_mount">                      (      "joint",        "joint", "joint",    "joint",     "joint",      "joint",      "joint",     "joint",    "joint", "joint",        "joint",      "joint")</param>
+    <param name="position_feedback_motor">         (       "6064",         "6064",  "6064",     "6064",      "6064",       "6064",       "6064",      "6064",     "6064",  "6064",         "6064",       "6064")</param>
+    <param name="velocity_feedback_motor">         (       "606C",         "606C",  "606C",     "606C",      "606C",       "606C",       "606C",      "606C",     "606C",  "606C",         "606C",       "606C")</param>
+    <param name="position_feedback_joint">         (       "6064",         "6064",  "6064",     "6064",      "6064",       "6064",       "6064",      "6064",     "6064",  "6064",         "6064",       "6064")</param>
+    <param name="velocity_feedback_joint">         (       "606C",         "606C",  "606C",     "606C",      "606C",       "606C",       "606C",      "606C",     "606C",  "606C",         "606C",       "606C")</param>
+    <param name="position_window_deg">             (         0.1,            0.1,     0.1,        0.1,         0.1,          0.1,          0.1,         0.1,        0.1,     0.1,            0.1,          0.1)</param>
+    <param name="timing_window_ms">                (         100,            100,     100,        100,         100,          100,          100,         100,        100,     100,            100,          100)</param>
+</device>
