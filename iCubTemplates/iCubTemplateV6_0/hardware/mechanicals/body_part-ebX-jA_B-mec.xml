@@ -43,7 +43,7 @@
         <param name="HasSpeedEncoder">       0    </param> <!-- It is as an alternative to rotorEncoder. It is not used for FOC controller. -->
         <param name="RotorIndexOffset">      0    </param> <!-- Rotor index offset between first electric sector and encoder index [degree] -->
         <param name="MotorPoles">            1    </param> <!--  Number of poles of motor -->
-        <param name="Kbemf">                 0    </param> <!--  Back EMF constant of the motor in machine units -->
+        <param name="Kbemf">                 0    </param> <!--  Back EMF constant of the motor in machine units: Kbemf_machine = Kbemf_metric [V/(deg/s)] * (PWM_fs/Vcc) * (360 deg/65536 icubdeg) * (1000 ms/1 s) -->
     </group>
 
     <group name="ADVFOC"> <!-- this group is used only if SERVICE.type is eomn_serv_MC_advfoc. Its syntax at date of march 2024 is the same as the group 2FOC-->
@@ -62,7 +62,7 @@
         <param name="HasSpeedEncoder">       0    </param> <!-- It is as an alternative to rotorEncoder. It is not used for FOC controller. -->
         <param name="RotorIndexOffset">      0    </param> <!-- Rotor index offset between first electric sector and encoder index [degree] -->
         <param name="MotorPoles">            1    </param> <!--  Number of poles of motor -->
-        <param name="Kbemf">                 0    </param> <!--  Back EMF constant of the motor in machine units -->
+        <param name="Kbemf">                 0    </param> <!--  Back EMF constant of the motor in machine units: no conversion required from metric units -->
     </group>
 
     <group name="COUPLINGS"> 
