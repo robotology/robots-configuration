@@ -24,7 +24,11 @@
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity">                 100                </param>
+        <param name="velocity">                 300                 </param>
+        <param name="torque">                   300                 </param>
+        <param name="pwm">                      300                 </param>
+        <param name="current">                  300                 </param>
+        <param name="torque_measure">           300                 </param>
     </group>
 
     <group name="IMPEDANCE">

@@ -10,24 +10,23 @@
         <group name="ETH_BOARD_PROPERTIES">
             <param name="IpAddress">                10.0.1.1                </param>
             <param name="IpPort">                   12345                   </param>
-            <param name="Type">                     amc                    </param>
+            <param name="Type">                     amc                     </param>
             <param name="maxSizeRXpacket">          768                     </param>
             <param name="maxSizeROP">               384                     </param>
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "setup-eb2-j0_2"        </param>
+            <param name="Name">                     "amc"                   </param>
 
             <group name="RUNNINGMODE">
 
-                <!-- execution can be [synchronized, besteffort]. 
-                 -->  
+                <!-- execution can be [synchronized, besteffort].-->  
                 <param name="execution">                synchronized        </param>                
                 <param name="period">                   1000                </param>
-                <param name="safetygap">                150                 </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>
                 <param name="maxTimeOfTXactivity">      300                 </param>
+                <param name="safetygap">                100                 </param>
                 <param name="TXrateOfRegularROPs">      5                   </param>
 
 
@@ -35,17 +34,17 @@
 
                     <group name="IMMEDIATE">
 
-                        <param name="emitRXDOTXoverflow">       false </param>
-                        <param name="emitPERIODoverflow">       true  </param>
+                        <param name="emitRXDOTXoverflow">       true        </param>
+                        <param name="emitPERIODoverflow">       true        </param>
 
                     </group>
 
                     <group name="PERIODIC">
 
-                        <param name="period">                  10.0        </param>                     
-                        <param name="emitRXDOTXstatistics">    true        </param>                   
-                        <param name="emitPERIODminavgmax">     true        </param>                   
-                        <param name="emitPERIODhistogram">     true        </param>
+                        <param name="period">                   10.0        </param>
+                        <param name="emitRXDOTXminavgmax">     true        </param>
+                        <param name="emitPERIODminavgmax">      true        </param>                   
+                        <param name="emitPERIODhistogram">      true        </param>
 
                     </group>
 

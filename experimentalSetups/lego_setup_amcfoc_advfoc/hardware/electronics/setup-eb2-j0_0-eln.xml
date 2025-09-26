@@ -18,18 +18,25 @@
         <group name="ETH_BOARD_SETTINGS">
             <param name="Name">                     "amcfoc"                </param>
             <group name="RUNNINGMODE">
+                <param name="execution">                synchronized        </param>
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>
                 <param name="maxTimeOfTXactivity">      300                 </param>
+                <param name="safetygap">                100                 </param>
                 <param name="TXrateOfRegularROPs">      5                   </param>
+
                 <group name="LOGGING">
                     <group name="IMMEDIATE">
                         <param name="emitRXDOTXoverflow">       true        </param>
+                        <param name="emitPERIODoverflow">       true        </param>
                     </group>
+                    
                     <group name="PERIODIC">
-                        <param name="period">                   10          </param>                   
-                        <param name="emitRXDOTXstatistics">     false        </param>
+                        <param name="period">                   10          </param>
+                        <param name="emitRXDOTXminavgmax">      true        </param>
+                        <param name="emitPERIODminavgmax">      true        </param>
+                        <param name="emitPERIODhistogram">      true        </param>
                     </group>
                 </group>
             </group>
