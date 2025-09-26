@@ -42,8 +42,7 @@
                     <group name="PERIODIC">
 
                         <param name="period">                   10.0        </param>
-                         <param name="emitRXDOTXminavgmax">     true        </param>                    
-                        <param name="emitRXDOTXstatistics">     true        </param>                   
+                        <param name="emitRXDOTXminavgmax">     true        </param>
                         <param name="emitPERIODminavgmax">      true        </param>                   
                         <param name="emitPERIODhistogram">      true        </param>
 
