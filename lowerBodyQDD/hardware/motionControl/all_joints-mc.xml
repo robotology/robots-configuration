@@ -4,7 +4,7 @@ BSD-3-Clause license. -->
 <?xml version="1.0" encoding="UTF-8" ?>
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="all_joints-mc" type="CiA402MotionControl">
 
-    <param name="ifname">"eth0"</param>
+    <param name="ifname">"enp4s0"</param>
     <param name="num_axes">12</param>
     <param name="period">0.001</param>
     <param name="pdo_timeout_us">5000</param>
