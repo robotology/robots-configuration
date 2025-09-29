@@ -6,12 +6,15 @@
 <devices>
 
     <xi:include href="hardware/motionControl/all_joints-mc.xml" />
-    <!-- <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" /> -->
-    <!-- <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" /> -->
+    <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" />
 
     <xi:include href="wrappers/motorControl/all_joints-mc_wrapper.xml" />
-    <!-- <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" /> -->
-    <!-- <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" /> -->
+    <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" />
+    <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" />
+
+    <xi:include href="hardware/inertials/waist-inertial.xml" disabled_by="disable_imu" />
+    <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" disabled_by="disable_imu" />
 
 </devices>
 </robot>
