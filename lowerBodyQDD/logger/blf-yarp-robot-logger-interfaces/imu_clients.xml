@@ -5,9 +5,8 @@
 
 <devices>
 
-
   <device xmlns:xi="http://www.w3.org/2001/XInclude" name="waist_imu_client" type="multipleanalogsensorsclient">
-    <param name="remote">/lowerbody/waist/inertials</param>
+    <param name="remote">/lowerbodyqdd/waist/inertials</param>
     <param name="local">/yarp_robot_logger/waist/inertials</param>
     <param name="timeout">0.5</param>
     <param name="carrier">fast_tcp</param>
