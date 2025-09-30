@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 
     <param name="ifname">"enp4s0"</param>
     <param name="num_axes">12</param>
-    <param name="period">0.001</param>
+    <param name="period">4e-4</param>
     <param name="pdo_timeout_us">10000</param>
     <param name="enable_dc">false</param>
     <!-- Joint Names:                               l_ankle_roll  l_ankle_pitch  l_knee  l_hip_yaw  l_hip_roll  l_hip_pitch  r_hip_pitch  r_hip_roll  r_hip_yaw  r_knee  r_ankle_pitch  r_ankle_roll -->
