@@ -1,6 +1,6 @@
 <!-- Copyright (C) 2019-2025 Istituto Italiano di Tecnologia (IIT). All rights reserved.
-This software may be modified and distributed under the terms of the
-BSD-3-Clause license. -->
+     This software may be modified and distributed under the terms of the
+     BSD-3-Clause license. -->
 
 <?xml version="1.0" encoding="UTF-8" ?>
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="yarp-robot-logger" type="YarpRobotLoggerDevice">
@@ -9,9 +9,6 @@ BSD-3-Clause license. -->
 
   <param name="rgb_cameras_fps">()</param>
   <param name="rgb_cameras_rgb_save_mode">()</param>
-
-  <!-- <param name="rgb_cameras_fps">()</param>
-  <param name="rgb_cameras_rgb_save_mode">()</param> -->
 
   <param name="rgbd_cameras_fps">()</param>
   <param name="rgbd_cameras_depth_scale">()</param>
@@ -41,19 +38,19 @@ BSD-3-Clause license. -->
   </group>
 
   <group name="RobotCameraBridge">
-      <param name="stream_cameras">false</param>
-      <group name="Cameras">
-        <param name="rgb_cameras_list">()</param>
-        <!-- <param name="rgb_cameras_list">()</param> -->
-        <param name="rgbd_cameras_list">()</param>
-      </group>
+    <param name="stream_cameras">false</param>
+    <group name="Cameras">
+      <param name="rgb_cameras_list">()</param>
+      <!-- <param name="rgb_cameras_list">()</param> -->
+      <param name="rgbd_cameras_list">()</param>
+    </group>
   </group>
 
   <group name="RobotSensorBridge">
     <param name="check_for_nan">false</param>
     <param name="stream_joint_states">true</param>
     <param name="stream_motor_states">true</param>
-    <param name="stream_inertials">false</param>
+    <param name="stream_inertials">true</param>
     <param name="stream_cartesian_wrenches">false</param>
     <param name="stream_forcetorque_sensors">false</param>
     <param name="stream_pids">false</param>
@@ -66,21 +63,20 @@ BSD-3-Clause license. -->
       <param name="joints_list">("l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee", "l_ankle_pitch", "l_ankle_roll", "r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
     </group>
 
+    <group name="InertialSensors">
+      <param name="accelerometers_list">(waist_imu_0)</param>
+      <param name="gyroscopes_list">(waist_imu_0)</param>
+      <param name="magnetometers_list">(waist_imu_0)</param>
+      <param name="orientation_sensors_list">(waist_imu_0)</param>
+    </group>
+
   </group>
 
   <!-- ATTACH -->
   <action phase="startup" level="15" type="attach">
     <paramlist name="networks">
       <elem name="all_joints">all_joints_mc</elem>
-      <!-- <elem name="left_front_wrench_client">left_front_wrench_client</elem>
-      <elem name="left_rear_wrench_client">left_rear_wrench_client</elem>
-      <elem name="right_front_wrench_client">right_front_wrench_client</elem>
-      <elem name="right_rear_wrench_client">right_rear_wrench_client</elem> -->
-      <!-- <elem name="right_arm_wrench_client">right_arm_wrench_client</elem>
-      <elem name="left_arm_wrench_client">left_arm_wrench_client</elem> -->
-      <!-- <elem name="mas-remapper">mas-remapper</elem> -->
-      <!-- <elem name="jabra">jabra</elem> -->
-      <!-- <elem name="logitech">logitech</elem> -->
+      <elem name="waist_imu">waist_imu_client</elem>
     </paramlist>
   </action>
 
