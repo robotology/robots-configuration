@@ -22,7 +22,7 @@
 
 	<param name="calibration1">	        32768	      32768	     32768       </param> 
 	<param name="calibration2">	        10	      10	     10	         </param> 
-	<param name="calibration3">	        3871          49119          53023   	 </param>  
+	<param name="calibration3">	        3871          32159          52206   	 </param>  
 
 
 	<param name="calibration4">             0             0              0           </param>
