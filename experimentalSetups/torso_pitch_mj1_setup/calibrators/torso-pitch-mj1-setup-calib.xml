@@ -18,16 +18,25 @@
                                                                       
                                                                       
     <group name="CALIBRATION">                                            
-    <!--                      torso_pitch_mj1_real_aksim2  torso_pitch_mj1_fake_amo                        -->
-    <param name="calibrationType">         12                     12            </param>
-    <param name="calibration1">            42418                  45670           </param> <!-- 42459 (12) -4200 (10)  42468 aksim2-->
+    <!--                      torso_pitch_mj1_real_encoder  torso_pitch_mj1_fake_encoder                        -->
+
+ <!--  Use the calib 10 when use AMO as real encoder -
+    <param name="calibrationType">         10                     12            </param>
+    <param name="calibration1">            4200                  45670           </param> -->
+
+   
+    <param name="calibrationType">         12                     12            </param> 
+    <param name="calibration1">            9162                  45670         </param> 
     <param name="calibration2">            0                      0             </param> 
     <param name="calibration3">            0                      0             </param> 
                                                                         
                                                                         
     <param name="calibration4">            0                      0             </param>
     <param name="calibration5">            0                      0             </param>
-    <param name="calibrationZero">         0                      0             </param> <!-- -100(10)-->
+    <param name="calibrationZero">         0                      0             </param>
+
+<!--  Use the calibrationZero = 106 when you use the AMO as real encoder
+    <param name="calibrationZero">         106                      0             </param> -->
     <param name="calibrationDelta">        0                      0             </param>
                                                                         
     <param name="startupPosition">         0                      0             </param>

@@ -12,8 +12,8 @@
     <!-- joint number                           0                -->
     <!-- joint name -->
     <group name="LIMITS">
-        <param name="jntPosMax">                      180              180                </param> <!-- 180 / -180-->
-        <param name="jntPosMin">                      -180            -180               </param>
+        <param name="jntPosMax">                      100              100                </param> <!-- 180 / -180-->
+        <param name="jntPosMin">                      -100            -100               </param>
         <param name="jntVelMax">                      100              100                </param>
         <param name="motorNominalCurrents">           5000             5000               </param>
         <param name="motorPeakCurrents">              10000            10000              </param>
@@ -25,6 +25,8 @@
 
     <group name="TIMEOUTS">
         <param name="velocity">                        100              100               </param>
+        <param name="current">                        200              100               </param>
+        <param name="pwm">                            200             100               </param>
     </group>
 
     <group name="IMPEDANCE">
