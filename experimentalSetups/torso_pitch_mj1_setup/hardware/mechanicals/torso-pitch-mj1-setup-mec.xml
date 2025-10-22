@@ -12,7 +12,7 @@
         <param name="fullscalePWM">         32000                                  32000                    </param>
         <param name="ampsToSensor">         1000.0                                 1000.0                   </param>
         <param name="Gearbox_M2J">          100                                    100                      </param>
-        <param name="Gearbox_E2J">          1                                      1                      </param> <<!--64 when use AMO as real encoder --> 
+        <param name="Gearbox_E2J">          1                                      1                      </param> <!--64 when use AMO as real encoder --> 
         <param name="useMotorSpeedFbk">     1                                      1                        </param> 
         <param name="MotorType">            "TQ"                                  "TQ"          </param>
         <param name="Verbose">               0                                     0                        </param>                    
