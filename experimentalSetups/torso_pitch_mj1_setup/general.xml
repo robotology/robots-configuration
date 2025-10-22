@@ -4,7 +4,7 @@
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="torsoPitchMj1" build="1">
   
   <group name="GENERAL">
-      <param name="skipCalibration">    false  </param>
+      <param name="skipCalibration">    false </param>
       <param name="useRawEncoderData">  false  </param>
       <param name="useLimitedPWM">      false  </param>
       <param name="verbose">            false  </param>
@@ -12,6 +12,6 @@
 
 
   <group name="MAINTENANCE">
-    <param name="skipRecalibration"> true </param>
+    <param name="skipRecalibration"> false </param>
   </group>
 </params>

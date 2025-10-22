@@ -6,15 +6,15 @@
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 2 </param> 
         <param name="AxisMap">                           0                            1                     </param>   
-        <param name="AxisName">             "torso_pitch_mj1_real_aksim2"    "torso_pitch_mj1_fake_amo"     </param>
+        <param name="AxisName">             "torso_pitch_mj1_real_encoder"    "torso_pitch_mj1_fake_encoder"     </param>
         <param name="AxisType">             "revolute"                             "revolute"               </param>
         <param name="Encoder">              182.044                                182.044                  </param>
         <param name="fullscalePWM">         32000                                  32000                    </param>
         <param name="ampsToSensor">         1000.0                                 1000.0                   </param>
         <param name="Gearbox_M2J">          100                                    100                      </param>
-        <param name="Gearbox_E2J">          1                                      1                       </param> <!--64 when using AMO  1 when using aksim (is the number of sectors)-->
+        <param name="Gearbox_E2J">          1                                      1                      </param> <<!--64 when use AMO as real encoder --> 
         <param name="useMotorSpeedFbk">     1                                      1                        </param> 
-        <param name="MotorType">            "MOOG_C2900576"                        "MOOG_C2900576"          </param>
+        <param name="MotorType">            "TQ"                                  "TQ"          </param>
         <param name="Verbose">               0                                     0                        </param>                    
     </group>                                                 
                                                              
@@ -29,11 +29,11 @@
         <param name="Verbose">                    0            0             </param>
         <param name="AutoCalibration">            0            0             </param>
         <param name="HasHallSensor">              0            0             </param>
-        <param name="TemperatureSensorType">      NONE       NONE          </param>
+	<param name="TemperatureSensorType">      PT1000         NONE         </param>
         <param name="HasRotorEncoder">            1            1             </param>
         <param name="HasRotorEncoderIndex">       1            1             </param>
         <param name="HasSpeedEncoder">            0            0             </param>
-        <param name="RotorIndexOffset">           112          246             </param>
+	<param name="RotorIndexOffset">           111          246             </param> 
         <param name="MotorPoles">                 20           20            </param>
    </group>
 

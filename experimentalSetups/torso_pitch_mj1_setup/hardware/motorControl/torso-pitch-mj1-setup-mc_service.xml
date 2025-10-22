@@ -17,7 +17,7 @@
                 <param name="type">                 foc         </param> 
                 <group name="PROTOCOL">
                     <param name="major">            1           </param>    
-                    <param name="minor">            6           </param>     
+                    <param name="minor">            7           </param>     
                 </group>                    
                 <group name="FIRMWARE">
                     <param name="major">            0           </param>    
@@ -33,21 +33,21 @@
                 <group name="ACTUATOR">
                     <!--                            setup                     -->
                     <param name="type">             foc              foc                </param>
-                    <param name="port">             CAN1:2:0         CAN1:1:0           </param>
+                    <param name="port">             CAN1:1:0         CAN1:2:0           </param>
                 </group>                                           
                     
-                <!-- Aksim2 Encoder-->
+                <!-- Swap the two colums if you want to use the AMO as real encoder -->
                 <group name="ENCODER1">                            
-                    <param name="type">            aksim2    amo             </param>  
-                    <param name="port">            CONN:P6   CONN:P9         </param>
-                    <param name="position">        atjoint   atjoint         </param>
-                    <param name="resolution">      -524288   -1048576            </param> <!---->
-                    <param name="tolerance">       0.703     0.703           </param>  
+                    <param name="type">               aksim2           amo          </param>  
+                    <param name="port">               CONN:P6          CONN:P9      </param>
+                    <param name="position">           atjoint          atjoint      </param>
+                    <param name="resolution">        -524288            -16384         </param> <!-- AMO resolution when used as absolute encoder = -1048576 -->
+                    <param name="tolerance">          0.703            0.703        </param>  
                 </group>     
 	                                                  
                 <group name="ENCODER2">                            
                     <param name="type">             mrie              none              </param>
-                    <param name="port">             CAN1:2:0          none              </param>
+                    <param name="port">             CAN1:1:0          none              </param>
                     <param name="position">         atmotor           none              </param>
                     <param name="resolution">       -20800            none            </param>
                     <param name="tolerance">        3.6               3.6               </param>  
