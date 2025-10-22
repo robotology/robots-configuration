@@ -36,7 +36,7 @@
                     <param name="port">             CAN1:1:0         CAN1:2:0           </param>
                 </group>                                           
                     
-                <!-- Swap the two colums if you want to use the AMO as real encoder -->
+                <!-- Swap the two columns if you want to use the AMO as real encoder -->
                 <group name="ENCODER1">                            
                     <param name="type">               aksim2           amo          </param>  
                     <param name="port">               CONN:P6          CONN:P9      </param>
