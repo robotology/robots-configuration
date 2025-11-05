@@ -31,7 +31,9 @@
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity">                 100 100                 100       100       </param>
+        <param name="velocity">                 100                  100         100      100   </param>
+        <param name="velocity">                 300                  300         300      300   </param>
+        <param name="velocity">                 300                  300         300      300   </param>
     </group>
 
     <group name="IMPEDANCE">
