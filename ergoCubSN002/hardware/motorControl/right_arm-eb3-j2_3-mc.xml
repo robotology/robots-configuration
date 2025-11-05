@@ -24,6 +24,8 @@
 
     <group name="TIMEOUTS">
         <param name="velocity">                 100                 100                 </param>
+        <param name="pwm">                      300                 300                 </param>
+        <param name="current">                  300                 300                 </param>
     </group>
 
     <group name="IMPEDANCE">
