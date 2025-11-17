@@ -14,8 +14,8 @@
   </group>
 
    <group name="CALIBRATION">
-    <param name="calibrationType">                    10             10           10            10         10      10       </param>
-    <param name="calibration1">                      -5500           4000        -2500         -5000       4000    -3000    </param>
+    <param name="calibrationType">                    10             10           10            10         12      12       </param>
+    <param name="calibration1">                      -5500           4000        -2500         -5000       0      0    </param>
     <param name="calibration2">                       0.0            0.0          0             0          0       0        </param> 
     <param name="calibration3">                       0.0            0.0          0             0          0       0        </param> 
     <param name="calibration4">                       0.0            0.0          0             0          0       0        </param>
@@ -28,7 +28,7 @@
     <param name="startupPosThreshold">                2              2            2             2          2       2        </param>
   </group>
 <!-- <param name="CALIB_ORDER"> (2) (4) (5) (3) (0) (1)  </param> --> <!-- Don't remove this line -->
-  <param name="CALIB_ORDER"> (2) (4) (5) (3) (0) (1)  </param>
+  <param name="CALIB_ORDER"> (5) </param>
  
   <action phase="startup" level="10" type="calibrate">
     <param name="target">left_leg-mc_remapper</param>

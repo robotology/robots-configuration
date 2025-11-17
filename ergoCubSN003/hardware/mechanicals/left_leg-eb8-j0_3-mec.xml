@@ -11,7 +11,7 @@
         <param name="Encoder">            182.044         182.044           182.044       182.044          </param>     
         <param name="fullscalePWM">       32000           32000             32000         32000            </param>
         <param name="ampsToSensor">       1000.0          1000.0            1000.0        1000.0           </param>
-        <param name="Gearbox_M2J">        -100.0           160.0            -100.0        -100.0           </param>
+        <param name="Gearbox_M2J">        100.0           160.0             100.0          100.0           </param>
         <param name="Gearbox_E2J">   	       64             64                 64       64               </param>
         <param name="useMotorSpeedFbk">      1               1               1            1                </param>
         <param name="MotorType">       "MOOG_C2900580"    "MOOG_C2900576" "MOOG_C2900576" "MOOG_C2900580"  </param>
@@ -29,7 +29,7 @@
         <param name="AutoCalibration">            0             0     0     0     </param>
         <param name="Verbose">                    0             0     0     0     </param>
         <param name="HasHallSensor">              0             0     0     0     </param> 
-        <param name="TemperatureSensorType">   PT100          PT100  PT100  PT100 </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the hip roll. -->
+        <param name="TemperatureSensorType">   NONE          NONE  NONE  NONE </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the hip roll. -->
 <!--        <param name="TemperatureSensorType">     NONE         NONE   NONE   NONE  </param> -->
         <param name="HasRotorEncoder">            1             1     1     1     </param>
         <param name="HasRotorEncoderIndex">       1             1     1     1     </param>
