@@ -14,8 +14,8 @@
         <param name="jntPosMax">                  43                  23                   </param>
         <param name="jntPosMin">                 -43                 -23                   </param>
         <param name="jntVelMax">                  240                 240                  </param>
-        <param name="motorNominalCurrents">       10000               10000                </param>
-        <param name="motorPeakCurrents">          15000               15000                </param>
+        <param name="motorNominalCurrents">       4000               4000                </param>
+        <param name="motorPeakCurrents">          5000               5000                </param>
         <param name="motorOverloadCurrents">      30000               30000                </param>
         <param name="motorPwmLimit">              16000               16000                </param>
 <!-- Below are safe limits for the anke roll in case no temperature sensor is used. -->
@@ -30,7 +30,7 @@
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity">                 100     100                                 </param>
+        <param name="velocity">                 100       100                                 </param>
         <param name="pwm">                      300       300                                   </param>
         <param name="current">                  300       300                                   </param>
     </group>
@@ -58,9 +58,9 @@
         <param name="fbkControlUnits">      metric_units        </param>
         <param name="outputControlUnits">   machine_units       </param>
         <param name="kff">                      0                   0                   </param>
-        <param name="kp">                      -15000               -10000               </param>
+        <param name="kp">                       -15000              -10000               </param>
         <param name="kd">                       0                   0                   </param>
-        <param name="ki">                      -1000               -1000                </param>
+        <param name="ki">                       -1000               -1000                </param>
         <param name="maxOutput">                15000               12000                </param>
         <param name="maxInt">                   1000                1000                </param>
         <param name="stictionUp">               0                   0                   </param>
@@ -131,7 +131,7 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">                 -0          -50          </param>
+        <param name="kp">                 -0           -50          </param>
         <param name="kd">                  0           0            </param>
         <param name="ki">                 -0           0            </param>
         <param name="maxOutput">           2500        2500         </param>

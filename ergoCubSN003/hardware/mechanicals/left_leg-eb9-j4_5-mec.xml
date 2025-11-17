@@ -10,9 +10,9 @@
         <param name="AxisType">           "revolute"       "revolute"      </param>
         <param name="Encoder">             182.044          182.044       </param>
         <param name="fullscalePWM">         32000            32000         </param>
-        <param name="ampsToSensor">        1000.0          1000.0         </param>
-        <param name="Gearbox_M2J">         -100.00           160.00        </param>
-        <param name="Gearbox_E2J">          64               32           </param>
+        <param name="ampsToSensor">        1000.0           1000.0         </param>
+        <param name="Gearbox_M2J">         -100.00           -160.00        </param>
+        <param name="Gearbox_E2J">          1               1         </param>
          <param name="useMotorSpeedFbk">        1                1           </param>
         <param name="MotorType">              "MOOG_C2900580"   "MOOG_C2900576" </param>
        
@@ -35,7 +35,7 @@
         <param name="HasRotorEncoder">           1             1   </param>
         <param name="HasRotorEncoderIndex">      1             1   </param>
         <param name="HasSpeedEncoder">           0             0   </param>
-        <param name="RotorIndexOffset">          128           302 </param>
+        <param name="RotorIndexOffset">          34            187 </param>
         <param name="MotorPoles">                12            8   </param>
     </group>
 

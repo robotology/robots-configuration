@@ -9,26 +9,26 @@
   </group>
     
   <group name="HOME">
-    <param name="positionHome">                       0.00           5.00       0.00          0.00        0.00      0.00    </param>
+    <param name="positionHome">                       0.00           5.00       0.00          0.00        0.00     0.00    </param>
     <param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00     10.00    </param>
   </group>
 
    <group name="CALIBRATION">
-    <param name="calibrationType">                    10             10           10            10         12      12       </param>
-    <param name="calibration1">                      -5500           4000        -2500         -5000       0      0    </param>
+    <param name="calibrationType">                    12             12           12            12         12      12       </param>
+    <param name="calibration1">                       45148          40850        20237         -61593     3450    -53502   </param>
     <param name="calibration2">                       0.0            0.0          0             0          0       0        </param> 
     <param name="calibration3">                       0.0            0.0          0             0          0       0        </param> 
     <param name="calibration4">                       0.0            0.0          0             0          0       0        </param>
     <param name="calibration5">                       0.0            0.0          0             0          0       0        </param>
-    <param name="calibrationZero">                    109.07         110.848      81.65         7.91       -46.047 25.297   </param>
+    <param name="calibrationZero">                    0              0            0             0          0       0        </param>
     <param name="calibrationDelta">                   0              0            0             0          0       0        </param>
-    <param name="startupPosition">                    90             80           0             -95        0       0        </param>
+    <param name="startupPosition">                    90             80            0            -95        0       0        </param>
     <param name="startupVelocity">                    10.0           10.0         10.0          10         10      10       </param>
     <param name="startupMaxPwm">                      8000           8000         8000          16000      16000   8000     </param>
     <param name="startupPosThreshold">                2              2            2             2          2       2        </param>
   </group>
 <!-- <param name="CALIB_ORDER"> (2) (4) (5) (3) (0) (1)  </param> --> <!-- Don't remove this line -->
-  <param name="CALIB_ORDER"> (5) </param>
+  <param name="CALIB_ORDER"> (4) (5)  </param>
  
   <action phase="startup" level="10" type="calibrate">
     <param name="target">left_leg-mc_remapper</param>

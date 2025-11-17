@@ -38,7 +38,7 @@
                     <param name="type">            amo                amo                 </param>  
                     <param name="port">            CONN:P6            CONN:P7             </param>
                     <param name="position">        atjoint            atjoint             </param> 
-                    <param name="resolution">      1048576            524288               </param>
+                    <param name="resolution">      -1048576           1048576               </param>
                     <param name="tolerance">       0.703              0.703               </param>  
                 </group>        
                 
