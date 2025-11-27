@@ -31,19 +31,12 @@
 
                 <!-- common to all analog services -->
                 <param name="id">                   id_fapEE                      id_fapFF                  </param>
+                <param name="sensorName">           l_hand_pos2                   l_hand_pos2               </param>
                 <param name="type">                 eoas_pos_angle                eoas_pos_angle            </param>
                 <param name="port">                 POS:hand_thumb_add            POS:hand_index_add        </param>
 
                 <param name="boardType">            mtb4c                         mtb4c                     </param>
                 <param name="connector">            CONN:J3_SDA2                  CONN:J3_SDA3              </param>
-
-                <group name="CALIBRATION">
-                    <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
-                    <param name="type">             TYPE:decideg     TYPE:decideg          </param>
-                    <param name="rotation">         ROT:plus180      ROT:zero              </param>
-                    <param name="offset">           -230.0           -111.0                </param>
-                    <param name="invertDirection">  true             true                  </param>
-                </group>
 
             </group>
 

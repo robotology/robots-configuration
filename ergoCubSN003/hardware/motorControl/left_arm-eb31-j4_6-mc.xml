@@ -9,16 +9,16 @@
     <xi:include href="../../hardware/mechanicals/left_arm-eb31-j4_6-mec.xml" />
     <xi:include href="./left_arm-eb31-j4_6-mc_service.xml" />
 
-    <!-- joint number                           0                   1                   2               -->
-    <!-- joint name -->
+    <!-- joint number                           0                   1                   2                    -->
+    <!-- joint name                             wrist-yaw           wrist-roll          wrist-pitch          -->
     <group name="LIMITS">
         <param name="jntPosMax">                90                  30                  20                  </param>
         <param name="jntPosMin">               -90                 -20                 -20                  </param>
         <param name="jntVelMax">                90                  90                  90                  </param>
-        <param name="motorNominalCurrents">     200                 200                 200                </param>
-        <param name="motorPeakCurrents">        200                 200                 200                </param>
-        <param name="motorOverloadCurrents">    350                 350                 350                </param>
-        <param name="motorPwmLimit">            16000               16000               16000               </param>
+        <param name="motorNominalCurrents">     300                 300                 300                 </param>
+        <param name="motorPeakCurrents">        350                 350                 350                 </param>
+        <param name="motorOverloadCurrents">    700                 700                 700                 </param>
+        <param name="motorPwmLimit">            32000               32000               32000               </param>
     </group>
 
     <group name="TIMEOUTS">
@@ -43,18 +43,18 @@
     <!-- default position PID: begin -->
 
     <group name="POS_PID_DEFAULT">
-        <param name="controlLaw">             minjerk               </param>
-        <param name="outputType">             current               </param>
-        <param name="fbkControlUnits">        metric_units          </param>
-        <param name="outputControlUnits">     machine_units         </param>
-        <param name="kp">          -50         -50         -50      </param>
-        <param name="kd">          -8          -8          -8      </param>
-        <param name="ki">          -220        -220        -220     </param>
-        <param name="maxOutput">    500         500         500     </param>
-        <param name="maxInt">       200         200         200     </param>
-        <param name="stictionUp">   0           0           0       </param>
-        <param name="stictionDown"> 0           0           0       </param>
-        <param name="kff">          0           0           0       </param>
+        <param name="controlLaw">             minjerk                       </param>
+        <param name="outputType">             current                       </param>
+        <param name="fbkControlUnits">        metric_units                  </param>
+        <param name="outputControlUnits">     machine_units                 </param>
+        <param name="kp">                  -50         -50         -50      </param>
+        <param name="kd">                  -8          -8          -8       </param>
+        <param name="ki">                  -220        -220        -220     </param>
+        <param name="maxOutput">            500         500         500     </param>
+        <param name="maxInt">               200         200         200     </param>
+        <param name="stictionUp">           0           0           0       </param>
+        <param name="stictionDown">         0           0           0       </param>
+        <param name="kff">                  0           0           0       </param>
     </group>
 
     <!-- default position PID: end -->
@@ -63,12 +63,12 @@
     <!-- other default PIDs: begin -->
 
     <group name="2FOC_CUR_CONTROL">
-        <param name="controlLaw">           low_lev_current     </param>
-        <param name="fbkControlUnits">      machine_units       </param>
-        <param name="outputControlUnits">   machine_units       </param>
-        <param name="kp">                   2           2           2       </param>
+        <param name="controlLaw">           low_lev_current                 </param>
+        <param name="fbkControlUnits">      machine_units                   </param>
+        <param name="outputControlUnits">   machine_units                   </param>
+        <param name="kp">                   1           1           1       </param>
         <param name="kd">                   0           0           0       </param>
-        <param name="ki">                   500         500         500     </param>
+        <param name="ki">                   1260        1260        1260    </param>
         <param name="shift">                0           0           0       </param>
         <param name="maxOutput">            32000       32000       32000   </param>
         <param name="maxInt">               32000       32000       32000   </param>
@@ -76,9 +76,9 @@
     </group>
 
     <group name="2FOC_VEL_CONTROL">
-        <param name="controlLaw">           low_lev_speed       </param>
-        <param name="fbkControlUnits">      machine_units       </param>
-        <param name="outputControlUnits">   machine_units       </param>
+        <param name="controlLaw">           low_lev_speed                   </param>
+        <param name="fbkControlUnits">      machine_units                   </param>
+        <param name="outputControlUnits">   machine_units                   </param>
         <param name="kff">                  0           0           0       </param>
         <param name="kp">                   12          12          12      </param>
         <param name="kd">                   0           0           0       </param>
@@ -94,6 +94,9 @@
     <!-- custom PIDs: begin -->
 
     <!-- custom PIDs: end -->
+    <group name="OTHER_CONTROL_PARAMETERS">
+        <param name="deadZone">             0.044       0.044       0.044   </param>   <!-- /AEA3_resolution -->
+    </group>
 
 </device>
 

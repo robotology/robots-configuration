@@ -27,23 +27,16 @@
 
             <group name="SENSORS">
 
-                <param name="location">             CAN1:1         CAN1:1            CAN1:1           CAN1:1            </param>
+                <param name="location">             CAN1:1              CAN1:1              CAN1:1              CAN1:1                  </param>
 
                 <!-- common to all analog services -->
-                <param name="id">                   id_fapAA        id_fapBB         id_fapCC         id_fapDD          </param>
-                <param name="type">                 eoas_pos_angle  eoas_pos_angle   eoas_pos_angle   eoas_pos_angle    </param>
-                <param name="port">                 POS:hand_thumb_oc  POS:hand_index_oc   POS:hand_middle_oc  POS:hand_ring_pinky_oc    </param>
+                <param name="id">                   id_fapAA            id_fapBB            id_fapCC            id_fapDD                </param>
+                <param name="sensorName">           l_hand_pos4          l_hand_pos4        l_hand_pos4         l_hand_pos4             </param>
+                <param name="type">                 eoas_pos_angle      eoas_pos_angle      eoas_pos_angle      eoas_pos_angle          </param>
+                <param name="port">                 POS:hand_thumb_oc   POS:hand_index_oc   POS:hand_middle_oc  POS:hand_ring_pinky_oc  </param>
 
-                <param name="boardType">            mtb4c           mtb4c            mtb4c            mtb4c             </param>
-                <param name="connector">            CONN:J3_SDA3    CONN:J3_SDA0     CONN:J3_SDA1     CONN:J3_SDA2      </param>
-
-                <group name="CALIBRATION">
-                    <!-- it is not mandatory. if not present, sensors have defaults: TYPE:decideg, ROT:zero, 0.0, false -->
-                    <param name="type">             TYPE:decideg    TYPE:decideg     TYPE:decideg     TYPE:decideg      </param>
-                    <param name="rotation">         ROT:zero        ROT:zero         ROT:zero         ROT:zero          </param>
-                    <param name="offset">           0               0                0                0                 </param>
-                    <param name="invertDirection">  false           false            false            false             </param>
-                </group>
+                <param name="boardType">            mtb4c               mtb4c               mtb4c               mtb4c                   </param>
+                <param name="connector">            CONN:J23        CONN:J20        CONN:J21        CONN:J22            </param>
             </group>
 
         </group>
