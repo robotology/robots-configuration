@@ -19,16 +19,16 @@
         <!-- joint logical number                      0              -->
         <!-- joint name                                eyelids    -->        
         <group name="CALIBRATION">
-            <param name="calibrationType">              12              </param>
-            <param name="calibration1">                 17532          </param> 
+            <param name="calibrationType">              12             </param>
+            <param name="calibration1">                -16500          </param> 
             <param name="calibration2">                 0              </param> 
-            <param name="calibration3">                 0             </param>
+            <param name="calibration3">                 0              </param>
 
             <param name="calibration4">                0              </param>
             <param name="calibration5">                0              </param>
             
             <param name="calibrationZero">            0         </param>
-            <param name="calibrationDelta">           -65           </param>
+            <param name="calibrationDelta">           0         </param>
 
             <param name="startupPosition">             0              </param> 
             <param name="startupVelocity">             10             </param> 
