@@ -23,7 +23,7 @@
                 
                 <group name="ENCODER1">  
                     <param name="type">         aea                 </param>  
-                    <param name="port">         CONN:P10            </param>
+                    <param name="port">         CONN:P11            </param>
                     <param name="position">     atjoint             </param> 
                     <param name="resolution">   -4096               </param>
                     <param name="tolerance">    0.703               </param>  
