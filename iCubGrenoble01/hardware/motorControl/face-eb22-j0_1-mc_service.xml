@@ -18,7 +18,7 @@
 
                 <group name="ACTUATOR">                 
                     <param name="type">             pwm                 pwm                </param>
-                    <param name="port">             CONN:P3             CONN:P2            </param>
+                    <param name="port">             CONN:P3            CONN:P5            </param>
                 </group>
                 
                 <group name="ENCODER1">  
