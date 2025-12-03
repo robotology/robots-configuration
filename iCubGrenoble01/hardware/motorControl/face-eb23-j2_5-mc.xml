@@ -14,8 +14,8 @@
         <!-- joint number in sub-part           0           1           2           3            -->
         <!-- joint name                         lip-right   lip-high    lip-left   lip-bottom   -->   
         <group name="LIMITS">
-            <param name="jntPosMin">              -35         -45         -35          0        </param> 
-            <param name="jntPosMax">              +35          +0         +35         +28       </param>
+            <param name="jntPosMin">              -85          -45        -85           0       </param> 
+            <param name="jntPosMax">              +5         +0         +5          +28      </param>
             <param name="motorOverloadCurrents"> 2000        2000        2000        2000       </param>
             <param name="motorNominalCurrents">   700         700         700         700       </param>
             <param name="motorPeakCurrents">     1000        1000        1000        1000       </param>
@@ -47,9 +47,9 @@
            <param name="outputType">             pwm                       </param>    
             <param name="fbkControlUnits">  metric_units   </param>
             <param name="outputControlUnits">  machine_units      </param> 
-            <param name="kp">                   -2500.00    2000.00     2500.00     -2500.00    </param>       
-            <param name="kd">                   0.0         0.0         0.0         0.0         </param>     
-            <param name="ki">                   0.0         300.0       0.0         0.0         </param>        
+            <param name="kp">                   -2500.00    2000.00     2500.00     -950.0    </param>       
+            <param name="kd">                   0.0         0.0         0.0         -7.5         </param>     
+            <param name="ki">                   0.0         300.0       0.0         -5200.0         </param>        
             <param name="maxOutput">            3360        3360        3360        3360        </param>  
             <param name="maxInt">               3360        3360        3360        3360        </param> 
             <param name="stictionUp">           0           0           0           0           </param> 
