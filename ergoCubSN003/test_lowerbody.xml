@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<robot name="ergoCubSN003" xmlns:xi="http://www.w3.org/2001/XInclude">
+<robot name="ergoCubSN003" portprefix="/ergocub" xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <params>
     <xi:include href="hardware/electronics/pc104.xml" />
@@ -24,11 +24,18 @@
     <xi:include href="hardware/motorControl/right_leg-eb6-j0_3-mc.xml" disabled_by="disable_right_leg" />
     <xi:include href="hardware/motorControl/right_leg-eb7-j4_5-mc.xml" disabled_by="disable_right_leg" />
 
+    <!-- nws wrapper -->
+    <!-- <xi:include href="wrappers/motorControl/lowerbody-raws-nws_wrapper.xml" /> -->
+
+    <!-- ROBOMETRY -->
+    <!-- <xi:include href="telemetry/telemetry.xml" /> -->
+
+
     <!-- FT SENSORS -->
     <!-- <xi:include href="hardware/FT/left_leg-eb9-j4_5-strain.xml" disabled_by="disable_left_leg" />
     <xi:include href="hardware/FT/right_leg-eb7-j4_5-strain.xml" disabled_by="disable_right_leg" />
     <xi:include href="hardware/FT/left_leg-eb8-j0_3-strain.xml" disabled_by="disable_left_leg" />
-    <xi:include href="hardware/FT/right_leg-eb6-j0_3-strain.xml" disabled_by="disable_right_leg" /> -->
+    <xi:include href="hardware/FT/right_leg-eb6-j0_3-strain.xml" disabled_by="disable_right_leg" />  -->
 
     <!-- FT SENSORS - REMAPPERS -->
     <!-- <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" disabled_by="disable_left_leg" />
