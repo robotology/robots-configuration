@@ -16,7 +16,7 @@
             <group name="PROPERTIES">
   
                 <group name="CANBOARDS">
-                    <param name="type">                 strain2            </param>
+                    <param name="type">                 strain2c            </param>
 
                     <group name="PROTOCOL">
                         <param name="major">            2        	            </param>    
@@ -31,7 +31,7 @@
                 
                 <group name="SENSORS">
                     <param name="id">                   l_foot_rear_ft	l_foot_front_ft   </param>
-                    <param name="board">                 strain2		strain2             </param>
+                    <param name="board">                strain2c		strain2             </param>
                     <param name="location">             CAN2:13		CAN2:14                 </param>
                 </group>                
             

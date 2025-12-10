@@ -14,8 +14,8 @@
         <param name="jntPosMax">                  43                  23                   </param>
         <param name="jntPosMin">                 -43                 -23                   </param>
         <param name="jntVelMax">                   240                 240                 </param>
-        <param name="motorNominalCurrents">        10000               10000               </param>
-        <param name="motorPeakCurrents">           15000               15000               </param>
+        <param name="motorNominalCurrents">        4000               4000               </param>
+        <param name="motorPeakCurrents">           5000               5000               </param>
         <param name="motorOverloadCurrents">       30000               30000               </param>
         <param name="motorPwmLimit">               16000               16000               </param>
 <!-- Below are safe limits for the anke roll in case no temperature sensor is used. -->
@@ -31,6 +31,8 @@
 
     <group name="TIMEOUTS">
         <param name="velocity">                     100                 100                 </param>
+        <param name="pwm">                     300                 300                 </param>
+        <param name="current">                     300                 300                 </param>
     </group>
 
     <group name="IMPEDANCE">

@@ -31,7 +31,7 @@
 
                 <group name="SENSORS">
                     <param name="id">                   l_leg_ft   </param>
-                    <param name="board">                 strain2             </param>
+                    <param name="board">                 strain2c             </param>
                     <param name="location">             CAN2:13                 </param>
                 </group>
 
