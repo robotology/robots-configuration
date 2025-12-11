@@ -149,7 +149,7 @@ bool checkMotorControlWrappers(const std::string& robot_dir, std::vector<std::st
             if(!loadXmlFile(robot_dir, ele, doc_mc)) return false;
             pugi::xpath_node action_startup = doc_mc.select_node("//action[@phase='startup']/param[@name='device']/text()");
             target = trim(action_startup.node().value());
-            std::cout << "Checking NWS wrapper device: " << target << " against the list of targets" << std::endl;
+            std::cout << "Checking raw nws wrapper device: " << target << " against the list of raw remappers" << std::endl;
             if(std::find(list_raw_remappers.begin(), list_raw_remappers.end(), target) != list_raw_remappers.end()){
                 vectorNotMC.push_back(ele);
                 std::cout << target << " - RAW WRAPPER CHECK PASSED!" << std::endl;
