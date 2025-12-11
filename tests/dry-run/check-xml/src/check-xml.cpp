@@ -116,8 +116,9 @@ check wrappers that are independent from calibrators and remappers
 2- for each file found, look for the device name and save in a list
 3- compare this list of targets with the devices inside *-rawval-nws_wrapper.xml
  */
-bool checkMotorControlWrappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, std::vector<std::string>& vectorUnremapped, bool& pass){
+bool checkMotorControlWrappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, std::vector<std::string>& vectorNotMC, bool& pass){
     std::vector<std::string> list_of_targets;
+    std::vector<std::string> list_raw_remappers;
     pugi::xml_document doc_mc;
     std::string device, target;
 
@@ -131,20 +132,30 @@ bool checkMotorControlWrappers(const std::string& robot_dir, std::vector<std::st
             list_of_targets.push_back(device);
             doc_mc.reset();
         }
+        else if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("-rawval-nws_remapper.xml") != std::string::npos) {
+            if(!loadXmlFile(robot_dir, ele, doc_mc)) return false;
+            pugi::xpath_node device_name = doc_mc.select_node("device");
+            target = trim(device_name.node().attribute("name").value());
+            list_raw_remappers.push_back(target);
+            vectorNotMC.push_back(ele);
+            std::cout << "Adding device: " << target << " to the list of raw remappers to be checked" << std::endl;
+            doc_mc.reset();
+        }
     }
 
     for (auto ele : vectorAllFiles)
     {
-        if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("rawval-nws_wrapper.xml") != std::string::npos) {
+        if(ele.find("wrappers/motorControl") != std::string::npos && ele.find("-rawval-nws_wrapper.xml") != std::string::npos) {
             if(!loadXmlFile(robot_dir, ele, doc_mc)) return false;
             pugi::xpath_node action_startup = doc_mc.select_node("//action[@phase='startup']/param[@name='device']/text()");
             target = trim(action_startup.node().value());
-            if(std::find(list_of_targets.begin(), list_of_targets.end(), target) != list_of_targets.end()){
-                vectorUnremapped.push_back(ele);
-                std::cout << target << " - MOTOR CONTROL WRAPPER CHECK PASSED!" << std::endl;
+            std::cout << "Checking raw nws wrapper device: " << target << " against the list of raw remappers" << std::endl;
+            if(std::find(list_raw_remappers.begin(), list_raw_remappers.end(), target) != list_raw_remappers.end()){
+                vectorNotMC.push_back(ele);
+                std::cout << target << " - RAW WRAPPER CHECK PASSED!" << std::endl;
             }
             else{
-                std::cerr << target << " - MOTOR CONTROL WRAPPER CHECK FAILED!" << std::endl;
+                std::cerr << target << " - RAW WRAPPER CHECK FAILED!" << std::endl;
                 pass = false;
             }
             doc_mc.reset();
@@ -154,7 +165,7 @@ bool checkMotorControlWrappers(const std::string& robot_dir, std::vector<std::st
     return true;
 }
 
-bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, std::vector<std::string>& vectorUnremapped,
+bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::string>& vectorAllFiles, std::vector<std::string>& vectorNotMC,
                             const std::string& part, const std::string& target, bool& pass){
     bool found = false;
     pugi::xml_document doc_wrapper, doc_remapper;
@@ -179,9 +190,9 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
                 if(!loadXmlFile(robot_dir, ele, doc_wrapper)) return false;
                 pugi::xpath_node device_name = doc_wrapper.select_node("device");
                 device = trim(device_name.node().attribute("name").value());
-                if (std::find(vectorUnremapped.begin(), vectorUnremapped.end(), ele) != vectorUnremapped.end())
+                if (std::find(vectorNotMC.begin(), vectorNotMC.end(), ele) != vectorNotMC.end())
                 {
-                    std::cout << part << " - SKIPPED DEVICE " << device << " SINCE UNREMAPPED!" << std::endl;
+                    std::cout << part << " - SKIPPED DEVICE " << device << " SINCE NOT MOTION CONTROL DEVICE!" << std::endl;
                     found = true;
                     continue;
                 }
@@ -198,6 +209,13 @@ bool checkWrappersRemappers(const std::string& robot_dir, std::vector<std::strin
                 if(!loadXmlFile(robot_dir, ele, doc_remapper)) return false;
                 pugi::xpath_node device_name = doc_remapper.select_node("device");
                 device = trim(device_name.node().attribute("name").value());
+                if (std::find(vectorNotMC.begin(), vectorNotMC.end(), ele) != vectorNotMC.end())
+                {
+                    std::cout << part << " - SKIPPED DEVICE " << device << " SINCE NOT MOTION CONTROL DEVICE!" << std::endl;
+                    found = true;
+                    continue;
+                }
+                std::cout << "Checking remapper device: " << device << " against the target: " << target << std::endl;
                 if(device == target) std::cout << part << " - REMAPPER CHECK PASSED!" << std::endl;
                 else {
                     std::cerr << part << " - REMAPPER CHECK FAILED!" << std::endl;
@@ -239,8 +257,8 @@ bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector
     // we cannot check the single element inside the for loop by passing ele to method
     // since we first need to fill the list of targets by looking in hardware/motorControl directory
     // while the unramapped devices are inside wrappers/motorControl directory 
-    std::vector<std::string> vectorUnremapped;
-    checkMotorControlWrappers(robot_dir, vectorAllFiles, vectorUnremapped, pass);
+    std::vector<std::string> vectorNotMC;
+    checkMotorControlWrappers(robot_dir, vectorAllFiles, vectorNotMC, pass);
 
     for (auto ele : vectorAllFiles)
     {
@@ -268,7 +286,7 @@ bool checkCalibratorsWrappersRemappers(const std::string& robot_dir, std::vector
                     pass = false;
                 }
 
-                checkWrappersRemappers(robot_dir, vectorAllFiles, vectorUnremapped, part, target1, pass);
+                checkWrappersRemappers(robot_dir, vectorAllFiles, vectorNotMC, part, target1, pass);
                 if(ele.find("arm") != std::string::npos){
                     checkCartesian(robot_dir, vectorAllFiles, part, target1, pass);
                 }
