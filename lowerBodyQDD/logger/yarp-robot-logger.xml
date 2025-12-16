@@ -5,10 +5,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="yarp-robot-logger" type="YarpRobotLoggerDevice">
   <param name="robot">lowerbodyqdd</param>
-  <param name="sampling_period_in_s">0.001</param>
+  <param name="sampling_period_in_s">0.002</param>
 
-  <param name="rgb_cameras_fps">()</param>
-  <param name="rgb_cameras_rgb_save_mode">()</param>
+  <param name="rgb_cameras_fps">(20)</param>
+  <param name="rgb_cameras_rgb_save_mode">("video")</param>
 
   <param name="rgbd_cameras_fps">()</param>
   <param name="rgbd_cameras_depth_scale">()</param>
@@ -18,8 +18,8 @@
   <param name="video_codec_code">mp4v</param>
   <param name="port_prefix">/yarp-robot-logger</param>
   <param name="log_text">true</param>
-  <param name="text_logging_subnames">("lowerbodyqdd-torso/yarprobotinterface")</param>
-  <!-- <param name="code_status_cmd_prefixes">("ssh ergocub@10.0.2.2" "ssh ergocub@10.0.2.3")</param> -->
+  <param name="text_logging_subnames">("lowerbodyqdd/yarprobotinterface")</param>
+  <param name="code_status_cmd_prefixes">("ssh ergocub@10.0.2.2")</param>
 
   <param name="enable_real_time_logging" extern-name="enable_real_time_logging">false</param>
   <group name="REAL_TIME_STREAMING">
@@ -31,17 +31,31 @@
   </group>
 
   <group name="ExogenousSignals">
-    <param name="vectors_collection_exogenous_inputs">()</param>
+    <param name="vectors_collection_exogenous_inputs">(amp, balancing)</param>
     <param name="vectors_exogenous_inputs">()</param>
 
+    <group name="amp">
+      <param name="local">"/yarp-robot-logger/exogenous_signals/amp"</param>
+      <param name="remote">"/amp_walking/logger"</param>
+      <param name="signal_name">"walking"</param>
+      <param name="carrier">"udp"</param>
+    </group>
 
+    <group name="balancing">
+      <param name="local">"/yarp-robot-logger/exogenous_signals/balancing"</param>
+      <param name="remote">"/balancing/logger"</param>
+      <param name="signal_name">"walking"</param>
+      <param name="carrier">"udp"</param>
+    </group>
+
+    
   </group>
 
+
   <group name="RobotCameraBridge">
-    <param name="stream_cameras">false</param>
+    <param name="stream_cameras">true</param>
     <group name="Cameras">
-      <param name="rgb_cameras_list">()</param>
-      <!-- <param name="rgb_cameras_list">()</param> -->
+      <param name="rgb_cameras_list">("logitech")</param>
       <param name="rgbd_cameras_list">()</param>
     </group>
   </group>
@@ -56,8 +70,8 @@
     <param name="stream_pids">false</param>
     <param name="stream_motor_PWM">false</param>
     <param name="stream_temperatures">false</param>
-    <param name="stream_joint_accelerations">false</param>
-    <param name="stream_motor_temperature">false</param>
+    <param name="stream_joint_accelerations">true</param>
+    <param name="stream_motor_temperature">true</param>
 
     <group name="RemoteControlBoardRemapper">
       <param name="joints_list">("l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee", "l_ankle_pitch", "l_ankle_roll", "r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
@@ -75,6 +89,7 @@
   <!-- ATTACH -->
   <action phase="startup" level="15" type="attach">
     <paramlist name="networks">
+      <elem name="logitech">logitech</elem>
       <elem name="all_joints">all_joints_mc</elem>
       <elem name="waist_imu">waist_imu_client</elem>
     </paramlist>

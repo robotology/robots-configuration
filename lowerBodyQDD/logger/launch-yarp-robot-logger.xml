@@ -10,6 +10,7 @@ BSD-3-Clause license. -->
         <!-- interface -->
         <xi:include href="blf-yarp-robot-logger-interfaces/all_joints_mc_nwc.xml" />
         <xi:include href="blf-yarp-robot-logger-interfaces/imu_clients.xml" />
+        <xi:include href="blf-yarp-robot-logger-interfaces/webcams.xml" />
         <xi:include href="./yarp-robot-logger.xml" />
     </devices>
 </robot>
