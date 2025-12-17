@@ -59,7 +59,7 @@
 
                 <group name="ACTUATOR">
                     <param name="type">             pwm                 pwm                       pwm                       pwm                       </param>
-                    <param name="port">             CONN:P5             CONN:P4                   CONN:P3                   CONN:P2                   </param>
+                    <param name="port">             CONN:P4             CONN:P5                   CONN:P3                   CONN:P2                   </param>
                 </group>
 
                 <group name="ENCODER1">
@@ -72,7 +72,7 @@
 
                 <group name="ENCODER2">
                     <param name="type">             qenc                qenc                      qenc                      qenc                      </param>
-                    <param name="port">             CONN:P5             CONN:P4                   CONN:P3                   CONN:P2                   </param>
+                    <param name="port">             CONN:P4             CONN:P5                   CONN:P3                   CONN:P2                   </param>
                     <param name="position">         atmotor             atmotor                   atmotor                   atmotor                   </param>
                     <param name="resolution">       1600                1600                      1600                      1600                      </param>
                     <param name="tolerance">        0                   0                         0                         0                         </param>
