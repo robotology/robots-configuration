@@ -13,17 +13,19 @@
     <!-- joint number                           0                   1                   2                   3                   -->
     <!-- joint name                             thumb               index               medium              pinky               -->    
     <group name="LIMITS">
-        <param name="jntPosMin">                0                   0                   0                   0                  </param>
-        <param name="jntPosMax">                90                  90                  90                  80                 </param>
+        <param name="jntPosMin">                4                   6                   6                   6                  </param>
+        <param name="jntPosMax">                90                  90                  90                  90                 </param>
         <param name="jntVelMax">                1000                1000                1000                1000               </param>
         <param name="motorOverloadCurrents">    2000                2000                2000                2000               </param>
-        <param name="motorNominalCurrents">     1100                1100                1100                1100                </param>
+        <param name="motorNominalCurrents">     1100                1100                1100                1100               </param>
         <param name="motorPeakCurrents">        1500                1500                1500                1500               </param>    
         <param name="motorPwmLimit">            3360                3360                3360                3360               </param>
     </group>       
     
     <group name="TIMEOUTS">
         <param name="velocity">                 100                 100                 100                 100                 </param>
+        <param name="pwm">                      300                 300                 300                 300                 </param>
+        <param name="current">                  300                 300                 300                 300                 </param>
     </group>
 
     <group name="IMPEDANCE">
@@ -44,13 +46,13 @@
     <!-- default position PID: begin -->
     
     <group name="POS_PID_DEFAULT">
-        <param name="controlLaw">               minjerk         </param>
-        <param name="outputType">               pwm             </param>
-        <param name="fbkControlUnits">          metric_units    </param>
-        <param name="outputControlUnits">       machine_units   </param>
-        <param name="kp">                       -246        -246        -246        -246    </param>
+        <param name="controlLaw">               minjerk                                     </param>
+        <param name="outputType">               pwm                                         </param>
+        <param name="fbkControlUnits">          metric_units                                </param>
+        <param name="outputControlUnits">       machine_units                               </param>
+        <param name="kp">                       180         150        -150        -200     </param>
         <param name="kd">                       0           0           0           0       </param>
-        <param name="ki">                       -33         -33         -33         -33     </param>
+        <param name="ki">                       15          11         -11         -15      </param>
         <param name="maxOutput">                2700        2700        2700        2700    </param>
         <param name="maxInt">                   1000        1000        1000        1000    </param>
         <param name="stictionUp">               0           0           0           0       </param>

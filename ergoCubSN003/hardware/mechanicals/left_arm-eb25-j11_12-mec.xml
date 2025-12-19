@@ -9,7 +9,7 @@
         <!-- joint number in sub-part       0                         1                        -->
         <!-- joint name                                                                        -->
         <param name="AxisMap">              0                         1                        </param>
-        <param name="AxisName">             "l_thumb_add"  "l_index_add"  </param>
+        <param name="AxisName">             "l_thumb_add"             "l_index_add"            </param>
         <param name="AxisType">             "revolute"                "revolute"               </param>
         <param name="Encoder">              182.044                   182.044                  </param>
         <param name="fullscalePWM">         3360                      3360                     </param>
@@ -23,10 +23,10 @@
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">    90              30      </param>
-        <param name="hardwareJntPosMin">    0               0       </param>
-        <param name="rotorPosMin">          0               0       </param>
-        <param name="rotorPosMax">          0               0       </param>
+        <param name="hardwareJntPosMax">    100                       30                       </param>
+        <param name="hardwareJntPosMin">    0                         0                        </param>
+        <param name="rotorPosMin">          0                         0                        </param>
+        <param name="rotorPosMax">          0                         0                        </param>
     </group>
 
     <group name="COUPLINGS">
@@ -55,7 +55,7 @@
     </group>
 
     <group name="JOINTSET_CFG">
-        <param name= "numberofsets"> 2 </param>
+        <param name= "numberofsets">     2             </param>
         <group name="JOINTSET_0">
             <param name="listofjoints">  0             </param>
             <param name="constraint">    none          </param>

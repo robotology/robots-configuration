@@ -13,12 +13,14 @@
     <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
     <xi:include href="hardware/POS/right_hand-pos4.xml" disabled_by="disable_right_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" disabled_by="disable_left_hand" />
+    <xi:include href="wrappers/POS/left_hand-pos_remapper4.xml" disabled_by="disable_left_hand" />
     <xi:include href="hardware/POS/left_hand-pos4.xml" disabled_by="disable_left_hand" />
 
     <!-- POS2 -->
     <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" />
     <xi:include href="hardware/POS/right_hand-pos2.xml" disabled_by="disable_right_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" disabled_by="disable_left_hand" />
+    <xi:include href="wrappers/POS/left_hand-pos_remapper2.xml" disabled_by="disable_left_hand" />
     <xi:include href="hardware/POS/left_hand-pos2.xml" disabled_by="disable_left_hand" />
 
     <!-- motor controllers wrappers -->
