@@ -1,0 +1,11 @@
+<cluster name="lowerbodyqdd" user="lowerbodyqdd">
+
+  <!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
+  <nameserver namespace="/lowerbodyqdd" node="lowerbodyqdd-lap" type="yarpserver"> </nameserver>
+
+  <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
+       this is usually the value of the DISPLAY variable when logged on -->
+  <node display=":1" address="10.0.2.4">lowerbodyqdd-lap</node>
+  <node address="10.0.2.2">lowerbodyqdd-torso</node>
+
+</cluster>
