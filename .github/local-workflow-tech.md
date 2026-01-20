@@ -79,7 +79,7 @@ cmake --preset nodeps
 cmake --install build
 ```
 
-After you did all of this, to ensure that the installed files are found by YARP, add the following line to the `.bashrc_iCub` of the robot:
+After you did all this, to ensure that the installed files are found by YARP, add the following line to the `.bashrc` of the robot:
 
 ```console
 export YARP_DATA_DIRS=$YARP_DATA_DIRS:/usr/local/src/robot/robots-configuration/build/install/share/ICUBcontrib
