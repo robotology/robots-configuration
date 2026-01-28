@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="lowerbodyqdd" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<devices>
+
+    <xi:include href="hardware/motionControl/all_joints-mc.xml" />
+    <xi:include href="wrappers/motorControl/rsu_ankle-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/rsu_ankle-mc_wrapper.xml" />
+
+</devices>
+</robot>
