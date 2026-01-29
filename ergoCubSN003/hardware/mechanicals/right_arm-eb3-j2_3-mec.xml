@@ -20,21 +20,21 @@
     
     <group name="LIMITS">
         <!--                                    0                   1                   -->
-        <param name="hardwareJntPosMax">        82                  120                  </param>  
+        <param name="hardwareJntPosMax">        82                  120                 </param>  
         <param name="hardwareJntPosMin">       -52                 -5                   </param>
         <param name="rotorPosMin">              0                   0                   </param> 
         <param name="rotorPosMax">              0                   0                   </param>
     </group>
 
     <group name="2FOC">
-        <param name="AutoCalibration">          0                   0                   </param>
         <param name="Verbose">                  0                   0                   </param>
+        <param name="AutoCalibration">          0                   0                   </param>
         <param name="HasHallSensor">            0                   0                   </param>
         <param name="TemperatureSensorType">    PT100               PT100               </param> <!-- if using set it to PT100. HasTempSensor is gonna be deprecated --> 
         <param name="HasRotorEncoder">          1                   1                   </param>
         <param name="HasRotorEncoderIndex">     1                   1                   </param>
         <param name="HasSpeedEncoder">          0                   0                   </param>
-        <param name="RotorIndexOffset">         308                 127                 </param>
+        <param name="RotorIndexOffset">         2                   149                 </param> <!-- 308  127 -->
         <param name="MotorPoles">               8                   8                   </param>
     </group>
 

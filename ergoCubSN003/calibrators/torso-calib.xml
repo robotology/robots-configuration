@@ -21,7 +21,7 @@
 <!--                                                roll                    pitch                  yaw                          -->
 <param name="calibrationType">                      12                      12                     12                      </param>
 
-<param name="calibration1">	                        4062                    22758                  31628                   </param>
+<param name="calibration1">	                        17169                   -37002                 8084                   </param>
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
                                                                                                    
@@ -29,11 +29,11 @@
 <param name="calibration4">                         0                       0                      0                       </param>
 <param name="calibration5">                         0                       0                      0                       </param>
 <param name="calibrationZero">                      0                       0                      0                       </param>
-<param name="calibrationDelta">                    -0.489                   2.917                  0                       </param>
+<param name="calibrationDelta">                     0                       0                      0                       </param>
                                                                                                    
 <param name="startupPosition">                      0                       0                      0                       </param>
 <param name="startupVelocity">                      10                      10                     10                      </param>
-<param name="startupMaxPwm">                        5500                    5500                   5500                    </param>
+<param name="startupMaxPwm">                        5500                    16000                  5500                    </param>
 <param name="startupPosThreshold">                  2                       2                      2                       </param>
 </group>
 

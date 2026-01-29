@@ -9,10 +9,10 @@
   </group>
     
   <group name="HOME">
-    <param name="positionHome">                       0.00           5.00       0.00          0.00        0.00     0.00    </param>
+    <param name="positionHome">                       0.00           5.00       0.00          0.00        0.00     0.00     </param>
     <param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00     10.00    </param>
   </group>
-
+  <!-- joint logical number                           0              1            2             3          4       5         -->
    <group name="CALIBRATION">
     <param name="calibrationType">                    12             12           12            12         12      12       </param>
     <param name="calibration1">                       45148          40850        20237         -61593     3450    -53502   </param>
