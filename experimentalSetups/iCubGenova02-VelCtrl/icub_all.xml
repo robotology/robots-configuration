@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<robot name="iCubGenova02" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+<robot name="iCubGenova02" build="1" portprefix="/icub" xmlns:xi="http://www.w3.org/2001/XInclude">
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>

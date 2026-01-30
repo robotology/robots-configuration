@@ -4,7 +4,7 @@
 <!-- NOTE: This is only an example! 
            The specified devices here below depend on robot mechanics and electronic version.-->
 
-    <robot name="myrobot" build="1" portprefix="icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <robot name="myrobot" build="1" portprefix="/icub" xmlns:xi="http://www.w3.org/2001/XInclude">
     <params>
     <xi:include href="hardware/electronics/pc104.xml" />
     </params>
