@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<robot name="torsoSkinLaptop" portprefix="icub" build="1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<robot name="torsoSkinLaptop" portprefix="/icub" build="1" xmlns:xi="http://www.w3.org/2001/XInclude">
 <devices>
     <!-- SKIN -->  
     <xi:include href="hardware/skin/torso.xml" /> 
