@@ -31,7 +31,7 @@
                 <group name="ACTUATOR">
                     <param name="type">             advfoc              advfoc              advfoc              </param>
                     <param name="onboard">          amc2c               amcbldc             amcbldc             </param>
-                    <param name="port">             ICC1:3              CAN1:1              CAN1:2              </param>
+                    <param name="port">             CAN1:3              CAN1:1              CAN1:2              </param>
                 </group>
 
                 <group name="ENCODER1">

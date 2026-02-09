@@ -11,6 +11,7 @@
 
     <!-- POS4 -->
     <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
+    <xi:include href="wrappers/POS/right_hand-pos_remapper4.xml" disabled_by="disable_right_hand" />
     <xi:include href="hardware/POS/right_hand-pos4.xml" disabled_by="disable_right_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_wrapper4.xml" disabled_by="disable_left_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_remapper4.xml" disabled_by="disable_left_hand" />
@@ -18,6 +19,7 @@
 
     <!-- POS2 -->
     <xi:include href="wrappers/POS/right_hand-pos_wrapper2.xml" disabled_by="disable_right_hand" />
+    <xi:include href="wrappers/POS/right_hand-pos_remapper2.xml" disabled_by="disable_right_hand" />
     <xi:include href="hardware/POS/right_hand-pos2.xml" disabled_by="disable_right_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_wrapper2.xml" disabled_by="disable_left_hand" />
     <xi:include href="wrappers/POS/left_hand-pos_remapper2.xml" disabled_by="disable_left_hand" />
@@ -73,10 +75,12 @@
     <xi:include href="hardware/motorControl/right_leg-eb7-j4_5-mc.xml" disabled_by="disable_right_leg" />
 
     <!-- FT SENSORS -->
-   <!-- <xi:include href="hardware/FT/left_arm-eb2-j0_1-strain.xml" disabled_by="disable_left_arm" /> -->
+    <xi:include href="hardware/FT/left_arm-eb2-j0_1-strain.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/FT/right_arm-eb1-j0_1-strain.xml" disabled_by="disable_right_arm" />
+
     <xi:include href="hardware/FT/left_leg-eb9-j4_5-strain.xml" disabled_by="disable_left_leg" />
     <xi:include href="hardware/FT/right_leg-eb7-j4_5-strain.xml" disabled_by="disable_right_leg" />
+
     <xi:include href="hardware/FT/left_leg-eb8-j0_3-strain.xml" disabled_by="disable_left_leg" />
     <xi:include href="hardware/FT/right_leg-eb6-j0_3-strain.xml" disabled_by="disable_right_leg" />
 
@@ -85,12 +89,12 @@
     <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" disabled_by="disable_right_leg" />
 
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
-<!--    <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" disabled_by="disable_left_arm" /> -->
+   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" disabled_by="disable_left_leg" />
     <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" disabled_by="disable_right_leg" />
 
-    <!-- INERTIAL SENSOR -->
+    <!-- INERTIAL SENSOR HEAD - WAIST -->
     <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" disabled_by="disable_head" />
     <xi:include href="wrappers/inertials/head-imuFilter.xml" disabled_by="disable_head" />
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" disabled_by="disable_head" />
@@ -98,14 +102,14 @@
     <xi:include href="hardware/inertials/waist-inertial.xml" disabled_by="disable_torso" />
     <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" disabled_by="disable_torso" />
 
-    <!-- IMU - MTB4 BOARDS
+    <!-- IMU - MTB4 BOARDS - ARMS -->
     <xi:include href="hardware/inertials/left_arm-eb4-j2_3-inertial.xml" disabled_by="disable_left_arm" />
-    <xi:include href="wrappers/inertials/left_arm-inertials_wrapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/inertials/right_arm-eb3-j2_3-inertial.xml" disabled_by="disable_right_arm" />
-    <xi:include href="wrappers/inertials/right_arm-inertials_wrapper.xml" disabled_by="disable_right_arm" /> -->
+    <xi:include href="wrappers/inertials/left_arm-inertials_wrapper.xml" disabled_by="disable_left_arm" />
+    <xi:include href="wrappers/inertials/right_arm-inertials_wrapper.xml" disabled_by="disable_right_arm" /> 
 
-    <!-- FT SENSORS - IMU -->
-    <!-- <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" disabled_by="disable_left_arm" /> -->
+    <!-- IMU - 2FOC BOARDS - LEG - SHOULDERS -->
+    <xi:include href="hardware/inertials/left_arm-eb2-j0_1-inertial.xml" disabled_by="disable_left_arm" />
     <xi:include href="hardware/inertials/right_arm-eb1-j0_1-inertial.xml" disabled_by="disable_right_arm" />
     <xi:include href="hardware/inertials/left_leg-eb8-j0_3-inertial.xml" disabled_by="disable_left_leg" />
     <xi:include href="hardware/inertials/right_leg-eb6-j0_3-inertial.xml" disabled_by="disable_right_leg" />
@@ -113,7 +117,7 @@
     <xi:include href="hardware/inertials/right_leg-eb7-j4_5-inertial.xml" disabled_by="disable_right_leg" />
 
     <!-- FT SENSORS - IMU - MULTIPLE ANALOG SENSOR SERVERS -->
-    <!--<xi:include href="wrappers/inertials/left_arm-imu_wrapper.xml" disabled_by="disable_left_arm" />-->
+    <xi:include href="wrappers/inertials/left_arm-imu_wrapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/inertials/right_arm-imu_wrapper.xml" disabled_by="disable_right_arm" />
     <xi:include href="wrappers/inertials/left_leg-imu_wrapper.xml" disabled_by="disable_left_leg" />
     <xi:include href="wrappers/inertials/right_leg-imu_wrapper.xml" disabled_by="disable_right_leg" />
@@ -123,12 +127,12 @@
     <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" disabled_by="disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
 
     <!-- BATTERY BAT -->
-    <xi:include href="wrappers/battery/battery_bat.xml" disabled_by="disable_battery" />
-    <xi:include href="hardware/battery/battery_bat.xml" disabled_by="disable_battery" />
+    <xi:include href="wrappers/battery/battery_bat.xml" disabled_by="disable_bat" />
+    <xi:include href="hardware/battery/battery_bat.xml" disabled_by="disable_bat" />
 
     <!-- BATTERY BMS -->
-    <xi:include href="wrappers/battery/battery_bms.xml" disabled_by="disable_battery" />
-    <xi:include href="hardware/battery/battery_bms.xml" disabled_by="disable_battery" />
+    <xi:include href="wrappers/battery/battery_bms.xml" disabled_by="disable_bms" />
+    <xi:include href="hardware/battery/battery_bms.xml" disabled_by="disable_bms" />
 
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" disabled_by="disable_torso" />
@@ -138,17 +142,22 @@
     <xi:include href="calibrators/right_arm-calib.xml" disabled_by="disable_right_arm" />
     <xi:include href="calibrators/head-calib.xml" disabled_by="disable_head" />
 
+    <!-- TELEMETRY -->
+    <xi:include href="telemetry/telemetryDeviceExternal.xml" disabled_by="disable_telemetry" />
+    
     <!-- ROS2 Wrappers -->
-    <!--m<xi:include href="wrappers/inertials/imu_ros2.xml" /> -->
-    <xi:include href="wrappers/motorControl/alljoints-mc_remapper.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
+
+    <!-- <xi:include href="wrappers/motorControl/alljoints-mc_remapper.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
     <xi:include href="wrappers/motorControl/alljoints-mc_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
+     -->
     <!--<xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" /> -->
-    <xi:include href="wrappers/FT/right_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_arm" />
+   
+    <!-- <xi:include href="wrappers/FT/right_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_arm" />
     <xi:include href="wrappers/FT/left_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_leg" />
-    <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" />
+    <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" /> -->
 
     <!-- ESTIMATORS -->
-    <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
+    <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_left_arm disable_right_leg disable_left_leg" />
 
   </devices>
 </robot>

@@ -24,7 +24,7 @@
                     </group>                    
                     <group name="FIRMWARE">
                         <param name="major">            2                   </param>    
-                        <param name="minor">            2                   </param> 
+                        <param name="minor">            4                   </param> 
                         <param name="build">            0                   </param>
                     </group>
                 </group>
@@ -40,7 +40,7 @@
                     <param name="type">                 eoas_imu_acc         eoas_imu_gyr        
                     </param>
 
-                    <param name="boardType">            mtb4                 mtb4        
+                    <param name="boardType">            mtb4c                 mtb4c        
                     </param>
 
                     <param name="location">             CAN2:2               CAN2:2
