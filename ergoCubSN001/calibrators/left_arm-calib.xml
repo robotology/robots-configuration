@@ -16,12 +16,12 @@
 		<param name="velocityHome">            10                10              10          10        10           10            10              40.00        40.00       40.00        40.00       40.00          40.00   </param>
 	</group>
 	<group name="CALIBRATION">
-		<param name="calibrationType">        10                 10              10          10        12           12            12              14           14          14           14          14             14      </param>
-		<param name="calibration1">           4000              -3000           -3000        4000      27863        31103         3515            300          300         300          300         300            300     </param>
-		<param name="calibration2">	      0                  0               0           0         0            0             0               0            0           0            0           0              0       </param>
-		<param name="calibration3">           0                  0               0           0         0            0             0               1            0           0            0           0              1       </param>
-		<param name="calibration4">           0                  0               0           0         0            0             0               16384        16384       0            0           0              16384   </param>
-		<param name="calibration5">           0                  0               0           0         0            0             0               10430        19700       30765        48240       38200          47900   </param>
+		<param name="calibrationType">        10                 10              10          10        12           12            12              12           14          12           14          14             14      </param>
+		<param name="calibration1">           4000              -3000           -3000        4000      27863        31103         3515            10300        300         16800        300         300            300     </param>
+		<param name="calibration2">	          0                  0               0           0         0            0             0               0            0           0            0           0              0       </param>
+		<param name="calibration3">           0                  0               0           0         0            0             0               0            0           0            0           0              1       </param>
+		<param name="calibration4">           0                  0               0           0         0            0             0               0            0           0            0           0              0       </param>
+		<param name="calibration5">           0                  0               0           0         0            0             0               0            19100       0            16000       37400          47600   </param>
 		<param name="calibrationZero">        35                -15             -52          -5        0            0             0               0            -3.63       0            -5.75       -5.75          -5.71   </param>
 		<param name="calibrationDelta">       0                  0               0           0         0            0             0               0            0           0            0           0              0       </param>
 		<param name="startupPosition">        34                 50              -10         90        0.0          0.0           0.0             0.0          15.0        5.0          5.0         5.0            5.0     </param>
@@ -31,7 +31,7 @@
 	</group>
 
 <!--	<param name="CALIB_ORDER"> (4 5 6) (3) (2) (0) (1) (7 8) (9) (10 11 12) </param> --> <!-- Don't remove this line -->
-	<param name="CALIB_ORDER"> (3) (2) (0) (1) (4 5 6) (7 8) (10 11 12) </param>
+	<param name="CALIB_ORDER"> (3) (2) (0) (1) (4 5 6) (7 8) (9) (10 11 12) </param>
 
 	<action phase="startup" level="10" type="calibrate">
 		<param name="target">left_arm-mc_remapper</param>
