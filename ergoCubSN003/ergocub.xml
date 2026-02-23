@@ -9,6 +9,12 @@
 
   <devices>
 
+    <!--  SKINS -->
+    <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" disabled_by="disable_right_arm" />
+    <xi:include href="hardware/skin/right_arm-eb3-j2_3-skin.xml" disabled_by="disable_right_arm" />
+    <xi:include href="wrappers/skin/left_arm-skin_wrapper.xml" disabled_by="disable_left_arm" />
+    <xi:include href="hardware/skin/left_arm-eb4-j2_3-skin.xml" disabled_by="disable_left_arm" />
+
     <!-- POS4 -->
     <xi:include href="wrappers/POS/right_hand-pos_wrapper4.xml" disabled_by="disable_right_hand" />
     <xi:include href="wrappers/POS/right_hand-pos_remapper4.xml" disabled_by="disable_right_hand" />
@@ -44,6 +50,10 @@
     <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" disabled_by="disable_head" />
     <xi:include href="wrappers/motorControl/head-mc_remapper.xml" disabled_by="disable_head" />
     <xi:include href="wrappers/motorControl/head-mc-slow_wrapper.xml" disabled_by="disable_head" />
+
+    <!-- RAW VALUES WRAPPERS -->
+    <xi:include href="wrappers/motorControl/torso-rawval-nws_remapper.xml" disabled_by="disable_torso" />
+    <xi:include href="wrappers/motorControl/torso-rawval-nws_wrapper.xml" disabled_by="disable_torso" />
 
     <!-- HEAD -->
     <xi:include href="hardware/motorControl/head-eb20-j0_2-mc.xml" disabled_by="disable_head" />

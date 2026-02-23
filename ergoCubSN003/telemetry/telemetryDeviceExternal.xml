@@ -5,7 +5,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="telemetryDeviceDumper" type="telemetryDeviceDumper">
         <!-- <param name="axesNames">(l_thumb_add,l_thumb_oc,l_index_add,l_index_oc,l_middle_oc,l_ring_pinky_oc,r_thumb_add,r_thumb_oc,r_index_add,r_index_oc,r_middle_oc,r_ring_pinky_oc)</param> -->
         <!-- <param name="axesNames">(l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,torso_roll,torso_pitch,torso_yaw,l_hip_pitch, l_hip_roll, l_hip_yaw, l_knee, l_ankle_pitch, l_ankle_roll, r_hip_pitch, r_hip_roll, r_hip_yaw, r_knee, r_ankle_pitch, r_ankle_roll)</param> -->
-        <param name="axesNames">(r_wrist_yaw,r_wrist_roll,r_wrist_pitch)</param>
+        <param name="axesNames">(torso_roll,torso_pitch,torso_yaw)</param>
         <param name="logIEncoders">true</param>
         <param name="logITorqueControl">true</param>
         <param name="logIMotorEncoders">true</param>
@@ -14,9 +14,9 @@
         <param name="logIPidControl">true</param>
         <param name="logIAmplifierControl">true</param>
         <param name="logIMotorTemperatures">true</param>
-        <param name="logIRawValuesPublisher">false</param>
+        <param name="logIRawValuesPublisher">true</param>
         <param name="saveBufferManagerConfiguration">false</param>
-        <param name="experimentName">telemetry_right_wrist_ergocub</param>
+        <param name="experimentName">telemetry_torso_ergocub</param>
         <param name="path">/home/ergocub/telemetry_logs/</param>
         <param name="n_samples">80000000</param>
         <param name="save_periodically">false</param>
@@ -24,6 +24,7 @@
         <param name="data_threshold">300</param>
         <param name="auto_save">true</param>
         <param name="log_period">0.002</param>
+        <param name="rawValuesPublisherRemoteName">/torso/raw_data</param>
 
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
@@ -32,12 +33,11 @@
                 <elem name="left_hand_abd">left_arm-eb25-j11_12-mc</elem>
                 <elem name="right_hand_oc">right_arm-eb22-j7_10-mc </elem>
                 <elem name="right_hand_abd">right_arm-eb24-j11_12-mc</elem> -->
-
-                <elem name="right_wrist">right_arm-eb30-j4_6-mc</elem>
+                <elem name="torso">torso-eb5-j0_2-mc</elem> 
                 <!-- <elem name="left_leg">left_leg-mc_remapper</elem>
                 <elem name="right_arm">right_arm-mc_remapper </elem>
-                <elem name="right_leg">right_leg-mc_remapper</elem>
-                <elem name="torso">torso-mc_remapper</elem> -->
+                <elem name="right_leg">right_leg-mc_remapper</elem> -->
+
             </paramlist>
         </action>
 

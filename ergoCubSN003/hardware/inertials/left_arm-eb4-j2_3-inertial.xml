@@ -49,7 +49,7 @@
             </group>
             
             <group name="SETTINGS"> 
-                <param name="acquisitionRate"> 50 </param>
+                <param name="acquisitionRate"> 100 </param>
                 <param name="enabledSensors">  IDacc IDgyr </param>                
             </group>
             
