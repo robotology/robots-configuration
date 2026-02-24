@@ -10,10 +10,12 @@
           -->
         <group name="defaultCfgBoard">
             <param name="period">       time period of sending of skin data. [milliseconds] Usually is 50  </param> 
-            <param name="skinType">     [0 / 1 / 2] type of skin :
-                                            - 0 ==> new skin
-                                            - 1 ==> palm and fingertips skin. This value is OBSOLETE.
-                                            - 2 ==> old skin without temperature compensation. This value is OBSOLETE.
+            <param name="skinType">     [0 / 1 / 2 / 3 / 8] type of skin :
+                                            - 0 ==> skin with temperature compensation.
+                                            - 1 ==> icub palm and fingertips skin.
+                                            - 2 ==> OBSOLETE skin
+                                            - 3 ==> same as 0 with ergocub remapping.
+                                            - 8 ==> icub skin with temperature compensation, revision D.
                                             
             <param name="noLoad">       it is the value of the output at zero pressure. Usually its value is 0xf0  </param>
             <param name="diagnostic">   [true/false]. It enables or disables high level diagnostic  </param> 
