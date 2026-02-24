@@ -35,8 +35,8 @@
             <param name="numOfSets">         4  </param>
             <param name="triangleSetCfg1">     2        2        0         4         1         0        0x0000      </param>
             <param name="triangleSetCfg2">     2        2        0         4         1         0        0x0010      </param>
-            <param name="triangleSetCfg3">     2        2        4         4         1         0        0x1000      </param>
-            <param name="triangleSetCfg4">     2        2        0         4         1         0        0x1000      </param>
+            <param name="triangleSetCfg3">     2        2        4         4         1         0        0x0000      </param>
+            <param name="triangleSetCfg4">     2        2        0         4         1         0        0x0000      </param>
             <!-- the ones below should be ignored since we are using just 1 set. They might be used when we have both palm and skin enabled and we want specific configs for them-->
         </group>
 
