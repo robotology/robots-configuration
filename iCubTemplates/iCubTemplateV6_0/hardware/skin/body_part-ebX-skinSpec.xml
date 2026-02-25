@@ -13,7 +13,7 @@
             <param name="skinType">     [0 / 1 / 2 / 3 / 8] type of skin :
                                             - 0 ==> skin with temperature compensation.
                                             - 1 ==> icub palm and fingertips skin.
-                                            - 2 ==> OBSOLETE skin
+                                            - 2 ==> OBSOLETE: old skin without temperature compensation.
                                             - 3 ==> same as 0 with ergocub remapping.
                                             - 8 ==> icub skin with temperature compensation, revision D.
                                             
