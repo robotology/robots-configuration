@@ -141,8 +141,8 @@
     <xi:include href="hardware/battery/battery_bat.xml" disabled_by="disable_bat" />
 
     <!-- BATTERY BMS -->
-    <xi:include href="wrappers/battery/battery_bms.xml" disabled_by="disable_bms" />
-    <xi:include href="hardware/battery/battery_bms.xml" disabled_by="disable_bms" />
+    <xi:include href="wrappers/battery/battery_bms.xml" enabled_by="enable_bms" />
+    <xi:include href="hardware/battery/battery_bms.xml" enabled_by="enable_bms" />
 
     <!-- CALIBRATORS -->
     <xi:include href="calibrators/torso-calib.xml" disabled_by="disable_torso" />
