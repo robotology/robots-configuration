@@ -12,31 +12,34 @@
         <param name="fullscalePWM">         32000            32000         </param>
         <param name="ampsToSensor">        1000.0           1000.0         </param>
         <param name="Gearbox_M2J">         -100.00           -160.00        </param>
-        <param name="Gearbox_E2J">          1               1         </param>
-         <param name="useMotorSpeedFbk">        1                1           </param>
+        <param name="Gearbox_E2J">          64               32         </param>
+         <param name="useMotorSpeedFbk">    1                1           </param>
         <param name="MotorType">              "MOOG_C2900580"   "MOOG_C2900576" </param>
        
         <param name="Verbose"> 0 </param>
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">          46.624         25.313   </param>
-        <param name="hardwareJntPosMin">         -46.624        -25.313   </param>
-        <param name="rotorPosMin">               0             0      </param> 
-        <param name="rotorPosMax">               0             0      </param>
+        <!-- <param name="hardwareJntPosMax">          46.624       25.313   </param>
+        <param name="hardwareJntPosMin">         -46.624      -25.313   </param> -->
+        <param name="hardwareJntPosMax">          47            26   </param>
+        <param name="hardwareJntPosMin">         -47         -26  </param>
+        <param name="rotorPosMin">               0             0        </param> 
+        <param name="rotorPosMax">               0             0        </param>
     </group>
     
     <group name="2FOC">
-        <param name="AutoCalibration">           0             0   </param>
-        <param name="Verbose">                   0             0   </param>
-        <param name="HasHallSensor">             0             0   </param>
-        <param name="TemperatureSensorType">    PT100         PT100  </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the ankel roll. -->
+        <param name="Verbose">                   0             0    </param>
+        <param name="AutoCalibration">           0             0    </param>
+        <param name="HasHallSensor">             0             0    </param>
+        <param name="TemperatureSensorType">    PT100         PT100 </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the ankel roll. -->
 <!--        <param name="TemperatureSensorType">    NONE          NONE </param> -->
-        <param name="HasRotorEncoder">           1             1   </param>
-        <param name="HasRotorEncoderIndex">      1             1   </param>
-        <param name="HasSpeedEncoder">           0             0   </param>
-        <param name="RotorIndexOffset">          34            187 </param>
-        <param name="MotorPoles">                12            8   </param>
+        <param name="HasRotorEncoder">           1             1    </param>
+        <param name="HasRotorEncoderIndex">      1             1    </param>
+        <param name="HasSpeedEncoder">           0             0    </param>
+        <param name="RotorIndexOffset">          34            187  </param>
+        <param name="MotorPoles">                12            8    </param>
+        <param name="Kbemf">                     0             0    </param>
     </group>
 
     <group name="COUPLINGS"> 

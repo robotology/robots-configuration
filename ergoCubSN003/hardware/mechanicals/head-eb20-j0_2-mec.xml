@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN003" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion">  6  </param>
+        <param name="MotioncontrolVersion">  6                                         </param>
         <param name="Joints">                3                                         </param>  
         <!-- joint number in sub-part        0             1             2             -->
         <!-- joint name                      neck_pitch    neck_roll     neck_yaw      -->
@@ -21,20 +21,10 @@
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">     +22           +20           +45           </param>
-        <param name="hardwareJntPosMin">     -30           -20           -45           </param>
+        <param name="hardwareJntPosMax">     +22           +30           +45           </param>
+        <param name="hardwareJntPosMin">     -45           -30           -45           </param>
         <param name="rotorPosMin">           0             0             0             </param>
         <param name="rotorPosMax">           0             0             0             </param>
-    </group>
-
-    <group name="AMCBLDC">
-        <param name="HasHallSensor">         1             1             1             </param>
-        <param name="TemperatureSensorType"> NONE          NONE          NONE          </param>
-        <param name="HasRotorEncoder">       0             0             0             </param>
-        <param name="HasRotorEncoderIndex">  0             0             0             </param>
-        <param name="HasSpeedEncoder">       0             0             0             </param>
-        <param name="RotorIndexOffset">      0             0             0             </param>
-        <param name="MotorPoles">            14            14            14            </param>
     </group>
 
     <group name="ADVFOC">
@@ -47,6 +37,7 @@
         <param name="HasSpeedEncoder">       0             0             0             </param>
         <param name="RotorIndexOffset">      0             0             0             </param>
         <param name="MotorPoles">            14            14            14            </param>
+        <param name="Kbemf">                 0             0             0             </param>
     </group>   
 
 

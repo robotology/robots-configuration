@@ -5,36 +5,37 @@
     <group name="GENERAL">
         <param name="MotioncontrolVersion"> 6  </param>
         <param name="Joints">  2  </param>  
-        <param name="AxisMap">                      0                 1           </param>
+        <param name="AxisMap">                      0                 1                 </param>
         <param name="AxisName">                    "r_ankle_pitch"     "r_ankle_roll"   </param>
         <param name="AxisType">                    "revolute"          "revolute"       </param>
-        <param name="Encoder">                        182.044              182.044       </param>
-        <param name="fullscalePWM">                  32000               32000           </param>
-        <param name="ampsToSensor">                 1000.0              1000.0         </param>
-        <param name="Gearbox_M2J">                  100.0               160.0         </param>
-        <param name="Gearbox_E2J">                  1                       1         </param>
-        <param name="useMotorSpeedFbk">              1                        1            </param>
-        <param name="MotorType">                 "MOOG_C2900580"      "MOOG_C2900576"  </param>
+        <param name="Encoder">                      182.044             182.044         </param>
+        <param name="fullscalePWM">                 32000               32000           </param>
+        <param name="ampsToSensor">                 1000.0              1000.0          </param>
+        <param name="Gearbox_M2J">                  100.0               160.0           </param>
+        <param name="Gearbox_E2J">                  64                     32           </param>
+        <param name="useMotorSpeedFbk">             1                       1           </param>
+        <param name="MotorType">                 "MOOG_C2900580"      "MOOG_C2900576"   </param>
         <param name="Verbose">   0   </param>
     </group>
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">          45.94         24.803   </param>
-        <param name="hardwareJntPosMin">         -46.012        -25.786   </param>
-        <param name="rotorPosMin">            0             0     </param> 
-        <param name="rotorPosMax">            0             0     </param>
+        <param name="hardwareJntPosMax">          45          26   </param>
+        <param name="hardwareJntPosMin">         -45       -26  </param>
+        <param name="rotorPosMin">                0              0        </param> 
+        <param name="rotorPosMax">                0              0        </param>
     </group>
 
     <group name="2FOC">
+        <param name="Verbose">                        0             0       </param>
         <param name="AutoCalibration">                0             0       </param>
-        <param name="Verbose">                        0             0       </param>	
         <param name="HasHallSensor">                  0             0       </param>
         <param name="TemperatureSensorType">       PT100          PT100     </param> <!-- Supported values: PT100 or NONE. If setting NONE consider using the safer current limits for the ankel roll. -->
 <!--        <param name="TemperatureSensorType">        NONE           NONE     </param> -->
         <param name="HasRotorEncoder">                1             1       </param>
         <param name="HasRotorEncoderIndex">           1             1       </param>
         <param name="HasSpeedEncoder">                0             0       </param>
-        <param name="RotorIndexOffset">               30            357      </param>
+        <param name="RotorIndexOffset">               30            357     </param>
         <param name="MotorPoles">                     12            8       </param>
+        <param name="Kbemf">                          0             0       </param>
     </group>
 
     <group name="COUPLINGS"> 
@@ -65,10 +66,10 @@
     <group name="JOINTSET_CFG">
         <param name= "numberofsets"> 2 </param>
         <group name="JOINTSET_0">
-            <param name="listofjoints">  0             </param>
-            <param name="constraint">    none          </param>
-            <param name="param1">        0             </param>
-            <param name="param2">        0             </param>
+            <param name="listofjoints">   0             </param>
+            <param name="constraint">     none          </param>
+            <param name="param1">         0             </param>
+            <param name="param2">         0             </param>
         </group>
         <group name="JOINTSET_1">
             <param name="listofjoints">   1             </param>

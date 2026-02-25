@@ -12,31 +12,31 @@
         </group>
 
         <group name="HOME">
-            <param name="positionHome">         15           0           0           0       </param>
+            <param name="positionHome">         15           0           0           0      </param>
             <param name="velocityHome">         10          10          10          10      </param>
         </group>
 
         <!-- joint logical number               0           1           2           3         -->
         <!-- joint name                         neck-pitch  neck-roll   neck-yaw    eyes-tilt -->
         <group name="CALIBRATION">
-            <param name="calibrationType">      12          12          12          12         </param>
-            <param name="calibration1">   	    36389       14555       2539	    4995      </param>
-            <param name="calibration2">         0           0           0	        0          </param>
-            <param name="calibration3">         0           0           0           0          </param>
+            <param name="calibrationType">      12          12          12          12      </param>
+            <param name="calibration1">   	    58391       33835       21163	    58123   </param>
+            <param name="calibration2">         0           0           0	        0       </param>
+            <param name="calibration3">         0           0           0           0       </param>
 
-            <param name="calibration4">         0           0           0           0    </param>
-            <param name="calibration5">         0           0           0           0    </param>
+            <param name="calibration4">         0           0           0           0       </param>
+            <param name="calibration5">         0           0           0           0       </param>
 
-            <param name="calibrationZero">      0.0         0.0         0.0         0.0   </param>
-            <param name="calibrationDelta">     0.0         0.0         0.0         0.0   </param>
+            <param name="calibrationZero">      0.0         0.0         0.0         0.0     </param>
+            <param name="calibrationDelta">     0.0         0.0         0.0         0.0     </param>
 
-            <param name="startupPosition">      0.0         0.0         0.0         0.0  </param>
-            <param name="startupVelocity">      10          10          20.0        20.0 </param>
-            <param name="startupMaxPwm">        6000        6000        6000       1000 </param>
-            <param name="startupPosThreshold">  2           2           2           2    </param>
+            <param name="startupPosition">      0.0         0.0         0.0         0.0     </param>
+            <param name="startupVelocity">      10          10          20.0        20.0    </param>
+            <param name="startupMaxPwm">        6000        6000        6000       1000     </param>
+            <param name="startupPosThreshold">  2           2           2           2       </param>
         </group>
-   <!-- <param name="CALIB_ORDER"> (0 1 2) (3) </param> --> <!-- Don't remove this line -->
-        <param name="CALIB_ORDER"> (0) (1) (2) (3) </param>
+   <!-- <param name="CALIB_ORDER"> (1) (2) (0) (3) </param> --> <!-- Don't remove this line -->
+        <param name="CALIB_ORDER"> (1) (2) (0) (3) </param>
 
         <action phase="startup" level="10" type="calibrate">
             <param name="target">head-mc_remapper</param>

@@ -11,11 +11,11 @@
     <!-- joint name                            ankle_pitch          ankle_roll             -->
     <!-- joint number                              0                   1                   -->
     <group name="LIMITS">
-        <param name="jntPosMax">                  43                  23                   </param>
-        <param name="jntPosMin">                 -43                 -23                   </param>
+        <param name="jntPosMax">                   43                  23                  </param>
+        <param name="jntPosMin">                  -43                 -23                  </param>
         <param name="jntVelMax">                   240                 240                 </param>
-        <param name="motorNominalCurrents">        4000               4000               </param>
-        <param name="motorPeakCurrents">           5000               5000               </param>
+        <param name="motorNominalCurrents">        10000               10000                </param>
+        <param name="motorPeakCurrents">           15000               15000                </param>
         <param name="motorOverloadCurrents">       30000               30000               </param>
         <param name="motorPwmLimit">               16000               16000               </param>
 <!-- Below are safe limits for the anke roll in case no temperature sensor is used. -->
@@ -30,14 +30,16 @@
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity">                     100                 100                 </param>
-        <param name="pwm">                     300                 300                 </param>
-        <param name="current">                     300                 300                 </param>
+        <param name="velocity">                     300                 300                </param>
+        <param name="torque">                       300                 300                </param>
+        <param name="pwm">                          300                 300                </param>
+        <param name="current">                      300                 300                </param>
+        <param name="torque_measure">               300                 300                </param>
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                    30.0                 30.0                 </param>
-        <param name="damping">                     0.05                0.05                </param>
+        <param name="stiffness">                    30.0                30.0               </param>
+        <param name="damping">                      0.05                0.05               </param>
     </group>
 
     <group name="CONTROLS">
@@ -62,15 +64,15 @@
         <param name="kd">                             0                   0        </param>
         <param name="ki">                             1000                1000       </param>
         <param name="maxOutput">                     15000               12000         </param>
-        <param name="maxInt">                         1000                1000        </param>
+        <param name="maxInt">                         1000                  1000        </param>
         <param name="stictionUp">                     0                   0        </param>
         <param name="stictionDown">                   0                   0        </param>
     </group>
 
-    <!-- default position PID: end -->
+    <!-- default position PID: end -->  
 
 
-    <group name="TRQ_PID_DEFAULT">
+    <group name="TRQ_PID_DEFAULT">  
         <param name="controlLaw">          torque                       </param>
         <param name="outputType">          pwm                          </param>
         <param name="fbkControlUnits">     metric_units                 </param>
@@ -91,12 +93,12 @@
         <param name="velocityThres">          0          0  </param>
         <param name="filterType">             0          0  </param>
         <param name="ktau">                 0.72      0.56    </param>
-    </group>
+    </group>  
 
 
     <!-- other default PIDs: begin -->
 
-    <group name="2FOC_CUR_CONTROL">
+    <group name="2FOC_CUR_CONTROL">  
         <param name="controlLaw">           low_lev_current     </param>
         <param name="fbkControlUnits">      machine_units       </param>
         <param name="outputControlUnits">   machine_units       </param>

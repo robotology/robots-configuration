@@ -16,16 +16,20 @@
         <param name="jntPosMax">                23                  45                  43                  </param>
         <param name="jntPosMin">                -23                 -18                 -43                 </param>
         <param name="jntVelMax">                120                 120                 120                 </param>
-        <param name="motorNominalCurrents">     3770                16000                5000               </param>
-        <param name="motorPeakCurrents">        14000               17000               10000               </param>
-        <param name="motorOverloadCurrents">    18000               18000               15000               </param>
+        <param name="motorNominalCurrents">     5000                5000                5000               </param>
+        <param name="motorPeakCurrents">        10000               10000               10000               </param>
+        <param name="motorOverloadCurrents">    15000               15000               15000               </param>
         <param name="motorPwmLimit">            16000               16000               16000               </param>
         <param name="hardwareTemperatureLimits"> 110                110                   110               </param>
         <param name="warningTemperatureLimits">  90                 90                    90                </param>    <!-- keep commented until TemperatureSensorType is not ENABLE by setting it different from NONE-->
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity">                 100                 100                 100                 </param>
+        <param name="velocity">                 300                 300                 300                 </param>
+        <param name="torque">                   300                 300                 300                 </param>
+        <param name="pwm">                      300                 300                 300                 </param>
+        <param name="current">                  300                 300                 300                 </param>
+        <param name="torque_measure">           300                 300                 300                 </param>
     </group>
 
     <group name="IMPEDANCE">
@@ -50,10 +54,10 @@
         <param name="outputType">             pwm                   </param>
         <param name="fbkControlUnits">        metric_units          </param>
         <param name="outputControlUnits">     machine_units         </param>
-        <param name="kp">          10000       10000       -1500        </param>
+        <param name="kp">          10000        10000       -1500        </param>
         <param name="kd">           0           0           0           </param>
         <param name="ki">           8000        5000       -1000        </param>
-        <param name="maxOutput">   10000       10000        8000        </param>
+        <param name="maxOutput">   10000        16000        8000        </param>
         <param name="maxInt">      10000        5000        1000        </param>
         <param name="stictionUp">   0           0           0           </param>
         <param name="stictionDown"> 0           0           0           </param>
