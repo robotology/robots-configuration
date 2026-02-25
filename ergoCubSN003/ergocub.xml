@@ -153,7 +153,7 @@
     <xi:include href="calibrators/head-calib.xml" disabled_by="disable_head" />
 
     <!-- TELEMETRY -->
-    <xi:include href="telemetry/telemetryDeviceExternal.xml" disabled_by="disable_telemetry" />
+    <xi:include href="telemetry/telemetryDeviceExternal.xml" enabled_by="enable_telemetry" />
     
     <!-- ROS2 Wrappers -->
 
