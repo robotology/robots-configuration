@@ -18,7 +18,7 @@
         <param name="motorNominalCurrents">     300                 300                 300                 </param>
         <param name="motorPeakCurrents">        350                 350                 350                 </param>
         <param name="motorOverloadCurrents">    700                 700                 700                 </param>
-        <param name="motorPwmLimit">            32000               32000               32000               </param>
+        <param name="motorPwmLimit">            16000               16000               16000               </param>
     </group>
 
     <group name="TIMEOUTS">
@@ -80,9 +80,9 @@
     </group>
 
     <group name="2FOC_VEL_CONTROL">
-        <param name="controlLaw">           low_lev_speed       </param>
-        <param name="fbkControlUnits">      machine_units       </param>
-        <param name="outputControlUnits">   machine_units       </param>
+        <param name="controlLaw">           low_lev_speed                   </param>
+        <param name="fbkControlUnits">      machine_units                   </param>
+        <param name="outputControlUnits">   machine_units                   </param>
         <param name="kff">                  0           0           0       </param>
         <param name="kp">                   12          12          12      </param>
         <param name="kd">                   0           0           0       </param>
@@ -99,7 +99,7 @@
 
     <!-- custom PIDs: end -->
     <group name="OTHER_CONTROL_PARAMETERS">
-        <param name="deadZone">             0.044       0.044       0.044   </param>   <!-- /AEA3_resolution -->
+        <param name="deadZone">             0.044       0.044       0.044    </param>   <!-- /AEA3_resolution -->
     </group>
 
 </device>
