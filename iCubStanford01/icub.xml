@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+    <robot name="iCubStanford01" build="1" portprefix="/icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <params>
+            <xi:include href="hardware/electronics/pc104.xml" />
+        </params>
+
+        <devices>
+            <!-- MOTOR CONTROL -->
+            <xi:include href="hardware/motorControl/face-eb20-j0_3-mc.xml" />
+            <xi:include href="hardware/motorControl/head-eb21-j0_2-mc.xml" />
+
+            <!-- MOTOR CONTROL WRAPPER/REMAPPER -->
+            <xi:include href="wrappers/motorControl/face-mc_wrapper.xml" />  
+            <xi:include href="wrappers/motorControl/face-mc_remapper.xml" />
+            <xi:include href="wrappers/motorControl/head-mc_wrapper.xml" />
+            <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
+
+            <!--  CALIBRATORS -->  
+            <xi:include href="calibrators/face-calib.xml" />
+            <xi:include href="calibrators/head-calib.xml" />
+        
+    </devices>
+</robot>
