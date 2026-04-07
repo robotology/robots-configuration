@@ -6,9 +6,9 @@
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints"> 1 </param> <!-- the number of joints of the robot part -->
 
-        <!-- joint number in sub-part         1               -->
+        <!-- joint number in sub-part         0               -->
         <!-- joint name                       camera-tilt     -->
-        <param name="AxisMap">                1              </param>
+        <param name="AxisMap">                0              </param>
         <param name="AxisName">               "camera_tilt"  </param>
         <param name="AxisType">               "revolute"     </param>
         <param name="Encoder">                182.044        </param>
