@@ -156,10 +156,10 @@
   <!--  <xi:include href="wrappers/inertials/imu_ros2.xml" /> --> 
     <xi:include href="wrappers/motorControl/alljoints-mc_remapper.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
     <xi:include href="wrappers/motorControl/alljoints-mc_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
-    <xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" />
+    <!--<xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" />
     <xi:include href="wrappers/FT/right_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_arm" />
     <xi:include href="wrappers/FT/left_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_leg" />
-    <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" />
+    <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" /> -->
 
     <!-- motor controllers jtcvc -->
     <!-- <xi:include href="wrappers/motorControl/left_arm-eb2-j0_1-jtcvc.xml" disabled_by="disable_left_arm disable_jtcvc" />

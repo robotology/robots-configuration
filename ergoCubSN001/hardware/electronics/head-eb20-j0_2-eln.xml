@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN001" build="1">
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN003" build="1">
 
     <xi:include href="./pc104.xml" />
 
@@ -16,24 +16,39 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "head-eb20-j0_2"          </param>
+            <param name="Name">                     "head-eb20-j0_2"        </param>
             <group name="RUNNINGMODE">
+                <param name="execution">                synchronized        </param>
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>
                 <param name="maxTimeOfTXactivity">      300                 </param>
-                <param name="TXrateOfRegularROPs">      1                   </param>
+                <param name="safetygap">                10                  </param>
+                <param name="TXrateOfRegularROPs">      2                   </param>
+            
 
                 <group name="LOGGING">
+
                     <group name="IMMEDIATE">
-                        <param name="emitRXDOTXoverflow">       false       </param>
+
+                        <param name="emitRXDOTXoverflow">       true        </param>
+                        <param name="emitPERIODoverflow">       false       </param>
+
                     </group>
+
                     <group name="PERIODIC">
-                        <param name="period">                   10.0        </param>
-                        <param name="emitRXDOTXstatistics">     true        </param>
+
+                        <param name="period">                   0.0         </param>
+                        <param name="emitRXDOTXminavgmax">      false       </param>
+                        <param name="emitPERIODminavgmax">      false       </param>                   
+                        <param name="emitPERIODhistogram">      false       </param>
+
                     </group>
+
                 </group>
+
             </group>
+
         </group>
 
         <group name="ETH_BOARD_ACTIONS">
@@ -47,4 +62,3 @@
     </group>
 
 </params>
-
