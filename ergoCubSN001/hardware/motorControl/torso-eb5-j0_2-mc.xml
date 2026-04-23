@@ -16,7 +16,7 @@
         <param name="jntPosMax">                23                  45                  30                  </param>
         <param name="jntPosMin">                -23                 -18                 -30                 </param>
         <param name="jntVelMax">                120                 120                 120                 </param>
-        <param name="motorNominalCurrents">     3770                16000                5000               </param>
+        <param name="motorNominalCurrents">     3770                16000               5000                </param>
         <param name="motorPeakCurrents">        14000               17000               10000               </param>
         <param name="motorOverloadCurrents">    18000               18000               15000               </param>
         <param name="motorPwmLimit">            16000               16000               16000               </param>
@@ -26,6 +26,10 @@
 
     <group name="TIMEOUTS">
         <param name="velocity">                 100                 100                 100                 </param>
+        <param name="torque">                   300                 300                 300                 </param>
+        <param name="pwm">                      300                 300                 300                 </param>
+        <param name="current">                  300                 300                 300                 </param>
+        <param name="torque_measure">           300                 300                 300                 </param>
     </group>
 
     <group name="IMPEDANCE">
