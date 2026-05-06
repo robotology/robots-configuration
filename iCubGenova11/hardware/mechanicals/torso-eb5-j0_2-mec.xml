@@ -9,7 +9,7 @@
         <param name="AxisName">      "torso_yaw" "torso_roll" "torso_pitch"          </param>
         <param name="AxisType">       "revolute"    "revolute" "revolute"            </param>
         <param name="Encoder">         182.044       182.044       182.044           </param>
-        <param name="fullscalePWM">   32000         32000         32000            </param>
+        <param name="fullscalePWM">   32000         32000         32000              </param>
         <param name="ampsToSensor">     1000.0       1000.0        1000.0            </param>
         <param name="Gearbox_M2J">    -100.00       -100.00      -100.00             </param>
         <param name="Gearbox_E2J">   	1             1             1                </param>
@@ -19,10 +19,10 @@
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">    50            30            70        </param>
-        <param name="hardwareJntPosMin">   -50           -30           -20        </param>
-        <param name="rotorPosMin">           0             0             0        </param> 
-        <param name="rotorPosMax">           0             0             0        </param>
+        <param name="hardwareJntPosMax">    60.84         42.80         70           </param>
+        <param name="hardwareJntPosMin">   -60.84        -42.80        -25.00        </param>
+        <param name="rotorPosMin">           0             0             0           </param> 
+        <param name="rotorPosMax">           0             0             0           </param>
     </group>
 
     <group name="2FOC">
