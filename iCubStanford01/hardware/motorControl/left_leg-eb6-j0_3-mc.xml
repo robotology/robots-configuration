@@ -23,6 +23,10 @@
    
     <group name="TIMEOUTS">
         <param name="velocity">                 100                 100                 100                 100                 </param>
+        <param name="torque">                   300                 300                 300                 300                 </param>
+        <param name="pwm">                      300                 300                 300                 300                 </param>
+        <param name="current">                  300                 300                 300                 300                 </param>
+        <param name="torque_measure">           300                 300                 300                 300                 </param>
     </group>
 
     <group name="IMPEDANCE">
@@ -86,9 +90,9 @@
     </group>
 
     <group name="2FOC_CUR_CONTROL">
-        <param name="controlLaw">           low_lev_current     </param>
-        <param name="fbkControlUnits">      machine_units       </param>
-        <param name="outputControlUnits">   machine_units       </param>
+        <param name="controlLaw">           low_lev_current                             </param>
+        <param name="fbkControlUnits">      machine_units                               </param>
+        <param name="outputControlUnits">   machine_units                               </param>
         <param name="kp">                   8           8           8           8       </param>
         <param name="kd">                   0           0           0           0       </param>
         <param name="ki">                   2           2           2           2       </param>
@@ -99,9 +103,9 @@
     </group>
 
     <group name="2FOC_VEL_CONTROL">
-        <param name="controlLaw">           low_lev_speed       </param>
-        <param name="fbkControlUnits">      machine_units       </param>
-        <param name="outputControlUnits">   machine_units       </param>
+        <param name="controlLaw">           low_lev_speed                               </param>
+        <param name="fbkControlUnits">      machine_units                               </param>
+        <param name="outputControlUnits">   machine_units                               </param>
         <param name="kff">                  0           0           0           0       </param>
         <param name="kp">                   12          12          12          12      </param>
         <param name="kd">                   0           0           0           0       </param>
