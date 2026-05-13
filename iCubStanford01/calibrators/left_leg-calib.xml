@@ -11,12 +11,12 @@
 		    <param name="deviceName"> Left_Leg_Calibrator </param>
 		</group>
 		
-		<!-- joint logical number               0            1           2           3          4              5          -->
-		<!-- joint name                         l_hip-pitch  l_hip-roll  l_hip-yaw   l_knee     l_ankle-pitch  l_ankle-roll   -->
+		<!-- joint logical number                0            1           2           3          4              5          -->
+		<!-- joint name                          l_hip-pitch  l_hip-roll  l_hip-yaw   l_knee     l_ankle-pitch  l_ankle-roll   -->
 
 		<group name="HOME">
-			<param name="positionHome">         0.00         10.00        0.00         0.00       0.00          0.00     </param>
-			<param name="velocityHome">         10.00        10.00       10.00        10.00      10.00         10.00     </param>
+			<param name="positionHome">          0.00         10.00        0.00         0.00       0.00          0.00     </param>
+			<param name="velocityHome">          10.00        10.00       10.00        10.00      10.00         10.00     </param>
 		</group>
 
 		<group name="CALIBRATION">
@@ -35,7 +35,7 @@
 		</group>
 
    <!-- <param name="CALIB_ORDER"> (0 1 2 3 4 5) </param> --> <!-- Don't remove this line -->
-		<param name="CALIB_ORDER"> (0 2 3 4 5) </param>
+		<param name="CALIB_ORDER"> (0 2 3 4) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">left_leg-mc_remapper</param>
