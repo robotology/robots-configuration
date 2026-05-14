@@ -21,7 +21,7 @@
 
 		<group name="CALIBRATION">
 		<param name="calibrationType">           12          12          12           12         12            12        </param>
-		<param name="calibration1">              26000       33903       20160       -24200     -51000         42271     </param>
+		<param name="calibration1">              26000       33750       20160       -24200     -51000         42271     </param>
 		<param name="calibration2">              0           0           0            0          0             0         </param> 
 		<param name="calibration3">              0           0           0            0          0             0         </param> 
 		<param name="calibration4">              0           0           0            0          0             0         </param>
@@ -35,7 +35,7 @@
 		</group>
 
    <!-- <param name="CALIB_ORDER"> (0 1 2 3 4 5) </param> --> <!-- Don't remove this line -->
-		<param name="CALIB_ORDER"> (0 2 3 4 5) </param>
+		<param name="CALIB_ORDER"> (0 1 2 3 4 5) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">left_leg-mc_remapper</param>
