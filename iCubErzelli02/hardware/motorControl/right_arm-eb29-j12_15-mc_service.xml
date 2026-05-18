@@ -43,7 +43,7 @@
                     <param name="type">             mais                mais                mais                mais                    </param>  
                     <param name="port">             MAIS:indexdistal    MAIS:mediumproximal MAIS:mediumdistal   MAIS:littlefingers      </param>
                     <param name="position">         atjoint             atjoint             atjoint             atjoint                 </param>
-                    <param name="resolution">          65535            65535               65535              65535                    </param> <!-- 65535:this value will change by fw during calibration (type 6) --> 
+                    <param name="resolution">        65535              65535               65535              65535                    </param> <!-- 65535:this value will change by fw during calibration (type 6) --> 
                     <param name="tolerance">         0                  0                   0                  0                        </param>  
                 </group>        
                 
