@@ -13,18 +13,20 @@
         <param name="Encoder">                  182.044          182.044            182.044          182.044         </param>    
         <param name="fullscalePWM">             3360             3360               3360            3360             </param>
         <param name="ampsToSensor">             1000.0           1000.0             1000.0          1000.0           </param>
-        <param name="Gearbox_M2J">              256                256                256           256              </param>
+        <param name="Gearbox_M2J">              256               256                256           256              </param>
         <param name="Gearbox_E2J">   	        1                 1                   1              1               </param>
         <param name="useMotorSpeedFbk">         0                 0                   0              0               </param>
         <param name="MotorType">                "DC"             "DC"                "DC"           "DC"             </param>
-        <param name="Verbose">                  0                                                                    </param>
+        <param name="Verbose">                  1                 1                   1                1                </param>
     </group>
     
     <group name="LIMITS">
         <param name="hardwareJntPosMax">       90          90             180              90            </param>
         <param name="hardwareJntPosMin">       10           0              0                0            </param>
-        <param name="rotorPosMin">              0           0         -5120             -5120            </param> 
-        <param name="rotorPosMax">              0           0         70000            32000             </param>
+        <!-- <param name="rotorPosMin">              0           0         -5120             -5120            </param> 
+        <param name="rotorPosMax">              0           0         70000            32000             </param> -->
+      <param name="rotorPosMin">              0           0             -5120            -5120        </param> 
+        <param name="rotorPosMax">              0            0           35000          32000            </param>
     </group>
 
     <group name="COUPLINGS"> 
