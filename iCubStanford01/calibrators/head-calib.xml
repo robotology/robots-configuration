@@ -21,7 +21,7 @@
 
         <group name="CALIBRATION">
             <param name="calibrationType">      12          12          12          12          5           5    </param>
-            <param name="calibration1">   	    58391       47555       52175	    60719	    950         950  </param>
+            <param name="calibration1">   	    65563       15127       52175	    49359	    3000        3000 </param>
             <param name="calibration2">         0           0           0	        0           8192        8192 </param>
             <param name="calibration3">         0           0           0           0           0           0    </param>
 
@@ -33,11 +33,11 @@
 
             <param name="startupPosition">      0.0         0.0         0.0         0.0         0.0         0.0  </param>
             <param name="startupVelocity">      10          10          20.0        10.0        20.0        20.0 </param>
-            <param name="startupMaxPwm">        6000        6000        6000        3000        1500        1500 </param>
+            <param name="startupMaxPwm">        6000        6000        6000        3000        3000        3000 </param>
             <param name="startupPosThreshold">  2           2           2           2           2           2    </param>
         </group>
    <!-- <param name="CALIB_ORDER"> (1) (2) (0) (3) (4 5)</param> --> <!-- Don't remove this line -->
-        <param name="CALIB_ORDER"> (1) (2) (0) (3) (4 5) </param>
+        <param name="CALIB_ORDER"> (0) (1) (2) (3) (4 5) </param>
 
         <action phase="startup" level="10" type="calibrate">
             <param name="target">head-mc_remapper</param>

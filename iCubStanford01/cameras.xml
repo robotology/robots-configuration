@@ -6,8 +6,8 @@
         <devices>
             <xi:include href="hardware/camera/left_camera.xml" disabled_by="disable_left_eye"/>
             <xi:include href="hardware/camera/right_camera.xml" disabled_by="disable_right_eye"/>
-            <xi:include href="wrappers/camera/left_camera-nws_yarp" disabled_by="disable_left_eye"/>
-            <xi:include href="wrappers/camera/right_camera-nws_yarp" disabled_by="disable_right_eye"/>
+            <xi:include href="wrappers/camera/left_camera-nws_yarp.xml" disabled_by="disable_left_eye"/>
+            <xi:include href="wrappers/camera/right_camera-nws_yarp.xml" disabled_by="disable_right_eye"/>
         </devices>
 
     </robot>
