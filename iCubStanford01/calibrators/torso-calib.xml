@@ -17,7 +17,7 @@
 
 		<group name="CALIBRATION">
 		<param name="calibrationType">                    12                      12                        12      </param>
-		<param name="calibration1">                       17759                   3679                      2735    </param> 
+		<param name="calibration1">                       35981                   2668                      7094    </param> 
 		<param name="calibration2">                       0                       0                         0       </param> 
 		<param name="calibration3">                       0                       0                         0       </param> 
 		<param name="calibration4">                       0                       0                         0       </param>
@@ -31,14 +31,13 @@
 		<param name="startupPosThreshold">                2                       2                         2       </param>
 		</group>
 
- <!-- check old calibrator for the correct sequence, then ask to Randazz -->
- <!-- <param name="CALIB_ORDER"> (0 1 2) </param>  -->
-		<param name="CALIB_ORDER"> ( 1 2) </param>
+		<!-- <param name="CALIB_ORDER"> (0 1 2) </param>  -->
+		<param name="CALIB_ORDER"> (0 1 2) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-mc_remapper</param>
 		</action>
-
+	
 		<action phase="interrupt1" level="1" type="park">
 		    <param name="target">torso-mc_remapper</param>
 		</action>
