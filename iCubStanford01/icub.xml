@@ -17,6 +17,9 @@
             <xi:include href="hardware/motorControl/left_arm-eb24-j4_7-mc.xml" disabled_by="disable_left_arm"/>
             <xi:include href="hardware/motorControl/left_arm-eb25-j8_11-mc.xml" disabled_by="disable_left_arm"/>
             <xi:include href="hardware/motorControl/left_arm-eb26-j12_15-mc.xml" disabled_by="disable_left_arm"/>
+            <xi:include href="hardware/motorControl/right_arm-eb27-j4_7-mc.xml"  disabled_by="disable_right_arm"/>
+            <xi:include href="hardware/motorControl/right_arm-eb28-j8_11-mc.xml" disabled_by="disable_right_arm"/>
+            <xi:include href="hardware/motorControl/right_arm-eb29-j12_15-mc.xml" disabled_by="disable_right_arm"/>
             <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" disabled_by="disable_torso"/>
 
             <!-- MOTOR CONTROL WRAPPER/REMAPPER -->
@@ -25,6 +28,7 @@
             <xi:include href="wrappers/motorControl/left_leg-mc_wrapper.xml" disabled_by="disable_left_leg"/>
             <xi:include href="wrappers/motorControl/right_leg-mc_wrapper.xml" disabled_by="disable_right_leg"/>
             <xi:include href="wrappers/motorControl/left_arm-mc_wrapper.xml" disabled_by="disable_left_arm"/>
+            <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" disabled_by="disable_right_arm"/>
             <xi:include href="wrappers/motorControl/torso-mc_wrapper.xml" disabled_by="disable_torso"/>
 
             <xi:include href="wrappers/motorControl/face-mc_remapper.xml" disabled_by="disable_head" />
@@ -32,6 +36,7 @@
             <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" disabled_by="disable_left_leg"/>
             <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" disabled_by="disable_right_leg"/>
             <xi:include href="wrappers/motorControl/left_arm-mc_remapper.xml" disabled_by="disable_left_arm"/>
+            <xi:include href="wrappers/motorControl/right_arm-mc_remapper.xml" disabled_by="disable_right_arm"/>
             <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" disabled_by="disable_torso"/>
 
             <!--  CALIBRATORS -->  
@@ -40,6 +45,7 @@
             <xi:include href="calibrators/left_leg-calib.xml" disabled_by="disable_left_leg"/>
             <xi:include href="calibrators/right_leg-calib.xml" disabled_by="disable_right_leg"/>
             <xi:include href="calibrators/left_arm-calib.xml" disabled_by="disable_left_arm"/>
+            <xi:include href="calibrators/right_arm-calib.xml" disabled_by="disable_right_arm"/>
             <xi:include href="calibrators/torso-calib.xml" disabled_by="disable_torso"/>
         </devices>
 </robot>
