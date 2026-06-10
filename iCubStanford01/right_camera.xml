@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+    <robot name="right_camera" build="1" portprefix="/icub" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+        <devices>
+            <xi:include href="hardware/camera/right_camera.xml"/>
+            <xi:include href="wrappers/camera/right_camera-nws_yarp.xml"/>
+        </devices>
+
+    </robot>
