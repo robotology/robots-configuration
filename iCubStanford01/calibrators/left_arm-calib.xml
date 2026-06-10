@@ -6,7 +6,7 @@
                 <xi:include href="../general.xml" />
 
 		<group name="GENERAL">
-		    <param name="joints">12</param> <!-- the number of joints of the robot part -->
+		    <param name="joints">16</param> <!-- the number of joints of the robot part -->
 		    <param name="deviceName"> Left_Arm_Calibrator </param>
 		</group>
 		<!-- joint logical number                 0                 1                2               3        4               5    	         6            7              8               9                 10              11                12              13                 14               15         -->
@@ -18,11 +18,11 @@
 				                                                                
 		<group name="CALIBRATION">                                                      
 			<param name="calibrationType">        12                12               12              12       5               12             12           7              7               6                 6               6                 6               6                  6                6     </param>
-			<param name="calibration1">          58559   	        22639            48830           51983   -1500           -41535          60303        0              0               0                 0               0                 0               0                  0                0     </param>
+			<param name="calibration1">           -47375   	        -35375           17983           -35759   -1500           -41535         60303        0              0               0                 0               0                 0               0                  0                0     </param>
 			<param name="calibration2">	          0                 0                0               0	      16384           0              0            0              0               9102              9102            9102              9102            9102               9102             10000 </param>
 			<param name="calibration3">           0                 0                0               0	      0               0              0            0              0              -1                 1              -1                 1              -1                  1                1     </param>
-			<param name="calibration4">           0                 0                0               0        0               0              0            2000           2024            0                 30              255               510             2                  61               748   </param>
-			<param name="calibration5">           0                 0                0               0        0               0              0            2330           380             229               326             77                134             138                435              188   </param>
+			<param name="calibration4">           0                 0                0               0        0               0              0            2000           2320            32                28              255               510             2                  61               748   </param>
+			<param name="calibration5">           0                 0                0               0        0               0              0            2330           410             215               286             77                134             138                435              198   </param>
 			<param name="calibrationZero">        0                 0                0               0        0               0              0            0              0               0                 0               0                 0               0                  0                0     </param>
 			<param name="calibrationDelta">       0                 0                0               0        0               0              0            0              0               0                 0               0                 0               0                  0                0     </param>  
 			<param name="startupPosition">       -35                30               0               50       0               0              0            35             50              0                 0               0                 0               0                  0                3     </param>
@@ -32,7 +32,7 @@
 		</group>
 
        	<!-- <param name="CALIB_ORDER">(0 1 2 3) (4) (5 6 7) (8 9 11 13) (10 12 14 15)</param> -->
-        <param name="CALIB_ORDER"> (4) (5 6 7) (8 9 11 13) (10 12 14 15)</param>
+        <param name="CALIB_ORDER"> (0 1 2) (4) (5 6 7) (8 9) (11 13) (10) (12 14) (15)</param>
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">left_arm-mc_remapper</param>
 		</action>
