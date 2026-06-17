@@ -14,10 +14,10 @@
 		<param name="positionHome">                       0                       0                        -20      </param>
 		<param name="velocityHome">                       10                      10                        10      </param>
 		</group>
-
+		<!--                                              torso_yaw               torso_roll                torso_pitch  -->
 		<group name="CALIBRATION">
 		<param name="calibrationType">                    12                      12                        12      </param>
-		<param name="calibration1">                       35981                   2668                      7094    </param> 
+		<param name="calibration1">                       52411                   2670                      7078    </param> 
 		<param name="calibration2">                       0                       0                         0       </param> 
 		<param name="calibration3">                       0                       0                         0       </param> 
 		<param name="calibration4">                       0                       0                         0       </param>
@@ -27,7 +27,7 @@
 
 		<param name="startupPosition">                    0                       0                         0       </param>
 		<param name="startupVelocity">                    10                      10                        10      </param>
-		<param name="startupMaxPwm">                      8500                    8500                      8500    </param>
+		<param name="startupMaxPwm">                      10000                   10000                     10000    </param>
 		<param name="startupPosThreshold">                2                       2                         2       </param>
 		</group>
 
