@@ -24,7 +24,7 @@
                     <param name="type">             aea             aea             none            none        </param>  
                     <param name="port">             CONN:P10        CONN:P11        CONN:none       CONN:none   </param>
                     <param name="position">         atjoint         atjoint         none            none        </param> 
-                    <param name="resolution">       4096            4096            0               0           </param>
+                    <param name="resolution">       -4096           4096            0               0           </param>
                     <param name="tolerance">        0.703           0.703           0               0           </param>  
                 </group>        
                 
