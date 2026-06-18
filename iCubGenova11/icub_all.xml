@@ -80,10 +80,10 @@
     <xi:include href="hardware/skin/left_arm-eb24-j4_7-skin.xml" />
     <xi:include href="wrappers/skin/right_arm-skin_wrapper.xml" />
     <xi:include href="hardware/skin/right_arm-eb27-j4_7-skin.xml" />
-    <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" />
-    <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />
-    <xi:include href="hardware/skin/left_leg-eb10-skin.xml" />
-    <xi:include href="hardware/skin/right_leg-eb11-skin.xml" />
+    <!-- <xi:include href="wrappers/skin/left_leg-skin_wrapper.xml" /> -->
+    <!-- <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" /> -->
+    <!-- <xi:include href="hardware/skin/left_leg-eb10-skin.xml" /> -->
+    <!-- <xi:include href="hardware/skin/right_leg-eb11-skin.xml" /> -->
     <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />
     <xi:include href="hardware/skin/torso-eb22-skin.xml" />
 
@@ -117,6 +117,12 @@
     <xi:include href="calibrators/torso-calib.xml" />
     <xi:include href="calibrators/head-calib.xml" />
     <xi:include href="calibrators/face-calib.xml" />
+
+    <!-- WHOLEBODYDYNAMICS -->
+    <xi:include href="estimators/wholebodydynamics.xml" />
+    <!-- RERUN -->
+    <!-- <xi:include href="estimators/yarpLoggerRerun.xml" /> -->
+    <!-- <xi:include href="./telemetry.xml" /> -->
 
     </devices>
 </robot>
