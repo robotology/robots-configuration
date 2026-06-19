@@ -76,10 +76,10 @@
             <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" /> -->
         
             <!-- ANALOG SENSOR MAIS -->
-            <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
-            <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" />
-            <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" />
-            <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" />
+            <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" disabled_by="disable_left_arm"/>
+            <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" disabled_by="disable_right_arm"/>
+            <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" disabled_by="disable_left_arm"/>
+            <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" disabled_by="disable_right_arm"/>
         
         
         
