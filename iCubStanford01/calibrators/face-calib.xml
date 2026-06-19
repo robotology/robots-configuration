@@ -20,7 +20,7 @@
         <!-- joint name                     eyelids     -->
         <group name="CALIBRATION">
         <param name="calibrationType">      12          </param>
-        <param name="calibration1">   	    -5861       </param>
+        <param name="calibration1">   	    -4873      </param>
         <param name="calibration2">         0           </param>
         <param name="calibration3">	        0           </param> 
         <param name="calibration4">         0           </param>
@@ -34,7 +34,6 @@
         </group> 
 
         <param name="CALIB_ORDER"> (0) </param> 
-        <!-- <param name="CALIB_ORDER"> (0) </param>  -->
         <action phase="startup" level="10" type="calibrate">
             <param name="target">face-mc_remapper</param>
         </action>
