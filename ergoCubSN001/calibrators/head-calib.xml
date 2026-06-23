@@ -32,7 +32,7 @@
 
             <param name="startupPosition">      0.0         0.0         0.0         0.0        </param>
             <param name="startupVelocity">      10          10          20.0        20.0       </param>
-            <param name="startupMaxPwm">        4000        4000        8000        1000       </param>
+            <param name="startupMaxPwm">        8000        8000        8000        1000       </param>
             <param name="startupPosThreshold">  2           2           2           2          </param>
         </group>
         <!-- <param name="CALIB_ORDER"> (0) (1) (2) (3) </param> -->
