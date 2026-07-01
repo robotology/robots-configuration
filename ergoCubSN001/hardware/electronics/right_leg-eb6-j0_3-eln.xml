@@ -28,11 +28,11 @@
 
                 <group name="LOGGING">
                     <group name="IMMEDIATE">
-                        <param name="emitRXDOTXoverflow">       true        </param>
+                        <param name="emitRXDOTXoverflow">       false       </param>
                         <param name="emitPERIODoverflow">       false       </param>
                     </group>
                     <group name="PERIODIC">
-                        <param name="period">                   0.0         </param>
+                        <param name="period">                   10.0         </param>
                         <param name="emitRXDOTXminavgmax">      false       </param>
                         <param name="emitPERIODminavgmax">      false       </param>                   
                         <param name="emitPERIODhistogram">      false       </param>
