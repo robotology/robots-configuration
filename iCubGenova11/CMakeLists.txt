@@ -12,3 +12,15 @@ yarp_install(DIRECTORY hardware DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${
 yarp_install(DIRECTORY camera DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
 yarp_install(DIRECTORY estimators DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
 yarp_install(DIRECTORY checker DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname}) 
+
+# Install the WalkinModule extra files
+file(GLOB scripts extra/WalkingModule/*.ini)
+yarp_install(FILES ${scripts} DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
+
+subdirlist(subdirs ${CMAKE_CURRENT_SOURCE_DIR}/extra/WalkingModule/)
+foreach (subdir ${subdirs})
+    yarp_install(DIRECTORY extra/WalkingModule/${subdir} DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
+endforeach ()
+
+#Install the WalkingJoypad extra files
+yarp_install(DIRECTORY extra/JoypadModule/dcmWalkingJoypad DESTINATION ${ICUBCONTRIB_CONTEXTS_INSTALL_DIR})
