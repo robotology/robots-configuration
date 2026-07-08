@@ -6,7 +6,7 @@
         <xi:include href="../../general.xml" />
  
         <!--the torso skin is connected to face eb 22 board -->
-        <xi:include href="../../hardware/electronics/face-eb22-j0-eln.xml" /> 
+        <xi:include href="../../hardware/electronics/face-eb20-j0_3-eln.xml" /> 
         <group name="SERVICE">
         
             <param name="type"> eomn_serv_SK_skin </param>
