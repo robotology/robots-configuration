@@ -45,7 +45,7 @@
         <param name="outputType">             velocity                       </param>
         <param name="fbkControlUnits">        machine_units                  </param>  
         <param name="outputControlUnits">     machine_units                  </param>
-        <param name="kp">           8           5           8        5       </param>
+        <param name="kp">           5           5           5        10       </param>
         <param name="kd">           1           1           1        1       </param>
         <param name="ki">           0           0           0        0       </param>
         <param name="maxOutput">    32000       32000       32000    32000   </param>
@@ -65,7 +65,7 @@
         <param name="kp">            -1066.66     2066.66    -711.11    -1066.66    </param>
         <param name="kd">               0.00        0.00       0.00       0.00      </param>
         <param name="ki">          -10666.64    14222.18   -7111.09    -1066.64     </param>
-        <param name="maxOutput">        22000        22000       22000       22000      </param>
+        <param name="maxOutput">        32000        32000       32000       32000      </param>
         <param name="maxInt">           1500        1500        750       1000        </param>
         <param name="stictionUp">          0           0          0          0      </param>
         <param name="stictionDown">        0           0          0          0      </param>
