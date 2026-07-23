@@ -14,7 +14,7 @@
             <group name="PROPERTIES">
 
                 <group name="CANBOARDS">
-                    <param name="type">             eobrd_strain2           </param>
+                    <param name="type">             eobrd_strain2c           </param>
 
                     <group name="PROTOCOL">
                         <param name="major">            0                   </param>
@@ -32,7 +32,7 @@
                     <param name="id">         l_arm_ft_acc   l_arm_ft_gyro   l_arm_ft_eul   l_arm_ft_mag   l_arm_ft_stat    </param>
                     <param name="sensorName"> l_arm_ft_imu   l_arm_ft_imu    l_arm_ft_imu   l_arm_ft_imu   l_arm_ft_imu     </param>
                     <param name="type">       eoas_imu_acc   eoas_imu_gyr    eoas_imu_eul   eoas_imu_mag   eoas_imu_status  </param>
-                    <param name="boardType">  strain2        strain2         strain2        strain2        strain2          </param>
+                    <param name="boardType">  strain2c        strain2c         strain2c        strain2c        strain2c          </param>
                     <param name="location">   CAN2:13        CAN2:13         CAN2:13        CAN2:13        CAN2:13          </param>
                 </group>
 

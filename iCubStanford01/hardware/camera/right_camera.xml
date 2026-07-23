@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_camera" type="argusCamera">
+    <param name="d"> 1 </param>
+    <param name="period">  0.011 </param>
+    <param name="rotation"> 90.0  </param>
+    <param name="width">  1920 </param>
+    <param name="height"> 1080 </param>
+    <param name="rotation_with_crop"> false </param>
+</device>

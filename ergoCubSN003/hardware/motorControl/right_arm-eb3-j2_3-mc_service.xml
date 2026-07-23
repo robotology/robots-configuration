@@ -17,12 +17,12 @@
                 <param name="type">                 foc         </param> 
                 <group name="PROTOCOL">
                     <param name="major">            1           </param>    
-                    <param name="minor">            6           </param>     
+                    <param name="minor">            7           </param>     
                 </group>                    
                 <group name="FIRMWARE">
                     <param name="major">            3           </param>    
                     <param name="minor">            3           </param> 
-                    <param name="build">            20          </param>
+                    <param name="build">            46          </param>
                 </group>
             </group>
             

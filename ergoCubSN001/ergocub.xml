@@ -58,8 +58,8 @@
     <xi:include href="wrappers/motorControl/head-mc-slow_wrapper.xml" disabled_by="disable_head" />
 
     <!-- HEAD -->
-    <xi:include href="hardware/motorControl/head-eb20-j0_1-mc.xml" disabled_by="disable_head" />
-    <xi:include href="hardware/motorControl/head-eb21-j2_3-mc.xml" disabled_by="disable_head" />
+    <xi:include href="hardware/motorControl/head-eb20-j0_2-mc.xml" disabled_by="disable_head" />
+    <xi:include href="hardware/motorControl/head-eb21-j3-mc.xml" disabled_by="disable_head" />
 
     <!-- TORSO -->
     <xi:include href="hardware/motorControl/torso-eb5-j0_2-mc.xml" disabled_by="disable_torso" />
@@ -156,10 +156,10 @@
   <!--  <xi:include href="wrappers/inertials/imu_ros2.xml" /> --> 
     <xi:include href="wrappers/motorControl/alljoints-mc_remapper.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
     <xi:include href="wrappers/motorControl/alljoints-mc_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
-    <xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" />
+    <!--<xi:include href="wrappers/FT/left_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_arm" />
     <xi:include href="wrappers/FT/right_arm-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_arm" />
     <xi:include href="wrappers/FT/left_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_left_leg" />
-    <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" />
+    <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" /> -->
 
     <!-- motor controllers jtcvc -->
     <!-- <xi:include href="wrappers/motorControl/left_arm-eb2-j0_1-jtcvc.xml" disabled_by="disable_left_arm disable_jtcvc" />

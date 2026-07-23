@@ -9,7 +9,7 @@
         <!-- joint number in sub-part       0                         1                        -->
         <!-- joint name                                                                        -->
         <param name="AxisMap">              0                         1                        </param>
-        <param name="AxisName">             "r_thumb_add"  "r_index_add"  </param>
+        <param name="AxisName">             "r_thumb_add"             "r_index_add"            </param>
         <param name="AxisType">             "revolute"                "revolute"               </param>
         <param name="Encoder">              182.044                   182.044                  </param>
         <param name="fullscalePWM">         3360                      3360                     </param>
@@ -23,7 +23,7 @@
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">    90              15      </param>
+        <param name="hardwareJntPosMax">    100             30      </param>
         <param name="hardwareJntPosMin">    0               0       </param>
         <param name="rotorPosMin">          0               0       </param>
         <param name="rotorPosMax">          0               0       </param>

@@ -16,7 +16,7 @@
            <group name="PROPERTIES">
   
                  <group name="CANBOARDS">
-                    <param name="type">                 strain2                 </param>
+                    <param name="type">                 strain2c                 </param>
 
                     <group name="PROTOCOL">
                         <param name="major">            2                       </param>    
@@ -24,14 +24,14 @@
                     </group>                    
                     <group name="FIRMWARE">
                         <param name="major">            2                       </param>    
-                        <param name="minor">            3                       </param>
+                        <param name="minor">            2                       </param>
                         <param name="build">            0                       </param>
                     </group>
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   l_arm_ft   </param>
-                    <param name="board">                 strain2             </param>
+                    <param name="id">                   l_arm_ft                </param>
+                    <param name="board">                strain2c                </param>
                     <param name="location">             CAN2:13                 </param>
                 </group>                
             
@@ -39,15 +39,15 @@
 
             <group name="SETTINGS">        
                 <param name="enabledSensors">       l_arm_ft               </param>
-                <param name="ftPeriod">             1         		                    </param>
-                <param name="temperaturePeriod">    1000      		                   </param>
-                <param name="useCalibration">       true      		              </param>           
+                <param name="ftPeriod">             1         		       </param>
+                <param name="temperaturePeriod">    1000      		       </param>
+                <param name="useCalibration">       true      		       </param>           
             </group>       
         
             <group name="CANMONITOR">        
                 <param name="checkPeriod">      100     </param>
                 <param name="reportMode">       ALL     </param>
-                <param name="ratePeriod">       20000 </param>
+                <param name="ratePeriod">       20000   </param>
             </group>             
             
         </group>

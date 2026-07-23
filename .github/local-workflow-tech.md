@@ -10,19 +10,19 @@ Technicalities underlying the fast-pace local workflow
 - Disable the option `Automatically delete head branches`.
 
 ## 🔲 Clone the fork locally
-- Clone the `icub-tech-iit` fork:
+- Clone the `mesh-iit` fork:
   ```console
-  git remote add icub-tech https://github.com/icub-tech-iit/robots-configuration.git
+  git remote add icub-tech https://github.com/mesh-iit/robots-configuration.git
   ```
 - Switch to the branch corresponding to the robot (e.g., `devel-ergoCubSN???`).
 
 ## 🔲 Set the default committer
 - In order to push to the `icub-tech` fork without password, it is necessary to get a PAT from the maintainer. Then, issue the following commands:
   ```console
-  git config --local user.name "icub-tech-iit-bot"
-  git config --local user.email "icub-tech@iit.it"
+  git config --local user.name "mesh-iit-bot"
+  git config --local user.email "MESH@iit.it"
   PAT=<insert the PAT here>
-  git remote set-url icub-tech https://x-access-token:${PAT}@github.com/icub-tech-iit/robots-configuration.git
+  git remote set-url icub-tech https://x-access-token:${PAT}@github.com/mesh-iit/robots-configuration.git
   ```
   ⚠️ Note the use of the option `--local` to avoid impacting Git globally on the system.
 - The PAT is set to have no expiration. However, it can be revoked at any time by the maintainer.

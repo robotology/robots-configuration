@@ -18,12 +18,34 @@
         <group name="ETH_BOARD_SETTINGS">
             <param name="Name">                     "torso-eb5-j0_2"        </param> 
             <group name="RUNNINGMODE">
+                <param name="execution">                synchronized        </param>
                 <param name="period">                   1000                </param>
                 <param name="maxTimeOfRXactivity">      400                 </param>
                 <param name="maxTimeOfDOactivity">      300                 </param>   
                 <param name="maxTimeOfTXactivity">      300                 </param>                
+                <param name="safetygap">                10                  </param>
                 <param name="TXrateOfRegularROPs">      1                   </param> 
-            </group>              
+
+                <group name="LOGGING">
+
+                    <group name="IMMEDIATE">
+
+                        <param name="emitRXDOTXoverflow">       true        </param>
+                        <param name="emitPERIODoverflow">       false       </param>
+
+                    </group>
+
+                    <group name="PERIODIC">
+
+                        <param name="period">                   0.0         </param>
+                        <param name="emitRXDOTXminavgmax">      false       </param>
+                        <param name="emitPERIODminavgmax">      false       </param>                   
+                        <param name="emitPERIODhistogram">      false       </param>
+
+                    </group>
+
+                </group>
+            </group>
         </group>                 
         
         <group name="ETH_BOARD_ACTIONS">

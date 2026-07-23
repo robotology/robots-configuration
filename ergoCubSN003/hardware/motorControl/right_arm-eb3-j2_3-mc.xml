@@ -8,27 +8,31 @@
     <xi:include href="../../hardware/mechanicals/right_arm-eb3-j2_3-mec.xml" />
     <xi:include href="./right_arm-eb3-j2_3-mc_service.xml" />
 
-    <!-- joint number                           2                   3                   -->
-    <!-- joint name                          shoulder_yaw            elbow              -->
+    <!-- joint number                            2                    3                   -->
+    <!-- joint name                              shoulder_yaw         elbow               -->
     <group name="LIMITS">
-        <param name="jntPosMax">                80                  105                  </param>
-        <param name="jntPosMin">                -50                 -3                  </param>
-        <param name="jntVelMax">                120                 120                 </param>
-        <param name="motorNominalCurrents">     8000                5000                </param>
-        <param name="motorPeakCurrents">        10000               9000                </param>
-        <param name="motorOverloadCurrents">    15000               15000               </param>
-        <param name="motorPwmLimit">            8000                8000                </param>
-        <param name="hardwareTemperatureLimits"> 110                110                 </param>
-        <param name="warningTemperatureLimits">  90                 90                  </param> <!-- keep commented until TemperatureSensorType is not ENABLE by setting it different from NONE-->
+        <param name="jntPosMax">                 80                   105                 </param>
+        <param name="jntPosMin">                 -50                  -3                  </param>
+        <param name="jntVelMax">                 120                  120                 </param>
+        <param name="motorNominalCurrents">      7000                 5000                </param>
+        <param name="motorPeakCurrents">         9000                9000                </param>
+        <param name="motorOverloadCurrents">     15000                15000               </param>
+        <param name="motorPwmLimit">             8000                 8000                </param>
+        <param name="hardwareTemperatureLimits"> 110                  110                 </param>
+        <param name="warningTemperatureLimits">  90                   90                  </param> <!-- keep commented until TemperatureSensorType is not ENABLE by setting it different from NONE-->
     </group>
 
     <group name="TIMEOUTS">
-        <param name="velocity">                 100                 100                 </param>
+        <param name="velocity">                 300                   300                 </param>
+        <param name="torque">                   300                   300                 </param>
+        <param name="pwm">                      300                   300                 </param>
+        <param name="current">                  300                   300                 </param>
+        <param name="torque_measure">           300                   300                 </param>
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                0.2                 0.1                 </param>
-        <param name="damping">                  0.05                0.05                </param>
+        <param name="stiffness">                0.2                   0.1                 </param>
+        <param name="damping">                  0.05                  0.05                </param>
     </group>
 
     <group name="CONTROLS">
