@@ -21,6 +21,3 @@ subdirlist(subdirs ${CMAKE_CURRENT_SOURCE_DIR}/extra/WalkingModule/)
 foreach (subdir ${subdirs})
     yarp_install(DIRECTORY extra/WalkingModule/${subdir} DESTINATION ${ICUBCONTRIB_ROBOTS_INSTALL_DIR}/${appname})
 endforeach ()
-
-#Install the WalkingJoypad extra files
-yarp_install(DIRECTORY extra/JoypadModule/dcmWalkingJoypad DESTINATION ${ICUBCONTRIB_CONTEXTS_INSTALL_DIR})
