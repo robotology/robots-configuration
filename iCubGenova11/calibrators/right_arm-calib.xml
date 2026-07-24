@@ -24,7 +24,7 @@
 	<param name="calibration4">          0         0        0         0      0      0      0    1720  2180   241   510   255   510    255    510   785   </param>
 	<param name="calibration5">          0         0        0         0      0      0      0    1945  3420   40    0     0    23      0      0     210   </param>
 	<param name="calibrationZero">       0         0        0         0      0      0      0     0     0     0     0     0     0      0      0     0     </param>
-	<param name="calibrationDelta">      1.0       -9.2     -14.2     0      0      0      0     0     0     0     0     0     0      0      0     0     </param>
+	<param name="calibrationDelta">      -1.0      -11.8    -15     0      0      0      0     0     0     0     0     0     0      0      0     0     </param>
 
 	<param name="startupPosition">      -35        30       0         50     0      0      0     35    50    0     0     0     0      0      0     0     </param>
 	<param name="startupVelocity">       10        10       10        10     30     30     30    60    100   100   100   100   100    100    100   100   </param>
