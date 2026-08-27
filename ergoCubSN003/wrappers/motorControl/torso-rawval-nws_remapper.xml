@@ -3,7 +3,6 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-rawval_remapper" type="rawValuesPublisherRemapper">
     <param name="axesNames">(torso_roll,torso_pitch,torso_yaw)</param>
-    <param name="joints"> 3 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="torso_joints1">torso-eb5-j0_2-mc</elem>
