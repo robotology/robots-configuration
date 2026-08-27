@@ -3,7 +3,6 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm_no_hand_mc_remapper" type="controlboardremapper">
     <param name="axesNames">(r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,r_wrist_yaw,r_wrist_roll,r_wrist_pitch)</param>
-    <param name="joints"> 7 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="right_arm_joints1"> right_arm-eb5-j0_1-mc    </elem>
