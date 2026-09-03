@@ -20,7 +20,7 @@
                                                                     
     <group name="LIMITS">                                           
         <param name="hardwareJntPosMax">    25                  65               45                  </param>
-        <param name="hardwareJntPosMin">   -25                 -20              -45                 </param>
+        <param name="hardwareJntPosMin">   -25                 -25              -45                  </param>
         <param name="rotorPosMin">          0                   0                0                   </param> 
         <param name="rotorPosMax">          0                   0                0                   </param>
     </group>                                                        
@@ -34,7 +34,7 @@
         <param name="HasRotorEncoder">      1                   1                1                  </param>
         <param name="HasRotorEncoderIndex"> 1                   1                1                  </param>
         <param name="HasSpeedEncoder">      0                   0                0                  </param>
-        <param name="RotorIndexOffset">     316                 215              6                  </param>
+        <param name="RotorIndexOffset">     316                 196              6                  </param>
         <param name="MotorPoles">           8                   20               8                  </param>
         <param name="Kbemf">                0                   0                0                  </param>
    </group>

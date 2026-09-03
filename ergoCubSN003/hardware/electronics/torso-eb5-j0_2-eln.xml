@@ -30,7 +30,7 @@
 
                     <group name="IMMEDIATE">
 
-                        <param name="emitRXDOTXoverflow">       true        </param>
+                        <param name="emitRXDOTXoverflow">       false       </param>
                         <param name="emitPERIODoverflow">       false       </param>
 
                     </group>

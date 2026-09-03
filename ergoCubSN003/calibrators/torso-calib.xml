@@ -11,7 +11,7 @@
 		</group>
 
 <group name="HOME">
-<param name="positionHome">                         0                       -20                    0                       </param>
+<param name="positionHome">                         0                      -22                    0                       </param>
 <param name="velocityHome">                         10                      10                     10                      </param>
 </group>                                                                                           
                                                                                                    
@@ -21,7 +21,7 @@
 <!--                                                roll                    pitch                  yaw                          -->
 <param name="calibrationType">                      12                      12                     12                      </param>
 
-<param name="calibration1">	                        17264                   -37002                 10247                   </param>
+<param name="calibration1">	                        17264                  -32275                  10247                   </param>
 <param name="calibration2">                         0                       0                      0                       </param> 
 <param name="calibration3">                         0                       0                      0                       </param> 
                                                                                                    
@@ -33,13 +33,13 @@
                                                                                                    
 <param name="startupPosition">                      0                       0                      0                       </param>
 <param name="startupVelocity">                      10                      10                     10                      </param>
-<param name="startupMaxPwm">                        5500                    8000                  5500                    </param>
+<param name="startupMaxPwm">                        5500                    8000                   5500                    </param>
 <param name="startupPosThreshold">                  2                       2                      2                       </param>
 </group>
 
  <!-- Joint 1 has been removed from the calibration order for motor safety -->
  <!-- <param name="CALIB_ORDER">(0) (1) (2) </param> --> <!-- Don't remove this line -->
-		<param name="CALIB_ORDER">(0) (1) (2) </param>
+		<param name="CALIB_ORDER">(0) (2) (1) </param>
 
 		<action phase="startup" level="10" type="calibrate">
 		    <param name="target">torso-mc_remapper</param>

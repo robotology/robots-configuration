@@ -34,7 +34,7 @@
         <param name="HasRotorEncoder">          1                   1                   </param>
         <param name="HasRotorEncoderIndex">     1                   1                   </param>
         <param name="HasSpeedEncoder">          0                   0                   </param>
-        <param name="RotorIndexOffset">         184                 170                 </param> <!-- 101   294-->
+        <param name="RotorIndexOffset">         184                 170                 </param>
         <param name="MotorPoles">               8                   8                   </param>
         <param name="Kbemf">                    0                   0                   </param>
     </group>

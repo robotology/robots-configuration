@@ -9,7 +9,7 @@
   </group>
     
   <group name="HOME">
-    <param name="positionHome">                       0.00           5.00       0.00          0.00        0.00       0.00     </param>
+    <param name="positionHome">                      -2.00           5.00       0.00          0.00        0.00       0.00     </param>
     <param name="velocityHome">                       10.00          10.00      10.00        10.00       10.00       10.00    </param>
   </group>
   <!-- joint logical number                           0              1            2             3          4         5         -->
