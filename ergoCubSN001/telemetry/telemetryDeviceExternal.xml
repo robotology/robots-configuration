@@ -9,10 +9,10 @@
         <param name="logIMotorEncoders">true</param>
         <param name="logIControlMode">true</param>
         <param name="logIInteractionMode">true</param>
-        <param name="logIPidControl">false</param>
+        <param name="logIPidControl">true</param>
         <param name="logIAmplifierControl">true</param>
         <param name="saveBufferManagerConfiguration">true</param>
-        <param name="experimentName">telemetry_iCub3</param>
+        <param name="experimentName">telemetry_XXX</param>
         <param name="path">/home/ergocub/telemetry_logs/</param>
         <param name="n_samples">100000</param>
         <param name="save_periodically">true</param>
@@ -23,12 +23,12 @@
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
                 <!-- motorcontrol-->
-		<elem name="head">head_mc</elem>
-                <elem name="torso">torso_mc</elem>
-                <elem name="left_arm">left_arm_mc</elem>
-                <elem name="right_arm">right_arm_mc</elem>
-                <elem name="left_leg">left_leg_mc</elem>
-                <elem name="right_leg">right_leg_mc</elem>
+		<elem name="head">head-mc_remapper</elem>
+                <elem name="torso">torso-mc_remapper</elem>
+                <elem name="left_arm">left_arm-mc_remapper</elem>
+                <elem name="right_arm">right_arm-mc_remapper</elem>
+                <elem name="left_leg">left_leg-mc_remapper</elem>
+                <elem name="right_leg">right_leg-mc_remapper</elem>
             </paramlist>
         </action>
 
