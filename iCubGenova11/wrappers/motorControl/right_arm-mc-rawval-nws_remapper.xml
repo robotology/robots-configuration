@@ -3,7 +3,6 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-rawval_remapper" type="rawValuesPublisherRemapper">
     <param name="axesNames">(r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow)</param>
-    <param name="joints"> 4 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="right_arm_joints1"> right_arm-eb3-j0_3-mc</elem>
