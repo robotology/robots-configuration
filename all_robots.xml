@@ -26,6 +26,5 @@
 	<xi:include href="./iCubWaterloo01/icub_all.xml" />
 	<xi:include href="./iCubZagreb01/icub_all.xml" />
     <xi:include href="./R1SN001/CER.xml" />
-    <xi:include href="./R1SN002/CER.xml" />
     <xi:include href="./R1SN003/CER.xml" />
 </robot_database > 
