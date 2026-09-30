@@ -6,7 +6,7 @@
         <param name="MotioncontrolVersion"> 6 </param>
         <param name="Joints">                   2                                      </param> 
         <param name="AxisMap">                  0                      1               </param>
-        <param name="AxisName">                 "r_shoulder_yaw_joint" "r_elbow_joint" </param>
+        <param name="AxisName">                 "r_shoulder_yaw"       "r_elbow"       </param>
         <param name="AxisType">                 "revolute"             "revolute"      </param>
         <param name="Encoder">                  182.044                182.044         </param>
         <param name="Gearbox_M2J">             -159.438                159.438         </param>
