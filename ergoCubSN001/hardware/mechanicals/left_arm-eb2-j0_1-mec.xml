@@ -3,7 +3,7 @@
 
 <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="ergoCubSN001" build="1">
     <group name="GENERAL">
-        <param name="MotioncontrolVersion"> 6 </param>
+        <param name="MotioncontrolVersion"> 7 </param>
         <param name="Joints"> 2 </param> 
         <param name="AxisMap">                  0                   1                   </param>
         <param name="AxisName">                 "l_shoulder_pitch"  "l_shoulder_roll"   </param>
@@ -27,6 +27,7 @@
     </group>
 
     <group name="2FOC">
+	<param name="Kbemf"> 0 0 </param>
 	<param name="Verbose">                      0                   0                   </param>
         <param name="AutoCalibration">          0                   0                   </param>
         <param name="HasHallSensor">            0                   0                   </param>
