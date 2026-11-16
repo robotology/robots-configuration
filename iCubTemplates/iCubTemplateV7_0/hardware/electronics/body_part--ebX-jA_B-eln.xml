@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<!--    This file contains details of an ETH board. 
+        It is included by other files which specify a service which needs this particular ETH board 
+  -->
+  
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="myrobot" build="1">
+
+    <!-- It includes details of the Linux host. -->
+    <xi:include href="./pc104.xml" />
+    
+    <!-- It contains the details of the ETH board. -->
+    <group name="ETH_BOARD">
+   
+        <!-- This group contains properties of the ETH board which are hard-coded in the FW and cannot be configured in runtime. -->
+        <group name="ETH_BOARD_PROPERTIES">
+        
+            <!-- The IP address of board. Use the X specified in the HW schematics. It cannot be: 0, 104, 255. -->
+            <param name="IpAddress">                10.0.1.X             </param>  
+            
+            <!-- The IP port used by the board to communicate with yarprobotinterface. It must be = PC104::PC104IpPort. [NOTE: not parsed]. -->
+            <param name="IpPort">                   12345                </param>  
+            
+            <!-- The type of eth board. It can be [ems4, mc4plus, mc2plus] or any other/future eObrd_ethtype_t in compact or long form. [NOTE: also supported EMS4, MC4PLUS, MC2PLUS]. -->            
+            <param name="Type">                     ems4                 </param> 
+
+            <!-- The maximum size of UDP packet which the ETH board can receive. The object EthResource uses this value to allocate its internal TX UDP packet, one for each board. -->            
+            <param name="maxSizeRXpacket">          768                  </param>   
+            
+            <!-- The maximum size of ROP (Remote OPeration) that can be decoded or transmitted by the board. The object EthResource uses this value to form / parse the tx / rx ROP. -->
+            <param name="maxSizeROP">               384                  </param>   
+            
+        </group>
+
+        <!-- This group contains values which the user is free to change and which yarprobotinterface loads at startup  -->
+        <group name="ETH_BOARD_SETTINGS">
+        
+            <!-- String of max 31 characters used to identify the board in terminal prints (together with its IP address) -->
+            <param name="Name">                     "body_part-ebX-jA_B" </param>
+
+            <!-- This group contains values for configuration of the times of the board when in RUNNING mode  -->
+            
+            <group name="RUNNINGMODE">
+
+                <!-- execution can be [synchronized, besteffort]. 
+                
+                     - synchronized
+                      
+                       In such a mode each phase RX, DO, TX executes inside exact time slots that are
+                       [0, maxTimeOfRXactivity), [maxTimeOfRXactivity, maxTimeOfRXactivity+maxTimeOfDOactivity) and [maxTimeOfRXactivity+maxTimeOfDOactivity, period)
+                       If any phase seldom overflows outside its time slot, the mode ensures re synchronization to the slots by means of immediate execution
+                       of late phases.                       
+                       You should use this mode if you want synchronous execution so that some actuations to motors do not drift inside the period 
+
+                          _______     ________          ______      ________   _________         ______       __
+                         | RX    |   | DO     |        | TX   |    | RX      | | DO      |       | TX   |    | RX
+                          _______     ________          ______      _________   _________         ______      ___
+                         ^           ^                 ^           ^           ^                 ^           ^ 
+                         o- - - - - -d- -  - - - - - - t- - - - - -o- - - - - -d- - - - - - - - -t- - - - - -o- - - - - 
+                         | period n                                | period n+1                              | period n+2
+                         |-rx budget-|-do budget- - - -|-tx budget-|-rx budget-|-do budget- - - -|-tx budget-| ... 
+ 
+                         Figure. Typical synchronized execution w/out overflow. Note that teh values of rx/do/tx budget are onfigurable w/ parameters
+                                 maxTimeOfRXactivity, maxTimeOfDoactivity and maxTimeOfTXactivity                        
+
+                          ______________  ________      ______      ________   _________         ______       __
+                         | RX           || DO     |    | TX   |    | RX      | | DO      |       | TX   |    | RX
+                          ______________  ________      ______      _________   _________         ______      ___
+                         ^           ^^^^^             ^           ^           ^                 ^           ^ 
+                         o- - - - - -d- - - - - - - - -t- - - - - -o- - - - - -d- - - - - - - - -t- - - - - -o- - - - - -
+                         | period n                                | period n+1                              | period n+2
+                         |-rx budget |-do budget       |-tx budget |-rx budget |-do budget       |-tx budget | ...  
+                           
+                         Figure. Typical synchronized execution w/ overflow of RX
+
+                       In section LOGGING.IMMEDIATE, the param emitRXDOTXoverflow enables or disables warnings emitted by the board when any phase 
+                       overflows beyond its max time of activity.
+                       Similarly, the param emitPERIODoverflow enables or disables warnings emitted by the board when the complete period overflows.
+                       Advised logging settings are:
+                       - LOGGING.IMMEDIATE.emitRXDOTXoverflow = true and LOGGING.IMMEDIATE.emitPERIODoverflow = false 
+                       - or even LOGGING.IMMEDIATE.emitRXDOTXoverflow = false if you want to get rid of some annoying overflow warnings (w/ some risks
+                         to lose visibility of the wanted motor control rate).
+                       
+ 
+                     - besteffort 
+                     
+                       In such a mode the activation is done exactly at start of the period and then phases RX, DO and TX executes as fast as they can.
+                       If the three of them seldom overflow outside the period, the mode ensures re synchronization to the start of period by means of 
+                       immediate execution of a new burst.                       
+                       You should use this mode if you have difficulties to determine correct slots for the synchronized execution mode and you can accept
+                       some drifts of execution inside the period.
+
+                          _______  ________  ______                 __________________  _________  ______     __
+                         | RX    || DO     || TX   |               | RX               || DO      || TX   |   | RX
+                          _______  ________  ______                 __________________  _________  ______     ___
+                         ^                                         ^                                         ^
+                         o- - - - - - - - - - - - - - - - - - - - -o- - - - - - - - - - - - - - - - - - - - -o- - - - - 
+                         | period n                                | period n+1                              | period n+2                                                                             | 
+
+                         Figure. Typical best effort execution w/out overflow
+
+                          _____________________________  _____________  ______  _______  ______  ______       __
+                         | RX                          || DO          || TX   || RX    || DO   || TX   |     | RX
+                          _____________________________  _____________  ______  _______  ______  ______       ___
+                         ^                                         ^^^^^^^^^^^^^ (activation remains valid)  ^
+                         o- - - - - - - - - - - - - - - - - - - - -o- - - - - - - - - - - - - - - - - - - - -o- - - - - 
+                         | period n                                | period n+1                              | period n+2   
+                         
+                         Figure. Typical best effort execution w/ overflow to next period (shortened for sake of displaying)
+
+                       In section LOGGING.IMMEDIATE, the param emitRXDOTXoverflow enables or disables warnings emitted by the board when any phase 
+                       overflows beyond its max time of activity.
+                       Similarly, the param emitPERIODoverflow enables or disables warnings emitted by the board when the complete period overflows.
+                       Advised logging settings are:
+                       - LOGGING.IMMEDIATE.emitRXDOTXoverflow = false and LOGGING.IMMEDIATE.emitPERIODoverflow = true 
+                       It is dangerous to set LOGGING.IMMEDIATE.emitPERIODoverflow = false because it may hide the failure to maintain
+                       the target motor control rate. 
+                       
+                       It's synchronized by default if the param is not specified.
+
+                 -->  
+
+                <param name="execution">                synchronized        </param>
+
+
+                <!-- The following parameters express the time in us that is dedicated to the processing activities.
+                     They are: period, maxTimeOfRXactivity, maxTimeOfDOactivity, maxTimeOfTXactivity, safetygap     
+                  -->
+                  
+                <!-- The duration [in us] of the execution cycle that includes the three activities RX, DO and TX. 
+                     So far, it is locked to be only 1000.  
+                     Very important: it must be period = maxTimeOfRXactivity + maxTimeOfDOactivity + maxTimeOfTXactivity
+                  -->
+                <param name="period">                   1000                </param>               
+
+                <!-- The max time [in us] of the execution cycle dedicated to the RX activity. Default is 400, range is [5, 990].
+                     In case LOGGING.IMMEDIATE.emitRXDOTXoverflow = true, if the execution time of the RX exceeds maxTimeOfRXactivity then a warning message is emitted.                
+                     In case of execution = synchronized the value maxTimeOfRXactivity is used to start the execution of the DO phase so that it is inside the slot
+                     [maxTimeOfRXactivity, maxTimeOfRXactivity+maxTimeOfDOactivity).
+                  -->
+                <param name="maxTimeOfRXactivity">      400                 </param>
+
+                <!-- The max time [in us] of the execution cycle dedicated to the DO activity. Default is 400, range is [5, 990]. 
+                     In case LOGGING.IMMEDIATE.emitRXDOTXoverflow = true, if the execution time of the DO exceeds maxTimeOfDOactivity then a warning message is emitted.  
+                     In case of execution = synchronized the value maxTimeOfDOactivity is used to start the execution of the TX phase so that it is inside the slot
+                     [maxTimeOfRXactivity+maxTimeOfDOactivity, period).
+                  -->
+                <param name="maxTimeOfDOactivity">      300                 </param>  
+
+                <!-- The max time [in us] of the execution cycle dedicated to the TX activity. Default is 400, range is [5, 990]. 
+                     In case LOGGING.IMMEDIATE.emitRXDOTXoverflow = true, if the execution time of the TX exceeds maxTimeOfTXactivity then a warning message is emitted. 
+                  -->
+                <param name="maxTimeOfTXactivity">      300                 </param>  
+                
+                <!-- Amount of time [in us] of the execution cycle that should be left available for system processing.
+                     It is used just for diagnostics purposes and it does not count in triggering of activities. 
+                     For instance if LOGGING.IMMEDIATE.emitPERIODoverflow is true and the execution time is > (period-safetygap) a warning message is emitted
+                     It's 0 by default if the param is not specified.
+                  -->
+                <param name="safetygap">                100                 </param>                   
+
+                <!-- The period in multiples of RUNNINGMODE::period with which the ETH boards transmits the regular ROPs. Its range is [1, 20] and if out of bound it is clipped to limits. 
+                     The recommended value is 5 (3 for boards which support skin). IMPORTANT: reply ROPs and diagnostics ROPs are transmitted ASAP with 1 ms granularity.
+                                  
+                     This number is related to many other system parameters: (1) the ETH_BOARD::ETH_BOARD_SETTINGS::regularsTXrate of other boards; (2) the PC104::PC104RXrate decoding 
+                     rate inside PC104; (3) rate of the wrappers which typically is 10 ms. 
+                     A value of PC104::PC104RXrate = 1 for every board is possible, but it adds extra useless effort in the CPU of PC104 to decode many UDP packets. 
+                     The effort is useless because the information carried by regular ROPs is read by wrappers typically at 10 ms rate.
+                     hence, any value lower than the rate of wrappers is enough. The only exception is for presence of skin, where it is required a lower value so that the ETH 
+                     board can consume the CAN packets sent by the CAN boards without losing info (if it happens, diagnostics messages are sent which complain about loss of skin data).  
+                  -->              
+                <param name="TXrateOfRegularROPs">      5                   </param> 
+
+                
+                <group name="LOGGING">
+                
+                    <!-- Contains enabling / disabling of logging that must be emitted immediately as soon as the condition appears
+                         If the group or a param is not present, the default values are always false or 0.0, except for LOGGING.IMMEDIATE.emitRXDOTXoverflow that is true.
+                      --> 
+                    
+                    <group name="IMMEDIATE">
+
+                        <!-- Enables / disables the emission of warning diagnostics related to the measured execution time of RX higher than the configured
+                             maxTimeOfRXactivity and similarly for DO and TX. 
+                             It's true by default if the param is not specified. 
+                          -->
+                        <param name="emitRXDOTXoverflow">       true        </param>
+                        
+                        <!-- enables / disables the emission of warning diagnostics that alert that the measured execution time of the complete period (RX, DO, TX) 
+                             is higher than the configured period - safetygap
+                             It's false by default if the param is not specified.
+                          -->
+                        <param name="emitPERIODoverflow">       true        </param>
+                    
+                    </group>
+                    
+                    <!-- Contains enabling / disabling of logging that must be emitted periodically -->
+                    
+                    <group name="PERIODIC">
+                    
+                        <!-- The period of the emission of periodic diagnostics expressed in seconds in the interval [1.0, 600.0]. 
+                             If 0.0 every periodic transmission is disabled 
+                             It's 0.0 by default if the param is not specified.
+                          -->
+                        <param name="period">                   10.0          </param>
+ 
+                        <!-- enables / disables the periodic emission of info diagnostics about the statistics of the execution time of the RX, DO and TX phase
+                             in the form of minimum, average and maximum values. 
+                             The legacy param emitRXDOTXstatistics is just an alias. When both are present, emitRXDOTXminavgmax wins.
+                             It's false by default if the param is not specified.
+                          -->                        
+                        <param name="emitRXDOTXminavgmax">      true        </param>
+                        
+                        <!-- legacy name of emitRXDOTXminavgmax. When both are present emitRXDOTXminavgmax wins.
+                             It's false by default if the param is not specified.
+                          -->                        
+                        <param name="emitRXDOTXstatistics">     true        </param>
+                    
+                        <!-- enables / disables the periodic emission of info diagnostics about the statistics of the execution time of the complete period (RX, DO, TX)
+                             in the form of minimum, average and maximum values.
+                             It's false by default if the LOGGING group is not present or if the param is not specified.
+                          -->                        
+                        <param name="emitPERIODminavgmax">      true        </param>
+
+                        <!-- enables / disables the periodic emission of info diagnostics about the statistics of the execution time of the complete period (RX, DO, TX)
+                             in the form of a probability density function in 8 bins of period/4 us each. 
+                             For period = 1000: [0, 250), [250, 500), [500, 750), [750, 1000), [1000, 1250), [1250, 1500), [1500, 1750), [1750, +oo)
+                             So, just for example, if over PERIODIC.period seconds the RX-DO-TX cycles lasts 70% of the times exactly 400 us, 20% of the times exactly 600 us 
+                             and only 10% of the times exactly 800 us, then the reported values will be [0, 70, 20, 10, 0, 0, 0, 0].
+                             It's false by default if the param is not specified.
+                          -->                        
+                        <param name="emitPERIODhistogram">     true        </param>
+                    
+                    </group>
+
+                </group>
+
+            </group>              
+                        
+        </group>
+
+        
+        <!-- This group contains actions which yarprobotinterface can execute on the ETH board  -->
+        <group name="ETH_BOARD_ACTIONS">
+        
+            <!-- This group specifies how yarprobotinterface monitors presence of the ETH board  
+                 The thread EthReceiver, every time it is called, checks all board which have MONITOR_ITS_PRESENCE::enabled = true.
+                 If they haven't transmitted for MONITOR_ITS_PRESENCE::timeout seconds, than the board is declared missing. 
+                 The situation is immediately printed by yarprobotinterface. If the board does not transmits anymore, a periodical report
+                 is printed every MONITOR_ITS_PRESENCE::periodOfMissingReport seconds. Otherwise, it is printed the time when the board transmits
+                 again. 
+              -->
+            <group name="MONITOR_ITS_PRESENCE">
+        
+                <!-- It enables or not the monitoring of this ETH board. Values are [true / false].  
+                  -->
+                <param name="enabled">                          true                    </param>
+                
+                <!-- The timeout in seconds (floating point value) of the timeout bofore the board is declared missing. Use a value > ETH_BOARD_SETTINGS::regularsTXrate ms.
+                  -->            
+                <param name="timeout">                          0.020                    </param> 
+                
+                <!-- The period in seconds (floating point value) of the missing board report.
+                  -->            
+                <param name="periodOfMissingReport">            60.0                    </param> 
+            
+            </group>
+            
+        </group>
+        
+    </group>  
+    
+</params>
+

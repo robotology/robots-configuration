@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="BodyPart-calibrator" type="parametricCalibratorEth"> <!-- NOTE: the name is used in wrapper files -->
+    
+        <xi:include href="../general.xml" />
+        
+        <group name="GENERAL">
+            <param name="joints"> number of joints of the robot part </param>
+            <param name="deviceName"> name choosen my user. It can be used for debug </param> 
+        </group>
+
+        <group name="HOME">
+            <param name="positionHome">     position used to park the robot during shut down or used by by yarpmotorgui application to set "safe position"  </param>
+            <param name="velocityHome">     the velocity used to move to home position. [degree/sec]        </param>
+        </group>
+
+        <group name="CALIBRATION">
+        <param name="calibrationType">      Type of calibration: currently are available 12 type of calibration                </param>
+        <param name="calibration1">         its meaning depending from calibration type. See documennt about calibration type. </param>
+        <param name="calibration2">         its meaning depending from calibration type. See documennt about calibration type. </param>
+        <param name="calibration3">         its meaning depending from calibration type. See documennt about calibration type. </param>
+                                                                                         
+        <param name="calibration4">         its meaning depending from calibration type. See documennt about calibration type. </param>
+        <param name="calibration5">         its meaning depending from calibration type. See documennt about calibration type. </param>
+        
+        <param name="calibrationZero">      the zero of calibration [degree] . see  documennt about calibration type. </param>
+        <param name="calibrationDelta">     the dalta to apply to calibrationZero. The user can change this value to tuning the calibration. [degree] See documennt about calibration type for more details </param>
+        
+       
+        <param name="startupPosition">      When the joint is calibrated, the calibrator moves the joint in this position.  [degree]       </param>        
+        <param name="startupVelocity">      the velocity used to move to joints to startup position  [degree/sec] </param>        
+        <param name="startupMaxPwm">        the safe maximum value of pwm that the motor can uses during calibration procedure. [pwm raw value]</param>        
+        <param name="startupPosThreshold">  this is the tolernace of startupPosition. [degree] </param>        
+        </group> 
+
+        <param name="CALIB_ORDER"> this is the order of joint in which the joints are calibrated.
+                                   The joints put in round bracket belong to the same joint set; the calibrantor sends command to joints in the same sets at the same time.  </param> 
+
+        <action phase="startup" level="10" type="calibrate">
+            <param name="target">body_part-mc_wrapper</param>
+        </action>
+
+        <action phase="interrupt1" level="1" type="park">
+            <param name="target">body_part-mc_wrapper</param>
+        </action>
+
+        <action phase="interrupt3" level="1" type="abort" />
+
+    </device>
+
