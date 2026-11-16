@@ -34,5 +34,12 @@
         
     </group>
 
+    <group name="DEBUG">
+    <param name="embBoardsConnected"> 1 </param> <!-- if set to 1, the robot will try to connect to the embedded boards as usual
+                                                      if set to 0, yarprobotinterface opens and starts all devices,
+                                                      but the devices don't check the embedded boards presence. 
+                                                  -->
+    </group>
+
 </params>
 
