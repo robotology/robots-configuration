@@ -36,12 +36,12 @@
 
     <group name="CONTROLS">
         <param name="positionControl">          POS_PID_DEFAULT   </param>
-        <param name="positionDirect"> POS_DIR_DEFAULT </param>
+        <param name="positionDirect">      POS_DIR_DEFAULT </param>
         <param name="velocityControl">          POS_PID_DEFAULT   </param>
         <param name="mixedControl">             POS_PID_DEFAULT   </param>
-        <param name="torqueControl">            none              </param>
-        <param name="currentControl">               none              </param>
-        <param name="velocityDirect">                 none              </param>
+        <param name="torqueControl">            NONE              </param>
+        <param name="currentControl">               NONE              </param>
+        <param name="velocityDirect">                 NONE              </param>
     </group>
 
 
@@ -57,8 +57,6 @@
         <param name="ki">                       2798   </param>
         <param name="maxOutput">                3360   </param>
         <param name="maxInt">                   3360   </param>
-        <param name="stictionUp">               0      </param>
-        <param name="stictionDown">             0      </param>
         <param name="kff">                      0      </param>
     </group>
     <group name="POS_DIR_DEFAULT">
@@ -71,8 +69,6 @@
         <param name="ki">                       2798   </param>
         <param name="maxOutput">                3360   </param>
         <param name="maxInt">                   3360   </param>
-        <param name="stictionUp">               0      </param>
-        <param name="stictionDown">             0      </param>
         <param name="kff">                      0      </param>
     </group>
 
@@ -87,7 +83,7 @@
     <!-- custom PIDs: end -->
     
     
-    <group name="OTHER_CONTROL_PARAMETERS">    
+    <group name="OTHER_CONTROL_PARAMETERS">
         <param name="deadZone">                 0.0495   </param>
     </group>    
     

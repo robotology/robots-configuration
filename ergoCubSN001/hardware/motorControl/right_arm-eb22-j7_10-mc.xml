@@ -37,7 +37,7 @@
     
     <group name="CONTROLS">
         <param name="positionControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
-        <param name="positionDirect"> POS_DIR_DEFAULT POS_DIR_DEFAULT POS_DIR_DEFAULT POS_DIR_DEFAULT </param>
+        <param name="positionDirect">           POS_DIR_DEFAULT       POS_DIR_DEFAULT       POS_DIR_DEFAULT       POS_DIR_DEFAULT     </param>
         <param name="velocityControl">          POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="mixedControl">             POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     POS_PID_DEFAULT     </param>
         <param name="torqueControl">            none                none                none                none                </param>
@@ -58,8 +58,6 @@
         <param name="ki">                       -33         -33         -33         -33     </param>
         <param name="maxOutput">                2700        2700        2700        2700    </param>
         <param name="maxInt">                   1000        1000        1000        1000    </param>
-        <param name="stictionUp">               0           0           0           0       </param>
-        <param name="stictionDown">             0           0           0           0       </param>
         <param name="kff">                      0           0           0           0       </param>
     </group>
     <group name="POS_DIR_DEFAULT">
@@ -72,8 +70,6 @@
         <param name="ki">                       -33         -33         -33         -33     </param>
         <param name="maxOutput">                2700        2700        2700        2700    </param>
         <param name="maxInt">                   1000        1000        1000        1000    </param>
-        <param name="stictionUp">               0           0           0           0       </param>
-        <param name="stictionDown">             0           0           0           0       </param>
         <param name="kff">                      0           0           0           0       </param>
     </group>
 

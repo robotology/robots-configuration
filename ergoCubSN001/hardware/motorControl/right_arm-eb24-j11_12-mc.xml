@@ -58,8 +58,6 @@
         <param name="ki">                       -10         -10          </param>
         <param name="maxOutput">                3360        3360        </param>
         <param name="maxInt">                   1000        1000        </param>
-        <param name="stictionUp">               0           0           </param>
-        <param name="stictionDown">             0           0           </param>
         <param name="kff">                      0           0           </param>
     </group>
     <group name="POS_DIR_DEFAULT">
@@ -72,8 +70,6 @@
         <param name="ki">                       -10         -10          </param>
         <param name="maxOutput">                3360        3360        </param>
         <param name="maxInt">                   1000        1000        </param>
-        <param name="stictionUp">               0           0           </param>
-        <param name="stictionDown">             0           0           </param>
         <param name="kff">                      0           0           </param>
     </group>
 

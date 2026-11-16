@@ -60,8 +60,6 @@
         <param name="ki">           8000        5000       -1000        </param>
         <param name="maxOutput">   10000       10000        8000        </param>
         <param name="maxInt">      10000        5000        1000        </param>
-        <param name="stictionUp">   0           0           0           </param>
-        <param name="stictionDown"> 0           0           0           </param>
         <param name="kff">          0           0           0           </param>
     </group>
     <group name="POS_DIR_DEFAULT">
@@ -74,8 +72,6 @@
         <param name="ki">           8000        5000       -1000        </param>
         <param name="maxOutput">   10000       10000        8000        </param>
         <param name="maxInt">      10000        5000        1000        </param>
-        <param name="stictionUp">   0           0           0           </param>
-        <param name="stictionDown"> 0           0           0           </param>
         <param name="kff">          0           0           0           </param>
     </group>
 
@@ -93,8 +89,8 @@
         <param name="ki">              0          0          0  </param>
         <param name="maxOutput">      25         25         25  </param>
         <param name="maxInt">       1.56       1.56       1.56  </param>
-        <param name="ko">              0          0          0  </param>
         <param name="kff">             1          1          1  </param>
+        <param name="ko">              0          0          0  </param>
         <param name="viscousPos">      0.0016     0.003     -0.003  </param>
         <param name="viscousNeg">      0.0016     0.003     -0.003  </param>
         <param name="coulombPos">      0          0          0  </param>
@@ -109,8 +105,8 @@
     <!-- other default PIDs: begin -->
 
     <group name="2FOC_CUR_CONTROL">
-        <param name="outputType"> pwm </param>
         <param name="controlLaw">           low_lev_current     </param>
+        <param name="outputType"> pwm </param>
         <param name="fbkControlUnits">      machine_units       </param>
         <param name="outputControlUnits">   machine_units       </param>
         <param name="kp">                   8           8           8       </param>
@@ -123,17 +119,17 @@
     </group>
 
     <group name="2FOC_VEL_CONTROL">
-        <param name="outputType"> pwm </param>
         <param name="controlLaw">           direct       </param>
+        <param name="outputType"> pwm </param>
         <param name="fbkControlUnits">      machine_units       </param>
         <param name="outputControlUnits">   machine_units       </param>
-        <param name="kff">                  0           0           0       </param>
         <param name="kp">                   12          12          12      </param>
         <param name="kd">                   0           0           0       </param>
         <param name="ki">                   16          16          16      </param>
         <param name="shift">                10          10          10      </param>
         <param name="maxOutput">            32000       32000       32000   </param>
         <param name="maxInt">               32000       32000       32000   </param>
+        <param name="kff">                  0           0           0       </param>
     </group>
 
     <!-- other default PIDs: end -->
@@ -147,7 +143,6 @@
     </group>
 
     <group name="KALMAN_FILTER">
-        <!--   torso_roll torso_pitch torso_yaw  -->
         <param name="kalmanFilterEnabled">          1 1 1             </param>
         <param name="x0">                           0 0 0             </param>
         <param name="x1">                           0 0 0             </param>
