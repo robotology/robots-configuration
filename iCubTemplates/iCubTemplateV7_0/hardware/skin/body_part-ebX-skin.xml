@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<!--    This file contains details of how the skin service is configured. 
+  -->
+  
+
+
+    <!-- This device name must be the same as specified in the wrapper xml file. It is of type embObjSkin. -->
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="body_part_skin" type="embObjSkin">
+    
+        <!-- Include the file which specifies global configuration -->
+        <xi:include href="../../general.xml" />
+        
+        <!-- Include the file which specifies which ETH board hosts the service -->
+        <xi:include href="../../hardware/electronics/body_part-ebX-jA_B-eln.xml" />
+
+        <!-- This group defines the service. If not present, default values of the service are: (eomn_serv_SK_skin, ((mtb, (0, 0), (0, 0, 0))) -->
+        <group name="SERVICE">
+        
+            <!-- The type of service expressed as stringised values of eOmn_serv_type_t. For strain it must be eomn_serv_SK_skin -->
+            <param name="type"> eomn_serv_SK_skin </param>
+
+            <!-- This group defines the properties of the service -->
+            <group name="PROPERTIES">
+                <!-- This group defines the properties of the CAN boards -->
+                <group name="CANBOARDS">
+                    <!-- This param tells the type expressed as stringised values of eObrd_type_t also in short version (short version: without prefix eobrd_) 
+                         so far it can be mtb or mtb4
+                      -->
+                    <param name="type">                 mtb                 </param>
+                    <!-- This param tells the protocol version required to run the service. Values are in range [0, 255] 
+                         if (0, 0) no check is done, otherwise there must be a CAN board with detected major = PROTOCOL.major and detected minor >= PROTOCOL.minor -->
+                    <group name="PROTOCOL">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param>     
+                    </group>  
+                    <!-- This param tells the firmware version required to run the service. Values are in range [0, 255] 
+                         if (0, 0, 0) no check is done, otherwise there must be a CAN board with detected major = FIRMWARE.major and detected minor >= FIRMWARE.minor -->                  
+                    <group name="FIRMWARE">
+                        <param name="major">            0                   </param>    
+                        <param name="minor">            0                   </param> 
+                        <param name="build">            0                   </param>
+                    </group>
+                </group>
+           
+            </group>  
+        
+        </group>         
+        
+        <!-- this group contains the address of the MTB boards divided in skin patches. 
+             so far the patches can be 1 or 2, and their names must be exactly: skinCanAddrsPatch1 and skinCanAddrsPatch2  
+          -->
+        <group name="patches">
+            <!-- contains the addresses of MTB boards on CAN1. In the example there are CAN1:1, CAN1:2, and CAN1:3 -->
+            <param name="skinCanAddrsPatch1"> 1 2 3 </param> 
+            <!-- contains the addresses of MTB boards on CAN2. In the example there are CAN2:6, CAN2:7, and CAN2:8 -->
+            <param name="skinCanAddrsPatch2"> 6 7 8 </param> 
+        </group>
+            
+        <!-- specifies how the embObjSkin device must configure the MTB boards -->    
+        <xi:include href="./body_part-ebX-skinSpec.xml" />
+        
+    </device>
+    
+
+
+  

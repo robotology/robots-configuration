@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE params PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude" robot="myrobot" build="1">
+  
+  <group name="GENERAL">
+      <param name="skipCalibration">    If true, the motion control devices are running, but the calibration procedure is not performed; this means that it is not possible to move joints.
+                                        Note: joints have the pwm limited to the values written in "startupMaxPwm" parameter in calibration file.  
+                                        Usually this parameter is false. </param>
+      <param name="useRawEncoderData">  It is used to read the raw value of joints encoders. Only maintainers should change this parameter. 
+                                        ATTENTION: make sure you have pressed the fault button and have set "skipCalibration" parameter to true. </param>
+      <param name="useLimitedPWM">      Deprecated  </param>
+      <param name="verbose">            Enable some more debug prints </param>
+  </group>
+
+  <group name="MAINTENANCE">
+      <param extern-name="skipRecalibration" name="skipRecalibration">    If true, the calibration procedure is not performed at the yarprobotinterface restart
+                                                                          if the boards are not power cycled; this means that the joints are set to IDLE mode at restart.
+                                                                          Note: this is a feature for expert users only. Even if set to true, at first run the calibration procedure is performed.
+                                                                          Usually this parameter is false.
+                                                                          Since it is defined with extern-name it can be overwritten from the command line when running the yarprobotinterface
+                                                                          More info at: https://icub-tech-iit.github.io/documentation/icub_robot_configuration/calibrator_configuration/calibrator_configuration/#maintenance-features </param>
+  </group>
+</params>
