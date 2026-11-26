@@ -16,6 +16,8 @@ RUN apt update && \
 
 # Select options
 ARG DEPENDENCIES_DIR
+ARG ICUB_MAIN_REF
+ARG RPLIDAR_REF
 
 # Do preparations
 RUN locale-gen en_US.UTF-8 && \
@@ -25,7 +27,7 @@ RUN locale-gen en_US.UTF-8 && \
 RUN cd ${DEPENDENCIES_DIR} && \
     git clone https://github.com/robotology/icub-main.git && \
     git clone https://github.com/robotology/icub-firmware-shared.git && \
-    cd icub-main && git checkout devel && \
+    cd icub-main && git checkout ${ICUB_MAIN_REF} && \
     grep -m 1 YCM_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" > ${DEPENDENCIES_DIR}/YCM_VERSION.txt && \
     grep -m 1 YARP_REQUIRED_VERSION CMakeLists.txt | sed "s/[^0-9.]//g" > ${DEPENDENCIES_DIR}/YARP_VERSION.txt && \
     cat ${DEPENDENCIES_DIR}/YARP_VERSION.txt | awk -F '.' '{ print $1 }' > ${DEPENDENCIES_DIR}/YARP_VERSION_MAJOR.txt && \
@@ -76,7 +78,7 @@ RUN cd ${DEPENDENCIES_DIR} && \
 RUN cd ${DEPENDENCIES_DIR} && \
     git clone https://github.com/robotology/yarp-device-rplidar.git && \
     cd yarp-device-rplidar && mkdir -p build && cd build && \
-    git checkout v1.1 && \
+    git checkout ${RPLIDAR_REF} && \
     cmake .. \
           -DCMAKE_PREFIX_PATH=${DEPENDENCIES_DIR}/install \
           -DCMAKE_INSTALL_PREFIX=${DEPENDENCIES_DIR}/install && \
