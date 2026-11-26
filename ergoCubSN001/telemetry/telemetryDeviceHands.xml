@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="telemetryDeviceDumper" type="telemetryDeviceDumper">
+        <param name="axesNames">(l_thumb_oc, l_index_oc, l_middle_oc, l_ring_pinky_oc,r_thumb_oc, r_index_oc, r_middle_oc, r_ring_pinky_oc)</param>
+        <param name="logIEncoders">true</param>
+        <param name="logITorqueControl">true</param>
+        <param name="logIMotorEncoders">true</param>
+        <param name="logIControlMode">true</param>
+        <param name="logIInteractionMode">true</param>
+        <param name="logIPidControl">false</param>
+        <param name="logIAmplifierControl">true</param>
+        <param name="saveBufferManagerConfiguration">true</param>
+        <param name="experimentName">fingerTelemetry</param>
+        <param name="path">/home/ergocub/telemetry_logs/</param>
+        <param name="n_samples">100000</param>
+        <param name="save_periodically">true</param>
+        <param name="save_period">120.0</param>
+        <param name="data_threshold">300</param>
+        <param name="auto_save">true</param>
+
+        <action phase="startup" level="15" type="attach">
+            <paramlist name="networks">
+                <!-- motorcontrol-->
+                <elem name="left_arm">left_arm-mc_remapper</elem>
+                <elem name="right_arm">right_arm-mc_remapper</elem>
+            </paramlist>
+        </action>
+
+        <action phase="shutdown" level="2" type="detach" />
+
+    </device>
+

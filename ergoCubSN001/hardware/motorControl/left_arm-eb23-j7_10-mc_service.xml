@@ -26,25 +26,6 @@
                 </group>
             </group>
 
-            <group name="POS">
-                <param name="location">             CAN1:1  </param>
-
-                <group name="SENSORS">
-
-                    <!-- common to all analog services -->
-                    <param name="id">                   id_fapAA        id_fapBB         id_fapCC                 id_fapDD              </param>
-                    <param name="type">                 eoas_pos_angle  eoas_pos_angle   eoas_pos_angle           eoas_pos_angle        </param>
-                    <param name="port">                 POS:hand_thumb_oc  POS:hand_index_oc   POS:hand_middle_oc          POS:hand_ring_pinky_oc        </param>
-
-                    <param name="boardType">            mtb4c           mtb4c            mtb4c                    mtb4c                 </param>
-                    <param name="connector">            CONN:J3_SDA3    CONN:J3_SDA0     CONN:J3_SDA1             CONN:J3_SDA2          </param>
-                </group>
-
-                <group name="SETTINGS">
-                    <param name="acquisitionRate"> 50 </param>                    <!-- milliseconds -->
-                    <param name="enabledSensors"> id_fapAA id_fapBB id_fapCC id_fapDD</param>
-                </group>
-            </group>
 
 
             <group name="JOINTMAPPING">
